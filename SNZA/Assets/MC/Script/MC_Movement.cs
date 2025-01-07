@@ -5,27 +5,31 @@ using UnityEngine;
 public class MC_Movement : MonoBehaviour
 {
     private float horizontal;
-    private float speed;
-    private float jumpPower;
+    [SerializeField] private float speed = 8f;
+    [SerializeField] private float jumpPower = 16f;
     private bool isFacingRight = true;
-    private Rigidbody2D body;
+
+    [SerializeField] private Rigidbody2D body;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //per utilitzar WASD o arrowkeys
         horizontal = Input.GetAxisRaw("Horizontal");
         //si pulses jump i toques terra saltes
-        if(Input.GetButtonDown("Jump") && IsGround())
+        if (Input.GetButtonDown("Jump") && IsGround())
         {
             body.velocity = new Vector2(body.velocity.x, jumpPower);
         }
         //si pulses jump I ESTAS ANANT CAP AMUNT, prolongaràs una mica el salt
-        if(Input.GetButtonDown("Jump") && body.velocity.y > 0f)
+        if (Input.GetButtonDown("Jump") && body.velocity.y > 0f)
         {
             body.velocity = new Vector2(body.velocity.x, body.velocity.y * 0.5f);
         }
@@ -41,6 +45,7 @@ public class MC_Movement : MonoBehaviour
         //crea cercle al voltant del player, si fa overlap amb el ground, permet saltar
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
+    //canviar de direcció si es dona una velocitat horitzontal contraria a la que està mirant (per exemple, si mires dreta i pulses tecla esquerra, donant velocitat -5f)
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
