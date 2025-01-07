@@ -24,7 +24,9 @@ public class MC_Movement : MonoBehaviour
         //per utilitzar WASD o arrowkeys
         horizontal = Input.GetAxisRaw("Horizontal");
         //si pulses jump i toques terra saltes
+
         if (Input.GetButtonDown("Jump") && IsGround())
+        if(Input.GetButtonDown("Jump"))
         {
             body.velocity = new Vector2(body.velocity.x, jumpPower);
         }
@@ -46,6 +48,7 @@ public class MC_Movement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
     //canviar de direcció si es dona una velocitat horitzontal contraria a la que està mirant (per exemple, si mires dreta i pulses tecla esquerra, donant velocitat -5f)
+
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
