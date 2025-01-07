@@ -20,21 +20,21 @@ public class MC_Movement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         //si pulses jump i toques terra saltes
-        if(Input.GetButtonDown("Jump") && IsGround)
+        if(Input.GetButtonDown("Jump") && IsGround())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            body.velocity = new Vector2(body.velocity.x, jumpPower);
         }
         //si pulses jump I ESTAS ANANT CAP AMUNT, prolongaràs una mica el salt
-        if(Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
+        if(Input.GetButtonDown("Jump") && body.velocity.y > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            body.velocity = new Vector2(body.velocity.x, body.velocity.y * 0.5f);
         }
         Flip();
 
     }
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        body.velocity = new Vector2(horizontal * speed, body.velocity.y);
     }
     private bool IsGround()
     {
