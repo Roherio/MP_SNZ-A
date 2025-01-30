@@ -8,14 +8,17 @@ public class MC_Movement : MonoBehaviour
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpPower = 16f;
     private bool isFacingRight = true;
-
-    [SerializeField] private Rigidbody2D body;
+    public bool isRunning;
+    Animator animator;
+    [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
+        animator.SetBool("isRunning", false);
     }
 
     // Update is called once per frame
@@ -28,19 +31,20 @@ public class MC_Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGround())
         if(Input.GetButtonDown("Jump"))
         {
-            body.velocity = new Vector2(body.velocity.x, jumpPower);
+            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
         }
         //si pulses jump I ESTAS ANANT CAP AMUNT, prolongaràs una mica el salt
-        if (Input.GetButtonDown("Jump") && body.velocity.y > 0f)
+        if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
         {
-            body.velocity = new Vector2(body.velocity.x, body.velocity.y * 0.5f);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
         Flip();
+        StateMachine();
 
     }
     private void FixedUpdate()
     {
-        body.velocity = new Vector2(horizontal * speed, body.velocity.y);
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
     private bool IsGround()
     {
@@ -57,6 +61,17 @@ public class MC_Movement : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+        }
+    }
+    private void StateMachine()
+    {
+        if (horizontal != 0f)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
         }
     }
 }
