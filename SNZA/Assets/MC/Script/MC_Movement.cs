@@ -8,7 +8,6 @@ public class MC_Movement : MonoBehaviour
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpPower = 16f;
     private bool isFacingRight = true;
-    public bool isRunning;
     Animator animator;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -27,17 +26,30 @@ public class MC_Movement : MonoBehaviour
         //per utilitzar WASD o arrowkeys
         horizontal = Input.GetAxisRaw("Horizontal");
         //si pulses jump i toques terra saltes
-
+        IsGround();
         if (Input.GetButtonDown("Jump") && IsGround())
-        if(Input.GetButtonDown("Jump"))
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+                animator.SetBool("isJumping", true);
+            }
+            //si pulses jump I ESTAS ANANT CAP AMUNT, prolongaràs una mica el salt
+            if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+        }
+        /*if(Input.GetButtonDown("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            animator.SetBool("isJumping", true);
         }
         //si pulses jump I ESTAS ANANT CAP AMUNT, prolongaràs una mica el salt
         if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
+        }*/
         Flip();
         StateMachine();
 
@@ -49,7 +61,8 @@ public class MC_Movement : MonoBehaviour
     private bool IsGround()
     {
         //crea cercle al voltant del player, si fa overlap amb el ground, permet saltar
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        animator.SetBool("isJumping", false);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
     }
     //canviar de direcció si es dona una velocitat horitzontal contraria a la que està mirant (per exemple, si mires dreta i pulses tecla esquerra, donant velocitat -5f)
 
@@ -65,13 +78,29 @@ public class MC_Movement : MonoBehaviour
     }
     private void StateMachine()
     {
-        if (horizontal != 0f)
+        if (IsGround())
+        {
+            animator.SetBool("isJumping", false);
+            if (horizontal != 0f)
+            {
+                animator.SetBool("isRunning", true);
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+            }
+        }
+        else if (!IsGround())
+        {
+            animator.SetBool("isJumping", true);
+        }
+        /*if (horizontal != 0f)
         {
             animator.SetBool("isRunning", true);
         }
         else
         {
             animator.SetBool("isRunning", false);
-        }
+        }*/
     }
 }
