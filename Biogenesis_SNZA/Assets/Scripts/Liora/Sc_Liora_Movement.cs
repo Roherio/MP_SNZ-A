@@ -24,6 +24,7 @@ public class Sc_Liora_Movement : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(movim.x * groundSpeed, rb.velocity.y);
+        StateMachine();
         FlipSprite();
         //fa check si el objecte empty groundCheck fa overlap amb un objecte que pertany a la groundLayer (overlap amb radi de 0.2f)
         CheckGround();
@@ -46,6 +47,14 @@ public class Sc_Liora_Movement : MonoBehaviour
         {
             //si deixes de premer el botó (context.canceled) i està pujant encara (rb.velocity.y > 0), tallarà el salt fent que baixi la seva velocitat vertical a la meitat
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+    }
+    public void StateMachine()
+    {
+        animator.SetBool("isRunning", false);
+        if (isGrounded && rb.velocity.x != 0)
+        {
+            animator.SetBool("isRunning", true);
         }
     }
     public void FlipSprite()
