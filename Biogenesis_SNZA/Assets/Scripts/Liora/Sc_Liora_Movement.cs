@@ -12,6 +12,7 @@ public class Sc_Liora_Movement : MonoBehaviour
     public BoxCollider2D groundCheck;
     public LayerMask groundLayer;
     [SerializeField] private bool isGrounded;
+    private bool jumping;
     Vector2 movim;
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,7 @@ public class Sc_Liora_Movement : MonoBehaviour
             //saltarà amb la primera input (context.started, sinó seria input continu) nomes si isGrounded es vertader
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             //animació jump
+            jumping = true;
         }
         if (context.canceled && rb.velocity.y > 0)
         {
@@ -52,9 +54,19 @@ public class Sc_Liora_Movement : MonoBehaviour
     public void StateMachine()
     {
         animator.SetBool("isRunning", false);
+        animator.SetBool("isJumping", false);
+        animator.SetBool("isFalling", false);
         if (isGrounded && rb.velocity.x != 0)
         {
             animator.SetBool("isRunning", true);
+        }
+        if (isGrounded && jumping)
+        {
+            animator.SetBool("isJumping", true);
+        }
+        if (!isGrounded && rb.velocity.y < 0)
+        {
+            animator.SetBool("isFalling", true);
         }
     }
     public void FlipSprite()
