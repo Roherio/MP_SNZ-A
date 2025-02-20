@@ -19,7 +19,7 @@ public class Sc_Liora_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(movim * speed);
+        rb.velocity = new Vector2(movim.x * speed, rb.velocity.y);
     }
 
     public void Movimiento(InputAction.CallbackContext context)
