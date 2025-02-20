@@ -35,6 +35,15 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Saltar"",
+                    ""type"": ""Button"",
+                    ""id"": ""a9edd0dd-839a-4a12-aa02-fbd469ce45b9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -92,6 +101,17 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""action"": ""Movimiento"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""275b6cec-3a8a-49b1-a68a-7182a97c266a"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Saltar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -101,6 +121,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         // ControlesInGame
         m_ControlesInGame = asset.FindActionMap("ControlesInGame", throwIfNotFound: true);
         m_ControlesInGame_Movimiento = m_ControlesInGame.FindAction("Movimiento", throwIfNotFound: true);
+        m_ControlesInGame_Saltar = m_ControlesInGame.FindAction("Saltar", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -163,11 +184,13 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_ControlesInGame;
     private List<IControlesInGameActions> m_ControlesInGameActionsCallbackInterfaces = new List<IControlesInGameActions>();
     private readonly InputAction m_ControlesInGame_Movimiento;
+    private readonly InputAction m_ControlesInGame_Saltar;
     public struct ControlesInGameActions
     {
         private @ControlJuego m_Wrapper;
         public ControlesInGameActions(@ControlJuego wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movimiento => m_Wrapper.m_ControlesInGame_Movimiento;
+        public InputAction @Saltar => m_Wrapper.m_ControlesInGame_Saltar;
         public InputActionMap Get() { return m_Wrapper.m_ControlesInGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -180,6 +203,9 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @Movimiento.started += instance.OnMovimiento;
             @Movimiento.performed += instance.OnMovimiento;
             @Movimiento.canceled += instance.OnMovimiento;
+            @Saltar.started += instance.OnSaltar;
+            @Saltar.performed += instance.OnSaltar;
+            @Saltar.canceled += instance.OnSaltar;
         }
 
         private void UnregisterCallbacks(IControlesInGameActions instance)
@@ -187,6 +213,9 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @Movimiento.started -= instance.OnMovimiento;
             @Movimiento.performed -= instance.OnMovimiento;
             @Movimiento.canceled -= instance.OnMovimiento;
+            @Saltar.started -= instance.OnSaltar;
+            @Saltar.performed -= instance.OnSaltar;
+            @Saltar.canceled -= instance.OnSaltar;
         }
 
         public void RemoveCallbacks(IControlesInGameActions instance)
@@ -207,5 +236,6 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
     public interface IControlesInGameActions
     {
         void OnMovimiento(InputAction.CallbackContext context);
+        void OnSaltar(InputAction.CallbackContext context);
     }
 }
