@@ -141,7 +141,7 @@ public class Sc_Liora_Movement : MonoBehaviour
     {
         //utilitzem la funció per mapejar el valor del jumpPower del 12 al -12 (de -jumpPower) entre 0 i 1 i decidir quins frames es reprodueixen de l'animacio de salt, per controlar que quan puja es reprodueixi la primera meitat de l'animació i quan baixa la segona
         float time = Map(rb.velocity.y, jumpPower, -jumpPower, 0, 1, true);
-        animator.Play("Rise", 0, time);
+        animator.Play("Jump", 0, time);
         //animator.speed = 0f;
         if (CheckGround())
         {
@@ -158,8 +158,7 @@ public class Sc_Liora_Movement : MonoBehaviour
     }
     void StartAirborne()
     {
-        animator.Play("Rise");
-        animator.Play("Fall");
+        animator.Play("Jump");
     }
     private void FlipSprite()
     {
