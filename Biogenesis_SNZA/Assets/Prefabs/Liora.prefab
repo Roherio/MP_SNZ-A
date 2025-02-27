@@ -202,6 +202,7 @@ MonoBehaviour:
     m_Bits: 128
   groundSpeed: 5
   jumpPower: 12
+  jumping: 0
 --- !u!114 &-7938245896370040771
 MonoBehaviour:
   m_ObjectHideFlags: 0
