@@ -36,7 +36,6 @@ public class Sc_Liora_Movement : MonoBehaviour
             FlipSprite();
         }
         StateMachine();
-        //fa check si el objecte empty groundCheck fa overlap amb un objecte que pertany a la groundLayer (overlap amb radi de 0.2f)
     }
 
     public void Movimiento(InputAction.CallbackContext context)
@@ -84,6 +83,7 @@ public class Sc_Liora_Movement : MonoBehaviour
         localScale.x *= -1f;
         transform.localScale = localScale;
     }
+    //fa check si el objecte empty groundCheck fa overlap amb un objecte que pertany a la groundLayer (overlap amb radi de 0.2f)
     private bool CheckGround()
     {
         return Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundLayer).Length > 0;
