@@ -56,7 +56,6 @@ public class Sc_Liora_Movement : MonoBehaviour
         if (context.canceled && rb.velocity.y > 0)
         {
             //si deixes de premer el botó (context.canceled) i està pujant encara (rb.velocity.y > 0), tallarà el salt fent que baixi la seva velocitat vertical a la meitat
-            //rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             rb.AddForce(new Vector2(0, -4f), ForceMode2D.Impulse);
         }
     }
@@ -84,14 +83,6 @@ public class Sc_Liora_Movement : MonoBehaviour
         Vector2 localScale = transform.localScale;
         localScale.x *= -1f;
         transform.localScale = localScale;
-        /*if (rb.velocity.x < 0)
-        {
-            transform.localScale = new Vector2(-1, 1);
-        }
-        if (rb.velocity.x > 0)
-        {
-            transform.localScale = new Vector2(1, 1);
-        }*/
     }
     private bool CheckGround()
     {
