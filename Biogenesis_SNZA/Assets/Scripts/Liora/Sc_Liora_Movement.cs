@@ -150,14 +150,17 @@ public class Sc_Liora_Movement : MonoBehaviour
     }
     void StartIdle()
     {
+        animator.speed = 1;
         animator.Play("Idle");
     }
     void StartRunning()
     {
         animator.Play("Run");
+        animator.speed = 1.18f;
     }
     void StartAirborne()
     {
+        animator.speed = 1;
         animator.Play("Jump");
     }
     private void FlipSprite()
