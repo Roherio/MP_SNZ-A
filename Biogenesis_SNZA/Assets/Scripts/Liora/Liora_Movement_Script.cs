@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Sc_Liora_Movement : MonoBehaviour
+public class Liora_Movement_Script : MonoBehaviour
 {
     private bool isFacingRight = true;
     Rigidbody2D rb;
@@ -29,12 +29,14 @@ public class Sc_Liora_Movement : MonoBehaviour
     private float dashPower = 18f;
     private float dashTime = 0.2f;
     private float dashCooldown = 0.2f;
+    [SerializeField] TrailRenderer trailRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        trailRenderer = GetComponent<TrailRenderer>();
     }
 
     // Update is called once per frame
@@ -56,7 +58,6 @@ public class Sc_Liora_Movement : MonoBehaviour
             SelectState();
         }
         UpdateState();
-        //StateMachine();
     }
 
     public void Movimiento(InputAction.CallbackContext context)
@@ -81,10 +82,10 @@ public class Sc_Liora_Movement : MonoBehaviour
     }
     public void Dash(InputAction.CallbackContext context)
     {
-            if (context.started && CheckGround() == true && canDash == true)
-            {
-                StartCoroutine(Dash());
-            }
+        if (context.started && CheckGround() == true && canDash == true)
+        {
+            StartCoroutine(Dash());
+        }
     }
     void SelectState()
     {
@@ -168,9 +169,11 @@ public class Sc_Liora_Movement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
+        trailRenderer.emitting = true;
         rb.velocity = new Vector2(transform.localScale.x * dashPower, 0f);
         yield return new WaitForSeconds(dashTime);
         isDashing = false;
+        trailRenderer.emitting = false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
