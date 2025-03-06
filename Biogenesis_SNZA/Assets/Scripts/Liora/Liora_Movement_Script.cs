@@ -58,7 +58,6 @@ public class Liora_Movement_Script : MonoBehaviour
         }
         UpdateState();
     }
-
     public void Movimiento(InputAction.CallbackContext context)
     {
         //print("moviendosee");
