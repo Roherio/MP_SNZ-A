@@ -36,7 +36,6 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        trailRenderer = GetComponent<TrailRenderer>();
     }
 
     // Update is called once per frame
