@@ -5,21 +5,31 @@ using UnityEngine.InputSystem;
 
 public class Sc_Liora_Movement : MonoBehaviour
 {
+    private bool isFacingRight = true;
     Rigidbody2D rb;
+    //Ground Logic
     public BoxCollider2D groundCheck;
     public LayerMask groundLayer;
 
+    //StateMachine Logic
     enum PlayerState { Idle, Running, Airborne}
     PlayerState playerState;
     bool stateComplete;
     Animator animator;
     
+    //Jump Logic
     private float horizontal;
     [SerializeField] float groundSpeed = 5f;
     [SerializeField] float jumpPower = 10f;
-    private bool isFacingRight = true;
-
     public bool jumping;
+
+    //Dash Logic
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashPower = 18f;
+    private float dashTime = 0.2f;
+    private float dashCooldown = 0.2f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +40,8 @@ public class Sc_Liora_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //amb aquest If evitem que el jugador pugui moure's si esta fent dash
+        if (isDashing) { return; }
         rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
         if (!isFacingRight && horizontal > 0f)
         {
@@ -67,24 +79,13 @@ public class Sc_Liora_Movement : MonoBehaviour
             rb.AddForce(new Vector2(0, -4f), ForceMode2D.Impulse);
         }
     }
-    /*public void StateMachine()
+    public void Dash(InputAction.CallbackContext context)
     {
-        animator.SetBool("isRunning", false);
-        animator.SetBool("isJumping", false);
-        animator.SetBool("isFalling", false);
-        if (CheckGround() && rb.velocity.x != 0)
-        {
-            animator.SetBool("isRunning", true);
-        }
-        if (CheckGround() && jumping)
-        {
-            animator.SetBool("isJumping", true);
-        }
-        if (!CheckGround() && rb.velocity.y < 0)
-        {
-            animator.SetBool("isFalling", true);
-        }
-    }*/
+            if (context.started && CheckGround() == true && canDash == true)
+            {
+                StartCoroutine(Dash());
+            }
+    }
     void SelectState()
     {
         stateComplete = false;
@@ -107,9 +108,9 @@ public class Sc_Liora_Movement : MonoBehaviour
             StartAirborne();
         }
     }
-    //update functions: comproben les condicions en les que el jugador deixarà
     void UpdateState()
     {
+        if (isDashing) { return; }
         switch (playerState)
         {
             case PlayerState.Idle:
@@ -162,6 +163,16 @@ public class Sc_Liora_Movement : MonoBehaviour
     {
         animator.speed = 1;
         animator.Play("Jump");
+    }
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        rb.velocity = new Vector2(transform.localScale.x * dashPower, 0f);
+        yield return new WaitForSeconds(dashTime);
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
     private void FlipSprite()
     {
