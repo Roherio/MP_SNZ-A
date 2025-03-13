@@ -12,16 +12,16 @@ public class Liora_Movement_Script : MonoBehaviour
     public LayerMask groundLayer;
 
     //StateMachine Logic
-    enum PlayerState { Idle, Running, Airborne}
+    enum PlayerState { Idle, Running, Airborne, LedgeGrabbing}
     PlayerState playerState;
     bool stateComplete;
     Animator animator;
     
     //Jump Logic
     private float horizontal;
+    public bool jumping;
     [SerializeField] float groundSpeed = 5f;
     [SerializeField] float jumpPower = 10f;
-    public bool jumping;
 
     //Dash Logic
     private bool canDash = true;
@@ -30,6 +30,14 @@ public class Liora_Movement_Script : MonoBehaviour
     private float dashTime = 0.2f;
     private float dashCooldown = 0.2f;
     [SerializeField] TrailRenderer trailRenderer;
+
+    //LedgeGrab Logic
+    [SerializeField]private bool isGrabbingLedge = false;
+    private bool canGrabLedge = true;
+    private Vector2 ledgePosition;
+    [SerializeField] private Transform ledgeCheck;
+    [SerializeField] private LayerMask ledgeLayer;
+    [SerializeField] private float ledgeGrabOffsetY = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +50,10 @@ public class Liora_Movement_Script : MonoBehaviour
     void Update()
     {
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
-        if (isDashing) { return; }
+        if (isDashing || isGrabbingLedge) { return; }
+        /*if (CheckGround()) { jumping = false; }
+        if (rb.velocity.y > 0) { canGrabLedge = false; }
+        if (rb.velocity.y <= 0) { canGrabLedge = true; }*/
         rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
         if (!isFacingRight && horizontal > 0f)
         {
@@ -51,6 +62,11 @@ public class Liora_Movement_Script : MonoBehaviour
         else if (isFacingRight && horizontal < 0f)
         {
             FlipSprite();
+        }
+        if (!isGrabbingLedge && rb.velocity.y < 0f && !CheckGround())
+        {
+            //entrara a aquest if si el personatge no està agafantse ja a un Ledge i la seva velocitat vertical està caient
+            CheckForLedge();
         }
         if (stateComplete)
         {
@@ -65,6 +81,8 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void Saltar(InputAction.CallbackContext context)
     {
+        //evitar que salti durant un dash
+        if (isDashing || isGrabbingLedge) { return; }
         if (context.started && CheckGround())
         {
             //saltarà amb la primera input (context.started, sinó seria input continu) nomes si isGrounded es vertader
@@ -85,9 +103,33 @@ public class Liora_Movement_Script : MonoBehaviour
             StartCoroutine(Dash());
         }
     }
+    public void LedgeInput(InputAction.CallbackContext context)
+    {
+        if (!isGrabbingLedge) { return; }
+        if (context.started)
+        {
+            float inputY = context.ReadValue<Vector2>().y;
+            if (inputY > 0)
+            {
+                StartCoroutine(ClimbLedge());
+            }
+            else if (inputY < 0)
+            {
+                DropFromLedge();
+            }
+        }
+    }
     void SelectState()
     {
         stateComplete = false;
+        if (isGrabbingLedge == true)
+        {
+            print("entering ledgegrab state");
+            playerState = PlayerState.LedgeGrabbing;
+            StartLedgeGrabbing();
+            return;
+        }
+        
         if (CheckGround())
         {
             if (horizontal == 0f)
@@ -106,6 +148,16 @@ public class Liora_Movement_Script : MonoBehaviour
             playerState = PlayerState.Airborne;
             StartAirborne();
         }
+        /*if (isGrabbingLedge == true)
+        {
+            playerState = PlayerState.LedgeGrabbing;
+            StartLedgeGrabbing();
+        }
+        if (!CheckGround() && jumping == true)
+        {
+            playerState = PlayerState.Airborne;
+            StartAirborne();
+        }*/
     }
     void UpdateState()
     {
@@ -120,6 +172,9 @@ public class Liora_Movement_Script : MonoBehaviour
                 break;
             case PlayerState.Airborne:
                 UpdateAirborne();
+                break;
+            case PlayerState.LedgeGrabbing:
+                UpdateLedgeGrabbing();
                 break;
         }
     }
@@ -143,7 +198,15 @@ public class Liora_Movement_Script : MonoBehaviour
         float time = Map(rb.velocity.y, jumpPower, -jumpPower, 0, 1, true);
         animator.Play("Jump", 0, time);
         //animator.speed = 0f;
-        if (CheckGround())
+        if (CheckGround() || isGrabbingLedge == true)
+        {
+            jumping = false;
+            stateComplete = true;
+        }
+    }
+    void UpdateLedgeGrabbing()
+    {
+        if (!isGrabbingLedge)
         {
             stateComplete = true;
         }
@@ -163,6 +226,13 @@ public class Liora_Movement_Script : MonoBehaviour
         animator.speed = 1;
         animator.Play("Jump");
     }
+    void StartLedgeGrabbing()
+    {
+        print("grabbeddddd:P - ledge grab started");
+        jumping = false;
+        animator.speed = 1;
+        animator.Play("Ledge");
+    }
     private IEnumerator Dash()
     {
         canDash = false;
@@ -175,6 +245,42 @@ public class Liora_Movement_Script : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
+    private IEnumerator ClimbLedge()
+    {
+        //evita multiples grabs i resetea gravity
+        print("has subido");
+        canGrabLedge = false;
+        rb.gravityScale = 3f;
+        isGrabbingLedge = false;
+        rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+        
+        //una altra forma de pujar si fessim animació de pujada. En comptes d'això, potser saltar cap amunt i ja
+
+        //Vector2 climbPosition = new Vector2(transform.position.x, transform.position.y + 1.2f);
+        //yield return new WaitForSeconds(0.2f);
+        //fer que el jugador pugi el ledge
+        //transform.position = climbPosition;
+        yield return new WaitForSeconds(0.2f);
+        stateComplete = true;
+        canGrabLedge = true;
+    }
+    private void DropFromLedge()
+    {
+        print("bajado");
+        isGrabbingLedge = false;
+        rb.gravityScale = 3f;
+        //evitar multiples grabs
+        canGrabLedge = false;
+        //dropejar el player una mica
+        Vector2 dropPosition = new Vector2(transform.position.x, transform.position.y - 0.5f);
+        transform.position = dropPosition;
+        //utilitzem invoke per cridar una funció despres d'un petit delay
+        Invoke("EnableLedgeGrab", 0.5f);
+    }
+    private void EnableLedgeGrab()
+    {
+        canGrabLedge = true;
+    }
     private void FlipSprite()
     {
         isFacingRight = !isFacingRight;
@@ -186,6 +292,23 @@ public class Liora_Movement_Script : MonoBehaviour
     private bool CheckGround()
     {
         return Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundLayer).Length > 0;
+    }
+    //funció que comprova si estem en range de un ledge
+    private void CheckForLedge()
+    {
+        Collider2D ledge = Physics2D.OverlapCircle(ledgeCheck.position, 0.2f, ledgeLayer);
+        if(ledge != null && canGrabLedge)
+        {
+            print("comprobacióntoni");
+            isGrabbingLedge = true;
+            jumping = false;
+            //parar el moviment
+            rb.velocity = Vector2.zero;
+            rb.gravityScale = 0f;
+            //fer snap al ledge perfecte
+            ledgePosition = new Vector2(transform.position.x, ledge.transform.position.y + ledgeGrabOffsetY);
+            transform.position = ledgePosition;
+        }
     }
     //funció que permet mapejar un valor a dintre d'un rang que decideixes (generalment decidirem entre 0 i 1)
     public static float Map(float value, float min1, float max1, float min2, float max2, bool clamp = false)
