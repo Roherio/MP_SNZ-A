@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Liora_Cangrejo_Frame_0
     originalName: 
-    pivot: {x: 0.65625, y: -0.03508772}
+    pivot: {x: 0.65625, y: -0.03448276}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -131,7 +131,7 @@ ScriptedImporter:
       x: 181
       y: 4
       width: 32
-      height: 57
+      height: 58
     spriteID: a8f83c8549758634e8308ac32d973c1d
     spriteBone: []
     spriteOutline: []
@@ -163,7 +163,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Liora_Cangrejo_Frame_7
     originalName: 
-    pivot: {x: 0.42857143, y: -0.03508772}
+    pivot: {x: 0.42857143, y: -0.03448276}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -171,7 +171,7 @@ ScriptedImporter:
       x: 124
       y: 4
       width: 49
-      height: 57
+      height: 58
     spriteID: ba4a6884a51630b4991d516f1430a906
     spriteBone: []
     spriteOutline: []
@@ -183,15 +183,15 @@ ScriptedImporter:
     uvTransform: {x: 124, y: 4}
   - name: Liora_Cangrejo_Frame_8
     originalName: 
-    pivot: {x: 0.5277778, y: -0.03448276}
+    pivot: {x: 0.5277778, y: -0.033898305}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 124
-      y: 69
+      y: 70
       width: 36
-      height: 58
+      height: 59
     spriteID: fe0ad2c277babe140930e50bc7c76212
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 69}
+    uvTransform: {x: 124, y: 70}
   - name: Liora_Cangrejo_Frame_9
     originalName: 
-    pivot: {x: 0.75, y: -0.033898305}
+    pivot: {x: 0.75, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 124
-      y: 135
+      y: 137
       width: 32
-      height: 59
+      height: 60
     spriteID: 197ee9ce9e70ae54c9e239f18aeee94f
     spriteBone: []
     spriteOutline: []
@@ -220,7 +220,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 135}
+    uvTransform: {x: 124, y: 137}
   - name: Liora_Cangrejo_Frame_2
     originalName: 
     pivot: {x: 0.42307693, y: -0.032786883}
@@ -337,7 +337,7 @@ ScriptedImporter:
         x: 11
         y: 2
         width: 32
-        height: 57
+        height: 58
       spriteId: a8f83c8549758634e8308ac32d973c1d
     - name: Liora_Cangrejo_Frame_1
       frameIndex: 1
@@ -355,7 +355,7 @@ ScriptedImporter:
         x: 11
         y: 2
         width: 49
-        height: 57
+        height: 58
       spriteId: ba4a6884a51630b4991d516f1430a906
     - name: Liora_Cangrejo_Frame_8
       frameIndex: 8
@@ -364,7 +364,7 @@ ScriptedImporter:
         x: 13
         y: 2
         width: 36
-        height: 58
+        height: 59
       spriteId: fe0ad2c277babe140930e50bc7c76212
     - name: Liora_Cangrejo_Frame_9
       frameIndex: 9
@@ -373,7 +373,7 @@ ScriptedImporter:
         x: 8
         y: 2
         width: 32
-        height: 59
+        height: 60
       spriteId: 197ee9ce9e70ae54c9e239f18aeee94f
     - name: Liora_Cangrejo_Frame_2
       frameIndex: 2

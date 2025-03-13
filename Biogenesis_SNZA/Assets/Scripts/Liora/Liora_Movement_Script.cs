@@ -19,9 +19,9 @@ public class Liora_Movement_Script : MonoBehaviour
     
     //Jump Logic
     private float horizontal;
+    public bool jumping;
     [SerializeField] float groundSpeed = 5f;
     [SerializeField] float jumpPower = 10f;
-    public bool jumping;
 
     //Dash Logic
     private bool canDash = true;
@@ -30,6 +30,14 @@ public class Liora_Movement_Script : MonoBehaviour
     private float dashTime = 0.2f;
     private float dashCooldown = 0.2f;
     [SerializeField] TrailRenderer trailRenderer;
+
+    //LedgeGrab Logic
+    private bool isGrabbingLedge = false;
+    private bool canGrabLedge = true;
+    private Vector2 ledgePosition;
+    [SerializeField] private Transform ledgeCheck;
+    [SerializeField] private LayerMask ledgeLayer;
+    [SerializeField] private float ledgeGrabOffsetY = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +50,7 @@ public class Liora_Movement_Script : MonoBehaviour
     void Update()
     {
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
-        if (isDashing) { return; }
+        if (isDashing || isGrabbingLedge) { return; }
         rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
         if (!isFacingRight && horizontal > 0f)
         {
@@ -51,6 +59,11 @@ public class Liora_Movement_Script : MonoBehaviour
         else if (isFacingRight && horizontal < 0f)
         {
             FlipSprite();
+        }
+        if (!isGrabbingLedge && rb.velocity.y < 0f)
+        {
+            //entrara a aquest if si el personatge no està agafantse ja a un Ledge i la seva velocitat vertical està caient
+            CheckForLedge();
         }
         if (stateComplete)
         {
@@ -65,6 +78,8 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void Saltar(InputAction.CallbackContext context)
     {
+        //evitar que salti durant un dash
+        if (isDashing) { return; }
         if (context.started && CheckGround())
         {
             //saltarà amb la primera input (context.started, sinó seria input continu) nomes si isGrounded es vertader
@@ -83,6 +98,22 @@ public class Liora_Movement_Script : MonoBehaviour
         if (context.started && CheckGround() == true && canDash == true)
         {
             StartCoroutine(Dash());
+        }
+    }
+    public void LedgeInput(InputAction.CallbackContext context)
+    {
+        if (!isGrabbingLedge) { return; }
+        if (context.started)
+        {
+            float inputY = context.ReadValue<Vector2>().y;
+            if (inputY > 0)
+            {
+                StartCoroutine(ClimbLedge());
+            }
+            else if (inputY < 0)
+            {
+                DropFromLedge();
+            }
         }
     }
     void SelectState()
@@ -175,6 +206,39 @@ public class Liora_Movement_Script : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
+    private IEnumerator ClimbLedge()
+    {
+        //evita multiples grabs i resetea gravity
+        canGrabLedge = false;
+        rb.gravityScale = 3f;
+        isGrabbingLedge = false;
+        rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+        
+        //una altra forma de pujar si fessim animació de pujada. En comptes d'això, potser saltar cap amunt i ja
+
+        //Vector2 climbPosition = new Vector2(transform.position.x, transform.position.y + 1.2f);
+        //yield return new WaitForSeconds(0.2f);
+        //fer que el jugador pugi el ledge
+        //transform.position = climbPosition;
+        yield return new WaitForSeconds(0.2f);
+        canGrabLedge = true;
+    }
+    private void DropFromLedge()
+    {
+        isGrabbingLedge = false;
+        rb.gravityScale = 3f;
+        //evitar multiples grabs
+        canGrabLedge = false;
+        //dropejar el player una mica
+        Vector2 dropPosition = new Vector2(transform.position.x, transform.position.y - 0.5f);
+        transform.position = dropPosition;
+        //utilitzem invoke per cridar una funció despres d'un petit delay
+        Invoke("EnableLedgeGrab", 0.5f);
+    }
+    private void EnableLedgeGrab()
+    {
+        canGrabLedge = true;
+    }
     private void FlipSprite()
     {
         isFacingRight = !isFacingRight;
@@ -186,6 +250,21 @@ public class Liora_Movement_Script : MonoBehaviour
     private bool CheckGround()
     {
         return Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundLayer).Length > 0;
+    }
+    //funció que comprova si estem en range de un ledge
+    private void CheckForLedge()
+    {
+        Collider2D ledge = Physics2D.OverlapCircle(ledgeCheck.position, 0.2f, ledgeLayer);
+        if(ledge != null && canGrabLedge)
+        {
+            isGrabbingLedge = true;
+            //parar el moviment
+            rb.velocity = Vector2.zero;
+            rb.gravityScale = 0f;
+            //fer snap al ledge perfecte
+            ledgePosition = new Vector2(transform.position.x, ledge.transform.position.y + ledgeGrabOffsetY);
+            transform.position = ledgePosition;
+        }
     }
     //funció que permet mapejar un valor a dintre d'un rang que decideixes (generalment decidirem entre 0 i 1)
     public static float Map(float value, float min1, float max1, float min2, float max2, bool clamp = false)

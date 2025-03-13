@@ -53,6 +53,15 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ledge"",
+                    ""type"": ""Value"",
+                    ""id"": ""75008cd7-1d0b-4101-a23b-1d5c2cd2285b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -132,6 +141,39 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""1d65721f-ea43-4352-befb-59102ad0bce3"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ledge"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""477e1db8-50b8-4e8f-bd98-e722b910cb79"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ledge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""f5535bf5-6121-4fd1-96f5-50f2cd4719b0"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ledge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -143,6 +185,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         m_ControlesInGame_Movimiento = m_ControlesInGame.FindAction("Movimiento", throwIfNotFound: true);
         m_ControlesInGame_Saltar = m_ControlesInGame.FindAction("Saltar", throwIfNotFound: true);
         m_ControlesInGame_Dash = m_ControlesInGame.FindAction("Dash", throwIfNotFound: true);
+        m_ControlesInGame_Ledge = m_ControlesInGame.FindAction("Ledge", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +250,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
     private readonly InputAction m_ControlesInGame_Movimiento;
     private readonly InputAction m_ControlesInGame_Saltar;
     private readonly InputAction m_ControlesInGame_Dash;
+    private readonly InputAction m_ControlesInGame_Ledge;
     public struct ControlesInGameActions
     {
         private @ControlJuego m_Wrapper;
@@ -214,6 +258,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         public InputAction @Movimiento => m_Wrapper.m_ControlesInGame_Movimiento;
         public InputAction @Saltar => m_Wrapper.m_ControlesInGame_Saltar;
         public InputAction @Dash => m_Wrapper.m_ControlesInGame_Dash;
+        public InputAction @Ledge => m_Wrapper.m_ControlesInGame_Ledge;
         public InputActionMap Get() { return m_Wrapper.m_ControlesInGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -232,6 +277,9 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @Dash.started += instance.OnDash;
             @Dash.performed += instance.OnDash;
             @Dash.canceled += instance.OnDash;
+            @Ledge.started += instance.OnLedge;
+            @Ledge.performed += instance.OnLedge;
+            @Ledge.canceled += instance.OnLedge;
         }
 
         private void UnregisterCallbacks(IControlesInGameActions instance)
@@ -245,6 +293,9 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @Dash.started -= instance.OnDash;
             @Dash.performed -= instance.OnDash;
             @Dash.canceled -= instance.OnDash;
+            @Ledge.started -= instance.OnLedge;
+            @Ledge.performed -= instance.OnLedge;
+            @Ledge.canceled -= instance.OnLedge;
         }
 
         public void RemoveCallbacks(IControlesInGameActions instance)
@@ -267,5 +318,6 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         void OnMovimiento(InputAction.CallbackContext context);
         void OnSaltar(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnLedge(InputAction.CallbackContext context);
     }
 }
