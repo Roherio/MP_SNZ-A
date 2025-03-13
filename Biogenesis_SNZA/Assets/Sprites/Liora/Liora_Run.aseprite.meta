@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Liora_Run_Frame_0
     originalName: 
-    pivot: {x: 0.6666667, y: -0.035714287}
+    pivot: {x: 0.6428572, y: -0.03508772}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 182
-      y: 63
-      width: 27
-      height: 56
+      x: 184
+      y: 64
+      width: 28
+      height: 57
     spriteID: b8d98571edf4d5a4aada0e55075bcb99
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 182, y: 63}
+    uvTransform: {x: 184, y: 64}
   - name: Liora_Run_Frame_1
     originalName: 
-    pivot: {x: 0.5151515, y: -0.03846154}
+    pivot: {x: 0.5, y: -0.03773585}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 102
-      y: 63
-      width: 33
-      height: 52
+      y: 64
+      width: 34
+      height: 53
     spriteID: 2858d305ba7424943b467d7fe01dadc1
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 102, y: 63}
+    uvTransform: {x: 102, y: 64}
   - name: Liora_Run_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.03773585}
+    pivot: {x: 0.5, y: -0.037037037}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 63
+      y: 64
       width: 42
-      height: 53
+      height: 54
     spriteID: 24f0f00cd15ba764db6801b7f9eafb0b
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 63}
+    uvTransform: {x: 4, y: 64}
   - name: Liora_Run_Frame_3
     originalName: 
-    pivot: {x: 0.5208334, y: -0.14285713}
+    pivot: {x: 0.5208334, y: -0.14}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 61
+      x: 118
       y: 4
       width: 48
-      height: 49
+      height: 50
     spriteID: 024084df16077634ba99ea3977b63934
     spriteBone: []
     spriteOutline: []
@@ -200,10 +200,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 61, y: 4}
+    uvTransform: {x: 118, y: 4}
   - name: Liora_Run_Frame_4
     originalName: 
-    pivot: {x: 0.53061223, y: -0.039215688}
+    pivot: {x: 0.53061223, y: -0.03846154}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -211,7 +211,7 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 49
-      height: 51
+      height: 52
     spriteID: 3b529515224867d479c040cc0ef02274
     spriteBone: []
     spriteOutline: []
@@ -223,15 +223,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Liora_Run_Frame_5
     originalName: 
-    pivot: {x: 0.516129, y: -0.039215688}
+    pivot: {x: 0.5, y: -0.03846154}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 143
-      y: 63
-      width: 31
-      height: 51
+      x: 144
+      y: 64
+      width: 32
+      height: 52
     spriteID: dd64c2116745baa46beaea267a8e2d1a
     spriteBone: []
     spriteOutline: []
@@ -240,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 143, y: 63}
+    uvTransform: {x: 144, y: 64}
   - name: Liora_Run_Frame_6
     originalName: 
-    pivot: {x: 0.52500004, y: -0.03846154}
+    pivot: {x: 0.52500004, y: -0.03773585}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 54
-      y: 63
+      y: 64
       width: 40
-      height: 52
+      height: 53
     spriteID: e5656431420913d47996010820e6c802
     spriteBone: []
     spriteOutline: []
@@ -260,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 54, y: 63}
+    uvTransform: {x: 54, y: 64}
   - name: Liora_Run_Frame_7
     originalName: 
-    pivot: {x: 0.53061223, y: -0.14583334}
+    pivot: {x: 0.53061223, y: -0.14285713}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 117
+      x: 61
       y: 4
       width: 49
-      height: 48
+      height: 49
     spriteID: e8e8a16ce73ffc64595d59795693ccf3
     spriteBone: []
     spriteOutline: []
@@ -280,10 +280,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 117, y: 4}
+    uvTransform: {x: 61, y: 4}
   - name: Liora_Run_Frame_8
     originalName: 
-    pivot: {x: 0.5531915, y: -0.04}
+    pivot: {x: 0.5531915, y: -0.039215688}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -291,7 +291,7 @@ ScriptedImporter:
       x: 174
       y: 4
       width: 47
-      height: 50
+      height: 51
     spriteID: 2d0b608072422d94f875e450057fc506
     spriteBone: []
     spriteOutline: []
@@ -316,8 +316,8 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 2
-        width: 27
-        height: 56
+        width: 28
+        height: 57
       spriteId: b8d98571edf4d5a4aada0e55075bcb99
     - name: Liora_Run_Frame_1
       frameIndex: 1
@@ -325,8 +325,8 @@ ScriptedImporter:
       cellRect:
         x: 15
         y: 2
-        width: 33
-        height: 52
+        width: 34
+        height: 53
       spriteId: 2858d305ba7424943b467d7fe01dadc1
     - name: Liora_Run_Frame_2
       frameIndex: 2
@@ -335,7 +335,7 @@ ScriptedImporter:
         x: 11
         y: 2
         width: 42
-        height: 53
+        height: 54
       spriteId: 24f0f00cd15ba764db6801b7f9eafb0b
     - name: Liora_Run_Frame_3
       frameIndex: 3
@@ -344,7 +344,7 @@ ScriptedImporter:
         x: 7
         y: 7
         width: 48
-        height: 49
+        height: 50
       spriteId: 024084df16077634ba99ea3977b63934
     - name: Liora_Run_Frame_4
       frameIndex: 4
@@ -353,7 +353,7 @@ ScriptedImporter:
         x: 6
         y: 2
         width: 49
-        height: 51
+        height: 52
       spriteId: 3b529515224867d479c040cc0ef02274
     - name: Liora_Run_Frame_5
       frameIndex: 5
@@ -361,8 +361,8 @@ ScriptedImporter:
       cellRect:
         x: 16
         y: 2
-        width: 31
-        height: 51
+        width: 32
+        height: 52
       spriteId: dd64c2116745baa46beaea267a8e2d1a
     - name: Liora_Run_Frame_6
       frameIndex: 6
@@ -371,7 +371,7 @@ ScriptedImporter:
         x: 11
         y: 2
         width: 40
-        height: 52
+        height: 53
       spriteId: e5656431420913d47996010820e6c802
     - name: Liora_Run_Frame_7
       frameIndex: 7
@@ -380,7 +380,7 @@ ScriptedImporter:
         x: 6
         y: 7
         width: 49
-        height: 48
+        height: 49
       spriteId: e8e8a16ce73ffc64595d59795693ccf3
     - name: Liora_Run_Frame_8
       frameIndex: 8
@@ -389,7 +389,7 @@ ScriptedImporter:
         x: 6
         y: 2
         width: 47
-        height: 50
+        height: 51
       spriteId: 2d0b608072422d94f875e450057fc506
     linkedCells: []
     parentIndex: -1
