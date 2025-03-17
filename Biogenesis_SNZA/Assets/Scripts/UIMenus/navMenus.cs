@@ -8,12 +8,12 @@ using UnityEngine.SceneManagement;
 public class navMenus : MonoBehaviour
 {
 
-    public GameObject MenuInGame;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        MenuInGame.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -41,17 +41,5 @@ public class navMenus : MonoBehaviour
     public void SalirJuego()
     {
         Application.Quit();
-    }
-    public void CMenuG()
-    {
-        MenuInGame.SetActive(!MenuInGame.activeSelf);
-        if (MenuInGame.activeSelf)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
     }
 }

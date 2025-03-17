@@ -8,25 +8,28 @@ public class scrMemoria : MonoBehaviour
     public static scrMemoria Instance;
 
     public static int memIdBotonActivo = navMenuIG.idBotonActivo;
-    public static int money, life, adrenaline;
+    public static int memMoney = navMenuIG.money, memLife = navMenuIG.life, memAdrenaline = navMenuIG.adrenaline;
 
-    public static int[] variables = { money, life, adrenaline };
+    public static int[] intsMemoria = { memLife, memMoney, memAdrenaline };
 
     // Start is called before the first frame update
     void Start()
     {
-        variables[0] = money;
-        variables[1] = life;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        ActualizarValores();
+        
     }
     public static void GuardarIdBotonActivo()
     {
         memIdBotonActivo = navMenuIG.idBotonActivo;
+    }
+    public static void Guardar(int variable, int id)
+    {
+        intsMemoria[id] = variable;
     }
     private void Awake()
     {
@@ -39,10 +42,5 @@ public class scrMemoria : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    public static void ActualizarValores()
-    {
-        variables[0] = money;
-        variables[1] = life;
     }
 }

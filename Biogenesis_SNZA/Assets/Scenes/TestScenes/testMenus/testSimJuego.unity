@@ -5494,7 +5494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21ecd158ab05264d9dad24b7322b809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuInGame: {fileID: 1165184268}
 --- !u!4 &832689921
 Transform:
   m_ObjectHideFlags: 0
@@ -5522,6 +5521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be0b37497ecdd5438cc507ee1e3b9b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MenuInGame: {fileID: 1165184268}
   ArrTxtMenuIG:
   - {fileID: 1540233509}
   - {fileID: 78840209}
@@ -10301,8 +10301,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 832689920}
-        m_TargetAssemblyTypeName: navMenus, Assembly-CSharp
+      - m_Target: {fileID: 832689922}
+        m_TargetAssemblyTypeName: navMenuIG, Assembly-CSharp
         m_MethodName: CMenuG
         m_Mode: 1
         m_Arguments:
