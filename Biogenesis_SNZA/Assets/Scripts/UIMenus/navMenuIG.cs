@@ -11,6 +11,7 @@ public class navMenuIG : MonoBehaviour
     public static int idBotonActivo = 0;
     public Vector3 botonGrande = new Vector3(1.1f, 1.1f, 1);
     private Vector3 botonNormal = new Vector3(1, 1, 1);
+    public static int life = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,8 @@ public class navMenuIG : MonoBehaviour
         idBotonActivo = scrMemoria.memIdBotonActivo;
         ArrTxtMenuIG[idBotonActivo].SetActive(true);
         BotonPulsado(idBotonActivo);
+        life++;
+        scrMemoria.ActualizarValores();
     }
 
     // Update is called once per frame
