@@ -62,6 +62,15 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Climb"",
+                    ""type"": ""Value"",
+                    ""id"": ""60e204cb-e282-4916-952f-bf78c4ae2883"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -75,28 +84,6 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""action"": ""Movimiento"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""060db964-ce6a-4711-8c5c-02a1ceca0f4f"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movimiento"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""2323965c-5ae1-4c60-bf75-0509cdd8995c"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movimiento"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
@@ -174,6 +161,39 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""action"": ""Ledge"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""1046e64f-d04a-4c52-9838-c553db7523c8"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Climb"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""9c438275-8f73-47ca-9e78-0dd8f3595203"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Climb"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""d1b68192-733a-4f8f-8ffd-450cccdbf363"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Climb"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -186,6 +206,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         m_ControlesInGame_Saltar = m_ControlesInGame.FindAction("Saltar", throwIfNotFound: true);
         m_ControlesInGame_Dash = m_ControlesInGame.FindAction("Dash", throwIfNotFound: true);
         m_ControlesInGame_Ledge = m_ControlesInGame.FindAction("Ledge", throwIfNotFound: true);
+        m_ControlesInGame_Climb = m_ControlesInGame.FindAction("Climb", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,6 +272,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
     private readonly InputAction m_ControlesInGame_Saltar;
     private readonly InputAction m_ControlesInGame_Dash;
     private readonly InputAction m_ControlesInGame_Ledge;
+    private readonly InputAction m_ControlesInGame_Climb;
     public struct ControlesInGameActions
     {
         private @ControlJuego m_Wrapper;
@@ -259,6 +281,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         public InputAction @Saltar => m_Wrapper.m_ControlesInGame_Saltar;
         public InputAction @Dash => m_Wrapper.m_ControlesInGame_Dash;
         public InputAction @Ledge => m_Wrapper.m_ControlesInGame_Ledge;
+        public InputAction @Climb => m_Wrapper.m_ControlesInGame_Climb;
         public InputActionMap Get() { return m_Wrapper.m_ControlesInGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -280,6 +303,9 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @Ledge.started += instance.OnLedge;
             @Ledge.performed += instance.OnLedge;
             @Ledge.canceled += instance.OnLedge;
+            @Climb.started += instance.OnClimb;
+            @Climb.performed += instance.OnClimb;
+            @Climb.canceled += instance.OnClimb;
         }
 
         private void UnregisterCallbacks(IControlesInGameActions instance)
@@ -296,6 +322,9 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @Ledge.started -= instance.OnLedge;
             @Ledge.performed -= instance.OnLedge;
             @Ledge.canceled -= instance.OnLedge;
+            @Climb.started -= instance.OnClimb;
+            @Climb.performed -= instance.OnClimb;
+            @Climb.canceled -= instance.OnClimb;
         }
 
         public void RemoveCallbacks(IControlesInGameActions instance)
@@ -319,5 +348,6 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         void OnSaltar(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnLedge(InputAction.CallbackContext context);
+        void OnClimb(InputAction.CallbackContext context);
     }
 }
