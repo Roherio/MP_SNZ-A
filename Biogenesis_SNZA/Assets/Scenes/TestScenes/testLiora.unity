@@ -246,7 +246,7 @@ Transform:
   m_GameObject: {fileID: 7723681}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6189, y: -1.2496004, z: 0}
+  m_LocalPosition: {x: -3.6189, y: 0.25, z: 0}
   m_LocalScale: {x: 13.701175, y: 0.3172, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -266,7 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2567674321924602139, guid: a782abc1c627dce409c034c6c4534bee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2500005
+      value: 0.24959993
       objectReference: {fileID: 0}
     - target: {fileID: 2567674321924602139, guid: a782abc1c627dce409c034c6c4534bee, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1052,7 +1052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6828677513443051858, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
       propertyPath: ledgeGrabOffsetY
-      value: -2
+      value: -3.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1130,7 +1130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2567674321924602139, guid: a782abc1c627dce409c034c6c4534bee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3089004
+      value: 0.19070005
       objectReference: {fileID: 0}
     - target: {fileID: 2567674321924602139, guid: a782abc1c627dce409c034c6c4534bee, type: 3}
       propertyPath: m_LocalPosition.z

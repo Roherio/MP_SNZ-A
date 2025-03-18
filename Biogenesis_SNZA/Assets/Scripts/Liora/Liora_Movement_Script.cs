@@ -147,13 +147,6 @@ public class Liora_Movement_Script : MonoBehaviour
     void SelectState()
     {
         stateComplete = false;
-        if (isGrabbingLedge == true)
-        {
-            playerState = PlayerState.LedgeGrabbing;
-            StartLedgeGrabbing();
-            return;
-        }
-        
         if (CheckGround() && Mathf.Abs(rb.velocity.y) < Mathf.Epsilon)
         {
             if (Mathf.Abs(horizontal) < Mathf.Epsilon)
@@ -169,8 +162,16 @@ public class Liora_Movement_Script : MonoBehaviour
         }
         else
         {
-            playerState = PlayerState.Airborne;
-            StartAirborne();
+            if (isGrabbingLedge == true)
+            {
+                playerState = PlayerState.LedgeGrabbing;
+                StartLedgeGrabbing();
+            }
+            else
+            {
+                playerState = PlayerState.Airborne;
+                StartAirborne();
+            }
         }
         /*if (isGrabbingLedge == true)
         {
