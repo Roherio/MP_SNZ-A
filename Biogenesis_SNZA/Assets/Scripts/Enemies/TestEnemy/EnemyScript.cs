@@ -11,10 +11,21 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] Collider2D DetectionRange;
     [SerializeField] float attackRange;
     [SerializeField] Transform playerPosition;
+
+
+    [SerializeField] Transform[] patrolPoint;
+    public int destinationPoint;
+
+
     float oldPosition;
+
+
     bool isDetectingRange = false;
+    public EnemyBehaviour Behaviour = EnemyBehaviour.STANDING;
+
     void Start()
     { 
+
     }
 
     private void FixedUpdate()
@@ -23,7 +34,48 @@ public class EnemyScript : MonoBehaviour
     }
     void Update()
     {
-       
+        switch (Behaviour)
+        {
+            case EnemyBehaviour.STANDING:
+
+                if (isDetectingRange)
+                {
+                    IsChasing();
+                }
+                break;
+
+            case EnemyBehaviour.PATROL:
+
+                if (isDetectingRange)
+                {
+                    IsChasing();
+
+                    return;
+                }
+
+                if (destinationPoint == 0)
+                {
+                    transform.localScale = new Vector3(1, 1, 1);
+                    transform.position = Vector2.MoveTowards(transform.position, patrolPoint[0].position, moveSpeed * Time.deltaTime);
+                    animator.SetBool("InDetectionRange", true);
+                    if (Vector2.Distance(transform.position, patrolPoint[0].position) < 0.1)
+                    {
+                        destinationPoint = 1;
+                    }
+                }
+
+                if (destinationPoint == 1)
+                {
+                    transform.localScale = new Vector3(-1, 1, 1);
+                    transform.position = Vector2.MoveTowards(transform.position, patrolPoint[1].position, moveSpeed * Time.deltaTime);
+                    if (Vector2.Distance(transform.position, patrolPoint[1].position) < 0.1)
+                    {
+                        destinationPoint = 0;
+
+                    }
+                }
+                break;
+        }
         /*if (Vector2.Distance(transform.position, playerPosition.position) < detectionRange)
         {
 
@@ -43,15 +95,7 @@ public class EnemyScript : MonoBehaviour
         else
         {
             resetAnimations();
-        }*/
-        if (isDetectingRange)
-        {
-            IsChasing();
-
-        }
-
-       
-
+        }*/  
     }
 
     private void OnTriggerStay2D(Collider2D DetectionRange)
@@ -75,6 +119,7 @@ public class EnemyScript : MonoBehaviour
     }
     void IsChasing()
     {
+        Behaviour = EnemyBehaviour.STANDING;
         if (Vector2.Distance(transform.position, playerPosition.position) < attackRange)
         {
             resetAnimations();
@@ -85,9 +130,14 @@ public class EnemyScript : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPosition.position.x, transform.position.y), moveSpeed * Time.deltaTime);
             animator.SetBool("InDetectionRange", true);
         }
-
-
     }
+    /*IEnumerator flipDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        Vector2 localScale = transform.localScale;
+        localScale.x *= -1;
+        StartCoroutine(flipDelay());
+    }*/
     void resetAnimations()
     {
         animator.SetBool("InDetectionRange", false);
