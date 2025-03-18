@@ -41,8 +41,9 @@ public class Liora_Movement_Script : MonoBehaviour
 
     //Climb Logic
     [SerializeField] private bool isClimbing = false;
+    //variable que controla si esta en rang d'una escala
+    public static bool canClimb = false;
     [SerializeField] float climbSpeed = 3f;
-    //private bool canClimb = true;
     [SerializeField] private Transform climbCheck;
     [SerializeField] private LayerMask climbLayer;
 
@@ -52,16 +53,21 @@ public class Liora_Movement_Script : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
-
     // Update is called once per frame
     void Update()
     {
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
         if (isDashing) { return; }
-        /*if (CheckGround()) { jumping = false; }
-        if (rb.velocity.y > 0) { canGrabLedge = false; }
-        if (rb.velocity.y <= 0) { canGrabLedge = true; }*/
-        rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
+        if (isClimbing || isGrabbingLedge)
+        {
+            horizontal = 0f;
+        }
+        if (!isClimbing)
+        {
+            rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
+        }
+        CheckForClimb();
+        CheckForLedge();
         if (!isFacingRight && horizontal > 0f)
         {
             FlipSprite();
@@ -69,16 +75,6 @@ public class Liora_Movement_Script : MonoBehaviour
         else if (isFacingRight && horizontal < 0f)
         {
             FlipSprite();
-        }
-        if (!isClimbing && !CheckGround())
-        {
-            //entrarà si el personatge no esta ja agafat a un objecte escalable
-            CheckForClimb();
-        }
-        if (!isGrabbingLedge && rb.velocity.y < 0f && !CheckGround())
-        {
-            //entrara a aquest if si el personatge no està agafantse ja a un Ledge i la seva velocitat vertical està caient
-            CheckForLedge();
         }
         if (stateComplete)
         {
@@ -104,7 +100,7 @@ public class Liora_Movement_Script : MonoBehaviour
         if (context.canceled && rb.velocity.y > 0)
         {
             //si deixes de premer el botó (context.canceled) i està pujant encara (rb.velocity.y > 0), tallarà el salt fent que baixi la seva velocitat vertical a la meitat
-            rb.AddForce(new Vector2(0, -4f), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, -8f), ForceMode2D.Impulse);
         }
     }
     public void Dash(InputAction.CallbackContext context)
@@ -133,24 +129,27 @@ public class Liora_Movement_Script : MonoBehaviour
     public void ClimbInput(InputAction.CallbackContext context)
     {
         if (!isClimbing) { return; }
-        isClimbing = true;
-        jumping = false;
         float inputY = context.ReadValue<Vector2>().y;
-        rb.velocity = new Vector2(0f, inputY * climbSpeed);
+        float inputX = context.ReadValue<Vector2>().x;
+        if (inputY != 0f)
+        {
+            rb.velocity = new Vector2(0f, inputY * climbSpeed);
+        }
+        else
+        {
+            rb.velocity = new Vector2 (0f, 0f);
+        }
+        if (inputX != 0f)
+        {
+            isClimbing = false;
+        }
     }
     void SelectState()
     {
         stateComplete = false;
-        if (isGrabbingLedge == true)
+        if (CheckGround() && Mathf.Abs(rb.velocity.y) < Mathf.Epsilon)
         {
-            playerState = PlayerState.LedgeGrabbing;
-            StartLedgeGrabbing();
-            return;
-        }
-        
-        if (CheckGround())
-        {
-            if (horizontal == 0f)
+            if (Mathf.Abs(horizontal) < Mathf.Epsilon)
             {
                 playerState = PlayerState.Idle;
                 StartIdle();
@@ -163,8 +162,16 @@ public class Liora_Movement_Script : MonoBehaviour
         }
         else
         {
-            playerState = PlayerState.Airborne;
-            StartAirborne();
+            if (isGrabbingLedge == true)
+            {
+                playerState = PlayerState.LedgeGrabbing;
+                StartLedgeGrabbing();
+            }
+            else
+            {
+                playerState = PlayerState.Airborne;
+                StartAirborne();
+            }
         }
         /*if (isGrabbingLedge == true)
         {
@@ -266,7 +273,7 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         //evita multiples grabs i resetea gravity
         canGrabLedge = false;
-        rb.gravityScale = 3f;
+        rb.gravityScale = 6f;
         isGrabbingLedge = false;
         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
 
@@ -282,11 +289,11 @@ public class Liora_Movement_Script : MonoBehaviour
     private void DropFromLedge()
     {
         isGrabbingLedge = false;
-        rb.gravityScale = 3f;
+        rb.gravityScale = 6f;
         //evitar multiples grabs
         canGrabLedge = false;
         //dropejar el player una mica
-        Vector2 dropPosition = new Vector2(transform.position.x, transform.position.y - 0.5f);
+        Vector2 dropPosition = new Vector2(transform.position.x, transform.position.y - 1f);
         transform.position = dropPosition;
         //utilitzem invoke per cridar una funció despres d'un petit delay
         Invoke("EnableLedgeGrab", 0.5f);
@@ -309,24 +316,29 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     private void CheckForClimb()
     {
+        if (isClimbing || isGrabbingLedge) { return; }
         Collider2D wall = Physics2D.OverlapCircle(climbCheck.position, 0.2f, climbLayer);
         if (wall != null)
         {
-            print("tas escalando");
             isClimbing = true;
             jumping = false;
             //parar moviment
             rb.velocity = Vector2.zero;
             rb.gravityScale = 0f;
         }
-        /*else
+        else
         {
-            rb.gravityScale = 3f;
-        }*/
+            isClimbing = false;
+            if (!isGrabbingLedge)
+            {
+                rb.gravityScale = 6f;
+            }
+        }
     }
     //funció que comprova si estem en range de un ledge
     private void CheckForLedge()
     {
+        if (isClimbing || isGrabbingLedge || CheckGround()) { return; }
         Collider2D ledge = Physics2D.OverlapCircle(ledgeCheck.position, 0.2f, ledgeLayer);
         if(ledge != null && canGrabLedge)
         {
