@@ -158,7 +158,6 @@ GameObject:
   - component: {fileID: -7938245896370040771}
   - component: {fileID: 3647475253173115995}
   - component: {fileID: 6844576158491812986}
-  - component: {fileID: 5071446705041545855}
   - component: {fileID: 4947185015358159300}
   - component: {fileID: 9078650564480863416}
   m_Layer: 6
@@ -205,16 +204,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   jumping: 0
-  groundSpeed: 5
-  jumpPower: 12
+  groundSpeed: 10
+  jumpPower: 24
   trailRenderer: {fileID: 4869507558380449802}
   isGrabbingLedge: 0
   ledgeCheck: {fileID: 3596653249378586279}
   ledgeLayer:
     serializedVersion: 2
     m_Bits: 256
-  ledgeGrabOffsetY: -2
+  ledgeGrabOffsetY: -8
   isClimbing: 0
+  climbSpeed: 6
   climbCheck: {fileID: 1892225545295776034}
   climbLayer:
     serializedVersion: 2
@@ -309,7 +309,19 @@ MonoBehaviour:
     m_ActionId: 75008cd7-1d0b-4101-a23b-1d5c2cd2285b
     m_ActionName: ControlesInGame/Ledge[/Keyboard/w,/Keyboard/s]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6828677513443051858}
+        m_TargetAssemblyTypeName: Liora_Movement_Script, Assembly-CSharp
+        m_MethodName: ClimbInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 60e204cb-e282-4916-952f-bf78c4ae2883
     m_ActionName: ControlesInGame/Climb[/Keyboard/w,/Keyboard/s]
   m_NeverAutoSwitchControlSchemes: 0
@@ -390,51 +402,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &5071446705041545855
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3994394536962611434}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.015625, y: 1}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.516129, y: -0.032786883}
-    oldSize: {x: 0.96875, y: 1.90625}
-    newSize: {x: 0.31, y: 0.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.96875, y: 1.875}
-  m_EdgeRadius: 0
 --- !u!50 &4947185015358159300
 Rigidbody2D:
   serializedVersion: 4
@@ -450,7 +417,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 6
   m_Material: {fileID: 6200000, guid: ae7305a8b8f789841811ac89ddb23f7e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -602,8 +569,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5079527829267624495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -678,9 +645,9 @@ Transform:
   m_GameObject: {fileID: 4736153045146113422}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41, y: 1.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0.864, y: 3.2, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5079527829267624495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -716,7 +683,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.6433851}
+  m_Offset: {x: 0, y: -0.77216494}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -727,7 +694,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 1.78677}
+  m_Size: {x: 0.2, y: 1.5}
   m_EdgeRadius: 0
 --- !u!1 &5049708301153696739
 GameObject:
@@ -755,9 +722,9 @@ Transform:
   m_GameObject: {fileID: 5049708301153696739}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.06, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.118, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5079527829267624495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -832,9 +799,9 @@ Transform:
   m_GameObject: {fileID: 6793785563554027629}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41, y: 1.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0.864, y: 3.2, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5079527829267624495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -881,5 +848,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.5}
+  m_Size: {x: 0.2, y: 0.3}
   m_EdgeRadius: 0
