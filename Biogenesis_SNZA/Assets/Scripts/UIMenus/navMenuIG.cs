@@ -13,7 +13,7 @@ public class navMenuIG : MonoBehaviour
     public Vector3 botonGrande = new Vector3(1.1f, 1.1f, 1);
     private Vector3 botonNormal = new Vector3(1, 1, 1);
 
-    public static int life = 100, money = 100, adrenaline = 100;    //Aqui todos los ints
+    public static int life = 100, money = 100, adrenaline = 100;    // Aqui todos los ints (ESTOS NO ACTUALIZAN LOS DE LA ARRAY, para eso la función de SINCRONIZAR)
     public static int[] intsActuales = {life, money, adrenaline};   // AQUI LOS QUE SE TENGAN QUE GUARDAR
 
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class navMenuIG : MonoBehaviour
             ArrTxtMenuIG[i].SetActive(false);
         }
         idBotonActivo = scrMemoria.memIdBotonActivo;    // Activa solo el último boton que se pulsó
-        BotonPulsado(idBotonActivo);
+        ArrBotones[idBotonActivo].onClick.Invoke();
 
         // *****TEST MEMORIA*****
         for (int i = 0; i < scrMemoria.intsMemoria.Length; i++)   // CARGAR LAS VARIABLES GUARDADAS
@@ -52,7 +52,7 @@ public class navMenuIG : MonoBehaviour
     {
         
     }
-    void Sincronizar()  // Para no cambiar manualmente el valor de cada indice de la array (seria incomodo), cambiar directamente el valor de la variable y que haya esta función que sincronize todas con la array
+    void Sincronizar()  // Actualizar la array con los nuevos valores de cada variable por separado (de normal, al cambiar el valor de una variable, no se cambia dentro de la array)
     {
         intsActuales[0] = life;
         intsActuales[1] = money;
