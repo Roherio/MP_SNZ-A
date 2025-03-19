@@ -58,7 +58,7 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
         if (isDashing) { return; }
-        if (isClimbing || isGrabbingLedge)
+        if (isGrabbingLedge)
         {
             horizontal = 0f;
         }
@@ -91,11 +91,19 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         //evitar que salti durant un dash
         if (isDashing || isGrabbingLedge) { return; }
-        if (context.started && CheckGround())
+        if (context.started)
         {
-            //saltarà amb la primera input (context.started, sinó seria input continu) nomes si isGrounded es vertader
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-            jumping = true;
+            if (CheckGround() || isClimbing)
+            {
+                //saltarà amb la primera input (context.started, sinó seria input continu) nomes si isGrounded es vertader
+                isClimbing = false;
+                canClimb = false;
+                Invoke("EnableClimb", 0.5f);
+                rb.gravityScale = 6f;
+                rb.velocity = new Vector2(rb.velocity.x * horizontal, jumpPower);
+                jumping = true;
+            }
+            
         }
         if (context.canceled && rb.velocity.y > 0)
         {
@@ -139,10 +147,7 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             rb.velocity = new Vector2 (0f, 0f);
         }
-        if (inputX != 0f)
-        {
-            isClimbing = false;
-        }
+        rb.gravityScale = 0f;
     }
     void SelectState()
     {
@@ -302,6 +307,10 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         canGrabLedge = true;
     }
+    private void EnableClimb()
+    {
+        canClimb = true;
+    }
     private void FlipSprite()
     {
         isFacingRight = !isFacingRight;
@@ -316,7 +325,7 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     private void CheckForClimb()
     {
-        if (isClimbing || isGrabbingLedge) { return; }
+        if (isClimbing || isGrabbingLedge || !canClimb) { return; }
         Collider2D wall = Physics2D.OverlapCircle(climbCheck.position, 0.2f, climbLayer);
         if (wall != null)
         {
@@ -329,6 +338,7 @@ public class Liora_Movement_Script : MonoBehaviour
         else
         {
             isClimbing = false;
+            rb.gravityScale = 6f;
             if (!isGrabbingLedge)
             {
                 rb.gravityScale = 6f;
