@@ -1,0 +1,33 @@
+{
+	"identifier": "FORTALEZA_6",
+	"uniqueIdentifer": "d1bdcdc0-e920-11ef-b809-73ab8d258036",
+	"x": 13920,
+	"y": -1072,
+	"width": 1904,
+	"height": 712,
+	"bgColor": "#FAD5D5",
+	"neighbourLevels": [
+		{
+			"levelIid": "837ebf20-e920-11ef-9274-d7a8335e175b",
+			"dir": "n"
+		},
+		{
+			"levelIid": "9331fe50-e920-11ef-b809-4be20d6b0345",
+			"dir": "e"
+		},
+		{
+			"levelIid": "9a440fd0-e920-11ef-9274-5fd1db431867",
+			"dir": "n"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Walls.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"UNDERGROUND.png",
+		"TilesLiora.png"
+	],
+	"entities" : {}
+}
