@@ -92,7 +92,9 @@ public class SecretarioEnemyScript : MonoBehaviour
     IEnumerator Dash()
     {
         canDash = false;
-        dashDirection = (playerPosition.position - transform.position).normalized;
+        dashDirection = (playerPosition.position - transform.position);
+        dashDirection.y = 0; //evita que dashee hacia arriba
+        dashDirection = dashDirection.normalized;
 
         dashTimer = 0f;
         while (dashTimer < dashDuration)
