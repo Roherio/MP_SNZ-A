@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
@@ -7,6 +8,7 @@ public class SecretarioEnemyScript : MonoBehaviour
 {
     public Animator animator;
     [SerializeField] float moveSpeed;
+    private float originalSpeed;
     [SerializeField] Collider2D DetectionRange;
     [SerializeField] float attackRange;
     [SerializeField] Transform playerPosition;
@@ -26,7 +28,7 @@ public class SecretarioEnemyScript : MonoBehaviour
 
     void Start()
     {
-       
+        originalSpeed = moveSpeed;
     }
 
     private void FixedUpdate()
@@ -39,42 +41,9 @@ public class SecretarioEnemyScript : MonoBehaviour
         {
             case EnemyBehaviour.STANDING:
 
-                if (isDetectingRange)
-                {
-                    IsChasing();
-                }
                 break;
 
             case EnemyBehaviour.PATROL:
-
-                if (isDetectingRange)
-                {
-                    IsChasing();
-
-                    return;
-                }
-
-                if (destinationPoint == 0)
-                {
-                    transform.localScale = new Vector3(1, 1, 1);
-                    transform.position = Vector2.MoveTowards(transform.position, patrolPoint[0].position, moveSpeed * Time.deltaTime);
-                    animator.SetBool("InDetectionRange", true);
-                    if (Vector2.Distance(transform.position, patrolPoint[0].position) < 0.1)
-                    {
-                        destinationPoint = 1;
-                    }
-                }
-
-                if (destinationPoint == 1)
-                {
-                    transform.localScale = new Vector3(-1, 1, 1);
-                    transform.position = Vector2.MoveTowards(transform.position, patrolPoint[1].position, moveSpeed * Time.deltaTime);
-                    if (Vector2.Distance(transform.position, patrolPoint[1].position) < 0.1)
-                    {
-                        destinationPoint = 0;
-
-                    }
-                }
                 break;
         }
     
@@ -99,35 +68,25 @@ public class SecretarioEnemyScript : MonoBehaviour
         }
 
     }
-    void IsChasing()
-    {
-        Behaviour = EnemyBehaviour.STANDING;
-        if (Vector2.Distance(transform.position, playerPosition.position) < attackRange)
-        {
-            resetAnimations();
-            animator.SetBool("InAttackRange", true);
-            StartCoroutine(DashMovementHandler());
-        }
-        else
-        {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPosition.position.x, transform.position.y), moveSpeed * Time.deltaTime);
-            animator.SetBool("InDetectionRange", true);
-        }
-    }
     IEnumerator DashMovementHandler()
     {
+        print("I'm preparing to dash!");
         canDash = true;
         isPreparingForDash = true;
 
-        yield return new WaitForSeconds(0.5f);
+
+        yield return new WaitForSeconds(2f);
+        print("I'm dashing!");
         isDashing = true;
         isPreparingForDash = false;
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1f);
+        print("cooldown");
         canDash = false;
         isDashing = false;
 
         yield return new WaitForSeconds(4f);
+        print ("I can dash again");
         canDash = true;
     }
 
@@ -136,10 +95,6 @@ public class SecretarioEnemyScript : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, attackRange);
-    }
-    private void dashToPlayer()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPosition.position.x, transform.position.y), (moveSpeed * 5) * Time.deltaTime);
     }
     void resetAnimations()
     {

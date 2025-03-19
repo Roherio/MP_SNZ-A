@@ -5,20 +5,23 @@ using UnityEngine.InputSystem;
 
 public class Liora_Movement_Script : MonoBehaviour
 {
+
+    //StateMachine Logic
+    public Liora_Idle_Script idleState;
+    public Liora_Run_Script runState;
+    public Liora_Airborne_Script airState;
+    public Liora_Ledge_Script ledgeState;
+    State state;
+
     private bool isFacingRight = true;
-    Rigidbody2D rb;
+    public Animator animator;
+    public Rigidbody2D rb;
     //Ground Logic
     public BoxCollider2D groundCheck;
     public LayerMask groundLayer;
 
-    //StateMachine Logic
-    enum PlayerState { Idle, Running, Airborne, LedgeGrabbing}
-    PlayerState playerState;
-    bool stateComplete;
-    Animator animator;
-    
     //Jump Logic
-    private float horizontal;
+    public float horizontal { get; private set; }
     public bool jumping;
     [SerializeField] float groundSpeed = 5f;
     [SerializeField] float jumpPower = 10f;
@@ -26,7 +29,7 @@ public class Liora_Movement_Script : MonoBehaviour
     //Dash Logic
     private bool canDash = true;
     private bool isDashing;
-    private float dashPower = 18f;
+    [SerializeField] private float dashPower = 36f;
     private float dashTime = 0.2f;
     private float dashCooldown = 0.2f;
     [SerializeField] TrailRenderer trailRenderer;
@@ -51,11 +54,19 @@ public class Liora_Movement_Script : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        idleState.Setup(rb, animator, horizontal);
+        runState.Setup(rb, animator, horizontal);
+        airState.Setup(rb, animator, horizontal);
+        ledgeState.Setup(rb, animator, horizontal);
+        state = idleState;
     }
     // Update is called once per frame
     void Update()
     {
+        //pas de variables a la state machine
+        state.horizontal = horizontal;
+        state.isGrounded = CheckGround();
+        state.isGrabbingLedge = isGrabbingLedge;
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
         if (isDashing) { return; }
         if (isGrabbingLedge)
@@ -66,6 +77,7 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
         }
+        
         CheckForClimb();
         CheckForLedge();
         if (!isFacingRight && horizontal > 0f)
@@ -76,15 +88,15 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             FlipSprite();
         }
-        if (stateComplete)
+        if (state.isComplete)
         {
             SelectState();
         }
-        UpdateState();
+        state.Do();
     }
     public void Movimiento(InputAction.CallbackContext context)
     {
-        if (isGrabbingLedge) { return; }
+        //if (isGrabbingLedge) { return; }
         horizontal = context.ReadValue<Vector2>().x;
     }
     public void Saltar(InputAction.CallbackContext context)
@@ -98,7 +110,7 @@ public class Liora_Movement_Script : MonoBehaviour
                 //saltarà amb la primera input (context.started, sinó seria input continu) nomes si isGrounded es vertader
                 isClimbing = false;
                 canClimb = false;
-                Invoke("EnableClimb", 0.5f);
+                Invoke("EnableClimb", 0.3f);
                 rb.gravityScale = 6f;
                 rb.velocity = new Vector2(rb.velocity.x * horizontal, jumpPower);
                 jumping = true;
@@ -151,116 +163,29 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     void SelectState()
     {
-        stateComplete = false;
         if (CheckGround() && Mathf.Abs(rb.velocity.y) < Mathf.Epsilon)
         {
             if (Mathf.Abs(horizontal) < Mathf.Epsilon)
             {
-                playerState = PlayerState.Idle;
-                StartIdle();
+                state = idleState;
             }
             else
             {
-                playerState = PlayerState.Running;
-                StartRunning();
+                state = runState;
             }
         }
         else
         {
             if (isGrabbingLedge == true)
             {
-                playerState = PlayerState.LedgeGrabbing;
-                StartLedgeGrabbing();
+                state = ledgeState;
             }
             else
             {
-                playerState = PlayerState.Airborne;
-                StartAirborne();
+                state = airState;
             }
         }
-        /*if (isGrabbingLedge == true)
-        {
-            playerState = PlayerState.LedgeGrabbing;
-            StartLedgeGrabbing();
-        }
-        if (!CheckGround() && jumping == true)
-        {
-            playerState = PlayerState.Airborne;
-            StartAirborne();
-        }*/
-    }
-    void UpdateState()
-    {
-        if (isDashing) { return; }
-        switch (playerState)
-        {
-            case PlayerState.Idle:
-                UpdateIdle();
-                break;
-            case PlayerState.Running:
-                UpdateRunning();
-                break;
-            case PlayerState.Airborne:
-                UpdateAirborne();
-                break;
-            case PlayerState.LedgeGrabbing:
-                UpdateLedgeGrabbing();
-                break;
-        }
-    }
-    void UpdateIdle()
-    {
-        if (!CheckGround() || horizontal != 0f)
-        {
-            stateComplete = true;
-        }
-    }
-    void UpdateRunning()
-    {
-        if (!CheckGround() || horizontal == 0f)
-        {
-            stateComplete = true;
-        }
-    }
-    void UpdateAirborne()
-    {
-        //utilitzem la funció per mapejar el valor del jumpPower del 12 al -12 (de -jumpPower) entre 0 i 1 i decidir quins frames es reprodueixen de l'animacio de salt, per controlar que quan puja es reprodueixi la primera meitat de l'animació i quan baixa la segona
-        float time = Map(rb.velocity.y, jumpPower, -jumpPower, 0, 1, true);
-        animator.Play("Jump", 0, time);
-        //animator.speed = 0f;
-        if (CheckGround() || isGrabbingLedge == true)
-        {
-            jumping = false;
-            stateComplete = true;
-        }
-    }
-    void UpdateLedgeGrabbing()
-    {
-        if (!isGrabbingLedge)
-        {
-            stateComplete = true;
-        }
-    }
-    void StartIdle()
-    {
-        animator.speed = 1;
-        animator.Play("Idle");
-    }
-    void StartRunning()
-    {
-        animator.Play("Run");
-        animator.speed = 1.18f;
-    }
-    void StartAirborne()
-    {
-        animator.speed = 1;
-        animator.Play("Jump");
-    }
-    void StartLedgeGrabbing()
-    {
-        jumping = false;
-        animator.speed = 1;
-        animator.Play("Ledge");
+        state.Enter();
     }
     private IEnumerator Dash()
     {
@@ -289,7 +214,6 @@ public class Liora_Movement_Script : MonoBehaviour
         //fer que el jugador pugi el ledge
         //transform.position = climbPosition;*/
         Invoke("EnableLedgeGrab", 0.2f);
-        //stateComplete = true;
     }
     private void DropFromLedge()
     {
@@ -361,11 +285,5 @@ public class Liora_Movement_Script : MonoBehaviour
             ledgePosition = new Vector2(transform.position.x, ledge.transform.position.y + ledgeGrabOffsetY);
             transform.position = ledgePosition;
         }
-    }
-    //funció que permet mapejar un valor a dintre d'un rang que decideixes (generalment decidirem entre 0 i 1)
-    public static float Map(float value, float min1, float max1, float min2, float max2, bool clamp = false)
-    {
-        float val = min2 + (max2 - min2) * ((value - min1) / (max1 - min1));
-        return clamp ? Mathf.Clamp(val, Mathf.Min(min2, max2), Mathf.Max(min2, max2)) : val;
     }
 }
