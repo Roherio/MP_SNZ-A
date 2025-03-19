@@ -1,0 +1,33 @@
+{
+	"identifier": "SUBSUELO_4",
+	"uniqueIdentifer": "85d0d5d0-e920-11ef-9d4d-657016cbde1a",
+	"x": 12822,
+	"y": 976,
+	"width": 1920,
+	"height": 712,
+	"bgColor": "#96EB8E",
+	"neighbourLevels": [
+		{
+			"levelIid": "46df2dc0-e920-11ef-9d4d-b53a439d4040",
+			"dir": "o"
+		},
+		{
+			"levelIid": "d057b840-e920-11ef-9d4d-91f5056b7b3a",
+			"dir": "w"
+		},
+		{
+			"levelIid": "8f38b6a0-e920-11ef-9d4d-ed7c700b23c1",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Walls.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"UNDERGROUND.png",
+		"TilesLiora.png"
+	],
+	"entities" : {}
+}

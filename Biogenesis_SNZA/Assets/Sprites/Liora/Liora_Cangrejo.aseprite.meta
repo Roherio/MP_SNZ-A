@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638778876080893796
+  platformSettingsDirtyTick: 638779737874725065
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -128,8 +128,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 181
-      y: 4
+      x: 132
+      y: 273
       width: 32
       height: 58
     spriteID: a8f83c8549758634e8308ac32d973c1d
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 181, y: 4}
+    uvTransform: {x: 132, y: 273}
   - name: Liora_Cangrejo_Frame_1
     originalName: 
     pivot: {x: 0.42307693, y: -0.032786883}
@@ -149,7 +149,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 388
       width: 52
       height: 61
     spriteID: 58886209a6f878c4fb9a5b847a84cfdc
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 388}
   - name: Liora_Cangrejo_Frame_7
     originalName: 
     pivot: {x: 0.42857143, y: -0.03448276}
@@ -168,8 +168,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 4
+      x: 72
+      y: 349
       width: 49
       height: 58
     spriteID: ba4a6884a51630b4991d516f1430a906
@@ -180,7 +180,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 4}
+    uvTransform: {x: 72, y: 349}
   - name: Liora_Cangrejo_Frame_8
     originalName: 
     pivot: {x: 0.5277778, y: -0.033898305}
@@ -188,8 +188,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 70
+      x: 72
+      y: 415
       width: 36
       height: 59
     spriteID: fe0ad2c277babe140930e50bc7c76212
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 70}
+    uvTransform: {x: 72, y: 415}
   - name: Liora_Cangrejo_Frame_9
     originalName: 
     pivot: {x: 0.75, y: -0.033333335}
@@ -208,8 +208,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 124
-      y: 137
+      x: 132
+      y: 70
       width: 32
       height: 60
     spriteID: 197ee9ce9e70ae54c9e239f18aeee94f
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 124, y: 137}
+    uvTransform: {x: 132, y: 70}
   - name: Liora_Cangrejo_Frame_2
     originalName: 
-    pivot: {x: 0.42307693, y: -0.032786883}
+    pivot: {x: 0.84375, y: -0.03448276}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 73
-      width: 52
-      height: 61
+      x: 132
+      y: 339
+      width: 32
+      height: 58
     spriteID: b5e1add7c07b4db4ea9b340058e985a8
     spriteBone: []
     spriteOutline: []
@@ -240,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 73}
+    uvTransform: {x: 132, y: 339}
   - name: Liora_Cangrejo_Frame_3
     originalName: 
-    pivot: {x: 0.42307693, y: -0.032786883}
+    pivot: {x: 0.4666667, y: -0.035714287}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 142
-      width: 52
-      height: 61
+      y: 4
+      width: 60
+      height: 56
     spriteID: 5c51aad128b410c429496e8c003ec78d
     spriteBone: []
     spriteOutline: []
@@ -260,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 142}
+    uvTransform: {x: 4, y: 4}
   - name: Liora_Cangrejo_Frame_4
     originalName: 
-    pivot: {x: 0.42307693, y: -0.032786883}
+    pivot: {x: 0.5, y: -0.03448276}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 64
+      x: 132
       y: 4
-      width: 52
-      height: 61
+      width: 54
+      height: 58
     spriteID: 408fed72bccab41439de163f1dc03a22
     spriteBone: []
     spriteOutline: []
@@ -280,18 +280,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 64, y: 4}
+    uvTransform: {x: 132, y: 4}
   - name: Liora_Cangrejo_Frame_5
     originalName: 
-    pivot: {x: 0.42307693, y: -0.032786883}
+    pivot: {x: 0.78125, y: -0.033898305}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 64
-      y: 73
-      width: 52
-      height: 61
+      x: 132
+      y: 206
+      width: 32
+      height: 59
     spriteID: e3bfb63b92664404cbe941f46bedf210
     spriteBone: []
     spriteOutline: []
@@ -300,18 +300,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 64, y: 73}
+    uvTransform: {x: 132, y: 206}
   - name: Liora_Cangrejo_Frame_6
     originalName: 
-    pivot: {x: 0.42307693, y: -0.032786883}
+    pivot: {x: 0.9375, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 64
-      y: 142
-      width: 52
-      height: 61
+      x: 132
+      y: 138
+      width: 32
+      height: 60
     spriteID: d503966c0a7a3434a915896520ffe7f8
     spriteBone: []
     spriteOutline: []
@@ -320,7 +320,207 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 64, y: 142}
+    uvTransform: {x: 132, y: 138}
+  - name: Liora_Cangrejo_Frame_2
+    originalName: 
+    pivot: {x: 0.42307693, y: -0.032786883}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 4
+      width: 52
+      height: 61
+    spriteID: 9ab47f2050e805c4bbde3ac9a29a90e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 4}
+  - name: Liora_Cangrejo_Frame_3
+    originalName: 
+    pivot: {x: 0.42307693, y: -0.032786883}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 73
+      width: 52
+      height: 61
+    spriteID: f5ad9f001d65f644c824c661d16b1f72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 73}
+  - name: Liora_Cangrejo_Frame_4
+    originalName: 
+    pivot: {x: 0.42307693, y: -0.032786883}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 142
+      width: 52
+      height: 61
+    spriteID: 214c684021644a645951fc52c7ad2724
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 142}
+  - name: Liora_Cangrejo_Frame_5
+    originalName: 
+    pivot: {x: 0.42307693, y: -0.032786883}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 211
+      width: 52
+      height: 61
+    spriteID: 7ebd42590d650d4408fed9132fa69d97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 211}
+  - name: Liora_Cangrejo_Frame_6
+    originalName: 
+    pivot: {x: 0.42307693, y: -0.032786883}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 280
+      width: 52
+      height: 61
+    spriteID: 0c76aec751114354cad238ca4a590628
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 280}
+  - name: Liora_Cangrejo_Frame_12
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.035714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 68
+      width: 60
+      height: 56
+    spriteID: a51ec7b11df14ce4d8ef19452bd5a2cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 68}
+  - name: Liora_Cangrejo_Frame_13
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.035714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 132
+      width: 60
+      height: 56
+    spriteID: fc004b2440e0fac4a81e033140e90850
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 132}
+  - name: Liora_Cangrejo_Frame_14
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.035714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 196
+      width: 60
+      height: 56
+    spriteID: 2daa6f0af7ece5d41969816bbbea238d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 196}
+  - name: Liora_Cangrejo_Frame_15
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.035714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 260
+      width: 60
+      height: 56
+    spriteID: 438b1a5908b7d99489c61929d41771e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 260}
+  - name: Liora_Cangrejo_Frame_16
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.035714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 324
+      width: 60
+      height: 56
+    spriteID: 0bd2f8c56703de8468436a7441f724fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 324}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -375,6 +575,51 @@ ScriptedImporter:
         width: 32
         height: 60
       spriteId: 197ee9ce9e70ae54c9e239f18aeee94f
+    - name: Liora_Cangrejo_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 2
+        width: 32
+        height: 58
+      spriteId: b5e1add7c07b4db4ea9b340058e985a8
+    - name: Liora_Cangrejo_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 2
+        width: 60
+        height: 56
+      spriteId: 5c51aad128b410c429496e8c003ec78d
+    - name: Liora_Cangrejo_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 2
+        width: 54
+        height: 58
+      spriteId: 408fed72bccab41439de163f1dc03a22
+    - name: Liora_Cangrejo_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 7
+        y: 2
+        width: 32
+        height: 59
+      spriteId: e3bfb63b92664404cbe941f46bedf210
+    - name: Liora_Cangrejo_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 2
+        y: 2
+        width: 32
+        height: 60
+      spriteId: d503966c0a7a3434a915896520ffe7f8
     - name: Liora_Cangrejo_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -383,7 +628,7 @@ ScriptedImporter:
         y: 2
         width: 52
         height: 61
-      spriteId: b5e1add7c07b4db4ea9b340058e985a8
+      spriteId: 9ab47f2050e805c4bbde3ac9a29a90e5
     - name: Liora_Cangrejo_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
@@ -392,7 +637,7 @@ ScriptedImporter:
         y: 2
         width: 52
         height: 61
-      spriteId: 5c51aad128b410c429496e8c003ec78d
+      spriteId: f5ad9f001d65f644c824c661d16b1f72
     - name: Liora_Cangrejo_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
@@ -401,7 +646,7 @@ ScriptedImporter:
         y: 2
         width: 52
         height: 61
-      spriteId: 408fed72bccab41439de163f1dc03a22
+      spriteId: 214c684021644a645951fc52c7ad2724
     - name: Liora_Cangrejo_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
@@ -410,7 +655,7 @@ ScriptedImporter:
         y: 2
         width: 52
         height: 61
-      spriteId: e3bfb63b92664404cbe941f46bedf210
+      spriteId: 7ebd42590d650d4408fed9132fa69d97
     - name: Liora_Cangrejo_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
@@ -419,7 +664,52 @@ ScriptedImporter:
         y: 2
         width: 52
         height: 61
-      spriteId: d503966c0a7a3434a915896520ffe7f8
+      spriteId: 0c76aec751114354cad238ca4a590628
+    - name: Liora_Cangrejo_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 2
+        width: 60
+        height: 56
+      spriteId: a51ec7b11df14ce4d8ef19452bd5a2cb
+    - name: Liora_Cangrejo_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 2
+        width: 60
+        height: 56
+      spriteId: fc004b2440e0fac4a81e033140e90850
+    - name: Liora_Cangrejo_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 2
+        width: 60
+        height: 56
+      spriteId: 2daa6f0af7ece5d41969816bbbea238d
+    - name: Liora_Cangrejo_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 2
+        width: 60
+        height: 56
+      spriteId: 438b1a5908b7d99489c61929d41771e8
+    - name: Liora_Cangrejo_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 2
+        width: 60
+        height: 56
+      spriteId: 0bd2f8c56703de8468436a7441f724fb
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -441,7 +731,7 @@ ScriptedImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0

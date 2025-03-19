@@ -1,0 +1,25 @@
+{
+	"identifier": "FORTALEZA_14",
+	"uniqueIdentifer": "885c2710-e920-11ef-9274-af404ec23ece",
+	"x": 12880,
+	"y": -2184,
+	"width": 640,
+	"height": 360,
+	"bgColor": "#FAD5D5",
+	"neighbourLevels": [
+		{
+			"levelIid": "7fafd8a0-e920-11ef-9274-97c49e643102",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Walls.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"UNDERGROUND.png",
+		"TilesLiora.png"
+	],
+	"entities" : {}
+}
