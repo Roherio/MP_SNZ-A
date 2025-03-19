@@ -7,17 +7,24 @@ public class navMenuIG : MonoBehaviour
 {
     public GameObject MenuInGame;
     //*****BOTONES Y UI*****
-    public GameObject[] ArrSubmenus = new GameObject[6];
-    public Button[] ArrBSubmenus = new Button[6];
-    public GameObject[] ArrMenusEnemigos = new GameObject[4];
+    
+    public Button[] ArrBMenus = new Button[6];
+    public GameObject[] ArrMenus = new GameObject[6];
     public Button[] ArrBTutoriales = new Button[4];
+    public GameObject[] ArrMenusTutoriales = new GameObject[4];
     public Button[] ArrBObjetos = new Button[4];
+    public GameObject[] ArrMenusObjetos = new GameObject[4];
     public Button[] ArrBPulsera = new Button[4];
+    public GameObject[] ArrMenusPulsera = new GameObject[4];
     public Button[] ArrBEnemigos = new Button[4];
+    public GameObject[] ArrMenusEnemigos = new GameObject[4];
     public Button[] ArrBNotas = new Button[4];
-    public Button[] ArrBOpciones = new Button[4];
+    public GameObject[] ArrMenusNotas = new GameObject[4];
+    public Button[] ArrBOpciones = new Button[3];
+    public GameObject[] ArrMenusOpciones = new GameObject[3];
 
     public Button[][] ArrBotones = new Button[6][];
+    public GameObject[][] ArrSubmenus = new GameObject[6][];
 
     public static int idBotonActivo = 0;
     public static int idSubBotonActivo = 0;
@@ -27,6 +34,8 @@ public class navMenuIG : MonoBehaviour
     // *****VARIABLES*****
     public static int life = 100, money = 100, adrenaline = 100;    // Aqui todos los ints (ESTOS NO ACTUALIZAN LOS DE LA ARRAY, para eso la función de SINCRONIZAR)
     public static int[] intsActuales = {life, money, adrenaline};   // AQUI LOS QUE SE TENGAN QUE GUARDAR
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,14 +47,22 @@ public class navMenuIG : MonoBehaviour
         ArrBotones[4] = ArrBNotas;
         ArrBotones[5] = ArrBOpciones;
 
-        MenuInGame.SetActive(false);
+        ArrSubmenus[0] = ArrMenusTutoriales;
+        ArrSubmenus[1] = ArrMenusObjetos;
+        ArrSubmenus[2] = ArrMenusPulsera;
+        ArrSubmenus[3] = ArrMenusEnemigos;
+        ArrSubmenus[4] = ArrMenusNotas;
+        ArrSubmenus[5] = ArrMenusOpciones;
+
         AsignarListeners();
+        MenuInGame.SetActive(false);
+        
 
         // *****BOTONES*****
-        DesactivarSubmenus();
+        DesactivarMenus();
         idBotonActivo = scrMemoria.memIdBotonActivo;    // esto podria ir dentro de la array tambien
-        ArrBSubmenus[idBotonActivo].onClick.Invoke();   // Activa solo el último boton que se pulsó
-        ArrBotones[idBotonActivo][idSubBotonActivo].onClick.Invoke();
+        ArrBMenus[idBotonActivo].onClick.Invoke();   // Activa solo el último boton que se pulsó
+        
 
         // *****TEST MEMORIA*****
         CargarVariables();
@@ -58,42 +75,82 @@ public class navMenuIG : MonoBehaviour
         GuardarVariables();
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
         
     }
+
     void AsignarListeners()
     {
-        // Asignar listeners para los botones de submenú
-        for (int i = 0; i < ArrBSubmenus.Length; i++)
+        // Asignar listeners para los botones del menu
+        for (int i = 0; i < ArrBMenus.Length; i++)
         {
-            int boton = i;  // Capturamos el índice del botón
-            ArrBSubmenus[i].onClick.AddListener(() => BotonPulsado(boton, 0));  // 0 indica que es un botón de submenú
+            int boton = i;
+            ArrBMenus[i].onClick.AddListener(() => BotonPulsado(boton, 6));
         }
 
-        // Asignar listeners para los botones de enemigos
+        // Asignar listeners para los botones de los submenus
         for (int i = 0; i < ArrBEnemigos.Length; i++)
         {
-            int boton = i;  // Capturamos el índice del botón
-            ArrBEnemigos[i].onClick.AddListener(() => BotonPulsado(boton, 1));  // 1 indica que es un botón de enemigos
+            int boton = i;  
+            ArrBEnemigos[i].onClick.AddListener(() => BotonPulsado(boton, 3));
         }
-    }
-    void DesactivarSubmenus()
-    {
-        for (int i = 0; i < ArrSubmenus.Length; i++)   // Desactivar todos los textos de todos los subapartados (hacer funcion)
+        for (int i = 0; i < ArrBOpciones.Length; i++)
         {
-            ArrSubmenus[i].SetActive(false);
-        }
-    }
-    void DesactivarMEnemigos()
-    {
-        for (int i = 0; i < ArrMenusEnemigos.Length; i++)   // Desactivar todos los textos de todos los subapartados (hacer funcion)
-        {
-            ArrMenusEnemigos[i].SetActive(false);
+            int boton = i;
+            ArrBOpciones[i].onClick.AddListener(() => BotonPulsado(boton, 5));
         }
 
+
+        /*
+         *    ********                                                           ********
+         * ******** RESTOS/RELIQUIA DE LA MAYOR PERDIDA DE TIEMPO NUNCA ANTES VISTA ********
+         *    ********                                                           ********
+         * 
+         * 
+        for (int idMenu = 0; idMenu < ArrBotones.Length; idMenu++)
+        {
+            for (int j = 0; j < ArrBotones[idMenu].Length; j++)
+            {
+                if (ArrBotones[idMenu][j] != null)
+                {
+                    int botonIndex = j;
+                    ArrBotones[idMenu][j].onClick.AddListener(() => BotonPulsado(botonIndex, idMenu));
+                }
+                else
+                {
+                    
+                }
+            }
+        }
+        */
     }
+
+    void DesactivarMenus()
+    {
+        for (int i = 0; i < ArrMenus.Length; i++)   // Desactivar todos los textos de todos los subapartados (hacer funcion)
+        {
+            ArrMenus[i].SetActive(false);
+        }
+    }
+
+    void DesactivarSubmenus()
+    {
+        foreach (GameObject[] menu in ArrSubmenus)
+        {
+            foreach (GameObject submenu in menu)
+            {
+                if (submenu != null)
+                {
+                    submenu.SetActive(false);
+                }
+            }
+        }
+    }
+
     void CargarVariables()
     {
         for (int i = 0; i < scrMemoria.intsMemoria.Length; i++)   // CARGAR LAS VARIABLES GUARDADAS
@@ -109,35 +166,42 @@ public class navMenuIG : MonoBehaviour
             scrMemoria.intsMemoria[i] = intsActuales[i];
         }
     }
+
     void Sincronizar()  // Actualizar la array con los nuevos valores de cada variable por separado (de normal, al cambiar el valor de una variable, no se cambia dentro de la array)
-                        // todo esto igual no hace falta si hay funciones de "SumarVida" y tal, aunque depende de como se les haga mas comodo a ellos, si referenciar el valor dentro de la array directamente (que como es hacerlo una vez y ya tampoco es tan incomodo) o de esta manera.
     {
         intsActuales[0] = life;
         intsActuales[1] = money;
         intsActuales[2] = adrenaline;
     }
+
     public void BotonPulsado(int idBotonPulsado, int tipoBoton)
     {
         switch (tipoBoton)
         {
-            case 0:
-                ManejarBoton(idBotonPulsado, ArrSubmenus, ArrBSubmenus, false);
+
+            case 6:
+                    ManejarBoton(idBotonPulsado, ArrMenus, ArrBMenus, false);
+                break;
+            case 3:
+                    ManejarBoton(idBotonPulsado, ArrMenusEnemigos, ArrBEnemigos, true);
+                break;
+            case 5:
+                    ManejarBoton(idBotonPulsado, ArrMenusOpciones, ArrBOpciones, true);
+                break;
+            case 4:
+                    ManejarBoton(idBotonPulsado, ArrMenusNotas, ArrBNotas, true);
+                break;
+            case 2:
+                    ManejarBoton(idBotonPulsado, ArrMenusPulsera, ArrBPulsera, true);
                 break;
             case 1:
-                ManejarBoton(idBotonPulsado, ArrMenusEnemigos, ArrBEnemigos, true);
+                    ManejarBoton(idBotonPulsado, ArrMenusObjetos, ArrBObjetos, true);
+                break;
+            case 0:
+                    ManejarBoton(idBotonPulsado, ArrMenusTutoriales, ArrBTutoriales, true);
                 break;
         }
     }
-
-    /*public void BotonPulsado(int idBotonPulsado)
-    {
-        ArrSubmenus[idBotonActivo].SetActive(false);
-        ArrBSubmenus[idBotonActivo].transform.localScale = botonNormal;
-        idBotonActivo = idBotonPulsado;
-        scrMemoria.GuardarIdBotonActivo();
-        ArrSubmenus[idBotonActivo].SetActive(true);
-        ArrBSubmenus[idBotonActivo].transform.localScale = botonGrande;
-    }*/
 
     public void CMenuG()
     {
@@ -158,6 +222,7 @@ public class navMenuIG : MonoBehaviour
         if (subMenu == false)
         {
             arrayElementos[idBotonActivo].SetActive(false);
+            DesactivarMenus();
             //arrayBotones[idBotonActivo].transform.localScale = botonNormal;
 
             idBotonActivo = idBotonPulsado;
@@ -165,13 +230,14 @@ public class navMenuIG : MonoBehaviour
             scrMemoria.GuardarIdBotonActivo();
 
             arrayElementos[idBotonActivo].SetActive(true);
+            idSubBotonActivo = 0;
             ArrBotones[idBotonActivo][idSubBotonActivo].onClick.Invoke();
             //arrayBotones[idBotonActivo].transform.localScale = botonGrande;
         }
         if (subMenu == true)
         {
             arrayElementos[idSubBotonActivo].SetActive(false);
-            DesactivarMEnemigos();
+            DesactivarSubmenus();
             //arrayBotones[idBotonActivo].transform.localScale = botonNormal;
 
             idSubBotonActivo = idBotonPulsado;
