@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
@@ -7,28 +8,33 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 public class SecretarioEnemyScript : MonoBehaviour
 {
     public Animator animator;
-    [SerializeField] float moveSpeed;
-    private float originalSpeed;
-    [SerializeField] Collider2D DetectionRange;
-    [SerializeField] float attackRange;
-    [SerializeField] Transform playerPosition;
-    private bool canDash;
-    private bool isPreparingForDash;
-    private bool isDashing;
+    public Rigidbody2D rb;
 
+
+    [SerializeField] float moveSpeed;
+
+    [SerializeField] float dashSpeed;
+    [SerializeField] float dashDuration;
+    [SerializeField] float dashCooldown;
+    [SerializeField] bool canDash;
+    private float dashTimer = 0f;
+    private Vector2 dashDirection;
+
+
+    [SerializeField] float attackRange;
+    [SerializeField] Collider2D DetectionRange;
+    [SerializeField] Transform playerPosition;
     [SerializeField] Transform[] patrolPoint;
     public int destinationPoint;
 
-
     float oldPosition;
-
-
     bool isDetectingRange = false;
     public EnemyBehaviour Behaviour = EnemyBehaviour.STANDING;
 
     void Start()
     {
-        originalSpeed = moveSpeed;
+        canDash = true;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
@@ -40,6 +46,20 @@ public class SecretarioEnemyScript : MonoBehaviour
         switch (Behaviour)
         {
             case EnemyBehaviour.STANDING:
+                if (isDetectingRange)
+                {
+                    if (Vector2.Distance(transform.position, playerPosition.position) < attackRange && canDash) // Dash if close enough
+                    {
+                        print("I can dash!");
+                        StartCoroutine(Dash());
+                    }
+                    else
+                    {
+                        animator.SetBool("InDetectionRange", true);
+                        //transform.position = Vector2.MoveTowards(transform.position, new UnityEngine.Vector2(playerPosition.position.x, transform.position.y), moveSpeed * Time.deltaTime);
+                    }
+                }
+
 
                 break;
 
@@ -68,25 +88,25 @@ public class SecretarioEnemyScript : MonoBehaviour
         }
 
     }
-    IEnumerator DashMovementHandler()
+
+    IEnumerator Dash()
     {
-        print("I'm preparing to dash!");
-        canDash = true;
-        isPreparingForDash = true;
-
-
-        yield return new WaitForSeconds(2f);
-        print("I'm dashing!");
-        isDashing = true;
-        isPreparingForDash = false;
-
-        yield return new WaitForSeconds(1f);
-        print("cooldown");
         canDash = false;
-        isDashing = false;
+        dashDirection = (playerPosition.position - transform.position);
+        dashDirection.y = 0; //evita que dashee hacia arriba
+        dashDirection = dashDirection.normalized;
 
-        yield return new WaitForSeconds(4f);
-        print ("I can dash again");
+        dashTimer = 0f;
+        while (dashTimer < dashDuration)
+        {
+            rb.velocity = dashDirection * dashSpeed;
+            dashTimer += Time.deltaTime;
+            yield return null;
+        }
+
+        rb.velocity = Vector2.zero; // Stop movement after dash
+
+        yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
 
