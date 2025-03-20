@@ -37,7 +37,6 @@ public abstract class State : MonoBehaviour
     public virtual void Do() { }
     public virtual void FixedDo() { }
     public virtual void Exit() { }
-
     public virtual void Setup(Rigidbody2D _rb, Animator _animator, float _horizontal)
     {
         rb = _rb;
