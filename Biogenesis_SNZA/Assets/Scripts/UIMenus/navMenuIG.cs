@@ -121,11 +121,6 @@ public class navMenuIG : MonoBehaviour
         }
 
         // Asignar listeners para los botones de los submenus
-        /*for (int i = 0; i < ArrBPulsera.Count; i++)
-        {
-            int boton = i;
-            ArrBPulsera[i].onClick.AddListener(() => BotonPulsado(boton, 2));
-        }*/
         for (int i = 0; i < ArrBEnemigos.Count; i++)
         {
             int boton = i;
@@ -140,6 +135,11 @@ public class navMenuIG : MonoBehaviour
         {
             int boton = i;
             ArrBObjetos[i].onClick.AddListener(() => BotonPulsado(boton, 3));
+        }
+        for (int i = 0; i < ArrBPulsera.Count; i++)
+        {
+            int boton = i;
+            ArrBPulsera[i].onClick.AddListener(() => BotonPulsado(boton, 4));
         }
         for (int i = 0; i < ArrBNotasMundo.Count; i++)
         {
