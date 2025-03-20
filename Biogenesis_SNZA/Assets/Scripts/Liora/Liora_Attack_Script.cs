@@ -28,7 +28,7 @@ public class Liora_Attack_Script : MonoBehaviour
         //if (isGrabbingLedge) { return; }
         if (context.started)
         {
-            switch snzaAttackType
+            /*switch snzaAttackType
             {
                 case snzaAttackType.CANGREJO:
                     damageAttackLiora = 30f;
@@ -39,7 +39,7 @@ public class Liora_Attack_Script : MonoBehaviour
                     damageAttackLiora = 28f;
                     Animator.Play("animacionEscarabajo");
                     break;
-            }
+            }*/
         }
     }
     /*private void Attack()
