@@ -98,9 +98,9 @@ public class EnemyScript : MonoBehaviour
         }*/  
     }
 
-    private void OnTriggerStay2D(Collider2D DetectionRange)
+    private void OnTriggerStay2D(Collider2D collider2D)
     {
-        if (DetectionRange.CompareTag("Player"))
+        if (collider2D.CompareTag("Player"))
         {
             if (transform.position.x < playerPosition.position.x) { transform.localScale = new Vector3(-1, 1, 1); }
             if (transform.position.x > playerPosition.position.x) { transform.localScale = new Vector3(1, 1, 1); }
