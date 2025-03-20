@@ -10,7 +10,6 @@ public class SecretarioEnemyScript : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
 
-
     [SerializeField] float moveSpeed;
 
     private float dashTimer = 0f;
@@ -26,7 +25,7 @@ public class SecretarioEnemyScript : MonoBehaviour
 
     private bool canAttack = true;
     private bool isAttacking = false;
-    [SerializeField] float enemyAttackValue;
+
 
     public Transform attackPoint;
     [SerializeField] GameObject attackCollision;
@@ -41,6 +40,7 @@ public class SecretarioEnemyScript : MonoBehaviour
 
     void Start()
     {
+        playerPosition = GameObject.FindWithTag("Player").transform;
         dashDurationTimer = dashDuration;
         canAttack = true;
         rb = GetComponent<Rigidbody2D>();
@@ -78,7 +78,7 @@ public class SecretarioEnemyScript : MonoBehaviour
             case EnemyBehaviour.PATROL:
                 break;
         }
-    
+
     }
 
     void isChasing()
@@ -87,7 +87,7 @@ public class SecretarioEnemyScript : MonoBehaviour
         direction.y = 0;
         direction = direction.normalized;
 
-        if (!isAttacking && canAttack )
+        if (!isAttacking && canAttack)
         {
             rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
             if (direction.x < 0)
@@ -96,15 +96,19 @@ public class SecretarioEnemyScript : MonoBehaviour
                 transform.localScale = new Vector3(-1, 1, 1);
         }
     }
+
     IEnumerator Dash()
     {
         isAttacking = true;
         canAttack = false;
-        yield return new WaitForSeconds(dashCooldown);
+        yield return new WaitForSeconds(dashCooldown); //preparación dash
+
+
         dashDirection = (playerPosition.position - transform.position);
         dashDirection.y = 0; //evita que dashee hacia arriba
         dashDirection = dashDirection.normalized;
         dashTimer = 0f;
+
         attackHitbox();
         while (dashTimer < dashDuration)
         {
@@ -119,12 +123,19 @@ public class SecretarioEnemyScript : MonoBehaviour
 
         yield return new WaitForSeconds(dashCooldown);
 
+        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(1, 1, 1); }
+        else { transform.localScale = new Vector3(-1, 1, 1); }
+            
+        
+   
+            
+            
         canAttack = true;
     }
 
     public void attackHitbox()
     {
-        Instantiate(attackCollision, attackPoint.transform.position, attackPoint.transform.rotation);
+        Instantiate(attackCollision, attackPoint.transform, worldPositionStays: false);
     }
 
     private void OnDrawGizmos()
