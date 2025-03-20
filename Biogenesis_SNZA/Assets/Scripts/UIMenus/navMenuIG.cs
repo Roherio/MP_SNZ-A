@@ -101,7 +101,6 @@ public class navMenuIG : MonoBehaviour
         DesactivarMenus();
         idBotonActivo = scrMemoria.memIdBotonActivo;    // esto podria ir dentro de la array tambien
         ArrBMenus[idBotonActivo].onClick.Invoke();   // Activa solo el último boton que se pulsó
-        Debug.Log("void start");
     }
 
 
@@ -122,11 +121,6 @@ public class navMenuIG : MonoBehaviour
         }
 
         // Asignar listeners para los botones de los submenus
-        /*for (int i = 0; i < ArrBObjetos.Count; i++)
-        {
-            int boton = i;
-            ArrBObjetos[i].onClick.AddListener(() => BotonPulsado(boton, 1));
-        }*/
         /*for (int i = 0; i < ArrBPulsera.Count; i++)
         {
             int boton = i;
@@ -141,6 +135,11 @@ public class navMenuIG : MonoBehaviour
         {
             int boton = i;
             ArrBOpciones[i].onClick.AddListener(() => BotonPulsado(boton, 2));
+        }
+        for (int i = 0; i < ArrBObjetos.Count; i++)
+        {
+            int boton = i;
+            ArrBObjetos[i].onClick.AddListener(() => BotonPulsado(boton, 3));
         }
         for (int i = 0; i < ArrBNotasMundo.Count; i++)
         {
@@ -177,23 +176,23 @@ public class navMenuIG : MonoBehaviour
             case 0:
                 ManejarBoton(idBotonPulsado, ArrMenus, ArrBMenus, false);
                 break;
+            case 1:
+                ManejarBoton(idBotonPulsado, ArrMenusEnemigos, ArrBEnemigos, true);
+                break;
             case 2:
                 ManejarBoton(idBotonPulsado, ArrMenusOpciones, ArrBOpciones, true);
                 break;
-            case 6:
-                ManejarBoton(idBotonPulsado, ArrMenusNotasPersonas, ArrBNotasPersonas, true);
-                break;
-            case 5:
-                ManejarBoton(idBotonPulsado, ArrMenusNotasMundo, ArrBNotasMundo, true);
-                break;
-            case 1:
-                ManejarBoton(idBotonPulsado, ArrMenusEnemigos, ArrBEnemigos, true);
+            case 3:
+                ManejarBoton(idBotonPulsado, ArrMenusObjetos, ArrBObjetos, true);
                 break;
             case 4:
                 ManejarBoton(idBotonPulsado, ArrMenusPulsera, ArrBPulsera, true);
                 break;
-            case 3:
-                ManejarBoton(idBotonPulsado, ArrMenusObjetos, ArrBObjetos, true);
+            case 5:
+                ManejarBoton(idBotonPulsado, ArrMenusNotasMundo, ArrBNotasMundo, true);
+                break;
+            case 6:
+                ManejarBoton(idBotonPulsado, ArrMenusNotasPersonas, ArrBNotasPersonas, true);
                 break;
             case 7:
                 ManejarBoton(idBotonPulsado, ArrMenusTutorialesComer, ArrBTutorialesComer, true);
@@ -231,20 +230,6 @@ public class navMenuIG : MonoBehaviour
                     ArrBotones[idBotonActivo][idSubBotonActivo].onClick.Invoke();
                     break;
             }
-            
-            /*if (idBotonActivo == 0)
-            {
-                DesplegablePulsado(2);
-            }
-            if (idBotonActivo == 4)
-            {
-                DesplegablePulsado(0);
-            }
-            else
-            {
-                idSubBotonActivo = 0;
-                ArrBotones[idBotonActivo][idSubBotonActivo].onClick.Invoke();
-            }*/
             //arrayBotones[idBotonActivo].transform.localScale = botonGrande;
         }
         if (subMenu == true)
