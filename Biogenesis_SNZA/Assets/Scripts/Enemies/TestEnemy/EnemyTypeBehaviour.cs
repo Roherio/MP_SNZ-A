@@ -1,4 +1,4 @@
 public enum EnemyBehaviour
 {
-    STANDING, PATROL, FLIP
+    STANDING, PATROL
 }

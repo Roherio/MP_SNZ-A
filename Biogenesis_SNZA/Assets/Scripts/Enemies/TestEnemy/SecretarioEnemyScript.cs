@@ -10,30 +10,39 @@ public class SecretarioEnemyScript : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
 
-
     [SerializeField] float moveSpeed;
 
-    [SerializeField] float dashSpeed;
-    [SerializeField] float dashDuration;
-    [SerializeField] float dashCooldown;
-    [SerializeField] bool canDash;
     private float dashTimer = 0f;
+    public static float dashDurationTimer;
+    [SerializeField] float dashDuration;
+    [SerializeField] float dashSpeed;
+    [SerializeField] float dashCooldown;
+    
     private Vector2 dashDirection;
 
-
+    [SerializeField] float detectionRange;
     [SerializeField] float attackRange;
-    [SerializeField] Collider2D DetectionRange;
+
+    private bool canAttack = true;
+    private bool isAttacking = false;
+
+
+    public Transform attackPoint;
+    [SerializeField] GameObject attackCollision;
+
     [SerializeField] Transform playerPosition;
     [SerializeField] Transform[] patrolPoint;
-    public int destinationPoint;
-
+    public int destinationPoint; 
     float oldPosition;
-    bool isDetectingRange = false;
+
+
     public EnemyBehaviour Behaviour = EnemyBehaviour.STANDING;
 
     void Start()
     {
-        canDash = true;
+        playerPosition = GameObject.FindWithTag("Player").transform;
+        dashDurationTimer = dashDuration;
+        canAttack = true;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -43,78 +52,105 @@ public class SecretarioEnemyScript : MonoBehaviour
     }
     void Update()
     {
+        float verticalDetection = Mathf.Abs(playerPosition.position.y - transform.position.y);
         switch (Behaviour)
         {
             case EnemyBehaviour.STANDING:
-                if (isDetectingRange)
+                if (isAttacking) return;
+                if (Vector2.Distance(transform.position, playerPosition.position) < attackRange && canAttack) // Dash if close enough
                 {
-                    if (Vector2.Distance(transform.position, playerPosition.position) < attackRange && canDash) // Dash if close enough
-                    {
-                        print("I can dash!");
-                        StartCoroutine(Dash());
-                    }
-                    else
-                    {
-                        animator.SetBool("InDetectionRange", true);
-                        //transform.position = Vector2.MoveTowards(transform.position, new UnityEngine.Vector2(playerPosition.position.x, transform.position.y), moveSpeed * Time.deltaTime);
-                    }
+                    print("I can dash!");
+                    isAttacking = true;
+                    rb.velocity = Vector2.zero;
+                    StartCoroutine(Dash());
                 }
-
-
+                else if (Vector2.Distance(transform.position, playerPosition.position) <= detectionRange)
+                {
+                    print("im chasing");
+                    isChasing();
+                }
+                else
+                {
+                    rb.velocity = Vector2.zero;
+                }
                 break;
 
             case EnemyBehaviour.PATROL:
                 break;
         }
-    
-    }
-
-    private void OnTriggerStay2D(Collider2D DetectionRange)
-    {
-        if (DetectionRange.CompareTag("Player"))
-        {
-            if (transform.position.x < playerPosition.position.x) { transform.localScale = new Vector3(-1, 1, 1); }
-            if (transform.position.x > playerPosition.position.x) { transform.localScale = new Vector3(1, 1, 1); }
-            isDetectingRange = true;
-        }
 
     }
-    private void OnTriggerExit2D(Collider2D DetectionRange)
-    {
-        if (DetectionRange.CompareTag("Player"))
-        {
-            isDetectingRange = false;
-            resetAnimations();
-        }
 
+    void isChasing()
+    {
+        Vector2 direction = playerPosition.position - transform.position;
+        direction.y = 0;
+        direction = direction.normalized;
+
+        if (!isAttacking && canAttack)
+        {
+            rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
+            if (direction.x < 0)
+                transform.localScale = new Vector3(1, 1, 1);
+            else
+                transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     IEnumerator Dash()
     {
-        canDash = false;
+        isAttacking = true;
+        canAttack = false;
+        yield return new WaitForSeconds(dashCooldown); //preparación dash
+
+
         dashDirection = (playerPosition.position - transform.position);
         dashDirection.y = 0; //evita que dashee hacia arriba
         dashDirection = dashDirection.normalized;
-
         dashTimer = 0f;
+
+        attackHitbox();
         while (dashTimer < dashDuration)
         {
+            
             rb.velocity = dashDirection * dashSpeed;
             dashTimer += Time.deltaTime;
             yield return null;
         }
 
         rb.velocity = Vector2.zero; // Stop movement after dash
+        isAttacking = false;
 
         yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
+
+        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(1, 1, 1); }
+        else { transform.localScale = new Vector3(-1, 1, 1); }
+            
+        
+   
+            
+            
+        canAttack = true;
     }
 
+    public void attackHitbox()
+    {
+        Instantiate(attackCollision, attackPoint.transform, worldPositionStays: false);
+    }
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+        float verticalTolerance = 2.5f;
+        Vector3 leftEdge = transform.position + Vector3.left * detectionRange;
+        Vector3 rightEdge = transform.position + Vector3.right * detectionRange;
+
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawLine(leftEdge + Vector3.up * verticalTolerance, rightEdge + Vector3.up * verticalTolerance);
+        Gizmos.DrawLine(leftEdge + Vector3.down * verticalTolerance, rightEdge + Vector3.down * verticalTolerance);
     }
     void resetAnimations()
     {
