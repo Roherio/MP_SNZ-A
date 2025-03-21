@@ -130,16 +130,17 @@ public class SecretarioEnemyScript : MonoBehaviour
         canAttack = false;
         if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(1, 1, 1); }
         else { transform.localScale = new Vector3(-1, 1, 1); }
+        dashDirection = (playerPosition.position - transform.position);
+        dashDirection.y = 0;
+        dashDirection = dashDirection.normalized;
+        dashTimer = 0f;
 
         yield return new WaitForSeconds(dashCooldown);
 
 
         //Fa el dash/atac cap a l'enemic
 
-        dashDirection = (playerPosition.position - transform.position);
-        dashDirection.y = 0; 
-        dashDirection = dashDirection.normalized;
-        dashTimer = 0f;
+        
         attackHitbox();
 
         //Quan de temps dura el dash?

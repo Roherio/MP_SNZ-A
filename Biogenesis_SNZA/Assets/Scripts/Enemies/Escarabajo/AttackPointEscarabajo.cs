@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackPointEnemyScript : MonoBehaviour
+public class AttackPointEscarabajo : MonoBehaviour
 {
     [SerializeField] float enemyAttackValue;
     [SerializeField] float showRadius;
@@ -10,7 +10,8 @@ public class AttackPointEnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, (SecretarioEnemyScript.dashDurationTimer + 0.5f));
+        print("Collision spawned");
+        Destroy(gameObject, (EscarabajoEnemyScript.attackDurationTimer));
         print(GameControl_Script.lifeLiora);
     }
 
@@ -18,7 +19,7 @@ public class AttackPointEnemyScript : MonoBehaviour
     void Update()
     {
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -27,7 +28,7 @@ public class AttackPointEnemyScript : MonoBehaviour
             Destroy(gameObject);
             print(GameControl_Script.lifeLiora);
         }
-
+        
     }
     private void OnDrawGizmos()
     {

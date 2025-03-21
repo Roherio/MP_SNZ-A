@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackPointEnemyScript : MonoBehaviour
+public class AttackPointSecretario : MonoBehaviour
 {
     [SerializeField] float enemyAttackValue;
     [SerializeField] float showRadius;
