@@ -56,7 +56,8 @@ public class Liora_Movement_Script : MonoBehaviour
         Liora_StateMachine_Script.isClimbing = isClimbing;
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
         if (isDashing) { return; }
-        if (isGrabbingLedge)
+        //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge o si està executant una ordre d'atac
+        if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti)
         {
             horizontal = 0f;
         }
@@ -74,8 +75,8 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void Saltar(InputAction.CallbackContext context)
     {
-        //evitar que salti durant un dash
-        if (isDashing || isGrabbingLedge) { return; }
+        //evitar que salti durant un dash o durant un atac/parry/ulti
+        if (isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
         if (context.started)
         {
             if (CheckGround() || isClimbing)

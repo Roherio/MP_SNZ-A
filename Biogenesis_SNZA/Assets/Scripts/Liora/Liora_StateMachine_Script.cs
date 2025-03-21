@@ -81,22 +81,37 @@ public class Liora_StateMachine_Script : MonoBehaviour
     {
         if (isGrounded && Mathf.Abs(rb.velocity.y) < Mathf.Epsilon)
         {
-            if (isAttacking)
+            if (isAttacking || isParrying)
             {
-                switch (Liora_Attack_Script.currentAttackType)
+                if (isAttacking)
                 {
-                    case snzaAttackType.CANGREJO:
-                        state = crabAttackState;
-                        break;
+                    switch (Liora_Attack_Script.currentAttackType)
+                    {
+                        case snzaAttackType.CANGREJO:
+                            state = crabAttackState;
+                            break;
+                    }
                 }
-            }
-            if (Mathf.Abs(horizontal) < Mathf.Epsilon)
-            {
-                state = idleState;
+                if (isParrying)
+                {
+                    switch (Liora_Attack_Script.currentParryType)
+                    {
+                        case snzaParryType.CANGREJO:
+                            state = crabParryState;
+                            break;
+                    }
+                }
             }
             else
             {
-                state = runState;
+                if (Mathf.Abs(horizontal) < Mathf.Epsilon)
+                {
+                    state = idleState;
+                }
+                else
+                {
+                    state = runState;
+                }
             }
         }
         else

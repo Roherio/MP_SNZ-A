@@ -11,7 +11,7 @@ public class Liora_CrabParry_Script : State
     }
     public override void Do()
     {
-        if (!isGrounded || horizontal != 0f)
+        if (!isParrying)
         {
             isComplete = true;
         }

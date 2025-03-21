@@ -430,12 +430,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16980aa3d8dd7d44197de7c0ddc2bb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAttacking: 0
-  currentParryType: 0
-  isParrying: 0
+  inputAttackCooldown: 0.8
   currentUltiType: 0
-  isDoingUlti: 0
   damageAttackLiora: 0
+  deactivateAttack: 0
 --- !u!114 &-7938245896370040771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,6 +555,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 26b8ae8d-377f-4e02-baaa-f8784087820b
     m_ActionName: ControlesInGame/Ataque[/Keyboard/j]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8318787859004874339}
+        m_TargetAssemblyTypeName: Liora_Attack_Script, Assembly-CSharp
+        m_MethodName: Parry
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f23b1236-e6c9-4ac5-928a-8d7384f43ddd
+    m_ActionName: ControlesInGame/Parry[/Keyboard/k]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ControlesInGame

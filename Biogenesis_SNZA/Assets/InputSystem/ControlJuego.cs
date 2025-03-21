@@ -80,6 +80,15 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Parry"",
+                    ""type"": ""Button"",
+                    ""id"": ""f23b1236-e6c9-4ac5-928a-8d7384f43ddd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -269,6 +278,17 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""action"": ""Ataque"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77c1cfcd-4b05-4221-90a6-f168c3e8d60d"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Parry"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -283,6 +303,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         m_ControlesInGame_Ledge = m_ControlesInGame.FindAction("Ledge", throwIfNotFound: true);
         m_ControlesInGame_Climb = m_ControlesInGame.FindAction("Climb", throwIfNotFound: true);
         m_ControlesInGame_Ataque = m_ControlesInGame.FindAction("Ataque", throwIfNotFound: true);
+        m_ControlesInGame_Parry = m_ControlesInGame.FindAction("Parry", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -350,6 +371,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
     private readonly InputAction m_ControlesInGame_Ledge;
     private readonly InputAction m_ControlesInGame_Climb;
     private readonly InputAction m_ControlesInGame_Ataque;
+    private readonly InputAction m_ControlesInGame_Parry;
     public struct ControlesInGameActions
     {
         private @ControlJuego m_Wrapper;
@@ -360,6 +382,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         public InputAction @Ledge => m_Wrapper.m_ControlesInGame_Ledge;
         public InputAction @Climb => m_Wrapper.m_ControlesInGame_Climb;
         public InputAction @Ataque => m_Wrapper.m_ControlesInGame_Ataque;
+        public InputAction @Parry => m_Wrapper.m_ControlesInGame_Parry;
         public InputActionMap Get() { return m_Wrapper.m_ControlesInGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -387,6 +410,9 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @Ataque.started += instance.OnAtaque;
             @Ataque.performed += instance.OnAtaque;
             @Ataque.canceled += instance.OnAtaque;
+            @Parry.started += instance.OnParry;
+            @Parry.performed += instance.OnParry;
+            @Parry.canceled += instance.OnParry;
         }
 
         private void UnregisterCallbacks(IControlesInGameActions instance)
@@ -409,6 +435,9 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @Ataque.started -= instance.OnAtaque;
             @Ataque.performed -= instance.OnAtaque;
             @Ataque.canceled -= instance.OnAtaque;
+            @Parry.started -= instance.OnParry;
+            @Parry.performed -= instance.OnParry;
+            @Parry.canceled -= instance.OnParry;
         }
 
         public void RemoveCallbacks(IControlesInGameActions instance)
@@ -434,5 +463,6 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         void OnLedge(InputAction.CallbackContext context);
         void OnClimb(InputAction.CallbackContext context);
         void OnAtaque(InputAction.CallbackContext context);
+        void OnParry(InputAction.CallbackContext context);
     }
 }
