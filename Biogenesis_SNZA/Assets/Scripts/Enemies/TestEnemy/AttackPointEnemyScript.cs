@@ -9,7 +9,7 @@ public class AttackPointEnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, (SecretarioEnemyScript.dashDurationTimer+ 0.5f));
+        Destroy(gameObject, (SecretarioEnemyScript.dashDurationTimer + 0.5f));
         print(GameControl_Script.lifeLiora);
     }
 
