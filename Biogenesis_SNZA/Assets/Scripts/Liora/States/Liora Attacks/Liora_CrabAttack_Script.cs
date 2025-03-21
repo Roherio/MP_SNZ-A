@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
-public class Liora_Idle_Script : State
+public class Liora_CrabAttack_Script : State
 {
     public override void Enter()
     {
         animator.speed = 1;
-        animator.Play("Idle");
+        animator.Play("AttackCrab");
     }
     public override void Do()
     {
-        if (!isGrounded || horizontal != 0f)
+        if (!isAttacking)
         {
             isComplete = true;
         }
