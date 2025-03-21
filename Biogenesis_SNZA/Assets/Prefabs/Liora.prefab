@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535918078604176959}
   m_Layer: 6
-  m_Name: Behaviours
+  m_Name: BehavioursMovement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,6 +35,58 @@ Transform:
   - {fileID: 3977385866092618402}
   m_Father: {fileID: 5079527829267624495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1365116257174695881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4785982769148054761}
+  - component: {fileID: 895927059304751807}
+  m_Layer: 6
+  m_Name: Crab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4785982769148054761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365116257174695881}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 689706562118891415}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &895927059304751807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365116257174695881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36591af9d5e3cff4c81a97adfbc5acde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  isGrounded: 0
+  jumping: 0
+  jumpPower: 24
+  isGrabbingLedge: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0
 --- !u!1 &2768379810570968898
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,6 +136,41 @@ MonoBehaviour:
   jumping: 0
   jumpPower: 24
   isGrabbingLedge: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0
+--- !u!1 &3096839413113075702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4524722385764549921}
+  m_Layer: 6
+  m_Name: BehavioursAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4524722385764549921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3096839413113075702}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7508892902917312210}
+  m_Father: {fileID: 5079527829267624495}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3464409778232486299
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +327,7 @@ GameObject:
   - component: {fileID: 5079527829267624495}
   - component: {fileID: 6828677513443051858}
   - component: {fileID: 8218613863536441932}
+  - component: {fileID: 8318787859004874339}
   - component: {fileID: -7938245896370040771}
   - component: {fileID: 3647475253173115995}
   - component: {fileID: 6844576158491812986}
@@ -271,6 +359,8 @@ Transform:
   - {fileID: 3596653249378586279}
   - {fileID: 1892225545295776034}
   - {fileID: 535918078604176959}
+  - {fileID: 4524722385764549921}
+  - {fileID: 689706562118891415}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6828677513443051858
@@ -289,6 +379,8 @@ MonoBehaviour:
   runState: {fileID: 6647752270926854459}
   airState: {fileID: 2939372857657682896}
   ledgeState: {fileID: 8778586524281539396}
+  crabAttackState: {fileID: 2909936836818465901}
+  crabParryState: {fileID: 895927059304751807}
   animator: {fileID: 6844576158491812986}
   rb: {fileID: 4947185015358159300}
   jumping: 0
@@ -315,7 +407,6 @@ MonoBehaviour:
   isDashing: 0
   dashPower: 36
   trailRenderer: {fileID: 4869507558380449802}
-  isGrabbingLedge: 0
   ledgeCheck: {fileID: 3596653249378586279}
   ledgeLayer:
     serializedVersion: 2
@@ -327,6 +418,24 @@ MonoBehaviour:
   climbLayer:
     serializedVersion: 2
     m_Bits: 1024
+--- !u!114 &8318787859004874339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994394536962611434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16980aa3d8dd7d44197de7c0ddc2bb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttacking: 0
+  currentParryType: 0
+  isParrying: 0
+  currentUltiType: 0
+  isDoingUlti: 0
+  damageAttackLiora: 0
 --- !u!114 &-7938245896370040771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +541,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 60e204cb-e282-4916-952f-bf78c4ae2883
     m_ActionName: ControlesInGame/Climb[/Keyboard/w,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8318787859004874339}
+        m_TargetAssemblyTypeName: Liora_Attack_Script, Assembly-CSharp
+        m_MethodName: Ataque
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 26b8ae8d-377f-4e02-baaa-f8784087820b
+    m_ActionName: ControlesInGame/Ataque[/Keyboard/j]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ControlesInGame
@@ -930,6 +1055,41 @@ MonoBehaviour:
   jumping: 0
   jumpPower: 24
   isGrabbingLedge: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0
+--- !u!1 &6324011073405399315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 689706562118891415}
+  m_Layer: 6
+  m_Name: BehavioursParry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &689706562118891415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6324011073405399315}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4785982769148054761}
+  m_Father: {fileID: 5079527829267624495}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6466023313053103695
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +1139,9 @@ MonoBehaviour:
   jumping: 0
   jumpPower: 24
   isGrabbingLedge: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0
 --- !u!1 &6793785563554027629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,6 +1219,58 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.3}
   m_EdgeRadius: 0
+--- !u!1 &7059776720692785451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7508892902917312210}
+  - component: {fileID: 2909936836818465901}
+  m_Layer: 6
+  m_Name: Crab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7508892902917312210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059776720692785451}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4524722385764549921}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2909936836818465901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7059776720692785451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405e527150aeef54da93c5e814f4d92c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  isGrounded: 0
+  jumping: 0
+  jumpPower: 24
+  isGrabbingLedge: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0
 --- !u!1 &7201329417374407014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,3 +1320,6 @@ MonoBehaviour:
   jumping: 0
   jumpPower: 24
   isGrabbingLedge: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0

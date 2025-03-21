@@ -25,7 +25,7 @@ public class Liora_Movement_Script : MonoBehaviour
     [SerializeField] TrailRenderer trailRenderer;
 
     //LedgeGrab Logic
-    public bool isGrabbingLedge = false;
+    public static bool isGrabbingLedge = false;
     private bool canGrabLedge = true;
     private Vector2 ledgePosition;
     [SerializeField] private Transform ledgeCheck;
