@@ -239,6 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5079527829267624495}
   - component: {fileID: 6828677513443051858}
+  - component: {fileID: 8218613863536441932}
   - component: {fileID: -7938245896370040771}
   - component: {fileID: 3647475253173115995}
   - component: {fileID: 6844576158491812986}
@@ -290,6 +291,20 @@ MonoBehaviour:
   ledgeState: {fileID: 8778586524281539396}
   animator: {fileID: 6844576158491812986}
   rb: {fileID: 4947185015358159300}
+  jumping: 0
+--- !u!114 &8218613863536441932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994394536962611434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053a3b25efae34a4b99deb15ffd9aa36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 4947185015358159300}
   groundCheck: {fileID: 7467707164050384419}
   groundLayer:
     serializedVersion: 2
@@ -297,13 +312,15 @@ MonoBehaviour:
   jumping: 0
   groundSpeed: 10
   jumpPower: 24
+  isDashing: 0
+  dashPower: 36
   trailRenderer: {fileID: 4869507558380449802}
   isGrabbingLedge: 0
   ledgeCheck: {fileID: 3596653249378586279}
   ledgeLayer:
     serializedVersion: 2
     m_Bits: 256
-  ledgeGrabOffsetY: -8
+  ledgeGrabOffsetY: -3.2
   isClimbing: 0
   climbSpeed: 6
   climbCheck: {fileID: 1892225545295776034}
@@ -337,8 +354,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6828677513443051858}
-        m_TargetAssemblyTypeName: Sc_Liora_Movement, Assembly-CSharp
+      - m_Target: {fileID: 8218613863536441932}
+        m_TargetAssemblyTypeName: Liora_Movement_Script, Assembly-CSharp
         m_MethodName: Movimiento
         m_Mode: 0
         m_Arguments:
@@ -353,8 +370,8 @@ MonoBehaviour:
     m_ActionName: ControlesInGame/Movimiento[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6828677513443051858}
-        m_TargetAssemblyTypeName: Sc_Liora_Movement, Assembly-CSharp
+      - m_Target: {fileID: 8218613863536441932}
+        m_TargetAssemblyTypeName: Liora_Movement_Script, Assembly-CSharp
         m_MethodName: Saltar
         m_Mode: 0
         m_Arguments:
@@ -369,8 +386,8 @@ MonoBehaviour:
     m_ActionName: ControlesInGame/Saltar[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6828677513443051858}
-        m_TargetAssemblyTypeName: Sc_Liora_Movement, Assembly-CSharp
+      - m_Target: {fileID: 8218613863536441932}
+        m_TargetAssemblyTypeName: Liora_Movement_Script, Assembly-CSharp
         m_MethodName: Dash
         m_Mode: 0
         m_Arguments:
@@ -385,7 +402,7 @@ MonoBehaviour:
     m_ActionName: ControlesInGame/Dash[/Keyboard/leftShift]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6828677513443051858}
+      - m_Target: {fileID: 8218613863536441932}
         m_TargetAssemblyTypeName: Liora_Movement_Script, Assembly-CSharp
         m_MethodName: LedgeInput
         m_Mode: 0
@@ -401,7 +418,7 @@ MonoBehaviour:
     m_ActionName: ControlesInGame/Ledge[/Keyboard/w,/Keyboard/s]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6828677513443051858}
+      - m_Target: {fileID: 8218613863536441932}
         m_TargetAssemblyTypeName: Liora_Movement_Script, Assembly-CSharp
         m_MethodName: ClimbInput
         m_Mode: 0
