@@ -9,6 +9,8 @@ public class EscarabajoEnemyScript : MonoBehaviour
 {
     public Animator animator;
     public Rigidbody2D rb;
+    private Transform playerPosition;
+
     [SerializeField] float moveSpeed;
     private float attackTimer = 0f;
     public static float attackDurationTimer;
@@ -22,7 +24,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
     private bool isAttacking = false;
     public Transform attackPoint;
     [SerializeField] GameObject attackCollision;
-    [SerializeField] Transform playerPosition;
+    
     [SerializeField] Transform[] patrolPoint;
     public int destinationPoint;
     [SerializeField] float verticalViewHeight = 3;
