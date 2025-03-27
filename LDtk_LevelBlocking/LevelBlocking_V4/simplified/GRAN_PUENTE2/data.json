@@ -1,0 +1,24 @@
+{
+	"identifier": "GRAN_PUENTE2",
+	"uniqueIdentifer": "fde388c0-e920-11ef-b360-8531381df69c",
+	"x": 10240,
+	"y": -720,
+	"width": 640,
+	"height": 360,
+	"bgColor": "#C98CEB",
+	"neighbourLevels": [
+		{
+			"levelIid": "1b5f8880-e920-11ef-9d4d-a7306f9d2baf",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Walls.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png"
+	],
+	"entities" : {}
+}
