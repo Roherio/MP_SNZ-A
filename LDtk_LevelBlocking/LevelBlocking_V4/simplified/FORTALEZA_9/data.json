@@ -1,0 +1,44 @@
+{
+	"identifier": "FORTALEZA_9",
+	"uniqueIdentifer": "a49fa9d0-e920-11ef-b809-312668735fac",
+	"x": 17104,
+	"y": -1816,
+	"width": 1920,
+	"height": 1096,
+	"bgColor": "#FAD5D5",
+	"neighbourLevels": [
+		{
+			"levelIid": "6ec2e7f0-e920-11ef-b809-b9b7c2fb4130",
+			"dir": "s"
+		},
+		{
+			"levelIid": "9c221bb0-e920-11ef-be0e-6363edd6dbd8",
+			"dir": "s"
+		},
+		{
+			"levelIid": "44150ea0-e920-11ef-9274-41830c48abdd",
+			"dir": "w"
+		},
+		{
+			"levelIid": "9331fe50-e920-11ef-b809-4be20d6b0345",
+			"dir": "sw"
+		},
+		{
+			"levelIid": "9a440fd0-e920-11ef-9274-5fd1db431867",
+			"dir": "w"
+		},
+		{
+			"levelIid": "18a759d0-e920-11ef-9274-27aaa3738825",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Walls.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png"
+	],
+	"entities" : {}
+}
