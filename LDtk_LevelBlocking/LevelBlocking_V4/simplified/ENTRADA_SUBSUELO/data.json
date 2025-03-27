@@ -1,0 +1,19 @@
+{
+	"identifier": "ENTRADA_SUBSUELO",
+	"uniqueIdentifer": "845d49a0-e920-11ef-9d4d-3f48f07c8c93",
+	"x": 10272,
+	"y": 752,
+	"width": 640,
+	"height": 360,
+	"bgColor": "#AFF9F7",
+	"neighbourLevels": [],
+	"customFields" : {},
+	"layers": [
+		"Walls.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png"
+	],
+	"entities" : {}
+}

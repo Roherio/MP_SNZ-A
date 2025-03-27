@@ -1,0 +1,28 @@
+{
+	"identifier": "TEINDA_TIGRE",
+	"uniqueIdentifer": "50904730-e920-11ef-9d4d-03b4c7fc616b",
+	"x": 2560,
+	"y": -352,
+	"width": 640,
+	"height": 712,
+	"bgColor": "#AFF9F7",
+	"neighbourLevels": [
+		{
+			"levelIid": "45b400c0-e920-11ef-9d4d-bf68849550e6",
+			"dir": "w"
+		},
+		{
+			"levelIid": "50646720-e920-11ef-9d4d-e1cadc1433d5",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Walls.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png"
+	],
+	"entities" : {}
+}

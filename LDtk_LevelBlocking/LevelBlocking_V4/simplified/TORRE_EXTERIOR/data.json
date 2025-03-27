@@ -1,0 +1,36 @@
+{
+	"identifier": "TORRE_EXTERIOR",
+	"uniqueIdentifer": "d1e7be60-e920-11ef-9d4d-393abb74b7ca",
+	"x": 10240,
+	"y": -2176,
+	"width": 640,
+	"height": 1208,
+	"bgColor": "#FFB55E",
+	"neighbourLevels": [
+		{
+			"levelIid": "0a294a40-e920-11ef-b360-b57e36a8d465",
+			"dir": "e"
+		},
+		{
+			"levelIid": "1b5f8880-e920-11ef-9d4d-a7306f9d2baf",
+			"dir": "e"
+		},
+		{
+			"levelIid": "d9cc01e0-e920-11ef-9d4d-dd3d211edc26",
+			"dir": "ne"
+		},
+		{
+			"levelIid": "a365f650-e920-11ef-9d4d-3d0dc48a1256",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Walls.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png"
+	],
+	"entities" : {}
+}
