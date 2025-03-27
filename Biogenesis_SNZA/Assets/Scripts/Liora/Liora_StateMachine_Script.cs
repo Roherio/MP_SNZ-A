@@ -16,6 +16,8 @@ public class Liora_StateMachine_Script : MonoBehaviour
     //states ataque
     public Liora_CrabAttack_Script crabAttackState;
     public Liora_CrabParry_Script crabParryState;
+    public Liora_BoarAttack_Script boarAttackState;
+    public Liora_BoarParry_Script boarParryState;
 
     private bool isFacingRight = true;
     public Animator animator;
@@ -48,6 +50,8 @@ public class Liora_StateMachine_Script : MonoBehaviour
         //enviament animator pels diferents estats d'atac
         crabAttackState.Setup(rb, animator, horizontal);
         crabParryState.Setup(rb, animator, horizontal);
+        boarAttackState.Setup(rb, animator, horizontal);
+        boarParryState.Setup(rb, animator, horizontal);
         state = idleState;
     }
     // Update is called once per frame
@@ -90,6 +94,9 @@ public class Liora_StateMachine_Script : MonoBehaviour
                         case snzaAttackType.CANGREJO:
                             state = crabAttackState;
                             break;
+                        case snzaAttackType.JABALI:
+                            state = boarAttackState;
+                            break;
                     }
                 }
                 if (isParrying)
@@ -98,6 +105,9 @@ public class Liora_StateMachine_Script : MonoBehaviour
                     {
                         case snzaParryType.CANGREJO:
                             state = crabParryState;
+                            break;
+                        case snzaParryType.JABALI:
+                            state = boarParryState;
                             break;
                     }
                 }
@@ -129,6 +139,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     }
     private void FlipSprite()
     {
+        if (isGrabbingLedge || isClimbing) { return; }
         isFacingRight = !isFacingRight;
         Vector2 localScale = transform.localScale;
         localScale.x *= -1f;
