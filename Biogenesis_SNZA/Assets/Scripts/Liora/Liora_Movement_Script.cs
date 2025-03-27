@@ -5,16 +5,6 @@ using UnityEngine.InputSystem;
 
 public class Liora_Movement_Script : MonoBehaviour
 {
-
-    //StateMachine Logic
-    public Liora_Idle_Script idleState;
-    public Liora_Run_Script runState;
-    public Liora_Airborne_Script airState;
-    public Liora_Ledge_Script ledgeState;
-    State state;
-
-    private bool isFacingRight = true;
-    public Animator animator;
     public Rigidbody2D rb;
     //Ground Logic
     public BoxCollider2D groundCheck;
@@ -23,30 +13,30 @@ public class Liora_Movement_Script : MonoBehaviour
     //Jump Logic
     public float horizontal { get; private set; }
     public bool jumping;
-    [SerializeField] float groundSpeed = 5f;
-    [SerializeField] float jumpPower = 10f;
+    [SerializeField] float groundSpeed = 10f;
+    [SerializeField] float jumpPower = 24f;
 
     //Dash Logic
+    public bool isDashing = false;
     private bool canDash = true;
-    private bool isDashing;
     [SerializeField] private float dashPower = 36f;
     private float dashTime = 0.2f;
     private float dashCooldown = 0.2f;
     [SerializeField] TrailRenderer trailRenderer;
 
     //LedgeGrab Logic
-    [SerializeField]private bool isGrabbingLedge = false;
+    public static bool isGrabbingLedge = false;
     private bool canGrabLedge = true;
     private Vector2 ledgePosition;
     [SerializeField] private Transform ledgeCheck;
     [SerializeField] private LayerMask ledgeLayer;
-    [SerializeField] private float ledgeGrabOffsetY = -1.6f;
+    [SerializeField] private float ledgeGrabOffsetY = -3.2f;
 
     //Climb Logic
-    [SerializeField] private bool isClimbing = false;
+    public bool isClimbing = false;
     //variable que controla si esta en rang d'una escala
     public static bool canClimb = false;
-    [SerializeField] float climbSpeed = 3f;
+    [SerializeField] float climbSpeed = 6f;
     [SerializeField] private Transform climbCheck;
     [SerializeField] private LayerMask climbLayer;
 
@@ -54,22 +44,20 @@ public class Liora_Movement_Script : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        idleState.Setup(rb, animator, horizontal);
-        runState.Setup(rb, animator, horizontal);
-        airState.Setup(rb, animator, horizontal);
-        ledgeState.Setup(rb, animator, horizontal);
-        state = idleState;
     }
     // Update is called once per frame
     void Update()
     {
         //pas de variables a la state machine
-        state.horizontal = horizontal;
-        state.isGrounded = CheckGround();
-        state.isGrabbingLedge = isGrabbingLedge;
+        Liora_StateMachine_Script.horizontal = horizontal;
+        Liora_StateMachine_Script.isGrounded = CheckGround();
+        Liora_StateMachine_Script.isGrabbingLedge = isGrabbingLedge;
+        Liora_StateMachine_Script.isDashing = isDashing;
+        Liora_StateMachine_Script.isClimbing = isClimbing;
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
         if (isDashing) { return; }
-        if (isGrabbingLedge)
+        //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge o si està executant una ordre d'atac
+        if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti)
         {
             horizontal = 0f;
         }
@@ -77,22 +65,8 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
         }
-        
         CheckForClimb();
         CheckForLedge();
-        if (!isFacingRight && horizontal > 0f)
-        {
-            FlipSprite();
-        }
-        else if (isFacingRight && horizontal < 0f)
-        {
-            FlipSprite();
-        }
-        if (state.isComplete)
-        {
-            SelectState();
-        }
-        state.Do();
     }
     public void Movimiento(InputAction.CallbackContext context)
     {
@@ -101,8 +75,8 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void Saltar(InputAction.CallbackContext context)
     {
-        //evitar que salti durant un dash
-        if (isDashing || isGrabbingLedge) { return; }
+        //evitar que salti durant un dash o durant un atac/parry/ulti
+        if (isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
         if (context.started)
         {
             if (CheckGround() || isClimbing)
@@ -161,32 +135,6 @@ public class Liora_Movement_Script : MonoBehaviour
         }
         rb.gravityScale = 0f;
     }
-    void SelectState()
-    {
-        if (CheckGround() && Mathf.Abs(rb.velocity.y) < Mathf.Epsilon)
-        {
-            if (Mathf.Abs(horizontal) < Mathf.Epsilon)
-            {
-                state = idleState;
-            }
-            else
-            {
-                state = runState;
-            }
-        }
-        else
-        {
-            if (isGrabbingLedge == true)
-            {
-                state = ledgeState;
-            }
-            else
-            {
-                state = airState;
-            }
-        }
-        state.Enter();
-    }
     private IEnumerator Dash()
     {
         canDash = false;
@@ -234,13 +182,6 @@ public class Liora_Movement_Script : MonoBehaviour
     private void EnableClimb()
     {
         canClimb = true;
-    }
-    private void FlipSprite()
-    {
-        isFacingRight = !isFacingRight;
-        Vector2 localScale = transform.localScale;
-        localScale.x *= -1f;
-        transform.localScale = localScale;
     }
     //fa check si el objecte empty groundCheck fa overlap amb un objecte que pertany a la groundLayer (overlap amb radi de 0.2f)
     private bool CheckGround()
