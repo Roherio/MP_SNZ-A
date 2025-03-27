@@ -78,8 +78,10 @@ public class Liora_Attack_Script : MonoBehaviour
                     inputCooldownTimer = 0f;
                     break;
 
-                case snzaAttackType.ESCARABAJO:
-                    damageAttackLiora = 28f;
+                case snzaAttackType.JABALI:
+                    damageAttackLiora = 50f;
+                    deactivateAttack = 0.5f;
+                    inputCooldownTimer = 0f;
                     break;
             }
             isAttacking = true;
@@ -100,7 +102,9 @@ public class Liora_Attack_Script : MonoBehaviour
                     inputCooldownTimer = 0f;
                     break;
 
-                case snzaParryType.ESCARABAJO:
+                case snzaParryType.JABALI:
+                    deactivateAttack = 1f;
+                    inputCooldownTimer = 0f;
                     break;
             }
             isParrying = true;
