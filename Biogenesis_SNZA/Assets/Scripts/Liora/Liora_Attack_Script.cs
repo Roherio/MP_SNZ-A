@@ -11,9 +11,11 @@ public class Liora_Attack_Script : MonoBehaviour
     public static bool isAttacking = false;
     public float inputAttackCooldown = 0.8f;
     private float inputCooldownTimer;
+    
     public enum snzaParryType { NONE, CANGREJO, ESCARABAJO, SECRETARIO, AGUILA, JABALI }
     [SerializeField] public static snzaParryType currentParryType = snzaParryType.CANGREJO;
     public static bool isParrying = false;
+   
     public enum snzaUltiType { NONE, MANTIS }
     [SerializeField] public snzaUltiType currentUltiType;
     public static bool isDoingUlti = false;
