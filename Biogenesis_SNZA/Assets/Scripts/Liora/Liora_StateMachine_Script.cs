@@ -83,7 +83,8 @@ public class Liora_StateMachine_Script : MonoBehaviour
     }
     void SelectState()
     {
-        if (isGrounded && Mathf.Abs(rb.velocity.y) < Mathf.Epsilon)
+        if(Time.timeScale == 0f) { return; }
+        if (isGrounded && Mathf.Abs(rb.velocity.y) < 0.01f)
         {
             if (isAttacking || isParrying)
             {
@@ -139,7 +140,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     }
     private void FlipSprite()
     {
-        if (isGrabbingLedge || isClimbing) { return; }
+        if (isGrabbingLedge || isClimbing || Time.timeScale == 0f) { return; }
         isFacingRight = !isFacingRight;
         Vector2 localScale = transform.localScale;
         localScale.x *= -1f;

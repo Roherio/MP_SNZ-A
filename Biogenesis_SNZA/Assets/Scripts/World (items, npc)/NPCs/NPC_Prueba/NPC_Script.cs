@@ -20,7 +20,7 @@ public class NPC_Script : MonoBehaviour, IInteractable_Script
 
     public void Interact()
     {
-        if (dialogueData == null /*|| (PauseController.IsGamePaused && !isDialogueActive)*/) { return; }
+        if (dialogueData == null || (PauseController_Script.isGamePaused && !isDialogueActive)) { return; }
         if (isDialogueActive)
         {
             NextLine();
@@ -39,7 +39,7 @@ public class NPC_Script : MonoBehaviour, IInteractable_Script
         portraitImage.sprite = dialogueData.npcPortrait;
 
         dialoguePanel.SetActive(true);
-        //PauseController.SetPause(true);
+        PauseController_Script.SetPause(true);
 
         StartCoroutine(TypeLine());
     }
@@ -87,6 +87,6 @@ public class NPC_Script : MonoBehaviour, IInteractable_Script
         isDialogueActive = false;
         dialogueText.SetText("");
         dialoguePanel.SetActive(false);
-        //PauseController.SetPause(false);
+        PauseController_Script.SetPause(false);
     }
 }
