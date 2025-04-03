@@ -1,0 +1,28 @@
+{
+	"identifier": "DOCUMENTACION",
+	"uniqueIdentifer": "d9cc01e0-e920-11ef-9d4d-dd3d211edc26",
+	"x": 10880,
+	"y": -2536,
+	"width": 640,
+	"height": 360,
+	"bgColor": "#AFF9F7",
+	"neighbourLevels": [
+		{
+			"levelIid": "0a294a40-e920-11ef-b360-b57e36a8d465",
+			"dir": "s"
+		},
+		{
+			"levelIid": "d1e7be60-e920-11ef-9d4d-393abb74b7ca",
+			"dir": "sw"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Walls.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png"
+	],
+	"entities" : {}
+}

@@ -1,0 +1,28 @@
+{
+	"identifier": "SUBSUELO_6",
+	"uniqueIdentifer": "46df2dc0-e920-11ef-9d4d-b53a439d4040",
+	"x": 12224,
+	"y": 560,
+	"width": 608,
+	"height": 776,
+	"bgColor": "#96EB8E",
+	"neighbourLevels": [
+		{
+			"levelIid": "d057b840-e920-11ef-9d4d-91f5056b7b3a",
+			"dir": "o"
+		},
+		{
+			"levelIid": "85d0d5d0-e920-11ef-9d4d-657016cbde1a",
+			"dir": "o"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Walls.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png"
+	],
+	"entities" : {}
+}
