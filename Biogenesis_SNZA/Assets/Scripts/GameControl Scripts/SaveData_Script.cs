@@ -14,4 +14,5 @@ public class SaveData_Script
     //public string mapBoundary; //aqui guardarem els limits de la camera quan els apliquem
     
     //Inventory saving també
+    //SNZAs també
 }
