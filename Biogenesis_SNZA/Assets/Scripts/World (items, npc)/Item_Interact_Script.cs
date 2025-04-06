@@ -19,7 +19,7 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
     public void Interact()
     {
         if (!CanInteract()) { return; }
-        //meter item en el inventario
+        //meter item en el inventario. en el caso de que aun no tenemos el inventario acabado, estamos simplemente instanciando un objeto.
         TakeItem();
         Destroy(gameObject);
     }
