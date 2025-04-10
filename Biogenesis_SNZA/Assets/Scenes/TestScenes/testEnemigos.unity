@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 54536690}
   - component: {fileID: 54536692}
   - component: {fileID: 54536691}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpriteEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 407267224}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyEscarabajo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440366104}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: attackHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -355,7 +355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467968857}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: attackHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -500,7 +500,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 703532286}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Projectile Position
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -531,7 +531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 776636097}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PatrolPoint (0)
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 808785264}
   - component: {fileID: 808785263}
   - component: {fileID: 808785267}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,7 +829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1014341799}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyAguila
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,7 +1038,7 @@ GameObject:
   - component: {fileID: 1193506084}
   - component: {fileID: 1193506083}
   - component: {fileID: 1193506082}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1856,7 +1856,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1971185711}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PatrolPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -1887,7 +1887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2043162014}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PatrolPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -1918,7 +1918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2065589335}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemySecretario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1952,7 +1952,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2101883108}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PatrolPoint (0)
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
