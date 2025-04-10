@@ -6,46 +6,54 @@ using UnityEngine.UI;
 public class navMenuIG : MonoBehaviour
 {
     public GameObject MenuInGame;
+    public GameObject MenuMapa;
+    public GameObject MenuOpciones;
+    public GameObject MenuTutoriales;
 
     //*****BOTONES Y UI****
     public List<Button> ArrBMenus = new List<Button>();
     public List<GameObject> ArrMenus = new List<GameObject>();
-
+    /*
     public List<Button> ArrBTutorialesComer = new List<Button>();
     public List<Button> ArrBTutorialesBeber = new List<Button>();
     public List<Button> ArrBTutorialesDormir = new List<Button>();
     public List<GameObject> ArrMenusTutorialesComer = new List<GameObject>();
     public List<GameObject> ArrMenusTutorialesBeber = new List<GameObject>();
     public List<GameObject> ArrMenusTutorialesDormir = new List<GameObject>();
-
-    public List<Button> ArrBObjetos = new List<Button>();
-    public List<GameObject> ArrMenusObjetos = new List<GameObject>();
+    */
+    public List<Button> ArrBTutoriales = new List<Button>();
+    public List<GameObject> ArrMenusTutoriales = new List<GameObject>();
+    public List<Button> ArrBInventario = new List<Button>();
+    public List<GameObject> ArrMenusInventario = new List<GameObject>();
 
     public List<Button> ArrBPulsera = new List<Button>();
     public List<GameObject> ArrMenusPulsera = new List<GameObject>();
 
     public List<Button> ArrBEnemigos = new List<Button>();
     public List<GameObject> ArrMenusEnemigos = new List<GameObject>();
-
-    public List<Button> ArrBNotasMundo = new List<Button>();
-    public List<Button> ArrBNotasPersonas = new List<Button>();
-    public List<List<Button>> ArrDNotas = new List<List<Button>>();
-    public List<GameObject> ArrMenusNotasMundo = new List<GameObject>();
-    public List<GameObject> ArrMenusNotasPersonas = new List<GameObject>();
-
+    /*
+    public List<Button> ArrBDatosMundo = new List<Button>();
+    public List<Button> ArrBDatosPersonas = new List<Button>();
+    public List<List<Button>> ArrDDatos = new List<List<Button>>();
+    public List<GameObject> ArrMenusDatosMundo = new List<GameObject>();
+    public List<GameObject> ArrMenusDatosPersonas = new List<GameObject>();
+    */
+    public List<Button> ArrBDatos = new List<Button>();
+    public List<GameObject> ArrMenusDatos = new List<GameObject>();
     public List<Button> ArrBOpciones = new List<Button>();
     public List<GameObject> ArrMenusOpciones = new List<GameObject>();
 
 
     public List<List<Button>> ArrBotones = new List<List<Button>>();
-    public List<List<Button>> ArrBotonesNotas = new List<List<Button>>();
-    public List<List<Button>> ArrBotonesTutoriales = new List<List<Button>>();
+    //public List<List<Button>> ArrBotonesDatos = new List<List<Button>>();
+    //public List<List<Button>> ArrBotonesTutoriales = new List<List<Button>>();
     public List<List<GameObject>> ArrSubmenus = new List<List<GameObject>>();
 
-    public List<GameObject> desplegables;
+    //public List<GameObject> desplegables;
 
     public static int idBotonActivo = 0;
     public static int idSubBotonActivo = 0;
+    public static int idBotonOpcionesActivo = 0;
 
     private Vector3 botonGrande = new Vector3(1.1f, 1.1f, 1);
     private Vector3 botonNormal = new Vector3(1, 1, 1);
@@ -59,28 +67,32 @@ public class navMenuIG : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ArrBotonesNotas.Add(ArrBNotasMundo);
-        ArrBotonesNotas.Add(ArrBNotasPersonas);
-
+        /*
+        ArrBotonesDatos.Add(ArrBDatosMundo);
+        ArrBotonesDatos.Add(ArrBDatosPersonas);
+        /*
         ArrBotonesTutoriales.Add(ArrBTutorialesComer);
         ArrBotonesTutoriales.Add(ArrBTutorialesBeber);
         ArrBotonesTutoriales.Add(ArrBTutorialesDormir);
-
-        ArrBotones.Add(null);
-        ArrBotones.Add(ArrBObjetos);
+        */
+        ArrBotones.Add(ArrBInventario);
         ArrBotones.Add(ArrBPulsera);
-        ArrBotones.Add(ArrBEnemigos);
         ArrBotones.Add(null);
         ArrBotones.Add(ArrBOpciones);
-
+        ArrBotones.Add(ArrBTutoriales);
+        /*
         ArrSubmenus.Add(ArrMenusTutorialesComer);
         ArrSubmenus.Add(ArrMenusTutorialesBeber);
         ArrSubmenus.Add(ArrMenusTutorialesDormir);
-        ArrSubmenus.Add(ArrMenusObjetos);
+        */
+        ArrSubmenus.Add(ArrMenusInventario);
         ArrSubmenus.Add(ArrMenusPulsera);
         ArrSubmenus.Add(ArrMenusEnemigos);
-        ArrSubmenus.Add(ArrMenusNotasMundo);
-        ArrSubmenus.Add(ArrMenusNotasPersonas);
+        ArrSubmenus.Add(ArrMenusTutoriales);
+        /*
+        ArrSubmenus.Add(ArrMenusDatosMundo);
+        ArrSubmenus.Add(ArrMenusDatosPersonas);
+        */
         ArrSubmenus.Add(ArrMenusOpciones);
 
         // *****TEST MEMORIA*****
@@ -95,6 +107,9 @@ public class navMenuIG : MonoBehaviour
 
         AsignarListeners();
         MenuInGame.SetActive(false);
+        MenuMapa.SetActive(false);
+        MenuOpciones.SetActive(false);
+        MenuTutoriales.SetActive(false);
 
 
         // *****BOTONES*****
@@ -131,26 +146,38 @@ public class navMenuIG : MonoBehaviour
             int boton = i;
             ArrBOpciones[i].onClick.AddListener(() => BotonPulsado(boton, 2));
         }
-        for (int i = 0; i < ArrBObjetos.Count; i++)
+        for (int i = 0; i < ArrBInventario.Count; i++)
         {
             int boton = i;
-            ArrBObjetos[i].onClick.AddListener(() => BotonPulsado(boton, 3));
+            ArrBInventario[i].onClick.AddListener(() => BotonPulsado(boton, 3));
         }
         for (int i = 0; i < ArrBPulsera.Count; i++)
         {
             int boton = i;
             ArrBPulsera[i].onClick.AddListener(() => BotonPulsado(boton, 4));
         }
-        for (int i = 0; i < ArrBNotasMundo.Count; i++)
+        for (int i = 0; i < ArrBTutoriales.Count; i++)
         {
             int boton = i;
-            ArrBNotasMundo[i].onClick.AddListener(() => BotonPulsado(boton, 5));
+            ArrBTutoriales[i].onClick.AddListener(() => BotonPulsado(boton, 5));
         }
-        for (int i = 0; i < ArrBNotasPersonas.Count; i++)
+        for (int i = 0; i < ArrBDatos.Count; i++)
         {
             int boton = i;
-            ArrBNotasPersonas[i].onClick.AddListener(() => BotonPulsado(boton, 6));
+            ArrBDatos[i].onClick.AddListener(() => BotonPulsado(boton, 6));
         }
+        /*
+        for (int i = 0; i < ArrBDatosMundo.Count; i++)
+        {
+            int boton = i;
+            ArrBDatosMundo[i].onClick.AddListener(() => BotonPulsado(boton, 5));
+        }
+        for (int i = 0; i < ArrBDatosPersonas.Count; i++)
+        {
+            int boton = i;
+            ArrBDatosPersonas[i].onClick.AddListener(() => BotonPulsado(boton, 6));
+        }
+        /*
         for (int i = 0; i < ArrBTutorialesComer.Count; i++)
         {
             int boton = i;
@@ -165,7 +192,7 @@ public class navMenuIG : MonoBehaviour
         {
             int boton = i;
             ArrBTutorialesDormir[i].onClick.AddListener(() => BotonPulsado(boton, 9));
-        }
+        }*/
     }
 
     public void BotonPulsado(int idBotonPulsado, int tipoBoton)
@@ -183,17 +210,25 @@ public class navMenuIG : MonoBehaviour
                 ManejarBoton(idBotonPulsado, ArrMenusOpciones, ArrBOpciones, true);
                 break;
             case 3:
-                ManejarBoton(idBotonPulsado, ArrMenusObjetos, ArrBObjetos, true);
+                ManejarBoton(idBotonPulsado, ArrMenusInventario, ArrBInventario, true);
                 break;
             case 4:
                 ManejarBoton(idBotonPulsado, ArrMenusPulsera, ArrBPulsera, true);
                 break;
             case 5:
-                ManejarBoton(idBotonPulsado, ArrMenusNotasMundo, ArrBNotasMundo, true);
+                ManejarBoton(idBotonPulsado, ArrMenusTutoriales, ArrBTutoriales, true);
                 break;
             case 6:
-                ManejarBoton(idBotonPulsado, ArrMenusNotasPersonas, ArrBNotasPersonas, true);
+                ManejarBoton(idBotonPulsado, ArrMenusDatos, ArrBDatos, true);
                 break;
+                /*
+            case 5:
+                ManejarBoton(idBotonPulsado, ArrMenusDatosMundo, ArrBDatosMundo, true);
+                break;
+            case 6:
+                ManejarBoton(idBotonPulsado, ArrMenusDatosPersonas, ArrBDatosPersonas, true);
+                break;
+                /*
             case 7:
                 ManejarBoton(idBotonPulsado, ArrMenusTutorialesComer, ArrBTutorialesComer, true);
                 break;
@@ -202,7 +237,7 @@ public class navMenuIG : MonoBehaviour
                 break;
             case 9:
                 ManejarBoton(idBotonPulsado, ArrMenusTutorialesDormir, ArrBTutorialesDormir, true);
-                break;
+                break;*/
         }
     }
     private void ManejarBoton(int idBotonPulsado, List<GameObject> arrayElementos, List<Button> arrayBotones, bool subMenu)
@@ -216,20 +251,19 @@ public class navMenuIG : MonoBehaviour
 
             scrMemoria.GuardarIdBotonActivo();
 
-            arrayElementos[idBotonActivo].SetActive(true);  
-            switch (idBotonActivo)
+            arrayElementos[idBotonActivo].SetActive(true);
+            idSubBotonActivo = 0;
+            ArrBotones[idBotonActivo][idSubBotonActivo].onClick.Invoke();
+            /*switch (idBotonActivo)
             {
-                case 0:
-                    DesplegablePulsado(2);
-                    break;
-                case 4:
+                case 2:
                     DesplegablePulsado(0);
                     break;
                 default:
                     idSubBotonActivo = 0;
                     ArrBotones[idBotonActivo][idSubBotonActivo].onClick.Invoke();
                     break;
-            }
+            }*/
             //arrayBotones[idBotonActivo].transform.localScale = botonGrande;
         }
         if (subMenu == true)
@@ -267,7 +301,7 @@ public class navMenuIG : MonoBehaviour
         }
     }
 
-    public void DesplegablePulsado(int index)
+    /*public void DesplegablePulsado(int index)
     {
         // Cierra todos los menús primero
         CerrarDesplegables();
@@ -277,11 +311,11 @@ public class navMenuIG : MonoBehaviour
         {
             case 0:
                 desplegables[index].SetActive(true);
-                ArrBotonesNotas[0][0].onClick.Invoke();
+                ArrBotonesDatos[0][0].onClick.Invoke();
                 break;
             case 1:
                 desplegables[index].SetActive(true);
-                ArrBotonesNotas[1][0].onClick.Invoke();
+                ArrBotonesDatos[1][0].onClick.Invoke();
                 break;
             case 2:
                 desplegables[index].SetActive(true);
@@ -296,15 +330,16 @@ public class navMenuIG : MonoBehaviour
                 ArrBotonesTutoriales[2][0].onClick.Invoke();
                 break;
         }
-    }
-    private void CerrarDesplegables()
+    }*/
+   
+    /* private void CerrarDesplegables()
     {
         foreach (GameObject desplegable in desplegables)
         {
             desplegable.SetActive(false);
         }
     }
-
+    */
 
     void CargarVariables()
     {
@@ -329,10 +364,17 @@ public class navMenuIG : MonoBehaviour
         intsActuales[2] = adrenaline;
     }
 
+
+
     public void CMenuG()
     {
         MenuInGame.SetActive(!MenuInGame.activeSelf);
-        if (MenuInGame.activeSelf)
+
+    }
+    public void CMenuMapa()
+    {
+        MenuMapa.SetActive(!MenuMapa.activeSelf);
+        if (MenuMapa.activeSelf)
         {
             Time.timeScale = 0;
         }
@@ -340,5 +382,15 @@ public class navMenuIG : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+    }
+    public void CMenuOpciones()
+    {
+        MenuOpciones.SetActive(!MenuOpciones.activeSelf);
+
+    }
+    public void CMenuTutoriales()
+    {
+        MenuTutoriales.SetActive(!MenuTutoriales.activeSelf);
+
     }
 }
