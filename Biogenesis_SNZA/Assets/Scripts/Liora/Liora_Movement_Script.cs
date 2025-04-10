@@ -140,10 +140,14 @@ public class Liora_Movement_Script : MonoBehaviour
         canDash = false;
         isDashing = true;
         trailRenderer.emitting = true;
+        //ignorar colisions amb enemies
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
         rb.velocity = new Vector2(transform.localScale.x * dashPower, 0f);
         yield return new WaitForSeconds(dashTime);
         isDashing = false;
         trailRenderer.emitting = false;
+        //retornar colisions amb enemies
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
