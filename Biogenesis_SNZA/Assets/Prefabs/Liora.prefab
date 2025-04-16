@@ -139,6 +139,58 @@ MonoBehaviour:
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
+--- !u!1 &2773479478748889641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378397153173986926}
+  - component: {fileID: 3242684065176004098}
+  m_Layer: 6
+  m_Name: Crab2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378397153173986926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2773479478748889641}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4524722385764549921}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3242684065176004098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2773479478748889641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d5db7f36a650242a8f112dc08aa455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  isGrounded: 0
+  jumping: 0
+  jumpPower: 24
+  isGrabbingLedge: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0
 --- !u!1 &3096839413113075702
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +221,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7508892902917312210}
+  - {fileID: 1378397153173986926}
+  - {fileID: 7099961217505989514}
   - {fileID: 8595861118070598566}
   m_Father: {fileID: 5079527829267624495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -432,7 +486,9 @@ MonoBehaviour:
   runState: {fileID: 6647752270926854459}
   airState: {fileID: 2939372857657682896}
   ledgeState: {fileID: 8778586524281539396}
-  crabAttackState: {fileID: 2909936836818465901}
+  crabAttackState1: {fileID: 2909936836818465901}
+  crabAttackState2: {fileID: 3242684065176004098}
+  crabAttackState3: {fileID: 2511590161386230145}
   crabParryState: {fileID: 895927059304751807}
   boarAttackState: {fileID: 6675227097986805452}
   boarParryState: {fileID: 4077681511628036436}
@@ -486,6 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputAttackCooldown: 0.8
+  isComboActive: 0
   currentUltiType: 0
   damageAttackLiora: 0
   deactivateAttack: 0
@@ -941,6 +998,58 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 1.5}
   m_EdgeRadius: 0
+--- !u!1 &4758292441634257046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7099961217505989514}
+  - component: {fileID: 2511590161386230145}
+  m_Layer: 6
+  m_Name: Crab3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7099961217505989514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758292441634257046}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4524722385764549921}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2511590161386230145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758292441634257046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f906db16f66a0784d9cdc72242e80b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  isGrounded: 0
+  jumping: 0
+  jumpPower: 24
+  isGrabbingLedge: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0
 --- !u!1 &5049708301153696739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,7 +1352,7 @@ GameObject:
   - component: {fileID: 7508892902917312210}
   - component: {fileID: 2909936836818465901}
   m_Layer: 6
-  m_Name: Crab
+  m_Name: Crab1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

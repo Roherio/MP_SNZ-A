@@ -11,7 +11,15 @@ public class Liora_Attack_Script : MonoBehaviour
     public static bool isAttacking = false;
     public float inputAttackCooldown = 0.8f;
     private float inputCooldownTimer;
-    
+
+    //combo Logic
+    public static int currentComboStep = 0;
+    private bool canReceiveNextComboInput = true;
+    //private bool bufferedNextComboInput = false; //variable que permet pulsar el següent atac encara que no haguem acabat el que s'esta fent
+    private float comboTimer = 0f;
+    private float comboMaxTime = 1f;
+    public bool isComboActive = false;
+
     public enum snzaParryType { NONE, CANGREJO, ESCARABAJO, SECRETARIO, AGUILA, JABALI }
     [SerializeField] public static snzaParryType currentParryType = snzaParryType.CANGREJO;
     public static bool isParrying = false;
@@ -35,6 +43,14 @@ public class Liora_Attack_Script : MonoBehaviour
     void Update()
     {
         inputCooldownTimer += Time.deltaTime;
+        if (isComboActive)
+        {
+            comboTimer += Time.deltaTime;
+            if (comboTimer > comboMaxTime)
+            {
+                ResetCombo();
+            }
+        }
         //comprovació de quin estat hem de passar a la StateMachine (prioritzem ulti, despres parry i després attack, per ressetejar les variables
         /*
         if (isDoingUlti)
@@ -71,23 +87,20 @@ public class Liora_Attack_Script : MonoBehaviour
         if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer) { return; }
         if (context.started)
         {
-            switch (currentAttackType)
+            if (!isComboActive)
             {
-                case snzaAttackType.CANGREJO:
-                    damageAttackLiora = 30f;
-                    //aqui determinem el temps que trigarà despres en acabarse l'animació d'attack, i també ressetejem el cooldownTimer perquè no pugui spammejar el atac
-                    deactivateAttack = 0.5f;
-                    inputCooldownTimer = 0f;
-                    break;
-
-                case snzaAttackType.JABALI:
-                    damageAttackLiora = 50f;
-                    deactivateAttack = 0.5f;
-                    inputCooldownTimer = 0f;
-                    break;
+                currentComboStep = 1;
+                isComboActive = true;
+                comboTimer = 0f;
+                HandleAttackStep(currentComboStep);
             }
-            isAttacking = true;
-            StartCoroutine(DeactivateAttack());
+            else if (canReceiveNextComboInput && comboTimer <= comboMaxTime && currentComboStep < 3)
+            {
+                currentComboStep++;
+                comboTimer = 0f;
+                canReceiveNextComboInput = false;
+                HandleAttackStep(currentComboStep);
+            }
         }
     }
     public void Parry(InputAction.CallbackContext context)
@@ -113,11 +126,61 @@ public class Liora_Attack_Script : MonoBehaviour
             StartCoroutine(DeactivateAttack());
         }
     }
+    private void HandleAttackStep(int step)
+    {
+        switch (currentAttackType)
+        {
+            case snzaAttackType.CANGREJO:
+                switch (step)
+                {
+                    case 1:
+                        damageAttackLiora = 20f;
+                        deactivateAttack = 0.6f;
+                        break;
+                    case 2:
+                        damageAttackLiora = 30f;
+                        deactivateAttack = 0.5f;
+                        break;
+                    case 3:
+                        damageAttackLiora = 50f;
+                        deactivateAttack = 1.5f;
+                        break;
+                }
+                /*
+                damageAttackLiora = 30f;
+                //aqui determinem el temps que trigarà despres en acabarse l'animació d'attack, i també ressetejem el cooldownTimer perquè no pugui spammejar el atac
+                deactivateAttack = 0.5f;*/
+                break;
+
+            case snzaAttackType.JABALI:
+                damageAttackLiora = 50f;
+                deactivateAttack = 0.5f;
+                break;
+        }
+        isAttacking = true;
+        inputCooldownTimer = 0f;
+        StartCoroutine(DeactivateAttack());
+    }
+    
     private IEnumerator DeactivateAttack()
     {
         yield return new WaitForSeconds(deactivateAttack);
         isAttacking = false;
         isParrying = false;
         isDoingUlti = false;
+        canReceiveNextComboInput = true;
+        //si aquest era el ultim hit del combo
+        if (currentComboStep >= 3)
+        {
+            ResetCombo();
+        }
+    }
+    private void ResetCombo()
+    {
+        comboTimer = 0f;
+        currentComboStep = 0;
+        isComboActive = false;
+        canReceiveNextComboInput = true;
+        //Liora_StateMachine_Script.animator.SetInteger("ComboStep", 0);
     }
 }
