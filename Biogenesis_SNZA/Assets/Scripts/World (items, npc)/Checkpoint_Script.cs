@@ -6,12 +6,12 @@ public class Checkpoint_Script : MonoBehaviour, IInteractable_Script
 {
     public bool CanInteract()
     {
-        throw new System.NotImplementedException();
+        return true;
     }
 
     public void Interact()
     {
-        throw new System.NotImplementedException();
+        SaveController_Script.SaveGame();
     }
 
 }

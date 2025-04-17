@@ -21,6 +21,8 @@ public class Liora_Interaction_Script : MonoBehaviour
             interactableInRange?.Interact();
         }
     }
+    
+    //funcions per determinar si mostrar o no la icona de Interact
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //mirarem si el objecte amb el que colisiona té associat el script interactable && es pot interactuar amb ell
