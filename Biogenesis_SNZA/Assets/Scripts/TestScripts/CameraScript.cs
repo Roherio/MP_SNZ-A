@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CameraScript : MonoBehaviour
 {
-    public Transform player;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] PolygonCollider2D mapBoundary;
+    CinemachineConfiner confiner;
+
+    private void Awake()
     {
-        
+        confiner = FindObjectOfType<CinemachineConfiner>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 4, player.transform.position.z - 10);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            confiner.m_BoundingShape2D = mapBoundary;
+        }
     }
+
 }

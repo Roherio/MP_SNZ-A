@@ -13,9 +13,13 @@ public class Liora_StateMachine_Script : MonoBehaviour
     public Liora_Run_Script runState;
     public Liora_Airborne_Script airState;
     public Liora_Ledge_Script ledgeState;
-    //states ataque
-    public Liora_CrabAttack_Script crabAttackState;
+    //------------------states ataque
+    //crab
+    public Liora_CrabAttack1_Script crabAttackState1;
+    public Liora_CrabAttack2_Script crabAttackState2;
+    public Liora_CrabAttack3_Script crabAttackState3;
     public Liora_CrabParry_Script crabParryState;
+    //boar
     public Liora_BoarAttack_Script boarAttackState;
     public Liora_BoarParry_Script boarParryState;
 
@@ -48,7 +52,9 @@ public class Liora_StateMachine_Script : MonoBehaviour
         airState.Setup(rb, animator, horizontal);
         ledgeState.Setup(rb, animator, horizontal);
         //enviament animator pels diferents estats d'atac
-        crabAttackState.Setup(rb, animator, horizontal);
+        crabAttackState1.Setup(rb, animator, horizontal);
+        crabAttackState2.Setup(rb, animator, horizontal);
+        crabAttackState3.Setup(rb, animator, horizontal);
         crabParryState.Setup(rb, animator, horizontal);
         boarAttackState.Setup(rb, animator, horizontal);
         boarParryState.Setup(rb, animator, horizontal);
@@ -93,7 +99,18 @@ public class Liora_StateMachine_Script : MonoBehaviour
                     switch (Liora_Attack_Script.currentAttackType)
                     {
                         case snzaAttackType.CANGREJO:
-                            state = crabAttackState;
+                            switch (currentComboStep)
+                            {
+                                case 1:
+                                    state = crabAttackState1;
+                                    break;
+                                case 2:
+                                    state = crabAttackState2;
+                                    break;
+                                case 3:
+                                    state = crabAttackState3;
+                                    break;
+                            }
                             break;
                         case snzaAttackType.JABALI:
                             state = boarAttackState;

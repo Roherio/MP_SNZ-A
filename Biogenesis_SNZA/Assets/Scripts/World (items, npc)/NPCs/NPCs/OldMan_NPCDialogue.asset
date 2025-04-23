@@ -15,8 +15,8 @@ MonoBehaviour:
   npcName: Old Man
   npcPortrait: {fileID: -6447320039163218822, guid: 8a9f07b4999286348a930f8982849f4b, type: 3}
   dialogueLines:
-  - "Ey muy buenas a todos, guaP\xCDsimos"
-  - "Aqu\xED Vegetta setecientosetentaysiete"
+  - Ey muy buenas a todos, guaPIsimos
+  - Aqui Vegetta setecientosetentaysiete
   - enungameplayendirecto
   autoProgressLines: 010000
   autoProgressDelay: 1.5

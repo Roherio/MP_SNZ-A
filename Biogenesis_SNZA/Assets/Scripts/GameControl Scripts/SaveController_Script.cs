@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SaveController_Script : MonoBehaviour
 {
-    private string saveLocation;
+    private static string saveLocation;
     // Start is called before the first frame update
     void Awake()
     {
@@ -14,7 +14,7 @@ public class SaveController_Script : MonoBehaviour
         LoadGame();
     }
 
-    public void SaveGame()
+    public static void SaveGame()
     {
         SaveData_Script saveData = new SaveData_Script
         {
