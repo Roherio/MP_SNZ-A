@@ -31,7 +31,7 @@ public class Liora_Attack_Script : MonoBehaviour
     //variable que determinarà quin mal fa Liora amb aquell attack
     public float damageAttackLiora;
     //variable per saber quan acaba l'estat isAttacking/parrying/doingUlti per cada moviment
-    public float deactivateAttack;
+    public float deactivateAction;
 
     // Start is called before the first frame update
     void Start()
@@ -76,15 +76,11 @@ public class Liora_Attack_Script : MonoBehaviour
         Liora_StateMachine_Script.isAttacking = isAttacking;
         Liora_StateMachine_Script.isParrying = isParrying;
         Liora_StateMachine_Script.isDoingUlti = isDoingUlti;
-        //NO HACERLO EN EL UPDATE, MIRAR DE HACERLO EN LA FUNCION DEL ATAQUE
-        /*switch (scrMemoria.tipoSNZAAtaque)
-            case "cangerjo"
-            snzaAttackType.CANGREJO;*/
     }
     public void Ataque(InputAction.CallbackContext context)
     {
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
-        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer) { return; }
+        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isParrying || isDoingUlti) { return; }
         if (context.started)
         {
             if (!isComboActive)
@@ -106,24 +102,25 @@ public class Liora_Attack_Script : MonoBehaviour
     public void Parry(InputAction.CallbackContext context)
     {
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
-        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer) { return; }
+        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isDoingUlti) { return; }
         if (context.started)
         {
+            ResetCombo();
             switch (currentParryType)
             {
                 case snzaParryType.CANGREJO:
                     //aqui determinem el temps que trigarà despres en acabarse l'animació d'attack, i també ressetejem el cooldownTimer perquè no pugui spammejar el atac
-                    deactivateAttack = 1f;
+                    deactivateAction = 1f;
                     inputCooldownTimer = 0f;
                     break;
 
                 case snzaParryType.JABALI:
-                    deactivateAttack = 1f;
+                    deactivateAction = 1f;
                     inputCooldownTimer = 0f;
                     break;
             }
             isParrying = true;
-            StartCoroutine(DeactivateAttack());
+            StartCoroutine(DeactivateAction());
         }
     }
     private void HandleAttackStep(int step)
@@ -135,15 +132,15 @@ public class Liora_Attack_Script : MonoBehaviour
                 {
                     case 1:
                         damageAttackLiora = 20f;
-                        deactivateAttack = 0.6f;
+                        deactivateAction = 0.6f;
                         break;
                     case 2:
                         damageAttackLiora = 30f;
-                        deactivateAttack = 0.5f;
+                        deactivateAction = 0.5f;
                         break;
                     case 3:
                         damageAttackLiora = 50f;
-                        deactivateAttack = 1.5f;
+                        deactivateAction = 1.5f;
                         break;
                 }
                 /*
@@ -154,17 +151,17 @@ public class Liora_Attack_Script : MonoBehaviour
 
             case snzaAttackType.JABALI:
                 damageAttackLiora = 50f;
-                deactivateAttack = 0.5f;
+                deactivateAction = 0.5f;
                 break;
         }
         isAttacking = true;
         inputCooldownTimer = 0f;
-        StartCoroutine(DeactivateAttack());
+        StartCoroutine(DeactivateAction());
     }
     
-    private IEnumerator DeactivateAttack()
+    private IEnumerator DeactivateAction()
     {
-        yield return new WaitForSeconds(deactivateAttack);
+        yield return new WaitForSeconds(deactivateAction);
         isAttacking = false;
         isParrying = false;
         isDoingUlti = false;
@@ -181,6 +178,5 @@ public class Liora_Attack_Script : MonoBehaviour
         currentComboStep = 0;
         isComboActive = false;
         canReceiveNextComboInput = true;
-        //Liora_StateMachine_Script.animator.SetInteger("ComboStep", 0);
     }
 }

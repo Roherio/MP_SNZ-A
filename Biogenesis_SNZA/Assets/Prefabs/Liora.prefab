@@ -684,7 +684,19 @@ MonoBehaviour:
     m_ActionId: f23b1236-e6c9-4ac5-928a-8d7384f43ddd
     m_ActionName: ControlesInGame/Parry[/Keyboard/k]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2051614273843993295}
+        m_TargetAssemblyTypeName: Liora_Interaction_Script, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4eed1fd4-1684-4591-bc89-930ae0fb094d
     m_ActionName: ControlesInGame/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
@@ -827,7 +839,7 @@ BoxCollider2D:
   m_Offset: {x: -0.03125, y: 2.0617065}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.516129, y: -0.032786883}
+    pivot: {x: 0.743, y: 0}
     oldSize: {x: 1.9375, y: 3.8125}
     newSize: {x: 0.31, y: 0.6}
     adaptiveTilingThreshold: 0.5
