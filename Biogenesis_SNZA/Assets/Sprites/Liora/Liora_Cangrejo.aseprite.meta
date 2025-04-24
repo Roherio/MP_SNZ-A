@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Liora_Cangrejo_Frame_0
     originalName: 
-    pivot: {x: 1.6333334, y: -0.016393442}
+    pivot: {x: 0.53, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -143,7 +143,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 409}
   - name: Liora_Cangrejo_Frame_1
     originalName: 
-    pivot: {x: 1.8399999, y: -0.016393442}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -163,7 +163,7 @@ ScriptedImporter:
     uvTransform: {x: 483, y: 136}
   - name: Liora_Cangrejo_Frame_7
     originalName: 
-    pivot: {x: 0.6438356, y: -0.01754386}
+    pivot: {x: 0.212, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -183,7 +183,7 @@ ScriptedImporter:
     uvTransform: {x: 190, y: 4}
   - name: Liora_Cangrejo_Frame_8
     originalName: 
-    pivot: {x: 0.6527778, y: -0.01754386}
+    pivot: {x: 0.22, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -203,7 +203,7 @@ ScriptedImporter:
     uvTransform: {x: 271, y: 4}
   - name: Liora_Cangrejo_Frame_9
     originalName: 
-    pivot: {x: 0.8703704, y: -0.01754386}
+    pivot: {x: 0.28, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -223,7 +223,7 @@ ScriptedImporter:
     uvTransform: {x: 364, y: 136}
   - name: Liora_Cangrejo_Frame_2
     originalName: 
-    pivot: {x: 1.3055556, y: -0.01754386}
+    pivot: {x: 0.37, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -243,7 +243,7 @@ ScriptedImporter:
     uvTransform: {x: 342, y: 205}
   - name: Liora_Cangrejo_Frame_3
     originalName: 
-    pivot: {x: 1.1750001, y: -0.01754386}
+    pivot: {x: 0.37, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -263,7 +263,7 @@ ScriptedImporter:
     uvTransform: {x: 205, y: 205}
   - name: Liora_Cangrejo_Frame_4
     originalName: 
-    pivot: {x: 0.70238096, y: -0.016393442}
+    pivot: {x: 0.345, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -283,7 +283,7 @@ ScriptedImporter:
     uvTransform: {x: 98, y: 4}
   - name: Liora_Cangrejo_Frame_5
     originalName: 
-    pivot: {x: 0.73255813, y: -0.016393442}
+    pivot: {x: 0.384, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -303,7 +303,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Liora_Cangrejo_Frame_6
     originalName: 
-    pivot: {x: 1.4, y: -0.016393442}
+    pivot: {x: 0.69, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -323,7 +323,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 205}
   - name: Liora_Cangrejo_Frame_2
     originalName: 
-    pivot: {x: 1.4318182, y: -0.016393442}
+    pivot: {x: 0.69, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -343,7 +343,7 @@ ScriptedImporter:
     uvTransform: {x: 57, y: 205}
   - name: Liora_Cangrejo_Frame_3
     originalName: 
-    pivot: {x: 1.475, y: -0.016393442}
+    pivot: {x: 0.69, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -363,7 +363,7 @@ ScriptedImporter:
     uvTransform: {x: 109, y: 205}
   - name: Liora_Cangrejo_Frame_4
     originalName: 
-    pivot: {x: 1.4594595, y: -0.016393442}
+    pivot: {x: 0.595, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -383,7 +383,7 @@ ScriptedImporter:
     uvTransform: {x: 253, y: 205}
   - name: Liora_Cangrejo_Frame_5
     originalName: 
-    pivot: {x: 1.5151515, y: -0.016393442}
+    pivot: {x: 0.544, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -403,7 +403,7 @@ ScriptedImporter:
     uvTransform: {x: 386, y: 205}
   - name: Liora_Cangrejo_Frame_6
     originalName: 
-    pivot: {x: 1.5666667, y: -0.016393442}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -423,7 +423,7 @@ ScriptedImporter:
     uvTransform: {x: 42, y: 409}
   - name: Liora_Cangrejo_Frame_12
     originalName: 
-    pivot: {x: 1.53125, y: -0.016666668}
+    pivot: {x: 0.53, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -443,7 +443,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 341}
   - name: Liora_Cangrejo_Frame_13
     originalName: 
-    pivot: {x: 1.5151515, y: -0.016949153}
+    pivot: {x: 0.55, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -463,7 +463,7 @@ ScriptedImporter:
     uvTransform: {x: 427, y: 205}
   - name: Liora_Cangrejo_Frame_14
     originalName: 
-    pivot: {x: 1.5151515, y: -0.016949153}
+    pivot: {x: 0.54, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -483,7 +483,7 @@ ScriptedImporter:
     uvTransform: {x: 468, y: 205}
   - name: Liora_Cangrejo_Frame_15
     originalName: 
-    pivot: {x: 1.5151515, y: -0.016949153}
+    pivot: {x: 0.53, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -503,7 +503,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 274}
   - name: Liora_Cangrejo_Frame_16
     originalName: 
-    pivot: {x: 0.36363637, y: 0}
+    pivot: {x: -0.1, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -523,7 +523,7 @@ ScriptedImporter:
     uvTransform: {x: 427, y: 4}
   - name: Liora_Cangrejo_Frame_20
     originalName: 
-    pivot: {x: 0.36363637, y: 0}
+    pivot: {x: -0.1, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -543,7 +543,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 73}
   - name: Liora_Cangrejo_Frame_21
     originalName: 
-    pivot: {x: 0.36363637, y: 0}
+    pivot: {x: -0.1, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -563,7 +563,7 @@ ScriptedImporter:
     uvTransform: {x: 78, y: 73}
   - name: Liora_Cangrejo_Frame_22
     originalName: 
-    pivot: {x: 0.3529412, y: 0}
+    pivot: {x: -0.1, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -583,7 +583,7 @@ ScriptedImporter:
     uvTransform: {x: 351, y: 4}
   - name: Liora_Cangrejo_Frame_23
     originalName: 
-    pivot: {x: 0.65000004, y: -0.01724138}
+    pivot: {x: 0, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -603,7 +603,7 @@ ScriptedImporter:
     uvTransform: {x: 157, y: 205}
   - name: Liora_Cangrejo_Frame_24
     originalName: 
-    pivot: {x: 0.84375, y: -0.016949153}
+    pivot: {x: 0.35, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -623,7 +623,7 @@ ScriptedImporter:
     uvTransform: {x: 124, y: 341}
   - name: Liora_Cangrejo_Frame_25
     originalName: 
-    pivot: {x: 1.28125, y: -0.016666668}
+    pivot: {x: 0.4, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -643,7 +643,7 @@ ScriptedImporter:
     uvTransform: {x: 44, y: 341}
   - name: Liora_Cangrejo_Frame_26
     originalName: 
-    pivot: {x: 1.65625, y: -0.03448276}
+    pivot: {x: 0.4, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -663,7 +663,7 @@ ScriptedImporter:
     uvTransform: {x: 164, y: 341}
   - name: Liora_Cangrejo_Frame_27
     originalName: 
-    pivot: {x: 1.0384616, y: -0.032786883}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -683,7 +683,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 136}
   - name: Liora_Cangrejo_Frame_33
     originalName: 
-    pivot: {x: 1.0816326, y: -0.03448276}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -703,7 +703,7 @@ ScriptedImporter:
     uvTransform: {x: 426, y: 136}
   - name: Liora_Cangrejo_Frame_34
     originalName: 
-    pivot: {x: 1.4166666, y: -0.033898305}
+    pivot: {x: 0.36, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -723,7 +723,7 @@ ScriptedImporter:
     uvTransform: {x: 298, y: 205}
   - name: Liora_Cangrejo_Frame_35
     originalName: 
-    pivot: {x: 1.75, y: -0.033333335}
+    pivot: {x: 0.38, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -743,7 +743,7 @@ ScriptedImporter:
     uvTransform: {x: 84, y: 341}
   - name: Liora_Cangrejo_Frame_28
     originalName: 
-    pivot: {x: 1.0384616, y: -0.032786883}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -763,7 +763,7 @@ ScriptedImporter:
     uvTransform: {x: 64, y: 136}
   - name: Liora_Cangrejo_Frame_29
     originalName: 
-    pivot: {x: 1.0384616, y: -0.032786883}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -783,7 +783,7 @@ ScriptedImporter:
     uvTransform: {x: 124, y: 136}
   - name: Liora_Cangrejo_Frame_30
     originalName: 
-    pivot: {x: 1.0384616, y: -0.032786883}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -803,7 +803,7 @@ ScriptedImporter:
     uvTransform: {x: 184, y: 136}
   - name: Liora_Cangrejo_Frame_31
     originalName: 
-    pivot: {x: 1.0384616, y: -0.032786883}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -823,7 +823,7 @@ ScriptedImporter:
     uvTransform: {x: 244, y: 136}
   - name: Liora_Cangrejo_Frame_32
     originalName: 
-    pivot: {x: 1.0384616, y: -0.032786883}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
