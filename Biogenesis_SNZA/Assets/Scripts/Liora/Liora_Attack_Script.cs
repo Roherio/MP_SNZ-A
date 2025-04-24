@@ -23,6 +23,7 @@ public class Liora_Attack_Script : MonoBehaviour
     public enum snzaParryType { NONE, CANGREJO, ESCARABAJO, SECRETARIO, AGUILA, JABALI }
     [SerializeField] public static snzaParryType currentParryType = snzaParryType.CANGREJO;
     public static bool isParrying = false;
+    private float parryCooldown = 2f;
    
     public enum snzaUltiType { NONE, MANTIS }
     [SerializeField] public snzaUltiType currentUltiType;
@@ -43,6 +44,7 @@ public class Liora_Attack_Script : MonoBehaviour
     void Update()
     {
         inputCooldownTimer += Time.deltaTime;
+        parryCooldown -= Time.deltaTime;
         if (isComboActive)
         {
             comboTimer += Time.deltaTime;
@@ -80,9 +82,10 @@ public class Liora_Attack_Script : MonoBehaviour
     public void Ataque(InputAction.CallbackContext context)
     {
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
-        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isParrying || isDoingUlti) { return; }
+        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isParrying || isDoingUlti) { return; }
         if (context.started)
         {
+            isParrying = false;
             if (!isComboActive)
             {
                 currentComboStep = 1;
@@ -102,24 +105,24 @@ public class Liora_Attack_Script : MonoBehaviour
     public void Parry(InputAction.CallbackContext context)
     {
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
-        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isDoingUlti) { return; }
+        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isParrying || isDoingUlti) { return; }
+        if (parryCooldown > 0f) { return; }
         if (context.started)
         {
-            ResetCombo();
             switch (currentParryType)
             {
                 case snzaParryType.CANGREJO:
                     //aqui determinem el temps que trigarà despres en acabarse l'animació d'attack, i també ressetejem el cooldownTimer perquè no pugui spammejar el atac
                     deactivateAction = 1f;
-                    inputCooldownTimer = 0f;
                     break;
 
                 case snzaParryType.JABALI:
                     deactivateAction = 1f;
-                    inputCooldownTimer = 0f;
                     break;
             }
+            inputCooldownTimer = 0f;
             isParrying = true;
+            parryCooldown = 2f;
             StartCoroutine(DeactivateAction());
         }
     }
