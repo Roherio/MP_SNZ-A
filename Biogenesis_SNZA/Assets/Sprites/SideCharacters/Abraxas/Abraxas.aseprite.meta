@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3fce7904d139bf1489ba5b68fdb313cf
+guid: ed04c18b546d64c43892f4d1f6f13806
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 16
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638778876246985294
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,38 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Liora_Idle_Frame_0
+  - name: Abraxas_Frame_0
     originalName: 
-    pivot: {x: 0.743, y: 0}
+    pivot: {x: 0.5217391, y: -0.033898305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 72
+      width: 23
+      height: 59
+    spriteID: d40778aab46fd924d98d849b0686f5cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 72}
+  - name: Abraxas_Frame_1
+    originalName: 
+    pivot: {x: 0.5217391, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 31
-      height: 61
-    spriteID: e727e7ac5c9dc5d4e832431d22f8120b
+      width: 23
+      height: 60
+    spriteID: a8689677fb74c324ca7719f0a3715937
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,78 +161,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Liora_Idle_Frame_1
+  - name: Abraxas_Frame_2
     originalName: 
-    pivot: {x: 0.742, y: 0}
+    pivot: {x: 0.5217391, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 73
-      width: 31
-      height: 61
-    spriteID: 02325363f9cbf2c448446fe24dfd04ca
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 73}
-  - name: Liora_Idle_Frame_2
-    originalName: 
-    pivot: {x: 0.765, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 43
-      y: 142
-      width: 30
-      height: 60
-    spriteID: 7ef0947e4783cc44eafc1c96860cd4e6
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 43, y: 142}
-  - name: Liora_Idle_Frame_3
-    originalName: 
-    pivot: {x: 0.766, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 82
-      y: 4
-      width: 30
-      height: 60
-    spriteID: a0eec50a012ea9c4b82ac1c4423e5f77
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 82, y: 4}
-  - name: Liora_Idle_Frame_4
-    originalName: 
-    pivot: {x: 0.767, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 82
       y: 72
-      width: 30
+      width: 23
       height: 60
-    spriteID: a4e8958f02edba7469882941468a267e
+    spriteID: a546d8b5331303b47806604661dce22c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -220,19 +180,39 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 82, y: 72}
-  - name: Liora_Idle_Frame_5
+    uvTransform: {x: 4, y: 72}
+  - name: Abraxas_Frame_9
     originalName: 
-    pivot: {x: 0.742, y: 0}
+    pivot: {x: 0.5217391, y: -0.03448276}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 97
+      y: 4
+      width: 23
+      height: 58
+    spriteID: 83800695d03aa8243bd65e661044b389
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 97, y: 4}
+  - name: Abraxas_Frame_3
+    originalName: 
+    pivot: {x: 0.5217391, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 142
-      width: 31
-      height: 61
-    spriteID: 492fa2a713a5cc74faf9c0aa41bb6eed
+      y: 140
+      width: 23
+      height: 60
+    spriteID: d76ee2b8ccc56e447acded9b12bbec54
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -240,19 +220,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 142}
-  - name: Liora_Idle_Frame_6
+    uvTransform: {x: 4, y: 140}
+  - name: Abraxas_Frame_4
     originalName: 
-    pivot: {x: 0.742, y: 0}
+    pivot: {x: 0.5217391, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
+      x: 35
       y: 4
-      width: 31
-      height: 61
-    spriteID: 99f30a36f898e0546a667be6733dd4b6
+      width: 23
+      height: 60
+    spriteID: 932194fdfe18a9a4db8a939507fa7e71
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -260,19 +240,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 4}
-  - name: Liora_Idle_Frame_7
+    uvTransform: {x: 35, y: 4}
+  - name: Abraxas_Frame_5
     originalName: 
-    pivot: {x: 0.742, y: 0}
+    pivot: {x: 0.5217391, y: -0.033333335}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 73
-      width: 31
-      height: 61
-    spriteID: 6a500336db97493428a5307ae181cdd4
+      x: 35
+      y: 72
+      width: 23
+      height: 60
+    spriteID: 8bcd79de197483b4f869d986be10b493
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -280,88 +260,224 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 73}
+    uvTransform: {x: 35, y: 72}
+  - name: Abraxas_Frame_6
+    originalName: 
+    pivot: {x: 0.5217391, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 140
+      width: 23
+      height: 60
+    spriteID: 43dbc232319deb944a9594250c7043c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 140}
+  - name: Abraxas_Frame_7
+    originalName: 
+    pivot: {x: 0.5217391, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 4
+      width: 23
+      height: 60
+    spriteID: 51f79db2aa7d3024192c9005fa4c0c75
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 4}
+  - name: Abraxas_Frame_8
+    originalName: 
+    pivot: {x: 0.5217391, y: -0.033898305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 139
+      width: 23
+      height: 59
+    spriteID: 6cbe53aec65395c4d9c87a94fd81849b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 139}
+  - name: Abraxas_Frame_10
+    originalName: 
+    pivot: {x: 0.5217391, y: -0.03448276}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 97
+      y: 70
+      width: 23
+      height: 58
+    spriteID: 12d2ca7b80abd0e4c8b6e5c58b8f74ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 97, y: 70}
+  - name: Abraxas_Frame_11
+    originalName: 
+    pivot: {x: 0.5217391, y: -0.03448276}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 97
+      y: 136
+      width: 23
+      height: 58
+    spriteID: 7494bf366fd03114ea05e30f74a4ee6d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 97, y: 136}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1267571590
-    name: Liora_Idle
+    guid: -1892617152
+    name: Abraxas
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Liora_Idle_Frame_0
+    - name: Abraxas_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 20
         y: 2
-        width: 31
-        height: 61
-      spriteId: e727e7ac5c9dc5d4e832431d22f8120b
-    - name: Liora_Idle_Frame_1
+        width: 23
+        height: 59
+      spriteId: d40778aab46fd924d98d849b0686f5cf
+    - name: Abraxas_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 20
         y: 2
-        width: 31
-        height: 61
-      spriteId: 02325363f9cbf2c448446fe24dfd04ca
-    - name: Liora_Idle_Frame_2
+        width: 23
+        height: 60
+      spriteId: a8689677fb74c324ca7719f0a3715937
+    - name: Abraxas_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 20
         y: 2
-        width: 30
+        width: 23
         height: 60
-      spriteId: 7ef0947e4783cc44eafc1c96860cd4e6
-    - name: Liora_Idle_Frame_3
+      spriteId: a546d8b5331303b47806604661dce22c
+    - name: Abraxas_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 2
+        width: 23
+        height: 58
+      spriteId: 83800695d03aa8243bd65e661044b389
+    - name: Abraxas_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 20
         y: 2
-        width: 30
+        width: 23
         height: 60
-      spriteId: a0eec50a012ea9c4b82ac1c4423e5f77
-    - name: Liora_Idle_Frame_4
+      spriteId: d76ee2b8ccc56e447acded9b12bbec54
+    - name: Abraxas_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 20
         y: 2
-        width: 30
+        width: 23
         height: 60
-      spriteId: a4e8958f02edba7469882941468a267e
-    - name: Liora_Idle_Frame_5
+      spriteId: 932194fdfe18a9a4db8a939507fa7e71
+    - name: Abraxas_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 20
         y: 2
-        width: 31
-        height: 61
-      spriteId: 492fa2a713a5cc74faf9c0aa41bb6eed
-    - name: Liora_Idle_Frame_6
+        width: 23
+        height: 60
+      spriteId: 8bcd79de197483b4f869d986be10b493
+    - name: Abraxas_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 20
         y: 2
-        width: 31
-        height: 61
-      spriteId: 99f30a36f898e0546a667be6733dd4b6
-    - name: Liora_Idle_Frame_7
+        width: 23
+        height: 60
+      spriteId: 43dbc232319deb944a9594250c7043c3
+    - name: Abraxas_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 20
         y: 2
-        width: 31
-        height: 61
-      spriteId: 6a500336db97493428a5307ae181cdd4
+        width: 23
+        height: 60
+      spriteId: 51f79db2aa7d3024192c9005fa4c0c75
+    - name: Abraxas_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 2
+        width: 23
+        height: 59
+      spriteId: 6cbe53aec65395c4d9c87a94fd81849b
+    - name: Abraxas_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 2
+        width: 23
+        height: 58
+      spriteId: 12d2ca7b80abd0e4c8b6e5c58b8f74ed
+    - name: Abraxas_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 2
+        width: 23
+        height: 58
+      spriteId: 7494bf366fd03114ea05e30f74a4ee6d
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -372,42 +488,6 @@ ScriptedImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Android
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
