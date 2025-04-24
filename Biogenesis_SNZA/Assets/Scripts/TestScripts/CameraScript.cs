@@ -17,8 +17,14 @@ public class CameraScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            confiner.m_BoundingShape2D = mapBoundary;
+            StartCoroutine(FadeTimer());
         }
+    }
+    IEnumerator FadeTimer()
+    {
+        yield return new WaitForSeconds(1f);
+        confiner.m_BoundingShape2D = mapBoundary;
+        yield return new WaitForSeconds(1f);
     }
 
 }
