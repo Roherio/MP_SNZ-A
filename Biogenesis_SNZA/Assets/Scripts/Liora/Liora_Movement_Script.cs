@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class Liora_Movement_Script : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public PlayerInput playerInput;
     //Ground Logic
     public BoxCollider2D groundCheck;
     public LayerMask groundLayer;
@@ -48,6 +49,7 @@ public class Liora_Movement_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameControl_Script.isPaused) { return; }
         //pas de variables a la state machine
         Liora_StateMachine_Script.horizontal = horizontal;
         Liora_StateMachine_Script.isGrounded = CheckGround();
@@ -59,6 +61,7 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (GameControl_Script.isPaused) { return; }
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
         if (isDashing) { return; }
         //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge o si està executant una ordre d'atac
@@ -74,11 +77,11 @@ public class Liora_Movement_Script : MonoBehaviour
     public void Movimiento(InputAction.CallbackContext context)
     {
         //if (isGrabbingLedge) { return; }
-        print("tas moviendote");
         horizontal = context.ReadValue<Vector2>().x;
     }
     public void Saltar(InputAction.CallbackContext context)
     {
+        if (GameControl_Script.isPaused) { return; }
         //evitar que salti durant un dash o durant un atac/parry/ulti
         if (isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
         if (context.started)
@@ -103,6 +106,7 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void Dash(InputAction.CallbackContext context)
     {
+        if (GameControl_Script.isPaused) { return; }
         if (context.started && CheckGround() == true && canDash == true)
         {
             StartCoroutine(Dash());

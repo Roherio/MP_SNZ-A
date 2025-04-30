@@ -638,13 +638,13 @@ MonoBehaviour:
     m_ActionName: ControlesInMenu/Atras[/Keyboard/escape,/Keyboard/backspace]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1594854039792898977, guid: 6f7426400d596684b9cbe12b041a807d, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 4717919714959715831, guid: 6f7426400d596684b9cbe12b041a807d, type: 3}
+        m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
+        m_MethodName: Pestanyas
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -652,6 +652,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 890872c3-c7c6-457f-a62b-90ad31e482d3
     m_ActionName: ControlesInMenu/Pestanyas[/Keyboard/q,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4717919714959715831, guid: 6f7426400d596684b9cbe12b041a807d, type: 3}
+        m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
+        m_MethodName: AbrirMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: abcef055-9c2b-4776-bb14-6533f45da7dc
+    m_ActionName: ControlesInGame/AbrirMenu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4717919714959715831, guid: 6f7426400d596684b9cbe12b041a807d, type: 3}
+        m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
+        m_MethodName: CerrarMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6032c433-8a90-434b-bc5a-81ef2b3f4925
+    m_ActionName: ControlesInMenu/CerrarMenu[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ControlesInGame
@@ -695,6 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4947185015358159300}
+  playerInput: {fileID: 0}
   groundCheck: {fileID: 7467707164050384419}
   groundLayer:
     serializedVersion: 2

@@ -978,6 +978,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuCanvas: {fileID: 2020300235538367650}
+  playerInput: {fileID: 3995114310653781816, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
+  pestanyasImages:
+  - {fileID: 1477356632341931648}
+  - {fileID: 7564067883441564348}
+  - {fileID: 6567295535629639151}
+  - {fileID: 2790033243046479814}
+  paginas:
+  - {fileID: 5352590146771534262}
+  - {fileID: 1416803283437665139}
+  - {fileID: 3853418298849006780}
+  - {fileID: 2328135015689775227}
+  numeroPestanya: 0
 --- !u!1 &1944499144106489571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,7 +2312,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1933707583284514607}
-  - component: {fileID: 5529262734480268184}
   - component: {fileID: 8437306571758371064}
   m_Layer: 5
   m_Name: Pestanyas
@@ -2332,29 +2343,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 120}
   m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5529262734480268184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8264962127524701735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ddf8cf501283e34b98fa432a61c616a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pestanyasImages:
-  - {fileID: 1477356632341931648}
-  - {fileID: 7564067883441564348}
-  - {fileID: 6567295535629639151}
-  - {fileID: 2790033243046479814}
-  paginas:
-  - {fileID: 5352590146771534262}
-  - {fileID: 1416803283437665139}
-  - {fileID: 3853418298849006780}
-  - {fileID: 2328135015689775227}
-  numeroPestanya: 0
 --- !u!114 &8437306571758371064
 MonoBehaviour:
   m_ObjectHideFlags: 0

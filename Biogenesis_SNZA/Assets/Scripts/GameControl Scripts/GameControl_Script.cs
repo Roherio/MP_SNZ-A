@@ -6,10 +6,14 @@ public class GameControl_Script : MonoBehaviour
 {
     public static GameControl_Script instance;
     
+    //logica liora
     public static float lifeLiora = 100f;
     public static float maxLife = 100f;
     public static float adrenalineLiora = 0f;
     public static int moneyLiora = 0;
+
+    //logica menus
+    public static bool isPaused = false;
 
     private void Awake()
     {

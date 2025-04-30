@@ -14,6 +14,10 @@ public class Liora_Interaction_Script : MonoBehaviour
     {
         interactionIcon.SetActive(false);
     }
+    private void Update()
+    {
+        if (GameControl_Script.isPaused) { return; }
+    }
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (context.performed)

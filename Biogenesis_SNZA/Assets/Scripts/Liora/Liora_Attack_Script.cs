@@ -82,6 +82,7 @@ public class Liora_Attack_Script : MonoBehaviour
     public void Ataque(InputAction.CallbackContext context)
     {
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
+        if (GameControl_Script.isPaused) { return; }
         if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isParrying || isDoingUlti) { return; }
         if (context.started)
         {
@@ -104,6 +105,7 @@ public class Liora_Attack_Script : MonoBehaviour
     }
     public void Parry(InputAction.CallbackContext context)
     {
+        if (GameControl_Script.isPaused) { return; }
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
         if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isParrying || isDoingUlti) { return; }
         if (parryCooldown > 0f) { return; }
