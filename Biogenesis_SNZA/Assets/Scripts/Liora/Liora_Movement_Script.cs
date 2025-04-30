@@ -54,6 +54,11 @@ public class Liora_Movement_Script : MonoBehaviour
         Liora_StateMachine_Script.isGrabbingLedge = isGrabbingLedge;
         Liora_StateMachine_Script.isDashing = isDashing;
         Liora_StateMachine_Script.isClimbing = isClimbing;
+        CheckForClimb();
+        CheckForLedge();
+    }
+    private void FixedUpdate()
+    {
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
         if (isDashing) { return; }
         //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge o si està executant una ordre d'atac
@@ -65,12 +70,11 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
         }
-        CheckForClimb();
-        CheckForLedge();
     }
     public void Movimiento(InputAction.CallbackContext context)
     {
         //if (isGrabbingLedge) { return; }
+        print("tas moviendote");
         horizontal = context.ReadValue<Vector2>().x;
     }
     public void Saltar(InputAction.CallbackContext context)

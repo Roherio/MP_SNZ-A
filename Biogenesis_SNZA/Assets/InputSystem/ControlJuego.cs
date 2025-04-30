@@ -311,6 +311,237 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""ControlesInMenu"",
+            ""id"": ""a861e75a-50c1-4e80-b08d-a684de97df2f"",
+            ""actions"": [
+                {
+                    ""name"": ""NavegarMenu"",
+                    ""type"": ""Value"",
+                    ""id"": ""9cde9463-bb31-49d1-93be-1e1157e3e07c"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Seleccionar"",
+                    ""type"": ""Button"",
+                    ""id"": ""8a2d992b-60b8-420f-ae18-3993d87b44cb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Atras"",
+                    ""type"": ""Button"",
+                    ""id"": ""f7fbc180-2fc7-4bfa-9704-dfa954f03a36"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pestanyas"",
+                    ""type"": ""Button"",
+                    ""id"": ""890872c3-c7c6-457f-a62b-90ad31e482d3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""79ae9432-08c8-4b4f-95ff-da3d03c6041b"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavegarMenu"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""e18dc6bb-8eb8-4fac-984f-0cf905a952ca"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavegarMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""d961100e-5888-4dbd-bc89-a10f163e44a0"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavegarMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""23463764-daa1-40c7-8473-fc2fccd0f602"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavegarMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""06b6e157-c7b5-4f95-97aa-29d8a42dcee6"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavegarMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""FLECHAS"",
+                    ""id"": ""ca175c57-f813-4bf0-96ba-854df83bb1f7"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavegarMenu"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""05701532-bb17-4644-86c4-d0ae7bbdd057"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavegarMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""1c91a6d7-5b4c-484a-8f0c-6cb44ea8cd6a"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavegarMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""92b3f162-c4fb-4244-9681-f3fb93475433"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavegarMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""ad15e01f-9384-4326-aea0-59db8abd4504"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavegarMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3cab68a6-1cfc-4237-8f28-75ca5cfd6a57"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Seleccionar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""efe0233a-6ef8-403d-9fbd-ff605fd146e8"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Seleccionar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""699b9f94-5535-4820-af5d-638a6949fd51"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Atras"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""306e2173-a8df-4bee-bcdf-b87098fd9a35"",
+                    ""path"": ""<Keyboard>/backspace"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Atras"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""c6dba2e7-3fbc-4979-bb66-01253c1dbb21"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pestanyas"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""70fd740f-af66-4d6e-9e29-90080c9e0527"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pestanyas"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""9dd21c20-4fcb-48b5-bf3a-442cf19ae963"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pestanyas"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -325,6 +556,12 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         m_ControlesInGame_Ataque = m_ControlesInGame.FindAction("Ataque", throwIfNotFound: true);
         m_ControlesInGame_Parry = m_ControlesInGame.FindAction("Parry", throwIfNotFound: true);
         m_ControlesInGame_Interact = m_ControlesInGame.FindAction("Interact", throwIfNotFound: true);
+        // ControlesInMenu
+        m_ControlesInMenu = asset.FindActionMap("ControlesInMenu", throwIfNotFound: true);
+        m_ControlesInMenu_NavegarMenu = m_ControlesInMenu.FindAction("NavegarMenu", throwIfNotFound: true);
+        m_ControlesInMenu_Seleccionar = m_ControlesInMenu.FindAction("Seleccionar", throwIfNotFound: true);
+        m_ControlesInMenu_Atras = m_ControlesInMenu.FindAction("Atras", throwIfNotFound: true);
+        m_ControlesInMenu_Pestanyas = m_ControlesInMenu.FindAction("Pestanyas", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -484,6 +721,76 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         }
     }
     public ControlesInGameActions @ControlesInGame => new ControlesInGameActions(this);
+
+    // ControlesInMenu
+    private readonly InputActionMap m_ControlesInMenu;
+    private List<IControlesInMenuActions> m_ControlesInMenuActionsCallbackInterfaces = new List<IControlesInMenuActions>();
+    private readonly InputAction m_ControlesInMenu_NavegarMenu;
+    private readonly InputAction m_ControlesInMenu_Seleccionar;
+    private readonly InputAction m_ControlesInMenu_Atras;
+    private readonly InputAction m_ControlesInMenu_Pestanyas;
+    public struct ControlesInMenuActions
+    {
+        private @ControlJuego m_Wrapper;
+        public ControlesInMenuActions(@ControlJuego wrapper) { m_Wrapper = wrapper; }
+        public InputAction @NavegarMenu => m_Wrapper.m_ControlesInMenu_NavegarMenu;
+        public InputAction @Seleccionar => m_Wrapper.m_ControlesInMenu_Seleccionar;
+        public InputAction @Atras => m_Wrapper.m_ControlesInMenu_Atras;
+        public InputAction @Pestanyas => m_Wrapper.m_ControlesInMenu_Pestanyas;
+        public InputActionMap Get() { return m_Wrapper.m_ControlesInMenu; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ControlesInMenuActions set) { return set.Get(); }
+        public void AddCallbacks(IControlesInMenuActions instance)
+        {
+            if (instance == null || m_Wrapper.m_ControlesInMenuActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_ControlesInMenuActionsCallbackInterfaces.Add(instance);
+            @NavegarMenu.started += instance.OnNavegarMenu;
+            @NavegarMenu.performed += instance.OnNavegarMenu;
+            @NavegarMenu.canceled += instance.OnNavegarMenu;
+            @Seleccionar.started += instance.OnSeleccionar;
+            @Seleccionar.performed += instance.OnSeleccionar;
+            @Seleccionar.canceled += instance.OnSeleccionar;
+            @Atras.started += instance.OnAtras;
+            @Atras.performed += instance.OnAtras;
+            @Atras.canceled += instance.OnAtras;
+            @Pestanyas.started += instance.OnPestanyas;
+            @Pestanyas.performed += instance.OnPestanyas;
+            @Pestanyas.canceled += instance.OnPestanyas;
+        }
+
+        private void UnregisterCallbacks(IControlesInMenuActions instance)
+        {
+            @NavegarMenu.started -= instance.OnNavegarMenu;
+            @NavegarMenu.performed -= instance.OnNavegarMenu;
+            @NavegarMenu.canceled -= instance.OnNavegarMenu;
+            @Seleccionar.started -= instance.OnSeleccionar;
+            @Seleccionar.performed -= instance.OnSeleccionar;
+            @Seleccionar.canceled -= instance.OnSeleccionar;
+            @Atras.started -= instance.OnAtras;
+            @Atras.performed -= instance.OnAtras;
+            @Atras.canceled -= instance.OnAtras;
+            @Pestanyas.started -= instance.OnPestanyas;
+            @Pestanyas.performed -= instance.OnPestanyas;
+            @Pestanyas.canceled -= instance.OnPestanyas;
+        }
+
+        public void RemoveCallbacks(IControlesInMenuActions instance)
+        {
+            if (m_Wrapper.m_ControlesInMenuActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IControlesInMenuActions instance)
+        {
+            foreach (var item in m_Wrapper.m_ControlesInMenuActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_ControlesInMenuActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public ControlesInMenuActions @ControlesInMenu => new ControlesInMenuActions(this);
     public interface IControlesInGameActions
     {
         void OnMovimiento(InputAction.CallbackContext context);
@@ -494,5 +801,12 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         void OnAtaque(InputAction.CallbackContext context);
         void OnParry(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+    }
+    public interface IControlesInMenuActions
+    {
+        void OnNavegarMenu(InputAction.CallbackContext context);
+        void OnSeleccionar(InputAction.CallbackContext context);
+        void OnAtras(InputAction.CallbackContext context);
+        void OnPestanyas(InputAction.CallbackContext context);
     }
 }

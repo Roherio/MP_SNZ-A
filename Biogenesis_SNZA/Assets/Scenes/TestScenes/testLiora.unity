@@ -674,8 +674,8 @@ Transform:
   m_GameObject: {fileID: 1014563497}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7, z: 0}
-  m_LocalScale: {x: 0.3, y: 4, z: 4}
+  m_LocalPosition: {x: 0.04, y: -11.13, z: 0}
+  m_LocalScale: {x: 0.075, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1918586816}
@@ -765,6 +765,18 @@ PrefabInstance:
     - target: {fileID: 3994394536962611434, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
       propertyPath: m_Name
       value: Liora
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995114310653781816, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995114310653781816, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995114310653781816, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5079527829267624495, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1281,7 +1293,7 @@ Transform:
   m_GameObject: {fileID: 1918586813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.41, y: 1.65, z: 0}
+  m_LocalPosition: {x: -2.41, y: 1.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

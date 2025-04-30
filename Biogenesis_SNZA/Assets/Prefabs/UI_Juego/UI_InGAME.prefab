@@ -2354,6 +2354,7 @@ MonoBehaviour:
   - {fileID: 1416803283437665139}
   - {fileID: 3853418298849006780}
   - {fileID: 2328135015689775227}
+  numeroPestanya: 0
 --- !u!114 &8437306571758371064
 MonoBehaviour:
   m_ObjectHideFlags: 0
