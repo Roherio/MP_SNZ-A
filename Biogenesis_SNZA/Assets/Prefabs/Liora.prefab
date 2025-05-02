@@ -440,7 +440,6 @@ GameObject:
   - component: {fileID: 6844576158491812986}
   - component: {fileID: 4947185015358159300}
   - component: {fileID: 3102691484329706673}
-  - component: {fileID: 9141425038813062540}
   m_Layer: 6
   m_Name: Liora
   m_TagString: Player
@@ -626,64 +625,28 @@ MonoBehaviour:
     m_ActionName: ControlesInGame/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 9cde9463-bb31-49d1-93be-1e1157e3e07c
-    m_ActionName: ControlesInMenu/NavegarMenu[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8a2d992b-60b8-420f-ae18-3993d87b44cb
-    m_ActionName: ControlesInMenu/Seleccionar[/Keyboard/enter,/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f7fbc180-2fc7-4bfa-9704-dfa954f03a36
-    m_ActionName: ControlesInMenu/Atras[/Keyboard/escape,/Keyboard/backspace]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4717919714959715831, guid: 6f7426400d596684b9cbe12b041a807d, type: 3}
-        m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
-        m_MethodName: Pestanyas
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 890872c3-c7c6-457f-a62b-90ad31e482d3
-    m_ActionName: ControlesInMenu/Pestanyas[/Keyboard/q,/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4717919714959715831, guid: 6f7426400d596684b9cbe12b041a807d, type: 3}
-        m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
-        m_MethodName: AbrirMenu
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: abcef055-9c2b-4776-bb14-6533f45da7dc
+    m_ActionId: 3383543e-334f-4376-9e52-49eb3d85de0f
     m_ActionName: ControlesInGame/AbrirMenu[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4717919714959715831, guid: 6f7426400d596684b9cbe12b041a807d, type: 3}
-        m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
-        m_MethodName: CerrarMenu
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 6032c433-8a90-434b-bc5a-81ef2b3f4925
-    m_ActionName: ControlesInMenu/CerrarMenu[/Keyboard/escape]
+      m_Calls: []
+    m_ActionId: 6d103232-29d0-427a-a205-e3c9b16ce397
+    m_ActionName: ControlesInMenu/Navegar[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a653a7e-2bef-4a33-bb91-fd603eb74dea
+    m_ActionName: ControlesInMenu/Seleccionar[/Keyboard/enter,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0388ae3d-d949-4342-af8f-655a0db80281
+    m_ActionName: ControlesInMenu/Atras[/Keyboard/backspace]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 35dff5c5-7281-4df2-88aa-2f54cde30f75
+    m_ActionName: ControlesInMenu/SalirMenu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f6c63064-ac85-46fd-80a9-e3422f94bde5
+    m_ActionName: ControlesInMenu/Pestanyas[/Keyboard/q,/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ControlesInGame
@@ -911,51 +874,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9375, y: 3.6281722}
   m_EdgeRadius: 0
---- !u!61 &9141425038813062540
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3994394536962611434}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.53, y: 1.90625}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.743, y: 0}
-    oldSize: {x: 1.9375, y: 3.8125}
-    newSize: {x: 0.31, y: 0.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.01, y: 3.8125}
-  m_EdgeRadius: 0
 --- !u!1 &4607453907842549865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,7 +984,7 @@ Transform:
   m_GameObject: {fileID: 4736153045146113422}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42200005, y: 3.2, z: 0}
+  m_LocalPosition: {x: 0.7, y: 3.2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1409,7 +1327,7 @@ Transform:
   m_GameObject: {fileID: 6793785563554027629}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42200005, y: 3.2, z: 0}
+  m_LocalPosition: {x: 0.7, y: 3.2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1679,7 +1597,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.31, y: 2.06}
