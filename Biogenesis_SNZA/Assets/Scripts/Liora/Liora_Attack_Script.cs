@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Liora_Attack_Script : MonoBehaviour
 {
+    public Animator animator;
     public enum snzaAttackType { NONE, CANGREJO, ESCARABAJO, SECRETARIO, AGUILA, JABALI }
     [SerializeField] public static snzaAttackType currentAttackType = snzaAttackType.CANGREJO;
     public static bool isAttacking = false;
@@ -37,6 +38,7 @@ public class Liora_Attack_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         currentAttackType = snzaAttackType.CANGREJO;
         currentParryType = snzaParryType.CANGREJO;
     }
@@ -148,10 +150,6 @@ public class Liora_Attack_Script : MonoBehaviour
                         deactivateAction = 1.5f;
                         break;
                 }
-                /*
-                damageAttackLiora = 30f;
-                //aqui determinem el temps que trigarà despres en acabarse l'animació d'attack, i també ressetejem el cooldownTimer perquè no pugui spammejar el atac
-                deactivateAttack = 0.5f;*/
                 break;
 
             case snzaAttackType.JABALI:
@@ -166,15 +164,25 @@ public class Liora_Attack_Script : MonoBehaviour
     
     private IEnumerator DeactivateAction()
     {
+        /*if (currentComboStep == 4)
+        {
+            AnimationClip currentClip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
+            print(currentClip.length);
+            yield return new WaitForSeconds(currentClip.length);
+        }
+        else
+        {
+            yield return new WaitForSeconds(deactivateAction);
+        }*/
         yield return new WaitForSeconds(deactivateAction);
-        
+
         isParrying = false;
         isDoingUlti = false;
         canReceiveNextComboInput = true;
         //si aquest era el ultim hit del combo
         if (!isComboActive || currentComboStep >= 3)
         {
-            isAttacking = false;
+            //isAttacking = false;
             ResetCombo();
         }
     }
@@ -184,5 +192,6 @@ public class Liora_Attack_Script : MonoBehaviour
         currentComboStep = 0;
         isComboActive = false;
         canReceiveNextComboInput = true;
+        isAttacking = false;
     }
 }

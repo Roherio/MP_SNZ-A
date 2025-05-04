@@ -90,7 +90,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     }
     void SelectState()
     {
-        if(Time.timeScale == 0f) { return; }
+        if (Time.timeScale == 0f) { return; }
         if (isGrounded && Mathf.Abs(rb.velocity.y) < 0.01f)
         {
             if (isAttacking || isParrying)
