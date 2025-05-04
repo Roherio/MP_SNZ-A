@@ -23,7 +23,7 @@ public class ClawAttackScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             print("player hit");
-            GameControl_Script.lifeLiora -= enemyAttackValue;
+            GameControl_Script.TakeDamage(GameControl_Script.lifeLiora, enemyAttackValue);
             Destroy(gameObject);
             print(GameControl_Script.lifeLiora);
         }

@@ -218,7 +218,7 @@ public class UrsinaScript : MonoBehaviour
 
 
         //Fa el dash/atac cap a l'enemic
-        roarInstance();
+        //roarInstance();
 
         //Quan de temps dura el dash?
         while (attackTimer < clawAttackDuration)
