@@ -107,6 +107,7 @@ public class Liora_Movement_Script : MonoBehaviour
     public void Dash(InputAction.CallbackContext context)
     {
         if (GameControl_Script.isPaused) { return; }
+        if (isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
         if (context.started && CheckGround() == true && canDash == true)
         {
             StartCoroutine(Dash());

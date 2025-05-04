@@ -30,6 +30,12 @@ public class Liora_Attack_Script : MonoBehaviour
     [SerializeField] public snzaUltiType currentUltiType;
     public static bool isDoingUlti = false;
 
+    //----Colliders attack Liora
+    public Transform attackLocation;
+    public float duracioCollider;
+    public GameObject colliderAttackCrabLiora;
+    public GameObject colliderAttackBoarLiora;
+
     //variable que determinarà quin mal fa Liora amb aquell attack
     public static float damageAttackLiora;
     //variable per saber quan acaba l'estat isAttacking/parrying/doingUlti per cada moviment
@@ -150,6 +156,8 @@ public class Liora_Attack_Script : MonoBehaviour
                         deactivateAction = 1.5f;
                         break;
                 }
+                duracioCollider = deactivateAction;
+                InstanciarAtaque(colliderAttackCrabLiora);
                 break;
 
             case snzaAttackType.JABALI:
@@ -161,7 +169,11 @@ public class Liora_Attack_Script : MonoBehaviour
         inputCooldownTimer = 0f;
         StartCoroutine(DeactivateAction());
     }
-    
+    void InstanciarAtaque(GameObject collider)
+    {
+        Instantiate(collider, attackLocation);
+        AttackCollider_Script.duracioCollider = duracioCollider;
+    }
     private IEnumerator DeactivateAction()
     {
         /*if (currentComboStep == 4)
