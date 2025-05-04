@@ -6,9 +6,7 @@ public class SmashAttackScript : MonoBehaviour
 {
 
     [SerializeField] Transform playerPosition;
-    
     [SerializeField] float enemyAttackValue;
-
     public Rigidbody2D rb;
     private Vector2 attackDirection;
     [SerializeField] float spreadSpeed;
