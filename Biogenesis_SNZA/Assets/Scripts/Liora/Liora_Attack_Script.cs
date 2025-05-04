@@ -31,7 +31,7 @@ public class Liora_Attack_Script : MonoBehaviour
     public static bool isDoingUlti = false;
 
     //variable que determinarà quin mal fa Liora amb aquell attack
-    public float damageAttackLiora;
+    public static float damageAttackLiora;
     //variable per saber quan acaba l'estat isAttacking/parrying/doingUlti per cada moviment
     public float deactivateAction;
 
