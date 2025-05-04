@@ -22,10 +22,14 @@ public class AttackPointSecretario : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            
             print("player hit");
             GameControl_Script.lifeLiora -= enemyAttackValue;
+            FindObjectOfType<HitStop>().hitStop(0.005f);
+            CinemachineShake.Instance.ShakeCamera(5f, .3f);
             Destroy(gameObject);
             print(GameControl_Script.lifeLiora);
+            
         }
 
     }

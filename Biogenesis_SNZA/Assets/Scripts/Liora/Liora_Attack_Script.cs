@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Liora_Attack_Script : MonoBehaviour
 {
+    public Animator animator;
     public enum snzaAttackType { NONE, CANGREJO, ESCARABAJO, SECRETARIO, AGUILA, JABALI }
     [SerializeField] public static snzaAttackType currentAttackType = snzaAttackType.CANGREJO;
     public static bool isAttacking = false;
@@ -29,14 +30,21 @@ public class Liora_Attack_Script : MonoBehaviour
     [SerializeField] public snzaUltiType currentUltiType;
     public static bool isDoingUlti = false;
 
+    //----Colliders attack Liora
+    public Transform attackLocation;
+    public float duracioCollider;
+    public GameObject colliderAttackCrabLiora;
+    public GameObject colliderAttackBoarLiora;
+
     //variable que determinarà quin mal fa Liora amb aquell attack
-    public float damageAttackLiora;
+    public static float damageAttackLiora;
     //variable per saber quan acaba l'estat isAttacking/parrying/doingUlti per cada moviment
     public float deactivateAction;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         currentAttackType = snzaAttackType.CANGREJO;
         currentParryType = snzaParryType.CANGREJO;
     }
@@ -83,7 +91,7 @@ public class Liora_Attack_Script : MonoBehaviour
     {
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
         if (GameControl_Script.isPaused) { return; }
-        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isParrying || isDoingUlti) { return; }
+        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isParrying || isDoingUlti) { return; }
         if (context.started)
         {
             isParrying = false;
@@ -148,10 +156,8 @@ public class Liora_Attack_Script : MonoBehaviour
                         deactivateAction = 1.5f;
                         break;
                 }
-                /*
-                damageAttackLiora = 30f;
-                //aqui determinem el temps que trigarà despres en acabarse l'animació d'attack, i també ressetejem el cooldownTimer perquè no pugui spammejar el atac
-                deactivateAttack = 0.5f;*/
+                duracioCollider = deactivateAction;
+                InstanciarAtaque(colliderAttackCrabLiora);
                 break;
 
             case snzaAttackType.JABALI:
@@ -163,17 +169,32 @@ public class Liora_Attack_Script : MonoBehaviour
         inputCooldownTimer = 0f;
         StartCoroutine(DeactivateAction());
     }
-    
+    void InstanciarAtaque(GameObject collider)
+    {
+        Instantiate(collider, attackLocation);
+        AttackCollider_Script.duracioCollider = duracioCollider;
+    }
     private IEnumerator DeactivateAction()
     {
+        /*if (currentComboStep == 4)
+        {
+            AnimationClip currentClip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
+            print(currentClip.length);
+            yield return new WaitForSeconds(currentClip.length);
+        }
+        else
+        {
+            yield return new WaitForSeconds(deactivateAction);
+        }*/
         yield return new WaitForSeconds(deactivateAction);
-        isAttacking = false;
+
         isParrying = false;
         isDoingUlti = false;
         canReceiveNextComboInput = true;
         //si aquest era el ultim hit del combo
-        if (currentComboStep >= 3)
+        if (!isComboActive || currentComboStep >= 3)
         {
+            //isAttacking = false;
             ResetCombo();
         }
     }
@@ -183,5 +204,6 @@ public class Liora_Attack_Script : MonoBehaviour
         currentComboStep = 0;
         isComboActive = false;
         canReceiveNextComboInput = true;
+        isAttacking = false;
     }
 }

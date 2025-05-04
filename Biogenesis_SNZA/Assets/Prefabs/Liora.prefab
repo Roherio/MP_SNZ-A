@@ -440,6 +440,7 @@ GameObject:
   - component: {fileID: 6844576158491812986}
   - component: {fileID: 4947185015358159300}
   - component: {fileID: 3102691484329706673}
+  - component: {fileID: 6202315074707716719}
   m_Layer: 6
   m_Name: Liora
   m_TagString: Player
@@ -468,6 +469,7 @@ Transform:
   - {fileID: 535918078604176959}
   - {fileID: 4524722385764549921}
   - {fileID: 689706562118891415}
+  - {fileID: 9003009591592549887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3995114310653781816
@@ -724,10 +726,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16980aa3d8dd7d44197de7c0ddc2bb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   inputAttackCooldown: 0.8
   isComboActive: 0
   currentUltiType: 0
-  damageAttackLiora: 0
+  attackLocation: {fileID: 9003009591592549887}
+  colliderAttackCrabLiora: {fileID: 165051307909327957, guid: 86933764d29bffd43afa9ce7b5f4a8d4, type: 3}
+  colliderAttackBoarLiora: {fileID: 0}
   deactivateAction: 0
 --- !u!212 &3647475253173115995
 SpriteRenderer:
@@ -874,6 +879,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9375, y: 3.6281722}
   m_EdgeRadius: 0
+--- !u!114 &6202315074707716719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994394536962611434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511a87eaf65c611479186f6f79c7ab23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4607453907842549865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,3 +1643,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionIcon: {fileID: 4607453907842549865}
+--- !u!1 &9008813583235989613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9003009591592549887}
+  m_Layer: 6
+  m_Name: attackLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9003009591592549887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9008813583235989613}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5079527829267624495}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

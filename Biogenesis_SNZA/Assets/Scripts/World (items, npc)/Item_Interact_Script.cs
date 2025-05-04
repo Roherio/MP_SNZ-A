@@ -6,7 +6,8 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
 {
     public bool isInteracted { get; private set; } = false;
     public string itemID { get; private set; }
-    public GameObject itemPrefab; //el item que nos dará este objeto encuanto interactuemos con el
+
+    public string itemUser;
     //public Sprite usedSprite; en el caso de que tuvieramos objetos tipo cofre que se quedan abiertos
     private void Start()
     {
@@ -26,9 +27,14 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
     public void TakeItem()
     {
         SetTaken(true);
-        if (itemPrefab != null)
+        if (itemUser == "Khione")
         {
-            Instantiate(itemPrefab, transform.position, Quaternion.identity);
+            GameControl_Script.piezasKhione++;
+            print(GameControl_Script.piezasKhione);
+        }
+        if (itemUser == "Rumo")
+        {
+            GameControl_Script.piezasRumo++;
         }
     }
     public void SetTaken(bool taken)

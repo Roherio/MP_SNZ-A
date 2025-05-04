@@ -12,6 +12,10 @@ public class GameControl_Script : MonoBehaviour
     public static float adrenalineLiora = 0f;
     public static int moneyLiora = 0;
 
+    //logica Recolectables
+    public static int piezasKhione = 0;
+    public static int piezasRumo = 0;
+
     //logica menus
     public static bool isPaused = false;
 
@@ -39,11 +43,11 @@ public class GameControl_Script : MonoBehaviour
     {
         
     }
-    public void TakeDamage(float hpLiora, float damageEnemy)
+    public static void TakeDamage(float hpLiora, float damageEnemy)
     {
         hpLiora -= damageEnemy;
     }
-    public void EnemyTakeDamage(float hpEnemy, float damageLiora)
+    public static void EnemyTakeDamage(float hpEnemy, float damageLiora)
     {
 
     }
