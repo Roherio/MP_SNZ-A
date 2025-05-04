@@ -83,7 +83,7 @@ public class Liora_Attack_Script : MonoBehaviour
     {
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
         if (GameControl_Script.isPaused) { return; }
-        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isParrying || isDoingUlti) { return; }
+        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isParrying || isDoingUlti) { return; }
         if (context.started)
         {
             isParrying = false;
@@ -167,13 +167,14 @@ public class Liora_Attack_Script : MonoBehaviour
     private IEnumerator DeactivateAction()
     {
         yield return new WaitForSeconds(deactivateAction);
-        isAttacking = false;
+        
         isParrying = false;
         isDoingUlti = false;
         canReceiveNextComboInput = true;
         //si aquest era el ultim hit del combo
-        if (currentComboStep >= 3)
+        if (!isComboActive || currentComboStep >= 3)
         {
+            isAttacking = false;
             ResetCombo();
         }
     }
