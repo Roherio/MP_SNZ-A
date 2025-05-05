@@ -9,6 +9,8 @@ public class UrsinaScript : MonoBehaviour
     public Rigidbody2D rb;
     [SerializeField] float moveSpeed;
 
+    private hpEnemiesScript hpEnemiesScript;
+
     //Control de estados
     private bool canAttack = true;
     private bool isAttacking = false;
@@ -40,11 +42,14 @@ public class UrsinaScript : MonoBehaviour
     public bool OnPhase2 = false;
     [SerializeField] GameObject roarCollision;
     [SerializeField] GameObject clawAttackCollision;
+    [SerializeField] GameObject clawIceSpikeCollision;
     [SerializeField] GameObject smashAttackCollision;
+    [SerializeField] GameObject smashAttackCollisionPhase2;
     [SerializeField] Transform playerPosition;
 
     void Start()
     {
+        hpEnemiesScript = GetComponent<hpEnemiesScript>();
         attackDurationTimer = clawAttackDuration; //valor únicament creat per després ser portat a un altre script
         playerPosition = GameObject.FindWithTag("Player").transform;
         canAttack = true;
@@ -52,21 +57,30 @@ public class UrsinaScript : MonoBehaviour
     }
     void Update()
     {
+        //float per veure la distancia en TOTES LES DIRECCIONS entre el jugador i l'enemic
+        float enemyToPlayerDistance = Vector2.Distance(transform.position, playerPosition.position); 
 
-        float enemyToPlayerDistance = Vector2.Distance(transform.position, playerPosition.position); //float per veure la distancia en TOTES LES DIRECCIONS entre el jugador i l'enemic
-        if (isAttacking) return; //Controla que no fa cap altre acció mentre estigui atacant
+        //Controla que no fa cap altre acció mentre estigui atacant
+        if (isAttacking) return; 
 
-            if (enemyToPlayerDistance > farDistance && !isAttacking && canAttack) //Si esta molt lluny el jugador
-            {
+        //Entra en segona fase
+        if (hpEnemiesScript.enemyHP <= hpEnemiesScript.maxEnemyHP / 2) { OnPhase2 = true; }
+
+        //Si esta molt lluny el jugador
+        if (enemyToPlayerDistance > farDistance && !isAttacking && canAttack)
+        {
                 Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
                 direction.y = 0; //fem que la direcció en y sigui 0
                 direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
                 rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
                 if (direction.x < 0) { transform.localScale = new Vector3(2, 2, 2); }
                 else { transform.localScale = new Vector3(-2, 2, 2); }
-            }
-            if (enemyToPlayerDistance <= farDistance && enemyToPlayerDistance > mediumDistance && !isAttacking && canAttack) //Si esta lluny del jugador pero suficientment a prop com per atacar
-            {
+        }
+
+
+        //Si esta lluny del jugador pero suficientment a prop com per atacar
+        if (enemyToPlayerDistance <= farDistance && enemyToPlayerDistance > mediumDistance && !isAttacking && canAttack) 
+        {
                 int longRangeAttack = Random.Range(0, 3);
                 print(longRangeAttack);
 
@@ -74,7 +88,7 @@ public class UrsinaScript : MonoBehaviour
                 if (longRangeAttack == 0f || longRangeAttack == 1f)
                 {
                     print("I should chase");
-                    StartCoroutine(isChasing());
+                    isChasing();
                 }
                 if (longRangeAttack == 1f)
                 {
@@ -82,7 +96,10 @@ public class UrsinaScript : MonoBehaviour
                     StartCoroutine(smashAttack());
                 }
 
-            }
+        }
+
+
+        //Si esta a mitja distancia
             if (enemyToPlayerDistance <= mediumDistance && enemyToPlayerDistance > nearDistance && !isAttacking && canAttack)
             {
                 int mediumRangeAttack = Random.Range(0, 7);
@@ -91,7 +108,7 @@ public class UrsinaScript : MonoBehaviour
                 if (mediumRangeAttack == 0f || mediumRangeAttack == 1f || mediumRangeAttack == 2f)
                 {
                      print("I should chase");
-                     StartCoroutine(isChasing());
+                     isChasing();
                 }
                 if (mediumRangeAttack == 3f || mediumRangeAttack == 4f || mediumRangeAttack == 5f)
                 {
@@ -105,40 +122,62 @@ public class UrsinaScript : MonoBehaviour
                 }
                     
             }
-            if (enemyToPlayerDistance <= nearDistance && !isAttacking && canAttack) //Si esta molt lluny el jugador
+
+            //Si esta molt aprop
+            if (enemyToPlayerDistance <= nearDistance && !isAttacking && canAttack) 
             {
-                int closeRangeAttack = Random.Range(0, 6);
+                int closeRangeAttack = Random.Range(0, 11);
                 print(closeRangeAttack);
 
-                if (closeRangeAttack == 0f || closeRangeAttack == 1f || closeRangeAttack == 2f)
-                {
-                    print("I should Claw Attack");
-                    StartCoroutine(clawAttack());
-                }
-                if (closeRangeAttack == 3f || closeRangeAttack == 4f)
+                if (closeRangeAttack == 0f)
                 {
                     print("I should do a Roar");
                     StartCoroutine(Roar());
                 }
-                if (closeRangeAttack == 5f)
+                if (closeRangeAttack == 1f || closeRangeAttack == 2f)
                 {
                     print("I should Smash Attack");
                     StartCoroutine(smashAttack());
                     
                 }
-                
-            }
+                else
+                {
+                    print("I should Claw Attack");
+                    StartCoroutine(clawAttack());
+                }
+
+        }
 
     }
-     
-    IEnumerator isChasing()
+
+
+    //Funció per perseguir al jugador
+    void isChasing()
     {
         float chaseTimer = 0f;
         isAttacking = true;
         canAttack = false;
+        while (chaseTimer < chaseTime)
+        {
+            Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
+            direction.y = 0; //fem que la direcció en y sigui 0
+            direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
 
-        yield return new WaitForSeconds(0.5f);
+            rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
+            if (direction.x < 0) { transform.localScale = new Vector3(2, 2, 2); }
+            else { transform.localScale = new Vector3(-2, 2, 2); }
 
+            chaseTimer += Time.deltaTime;
+        }
+        rb.velocity = Vector3.zero;
+        isAttacking = false;
+        canAttack = true;
+    }
+    /*IEnumerator isChasing()
+    {
+        float chaseTimer = 0f;
+        isAttacking = true;
+        canAttack = false;
         while (chaseTimer < chaseTime)
         {
             Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
@@ -152,15 +191,17 @@ public class UrsinaScript : MonoBehaviour
             chaseTimer += Time.deltaTime;
             yield return null;
         }
-
+        rb.velocity = Vector3.zero;
+        yield return new WaitForSeconds(chaseTime + 0.5f);
         isAttacking = false;
-        yield return new WaitForSeconds(0.5f);
         canAttack = true;
-    }
+    }*/
+
+
     IEnumerator clawAttack()
     {
-        //Temps de preparació de l'atack
 
+        //Temps de preparació de l'atac
         isAttacking = true;
         canAttack = false;
         if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
@@ -172,15 +213,14 @@ public class UrsinaScript : MonoBehaviour
 
         yield return new WaitForSeconds(AttackCooldown);
 
-
         //Fa el dash/atac cap a l'enemic
         clawAttackInstance();
         if (OnPhase2)
         {
-
+            clawIceSpikeInstance();
         }
 
-        //Quan de temps dura el dash?
+        //Quan de temps dura l'atac?
         while (attackTimer < clawAttackDuration)
         {
 
@@ -189,40 +229,42 @@ public class UrsinaScript : MonoBehaviour
             yield return null;
         }
 
-        //S'acaba el dash, aturat i posa't en cooldown
+        //S'acaba l'atac, aturat i posa't en cooldown
         rb.velocity = Vector2.zero;
-        isAttacking = false;
-
 
         yield return new WaitForSeconds(AttackCooldown);
 
-
         //Pot tornar a atacar
+        isAttacking = false;
         if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
         else { transform.localScale = new Vector3(-2, 2, 2); }
         canAttack = true;
     }
     IEnumerator smashAttack()
     {
-        //Temps de preparació de l'atack
-
+        //Temps de preparació de l'atac
         isAttacking = true;
         canAttack = false;
         if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
         else { transform.localScale = new Vector3(-2, 2, 2); }
         attackTimer = 0f;
 
-        yield return new WaitForSeconds(AttackCooldown);
+        yield return new WaitForSeconds(1.5f);
+        
+        if(!OnPhase2) { smashAttackInstance(); }
+        if (OnPhase2)
+        {
+            smashAttackInstancePhase2();
+            yield return new WaitForSeconds(1f);
+            smashAttackInstancePhase2();
+            yield return new WaitForSeconds(1f);
+            smashAttackInstancePhase2();
+        }
 
-        smashAttackInstance();
-
-        isAttacking = false;
-
-
-        yield return new WaitForSeconds(AttackCooldown);
-
+        yield return new WaitForSeconds(3f);
 
         //Pot tornar a atacar
+        isAttacking = false;
         if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
         else { transform.localScale = new Vector3(-2, 2, 2); }
         canAttack = true;
@@ -230,17 +272,12 @@ public class UrsinaScript : MonoBehaviour
 
     IEnumerator Roar()
     {
-        //Temps de preparació de l'atack
-
+        //Temps de preparació de l'atac
         isAttacking = true;
         canAttack = false;
         yield return new WaitForSeconds(AttackCooldown);
-
-
-        //Fa el dash/atac cap a l'enemic
         roarInstance();
 
-        //Quan de temps dura el dash?
         while (attackTimer < clawAttackDuration)
         {
 
@@ -249,15 +286,16 @@ public class UrsinaScript : MonoBehaviour
             yield return null;
         }
 
-        //S'acaba el dash, aturat i posa't en cooldown
+        //S'acaba
         rb.velocity = Vector2.zero;
-        isAttacking = false;
+        
 
 
         yield return new WaitForSeconds(AttackCooldown);
 
 
         //Pot tornar a atacar
+        isAttacking = false;
         if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
         else { transform.localScale = new Vector3(-2, 2, 2); }
         canAttack = true;
@@ -268,6 +306,13 @@ public class UrsinaScript : MonoBehaviour
         Instantiate(clawAttackCollision, attackPoint.transform, worldPositionStays: false);
     }
 
+    public void clawIceSpikeInstance()
+    {
+        Instantiate(clawIceSpikeCollision, clawIceSpike_1_Spawn, worldPositionStays: false);
+        Instantiate(clawIceSpikeCollision, clawIceSpike_2_Spawn, worldPositionStays: false);
+        Instantiate(clawIceSpikeCollision, clawIceSpike_3_Spawn, worldPositionStays: false);
+    }
+
     public void smashAttackInstance()
     {
         Instantiate(smashAttackCollision, smashAttackSpawn.transform, worldPositionStays: false);
@@ -276,8 +321,11 @@ public class UrsinaScript : MonoBehaviour
     public void roarInstance()
     {
         Instantiate(roarCollision,transform, worldPositionStays: false);
-    }    
-   
+    }
+    public void smashAttackInstancePhase2()
+    {
+        Instantiate(smashAttackCollisionPhase2, playerPosition, worldPositionStays: false);
+    }
 
     private void OnDrawGizmos() //Ajudes visuals
     {

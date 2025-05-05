@@ -2,34 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmashAttackScript : MonoBehaviour
+public class SmashAttackPhase2Ursina: MonoBehaviour
 {
-
-    [SerializeField] Transform playerPosition;
     [SerializeField] float enemyAttackValue;
     public Rigidbody2D rb;
-    private Vector2 attackDirection;
-    [SerializeField] float spreadSpeed;
+  
     private Vector3 scaleChange;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        GetComponent<BoxCollider2D>().enabled = false;
+    }
     void Start()
     {
         scaleChange = new Vector3(1.5f, 1.5f, 1.5f);
         rb = GetComponent<Rigidbody2D>();
-        playerPosition = GameObject.FindWithTag("Player").transform;
         Destroy(gameObject, 1f);
         print(GameControl_Script.lifeLiora);
-        attackDirection = (playerPosition.position - transform.position);
-        attackDirection.y = 0;
-        attackDirection = attackDirection.normalized;
+        Invoke("enableHitBox", 0.5f);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = attackDirection.normalized * spreadSpeed;
         transform.localScale += scaleChange * Time.deltaTime;
+    }
+
+    void enableHitBox()
+    {
+        GetComponent<BoxCollider2D>().enabled = true;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
