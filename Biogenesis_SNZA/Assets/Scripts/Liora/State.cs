@@ -17,12 +17,11 @@ public abstract class State : MonoBehaviour
     public bool jumping;
     [SerializeField] public float jumpPower = 24f;
     //Dash Logic
-    /*private bool isDashing;*/
+    public bool isDashing = false;
     //LedgeGrab Logic
     public bool isGrabbingLedge = false;
-    public bool isDashing = false;
     //Climb Logic
-    /* private bool isClimbing = false;*/
+    public bool isClimbing = false;
     //attack Logic
     public bool isAttacking = false;
     public bool isParrying = false;

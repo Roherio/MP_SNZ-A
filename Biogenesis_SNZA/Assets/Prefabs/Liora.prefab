@@ -33,6 +33,7 @@ Transform:
   - {fileID: 6178327011552627623}
   - {fileID: 3100379121808009244}
   - {fileID: 3977385866092618402}
+  - {fileID: 3088787381498949055}
   - {fileID: 8676241812734341858}
   m_Father: {fileID: 5079527829267624495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84,8 +85,9 @@ MonoBehaviour:
   isGrounded: 0
   jumping: 0
   jumpPower: 24
-  isGrabbingLedge: 0
   isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -137,8 +139,9 @@ MonoBehaviour:
   isGrounded: 0
   jumping: 0
   jumpPower: 24
-  isGrabbingLedge: 0
   isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -190,8 +193,9 @@ MonoBehaviour:
   isGrounded: 0
   jumping: 0
   jumpPower: 24
-  isGrabbingLedge: 0
   isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -278,8 +282,9 @@ MonoBehaviour:
   isGrounded: 0
   jumping: 0
   jumpPower: 24
-  isGrabbingLedge: 0
   isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -476,8 +481,9 @@ MonoBehaviour:
   isGrounded: 0
   jumping: 0
   jumpPower: 24
-  isGrabbingLedge: 0
   isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -729,6 +735,7 @@ MonoBehaviour:
   runState: {fileID: 6647752270926854459}
   airState: {fileID: 2939372857657682896}
   ledgeState: {fileID: 8778586524281539396}
+  climbState: {fileID: 921023149591663942}
   dashState: {fileID: 1832675466478992224}
   crabAttackState1: {fileID: 2909936836818465901}
   crabAttackState2: {fileID: 3242684065176004098}
@@ -1048,6 +1055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1892225545295776034}
   - component: {fileID: 3926168048368354221}
+  - component: {fileID: 601637000204586134}
   m_Layer: 6
   m_Name: climbCheck
   m_TagString: Untagged
@@ -1115,6 +1123,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &601637000204586134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4736153045146113422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91198577e1b8e414fa6212133e594fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4758292441634257046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,8 +1183,9 @@ MonoBehaviour:
   isGrounded: 0
   jumping: 0
   jumpPower: 24
-  isGrabbingLedge: 0
   isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1293,8 +1314,63 @@ MonoBehaviour:
   isGrounded: 0
   jumping: 0
   jumpPower: 24
-  isGrabbingLedge: 0
   isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0
+--- !u!1 &5792291284741835217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3088787381498949055}
+  - component: {fileID: 921023149591663942}
+  m_Layer: 6
+  m_Name: Climb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3088787381498949055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5792291284741835217}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 535918078604176959}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &921023149591663942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5792291284741835217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67025f4771bc08c4b9d4ee4cf81c03df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  isGrounded: 0
+  jumping: 0
+  jumpPower: 24
+  isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1379,8 +1455,9 @@ MonoBehaviour:
   isGrounded: 0
   jumping: 0
   jumpPower: 24
-  isGrabbingLedge: 0
   isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1509,8 +1586,9 @@ MonoBehaviour:
   isGrounded: 0
   jumping: 0
   jumpPower: 24
-  isGrabbingLedge: 0
   isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1639,8 +1717,9 @@ MonoBehaviour:
   isGrounded: 0
   jumping: 0
   jumpPower: 24
-  isGrabbingLedge: 0
   isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1692,8 +1771,9 @@ MonoBehaviour:
   isGrounded: 0
   jumping: 0
   jumpPower: 24
-  isGrabbingLedge: 0
   isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
