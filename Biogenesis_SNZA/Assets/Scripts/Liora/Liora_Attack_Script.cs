@@ -33,6 +33,10 @@ public class Liora_Attack_Script : MonoBehaviour
     //----Colliders attack Liora
     public Transform attackLocation;
     public float duracioCollider;
+    public float delayCollider;
+    //collider general
+    private GameObject colliderAtaque;
+    //colliders particulars
     public GameObject colliderAttackCrabLiora;
     public GameObject colliderAttackBoarLiora;
 
@@ -145,19 +149,26 @@ public class Liora_Attack_Script : MonoBehaviour
                 {
                     case 1:
                         damageAttackLiora = 20f;
+                        duracioCollider = 0.2f;
+                        delayCollider = 0.2f;
                         deactivateAction = 0.6f;
                         break;
                     case 2:
                         damageAttackLiora = 30f;
+                        duracioCollider = 0.2f;
+                        delayCollider = 0.2f;
                         deactivateAction = 0.5f;
                         break;
                     case 3:
                         damageAttackLiora = 50f;
+                        duracioCollider = 0.3f;
+                        delayCollider = 0.6f;
                         deactivateAction = 1.5f;
                         break;
                 }
-                duracioCollider = deactivateAction;
-                InstanciarAtaque(colliderAttackCrabLiora);
+                colliderAtaque = colliderAttackCrabLiora;
+                Invoke("CallInstanciarAtaque", delayCollider);
+                //InstanciarAtaque(colliderAttackCrabLiora);
                 break;
 
             case snzaAttackType.JABALI:
@@ -168,6 +179,10 @@ public class Liora_Attack_Script : MonoBehaviour
         isAttacking = true;
         inputCooldownTimer = 0f;
         StartCoroutine(DeactivateAction());
+    }
+    void CallInstanciarAtaque()
+    {
+        InstanciarAtaque(colliderAtaque);
     }
     void InstanciarAtaque(GameObject collider)
     {
@@ -187,7 +202,7 @@ public class Liora_Attack_Script : MonoBehaviour
             yield return new WaitForSeconds(deactivateAction);
         }*/
         yield return new WaitForSeconds(deactivateAction);
-
+        print(deactivateAction);
         isParrying = false;
         isDoingUlti = false;
         canReceiveNextComboInput = true;

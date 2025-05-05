@@ -37,6 +37,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
         attackDurationTimer = attackDuration; //valor únicament creat per després ser portat a un altre script
         canAttack = true;
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -83,6 +84,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
                     //Com l'estat es PATROL, si no detecta cap jugador comença a caminar entre dos punts
                     if (destinationPoint == 0)
                     {
+                        animator.SetBool("isWalking", true);
                         transform.localScale = new Vector3(1, 1, 1);
                         transform.position = Vector2.MoveTowards(transform.position, patrolPoint[0].position, moveSpeed * Time.deltaTime);
                         if (Vector2.Distance(transform.position, patrolPoint[0].position) < 0.1)
@@ -111,6 +113,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
     void isChasing()
     {
         //--------------------------------------ANIMACIO CAMINAR------------------------------------------
+        animator.SetBool("isWalking", true);
         Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
         direction.y = 0; //fem que la direcció en y sigui 0
         direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
@@ -128,7 +131,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
     IEnumerator Attack()
     {
         //Temps de preparació de l'atack
-
+        animator.SetBool("isWalking", false);
         isAttacking = true;
         canAttack = false;
         if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(1, 1, 1); }
@@ -137,17 +140,18 @@ public class EscarabajoEnemyScript : MonoBehaviour
         dashDirection.y = 0;
         dashDirection = dashDirection.normalized;
         attackTimer = 0f;
-
+        animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(attackCooldown);
 
         //------------------------- ANIMACIO ATAC AQUI!!!!!!!!!----------------------------------------------
+        
         //Fa el dash/atac cap a l'enemic
         attackHitbox();
 
         //Quan de temps dura el dash?
         while (attackTimer < attackDuration)
         {
-
+            
             rb.velocity = dashDirection * dashSpeed;
             attackTimer += Time.deltaTime;
             yield return null;
@@ -155,11 +159,12 @@ public class EscarabajoEnemyScript : MonoBehaviour
 
         //S'acaba el dash, aturat i posa't en cooldown
         rb.velocity = Vector2.zero;
-        isAttacking = false;
+        
+        animator.SetBool("isAttacking", false);
 
 
         yield return new WaitForSeconds(attackCooldown);
-
+        isAttacking = false;
 
         //Pot tornar a atacar
         if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(1, 1, 1); }
