@@ -9,12 +9,21 @@ public class UrsinaScript : MonoBehaviour
     public Rigidbody2D rb;
     [SerializeField] float moveSpeed;
 
+    //Control de estados
     private bool canAttack = true;
     private bool isAttacking = false;
-    public Transform attackPoint;
-    public Transform smashAttackSpawn;
     public float chaseTime;
 
+    //Spawn de instancias
+    public Transform attackPoint;
+    public Transform smashAttackSpawn;
+    public Transform clawIceSpike_1_Spawn;
+    public Transform clawIceSpike_2_Spawn;
+    public Transform clawIceSpike_3_Spawn;
+
+
+
+    //Variables relacionadas con ataque
     private float attackTimer = 0f;
     public static float attackDurationTimer;
     [SerializeField] float clawAttackDuration;
@@ -22,6 +31,7 @@ public class UrsinaScript : MonoBehaviour
     private Vector2 dashDirection;
     [SerializeField] float dashSpeed;
 
+    //Distancias de detecccion
     [SerializeField] float farDistance;
     [SerializeField] float mediumDistance;
     [SerializeField] float nearDistance;
@@ -45,9 +55,7 @@ public class UrsinaScript : MonoBehaviour
 
         float enemyToPlayerDistance = Vector2.Distance(transform.position, playerPosition.position); //float per veure la distancia en TOTES LES DIRECCIONS entre el jugador i l'enemic
         if (isAttacking) return; //Controla que no fa cap altre acció mentre estigui atacant
-        
-        if (!OnPhase2)
-        {
+
             if (enemyToPlayerDistance > farDistance && !isAttacking && canAttack) //Si esta molt lluny el jugador
             {
                 Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
@@ -59,59 +67,67 @@ public class UrsinaScript : MonoBehaviour
             }
             if (enemyToPlayerDistance <= farDistance && enemyToPlayerDistance > mediumDistance && !isAttacking && canAttack) //Si esta lluny del jugador pero suficientment a prop com per atacar
             {
+                int longRangeAttack = Random.Range(0, 3);
+                print(longRangeAttack);
 
-                /*int Attack = Random.Range(0, 2);
-                print(Attack);
-                if (Attack == 0f)
+
+                if (longRangeAttack == 0f || longRangeAttack == 1f)
                 {
                     print("I should chase");
                     StartCoroutine(isChasing());
                 }
-                if (Attack == 1f)
+                if (longRangeAttack == 1f)
                 {
-                    print("I should Attack");
-                    //StartCoroutine(FarAttack());
-                }*/
-                print("I should do a Smash Attack");
-                StartCoroutine(smashAttack());
+                    print("I should do a Smash Attack");
+                    StartCoroutine(smashAttack());
+                }
+
             }
             if (enemyToPlayerDistance <= mediumDistance && enemyToPlayerDistance > nearDistance && !isAttacking && canAttack)
             {
-                /*int Attack = Random.Range(0, 2);
-                print(Attack);
-                if (Attack == 0f)
+                int mediumRangeAttack = Random.Range(0, 7);
+                print(mediumRangeAttack);
+
+                if (mediumRangeAttack == 0f || mediumRangeAttack == 1f || mediumRangeAttack == 2f)
                 {
-                    print("I should chase");
-                    StartCoroutine(isChasing());
+                     print("I should chase");
+                     StartCoroutine(isChasing());
                 }
-                if (Attack == 1f)
+                if (mediumRangeAttack == 3f || mediumRangeAttack == 4f || mediumRangeAttack == 5f)
                 {
-                    print("I should Attack");
-                    //StartCoroutine(FarAttack());
-                }*/
-                StartCoroutine(Roar());
+                    print("I should Smash Attack");
+                    StartCoroutine(smashAttack());
+                }
+                if (mediumRangeAttack == 6f)
+                {
+                     print("I should do a Roar");
+                     StartCoroutine(Roar());
+                }
+                    
             }
             if (enemyToPlayerDistance <= nearDistance && !isAttacking && canAttack) //Si esta molt lluny el jugador
             {
-                /*int Attack = Random.Range(0, 2);
-                print(Attack);
-                if (Attack == 0f)
+                int closeRangeAttack = Random.Range(0, 6);
+                print(closeRangeAttack);
+
+                if (closeRangeAttack == 0f || closeRangeAttack == 1f || closeRangeAttack == 2f)
                 {
-                    print("I should chase");
-                    StartCoroutine(isChasing());
-                }
-                if (Attack == 1f)
-                {
-                    print("I should Attack");
+                    print("I should Claw Attack");
                     StartCoroutine(clawAttack());
-                }*/
-                StartCoroutine(clawAttack());
+                }
+                if (closeRangeAttack == 3f || closeRangeAttack == 4f)
+                {
+                    print("I should do a Roar");
+                    StartCoroutine(Roar());
+                }
+                if (closeRangeAttack == 5f)
+                {
+                    print("I should Smash Attack");
+                    StartCoroutine(smashAttack());
+                    
+                }
+                
             }
-        }
-        if (OnPhase2)
-        {
-            
-        }
 
     }
      
@@ -159,6 +175,10 @@ public class UrsinaScript : MonoBehaviour
 
         //Fa el dash/atac cap a l'enemic
         clawAttackInstance();
+        if (OnPhase2)
+        {
+
+        }
 
         //Quan de temps dura el dash?
         while (attackTimer < clawAttackDuration)
@@ -257,6 +277,7 @@ public class UrsinaScript : MonoBehaviour
     {
         Instantiate(roarCollision,transform, worldPositionStays: false);
     }    
+   
 
     private void OnDrawGizmos() //Ajudes visuals
     {

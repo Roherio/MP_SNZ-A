@@ -91,4 +91,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAttackValue: 30
-  showRadius: 5.03
+  showRadius: 3.26

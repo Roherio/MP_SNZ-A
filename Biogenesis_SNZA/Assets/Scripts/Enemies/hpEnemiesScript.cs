@@ -24,7 +24,7 @@ public class hpEnemiesScript : MonoBehaviour
             enemyHP = enemyHP - Liora_Attack_Script.damageAttackLiora;
             StartCoroutine(FlashWhite());
             FindObjectOfType<HitStop>().hitStop(0.005f);
-            CinemachineShake.Instance.ShakeCamera(5f, .3f);
+            CinemachineShake.Instance.ShakeCamera(1f, .3f);
 
             if (enemyHP <= 0f) { Destroy(gameObject); }
         }

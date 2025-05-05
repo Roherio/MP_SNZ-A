@@ -4,6 +4,7 @@ using UnityEngine;
 public class RoarAttackScript : MonoBehaviour
 {
     private Vector3 scaleChange;
+    public float knockbackForce = 30f;
 
     void Start()
     {
@@ -27,7 +28,7 @@ public class RoarAttackScript : MonoBehaviour
             knockbackScript kb = collision.GetComponent<knockbackScript>();
             if (kb != null)
             {
-                kb.ApplyKnockback(transform.position);
+                kb.ApplyKnockback(transform.position, knockbackForce);
             }
         }
     }
