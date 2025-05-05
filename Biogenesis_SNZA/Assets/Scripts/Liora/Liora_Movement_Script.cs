@@ -45,6 +45,9 @@ public class Liora_Movement_Script : MonoBehaviour
     [SerializeField] private Transform climbCheck;
     [SerializeField] private LayerMask climbLayer;
 
+    private bool onEscalera = false;
+    private bool onEnredadera = false;
+
     void Awake()
     {
         knockbackScript = GetComponent<knockbackScript>();
@@ -83,7 +86,7 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             horizontal = 0f;
         }
-        isClimbing = Liora_Escalera_Script.isClimbing;
+        isClimbing = onEscalera || onEnredadera;
         if (isClimbing && rb.gravityScale != 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0f);
@@ -115,8 +118,8 @@ public class Liora_Movement_Script : MonoBehaviour
             {
                 //saltarà amb la primera input (context.started, sinó seria input continu) nomes si isGrounded es vertader
                 isClimbing = false;
-                canClimb = false;
-                Invoke("EnableClimb", 0.3f);
+                //canClimb = false;
+                //Invoke("EnableClimb", 0.3f);
                 rb.gravityScale = 6f;
                 rb.velocity = new Vector2(rb.velocity.x * horizontal, jumpPower);
                 jumping = true;
@@ -156,7 +159,7 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void ClimbInput(InputAction.CallbackContext context)
     {
-        if (!isClimbing || !canClimb) { return; }
+        if (!isClimbing) { return; }
         float inputY = context.ReadValue<Vector2>().y;
         float inputX = context.ReadValue<Vector2>().x;
         if (inputY != 0f)
@@ -215,14 +218,19 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         canGrabLedge = true;
     }
-    private void EnableClimb()
+    /*private void EnableClimb()
     {
         canClimb = true;
-    }
+    }*/
     //fa check si el objecte empty groundCheck fa overlap amb un objecte que pertany a la groundLayer (overlap amb radi de 0.2f)
     private bool CheckGround()
     {
         return Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundLayer).Length > 0;
+    }
+    public void CheckEscaleraEnredadera(string tag, bool state)
+    {
+        if (tag == "Escalera") { onEscalera = state; }
+        else if (tag == "Enredadera") { onEnredadera = state; }
     }
     /*private void CheckForClimb()
     {

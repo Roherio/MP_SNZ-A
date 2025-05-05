@@ -504,6 +504,7 @@ GameObject:
   - component: {fileID: 6844576158491812986}
   - component: {fileID: 4947185015358159300}
   - component: {fileID: 3102691484329706673}
+  - component: {fileID: 6942934200522289382}
   - component: {fileID: 6202315074707716719}
   m_Layer: 6
   m_Name: Liora
@@ -949,6 +950,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9375, y: 3.6281722}
   m_EdgeRadius: 0
+--- !u!114 &6942934200522289382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994394536962611434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f877d5ad1cf53fb4c8a875ef046459ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderArdilla: {fileID: 7060317571079475497}
 --- !u!114 &6202315074707716719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1602,8 +1616,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8313467076755317976}
   - component: {fileID: 4822355339432697484}
+  - component: {fileID: 8144070832557363991}
   m_Layer: 6
-  m_Name: climbArdillaCheck
+  m_Name: climbCheckArdilla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1669,6 +1684,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &8144070832557363991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7060317571079475497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c6062b275667d40b0b740c84b6a552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7201329417374407014
 GameObject:
   m_ObjectHideFlags: 0
