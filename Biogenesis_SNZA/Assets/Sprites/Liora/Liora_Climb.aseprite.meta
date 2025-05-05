@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5d96c1b1aa4f1bb49ae527bd67400872
+guid: 4bb76019e30048f478fef530057faadc
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638819907970242797
+  platformSettingsDirtyTick: 638819907933866993
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Liora_Dash_Frame_5
+  - name: Liora_Climb_Frame_0
     originalName: 
-    pivot: {x: 0.425, y: -0.036363635}
+    pivot: {x: -0.13043478, y: -0.06153846}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 60
-      y: 60
-      width: 40
-      height: 55
-    spriteID: b85a6c758304a2c4c9cffa45193ebdf7
+      x: 4
+      y: 152
+      width: 23
+      height: 65
+    spriteID: 01550d6fcb99aab469d5bf600fb095c9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,19 +140,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 60, y: 60}
-  - name: Liora_Dash_Frame_6
+    uvTransform: {x: 4, y: 152}
+  - name: Liora_Climb_Frame_1
     originalName: 
-    pivot: {x: 0.4848485, y: -0.03448276}
+    pivot: {x: -0.13043478, y: -0.09677419}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 60
-      y: 123
-      width: 33
-      height: 58
-    spriteID: b5ace29761dba2041b456b9da441a108
+      x: 36
+      y: 149
+      width: 23
+      height: 62
+    spriteID: 8feb73158216879469f9af2e7b32b519
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,39 +160,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 60, y: 123}
-  - name: Liora_Dash_Frame_7
+    uvTransform: {x: 36, y: 149}
+  - name: Liora_Climb_Frame_2
     originalName: 
-    pivot: {x: 0.5357143, y: -0.033333335}
+    pivot: {x: -0.13043478, y: -0.13114753}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 60
-      y: 189
-      width: 28
-      height: 60
-    spriteID: 9ee0b446e590d86448bd9d4cb3363882
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 60, y: 189}
-  - name: Liora_Dash_Frame_0
-    originalName: 
-    pivot: {x: 0.5208334, y: -0.14583334}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 60
+      x: 67
       y: 4
-      width: 48
-      height: 48
-    spriteID: 3c8fdb896e6151447bb976fd3a429211
+      width: 23
+      height: 61
+    spriteID: ae89b5a51792c94488ab01805ff26d12
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,19 +180,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 60, y: 4}
-  - name: Liora_Dash_Frame_1
+    uvTransform: {x: 67, y: 4}
+  - name: Liora_Climb_Frame_3
     originalName: 
-    pivot: {x: 0.4791667, y: -0.16}
+    pivot: {x: -0.083333336, y: -0.06153846}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 48
-      height: 50
-    spriteID: c0c74b0ae863ec840bb338447548373a
+      width: 24
+      height: 65
+    spriteID: f9232f202b8706041a6696e86758cd9a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -221,18 +201,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Liora_Dash_Frame_2
+  - name: Liora_Climb_Frame_4
     originalName: 
-    pivot: {x: 0.4791667, y: -0.16}
+    pivot: {x: -0.13043478, y: -0.014925374}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 62
-      width: 48
-      height: 50
-    spriteID: 3355ff4ded1691e4faa3fc6a9561a1af
+      y: 77
+      width: 23
+      height: 67
+    spriteID: d790a5441d3877a419d858ba8f01dd25
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -240,19 +220,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 62}
-  - name: Liora_Dash_Frame_3
+    uvTransform: {x: 4, y: 77}
+  - name: Liora_Climb_Frame_5
     originalName: 
-    pivot: {x: 0.4791667, y: -0.16}
+    pivot: {x: -0.13043478, y: -0.0625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 120
-      width: 48
-      height: 50
-    spriteID: 00ce54f7da6e15f4783d7d698fffefbc
+      x: 36
+      y: 77
+      width: 23
+      height: 64
+    spriteID: 0383e003aef112647a3e2340c74bbb4d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -260,19 +240,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 120}
-  - name: Liora_Dash_Frame_4
+    uvTransform: {x: 36, y: 77}
+  - name: Liora_Climb_Frame_6
     originalName: 
-    pivot: {x: 0.4791667, y: -0.16}
+    pivot: {x: -0.13043478, y: -0.13114753}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 178
-      width: 48
-      height: 50
-    spriteID: 77c32c7aab2471344985457bbd1cf0ab
+      x: 67
+      y: 73
+      width: 23
+      height: 61
+    spriteID: 9a94df22314cc1d46989252752ff3100
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -280,88 +260,108 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 178}
+    uvTransform: {x: 67, y: 73}
+  - name: Liora_Climb_Frame_7
+    originalName: 
+    pivot: {x: -0.13043478, y: -0.092307694}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 4
+      width: 23
+      height: 65
+    spriteID: 13fd8f018251f8b4bbdaba19c8f4ea7c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 36, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -387910216
-    name: Liora_Dash
+    guid: 1516833187
+    name: Liora_Climb
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Liora_Dash_Frame_5
-      frameIndex: 5
-      additiveSortOrder: 0
-      cellRect:
-        x: 15
-        y: 2
-        width: 40
-        height: 55
-      spriteId: b85a6c758304a2c4c9cffa45193ebdf7
-    - name: Liora_Dash_Frame_6
-      frameIndex: 6
-      additiveSortOrder: 0
-      cellRect:
-        x: 16
-        y: 2
-        width: 33
-        height: 58
-      spriteId: b5ace29761dba2041b456b9da441a108
-    - name: Liora_Dash_Frame_7
-      frameIndex: 7
-      additiveSortOrder: 0
-      cellRect:
-        x: 17
-        y: 2
-        width: 28
-        height: 60
-      spriteId: 9ee0b446e590d86448bd9d4cb3363882
-    - name: Liora_Dash_Frame_0
+    - name: Liora_Climb_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 7
-        y: 7
-        width: 48
-        height: 48
-      spriteId: 3c8fdb896e6151447bb976fd3a429211
-    - name: Liora_Dash_Frame_1
+        x: 35
+        y: 4
+        width: 23
+        height: 65
+      spriteId: 01550d6fcb99aab469d5bf600fb095c9
+    - name: Liora_Climb_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 9
-        y: 8
-        width: 48
-        height: 50
-      spriteId: c0c74b0ae863ec840bb338447548373a
-    - name: Liora_Dash_Frame_2
+        x: 35
+        y: 6
+        width: 23
+        height: 62
+      spriteId: 8feb73158216879469f9af2e7b32b519
+    - name: Liora_Climb_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 35
         y: 8
-        width: 48
-        height: 50
-      spriteId: 3355ff4ded1691e4faa3fc6a9561a1af
-    - name: Liora_Dash_Frame_3
+        width: 23
+        height: 61
+      spriteId: ae89b5a51792c94488ab01805ff26d12
+    - name: Liora_Climb_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 9
-        y: 8
-        width: 48
-        height: 50
-      spriteId: 00ce54f7da6e15f4783d7d698fffefbc
-    - name: Liora_Dash_Frame_4
+        x: 34
+        y: 4
+        width: 24
+        height: 65
+      spriteId: f9232f202b8706041a6696e86758cd9a
+    - name: Liora_Climb_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 35
+        y: 1
+        width: 23
+        height: 67
+      spriteId: d790a5441d3877a419d858ba8f01dd25
+    - name: Liora_Climb_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 35
+        y: 4
+        width: 23
+        height: 64
+      spriteId: 0383e003aef112647a3e2340c74bbb4d
+    - name: Liora_Climb_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 35
         y: 8
-        width: 48
-        height: 50
-      spriteId: 77c32c7aab2471344985457bbd1cf0ab
+        width: 23
+        height: 61
+      spriteId: 9a94df22314cc1d46989252752ff3100
+    - name: Liora_Climb_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 35
+        y: 6
+        width: 23
+        height: 65
+      spriteId: 13fd8f018251f8b4bbdaba19c8f4ea7c
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -404,4 +404,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
+  canvasSize: {x: 64, y: 73}

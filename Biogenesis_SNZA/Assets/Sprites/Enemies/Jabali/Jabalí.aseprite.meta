@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: "Jabal\xED_Frame_0"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019417476}
+    pivot: {x: 0.24038462, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -143,7 +143,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: "Jabal\xED_Frame_1"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019417476}
+    pivot: {x: 0.24038462, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -163,7 +163,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 115}
   - name: "Jabal\xED_Frame_2"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019417476}
+    pivot: {x: 0.24038462, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -183,7 +183,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 226}
   - name: "Jabal\xED_Frame_7"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019417476}
+    pivot: {x: 0.24038462, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -203,7 +203,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 337}
   - name: "Jabal\xED_Frame_8"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019417476}
+    pivot: {x: 0.24038462, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -223,13 +223,13 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 448}
   - name: "Jabal\xED_Frame_9"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019607844}
+    pivot: {x: 0.24038462, y: -0.019607844}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 116
-      y: 4
+      y: 216
       width: 104
       height: 102
     spriteID: f4286713e39870e4a8c3ca5fbdcceb17
@@ -240,10 +240,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 116, y: 4}
+    uvTransform: {x: 116, y: 216}
   - name: "Jabal\xED_Frame_3"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019417476}
+    pivot: {x: 0.24038462, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -263,7 +263,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 559}
   - name: "Jabal\xED_Frame_4"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019417476}
+    pivot: {x: 0.24038462, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -283,7 +283,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 670}
   - name: "Jabal\xED_Frame_5"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019417476}
+    pivot: {x: 0.24038462, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -303,7 +303,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 781}
   - name: "Jabal\xED_Frame_6"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019417476}
+    pivot: {x: 0.24038462, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -323,13 +323,13 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 892}
   - name: "Jabal\xED_Frame_10"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019607844}
+    pivot: {x: 0.24038462, y: -0.019607844}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 116
-      y: 114
+      y: 326
       width: 104
       height: 102
     spriteID: 6b1e6d8d043e714488d185e9d14736e9
@@ -340,16 +340,16 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 116, y: 114}
+    uvTransform: {x: 116, y: 326}
   - name: "Jabal\xED_Frame_11"
     originalName: 
-    pivot: {x: 0.52884614, y: -0.019607844}
+    pivot: {x: 0.24038462, y: -0.019607844}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 116
-      y: 224
+      y: 436
       width: 104
       height: 102
     spriteID: f85d17d191152244e9848d4db2b989b3
@@ -360,16 +360,16 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 116, y: 224}
+    uvTransform: {x: 116, y: 436}
   - name: "Jabal\xED_Frame_12"
     originalName: 
-    pivot: {x: 0.5882353, y: -0.02020202}
+    pivot: {x: 0, y: -0.02020202}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 228
-      y: 332
+      x: 420
+      y: 440
       width: 51
       height: 99
     spriteID: b0cacab52d1f684458f6f305cb53c398
@@ -380,16 +380,16 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 228, y: 332}
+    uvTransform: {x: 420, y: 440}
   - name: "Jabal\xED_Frame_13"
     originalName: 
-    pivot: {x: 0.46296296, y: -0.02}
+    pivot: {x: -0.09259259, y: -0.02}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 116
-      y: 872
+      x: 420
+      y: 114
       width: 54
       height: 100
     spriteID: b01dbc7ad9bfb0f409e55f78ca787f7b
@@ -400,16 +400,16 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 116, y: 872}
+    uvTransform: {x: 420, y: 114}
   - name: "Jabal\xED_Frame_14"
     originalName: 
-    pivot: {x: 0.5357143, y: -0.01980198}
+    pivot: {x: 0, y: -0.01980198}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 116
-      y: 763
+      x: 331
+      y: 857
       width: 56
       height: 101
     spriteID: 4ad41cccda9aac74bb1880b8dffa57e0
@@ -420,16 +420,16 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 116, y: 763}
+    uvTransform: {x: 331, y: 857}
   - name: "Jabal\xED_Frame_15"
     originalName: 
-    pivot: {x: 0.6229508, y: -0.01980198}
+    pivot: {x: 0.13114756, y: -0.01980198}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 116
-      y: 440
+      x: 331
+      y: 534
       width: 61
       height: 101
     spriteID: a73b0aaa4b0081845b28414dda1c2cb8
@@ -440,16 +440,16 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 116, y: 440}
+    uvTransform: {x: 331, y: 534}
   - name: "Jabal\xED_Frame_16"
     originalName: 
-    pivot: {x: 0.5970149, y: -0.020408163}
+    pivot: {x: 0.14925373, y: -0.020408163}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 116
-      y: 334
+      x: 331
+      y: 324
       width: 67
       height: 98
     spriteID: 729285951efc76b48b89fd2a97fc88b9
@@ -460,16 +460,16 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 116, y: 334}
+    uvTransform: {x: 331, y: 324}
   - name: "Jabal\xED_Frame_17"
     originalName: 
-    pivot: {x: 0.5666667, y: -0.02020202}
+    pivot: {x: 0.066666685, y: -0.02020202}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 116
-      y: 549
+      x: 331
+      y: 643
       width: 60
       height: 99
     spriteID: 923939df75a9f6342ab696f928092051
@@ -480,16 +480,16 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 116, y: 549}
+    uvTransform: {x: 331, y: 643}
   - name: "Jabal\xED_Frame_19"
     originalName: 
-    pivot: {x: 0.6037736, y: -0.01980198}
+    pivot: {x: 0.037735812, y: -0.01980198}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 228
-      y: 4
+      x: 420
+      y: 222
       width: 53
       height: 101
     spriteID: c40f89f87f1483b43a4283b0f6e98873
@@ -500,17 +500,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 228, y: 4}
+    uvTransform: {x: 420, y: 222}
   - name: "Jabal\xED_Frame_20"
     originalName: 
-    pivot: {x: 0.62, y: -0.019607844}
+    pivot: {x: 0.018867906, y: -0.019607844}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 228
-      y: 222
-      width: 50
+      x: 420
+      y: 4
+      width: 53
       height: 102
     spriteID: c205e0e048e0b7d49a3d68aead35608a
     spriteBone: []
@@ -520,16 +520,16 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 228, y: 222}
+    uvTransform: {x: 420, y: 4}
   - name: "Jabal\xED_Frame_21"
     originalName: 
-    pivot: {x: 0.6346154, y: -0.01980198}
+    pivot: {x: 0.057692345, y: -0.01980198}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 228
-      y: 113
+      x: 420
+      y: 331
       width: 52
       height: 101
     spriteID: 66f97652ea1dcc343802315d88b8fff8
@@ -540,16 +540,16 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 228, y: 113}
+    uvTransform: {x: 420, y: 331}
   - name: "Jabal\xED_Frame_22"
     originalName: 
-    pivot: {x: 0.62, y: -0.020618556}
+    pivot: {x: 0.01999998, y: -0.020618556}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 228
-      y: 653
+      x: 420
+      y: 654
       width: 50
       height: 97
     spriteID: ed93d7c71bb51144f8b3b4158aa71554
@@ -560,17 +560,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 228, y: 653}
+    uvTransform: {x: 420, y: 654}
   - name: "Jabal\xED_Frame_18"
     originalName: 
-    pivot: {x: 0.5666667, y: -0.02020202}
+    pivot: {x: 0.24271844, y: -0.02020202}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 116
-      y: 656
-      width: 60
+      y: 546
+      width: 103
       height: 99
     spriteID: a8493d33a27a7ff41b0006c160dea1d0
     spriteBone: []
@@ -580,18 +580,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 116, y: 656}
+    uvTransform: {x: 116, y: 546}
   - name: "Jabal\xED_Frame_23"
     originalName: 
-    pivot: {x: 0.5882353, y: -0.02020202}
+    pivot: {x: 0.20879123, y: -0.020408163}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 228
-      y: 439
-      width: 51
-      height: 99
+      x: 116
+      y: 866
+      width: 91
+      height: 98
     spriteID: 986d48ca8f1d9dd4ea01e1f06a0d0d01
     spriteBone: []
     spriteOutline: []
@@ -600,18 +600,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 228, y: 439}
+    uvTransform: {x: 116, y: 866}
   - name: "Jabal\xED_Frame_24"
     originalName: 
-    pivot: {x: 0.5882353, y: -0.02020202}
+    pivot: {x: 0.108433746, y: -0.020618556}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 228
-      y: 546
-      width: 51
-      height: 99
+      x: 233
+      y: 214
+      width: 83
+      height: 97
     spriteID: bc0d4f1874c63d54588259834c18b8a6
     spriteBone: []
     spriteOutline: []
@@ -620,7 +620,367 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 228, y: 546}
+    uvTransform: {x: 233, y: 214}
+  - name: "Jabal\xED_Frame_27"
+    originalName: 
+    pivot: {x: 0.07407406, y: -0.020833334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 331
+      y: 4
+      width: 81
+      height: 96
+    spriteID: b4be3968d8103684387732144efcfbf7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 331, y: 4}
+  - name: "Jabal\xED_Frame_28"
+    originalName: 
+    pivot: {x: 0.036144603, y: -0.020833334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 319
+      width: 83
+      height: 96
+    spriteID: 5332cecec45746b4a856c8cf6f471032
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 233, y: 319}
+  - name: "Jabal\xED_Frame_29"
+    originalName: 
+    pivot: {x: 0.04761906, y: -0.020833334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 110
+      width: 84
+      height: 96
+    spriteID: 7449a349d5b8d1d48a050b79be53a385
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 233, y: 110}
+  - name: "Jabal\xED_Frame_33"
+    originalName: 
+    pivot: {x: 0.14925373, y: -0.020833334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 331
+      y: 430
+      width: 67
+      height: 96
+    spriteID: d02c76dc5878652458fc884feb2e7098
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 331, y: 430}
+  - name: "Jabal\xED_Frame_34"
+    originalName: 
+    pivot: {x: 0.6880734, y: -0.020408163}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 116
+      y: 4
+      width: 109
+      height: 98
+    spriteID: 76581e9e4a184714a8c2262a449748db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 116, y: 4}
+  - name: "Jabal\xED_Frame_36"
+    originalName: 
+    pivot: {x: 0.6836735, y: -0.020408163}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 116
+      y: 760
+      width: 98
+      height: 98
+    spriteID: 37978365f6701a64785105f515b221d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 116, y: 760}
+  - name: "Jabal\xED_Frame_37"
+    originalName: 
+    pivot: {x: 0.67777777, y: -0.020408163}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 4
+      width: 90
+      height: 98
+    spriteID: 9ce1771e1aadac0408ef605c77371063
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 233, y: 4}
+  - name: "Jabal\xED_Frame_38"
+    originalName: 
+    pivot: {x: 0.65, y: -0.020408163}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 735
+      width: 80
+      height: 98
+    spriteID: 8bac849132916bf4f96df9ed0c1b1c65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 233, y: 735}
+  - name: "Jabal\xED_Frame_39"
+    originalName: 
+    pivot: {x: 0.65, y: -0.020408163}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 841
+      width: 80
+      height: 98
+    spriteID: 04767932e0737f94291edffcc601ebf9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 233, y: 841}
+  - name: "Jabal\xED_Frame_40"
+    originalName: 
+    pivot: {x: 0.7402597, y: -0.02}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 331
+      y: 108
+      width: 77
+      height: 100
+    spriteID: 9b31489536e794d4093aae0d55ef3ccb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 331, y: 108}
+  - name: "Jabal\xED_Frame_41"
+    originalName: 
+    pivot: {x: 0.19402987, y: -0.03}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 331
+      y: 216
+      width: 67
+      height: 100
+    spriteID: 2e63d1e5f6282664eae3a07d7fce44e1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 331, y: 216}
+  - name: "Jabal\xED_Frame_42"
+    originalName: 
+    pivot: {x: 0.24271844, y: -0.02020202}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 116
+      y: 653
+      width: 103
+      height: 99
+    spriteID: a3a101bb7d1185148bf57a527e121a02
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 116, y: 653}
+  - name: "Jabal\xED_Frame_18"
+    originalName: 
+    pivot: {x: 0.066666685, y: -0.02020202}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 331
+      y: 750
+      width: 60
+      height: 99
+    spriteID: 45bb8ec1a62979c4b9e9e3a7a22938b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 331, y: 750}
+  - name: "Jabal\xED_Frame_23"
+    originalName: 
+    pivot: {x: 0, y: -0.02020202}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 420
+      y: 547
+      width: 51
+      height: 99
+    spriteID: de7fcdd8e0d5fb44a809a605bf15c552
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 420, y: 547}
+  - name: "Jabal\xED_Frame_30"
+    originalName: 
+    pivot: {x: 0.048192784, y: -0.020833334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 423
+      width: 83
+      height: 96
+    spriteID: b04c81b6412ec87408dc22d91e2deab4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 233, y: 423}
+  - name: "Jabal\xED_Frame_31"
+    originalName: 
+    pivot: {x: 0.048192784, y: -0.020833334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 527
+      width: 83
+      height: 96
+    spriteID: c14f6a865999da3468fcb54e88204575
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 233, y: 527}
+  - name: "Jabal\xED_Frame_32"
+    originalName: 
+    pivot: {x: 0.048192784, y: -0.020833334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 631
+      width: 83
+      height: 96
+    spriteID: e02ffee155e75294dbf6b305d5748a1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 233, y: 631}
+  - name: "Jabal\xED_Frame_35"
+    originalName: 
+    pivot: {x: 0.6880734, y: -0.020408163}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 116
+      y: 110
+      width: 109
+      height: 98
+    spriteID: 59e9d128fa4e9f24199a25b450296129
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 116, y: 110}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -634,7 +994,7 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 103
@@ -643,7 +1003,7 @@ ScriptedImporter:
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 103
@@ -652,7 +1012,7 @@ ScriptedImporter:
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 103
@@ -661,7 +1021,7 @@ ScriptedImporter:
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 103
@@ -670,7 +1030,7 @@ ScriptedImporter:
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 103
@@ -679,7 +1039,7 @@ ScriptedImporter:
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 102
@@ -688,7 +1048,7 @@ ScriptedImporter:
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 103
@@ -697,7 +1057,7 @@ ScriptedImporter:
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 103
@@ -706,7 +1066,7 @@ ScriptedImporter:
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 103
@@ -715,7 +1075,7 @@ ScriptedImporter:
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 103
@@ -724,7 +1084,7 @@ ScriptedImporter:
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 102
@@ -733,7 +1093,7 @@ ScriptedImporter:
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
-        x: 9
+        x: 55
         y: 2
         width: 104
         height: 102
@@ -742,7 +1102,7 @@ ScriptedImporter:
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
-        x: 34
+        x: 80
         y: 2
         width: 51
         height: 99
@@ -751,7 +1111,7 @@ ScriptedImporter:
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
-        x: 39
+        x: 85
         y: 2
         width: 54
         height: 100
@@ -760,7 +1120,7 @@ ScriptedImporter:
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
-        x: 34
+        x: 80
         y: 2
         width: 56
         height: 101
@@ -769,7 +1129,7 @@ ScriptedImporter:
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
-        x: 26
+        x: 72
         y: 2
         width: 61
         height: 101
@@ -778,7 +1138,7 @@ ScriptedImporter:
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
-        x: 24
+        x: 70
         y: 2
         width: 67
         height: 98
@@ -787,7 +1147,7 @@ ScriptedImporter:
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
-        x: 30
+        x: 76
         y: 2
         width: 60
         height: 99
@@ -796,7 +1156,7 @@ ScriptedImporter:
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
-        x: 32
+        x: 78
         y: 2
         width: 53
         height: 101
@@ -805,16 +1165,16 @@ ScriptedImporter:
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
-        x: 33
+        x: 79
         y: 2
-        width: 50
+        width: 53
         height: 102
       spriteId: c205e0e048e0b7d49a3d68aead35608a
     - name: "Jabal\xED_Frame_21"
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
-        x: 31
+        x: 77
         y: 2
         width: 52
         height: 101
@@ -823,38 +1183,200 @@ ScriptedImporter:
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
-        x: 33
+        x: 79
         y: 2
         width: 50
         height: 97
       spriteId: ed93d7c71bb51144f8b3b4158aa71554
-    - name: "Jabal\xED_Frame_18"
-      frameIndex: 18
-      additiveSortOrder: 0
-      cellRect:
-        x: 30
-        y: 2
-        width: 60
-        height: 99
-      spriteId: a8493d33a27a7ff41b0006c160dea1d0
-    - name: "Jabal\xED_Frame_23"
-      frameIndex: 23
-      additiveSortOrder: 0
-      cellRect:
-        x: 34
-        y: 2
-        width: 51
-        height: 99
-      spriteId: 986d48ca8f1d9dd4ea01e1f06a0d0d01
     - name: "Jabal\xED_Frame_24"
       frameIndex: 24
       additiveSortOrder: 0
       cellRect:
-        x: 34
+        x: 55
+        y: 2
+        width: 103
+        height: 99
+      spriteId: a8493d33a27a7ff41b0006c160dea1d0
+    - name: "Jabal\xED_Frame_25"
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 61
+        y: 2
+        width: 91
+        height: 98
+      spriteId: 986d48ca8f1d9dd4ea01e1f06a0d0d01
+    - name: "Jabal\xED_Frame_26"
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 71
+        y: 2
+        width: 83
+        height: 97
+      spriteId: bc0d4f1874c63d54588259834c18b8a6
+    - name: "Jabal\xED_Frame_27"
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 74
+        y: 2
+        width: 81
+        height: 96
+      spriteId: b4be3968d8103684387732144efcfbf7
+    - name: "Jabal\xED_Frame_28"
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 77
+        y: 2
+        width: 83
+        height: 96
+      spriteId: 5332cecec45746b4a856c8cf6f471032
+    - name: "Jabal\xED_Frame_29"
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: 76
+        y: 2
+        width: 84
+        height: 96
+      spriteId: 7449a349d5b8d1d48a050b79be53a385
+    - name: "Jabal\xED_Frame_33"
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: 70
+        y: 2
+        width: 67
+        height: 96
+      spriteId: d02c76dc5878652458fc884feb2e7098
+    - name: "Jabal\xED_Frame_34"
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 2
+        width: 109
+        height: 98
+      spriteId: 76581e9e4a184714a8c2262a449748db
+    - name: "Jabal\xED_Frame_36"
+      frameIndex: 36
+      additiveSortOrder: 0
+      cellRect:
+        x: 13
+        y: 2
+        width: 98
+        height: 98
+      spriteId: 37978365f6701a64785105f515b221d7
+    - name: "Jabal\xED_Frame_37"
+      frameIndex: 37
+      additiveSortOrder: 0
+      cellRect:
+        x: 19
+        y: 2
+        width: 90
+        height: 98
+      spriteId: 9ce1771e1aadac0408ef605c77371063
+    - name: "Jabal\xED_Frame_38"
+      frameIndex: 38
+      additiveSortOrder: 0
+      cellRect:
+        x: 28
+        y: 2
+        width: 80
+        height: 98
+      spriteId: 8bac849132916bf4f96df9ed0c1b1c65
+    - name: "Jabal\xED_Frame_39"
+      frameIndex: 39
+      additiveSortOrder: 0
+      cellRect:
+        x: 28
+        y: 2
+        width: 80
+        height: 98
+      spriteId: 04767932e0737f94291edffcc601ebf9
+    - name: "Jabal\xED_Frame_40"
+      frameIndex: 40
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 2
+        width: 77
+        height: 100
+      spriteId: 9b31489536e794d4093aae0d55ef3ccb
+    - name: "Jabal\xED_Frame_41"
+      frameIndex: 41
+      additiveSortOrder: 0
+      cellRect:
+        x: 67
+        y: 3
+        width: 67
+        height: 100
+      spriteId: 2e63d1e5f6282664eae3a07d7fce44e1
+    - name: "Jabal\xED_Frame_42"
+      frameIndex: 42
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 2
+        width: 103
+        height: 99
+      spriteId: a3a101bb7d1185148bf57a527e121a02
+    - name: "Jabal\xED_Frame_18"
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 76
+        y: 2
+        width: 60
+        height: 99
+      spriteId: 45bb8ec1a62979c4b9e9e3a7a22938b1
+    - name: "Jabal\xED_Frame_23"
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 80
         y: 2
         width: 51
         height: 99
-      spriteId: bc0d4f1874c63d54588259834c18b8a6
+      spriteId: de7fcdd8e0d5fb44a809a605bf15c552
+    - name: "Jabal\xED_Frame_30"
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 76
+        y: 2
+        width: 83
+        height: 96
+      spriteId: b04c81b6412ec87408dc22d91e2deab4
+    - name: "Jabal\xED_Frame_31"
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 76
+        y: 2
+        width: 83
+        height: 96
+      spriteId: c14f6a865999da3468fcb54e88204575
+    - name: "Jabal\xED_Frame_32"
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: 76
+        y: 2
+        width: 83
+        height: 96
+      spriteId: e02ffee155e75294dbf6b305d5748a1f
+    - name: "Jabal\xED_Frame_35"
+      frameIndex: 35
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 2
+        width: 109
+        height: 98
+      spriteId: 59e9d128fa4e9f24199a25b450296129
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -873,4 +1395,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 128}
+  canvasSize: {x: 160, y: 128}
