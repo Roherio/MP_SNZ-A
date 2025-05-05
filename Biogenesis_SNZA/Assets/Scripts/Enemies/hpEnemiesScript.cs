@@ -21,7 +21,7 @@ public class hpEnemiesScript : MonoBehaviour
     {
         if (collision.CompareTag("LioraAttack"))
         {
-            enemyHP -= enemyHP - Liora_Attack_Script.damageAttackLiora;
+            enemyHP = enemyHP - Liora_Attack_Script.damageAttackLiora;
             StartCoroutine(FlashWhite());
             FindObjectOfType<HitStop>().hitStop(0.005f);
             CinemachineShake.Instance.ShakeCamera(5f, .3f);
@@ -33,7 +33,7 @@ public class hpEnemiesScript : MonoBehaviour
     private IEnumerator FlashWhite()
     {
         spriteRenderer.color = Color.white;
-        yield return new WaitForSeconds(0.1f); // Duración del parpadeo
+        yield return new WaitForSeconds(1f); // Duración del parpadeo
         spriteRenderer.color = originalColor;
     }
 }

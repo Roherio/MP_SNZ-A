@@ -110,6 +110,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
 
     void isChasing()
     {
+        //--------------------------------------ANIMACIO CAMINAR------------------------------------------
         Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
         direction.y = 0; //fem que la direcció en y sigui 0
         direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
@@ -139,7 +140,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
 
         yield return new WaitForSeconds(attackCooldown);
 
-
+        //------------------------- ANIMACIO ATAC AQUI!!!!!!!!!----------------------------------------------
         //Fa el dash/atac cap a l'enemic
         attackHitbox();
 
