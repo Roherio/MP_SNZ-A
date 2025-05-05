@@ -5,6 +5,8 @@ using UnityEngine;
 public class SmashAttackPhase2Ursina: MonoBehaviour
 {
     [SerializeField] float enemyAttackValue;
+    private Transform playerPosition;
+    public Transform enemyLocation;
     public Rigidbody2D rb;
   
     private Vector3 scaleChange;
@@ -13,14 +15,19 @@ public class SmashAttackPhase2Ursina: MonoBehaviour
     private void Awake()
     {
         GetComponent<BoxCollider2D>().enabled = false;
+        playerPosition = GameObject.FindWithTag("Player").transform;
+        enemyLocation = GameObject.FindWithTag("Ursina").transform;
+
     }
     void Start()
     {
+
+        transform.position = new Vector2(playerPosition.position.x, enemyLocation.position.y);
         scaleChange = new Vector3(1.5f, 1.5f, 1.5f);
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 2f);
         print(GameControl_Script.lifeLiora);
-        Invoke("enableHitBox", 0.5f);
+        Invoke("enableHitBox", 1f);
 
     }
 

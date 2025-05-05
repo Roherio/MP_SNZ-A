@@ -23,8 +23,6 @@ public class UrsinaScript : MonoBehaviour
     public Transform clawIceSpike_2_Spawn;
     public Transform clawIceSpike_3_Spawn;
 
-
-
     //Variables relacionadas con ataque
     private float attackTimer = 0f;
     public static float attackDurationTimer;
@@ -37,7 +35,6 @@ public class UrsinaScript : MonoBehaviour
     [SerializeField] float farDistance;
     [SerializeField] float mediumDistance;
     [SerializeField] float nearDistance;
-
 
     public bool OnPhase2 = false;
     [SerializeField] GameObject roarCollision;
@@ -76,39 +73,60 @@ public class UrsinaScript : MonoBehaviour
                 if (direction.x < 0) { transform.localScale = new Vector3(2, 2, 2); }
                 else { transform.localScale = new Vector3(-2, 2, 2); }
         }
-
-
         //Si esta lluny del jugador pero suficientment a prop com per atacar
         if (enemyToPlayerDistance <= farDistance && enemyToPlayerDistance > mediumDistance && !isAttacking && canAttack) 
         {
+            if(!OnPhase2)
+            {
                 int longRangeAttack = Random.Range(0, 3);
                 print(longRangeAttack);
-
-
                 if (longRangeAttack == 0f || longRangeAttack == 1f)
                 {
                     print("I should chase");
                     isChasing();
                 }
-                if (longRangeAttack == 1f)
+                if (longRangeAttack == 2f)
                 {
                     print("I should do a Smash Attack");
                     StartCoroutine(smashAttack());
                 }
+            }
 
+            if (OnPhase2)
+            {
+                int longRangeAttack = Random.Range(0, 5);
+                print(longRangeAttack);
+                if (longRangeAttack == 0f || longRangeAttack == 1f)
+                {
+                    print("I should chase");
+                    isChasing();
+                }
+                print(longRangeAttack);
+                if (longRangeAttack == 2f || longRangeAttack == 3f)
+                {
+                    print("I should Claw Attack");
+                    StartCoroutine(clawAttackPhase2());
+                }
+                if (longRangeAttack == 4f)
+                {
+                    print("I should do a Smash Attack");
+                    StartCoroutine(smashAttack());
+                }
+            }
         }
 
 
         //Si esta a mitja distancia
-            if (enemyToPlayerDistance <= mediumDistance && enemyToPlayerDistance > nearDistance && !isAttacking && canAttack)
+        if (enemyToPlayerDistance <= mediumDistance && enemyToPlayerDistance > nearDistance && !isAttacking && canAttack)
+        {
+            if (!OnPhase2)
             {
                 int mediumRangeAttack = Random.Range(0, 7);
                 print(mediumRangeAttack);
-
                 if (mediumRangeAttack == 0f || mediumRangeAttack == 1f || mediumRangeAttack == 2f)
                 {
-                     print("I should chase");
-                     isChasing();
+                    print("I should chase");
+                    isChasing();
                 }
                 if (mediumRangeAttack == 3f || mediumRangeAttack == 4f || mediumRangeAttack == 5f)
                 {
@@ -117,35 +135,59 @@ public class UrsinaScript : MonoBehaviour
                 }
                 if (mediumRangeAttack == 6f)
                 {
-                     print("I should do a Roar");
-                     StartCoroutine(Roar());
+                    print("I should do a Roar");
+                    StartCoroutine(Roar());
                 }
-                    
             }
-
-            //Si esta molt aprop
-            if (enemyToPlayerDistance <= nearDistance && !isAttacking && canAttack) 
+            if (OnPhase2)
             {
-                int closeRangeAttack = Random.Range(0, 11);
-                print(closeRangeAttack);
-
-                if (closeRangeAttack == 0f)
+                int mediumRangeAttack = Random.Range(0, 7);
+                print(mediumRangeAttack);
+                if (mediumRangeAttack == 0f || mediumRangeAttack == 1f)
+                {
+                    print("I should chase");
+                    isChasing();
+                }
+                if (mediumRangeAttack == 2f || mediumRangeAttack == 3f)
+                {
+                    print("I should Smash Attack");
+                    StartCoroutine(smashAttack());
+                }
+                if (mediumRangeAttack == 4f || mediumRangeAttack == 5f)
+                {
+                    print("I should Claw Attack");
+                    StartCoroutine(clawAttackPhase2());
+                }
+                if (mediumRangeAttack == 6f)
                 {
                     print("I should do a Roar");
                     StartCoroutine(Roar());
                 }
-                if (closeRangeAttack == 1f || closeRangeAttack == 2f)
-                {
-                    print("I should Smash Attack");
-                    StartCoroutine(smashAttack());
-                    
-                }
-                else
-                {
-                    print("I should Claw Attack");
-                    StartCoroutine(clawAttack());
-                }
+            }
+        }        
 
+        //Si esta molt aprop
+        if (enemyToPlayerDistance <= nearDistance && !isAttacking && canAttack)
+        {
+            int closeRangeAttack = Random.Range(0, 11);
+            print(closeRangeAttack);
+
+            if (closeRangeAttack == 0f)
+            {
+                print("I should do a Roar");
+                StartCoroutine(Roar());
+            }
+            if (closeRangeAttack == 1f || closeRangeAttack == 2f)
+            {
+                print("I should Smash Attack");
+                StartCoroutine(smashAttack());
+
+            }
+            else
+            {
+                print("I should Claw Attack");
+                StartCoroutine(clawAttack());
+            }
         }
 
     }
@@ -215,10 +257,47 @@ public class UrsinaScript : MonoBehaviour
 
         //Fa el dash/atac cap a l'enemic
         clawAttackInstance();
-        if (OnPhase2)
+        
+
+        //Quan de temps dura l'atac?
+        while (attackTimer < clawAttackDuration)
         {
-            clawIceSpikeInstance();
+
+            rb.velocity = dashDirection * dashSpeed;
+            attackTimer += Time.deltaTime;
+            yield return null;
         }
+
+        //S'acaba l'atac, aturat i posa't en cooldown
+        rb.velocity = Vector2.zero;
+
+        yield return new WaitForSeconds(AttackCooldown);
+
+        //Pot tornar a atacar
+        isAttacking = false;
+        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
+        else { transform.localScale = new Vector3(-2, 2, 2); }
+        canAttack = true;
+    }
+
+    IEnumerator clawAttackPhase2()
+    {
+        //Temps de preparació de l'atac
+        isAttacking = true;
+        canAttack = false;
+        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
+        else { transform.localScale = new Vector3(-2, 2, 2); }
+        dashDirection = (playerPosition.position - transform.position);
+        dashDirection.y = 0;
+        dashDirection = dashDirection.normalized;
+        attackTimer = 0f;
+
+        yield return new WaitForSeconds(AttackCooldown);
+
+        //Fa el dash/atac cap a l'enemic
+        clawAttackInstance();
+        clawIceSpikeInstance();
+
 
         //Quan de temps dura l'atac?
         while (attackTimer < clawAttackDuration)
@@ -324,7 +403,7 @@ public class UrsinaScript : MonoBehaviour
     }
     public void smashAttackInstancePhase2()
     {
-        Instantiate(smashAttackCollisionPhase2, playerPosition, worldPositionStays: false);
+        Instantiate(smashAttackCollisionPhase2);
     }
 
     private void OnDrawGizmos() //Ajudes visuals
