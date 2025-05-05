@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7672487524969080123}
   - component: {fileID: 2497172275419877430}
   - component: {fileID: 625011592946392232}
-  m_Layer: 13
-  m_Name: enredadera
+  m_Layer: 10
+  m_Name: escalera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.18705045, g: 1, b: 0.042452812, a: 1}
+  m_Color: {r: 0.6792453, g: 0.367359, b: 0.0993236, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

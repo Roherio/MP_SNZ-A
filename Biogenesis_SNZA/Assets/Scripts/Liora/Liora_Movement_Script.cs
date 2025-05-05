@@ -14,7 +14,6 @@ public class Liora_Movement_Script : MonoBehaviour
     //ROGER (TEST)
     public knockbackScript knockbackScript;
 
-
     //Jump Logic
     public float horizontal { get; private set; }
     public bool jumping;

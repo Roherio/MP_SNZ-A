@@ -10,7 +10,7 @@ public class Liora_Attack_Script : MonoBehaviour
     public enum snzaAttackType { NONE, CANGREJO, ESCARABAJO, SECRETARIO, AGUILA, JABALI }
     [SerializeField] public static snzaAttackType currentAttackType = snzaAttackType.CANGREJO;
     public static bool isAttacking = false;
-    public float inputAttackCooldown = 0.8f;
+    public float inputAttackCooldown = 0.4f;
     private float inputCooldownTimer;
 
     //combo Logic
@@ -18,7 +18,7 @@ public class Liora_Attack_Script : MonoBehaviour
     private bool canReceiveNextComboInput = true;
     //private bool bufferedNextComboInput = false; //variable que permet pulsar el següent atac encara que no haguem acabat el que s'esta fent
     private float comboTimer = 0f;
-    private float comboMaxTime = 1f;
+    private float comboMaxTime = 0.8f;
     public bool isComboActive = false;
 
     public enum snzaParryType { NONE, CANGREJO, ESCARABAJO, SECRETARIO, AGUILA, JABALI }
@@ -127,11 +127,11 @@ public class Liora_Attack_Script : MonoBehaviour
             {
                 case snzaParryType.CANGREJO:
                     //aqui determinem el temps que trigarà despres en acabarse l'animació d'attack, i també ressetejem el cooldownTimer perquè no pugui spammejar el atac
-                    deactivateAction = 1f;
+                    deactivateAction = 0.8f;
                     break;
 
                 case snzaParryType.JABALI:
-                    deactivateAction = 1f;
+                    deactivateAction = 0.5f;
                     break;
             }
             inputCooldownTimer = 0f;
@@ -151,13 +151,13 @@ public class Liora_Attack_Script : MonoBehaviour
                         damageAttackLiora = 20f;
                         duracioCollider = 0.2f;
                         delayCollider = 0.2f;
-                        deactivateAction = 0.6f;
+                        deactivateAction = 0.4f;
                         break;
                     case 2:
                         damageAttackLiora = 30f;
                         duracioCollider = 0.2f;
                         delayCollider = 0.2f;
-                        deactivateAction = 0.5f;
+                        deactivateAction = 0.4f;
                         break;
                     case 3:
                         damageAttackLiora = 50f;
@@ -191,18 +191,7 @@ public class Liora_Attack_Script : MonoBehaviour
     }
     private IEnumerator DeactivateAction()
     {
-        /*if (currentComboStep == 4)
-        {
-            AnimationClip currentClip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
-            print(currentClip.length);
-            yield return new WaitForSeconds(currentClip.length);
-        }
-        else
-        {
-            yield return new WaitForSeconds(deactivateAction);
-        }*/
         yield return new WaitForSeconds(deactivateAction);
-        print(deactivateAction);
         isParrying = false;
         isDoingUlti = false;
         canReceiveNextComboInput = true;
