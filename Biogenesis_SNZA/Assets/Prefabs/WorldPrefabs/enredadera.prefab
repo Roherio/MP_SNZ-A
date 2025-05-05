@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7672487524969080123}
   - component: {fileID: 2497172275419877430}
   - component: {fileID: 625011592946392232}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: enredadera
   m_TagString: Untagged
   m_Icon: {fileID: 0}

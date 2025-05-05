@@ -20,6 +20,7 @@ public abstract class State : MonoBehaviour
     /*private bool isDashing;*/
     //LedgeGrab Logic
     public bool isGrabbingLedge = false;
+    public bool isDashing = false;
     //Climb Logic
     /* private bool isClimbing = false;*/
     //attack Logic

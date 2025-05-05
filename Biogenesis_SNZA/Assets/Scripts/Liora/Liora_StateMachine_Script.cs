@@ -13,6 +13,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     public Liora_Run_Script runState;
     public Liora_Airborne_Script airState;
     public Liora_Ledge_Script ledgeState;
+    public Liora_Dash_Script dashState;
     //------------------states ataque
     //crab
     public Liora_CrabAttack1_Script crabAttackState1;
@@ -51,6 +52,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
         runState.Setup(rb, animator, horizontal);
         airState.Setup(rb, animator, horizontal);
         ledgeState.Setup(rb, animator, horizontal);
+        dashState.Setup(rb, animator, horizontal);
         //enviament animator pels diferents estats d'atac
         crabAttackState1.Setup(rb, animator, horizontal);
         crabAttackState2.Setup(rb, animator, horizontal);
@@ -68,12 +70,11 @@ public class Liora_StateMachine_Script : MonoBehaviour
         state.horizontal = horizontal;
         state.isGrounded = isGrounded;
         state.isGrabbingLedge = isGrabbingLedge;
+        state.isDashing = isDashing;
         state.isAttacking = isAttacking;
         state.isParrying = isParrying;
         state.isDoingUlti = isDoingUlti;
         //amb aquest If evitem que el jugador pugui canviar de sprite si esta fent dash
-        if (isDashing) { return; }
-
         if (!isFacingRight && horizontal > 0f)
         {
             FlipSprite();
@@ -93,53 +94,60 @@ public class Liora_StateMachine_Script : MonoBehaviour
         if (Time.timeScale == 0f) { return; }
         if (isGrounded && Mathf.Abs(rb.velocity.y) < 0.01f)
         {
-            if (isAttacking || isParrying)
+            if (isDashing)
             {
-                if (isAttacking)
-                {
-                    switch (Liora_Attack_Script.currentAttackType)
-                    {
-                        case snzaAttackType.CANGREJO:
-                            switch (currentComboStep)
-                            {
-                                case 1:
-                                    state = crabAttackState1;
-                                    break;
-                                case 2:
-                                    state = crabAttackState2;
-                                    break;
-                                case 3:
-                                    state = crabAttackState3;
-                                    break;
-                            }
-                            break;
-                        case snzaAttackType.JABALI:
-                            state = boarAttackState;
-                            break;
-                    }
-                }
-                if (isParrying)
-                {
-                    switch (Liora_Attack_Script.currentParryType)
-                    {
-                        case snzaParryType.CANGREJO:
-                            state = crabParryState;
-                            break;
-                        case snzaParryType.JABALI:
-                            state = boarParryState;
-                            break;
-                    }
-                }
+                state = dashState;
             }
             else
             {
-                if (Mathf.Abs(horizontal) < Mathf.Epsilon)
+                if (isAttacking || isParrying)
                 {
-                    state = idleState;
+                    if (isAttacking)
+                    {
+                        switch (Liora_Attack_Script.currentAttackType)
+                        {
+                            case snzaAttackType.CANGREJO:
+                                switch (currentComboStep)
+                                {
+                                    case 1:
+                                        state = crabAttackState1;
+                                        break;
+                                    case 2:
+                                        state = crabAttackState2;
+                                        break;
+                                    case 3:
+                                        state = crabAttackState3;
+                                        break;
+                                }
+                                break;
+                            case snzaAttackType.JABALI:
+                                state = boarAttackState;
+                                break;
+                        }
+                    }
+                    if (isParrying)
+                    {
+                        switch (Liora_Attack_Script.currentParryType)
+                        {
+                            case snzaParryType.CANGREJO:
+                                state = crabParryState;
+                                break;
+                            case snzaParryType.JABALI:
+                                state = boarParryState;
+                                break;
+                        }
+                    }
                 }
                 else
                 {
-                    state = runState;
+                    if (Mathf.Abs(horizontal) < Mathf.Epsilon)
+                    {
+                        state = idleState;
+                    }
+                    else
+                    {
+                        state = runState;
+                    }
                 }
             }
         }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8092058565122607811}
   - component: {fileID: 2081432234372220534}
   - component: {fileID: 6954774724607462053}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: UrsinaClawAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,4 +91,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAttackValue: 30
-  showRadius: 5.03
+  showRadius: 3.26

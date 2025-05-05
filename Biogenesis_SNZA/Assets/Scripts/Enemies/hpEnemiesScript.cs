@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class hpEnemiesScript : MonoBehaviour
 {
+    public float maxEnemyHP;
     public float enemyHP;
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
 
     private void Start()
     {
+        enemyHP = maxEnemyHP;
         // Obtener el SpriteRenderer al iniciar
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
@@ -21,10 +23,10 @@ public class hpEnemiesScript : MonoBehaviour
     {
         if (collision.CompareTag("LioraAttack"))
         {
-            enemyHP -= enemyHP - Liora_Attack_Script.damageAttackLiora;
+            enemyHP = enemyHP - Liora_Attack_Script.damageAttackLiora;
             StartCoroutine(FlashWhite());
             FindObjectOfType<HitStop>().hitStop(0.005f);
-            CinemachineShake.Instance.ShakeCamera(5f, .3f);
+            CinemachineShake.Instance.ShakeCamera(1f, .3f);
 
             if (enemyHP <= 0f) { Destroy(gameObject); }
         }
@@ -33,7 +35,7 @@ public class hpEnemiesScript : MonoBehaviour
     private IEnumerator FlashWhite()
     {
         spriteRenderer.color = Color.white;
-        yield return new WaitForSeconds(0.1f); // Duración del parpadeo
+        yield return new WaitForSeconds(1f); // Duración del parpadeo
         spriteRenderer.color = originalColor;
     }
 }

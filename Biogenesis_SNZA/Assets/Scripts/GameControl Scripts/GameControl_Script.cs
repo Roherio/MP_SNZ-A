@@ -15,6 +15,9 @@ public class GameControl_Script : MonoBehaviour
     //logica Recolectables
     public static int piezasKhione = 0;
     public static int piezasRumo = 0;
+    //logica Poderes
+    public static bool poderKhione = false;
+    public static bool poderRumo = false;
 
     //logica menus
     public static bool isPaused = false;
