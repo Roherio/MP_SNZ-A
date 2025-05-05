@@ -11,6 +11,10 @@ public class Liora_Movement_Script : MonoBehaviour
     public BoxCollider2D groundCheck;
     public LayerMask groundLayer;
 
+    //ROGER (TEST)
+    public knockbackScript knockbackScript;
+
+
     //Jump Logic
     public float horizontal { get; private set; }
     public bool jumping;
@@ -42,6 +46,11 @@ public class Liora_Movement_Script : MonoBehaviour
     [SerializeField] private Transform climbCheck;
     [SerializeField] private LayerMask climbLayer;
 
+    void Awake()
+    {
+        knockbackScript = GetComponent<knockbackScript>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +60,11 @@ public class Liora_Movement_Script : MonoBehaviour
     void Update()
     {
         if (GameControl_Script.isPaused) { return; }
+        if (knockbackScript != null && knockbackScript.isKnockedBack)
+        {
+            return; // Skip movement while in knockback
+        }
+
         //pas de variables a la state machine
         Liora_StateMachine_Script.horizontal = horizontal;
         Liora_StateMachine_Script.isGrounded = CheckGround();
@@ -65,7 +79,7 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         if (GameControl_Script.isPaused) { return; }
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
-        if (isDashing) { return; }
+        if (isDashing || (knockbackScript != null && knockbackScript.isKnockedBack)) { return; }
         //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge o si està executant una ordre d'atac
         if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti /*|| stopMovementAfterDash > 0*/)
         {
