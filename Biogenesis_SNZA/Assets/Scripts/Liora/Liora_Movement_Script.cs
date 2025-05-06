@@ -45,6 +45,9 @@ public class Liora_Movement_Script : MonoBehaviour
     [SerializeField] private Transform climbCheck;
     [SerializeField] private LayerMask climbLayer;
 
+    private bool onEscalera = false;
+    private bool onEnredadera = false;
+
     void Awake()
     {
         knockbackScript = GetComponent<knockbackScript>();
@@ -63,14 +66,13 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             return; // Skip movement while in knockback
         }
-
         //pas de variables a la state machine
         Liora_StateMachine_Script.horizontal = horizontal;
         Liora_StateMachine_Script.isGrounded = CheckGround();
         Liora_StateMachine_Script.isGrabbingLedge = isGrabbingLedge;
         Liora_StateMachine_Script.isDashing = isDashing;
         Liora_StateMachine_Script.isClimbing = isClimbing;
-        CheckForClimb();
+        //CheckForClimb();
         CheckForLedge();
         stopMovementAfterDash -= Time.deltaTime;
     }
@@ -84,9 +86,20 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             horizontal = 0f;
         }
-        if (!isClimbing)
+        isClimbing = onEscalera || onEnredadera;
+        if (isClimbing && rb.gravityScale != 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0f);
+        }
+        if (!isClimbing && !isGrabbingLedge)
         {
             rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
+            rb.gravityScale = 6f;
+        }
+        if (isClimbing)
+        {
+            rb.gravityScale = 0f;
+            canDash = false;
         }
     }
     public void Movimiento(InputAction.CallbackContext context)
@@ -98,15 +111,15 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         if (GameControl_Script.isPaused) { return; }
         //evitar que salti durant un dash o durant un atac/parry/ulti
-        if (isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
+        if (isClimbing || isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
         if (context.started)
         {
             if (CheckGround() || isClimbing)
             {
                 //saltarà amb la primera input (context.started, sinó seria input continu) nomes si isGrounded es vertader
                 isClimbing = false;
-                canClimb = false;
-                Invoke("EnableClimb", 0.3f);
+                //canClimb = false;
+                //Invoke("EnableClimb", 0.3f);
                 rb.gravityScale = 6f;
                 rb.velocity = new Vector2(rb.velocity.x * horizontal, jumpPower);
                 jumping = true;
@@ -122,7 +135,7 @@ public class Liora_Movement_Script : MonoBehaviour
     public void Dash(InputAction.CallbackContext context)
     {
         if (GameControl_Script.isPaused) { return; }
-        if (isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
+        if (!canDash || isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
         if (context.started && CheckGround() == true && canDash == true)
         {
             StartCoroutine(Dash());
@@ -153,11 +166,15 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             rb.velocity = new Vector2(0f, inputY * climbSpeed);
         }
+        else if (inputX != 0f)
+        {
+            rb.velocity = new Vector2(inputX * groundSpeed, 0f);
+        }
         else
         {
-            rb.velocity = new Vector2 (0f, 0f);
+            rb.velocity = Vector2.zero;
         }
-        rb.gravityScale = 0f;
+        //rb.gravityScale = 0f;
     }
     private IEnumerator Dash()
     {
@@ -183,13 +200,6 @@ public class Liora_Movement_Script : MonoBehaviour
         rb.gravityScale = 6f;
         isGrabbingLedge = false;
         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-
-        //una altra forma de pujar si fessim animació de pujada. En comptes d'això, potser saltar cap amunt i ja
-        /*
-        //Vector2 climbPosition = new Vector2(transform.position.x, transform.position.y + 1.2f);
-        //yield return new WaitForSeconds(0.2f);
-        //fer que el jugador pugi el ledge
-        //transform.position = climbPosition;*/
         Invoke("EnableLedgeGrab", 0.2f);
     }
     private void DropFromLedge()
@@ -208,16 +218,21 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         canGrabLedge = true;
     }
-    private void EnableClimb()
+    /*private void EnableClimb()
     {
         canClimb = true;
-    }
+    }*/
     //fa check si el objecte empty groundCheck fa overlap amb un objecte que pertany a la groundLayer (overlap amb radi de 0.2f)
     private bool CheckGround()
     {
         return Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundLayer).Length > 0;
     }
-    private void CheckForClimb()
+    public void CheckEscaleraEnredadera(string tag, bool state)
+    {
+        if (tag == "Escalera") { onEscalera = state; }
+        else if (tag == "Enredadera") { onEnredadera = state; }
+    }
+    /*private void CheckForClimb()
     {
         if (isClimbing || isGrabbingLedge || !canClimb) { return; }
         Collider2D wall = Physics2D.OverlapCircle(climbCheck.position, 0.2f, climbLayer);
@@ -238,7 +253,7 @@ public class Liora_Movement_Script : MonoBehaviour
                 rb.gravityScale = 6f;
             }
         }
-    }
+    }*/
     //funció que comprova si estem en range de un ledge
     private void CheckForLedge()
     {

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class hpEnemiesScript : MonoBehaviour
 {
+    public float maxEnemyHP;
     public float enemyHP;
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
 
     private void Start()
     {
+        enemyHP = maxEnemyHP;
         // Obtener el SpriteRenderer al iniciar
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)

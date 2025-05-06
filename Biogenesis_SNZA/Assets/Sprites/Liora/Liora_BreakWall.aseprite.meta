@@ -1,0 +1,992 @@
+fileFormatVersion: 2
+guid: 3ed768f9e8144f54f82e90d69547061b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Liora_BreakWall_Frame_0
+    originalName: 
+    pivot: {x: 0.8214286, y: -0.033898305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 312
+      width: 28
+      height: 59
+    spriteID: 2bfe00e087b72504c9387fbbfffd12ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 312}
+  - name: Liora_BreakWall_Frame_1
+    originalName: 
+    pivot: {x: 0.8181819, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 244
+      width: 33
+      height: 60
+    spriteID: 8c06b25bfac56384390ff4d2c001b732
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 244}
+  - name: Liora_BreakWall_Frame_2
+    originalName: 
+    pivot: {x: 0.8181818, y: -0.032786887}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 281
+      width: 44
+      height: 61
+    spriteID: 615949acadfb6af42b72ae38a81fd5bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 281}
+  - name: Liora_BreakWall_Frame_3
+    originalName: 
+    pivot: {x: 0.74, y: -0.032786887}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 142
+      width: 50
+      height: 61
+    spriteID: 55021ed2e65814d4a8db02a039499e1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 142}
+  - name: Liora_BreakWall_Frame_6
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.032258064}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 211
+      width: 45
+      height: 62
+    spriteID: 976c1fb9a2398b642bf7eb30bc7bde23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 211}
+  - name: Liora_BreakWall_Frame_7
+    originalName: 
+    pivot: {x: 0.5813954, y: -0.033898305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 4
+      width: 43
+      height: 59
+    spriteID: 1e78ffa834fb25b43b9d984bc6677c83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 4}
+  - name: Liora_BreakWall_Frame_8
+    originalName: 
+    pivot: {x: 0.5813954, y: -0.035714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 309
+      width: 43
+      height: 56
+    spriteID: 0ef85801730d71d48b4089d040efb9cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 309}
+  - name: Liora_BreakWall_Frame_14
+    originalName: 
+    pivot: {x: 0.6190476, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 251
+      width: 42
+      height: 52
+    spriteID: 780f57042b3883744bfdb4d4ed9ade5b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 251}
+  - name: Liora_BreakWall_Frame_15
+    originalName: 
+    pivot: {x: 0.6190476, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 311
+      width: 42
+      height: 52
+    spriteID: 8c92cd712f9360b4182e22f1a7ae7873
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 311}
+  - name: Liora_BreakWall_Frame_16
+    originalName: 
+    pivot: {x: 0.6097561, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 371
+      width: 41
+      height: 52
+    spriteID: 5fee55e1e9db18948a2a6c2b9ba4437e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 371}
+  - name: Liora_BreakWall_Frame_18
+    originalName: 
+    pivot: {x: 0.5853659, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 431
+      width: 41
+      height: 52
+    spriteID: d871b1e59b15d244fa24a62e5655864f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 431}
+  - name: Liora_BreakWall_Frame_22
+    originalName: 
+    pivot: {x: 0.48000002, y: -0.03773585}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 350
+      width: 50
+      height: 53
+    spriteID: 710df9f50965eef43a3767ada7556c40
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 350}
+  - name: Liora_BreakWall_Frame_23
+    originalName: 
+    pivot: {x: 0.41666666, y: -0.03773585}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 411
+      width: 48
+      height: 53
+    spriteID: 65a3ecb88817d1b45af9ef398ec5822e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 411}
+  - name: Liora_BreakWall_Frame_24
+    originalName: 
+    pivot: {x: 0.42553192, y: -0.03773585}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 4
+      width: 47
+      height: 53
+    spriteID: 07d13485a816bd64dba796bf19dd1cb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 4}
+  - name: Liora_BreakWall_Frame_4
+    originalName: 
+    pivot: {x: 0.6727273, y: -0.032786887}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 55
+      height: 61
+    spriteID: 8a503f0b4aeb2f943b97d6897750a80a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Liora_BreakWall_Frame_5
+    originalName: 
+    pivot: {x: 0.6727273, y: -0.032786887}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 73
+      width: 55
+      height: 61
+    spriteID: a7be8b7d163471348a3fa81061ff5ca0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 73}
+  - name: Liora_BreakWall_Frame_9
+    originalName: 
+    pivot: {x: 0.5813954, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 373
+      width: 43
+      height: 52
+    spriteID: be061a547d6d458498f68482d5dbeac9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 373}
+  - name: Liora_BreakWall_Frame_10
+    originalName: 
+    pivot: {x: 0.5813954, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 433
+      width: 43
+      height: 52
+    spriteID: 6c6b7f6ae9772c148bcb8b49dc08ab7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 433}
+  - name: Liora_BreakWall_Frame_11
+    originalName: 
+    pivot: {x: 0.5813954, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 71
+      width: 43
+      height: 52
+    spriteID: 2f4c750d8b3b7b544bc8951d0d73feb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 71}
+  - name: Liora_BreakWall_Frame_12
+    originalName: 
+    pivot: {x: 0.5813954, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 131
+      width: 43
+      height: 52
+    spriteID: 58054ebbfc272e1499fb5024d36c6495
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 131}
+  - name: Liora_BreakWall_Frame_13
+    originalName: 
+    pivot: {x: 0.5813954, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 191
+      width: 43
+      height: 52
+    spriteID: 183d6af4c95df23448c76e18e301fd7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 191}
+  - name: Liora_BreakWall_Frame_17
+    originalName: 
+    pivot: {x: 0.6097561, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 4
+      width: 41
+      height: 52
+    spriteID: 49a422c9aa63a0545a91ba7eec6d6ea6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 4}
+  - name: Liora_BreakWall_Frame_19
+    originalName: 
+    pivot: {x: 0.5853659, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 64
+      width: 41
+      height: 52
+    spriteID: 89741dc3ccbed2e4ba2e0e581a9d9d0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 64}
+  - name: Liora_BreakWall_Frame_20
+    originalName: 
+    pivot: {x: 0.5853659, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 124
+      width: 41
+      height: 52
+    spriteID: 8ef684b20a75b7c458dde5a30a688dd8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 124}
+  - name: Liora_BreakWall_Frame_21
+    originalName: 
+    pivot: {x: 0.5853659, y: -0.03846154}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 173
+      y: 184
+      width: 41
+      height: 52
+    spriteID: 35ea950eb13ecd64bbc1586cae86bcbe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 173, y: 184}
+  - name: Liora_BreakWall_Frame_25
+    originalName: 
+    pivot: {x: 0.42553192, y: -0.03773585}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 65
+      width: 47
+      height: 53
+    spriteID: 7e691b4e2d81ea94595c0405a2acbc20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 65}
+  - name: Liora_BreakWall_Frame_26
+    originalName: 
+    pivot: {x: 0.42553192, y: -0.03773585}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 126
+      width: 47
+      height: 53
+    spriteID: fabfdf729868524499456c2da97012da
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 126}
+  - name: Liora_BreakWall_Frame_27
+    originalName: 
+    pivot: {x: 0.42553192, y: -0.03773585}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 187
+      width: 47
+      height: 53
+    spriteID: 244ffff013fe4c2418238fd545a64b47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 187}
+  - name: Liora_BreakWall_Frame_28
+    originalName: 
+    pivot: {x: 0.42553192, y: -0.03773585}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 248
+      width: 47
+      height: 53
+    spriteID: 26a802816683778418bd2e7a02215351
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 248}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 270913655
+    name: Liora_BreakWall
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Liora_BreakWall_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 17
+        y: 2
+        width: 28
+        height: 59
+      spriteId: 2bfe00e087b72504c9387fbbfffd12ea
+    - name: Liora_BreakWall_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 13
+        y: 2
+        width: 33
+        height: 60
+      spriteId: 8c06b25bfac56384390ff4d2c001b732
+    - name: Liora_BreakWall_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 4
+        y: 2
+        width: 44
+        height: 61
+      spriteId: 615949acadfb6af42b72ae38a81fd5bd
+    - name: Liora_BreakWall_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 3
+        y: 2
+        width: 50
+        height: 61
+      spriteId: 55021ed2e65814d4a8db02a039499e1f
+    - name: Liora_BreakWall_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 2
+        width: 45
+        height: 62
+      spriteId: 976c1fb9a2398b642bf7eb30bc7bde23
+    - name: Liora_BreakWall_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 2
+        width: 43
+        height: 59
+      spriteId: 1e78ffa834fb25b43b9d984bc6677c83
+    - name: Liora_BreakWall_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 2
+        width: 43
+        height: 56
+      spriteId: 0ef85801730d71d48b4089d040efb9cf
+    - name: Liora_BreakWall_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 14
+        y: 2
+        width: 42
+        height: 52
+      spriteId: 780f57042b3883744bfdb4d4ed9ade5b
+    - name: Liora_BreakWall_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 14
+        y: 2
+        width: 42
+        height: 52
+      spriteId: 8c92cd712f9360b4182e22f1a7ae7873
+    - name: Liora_BreakWall_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 2
+        width: 41
+        height: 52
+      spriteId: 5fee55e1e9db18948a2a6c2b9ba4437e
+    - name: Liora_BreakWall_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 2
+        width: 41
+        height: 52
+      spriteId: d871b1e59b15d244fa24a62e5655864f
+    - name: Liora_BreakWall_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 2
+        width: 50
+        height: 53
+      spriteId: 710df9f50965eef43a3767ada7556c40
+    - name: Liora_BreakWall_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 2
+        width: 48
+        height: 53
+      spriteId: 65a3ecb88817d1b45af9ef398ec5822e
+    - name: Liora_BreakWall_Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 2
+        width: 47
+        height: 53
+      spriteId: 07d13485a816bd64dba796bf19dd1cb4
+    - name: Liora_BreakWall_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 3
+        y: 2
+        width: 55
+        height: 61
+      spriteId: 8a503f0b4aeb2f943b97d6897750a80a
+    - name: Liora_BreakWall_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 3
+        y: 2
+        width: 55
+        height: 61
+      spriteId: a7be8b7d163471348a3fa81061ff5ca0
+    - name: Liora_BreakWall_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 2
+        width: 43
+        height: 52
+      spriteId: be061a547d6d458498f68482d5dbeac9
+    - name: Liora_BreakWall_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 2
+        width: 43
+        height: 52
+      spriteId: 6c6b7f6ae9772c148bcb8b49dc08ab7b
+    - name: Liora_BreakWall_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 2
+        width: 43
+        height: 52
+      spriteId: 2f4c750d8b3b7b544bc8951d0d73feb4
+    - name: Liora_BreakWall_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 2
+        width: 43
+        height: 52
+      spriteId: 58054ebbfc272e1499fb5024d36c6495
+    - name: Liora_BreakWall_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 2
+        width: 43
+        height: 52
+      spriteId: 183d6af4c95df23448c76e18e301fd7d
+    - name: Liora_BreakWall_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 15
+        y: 2
+        width: 41
+        height: 52
+      spriteId: 49a422c9aa63a0545a91ba7eec6d6ea6
+    - name: Liora_BreakWall_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 2
+        width: 41
+        height: 52
+      spriteId: 89741dc3ccbed2e4ba2e0e581a9d9d0e
+    - name: Liora_BreakWall_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 2
+        width: 41
+        height: 52
+      spriteId: 8ef684b20a75b7c458dde5a30a688dd8
+    - name: Liora_BreakWall_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 2
+        width: 41
+        height: 52
+      spriteId: 35ea950eb13ecd64bbc1586cae86bcbe
+    - name: Liora_BreakWall_Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 2
+        width: 47
+        height: 53
+      spriteId: 7e691b4e2d81ea94595c0405a2acbc20
+    - name: Liora_BreakWall_Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 2
+        width: 47
+        height: 53
+      spriteId: fabfdf729868524499456c2da97012da
+    - name: Liora_BreakWall_Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 2
+        width: 47
+        height: 53
+      spriteId: 244ffff013fe4c2418238fd545a64b47
+    - name: Liora_BreakWall_Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 2
+        width: 47
+        height: 53
+      spriteId: 26a802816683778418bd2e7a02215351
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: Default
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 80, y: 80}

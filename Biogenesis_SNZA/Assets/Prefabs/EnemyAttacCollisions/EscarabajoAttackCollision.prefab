@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8544602217517376488}
   - component: {fileID: 3285216805940921054}
   - component: {fileID: 6101042687757417580}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EscarabajoAttackCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
