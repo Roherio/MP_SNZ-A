@@ -22,6 +22,9 @@ public abstract class State : MonoBehaviour
     public bool isGrabbingLedge = false;
     //Climb Logic
     public bool isClimbing = false;
+    //ACTIONS Logic
+    public bool isBreakingWall = false;
+    public bool isTakingItem = false;
     //attack Logic
     public bool isAttacking = false;
     public bool isParrying = false;

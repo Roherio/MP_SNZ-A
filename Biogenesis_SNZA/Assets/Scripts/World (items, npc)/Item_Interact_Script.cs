@@ -20,13 +20,16 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
     public void Interact()
     {
         if (!CanInteract()) { return; }
-        //meter item en el inventario. en el caso de que aun no tenemos el inventario acabado, estamos simplemente instanciando un objeto.
-        TakeItem();
-        Destroy(gameObject);
+        //------------------------------------meter item en el inventario. en el caso de que aun no tenemos el inventario acabado, estamos simplemente actualizando la variable en caso de ser objeto de Khione o Rumo.
+        Liora_StateMachine_Script.isTakingItem = true;
+        Invoke("TakeItem", 1f);//----------------poner el tiempo que tarda la animacion en agacharse y coger el objeto
+        Invoke("StopAnimation", 2.1f);
+        Invoke("DestroyObject", 2.2f);
     }
     public void TakeItem()
     {
         SetTaken(true);
+        print("takenItem!!!!!!!!!!");
         if (itemUser == "Khione")
         {
             GameControl_Script.piezasKhione++;
@@ -36,6 +39,14 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
         {
             GameControl_Script.piezasRumo++;
         }
+    }
+    public void StopAnimation()
+    {
+        Liora_StateMachine_Script.isTakingItem = false;
+    }
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
     }
     public void SetTaken(bool taken)
     {
