@@ -643,7 +643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3272185025709645747, guid: 081e5ec8095fcd349b672a9f6192d3db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.71875
+      value: -21.984001
       objectReference: {fileID: 0}
     - target: {fileID: 3272185025709645747, guid: 081e5ec8095fcd349b672a9f6192d3db, type: 3}
       propertyPath: m_LocalPosition.y
@@ -846,7 +846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5079527829267624495, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.71875
+      value: -21.984001
       objectReference: {fileID: 0}
     - target: {fileID: 5079527829267624495, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1234,8 +1234,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 34.340992, y: -3.671875, z: -7.3468466}
-  m_LocalScale: {x: 2, y: 2, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1430693309}
   - {fileID: 1754700887}
@@ -1273,18 +1273,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1604417, y: 2.5502403}
+  m_Offset: {x: 0.7331412, y: 4.946392}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 6, y: 6}
+    pivot: {x: 0.4625, y: -0.027272727}
+    oldSize: {x: 6.6666665, y: 9.166667}
     newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.694201, y: 4.9669185}
+  m_Size: {x: 4.4123006, y: 8.729687}
   m_EdgeRadius: 0
 --- !u!50 &1380656609
 Rigidbody2D:
@@ -1323,7 +1323,7 @@ Animator:
   m_GameObject: {fileID: 1380656605}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 98a1d198595306f4e8606885c3aed9f9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2d3d892eb3a937e4ea6294f63a278da0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1375,7 +1375,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 317b8365a4649ab459f6cb58ec8f9f18, type: 3}
+  m_Sprite: {fileID: 9113360631600841439, guid: a44a7d2b9561a9541bcb10140f9bab60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1402,6 +1402,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   moveSpeed: 6
   chaseTime: 1
+  enemyScale: 1
   attackPoint: {fileID: 1430693309}
   smashAttackSpawn: {fileID: 1754700887}
   clawIceSpike_1_Spawn: {fileID: 285377522}
@@ -1459,7 +1460,7 @@ Transform:
   m_GameObject: {fileID: 1430693308}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.8306549, y: 2.5, z: 0.40537375}
+  m_LocalPosition: {x: -3.4477305, y: 2.5, z: 0.76345336}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1942,7 +1943,7 @@ Transform:
   m_GameObject: {fileID: 1901365309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.720129, y: 2.7183828, z: -10}
+  m_LocalPosition: {x: -21.985373, y: 2.716896, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

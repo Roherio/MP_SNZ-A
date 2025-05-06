@@ -15,6 +15,7 @@ public class UrsinaScript : MonoBehaviour
     private bool canAttack = true;
     private bool isAttacking = false;
     public float chaseTime;
+    public float enemyScale = 1f;
 
     //Spawn de instancias
     public Transform attackPoint;
@@ -47,6 +48,7 @@ public class UrsinaScript : MonoBehaviour
     void Start()
     {
         hpEnemiesScript = GetComponent<hpEnemiesScript>();
+        animator = GetComponent<Animator>();
         attackDurationTimer = clawAttackDuration; //valor únicament creat per després ser portat a un altre script
         playerPosition = GameObject.FindWithTag("Player").transform;
         canAttack = true;
@@ -70,8 +72,8 @@ public class UrsinaScript : MonoBehaviour
                 direction.y = 0; //fem que la direcció en y sigui 0
                 direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
                 rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
-                if (direction.x < 0) { transform.localScale = new Vector3(2, 2, 2); }
-                else { transform.localScale = new Vector3(-2, 2, 2); }
+                if (direction.x < 0) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+                else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
         }
         //Si esta lluny del jugador pero suficientment a prop com per atacar
         if (enemyToPlayerDistance <= farDistance && enemyToPlayerDistance > mediumDistance && !isAttacking && canAttack) 
@@ -84,6 +86,11 @@ public class UrsinaScript : MonoBehaviour
                 {
                     print("I should chase");
                     isChasing();
+                }
+                if (longRangeAttack == 1f)
+                {
+                    print("I should Claw Attack");
+                    StartCoroutine(clawAttackPhase2());
                 }
                 if (longRangeAttack == 2f)
                 {
@@ -196,6 +203,7 @@ public class UrsinaScript : MonoBehaviour
     //Funció per perseguir al jugador
     void isChasing()
     {
+        animator.SetBool("isWalking", true);
         float chaseTimer = 0f;
         isAttacking = true;
         canAttack = false;
@@ -206,13 +214,14 @@ public class UrsinaScript : MonoBehaviour
             direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
 
             rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
-            if (direction.x < 0) { transform.localScale = new Vector3(2, 2, 2); }
-            else { transform.localScale = new Vector3(-2, 2, 2); }
+            if (direction.x < 0) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+            else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
 
             chaseTimer += Time.deltaTime;
         }
         rb.velocity = Vector3.zero;
         isAttacking = false;
+        animator.SetBool("isWalking", false);
         canAttack = true;
     }
     /*IEnumerator isChasing()
@@ -242,12 +251,12 @@ public class UrsinaScript : MonoBehaviour
 
     IEnumerator clawAttack()
     {
-
+        animator.SetBool("isClawAttacking", true);
         //Temps de preparació de l'atac
         isAttacking = true;
         canAttack = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
-        else { transform.localScale = new Vector3(-2, 2, 2); }
+        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
         dashDirection = (playerPosition.position - transform.position);
         dashDirection.y = 0;
         dashDirection = dashDirection.normalized;
@@ -274,19 +283,21 @@ public class UrsinaScript : MonoBehaviour
         yield return new WaitForSeconds(AttackCooldown);
 
         //Pot tornar a atacar
+        animator.SetBool("isClawAttacking", false);
         isAttacking = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
-        else { transform.localScale = new Vector3(-2, 2, 2); }
+        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
         canAttack = true;
     }
 
     IEnumerator clawAttackPhase2()
     {
+        animator.SetBool("isClawAttacking", true);
         //Temps de preparació de l'atac
         isAttacking = true;
         canAttack = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
-        else { transform.localScale = new Vector3(-2, 2, 2); }
+        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
         dashDirection = (playerPosition.position - transform.position);
         dashDirection.y = 0;
         dashDirection = dashDirection.normalized;
@@ -314,23 +325,26 @@ public class UrsinaScript : MonoBehaviour
         yield return new WaitForSeconds(AttackCooldown);
 
         //Pot tornar a atacar
+        animator.SetBool("isClawAttacking", false);
         isAttacking = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
-        else { transform.localScale = new Vector3(-2, 2, 2); }
+        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
         canAttack = true;
     }
     IEnumerator smashAttack()
     {
+        animator.SetBool("isHowling", true);
         //Temps de preparació de l'atac
         isAttacking = true;
         canAttack = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
-        else { transform.localScale = new Vector3(-2, 2, 2); }
+        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
         attackTimer = 0f;
 
         yield return new WaitForSeconds(1.5f);
-        
-        if(!OnPhase2) { smashAttackInstance(); }
+        animator.SetBool("isHowling", false);
+
+        if (!OnPhase2) { smashAttackInstance(); }
         if (OnPhase2)
         {
             smashAttackInstancePhase2();
@@ -343,14 +357,17 @@ public class UrsinaScript : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         //Pot tornar a atacar
+        
         isAttacking = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
-        else { transform.localScale = new Vector3(-2, 2, 2); }
+        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
         canAttack = true;
     }
 
     IEnumerator Roar()
     {
+        animator.SetBool("isHowling", true);
+        CinemachineShake.Instance.ShakeCamera(10f, 1f);
         //Temps de preparació de l'atac
         isAttacking = true;
         canAttack = false;
@@ -371,12 +388,12 @@ public class UrsinaScript : MonoBehaviour
 
 
         yield return new WaitForSeconds(AttackCooldown);
-
+        animator.SetBool("isHowling", false);
 
         //Pot tornar a atacar
         isAttacking = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(2, 2, 2); }
-        else { transform.localScale = new Vector3(-2, 2, 2); }
+        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
         canAttack = true;
     }
 
