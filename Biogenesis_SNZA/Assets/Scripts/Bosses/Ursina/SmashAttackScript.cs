@@ -18,7 +18,7 @@ public class SmashAttackScript : MonoBehaviour
         scaleChange = new Vector3(1.5f, 1.5f, 1.5f);
         rb = GetComponent<Rigidbody2D>();
         playerPosition = GameObject.FindWithTag("Player").transform;
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 2f);
         print(GameControl_Script.lifeLiora);
         attackDirection = (playerPosition.position - transform.position);
         attackDirection.y = 0;

@@ -15,10 +15,9 @@ MonoBehaviour:
   npcName: Khione
   npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
   dialogueLines:
-  - Si quieres que te ayude, deberas traerme dos herramientas
-  - Una de ellas es una cosita asi que bota bota y esta hecha de mental, raro eh?
-  - La otra no bota bota, si te pegan con ella duele duele, porque es de metal.
-  - Confio en que sabras dar con ellas!
-  autoProgressLines: 01000000
+  - Me falta una pieza de material resistente... Metal, quizas?
+  - Agh... si tuviera algo mas elastico...
+  - Oh, pensaba en voz alta otra vez, disculpa.
+  autoProgressLines: 000000
   autoProgressDelay: 1.5
   typingSpeed: 0

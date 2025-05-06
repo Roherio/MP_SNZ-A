@@ -6,7 +6,7 @@ public class knockbackScript : MonoBehaviour
 {
     public Rigidbody2D rb;
     public bool isKnockedBack = false;
-    public float knockbackDuration = 0.2f;
+    public float knockbackDuration = 0.5f;
 
     private void Start()
     {
@@ -24,8 +24,14 @@ public class knockbackScript : MonoBehaviour
 
     private IEnumerator KnockbackCooldown()
     {
+        //activar knockback, i mentres esta en knockback no et poden tornar a pegar fins que es desactivi
         isKnockedBack = true;
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
+        Liora_StateMachine_Script.isKnockedBack = true;
         yield return new WaitForSeconds(knockbackDuration);
+        //desactivar knockback i tornar a ser vulnerable
         isKnockedBack = false;
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
+        Liora_StateMachine_Script.isKnockedBack = false;
     }
 }

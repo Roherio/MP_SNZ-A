@@ -175,7 +175,7 @@ MonoBehaviour:
   playerPosition: {fileID: 0}
   enemyAttackValue: 10
   rb: {fileID: 0}
-  objectSpeed: 30
+  objectSpeed: 20
 --- !u!95 &794974183131687089
 Animator:
   serializedVersion: 5

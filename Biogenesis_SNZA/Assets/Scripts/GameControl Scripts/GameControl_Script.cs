@@ -14,7 +14,8 @@ public class GameControl_Script : MonoBehaviour
 
     //logica Recolectables
     public static int piezasKhione = 0;
-    public static int piezasRumo = 0;
+    public static bool cascosRumo = false;
+    public static bool mantaRumo = false;
     //logica Poderes
     public static bool poderKhione = false;
     public static bool poderRumo = false;
@@ -44,7 +45,10 @@ public class GameControl_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (mantaRumo && cascosRumo)
+        {
+            poderRumo = true;
+        }
     }
     public static void TakeDamage(float hpLiora, float damageEnemy)
     {

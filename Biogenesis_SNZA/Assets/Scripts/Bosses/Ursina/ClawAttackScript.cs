@@ -10,7 +10,7 @@ public class ClawAttackScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, (UrsinaScript.attackDurationTimer + 0.5f));
+        Destroy(gameObject, (UrsinaScript.attackDurationTimer));
         print(GameControl_Script.lifeLiora);
     }
 
@@ -41,7 +41,7 @@ public class ClawAttackScript : MonoBehaviour
 
             //
             Destroy(gameObject);
-            print("L'atac ha fet hit per " + enemyAttackValue +" punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
+            print("Has tocat a l'enemic! T'ha fet " + enemyAttackValue +" punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
         }
 
     }

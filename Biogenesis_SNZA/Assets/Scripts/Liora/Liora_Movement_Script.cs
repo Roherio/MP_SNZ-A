@@ -23,6 +23,7 @@ public class Liora_Movement_Script : MonoBehaviour
     //Dash Logic
     public bool isDashing = false;
     private bool canDash = true;
+    private bool canDashLadder = true; //variable per saber si podem dashear al no estar a una escala (true si podem, false si estem a una escala i no podem)
     [SerializeField] private float dashPower = 36f;
     private float dashTime = 0.2f;
     private float dashCooldown = 0.6f;
@@ -95,12 +96,14 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
             rb.gravityScale = 6f;
+            canDashLadder = true;
         }
         if (isClimbing)
         {
             rb.gravityScale = 0f;
-            canDash = false;
+            canDashLadder = false;
         }
+        if (Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem) { rb.velocity = Vector2.zero; }
     }
     public void Movimiento(InputAction.CallbackContext context)
     {
@@ -111,7 +114,7 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         if (GameControl_Script.isPaused) { return; }
         //evitar que salti durant un dash o durant un atac/parry/ulti
-        if (isClimbing || isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
+        if (isClimbing || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
         if (context.started)
         {
             if (CheckGround() || isClimbing)
@@ -135,7 +138,7 @@ public class Liora_Movement_Script : MonoBehaviour
     public void Dash(InputAction.CallbackContext context)
     {
         if (GameControl_Script.isPaused) { return; }
-        if (!canDash || isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
+        if (!canDash || !canDashLadder || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
         if (context.started && CheckGround() == true && canDash == true)
         {
             StartCoroutine(Dash());

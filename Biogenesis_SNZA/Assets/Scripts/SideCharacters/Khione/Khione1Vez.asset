@@ -15,11 +15,14 @@ MonoBehaviour:
   npcName: Khione
   npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
   dialogueLines:
-  - Hola quien eres que quieres?
-  - Aaah, asi que eres de fuera?
-  - Que interesante, tu y yo nos podriamos llevar bien
-  - "Si quieres que te ense\xF1e algo util, no te saldra gratis, deberas traerme
-    dos herramientas que me seran utiles a mi"
-  autoProgressLines: 01000000
+  - Flipando pepinillos de terciopelo! Que haces aqui? No te habia visto antes. De
+    hecho, nunca habia visto a alguien como tu.
+  - De donde eres? Que llevas ahi? Como funciona?
+  - Pocas palabras, eh? Bueno, ya hablo yo. Mi padre dice que hablo un monton.
+  - Siempre cuida de mi para que este bien, aunque a veces no me guste, pero he de
+    confiar en el. Si no puedo confiar en quien me ha criado, en quien?
+  - Necesitas que arregle eso? Bueno, gratis no lo voy a hacer. Pero no quiero tu
+    dinero, no me sirve. Si consigues algo que busco, haremos negocios.
+  autoProgressLines: 000000
   autoProgressDelay: 1.5
   typingSpeed: 0

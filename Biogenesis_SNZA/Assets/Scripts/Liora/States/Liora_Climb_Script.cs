@@ -19,6 +19,7 @@ public class Liora_Climb_Script : State
         //mirar si l'animacio es mou o esta estatica a l'escala
         if (Mathf.Abs(rb.velocity.y) > 0.01f)
         {
+            //-----------------------------------playSOUND escalera
             animator.speed = 1f;
         }
         else

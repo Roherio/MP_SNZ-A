@@ -22,7 +22,9 @@
 		"STAIRS.png",
 		"OUTSIDE_COLLISIONS.png",
 		"DUNGEON.png",
-		"CIUDAD_TILEMAP.png"
+		"CIUDAD_TILEMAP.png",
+		"Dungeon_tile_2.png",
+		"STAIRS2.png"
 	],
 	"entities" : {}
 }

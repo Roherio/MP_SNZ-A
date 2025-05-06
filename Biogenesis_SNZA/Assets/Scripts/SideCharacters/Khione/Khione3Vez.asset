@@ -15,9 +15,9 @@ MonoBehaviour:
   npcName: Khione
   npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
   dialogueLines:
-  - Vaya! Tienes algo de lo que te he pedido!
-  - Aun asi, te sigue faltando alguna de las cosas.
-  - Animo! Esto se pone muy interesante...
+  - Vaya! Yo estaba buscando justo esto!
+  - Aun asi, sigo buscando mas materiales metalicos...
+  - Animo! Esto se pone muy interesante.
   autoProgressLines: 000000
   autoProgressDelay: 1.5
   typingSpeed: 0

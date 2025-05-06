@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7648778053381285373}
-  - component: {fileID: 4963773444862162988}
+  - component: {fileID: 892345711407198159}
   - component: {fileID: 459019768133840567}
   - component: {fileID: 1926590662136806276}
   m_Layer: 0
@@ -34,7 +34,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4963773444862162988
+--- !u!114 &892345711407198159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,14 +43,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5664541954367605860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f47120650ae30d498bf2ca0ef37c0e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bee3c959ad64aa438107a939ba64055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueData1: {fileID: 11400000, guid: 0fba42a37e7a709469b5279840b91f66, type: 2}
-  dialogueData2: {fileID: 11400000, guid: 647ce20e153e846469fe48050108764a, type: 2}
-  dialogueData3: {fileID: 11400000, guid: 8a627b268d9ad7646b987ad054087cd5, type: 2}
-  dialogueData4: {fileID: 11400000, guid: 62449aa5d89667043a66c780b3ae39e1, type: 2}
-  dialogueData5: {fileID: 11400000, guid: cc3e5b74ff301c0418b5c2bcc8c6c805, type: 2}
+  dialogueData1: {fileID: 11400000, guid: bd6eb628a2c388444a85271cd1825655, type: 2}
+  dialogueData2: {fileID: 11400000, guid: 7384c71600002634398cdeb199892f64, type: 2}
+  dialogueData3: {fileID: 11400000, guid: 5fbd47562375ef54a87da2582f0e982f, type: 2}
+  dialogueData4: {fileID: 11400000, guid: 562247339f9664040bf40905f753d888, type: 2}
+  dialogueData5: {fileID: 11400000, guid: 644ae89ff1514fa45b4516d3793b4274, type: 2}
   currentDialogue: dialogueData1
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
