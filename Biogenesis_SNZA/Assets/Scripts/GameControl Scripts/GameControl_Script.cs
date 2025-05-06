@@ -44,7 +44,10 @@ public class GameControl_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (piezasRumo >= 2)
+        {
+            poderRumo = true;
+        }
     }
     public static void TakeDamage(float hpLiora, float damageEnemy)
     {

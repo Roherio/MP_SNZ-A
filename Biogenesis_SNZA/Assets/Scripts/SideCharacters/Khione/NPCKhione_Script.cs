@@ -15,6 +15,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
     public NPCDialogue_Script dialogueData3;
     public NPCDialogue_Script dialogueData4;
     public NPCDialogue_Script dialogueData5;
+    
     public string currentDialogue = "dialogueData1";
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText;
@@ -22,13 +23,23 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
+
+    //variable que només serveix perquè Khione hagi de dir una vegada mínim el dialeg en el que t'explica quines peces necessita, ja que sinó podries arribar amb les dues peces a l'inventari i te les accepta
+    private bool doOnceDialogue2 = false;
     void Update()
     {
         if (currentDialogue == "dialogueData2")
         {
-            if (GameControl_Script.piezasKhione == 1)
+            if (doOnceDialogue2 == true)
             {
-                currentDialogue = "dialogueData3";
+                if (GameControl_Script.piezasKhione == 1)
+                {
+                    currentDialogue = "dialogueData3";
+                }
+                if (GameControl_Script.piezasKhione == 2)
+                {
+                    currentDialogue = "dialogueData4";
+                }
             }
         }
         if (currentDialogue == "dialogueData3")
@@ -160,6 +171,8 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             else
             {
                 EndDialogue();
+                //----------------ACONSEGUIM EL PODER DE ESCALAR ENREDADERAS
+                GameControl_Script.poderKhione = true;
                 currentDialogue = "dialogueData5";
             }
         }
@@ -197,6 +210,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             else
             {
                 EndDialogue();
+                doOnceDialogue2 = true;
             }
         }
         if (currentDialogue == "dialogueData1")
