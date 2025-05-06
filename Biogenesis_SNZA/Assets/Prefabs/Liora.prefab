@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 4785982769148054761}
   - component: {fileID: 895927059304751807}
   m_Layer: 6
-  m_Name: Crab
+  m_Name: CrabParry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,6 +90,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -103,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6377004406027641803}
   m_Layer: 6
-  m_Name: BehavioursMovement (1)
+  m_Name: BehavioursActions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +125,7 @@ Transform:
   m_Children:
   - {fileID: 6022332959004709097}
   - {fileID: 4703191692299058091}
+  - {fileID: 6361641985070432647}
   m_Father: {fileID: 5079527829267624495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2768379810570968898
@@ -179,6 +181,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -235,6 +238,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -326,6 +330,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -382,6 +387,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -541,7 +547,7 @@ GameObject:
   - component: {fileID: 7893012078762040870}
   - component: {fileID: 4077681511628036436}
   m_Layer: 6
-  m_Name: Boar
+  m_Name: BoarParry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,6 +589,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -840,6 +847,7 @@ MonoBehaviour:
   dashState: {fileID: 1832675466478992224}
   takeItemState: {fileID: 5771570687653394395}
   breakWallState: {fileID: 4758328587612309351}
+  hurtState: {fileID: 5081861138685372778}
   crabAttackState1: {fileID: 2909936836818465901}
   crabAttackState2: {fileID: 3242684065176004098}
   crabAttackState3: {fileID: 2511590161386230145}
@@ -900,13 +908,13 @@ MonoBehaviour:
   animator: {fileID: 6844576158491812986}
   inputAttackCooldown: 0.4
   isComboActive: 0
-  currentUltiType: 0
   attackLocation: {fileID: 9003009591592549887}
-  duracioCollider: 0
-  delayCollider: 0
   colliderAttackCrabLiora: {fileID: 165051307909327957, guid: 86933764d29bffd43afa9ce7b5f4a8d4, type: 3}
   colliderAttackBoarLiora: {fileID: 0}
+  currentUltiType: 0
   deactivateAction: 0
+  duracioCollider: 0
+  delayCollider: 0
 --- !u!212 &3647475253173115995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1304,6 +1312,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1437,6 +1446,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1493,6 +1503,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1549,6 +1560,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1638,6 +1650,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1771,6 +1784,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1917,6 +1931,7 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1973,6 +1988,64 @@ MonoBehaviour:
   isClimbing: 0
   isBreakingWall: 0
   isTakingItem: 0
+  isKnockedBack: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0
+--- !u!1 &7730525161679000548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6361641985070432647}
+  - component: {fileID: 5081861138685372778}
+  m_Layer: 6
+  m_Name: Hurt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6361641985070432647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7730525161679000548}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6377004406027641803}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5081861138685372778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7730525161679000548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541500df06d2e0140a946a2d94cd619c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  isGrounded: 0
+  jumping: 0
+  jumpPower: 24
+  isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
+  isBreakingWall: 0
+  isTakingItem: 0
+  isKnockedBack: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0

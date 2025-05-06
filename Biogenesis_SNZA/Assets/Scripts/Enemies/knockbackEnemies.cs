@@ -6,7 +6,7 @@ public class knockbackScript : MonoBehaviour
 {
     public Rigidbody2D rb;
     public bool isKnockedBack = false;
-    public float knockbackDuration = 0.2f;
+    public float knockbackDuration = 0.5f;
 
     private void Start()
     {
@@ -25,7 +25,9 @@ public class knockbackScript : MonoBehaviour
     private IEnumerator KnockbackCooldown()
     {
         isKnockedBack = true;
+        Liora_StateMachine_Script.isKnockedBack = true;
         yield return new WaitForSeconds(knockbackDuration);
         isKnockedBack = false;
+        Liora_StateMachine_Script.isKnockedBack = false;
     }
 }
