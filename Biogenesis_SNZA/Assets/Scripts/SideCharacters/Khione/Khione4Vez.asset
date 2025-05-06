@@ -15,10 +15,12 @@ MonoBehaviour:
   npcName: Khione
   npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
   dialogueLines:
-  - Bien!!! Aqui esta todo!
-  - Con que quieres combinarte con diferentes animales, eh?
-  - Creo que tengo algo que puede interesarte, la SNZ-A de ARDILLA!
-  - "Con ella, ninguna enredadera se te resistir\xE1!"
-  autoProgressLines: 00000000
+  - Oye! Esto es perfecto! Aqui esta todo!
+  - Ya que ahora somos coleguis, tengo algo para ti.
+  - Sabes escalar como las ardillas? No hablo de escaleras, hablo de la naturaleza,
+    enredaderas.
+  - Aunque necesitaras una cosa mas para poder hacer eso. Toma esto en agradecimiento.
+  - Con ella, ninguna enredadera se te resistira!
+  autoProgressLines: 0000000000
   autoProgressDelay: 1.5
   typingSpeed: 0
