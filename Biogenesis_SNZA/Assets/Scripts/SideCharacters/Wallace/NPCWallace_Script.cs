@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
+public class NPCWallace_Script : MonoBehaviour, IInteractable_Script
 {
     //dialogueData1 es primera vez
     //dialogueData2 es despues de hablar la primera vez
@@ -25,29 +25,11 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
     private bool isTyping, isDialogueActive;
 
     //variable que només serveix perquè Khione hagi de dir una vegada mínim el dialeg en el que t'explica quines peces necessita, ja que sinó podries arribar amb les dues peces a l'inventari i te les accepta
-    private bool doOnceDialogue2 = false;
     void Update()
     {
-        if (currentDialogue == "dialogueData2")
+        if (currentDialogue == "dialogueData4" && EventsManager_Script.habladoKhione1vez)
         {
-            if (doOnceDialogue2 == true)
-            {
-                if (GameControl_Script.piezasKhione == 1)
-                {
-                    currentDialogue = "dialogueData3";
-                }
-                if (GameControl_Script.piezasKhione == 2)
-                {
-                    currentDialogue = "dialogueData4";
-                }
-            }
-        }
-        if (currentDialogue == "dialogueData3")
-        {
-            if (GameControl_Script.piezasKhione == 2)
-            {
-                currentDialogue = "dialogueData4";
-            }
+            currentDialogue = "dialogueData5";
         }
     }
     public bool CanInteract()
@@ -171,9 +153,6 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             else
             {
                 EndDialogue();
-                //----------------ACONSEGUIM EL PODER DE ESCALAR ENREDADERAS
-                GameControl_Script.poderKhione = true;
-                currentDialogue = "dialogueData5";
             }
         }
         if (currentDialogue == "dialogueData3")
@@ -192,6 +171,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             else
             {
                 EndDialogue();
+                currentDialogue = "dialogueData4";
             }
         }
         if (currentDialogue == "dialogueData2")
@@ -210,7 +190,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             else
             {
                 EndDialogue();
-                doOnceDialogue2 = true;
+                currentDialogue = "dialogueData3";
             }
         }
         if (currentDialogue == "dialogueData1")
@@ -230,7 +210,6 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             {
                 EndDialogue();
                 currentDialogue = "dialogueData2";
-                EventsManager_Script.habladoKhione1vez = true;
             }
         }
     }

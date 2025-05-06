@@ -24,18 +24,18 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
 
     void Update()
     {
+        if (currentDialogue == "dialogueData3")
+        {
+            if (GameControl_Script.mantaRumo)
+            {
+                currentDialogue = "dialogueData4";
+            }
+        }
         if (currentDialogue == "dialogueData1")
         {
             if (GameControl_Script.cascosRumo)
             {
                 currentDialogue = "dialogueData2";
-            }
-        }
-        if (currentDialogue == "dialogueData2" || currentDialogue == "dialogueData3")
-        {
-            if (GameControl_Script.mantaRumo)
-            {
-                currentDialogue = "dialogueData4";
             }
         }
     }
