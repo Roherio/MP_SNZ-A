@@ -8,6 +8,7 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
     public string itemID { get; private set; }
 
     public string itemUser;
+    public string itemName;
     //public Sprite usedSprite; en el caso de que tuvieramos objetos tipo cofre que se quedan abiertos
     private void Start()
     {
@@ -37,7 +38,15 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
         }
         if (itemUser == "Rumo")
         {
-            GameControl_Script.piezasRumo++;
+            if (itemName == "cascosRumo")
+            {
+                GameControl_Script.cascosRumo = true;
+            }
+            else if (itemName == "mantaRumo")
+            {
+                GameControl_Script.mantaRumo = true;
+            }
+            
         }
     }
     public void StopAnimation()

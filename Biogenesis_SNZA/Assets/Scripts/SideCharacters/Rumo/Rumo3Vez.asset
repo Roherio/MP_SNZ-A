@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d7318cb11f40fa44bccbe30dbcc194e, type: 3}
-  m_Name: Khione3Vez
+  m_Name: Rumo3Vez
   m_EditorClassIdentifier: 
-  npcName: Khione
+  npcName: Rumo
   npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
   dialogueLines:
-  - Vaya! Yo estaba buscando justo esto!
-  - Aun asi, sigo buscando mas materiales metalicos...
-  - Animo! Esto se pone muy interesante.
-  autoProgressLines: 000000
+  - Todos me veran, no me puedo mover. Es demasiado peligroso.
+  autoProgressLines: 00
   autoProgressDelay: 1.5
   typingSpeed: 0
