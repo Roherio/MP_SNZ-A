@@ -25,7 +25,7 @@ public class SmashAttackPhase2Ursina: MonoBehaviour
         transform.position = new Vector2(playerPosition.position.x, enemyLocation.position.y);
         scaleChange = new Vector3(1.5f, 1.5f, 1.5f);
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1.5f);
         print(GameControl_Script.lifeLiora);
         Invoke("enableHitBox", 1f);
 

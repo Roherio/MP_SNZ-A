@@ -2,21 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClawAttackScript : MonoBehaviour
+public class CeilingIceSpikeScript : MonoBehaviour
 {
     [SerializeField] float enemyAttackValue;
-    [SerializeField] float showRadius;
-
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, (UrsinaScript.attackDurationTimer));
-        print(GameControl_Script.lifeLiora);
+        Destroy(gameObject, 3f);
     }
 
     // Update is called once per frame
     void Update()
     {
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -41,13 +39,7 @@ public class ClawAttackScript : MonoBehaviour
 
             //
             Destroy(gameObject);
-            print("Has tocat a l'enemic! T'ha fet " + enemyAttackValue +" punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
+            print("L'atac ha fet hit per " + enemyAttackValue + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
         }
-
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, showRadius);
     }
 }
