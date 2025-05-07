@@ -9,7 +9,8 @@
 	"neighbourLevels": [],
 	"customFields" : {},
 	"layers": [
-		"Walls.png",
+		"WATER.png",
+		"UNDERGROUND.png",
 		"STAIRS.png",
 		"OUTSIDE_COLLISIONS.png",
 		"DUNGEON.png",
