@@ -1400,6 +1400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxEnemyHP: 1000
   enemyHP: 1000
+  deathAnimationDuration: 0
+  animator: {fileID: 0}
 --- !u!61 &1380656614
 BoxCollider2D:
   m_ObjectHideFlags: 0
