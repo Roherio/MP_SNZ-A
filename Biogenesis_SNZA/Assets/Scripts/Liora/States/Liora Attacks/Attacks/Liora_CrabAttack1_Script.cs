@@ -11,6 +11,11 @@ public class Liora_CrabAttack1_Script : State
     }
     public override void Do()
     {
+        /*if (Liora_Attack_Script.haRecibidoInput = true)
+        {
+            isComplete = true;
+            ataque2
+        }*/
         if (!isAttacking)
         {
             isComplete = true;

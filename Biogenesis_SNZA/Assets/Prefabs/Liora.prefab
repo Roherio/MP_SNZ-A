@@ -880,7 +880,7 @@ MonoBehaviour:
   groundSpeed: 10
   jumpPower: 24
   isDashing: 0
-  dashPower: 36
+  dashPower: 50
   trailRenderer: {fileID: 4869507558380449802}
   ledgeCheck: {fileID: 3596653249378586279}
   ledgeLayer:

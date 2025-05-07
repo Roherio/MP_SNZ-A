@@ -16,10 +16,11 @@ public class Liora_Interaction_Script : MonoBehaviour
     }
     private void Update()
     {
-        if (GameControl_Script.isPaused) { return; }
+        
     }
     public void OnInteract(InputAction.CallbackContext context)
     {
+        if (GameControl_Script.isPaused) { return; }
         if (context.performed)
         {
             interactableInRange?.Interact();

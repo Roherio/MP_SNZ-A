@@ -27,6 +27,10 @@ public class NPCWallace_Script : MonoBehaviour, IInteractable_Script
     //variable que només serveix perquè Khione hagi de dir una vegada mínim el dialeg en el que t'explica quines peces necessita, ja que sinó podries arribar amb les dues peces a l'inventari i te les accepta
     void Update()
     {
+        if (isDialogueActive)
+        {
+            GameControl_Script.isPausedDialogue = true;
+        }
         if (currentDialogue == "dialogueData4" && EventsManager_Script.habladoKhione1vez)
         {
             currentDialogue = "dialogueData5";
@@ -36,10 +40,9 @@ public class NPCWallace_Script : MonoBehaviour, IInteractable_Script
     {
         return !isDialogueActive;
     }
-
     public void Interact()
     {
-        if (PauseController_Script.isGamePaused && !isDialogueActive) { return; }
+        if (GameControl_Script.isPaused && !isDialogueActive) { return; }
         if (isDialogueActive)
         {
             NextLine();
@@ -60,7 +63,6 @@ public class NPCWallace_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData5.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
 
             StartCoroutine(TypeLine());
         }
@@ -73,7 +75,6 @@ public class NPCWallace_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData4.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
 
             StartCoroutine(TypeLine());
         }
@@ -86,7 +87,6 @@ public class NPCWallace_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData3.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
 
             StartCoroutine(TypeLine());
         }
@@ -99,7 +99,6 @@ public class NPCWallace_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData2.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
 
             StartCoroutine(TypeLine());
         }
@@ -112,7 +111,6 @@ public class NPCWallace_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData1.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
 
             StartCoroutine(TypeLine());
         }
@@ -305,6 +303,6 @@ public class NPCWallace_Script : MonoBehaviour, IInteractable_Script
         isDialogueActive = false;
         dialogueText.SetText("");
         dialoguePanel.SetActive(false);
-        PauseController_Script.SetPause(false);
+        GameControl_Script.isPausedDialogue = false;
     }
 }

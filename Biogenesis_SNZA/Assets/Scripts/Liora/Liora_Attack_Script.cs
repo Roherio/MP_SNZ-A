@@ -15,6 +15,7 @@ public class Liora_Attack_Script : MonoBehaviour
     private float inputCooldownTimer;
     //combo Logic
     public static int currentComboStep = 0;
+    private int maxComboSteps;
     private bool canReceiveNextComboInput = true;
     //private bool bufferedNextComboInput = false; //variable que permet pulsar el següent atac encara que no haguem acabat el que s'esta fent
     private float comboTimer = 0f;
@@ -119,6 +120,7 @@ public class Liora_Attack_Script : MonoBehaviour
         switch (currentAttackType)
         {
             case snzaAttackType.CANGREJO:
+                maxComboSteps = 3;
                 switch (step)
                 {
                     case 1:
@@ -145,6 +147,7 @@ public class Liora_Attack_Script : MonoBehaviour
                 //InstanciarAtaque(colliderAttackCrabLiora);
                 break;
             case snzaAttackType.JABALI:
+                maxComboSteps = 2;
                 damageAttackLiora = 50f;
                 deactivateAction = 0.5f;
                 break;
@@ -196,7 +199,7 @@ public class Liora_Attack_Script : MonoBehaviour
         isDoingUlti = false;
         canReceiveNextComboInput = true;
         //si aquest era el ultim hit del combo
-        if (!isComboActive || currentComboStep >= 3)
+        if (!isComboActive || currentComboStep >= maxComboSteps)
         {
             //isAttacking = false;
             ResetCombo();

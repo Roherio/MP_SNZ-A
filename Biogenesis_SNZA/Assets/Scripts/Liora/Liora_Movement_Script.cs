@@ -62,7 +62,7 @@ public class Liora_Movement_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameControl_Script.isPaused) { return; }
+        //if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
         if (knockbackScript != null && knockbackScript.isKnockedBack)
         {
             return; // Skip movement while in knockback
@@ -79,7 +79,7 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (GameControl_Script.isPaused) { return; }
+        //if (GameControl_Script.isPausedDialogue || GameControl_Script.isPaused) { return; }
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
         if (isDashing || (knockbackScript != null && knockbackScript.isKnockedBack)) { return; }
         //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge o si està executant una ordre d'atac
@@ -107,15 +107,15 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void Movimiento(InputAction.CallbackContext context)
     {
-        //if (isGrabbingLedge) { return; }
+        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
         horizontal = context.ReadValue<Vector2>().x;
     }
     public void Saltar(InputAction.CallbackContext context)
     {
-        if (GameControl_Script.isPaused) { return; }
+        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
         //evitar que salti durant un dash o durant un atac/parry/ulti
         if (isClimbing || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
-        if (context.started)
+        if (context.performed)
         {
             if (CheckGround() || isClimbing)
             {
@@ -137,7 +137,7 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void Dash(InputAction.CallbackContext context)
     {
-        if (GameControl_Script.isPaused) { return; }
+        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
         if (!canDash || !canDashLadder || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
         if (context.started && CheckGround() == true && canDash == true)
         {
@@ -146,6 +146,7 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void LedgeInput(InputAction.CallbackContext context)
     {
+        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
         if (!isGrabbingLedge) { return; }
         if (context.started)
         {
@@ -162,6 +163,7 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void ClimbInput(InputAction.CallbackContext context)
     {
+        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
         if (!isClimbing) { return; }
         float inputY = context.ReadValue<Vector2>().y;
         float inputX = context.ReadValue<Vector2>().x;

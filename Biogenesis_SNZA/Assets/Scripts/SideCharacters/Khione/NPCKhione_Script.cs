@@ -28,6 +28,10 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
     private bool doOnceDialogue2 = false;
     void Update()
     {
+        if (isDialogueActive)
+        {
+            GameControl_Script.isPausedDialogue = true;
+        }
         if (currentDialogue == "dialogueData2")
         {
             if (doOnceDialogue2 == true)
@@ -57,7 +61,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
 
     public void Interact()
     {
-        if (PauseController_Script.isGamePaused && !isDialogueActive) { return; }
+        if (GameControl_Script.isPaused && !isDialogueActive) { return; }
         if (isDialogueActive)
         {
             NextLine();
@@ -78,7 +82,6 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData5.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
 
             StartCoroutine(TypeLine());
         }
@@ -91,7 +94,6 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData4.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
 
             StartCoroutine(TypeLine());
         }
@@ -104,7 +106,6 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData3.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
 
             StartCoroutine(TypeLine());
         }
@@ -117,7 +118,6 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData2.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
 
             StartCoroutine(TypeLine());
         }
@@ -130,7 +130,6 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData1.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
 
             StartCoroutine(TypeLine());
         }
@@ -326,6 +325,6 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
         isDialogueActive = false;
         dialogueText.SetText("");
         dialoguePanel.SetActive(false);
-        PauseController_Script.SetPause(false);
+        GameControl_Script.isPausedDialogue = false;
     }
 }

@@ -21,7 +21,9 @@ public class SaveController_Script : MonoBehaviour
             playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position,
             //mapBoundary = FindObjectOfType<CinemachineConfiner<().m_BoundingShape2D.gameObject.name
             lifeLiora = GameControl_Script.lifeLiora
-            //lifeLiora = HealthBar_Script.currentHealth
+            //GUARDAR ADRENALINA
+            //GUARDAR DATO DE QUE OBJETOS TIENES, TODOS LOS OBJETOS QUE SON TRUE EN TU INVENTARIO Y DOCUMENTOS, PERSONAJES CONOCIDOS...
+            //GUARDAR DATO DE SI TIENES PODER KHIONE Y RUMO
         };
         //transformar la variable saveData a un tipus Json
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));

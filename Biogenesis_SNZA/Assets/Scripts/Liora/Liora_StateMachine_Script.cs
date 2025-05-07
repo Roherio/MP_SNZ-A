@@ -78,7 +78,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameControl_Script.isPaused) { return; }
+        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
         //pas de variables a la state machine
         state.horizontal = horizontal;
         state.isGrounded = isGrounded;

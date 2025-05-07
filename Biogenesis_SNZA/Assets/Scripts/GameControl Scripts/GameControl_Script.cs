@@ -22,6 +22,7 @@ public class GameControl_Script : MonoBehaviour
 
     //logica menus
     public static bool isPaused = false;
+    public static bool isPausedDialogue = false;
 
     private void Awake()
     {
@@ -45,10 +46,7 @@ public class GameControl_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (mantaRumo && cascosRumo)
-        {
-            poderRumo = true;
-        }
+        
     }
     public static void TakeDamage(float hpLiora, float damageEnemy)
     {

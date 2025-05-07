@@ -24,6 +24,10 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
 
     void Update()
     {
+        if (isDialogueActive)
+        {
+            GameControl_Script.isPausedDialogue = true;
+        }
         if (currentDialogue == "dialogueData3")
         {
             if (GameControl_Script.mantaRumo)
@@ -46,7 +50,7 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
 
     public void Interact()
     {
-        if (PauseController_Script.isGamePaused && !isDialogueActive) { return; }
+        if (GameControl_Script.isPaused && !isDialogueActive) { return; }
         if (isDialogueActive)
         {
             NextLine();
@@ -67,8 +71,6 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData4.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
-
             StartCoroutine(TypeLine());
         }
         if (currentDialogue == "dialogueData3")
@@ -80,8 +82,6 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData3.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
-
             StartCoroutine(TypeLine());
         }
         if (currentDialogue == "dialogueData2")
@@ -93,8 +93,6 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData2.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
-
             StartCoroutine(TypeLine());
         }
         if (currentDialogue == "dialogueData1")
@@ -106,8 +104,6 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
             portraitImage.sprite = dialogueData1.npcPortrait;
 
             dialoguePanel.SetActive(true);
-            PauseController_Script.SetPause(true);
-
             StartCoroutine(TypeLine());
         }
     }
@@ -266,6 +262,6 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
         isDialogueActive = false;
         dialogueText.SetText("");
         dialoguePanel.SetActive(false);
-        PauseController_Script.SetPause(false);
+        GameControl_Script.isPausedDialogue = false;
     }
 }
