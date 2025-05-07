@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c33c1f4fee47f434cbe17da99d5b11a0
+guid: 910c59a6b8ac83b45bd797de794db114
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638822466815129651
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,38 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Parallax-Paramo_Frame_0
+  - name: torre_Frame_0
     originalName: 
-    pivot: {x: 0.4996938, y: 0.0028011205}
+    pivot: {x: 0.49055117, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 602
+      width: 635
+      height: 242
+    spriteID: b05a31ec1a3cc714ca6e058f6acd0b5e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 602}
+  - name: torre_Frame_3
+    originalName: 
+    pivot: {x: 0.49055117, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 1633
-      height: 714
-    spriteID: 3917c49a7f232534fb6a3f57117cb032
+      width: 635
+      height: 291
+    spriteID: 136882bfb2cd2bb4080d70e059811c1e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,18 +161,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Parallax-Paramo_Frame_5
+  - name: torre_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.49055117, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 726
-      width: 1632
-      height: 712
-    spriteID: f967ac11817fc35429c4eda8123e19e9
+      y: 303
+      width: 635
+      height: 291
+    spriteID: 1f901a68ef0b69148992ef6b43bf54ce
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,19 +180,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 726}
-  - name: Parallax-Paramo_Frame_4
+    uvTransform: {x: 4, y: 303}
+  - name: torre_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.49055117, y: -5.0625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 1446
-      width: 1632
-      height: 534
-    spriteID: 287d7e3d01d8a374eb4189d209370d15
+      y: 852
+      width: 635
+      height: 48
+    spriteID: 94fb0ebf2f594fe4db3b1e2017ac2e6f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -180,130 +200,52 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1446}
-  - name: Parallax-Paramo_Frame_3
-    originalName: 
-    pivot: {x: 0.49938726, y: 0.0037735847}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 1988
-      width: 1632
-      height: 530
-    spriteID: adde355323b12b54fbd0a6d5b90433ab
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 1988}
-  - name: Parallax-Paramo_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 2694
-      width: 1632
-      height: 144
-    spriteID: f666c37872ef784439415878e416193f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 2694}
-  - name: Parallax-Paramo_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 2526
-      width: 1632
-      height: 160
-    spriteID: d123e27c3e0a6b5458366cc2e57eb357
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 2526}
+    uvTransform: {x: 4, y: 852}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1360419098
-    name: Parallax-Paramo
+    guid: -462985914
+    name: torre
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Parallax-Paramo_Frame_0
+    - name: torre_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: -2
-        width: 1633
-        height: 714
-      spriteId: 3917c49a7f232534fb6a3f57117cb032
-    - name: Parallax-Paramo_Frame_5
-      frameIndex: 5
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
+        x: -63
         y: 0
-        width: 1632
-        height: 712
-      spriteId: f967ac11817fc35429c4eda8123e19e9
-    - name: Parallax-Paramo_Frame_4
-      frameIndex: 4
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
-        y: 0
-        width: 1632
-        height: 534
-      spriteId: 287d7e3d01d8a374eb4189d209370d15
-    - name: Parallax-Paramo_Frame_3
+        width: 635
+        height: 242
+      spriteId: b05a31ec1a3cc714ca6e058f6acd0b5e
+    - name: torre_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 1
-        y: -2
-        width: 1632
-        height: 530
-      spriteId: adde355323b12b54fbd0a6d5b90433ab
-    - name: Parallax-Paramo_Frame_2
-      frameIndex: 2
-      additiveSortOrder: 0
-      cellRect:
-        x: 0
+        x: -63
         y: 0
-        width: 1632
-        height: 144
-      spriteId: f666c37872ef784439415878e416193f
-    - name: Parallax-Paramo_Frame_1
+        width: 635
+        height: 291
+      spriteId: 136882bfb2cd2bb4080d70e059811c1e
+    - name: torre_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: -63
         y: 0
-        width: 1632
-        height: 160
-      spriteId: d123e27c3e0a6b5458366cc2e57eb357
+        width: 635
+        height: 291
+      spriteId: 1f901a68ef0b69148992ef6b43bf54ce
+    - name: torre_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: -63
+        y: 243
+        width: 635
+        height: 48
+      spriteId: 94fb0ebf2f594fe4db3b1e2017ac2e6f
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -319,7 +261,31 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 1632, y: 712}
+  canvasSize: {x: 497, y: 291}
