@@ -27,12 +27,13 @@ public class hpEnemiesScript : MonoBehaviour
         if (collision.CompareTag("LioraAttack"))
         {
             enemyHP = enemyHP - Liora_Attack_Script.damageAttackLiora;
-            StartCoroutine(FlashWhite());
-            FindObjectOfType<HitStop>().hitStop(0.005f);
-            CinemachineShake.Instance.ShakeCamera(1f, .3f);
-
+            //StartCoroutine(FlashWhite());
+            //FindObjectOfType<HitStop>().hitStop(0.005f);
+            //CinemachineShake.Instance.ShakeCamera(1f, .3f);
+            print("has hecho dañito");
             if (enemyHP <= 0f)
             {
+                print("haz trigger cabron");
                 animator.SetBool("isWalking", false);
                 animator.SetBool("isAttacking", false);
                 animator.SetBool("isDying", true);
