@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3535841618591976747}
   - component: {fileID: 121592922842007145}
+  - component: {fileID: 528379673469682374}
   - component: {fileID: 6409851266301484324}
   - component: {fileID: 3538993812665191112}
   - component: {fileID: 3519180716446014196}
@@ -127,6 +128,22 @@ MonoBehaviour:
   destinationPoint: 0
   verticalViewHeight: 5
   Behaviour: 1
+--- !u!114 &528379673469682374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3365880837016238470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ff265c86b5c084eba7b955b31f52dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnemyHP: 100
+  enemyHP: 100
+  deathAnimationDuration: 1.5
+  animator: {fileID: 6409851266301484324}
 --- !u!95 &6409851266301484324
 Animator:
   serializedVersion: 5

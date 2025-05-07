@@ -6,6 +6,8 @@ public class hpEnemiesScript : MonoBehaviour
 {
     public float maxEnemyHP;
     public float enemyHP;
+    public float deathAnimationDuration; //caldra determinar aixo a l'inspector depenent de cada prefab i la seva duracio de l'animació
+    public Animator animator;
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
 
@@ -14,6 +16,7 @@ public class hpEnemiesScript : MonoBehaviour
         enemyHP = maxEnemyHP;
         // Obtener el SpriteRenderer al iniciar
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         if (spriteRenderer != null)
         {
             originalColor = spriteRenderer.color;
@@ -24,13 +27,25 @@ public class hpEnemiesScript : MonoBehaviour
         if (collision.CompareTag("LioraAttack"))
         {
             enemyHP = enemyHP - Liora_Attack_Script.damageAttackLiora;
-            StartCoroutine(FlashWhite());
-            FindObjectOfType<HitStop>().hitStop(0.005f);
-            CinemachineShake.Instance.ShakeCamera(1f, .3f);
-
-            if (enemyHP <= 0f) { Destroy(gameObject); }
+            //StartCoroutine(FlashWhite());
+            //FindObjectOfType<HitStop>().hitStop(0.005f);
+            //CinemachineShake.Instance.ShakeCamera(1f, .3f);
+            print("has hecho dañito");
+            if (enemyHP <= 0f)
+            {
+                print("haz trigger cabron");
+                animator.SetBool("isWalking", false);
+                animator.SetBool("isAttacking", false);
+                animator.SetBool("isDying", true);
+                //un cop passats a falsos els altres estats porsiacaso, fem trigger de la variable isDying, i fem destroy en invoke per ferho en el temps que l'animacio dura
+                Invoke("DestruirGameObject", deathAnimationDuration);
+            }
         }
 
+    }
+    private void DestruirGameObject()
+    {
+        Destroy(gameObject);
     }
     private IEnumerator FlashWhite()
     {

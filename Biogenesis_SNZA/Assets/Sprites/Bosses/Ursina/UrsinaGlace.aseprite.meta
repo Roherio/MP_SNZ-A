@@ -389,7 +389,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 761
-      y: 649
+      y: 539
       width: 54
       height: 100
     spriteID: 6e63c98ecfa0d2649833cefecd9c61a4
@@ -400,7 +400,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 761, y: 649}
+    uvTransform: {x: 761, y: 539}
   - name: UrsinaGlace_Frame_24
     originalName: 
     pivot: {x: -0.14285721, y: -0.01980198}
@@ -489,7 +489,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 761
-      y: 757
+      y: 647
       width: 53
       height: 101
     spriteID: 41bc299582d077f40b76ccfb75379acc
@@ -500,17 +500,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 761, y: 757}
+    uvTransform: {x: 761, y: 647}
   - name: UrsinaGlace_Frame_29
     originalName: 
-    pivot: {x: -0.13207546, y: -0.019607844}
+    pivot: {x: -0.13999999, y: -0.019607844}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 761
-      y: 539
-      width: 53
+      y: 865
+      width: 50
       height: 102
     spriteID: 10f12522868b3e84fb9ca3254f0aa731
     spriteBone: []
@@ -520,7 +520,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 761, y: 539}
+    uvTransform: {x: 761, y: 865}
   - name: UrsinaGlace_Frame_30
     originalName: 
     pivot: {x: -0.09615381, y: -0.01980198}
@@ -529,7 +529,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 761
-      y: 866
+      y: 756
       width: 52
       height: 101
     spriteID: 6c53d4a10a76f534eaf4a1c585cd1bcc
@@ -540,7 +540,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 761, y: 866}
+    uvTransform: {x: 761, y: 756}
   - name: UrsinaGlace_Frame_31
     originalName: 
     pivot: {x: -0.13999999, y: -0.020618556}
@@ -1687,7 +1687,7 @@ ScriptedImporter:
       cellRect:
         x: 79
         y: 2
-        width: 53
+        width: 50
         height: 102
       spriteId: 10f12522868b3e84fb9ca3254f0aa731
     - name: UrsinaGlace_Frame_21

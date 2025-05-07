@@ -25,7 +25,8 @@ public class Liora_StateMachine_Script : MonoBehaviour
     public Liora_CrabAttack3_Script crabAttackState3;
     public Liora_CrabParry_Script crabParryState;
     //boar
-    public Liora_BoarAttack_Script boarAttackState;
+    public Liora_BoarAttack1_Script boarAttackState1;
+    public Liora_BoarAttack2_Script boarAttackState2;
     public Liora_BoarParry_Script boarParryState;
 
     private bool isFacingRight = true;
@@ -71,14 +72,15 @@ public class Liora_StateMachine_Script : MonoBehaviour
         crabAttackState2.Setup(rb, animator, horizontal);
         crabAttackState3.Setup(rb, animator, horizontal);
         crabParryState.Setup(rb, animator, horizontal);
-        boarAttackState.Setup(rb, animator, horizontal);
+        boarAttackState1.Setup(rb, animator, horizontal);
+        boarAttackState2.Setup(rb, animator, horizontal);
         boarParryState.Setup(rb, animator, horizontal);
         state = idleState;
     }
     // Update is called once per frame
     void Update()
     {
-        if (GameControl_Script.isPaused) { return; }
+        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
         //pas de variables a la state machine
         state.horizontal = horizontal;
         state.isGrounded = isGrounded;
@@ -164,7 +166,15 @@ public class Liora_StateMachine_Script : MonoBehaviour
                                                 }
                                                 break;
                                             case snzaAttackType.JABALI:
-                                                state = boarAttackState;
+                                                switch (currentComboStep)
+                                                {
+                                                    case 1:
+                                                        state = boarAttackState1;
+                                                        break;
+                                                    case 2:
+                                                        state = boarAttackState2;
+                                                        break;
+                                                }
                                                 break;
                                         }
                                     }
