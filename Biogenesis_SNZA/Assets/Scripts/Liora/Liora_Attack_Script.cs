@@ -25,6 +25,7 @@ public class Liora_Attack_Script : MonoBehaviour
     public Transform attackLocation;
     //collider general
     private GameObject colliderAtaque;
+    public GameObject colliderParry;
     //colliders particulars
     public GameObject colliderAttackCrabLiora;
     public GameObject colliderAttackBoarLiora;
@@ -179,18 +180,26 @@ public class Liora_Attack_Script : MonoBehaviour
             {
                 case snzaParryType.CANGREJO:
                     //aqui determinem el temps que trigarà despres en acabarse l'animació de parry, i també ressetejem el cooldownTimer perquè no pugui spammejar el parry
+                    duracioCollider = 0.2f;
                     deactivateAction = 1f;
                     break;
 
                 case snzaParryType.JABALI:
+                    duracioCollider = 0.2f;
                     deactivateAction = 0.5f;
                     break;
             }
+            InstanciarParry(colliderParry);
             inputCooldownTimer = 0f;
             isParrying = true;
-            parryCooldown = 2f;
+            parryCooldown = 1.5f;
             StartCoroutine(DeactivateAction());
         }
+    }
+    void InstanciarParry(GameObject collider)
+    {
+        Instantiate(collider, attackLocation);
+        ParryCollider_Script.duracioCollider = duracioCollider;
     }
     private IEnumerator DeactivateAction()
     {

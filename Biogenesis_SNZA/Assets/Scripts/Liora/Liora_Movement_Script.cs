@@ -73,7 +73,6 @@ public class Liora_Movement_Script : MonoBehaviour
         Liora_StateMachine_Script.isGrabbingLedge = isGrabbingLedge;
         Liora_StateMachine_Script.isDashing = isDashing;
         Liora_StateMachine_Script.isClimbing = isClimbing;
-        //CheckForClimb();
         CheckForLedge();
         stopMovementAfterDash -= Time.deltaTime;
     }
@@ -87,6 +86,7 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             horizontal = 0f;
         }
+        //check climb aqui
         isClimbing = onEscalera || onEnredadera;
         if (isClimbing && rb.gravityScale != 0f)
         {
@@ -179,7 +179,6 @@ public class Liora_Movement_Script : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
-        //rb.gravityScale = 0f;
     }
     private IEnumerator Dash()
     {
@@ -201,18 +200,18 @@ public class Liora_Movement_Script : MonoBehaviour
     private void ClimbLedge()
     {
         //evita multiples grabs i resetea gravity
+        isGrabbingLedge = false;
         canGrabLedge = false;
         rb.gravityScale = 6f;
-        isGrabbingLedge = false;
         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
         Invoke("EnableLedgeGrab", 0.2f);
     }
     private void DropFromLedge()
     {
         isGrabbingLedge = false;
-        rb.gravityScale = 6f;
         //evitar multiples grabs
         canGrabLedge = false;
+        rb.gravityScale = 6f;
         //dropejar el player una mica
         Vector2 dropPosition = new Vector2(transform.position.x, transform.position.y - 1f);
         transform.position = dropPosition;
@@ -223,10 +222,6 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         canGrabLedge = true;
     }
-    /*private void EnableClimb()
-    {
-        canClimb = true;
-    }*/
     //fa check si el objecte empty groundCheck fa overlap amb un objecte que pertany a la groundLayer (overlap amb radi de 0.2f)
     private bool CheckGround()
     {
@@ -237,28 +232,6 @@ public class Liora_Movement_Script : MonoBehaviour
         if (tag == "Escalera") { onEscalera = state; }
         else if (tag == "Enredadera") { onEnredadera = state; }
     }
-    /*private void CheckForClimb()
-    {
-        if (isClimbing || isGrabbingLedge || !canClimb) { return; }
-        Collider2D wall = Physics2D.OverlapCircle(climbCheck.position, 0.2f, climbLayer);
-        if (wall != null)
-        {
-            isClimbing = true;
-            jumping = false;
-            //parar moviment
-            rb.velocity = Vector2.zero;
-            rb.gravityScale = 0f;
-        }
-        else
-        {
-            isClimbing = false;
-            rb.gravityScale = 6f;
-            if (!isGrabbingLedge)
-            {
-                rb.gravityScale = 6f;
-            }
-        }
-    }*/
     //funció que comprova si estem en range de un ledge
     private void CheckForLedge()
     {

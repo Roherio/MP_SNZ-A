@@ -909,8 +909,9 @@ MonoBehaviour:
   inputAttackCooldown: 0.4
   isComboActive: 0
   attackLocation: {fileID: 9003009591592549887}
+  colliderParry: {fileID: 6769748558417861109, guid: a499decbcfeab824cb2f03843f239d12, type: 3}
   colliderAttackCrabLiora: {fileID: 165051307909327957, guid: 86933764d29bffd43afa9ce7b5f4a8d4, type: 3}
-  colliderAttackBoarLiora: {fileID: 0}
+  colliderAttackBoarLiora: {fileID: 165051307909327957, guid: 46055b83fe76e1d4eb88b6349202d983, type: 3}
   currentUltiType: 0
   deactivateAction: 0
   duracioCollider: 0
