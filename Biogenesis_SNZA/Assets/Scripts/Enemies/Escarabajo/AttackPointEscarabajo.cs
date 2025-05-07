@@ -21,6 +21,11 @@ public class AttackPointEscarabajo : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.CompareTag("Parry"))
+        {
+            print("te han hecho parry crackkk");
+            return;
+        }
         if (collision.CompareTag("Player"))
         {
             //Consola

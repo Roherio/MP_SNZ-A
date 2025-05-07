@@ -6,6 +6,9 @@ TagManager:
   tags:
   - LioraAttack
   - Ursina
+  - Escalera
+  - Enredadera
+  - Parry
   layers:
   - Default
   - TransparentFX
