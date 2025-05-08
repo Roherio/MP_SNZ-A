@@ -9,9 +9,14 @@ public class ParryCollider_Script : MonoBehaviour
     public static float duracioCollider;
     private void Start()
     {
-        Destroy(gameObject, duracioCollider);
+        DamageLiora_Script.isParrying = true;
+        Invoke("Destruir", duracioCollider);
     }
-
+    private void Destruir()
+    {
+        DamageLiora_Script.isParrying = false;
+        Destroy(gameObject);
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;

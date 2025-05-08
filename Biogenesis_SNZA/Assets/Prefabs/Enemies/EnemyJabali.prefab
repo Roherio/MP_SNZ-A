@@ -117,6 +117,7 @@ MonoBehaviour:
   moveSpeed: 4
   attackDuration: 0.5
   attackCooldown: 1.5
+  hitboxSpawnTimer: 0.7
   dashSpeed: 0.00000001
   detectionRange: 20
   attackRange: 4
@@ -227,7 +228,7 @@ BoxCollider2D:
   m_Offset: {x: 1.4654675, y: 3.3021808}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.24038462, y: -0.019417476}
+    pivot: {x: 0.24038462, y: 0}
     oldSize: {x: 6.5, y: 6.4375}
     newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5

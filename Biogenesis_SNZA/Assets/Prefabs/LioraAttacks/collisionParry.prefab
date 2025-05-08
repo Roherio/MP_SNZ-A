@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6769748558417861109}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca479d8b6a73934cb80ae5f486250eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showRadius: 1.6
+  showRadius: 1.8
 --- !u!61 &3349455512316641692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89,5 +89,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
