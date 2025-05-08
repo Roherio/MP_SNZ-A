@@ -21,11 +21,6 @@ public class AttackPointEscarabajo : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Parry"))
-        {
-            print("te han hecho parry crackkk");
-            return;
-        }
         if (collision.CompareTag("Player"))
         {
             //Consola
@@ -43,7 +38,7 @@ public class AttackPointEscarabajo : MonoBehaviour
             }
 
             //Treu vida
-            GameControl_Script.lifeLiora -= enemyAttackValue;
+            DamageLiora_Script.RecibirDamage(enemyAttackValue);
 
             //
             Destroy(gameObject);

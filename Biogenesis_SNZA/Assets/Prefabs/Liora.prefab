@@ -664,11 +664,12 @@ GameObject:
   - component: {fileID: 6828677513443051858}
   - component: {fileID: 8218613863536441932}
   - component: {fileID: 8318787859004874339}
+  - component: {fileID: 6942934200522289382}
+  - component: {fileID: 245262021979407441}
   - component: {fileID: 3647475253173115995}
   - component: {fileID: 6844576158491812986}
   - component: {fileID: 4947185015358159300}
   - component: {fileID: 3102691484329706673}
-  - component: {fileID: 6942934200522289382}
   - component: {fileID: 6202315074707716719}
   m_Layer: 6
   m_Name: Liora
@@ -975,6 +976,31 @@ MonoBehaviour:
   deactivateAction: 0
   duracioCollider: 0
   delayCollider: 0
+--- !u!114 &6942934200522289382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994394536962611434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f877d5ad1cf53fb4c8a875ef046459ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderArdilla: {fileID: 7060317571079475497}
+--- !u!114 &245262021979407441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994394536962611434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4682f2c4272d7b242b6fb1caad655726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &3647475253173115995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1120,19 +1146,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9375, y: 3.6281722}
   m_EdgeRadius: 0
---- !u!114 &6942934200522289382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3994394536962611434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f877d5ad1cf53fb4c8a875ef046459ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colliderArdilla: {fileID: 7060317571079475497}
 --- !u!114 &6202315074707716719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,7 +1307,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.77216494}
+  m_Offset: {x: 0, y: -0.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1913,7 +1926,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.77216494}
+  m_Offset: {x: 0, y: -0.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
