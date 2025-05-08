@@ -28,22 +28,29 @@ public class AttackPointSecretario : MonoBehaviour
             //Feeling
             FindObjectOfType<HitStop>().hitStop(0.01f);
             CinemachineShake.Instance.ShakeCamera(10f, .01f);
-
+            /*
             //Knockback effect
             knockbackScript kb = collision.GetComponent<knockbackScript>();
             if (kb != null)
             {
                 kb.ApplyKnockback(transform.position, enemyAttackValue);
             }
-
+            */
             //Treu vida
-            DamageLiora_Script.RecibirDamage(enemyAttackValue);
+            DamageLiora_Script.RecibirDamage(transform.position, enemyAttackValue);
 
             //
             Destroy(gameObject);
             print("L'atac ha fet hit per " + enemyAttackValue + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
         }
-
+        else
+        {
+            Invoke("Destruir", 0.5f);
+        }
+    }
+    public void Destruir()
+    {
+        Destroy(gameObject);
     }
     private void OnDrawGizmos()
     {
