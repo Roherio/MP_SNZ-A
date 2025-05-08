@@ -16,6 +16,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
     public static float attackDurationTimer;
     [SerializeField] float attackDuration;
     [SerializeField] float attackCooldown;
+    [SerializeField] float hitboxSpawnTimer = 0.9f;
     private Vector2 dashDirection;
     [SerializeField] float dashSpeed;
     [SerializeField] float detectionRange;
@@ -141,7 +142,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
         dashDirection = dashDirection.normalized;
         attackTimer = 0f;
         animator.SetBool("isAttacking", true);
-        yield return new WaitForSeconds(attackCooldown);
+        yield return new WaitForSeconds(hitboxSpawnTimer);
 
         //------------------------- ANIMACIO ATAC AQUI!!!!!!!!!----------------------------------------------
         

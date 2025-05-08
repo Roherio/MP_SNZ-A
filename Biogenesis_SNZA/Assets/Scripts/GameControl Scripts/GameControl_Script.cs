@@ -48,12 +48,4 @@ public class GameControl_Script : MonoBehaviour
     {
         
     }
-    public static void TakeDamage(float hpLiora, float damageEnemy)
-    {
-        hpLiora -= damageEnemy;
-    }
-    public static void EnemyTakeDamage(float hpEnemy, float damageLiora)
-    {
-
-    }
 }

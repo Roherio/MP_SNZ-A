@@ -9,10 +9,6 @@ public class HealthBar_Script : MonoBehaviour
     public Slider healthSlider;
     public Slider healthSliderDelay;
 
-    //cuando antes la vida la determinaba este script, fase de pruebas.
-    /*public float maxHealth = 100f;
-    public static float currentHealth;*/
-
     //[SerializeField] private float delayStart = 0.3f;
     [SerializeField] private float delaySpeed = 0.01f;
     
@@ -28,13 +24,6 @@ public class HealthBar_Script : MonoBehaviour
         {
             healthSlider.value = GameControl_Script.lifeLiora;
         }
-
-        //comprobacion de que recibe daño, fase de pruebas.
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            TakeDamage(10);
-        }
-
         if (healthSlider.value != healthSliderDelay.value)
         {
             //StartCoroutine(DelayHealth());
@@ -45,21 +34,11 @@ public class HealthBar_Script : MonoBehaviour
             healthSlider.value = currentHealth;
         }
 
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            TakeDamage(10);
-        }
-
         if (healthSlider.value != healthSliderDelay.value)
         {
             //StartCoroutine(DelayHealth());
             healthSliderDelay.value = Mathf.Lerp(healthSliderDelay.value, currentHealth, delaySpeed);
         }*/
-    }
-    void TakeDamage(float damage)
-    {
-        GameControl_Script.lifeLiora -= damage;
-        //currentHealth -= damage;
     }
 
     /*IEnumerator DelayHealth()

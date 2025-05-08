@@ -37,7 +37,7 @@ public class AttackPointSecretario : MonoBehaviour
             }
 
             //Treu vida
-            GameControl_Script.lifeLiora -= enemyAttackValue;
+            DamageLiora_Script.RecibirDamage(enemyAttackValue);
 
             //
             Destroy(gameObject);
