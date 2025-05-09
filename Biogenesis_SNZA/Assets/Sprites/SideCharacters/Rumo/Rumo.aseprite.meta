@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Rumo_Frame_0
     originalName: 
-    pivot: {x: 0.19067797, y: -0.08823529}
+    pivot: {x: 0.19327731, y: -0.042857144}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 84
-      width: 118
-      height: 68
+      y: 85
+      width: 119
+      height: 70
     spriteID: 8215ebf9216e5a444a63743775d0e7e6
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 84}
+    uvTransform: {x: 4, y: 85}
   - name: Rumo_Frame_1
     originalName: 
-    pivot: {x: 0.5026042, y: -0.027777778}
+    pivot: {x: 0.72727275, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 192
-      height: 72
+      width: 132
+      height: 73
     spriteID: e38b94a40b0280347a9de0690f38a22a
     spriteBone: []
     spriteOutline: []
@@ -174,19 +174,19 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 14
-        y: 6
-        width: 118
-        height: 68
+        x: 9
+        y: 3
+        width: 119
+        height: 70
       spriteId: 8215ebf9216e5a444a63743775d0e7e6
     - name: Rumo_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: -60
-        y: 2
-        width: 192
-        height: 72
+        x: -64
+        y: 0
+        width: 132
+        height: 73
       spriteId: e38b94a40b0280347a9de0690f38a22a
     linkedCells: []
     parentIndex: -1
@@ -242,4 +242,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 73, y: 75}
+  canvasSize: {x: 64, y: 73}
