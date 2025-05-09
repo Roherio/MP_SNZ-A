@@ -1,17 +1,12 @@
 {
 	"identifier": "FORTALEZA_10",
 	"uniqueIdentifer": "18a759d0-e920-11ef-9274-27aaa3738825",
-	"x": 19024,
-	"y": -1816,
+	"x": 20928,
+	"y": -2384,
 	"width": 1280,
 	"height": 1096,
 	"bgColor": "#FAD5D5",
-	"neighbourLevels": [
-		{
-			"levelIid": "a49fa9d0-e920-11ef-b809-312668735fac",
-			"dir": "w"
-		}
-	],
+	"neighbourLevels": [],
 	"customFields" : {},
 	"layers": [
 		"WATER.png",
