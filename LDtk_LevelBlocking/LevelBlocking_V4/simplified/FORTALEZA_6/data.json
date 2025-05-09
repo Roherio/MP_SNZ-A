@@ -1,22 +1,18 @@
 {
 	"identifier": "FORTALEZA_6",
 	"uniqueIdentifer": "d1bdcdc0-e920-11ef-b809-73ab8d258036",
-	"x": 13920,
-	"y": -1072,
+	"x": 12912,
+	"y": -1096,
 	"width": 1904,
 	"height": 712,
 	"bgColor": "#FAD5D5",
 	"neighbourLevels": [
 		{
-			"levelIid": "837ebf20-e920-11ef-9274-d7a8335e175b",
-			"dir": "n"
-		},
-		{
-			"levelIid": "9331fe50-e920-11ef-b809-4be20d6b0345",
+			"levelIid": "fdb1f800-e920-11ef-b809-89e780e86f57",
 			"dir": "e"
 		},
 		{
-			"levelIid": "9a440fd0-e920-11ef-9274-5fd1db431867",
+			"levelIid": "837ebf20-e920-11ef-9274-d7a8335e175b",
 			"dir": "n"
 		}
 	],

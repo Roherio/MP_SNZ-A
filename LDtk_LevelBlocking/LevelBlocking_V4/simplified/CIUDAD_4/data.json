@@ -1,21 +1,12 @@
 {
 	"identifier": "CIUDAD_4",
 	"uniqueIdentifer": "3ee9e300-e920-11ef-9d4d-df2870926096",
-	"x": 7040,
-	"y": -320,
+	"x": 7104,
+	"y": -1744,
 	"width": 1280,
 	"height": 680,
 	"bgColor": "#F78585",
-	"neighbourLevels": [
-		{
-			"levelIid": "9718af00-e920-11ef-9d4d-a36a97f1cbda",
-			"dir": "e"
-		},
-		{
-			"levelIid": "882d1a80-e920-11ef-9d4d-e560afb9ed99",
-			"dir": "w"
-		}
-	],
+	"neighbourLevels": [],
 	"customFields" : {},
 	"layers": [
 		"WATER.png",
