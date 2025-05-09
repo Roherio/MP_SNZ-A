@@ -7,10 +7,17 @@ public class ParryCollider_Script : MonoBehaviour
     public float showRadius;
     public static float parryTime;
     public static float duracioCollider;
+    private void Awake()
+    {
+        //DamageLiora_Script.isParrying = true;
+    }
     private void Start()
     {
-        DamageLiora_Script.isParrying = true;
         Invoke("Destruir", duracioCollider);
+    }
+    private void Update()
+    {
+        DamageLiora_Script.isParrying = true;
     }
     private void Destruir()
     {

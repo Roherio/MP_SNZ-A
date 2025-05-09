@@ -198,12 +198,12 @@ public class Liora_Attack_Script : MonoBehaviour
             {
                 case snzaParryType.CANGREJO:
                     //aqui determinem el temps que trigarà despres en acabarse l'animació de parry, i també ressetejem el cooldownTimer perquè no pugui spammejar el parry
-                    duracioCollider = 0.2f;
+                    duracioCollider = 0.4f;
                     deactivateAction = 1f;
                     break;
 
                 case snzaParryType.JABALI:
-                    duracioCollider = 0.2f;
+                    duracioCollider = 0.4f;
                     deactivateAction = 0.5f;
                     break;
             }

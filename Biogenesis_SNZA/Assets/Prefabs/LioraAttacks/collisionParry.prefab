@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3349455512316641692}
   m_Layer: 6
   m_Name: collisionParry
-  m_TagString: Parry
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

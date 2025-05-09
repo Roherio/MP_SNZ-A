@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 262aaf11afabb964f925872c18473105
+guid: 2f31d9132535dd44e983e65f8035265f
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638823040227664440
+  platformSettingsDirtyTick: 638823050238163265
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Wallace_Frame_0
+  - name: Khione_Idle_Frame_0
     originalName: 
-    pivot: {x: 0.575, y: -0.8717949}
+    pivot: {x: 0.58196723, y: -0.01724138}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 40
-      height: 39
-    spriteID: 6140db300802a5842bb3cf092b7124a8
+      width: 61
+      height: 58
+    spriteID: 0fe74685cd1771d4bb4328be0aae07be
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,18 +141,38 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Wallace_Frame_1
+  - name: Khione_Idle_Frame_2
     originalName: 
-    pivot: {x: 0.5641026, y: -0.8717949}
+    pivot: {x: 0.625, y: -0.01724138}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 4
+      width: 60
+      height: 58
+    spriteID: 250ab19840ef6094dbda496c3490de9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 4}
+  - name: Khione_Idle_Frame_7
+    originalName: 
+    pivot: {x: 0.58196723, y: -0.01724138}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 99
-      width: 39
-      height: 39
-    spriteID: d69940c376a5e8242bd2c98c2b25865c
+      y: 70
+      width: 61
+      height: 58
+    spriteID: 2423d548edc138c46949fd0c07a21dcf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,19 +180,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 99}
-  - name: Wallace_Frame_2
+    uvTransform: {x: 4, y: 70}
+  - name: Khione_Idle_Frame_9
     originalName: 
-    pivot: {x: 0.5641026, y: -0.85}
+    pivot: {x: 0.56779665, y: -0.016949153}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 51
-      width: 39
-      height: 40
-    spriteID: 21f965e82620d974f9bf5ad6c22a002f
+      y: 268
+      width: 59
+      height: 59
+    spriteID: dc244966f60f18142a55ef1aacd88265
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -180,19 +200,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 51}
-  - name: Wallace_Frame_9
+    uvTransform: {x: 4, y: 268}
+  - name: Khione_Idle_Frame_1
     originalName: 
-    pivot: {x: 0.575, y: -0.8717949}
+    pivot: {x: 0.58196723, y: -0.01724138}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 52
-      y: 4
-      width: 40
-      height: 39
-    spriteID: 9f27cd954dd76d64c93ffbd014629747
+      x: 4
+      y: 136
+      width: 61
+      height: 58
+    spriteID: 072707c38e876dc4f8c648064343c9c6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,19 +220,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 52, y: 4}
-  - name: Wallace_Frame_3
+    uvTransform: {x: 4, y: 136}
+  - name: Khione_Idle_Frame_3
     originalName: 
-    pivot: {x: 0.5641026, y: -0.85}
+    pivot: {x: 0.625, y: -0.01724138}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 51
-      y: 51
-      width: 39
-      height: 40
-    spriteID: 44f3eb524b4805a45b2513cf8ea8d5df
+      x: 73
+      y: 70
+      width: 60
+      height: 58
+    spriteID: 6a7a7d9976227004b916e708879ff110
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -220,19 +240,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 51, y: 51}
-  - name: Wallace_Frame_4
+    uvTransform: {x: 73, y: 70}
+  - name: Khione_Idle_Frame_4
     originalName: 
-    pivot: {x: 0.5641026, y: -0.85}
+    pivot: {x: 0.625, y: -0.01724138}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 98
-      y: 51
-      width: 39
-      height: 40
-    spriteID: 1a4e2e2e2e23f054bb19c426131a541e
+      x: 73
+      y: 136
+      width: 60
+      height: 58
+    spriteID: bc0d0582b74191544bc87d7e00708e0f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -240,19 +260,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 98, y: 51}
-  - name: Wallace_Frame_5
+    uvTransform: {x: 73, y: 136}
+  - name: Khione_Idle_Frame_5
     originalName: 
-    pivot: {x: 0.5641026, y: -0.85}
+    pivot: {x: 0.625, y: -0.01724138}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 145
-      y: 51
-      width: 39
-      height: 40
-    spriteID: 4f32a5d4bf36d44468b6000fd51cbd76
+      x: 73
+      y: 202
+      width: 60
+      height: 58
+    spriteID: 5ed60f6a494b7ea41ad36b8e901a76e4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -260,19 +280,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 145, y: 51}
-  - name: Wallace_Frame_6
+    uvTransform: {x: 73, y: 202}
+  - name: Khione_Idle_Frame_6
     originalName: 
-    pivot: {x: 0.5641026, y: -0.85}
+    pivot: {x: 0.625, y: -0.01724138}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 192
-      y: 51
-      width: 39
-      height: 40
-    spriteID: cb113b9967aba204ca622d62683844c5
+      x: 73
+      y: 268
+      width: 60
+      height: 58
+    spriteID: 829b1069651d5864baf3d3ea6862843b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -280,19 +300,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 192, y: 51}
-  - name: Wallace_Frame_7
+    uvTransform: {x: 73, y: 268}
+  - name: Khione_Idle_Frame_8
     originalName: 
-    pivot: {x: 0.5641026, y: -0.8717949}
+    pivot: {x: 0.58196723, y: -0.01724138}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 51
-      y: 99
-      width: 39
-      height: 39
-    spriteID: fd8a9683238556545a770efa0ae3fe79
+      x: 4
+      y: 202
+      width: 61
+      height: 58
+    spriteID: 801fdac3c3d9b544d973a459ab38e795
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -300,19 +320,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 51, y: 99}
-  - name: Wallace_Frame_8
+    uvTransform: {x: 4, y: 202}
+  - name: Khione_Idle_Frame_10
     originalName: 
-    pivot: {x: 0.575, y: -0.8717949}
+    pivot: {x: 0.56779665, y: -0.016949153}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 100
-      y: 4
-      width: 40
-      height: 39
-    spriteID: 8bd610a7aff717f428a62bd235bf1b2e
+      x: 4
+      y: 335
+      width: 59
+      height: 59
+    spriteID: 882d08ef67d721d41a10353ebcb1be53
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -320,19 +340,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 100, y: 4}
-  - name: Wallace_Frame_10
+    uvTransform: {x: 4, y: 335}
+  - name: Khione_Idle_Frame_11
     originalName: 
-    pivot: {x: 0.575, y: -0.8717949}
+    pivot: {x: 0.56779665, y: -0.016949153}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 148
-      y: 4
-      width: 40
-      height: 39
-    spriteID: 6a87793985eccf14eb7bb86136f5606d
+      x: 4
+      y: 402
+      width: 59
+      height: 59
+    spriteID: 79fea0001c84e3f4c94eaf91a01fcd64
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -340,144 +360,124 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 148, y: 4}
-  - name: Wallace_Frame_11
-    originalName: 
-    pivot: {x: 0.575, y: -0.8717949}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 196
-      y: 4
-      width: 40
-      height: 39
-    spriteID: 6f6d2d8dd67871f47a13dc4ba7a47fc4
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 196, y: 4}
+    uvTransform: {x: 4, y: 402}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -233437923
-    name: Wallace
+    guid: 159984877
+    name: Khione_Idle
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Wallace_Frame_0
+    - name: Khione_Idle_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 41
-        y: 34
-        width: 40
-        height: 39
-      spriteId: 6140db300802a5842bb3cf092b7124a8
-    - name: Wallace_Frame_1
-      frameIndex: 1
-      additiveSortOrder: 0
-      cellRect:
-        x: 42
-        y: 34
-        width: 39
-        height: 39
-      spriteId: d69940c376a5e8242bd2c98c2b25865c
-    - name: Wallace_Frame_2
+        x: 7
+        y: 1
+        width: 61
+        height: 58
+      spriteId: 0fe74685cd1771d4bb4328be0aae07be
+    - name: Khione_Idle_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 42
-        y: 34
-        width: 39
-        height: 40
-      spriteId: 21f965e82620d974f9bf5ad6c22a002f
-    - name: Wallace_Frame_9
-      frameIndex: 9
-      additiveSortOrder: 0
-      cellRect:
-        x: 41
-        y: 34
-        width: 40
-        height: 39
-      spriteId: 9f27cd954dd76d64c93ffbd014629747
-    - name: Wallace_Frame_3
-      frameIndex: 3
-      additiveSortOrder: 0
-      cellRect:
-        x: 42
-        y: 34
-        width: 39
-        height: 40
-      spriteId: 44f3eb524b4805a45b2513cf8ea8d5df
-    - name: Wallace_Frame_4
-      frameIndex: 4
-      additiveSortOrder: 0
-      cellRect:
-        x: 42
-        y: 34
-        width: 39
-        height: 40
-      spriteId: 1a4e2e2e2e23f054bb19c426131a541e
-    - name: Wallace_Frame_5
-      frameIndex: 5
-      additiveSortOrder: 0
-      cellRect:
-        x: 42
-        y: 34
-        width: 39
-        height: 40
-      spriteId: 4f32a5d4bf36d44468b6000fd51cbd76
-    - name: Wallace_Frame_6
-      frameIndex: 6
-      additiveSortOrder: 0
-      cellRect:
-        x: 42
-        y: 34
-        width: 39
-        height: 40
-      spriteId: cb113b9967aba204ca622d62683844c5
-    - name: Wallace_Frame_7
+        x: 5
+        y: 1
+        width: 60
+        height: 58
+      spriteId: 250ab19840ef6094dbda496c3490de9b
+    - name: Khione_Idle_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 42
-        y: 34
-        width: 39
-        height: 39
-      spriteId: fd8a9683238556545a770efa0ae3fe79
-    - name: Wallace_Frame_8
+        x: 7
+        y: 1
+        width: 61
+        height: 58
+      spriteId: 2423d548edc138c46949fd0c07a21dcf
+    - name: Khione_Idle_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 9
+        y: 1
+        width: 59
+        height: 59
+      spriteId: dc244966f60f18142a55ef1aacd88265
+    - name: Khione_Idle_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 7
+        y: 1
+        width: 61
+        height: 58
+      spriteId: 072707c38e876dc4f8c648064343c9c6
+    - name: Khione_Idle_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 1
+        width: 60
+        height: 58
+      spriteId: 6a7a7d9976227004b916e708879ff110
+    - name: Khione_Idle_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 1
+        width: 60
+        height: 58
+      spriteId: bc0d0582b74191544bc87d7e00708e0f
+    - name: Khione_Idle_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 1
+        width: 60
+        height: 58
+      spriteId: 5ed60f6a494b7ea41ad36b8e901a76e4
+    - name: Khione_Idle_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 1
+        width: 60
+        height: 58
+      spriteId: 829b1069651d5864baf3d3ea6862843b
+    - name: Khione_Idle_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 41
-        y: 34
-        width: 40
-        height: 39
-      spriteId: 8bd610a7aff717f428a62bd235bf1b2e
-    - name: Wallace_Frame_10
+        x: 7
+        y: 1
+        width: 61
+        height: 58
+      spriteId: 801fdac3c3d9b544d973a459ab38e795
+    - name: Khione_Idle_Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
-        x: 41
-        y: 34
-        width: 40
-        height: 39
-      spriteId: 6a87793985eccf14eb7bb86136f5606d
-    - name: Wallace_Frame_11
+        x: 9
+        y: 1
+        width: 59
+        height: 59
+      spriteId: 882d08ef67d721d41a10353ebcb1be53
+    - name: Khione_Idle_Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
-        x: 41
-        y: 34
-        width: 40
-        height: 39
-      spriteId: 6f6d2d8dd67871f47a13dc4ba7a47fc4
+        x: 9
+        y: 1
+        width: 59
+        height: 59
+      spriteId: 79fea0001c84e3f4c94eaf91a01fcd64
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -532,4 +532,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 128}
+  canvasSize: {x: 85, y: 68}
