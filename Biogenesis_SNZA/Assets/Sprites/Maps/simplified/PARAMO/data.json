@@ -1,0 +1,27 @@
+{
+	"identifier": "PARAMO",
+	"uniqueIdentifer": "d9d011a0-e920-11ef-9d4d-e32067025caa",
+	"x": -992,
+	"y": -352,
+	"width": 1632,
+	"height": 712,
+	"bgColor": "#EBDB8E",
+	"neighbourLevels": [
+		{
+			"levelIid": "45b400c0-e920-11ef-9d4d-bf68849550e6",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"WATER.png",
+		"UNDERGROUND.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png",
+		"Dungeon_tile_2.png",
+		"STAIRS2.png"
+	],
+	"entities" : {}
+}

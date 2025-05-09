@@ -1,0 +1,27 @@
+{
+	"identifier": "SUBSUELO_8",
+	"uniqueIdentifer": "0448d390-e920-11ef-9d4d-03d16d861cc2",
+	"x": 13462,
+	"y": 2592,
+	"width": 1280,
+	"height": 824,
+	"bgColor": "#96EB8E",
+	"neighbourLevels": [
+		{
+			"levelIid": "511c2090-e920-11ef-9d4d-3fb6a853ba8a",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"WATER.png",
+		"UNDERGROUND.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png",
+		"Dungeon_tile_2.png",
+		"STAIRS2.png"
+	],
+	"entities" : {}
+}

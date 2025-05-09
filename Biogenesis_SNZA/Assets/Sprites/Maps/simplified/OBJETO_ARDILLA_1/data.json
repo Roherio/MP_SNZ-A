@@ -1,0 +1,27 @@
+{
+	"identifier": "OBJETO_ARDILLA_1",
+	"uniqueIdentifer": "a20904c0-e920-11ef-b360-df36e637fc20",
+	"x": 4480,
+	"y": -1432,
+	"width": 640,
+	"height": 360,
+	"bgColor": "#AFF9F7",
+	"neighbourLevels": [
+		{
+			"levelIid": "3736a1f0-e920-11ef-9d4d-65866ab14ac8",
+			"dir": "s"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"WATER.png",
+		"UNDERGROUND.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png",
+		"Dungeon_tile_2.png",
+		"STAIRS2.png"
+	],
+	"entities" : {}
+}

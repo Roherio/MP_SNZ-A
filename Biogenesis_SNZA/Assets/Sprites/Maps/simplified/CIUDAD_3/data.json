@@ -1,0 +1,27 @@
+{
+	"identifier": "CIUDAD_3",
+	"uniqueIdentifer": "882d1a80-e920-11ef-9d4d-e560afb9ed99",
+	"x": 5120,
+	"y": -320,
+	"width": 1920,
+	"height": 680,
+	"bgColor": "#F78585",
+	"neighbourLevels": [
+		{
+			"levelIid": "3736a1f0-e920-11ef-9d4d-65866ab14ac8",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"WATER.png",
+		"UNDERGROUND.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png",
+		"Dungeon_tile_2.png",
+		"STAIRS2.png"
+	],
+	"entities" : {}
+}
