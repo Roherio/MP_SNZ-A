@@ -18,7 +18,7 @@ public class SaveController_Script : MonoBehaviour
     {
         SaveData_Script saveData = new SaveData_Script
         {
-            playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position,
+            //playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position,
             //mapBoundary = FindObjectOfType<CinemachineConfiner<().m_BoundingShape2D.gameObject.name
             lifeLiora = GameControl_Script.lifeLiora
             //GUARDAR ADRENALINA

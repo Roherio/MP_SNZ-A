@@ -26,14 +26,18 @@
 	],
 	"customFields" : {},
 	"layers": [
-		"WATER.png",
+		"Pipes4.png",
+		"Pipes3.png",
 		"UNDERGROUND.png",
 		"STAIRS.png",
 		"OUTSIDE_COLLISIONS.png",
 		"DUNGEON.png",
 		"CIUDAD_TILEMAP.png",
 		"Dungeon_tile_2.png",
-		"STAIRS2.png"
+		"STAIRS2.png",
+		"Pipes5.png",
+		"Pipes2.png",
+		"Pipes.png"
 	],
 	"entities" : {}
 }
