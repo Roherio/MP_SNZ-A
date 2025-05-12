@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02b982e0697c75d459e6c4e2d2beefbe
+guid: 9b84c741ebc06d848897f6454aa9cde3
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638826616529175932
+  platformSettingsDirtyTick: 638826616577295192
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: luz_Frame_0
+  - name: mesa_Frame_0
     originalName: 
-    pivot: {x: 0.52, y: -0.018518519}
+    pivot: {x: 0.49166667, y: -0.04761905}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 103
-      y: 121
-      width: 25
-      height: 108
-    spriteID: 2763603a9fe093f4dbbbf846c4e1a33e
+      x: 638
+      y: 4
+      width: 60
+      height: 42
+    spriteID: d5ac1acd612079549be2ed46ed14da43
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,39 +140,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 103, y: 121}
-  - name: luz_Frame_1
+    uvTransform: {x: 638, y: 4}
+  - name: mesa_Frame_4
     originalName: 
-    pivot: {x: 0.52, y: -0.01818182}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 123
-      width: 25
-      height: 110
-    spriteID: 2c0eaaa59914ccb438ecdb15451a96b4
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 123}
-  - name: luz_Frame_2
-    originalName: 
-    pivot: {x: 0.52, y: -0.018018018}
+    pivot: {x: 0.23722047, y: -0.0036363634}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 25
-      height: 111
-    spriteID: 854bedee7550a1f489d097eb4e5d7551
+      width: 626
+      height: 275
+    spriteID: fb1d617a32c5dfc4abf42daaf3f0b148
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,18 +161,138 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: luz_Frame_3
+  - name: mesa_Frame_5
     originalName: 
-    pivot: {x: 0.52, y: -0.018867925}
+    pivot: {x: 0.23722047, y: -0.0036363634}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 169
+      x: 4
+      y: 287
+      width: 626
+      height: 275
+    spriteID: 69dc0a647e77577408e1aef1ed54a6e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 287}
+  - name: mesa_Frame_7
+    originalName: 
+    pivot: {x: 0.23722047, y: -0.0036363634}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 570
+      width: 626
+      height: 275
+    spriteID: e447c57a5dbaa7e42ad97f387cd5051a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 570}
+  - name: mesa_Frame_8
+    originalName: 
+    pivot: {x: 0.23722047, y: -0.0036363634}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 853
+      width: 626
+      height: 275
+    spriteID: be37d28ede794ec4e8e23af368eef528
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 853}
+  - name: mesa_Frame_9
+    originalName: 
+    pivot: {x: 0.23722047, y: -0.0036363634}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1136
+      width: 626
+      height: 275
+    spriteID: fd5d1030d7cad1840ae918d563fe6a23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1136}
+  - name: mesa_Frame_10
+    originalName: 
+    pivot: {x: 0.23722047, y: -0.0036363634}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1419
+      width: 626
+      height: 275
+    spriteID: dd050e908d818294293faca0c5f9f0ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1419}
+  - name: mesa_Frame_11
+    originalName: 
+    pivot: {x: 0.23722047, y: -0.0036363634}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1702
+      width: 626
+      height: 275
+    spriteID: ca514b2eb607b6645be210c39cf10f4c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1702}
+  - name: mesa_Frame_1
+    originalName: 
+    pivot: {x: 0.49166667, y: -0.04761905}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 706
       y: 4
-      width: 25
-      height: 106
-    spriteID: 7397f62c0d2a5ed4195c7f9643f563d7
+      width: 60
+      height: 42
+    spriteID: 4d44b5c2c3166f64e8a44e553039dccb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,39 +300,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 169, y: 4}
-  - name: luz_Frame_4
+    uvTransform: {x: 706, y: 4}
+  - name: mesa_Frame_2
     originalName: 
-    pivot: {x: 0.52, y: -0.019047622}
+    pivot: {x: 0.49166667, y: -0.04761905}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 169
-      y: 118
-      width: 25
-      height: 105
-    spriteID: 1cf050c695d03664e983dfc416e69f70
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 169, y: 118}
-  - name: luz_Frame_5
-    originalName: 
-    pivot: {x: 0.52, y: -0.018518519}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 136
+      x: 774
       y: 4
-      width: 25
-      height: 108
-    spriteID: 9f1e97a3172b40147894bba6907f0791
+      width: 60
+      height: 42
+    spriteID: 65cf8f13433d074459f109aa05d55731
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -240,19 +320,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 136, y: 4}
-  - name: luz_Frame_6
+    uvTransform: {x: 774, y: 4}
+  - name: mesa_Frame_3
     originalName: 
-    pivot: {x: 0.52, y: -0.018348625}
+    pivot: {x: 0.49166667, y: -0.04761905}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 70
+      x: 842
       y: 4
-      width: 25
-      height: 109
-    spriteID: ab70c573db03cad42a37c21bebd9f615
+      width: 60
+      height: 42
+    spriteID: cc1b59450c31e064ebd37f7013f81fc4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -260,39 +340,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 70, y: 4}
-  - name: luz_Frame_7
+    uvTransform: {x: 842, y: 4}
+  - name: mesa_Frame_6
     originalName: 
-    pivot: {x: 0.52, y: -0.018348625}
+    pivot: {x: 0.49166667, y: -0.04761905}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 70
-      y: 121
-      width: 25
-      height: 109
-    spriteID: 178d20142b0a27f449c98066888056d6
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 70, y: 121}
-  - name: luz_Frame_8
-    originalName: 
-    pivot: {x: 0.52, y: -0.01818182}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 37
+      x: 910
       y: 4
-      width: 25
-      height: 110
-    spriteID: b978cf563eccd3f4cb321698e8ed38ba
+      width: 60
+      height: 42
+    spriteID: 2dfa0a1451f79f342af2738e14c457be
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -300,184 +360,124 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 37, y: 4}
-  - name: luz_Frame_9
-    originalName: 
-    pivot: {x: 0.52, y: -0.01818182}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 37
-      y: 122
-      width: 25
-      height: 110
-    spriteID: 42b9067e5b9e40d41aa886cedc4a89a1
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 37, y: 122}
-  - name: luz_Frame_10
-    originalName: 
-    pivot: {x: 0.52, y: -0.018348625}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 103
-      y: 4
-      width: 25
-      height: 109
-    spriteID: 4d9c21ea83939d045ad833ab5447a943
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 103, y: 4}
-  - name: luz_Frame_11
-    originalName: 
-    pivot: {x: 0.52, y: -0.018518519}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 136
-      y: 120
-      width: 25
-      height: 108
-    spriteID: d93e583144e6d094eb27d6cb17e92b24
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 136, y: 120}
+    uvTransform: {x: 910, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1911472583
-    name: luz
+    guid: 212383040
+    name: mesa
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: luz_Frame_0
+    - name: mesa_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 3
         y: 2
-        width: 25
-        height: 108
-      spriteId: 2763603a9fe093f4dbbbf846c4e1a33e
-    - name: luz_Frame_1
+        width: 60
+        height: 42
+      spriteId: d5ac1acd612079549be2ed46ed14da43
+    - name: mesa_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: -116
+        y: 1
+        width: 626
+        height: 275
+      spriteId: fb1d617a32c5dfc4abf42daaf3f0b148
+    - name: mesa_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: -116
+        y: 1
+        width: 626
+        height: 275
+      spriteId: 69dc0a647e77577408e1aef1ed54a6e9
+    - name: mesa_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: -116
+        y: 1
+        width: 626
+        height: 275
+      spriteId: e447c57a5dbaa7e42ad97f387cd5051a
+    - name: mesa_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: -116
+        y: 1
+        width: 626
+        height: 275
+      spriteId: be37d28ede794ec4e8e23af368eef528
+    - name: mesa_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: -116
+        y: 1
+        width: 626
+        height: 275
+      spriteId: fd5d1030d7cad1840ae918d563fe6a23
+    - name: mesa_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: -116
+        y: 1
+        width: 626
+        height: 275
+      spriteId: dd050e908d818294293faca0c5f9f0ad
+    - name: mesa_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: -116
+        y: 1
+        width: 626
+        height: 275
+      spriteId: ca514b2eb607b6645be210c39cf10f4c
+    - name: mesa_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
         x: 3
         y: 2
-        width: 25
-        height: 110
-      spriteId: 2c0eaaa59914ccb438ecdb15451a96b4
-    - name: luz_Frame_2
+        width: 60
+        height: 42
+      spriteId: 4d44b5c2c3166f64e8a44e553039dccb
+    - name: mesa_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 3
         y: 2
-        width: 25
-        height: 111
-      spriteId: 854bedee7550a1f489d097eb4e5d7551
-    - name: luz_Frame_3
+        width: 60
+        height: 42
+      spriteId: 65cf8f13433d074459f109aa05d55731
+    - name: mesa_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
         x: 3
         y: 2
-        width: 25
-        height: 106
-      spriteId: 7397f62c0d2a5ed4195c7f9643f563d7
-    - name: luz_Frame_4
-      frameIndex: 4
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 105
-      spriteId: 1cf050c695d03664e983dfc416e69f70
-    - name: luz_Frame_5
-      frameIndex: 5
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 108
-      spriteId: 9f1e97a3172b40147894bba6907f0791
-    - name: luz_Frame_6
+        width: 60
+        height: 42
+      spriteId: cc1b59450c31e064ebd37f7013f81fc4
+    - name: mesa_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
         x: 3
         y: 2
-        width: 25
-        height: 109
-      spriteId: ab70c573db03cad42a37c21bebd9f615
-    - name: luz_Frame_7
-      frameIndex: 7
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 109
-      spriteId: 178d20142b0a27f449c98066888056d6
-    - name: luz_Frame_8
-      frameIndex: 8
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 110
-      spriteId: b978cf563eccd3f4cb321698e8ed38ba
-    - name: luz_Frame_9
-      frameIndex: 9
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 110
-      spriteId: 42b9067e5b9e40d41aa886cedc4a89a1
-    - name: luz_Frame_10
-      frameIndex: 10
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 109
-      spriteId: 4d9c21ea83939d045ad833ab5447a943
-    - name: luz_Frame_11
-      frameIndex: 11
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 108
-      spriteId: d93e583144e6d094eb27d6cb17e92b24
+        width: 60
+        height: 42
+      spriteId: 2dfa0a1451f79f342af2738e14c457be
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -499,7 +499,7 @@ ScriptedImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
@@ -520,4 +520,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 112}
+  canvasSize: {x: 65, y: 47}

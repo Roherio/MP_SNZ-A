@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02b982e0697c75d459e6c4e2d2beefbe
+guid: 5b125c4e8d996ae41947e37146e217a8
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638826616529175932
+  platformSettingsDirtyTick: 638826616613908742
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: luz_Frame_0
+  - name: mueble_Frame_0
     originalName: 
-    pivot: {x: 0.52, y: -0.018518519}
+    pivot: {x: 0.49107143, y: -0.0625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 103
-      y: 121
-      width: 25
-      height: 108
-    spriteID: 2763603a9fe093f4dbbbf846c4e1a33e
+      x: 638
+      y: 4
+      width: 112
+      height: 32
+    spriteID: 3e5467b8790f8f34fab84e161dc95d5e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,39 +140,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 103, y: 121}
-  - name: luz_Frame_1
+    uvTransform: {x: 638, y: 4}
+  - name: mueble_Frame_4
     originalName: 
-    pivot: {x: 0.52, y: -0.01818182}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 123
-      width: 25
-      height: 110
-    spriteID: 2c0eaaa59914ccb438ecdb15451a96b4
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 123}
-  - name: luz_Frame_2
-    originalName: 
-    pivot: {x: 0.52, y: -0.018018018}
+    pivot: {x: 0.08785943, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 25
-      height: 111
-    spriteID: 854bedee7550a1f489d097eb4e5d7551
+      width: 626
+      height: 275
+    spriteID: da567a779b8e3f34382bb2c629632306
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,18 +161,138 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: luz_Frame_3
+  - name: mueble_Frame_5
     originalName: 
-    pivot: {x: 0.52, y: -0.018867925}
+    pivot: {x: 0.08785943, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 169
+      x: 4
+      y: 287
+      width: 626
+      height: 275
+    spriteID: 04a2f3163072acd49bc4ebec44c011de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 287}
+  - name: mueble_Frame_7
+    originalName: 
+    pivot: {x: 0.08785943, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 570
+      width: 626
+      height: 275
+    spriteID: 9ea0504105ec39e4cac26ef9c7c77eae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 570}
+  - name: mueble_Frame_8
+    originalName: 
+    pivot: {x: 0.08785943, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 853
+      width: 626
+      height: 275
+    spriteID: c3adc05693e283f4badfff5b8d26abab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 853}
+  - name: mueble_Frame_9
+    originalName: 
+    pivot: {x: 0.08785943, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1136
+      width: 626
+      height: 275
+    spriteID: 6a3f6cb00a8961d4a88117aa1177d713
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1136}
+  - name: mueble_Frame_10
+    originalName: 
+    pivot: {x: 0.08785943, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1419
+      width: 626
+      height: 275
+    spriteID: 835b42a61e6746a4caccaaa5b8e8bfff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1419}
+  - name: mueble_Frame_11
+    originalName: 
+    pivot: {x: 0.08785943, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1702
+      width: 626
+      height: 275
+    spriteID: 13e336b6371aaf841b81fa291c55ce23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1702}
+  - name: mueble_Frame_1
+    originalName: 
+    pivot: {x: 0.49107143, y: -0.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 758
       y: 4
-      width: 25
-      height: 106
-    spriteID: 7397f62c0d2a5ed4195c7f9643f563d7
+      width: 112
+      height: 32
+    spriteID: 8c46e3fe389eacf43b438e72e5f3547c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,39 +300,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 169, y: 4}
-  - name: luz_Frame_4
+    uvTransform: {x: 758, y: 4}
+  - name: mueble_Frame_2
     originalName: 
-    pivot: {x: 0.52, y: -0.019047622}
+    pivot: {x: 0.49107143, y: -0.0625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 169
-      y: 118
-      width: 25
-      height: 105
-    spriteID: 1cf050c695d03664e983dfc416e69f70
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 169, y: 118}
-  - name: luz_Frame_5
-    originalName: 
-    pivot: {x: 0.52, y: -0.018518519}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 136
+      x: 878
       y: 4
-      width: 25
-      height: 108
-    spriteID: 9f1e97a3172b40147894bba6907f0791
+      width: 112
+      height: 32
+    spriteID: 56482b27d8544184cb985e7b44cb8fe9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -240,19 +320,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 136, y: 4}
-  - name: luz_Frame_6
+    uvTransform: {x: 878, y: 4}
+  - name: mueble_Frame_3
     originalName: 
-    pivot: {x: 0.52, y: -0.018348625}
+    pivot: {x: 0.49107143, y: -0.0625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 70
-      y: 4
-      width: 25
-      height: 109
-    spriteID: ab70c573db03cad42a37c21bebd9f615
+      x: 638
+      y: 44
+      width: 112
+      height: 32
+    spriteID: 7db393f8797fbc047a566c8654bbfffd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -260,19 +340,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 70, y: 4}
-  - name: luz_Frame_7
+    uvTransform: {x: 638, y: 44}
+  - name: mueble_Frame_6
     originalName: 
-    pivot: {x: 0.52, y: -0.018348625}
+    pivot: {x: 0.49107143, y: -0.0625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 70
-      y: 121
-      width: 25
-      height: 109
-    spriteID: 178d20142b0a27f449c98066888056d6
+      x: 758
+      y: 44
+      width: 112
+      height: 32
+    spriteID: 44c84041afedcb84fb91e7de4ecedce2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -280,204 +360,124 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 70, y: 121}
-  - name: luz_Frame_8
-    originalName: 
-    pivot: {x: 0.52, y: -0.01818182}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 37
-      y: 4
-      width: 25
-      height: 110
-    spriteID: b978cf563eccd3f4cb321698e8ed38ba
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 37, y: 4}
-  - name: luz_Frame_9
-    originalName: 
-    pivot: {x: 0.52, y: -0.01818182}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 37
-      y: 122
-      width: 25
-      height: 110
-    spriteID: 42b9067e5b9e40d41aa886cedc4a89a1
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 37, y: 122}
-  - name: luz_Frame_10
-    originalName: 
-    pivot: {x: 0.52, y: -0.018348625}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 103
-      y: 4
-      width: 25
-      height: 109
-    spriteID: 4d9c21ea83939d045ad833ab5447a943
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 103, y: 4}
-  - name: luz_Frame_11
-    originalName: 
-    pivot: {x: 0.52, y: -0.018518519}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 136
-      y: 120
-      width: 25
-      height: 108
-    spriteID: d93e583144e6d094eb27d6cb17e92b24
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 136, y: 120}
+    uvTransform: {x: 758, y: 44}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1911472583
-    name: luz
+    guid: 204204068
+    name: mueble
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: luz_Frame_0
+    - name: mueble_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 3
+        x: 5
         y: 2
-        width: 25
-        height: 108
-      spriteId: 2763603a9fe093f4dbbbf846c4e1a33e
-    - name: luz_Frame_1
-      frameIndex: 1
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 110
-      spriteId: 2c0eaaa59914ccb438ecdb15451a96b4
-    - name: luz_Frame_2
-      frameIndex: 2
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 111
-      spriteId: 854bedee7550a1f489d097eb4e5d7551
-    - name: luz_Frame_3
-      frameIndex: 3
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 106
-      spriteId: 7397f62c0d2a5ed4195c7f9643f563d7
-    - name: luz_Frame_4
+        width: 112
+        height: 32
+      spriteId: 3e5467b8790f8f34fab84e161dc95d5e
+    - name: mueble_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 105
-      spriteId: 1cf050c695d03664e983dfc416e69f70
-    - name: luz_Frame_5
+        x: 5
+        y: 0
+        width: 626
+        height: 275
+      spriteId: da567a779b8e3f34382bb2c629632306
+    - name: mueble_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 108
-      spriteId: 9f1e97a3172b40147894bba6907f0791
-    - name: luz_Frame_6
-      frameIndex: 6
-      additiveSortOrder: 0
-      cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 109
-      spriteId: ab70c573db03cad42a37c21bebd9f615
-    - name: luz_Frame_7
+        x: 5
+        y: 0
+        width: 626
+        height: 275
+      spriteId: 04a2f3163072acd49bc4ebec44c011de
+    - name: mueble_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 109
-      spriteId: 178d20142b0a27f449c98066888056d6
-    - name: luz_Frame_8
+        x: 5
+        y: 0
+        width: 626
+        height: 275
+      spriteId: 9ea0504105ec39e4cac26ef9c7c77eae
+    - name: mueble_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 110
-      spriteId: b978cf563eccd3f4cb321698e8ed38ba
-    - name: luz_Frame_9
+        x: 5
+        y: 0
+        width: 626
+        height: 275
+      spriteId: c3adc05693e283f4badfff5b8d26abab
+    - name: mueble_Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 110
-      spriteId: 42b9067e5b9e40d41aa886cedc4a89a1
-    - name: luz_Frame_10
+        x: 5
+        y: 0
+        width: 626
+        height: 275
+      spriteId: 6a3f6cb00a8961d4a88117aa1177d713
+    - name: mueble_Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 2
-        width: 25
-        height: 109
-      spriteId: 4d9c21ea83939d045ad833ab5447a943
-    - name: luz_Frame_11
+        x: 5
+        y: 0
+        width: 626
+        height: 275
+      spriteId: 835b42a61e6746a4caccaaa5b8e8bfff
+    - name: mueble_Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
-        x: 3
+        x: 5
+        y: 0
+        width: 626
+        height: 275
+      spriteId: 13e336b6371aaf841b81fa291c55ce23
+    - name: mueble_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
         y: 2
-        width: 25
-        height: 108
-      spriteId: d93e583144e6d094eb27d6cb17e92b24
+        width: 112
+        height: 32
+      spriteId: 8c46e3fe389eacf43b438e72e5f3547c
+    - name: mueble_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 2
+        width: 112
+        height: 32
+      spriteId: 56482b27d8544184cb985e7b44cb8fe9
+    - name: mueble_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 2
+        width: 112
+        height: 32
+      spriteId: 7db393f8797fbc047a566c8654bbfffd
+    - name: mueble_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 5
+        y: 2
+        width: 112
+        height: 32
+      spriteId: 44c84041afedcb84fb91e7de4ecedce2
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -499,7 +499,7 @@ ScriptedImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
@@ -520,4 +520,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 112}
+  canvasSize: {x: 120, y: 38}
