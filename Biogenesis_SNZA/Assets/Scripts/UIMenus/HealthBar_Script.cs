@@ -9,7 +9,7 @@ public class HealthBar_Script : MonoBehaviour
     public Slider healthSlider;
     public Slider healthSliderDelay;
 
-    //[SerializeField] private float delayStart = 0.3f;
+    private float delayStart = 1f;
     [SerializeField] private float delaySpeed = 0.01f;
     
     void Start()
@@ -29,20 +29,11 @@ public class HealthBar_Script : MonoBehaviour
             //StartCoroutine(DelayHealth());
             healthSliderDelay.value = Mathf.Lerp(healthSliderDelay.value, GameControl_Script.lifeLiora, delaySpeed);
         }
-        /*if (healthSlider.value != currentHealth)
-        {
-            healthSlider.value = currentHealth;
-        }
-
-        if (healthSlider.value != healthSliderDelay.value)
-        {
-            //StartCoroutine(DelayHealth());
-            healthSliderDelay.value = Mathf.Lerp(healthSliderDelay.value, currentHealth, delaySpeed);
-        }*/
     }
-
-    /*IEnumerator DelayHealth()
+    /*
+    IEnumerator DelayHealth()
     {
         yield return new WaitForSeconds(delayStart);
+        healthSliderDelay.value = Mathf.Lerp(healthSliderDelay.value, GameControl_Script.lifeLiora, delaySpeed);
     }*/
 }

@@ -9,6 +9,7 @@ public class Liora_Interaction_Script : MonoBehaviour
     private IInteractable_Script interactableInRange = null;
     //icona per mostrar que es pot interactuar amb X
     public GameObject interactionIcon;
+    
     // Start is called before the first frame update
     void Start()
     {

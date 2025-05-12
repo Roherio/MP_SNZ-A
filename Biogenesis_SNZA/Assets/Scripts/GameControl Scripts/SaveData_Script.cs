@@ -9,6 +9,7 @@ public class SaveData_Script
     //definim les dades qe voldrem guardar
     public Vector3 playerPosition;
     public float lifeLiora;
+    public bool[] inventorySaveData;
     //public int money;
     
     //public string mapBoundary; //aqui guardarem els limits de la camera quan els apliquem
