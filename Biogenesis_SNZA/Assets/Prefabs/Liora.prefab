@@ -938,7 +938,7 @@ MonoBehaviour:
   knockbackScript: {fileID: 0}
   jumping: 1
   groundSpeed: 10
-  jumpPower: 24
+  jumpPower: 26
   isDashing: 0
   dashPower: 50
   trailRenderer: {fileID: 4869507558380449802}
