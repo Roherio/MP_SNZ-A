@@ -1,0 +1,26 @@
+{
+	"identifier": "CABRA",
+	"uniqueIdentifer": "9718af00-e920-11ef-9d4d-a36a97f1cbda",
+	"x": 7696,
+	"y": -336,
+	"width": 640,
+	"height": 680,
+	"bgColor": "#AFF9F7",
+	"neighbourLevels": [],
+	"customFields" : {},
+	"layers": [
+		"Pipes4.png",
+		"Pipes3.png",
+		"UNDERGROUND.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png",
+		"Dungeon_tile_2.png",
+		"STAIRS2.png",
+		"Pipes5.png",
+		"Pipes2.png",
+		"Pipes.png"
+	],
+	"entities" : {}
+}
