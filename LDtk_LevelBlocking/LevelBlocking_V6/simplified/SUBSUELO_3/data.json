@@ -1,0 +1,47 @@
+{
+	"identifier": "SUBSUELO_3",
+	"uniqueIdentifer": "d057b840-e920-11ef-9d4d-91f5056b7b3a",
+	"x": 11542,
+	"y": 1328,
+	"width": 1280,
+	"height": 1480,
+	"bgColor": "#96EB8E",
+	"neighbourLevels": [
+		{
+			"levelIid": "46df2dc0-e920-11ef-9d4d-b53a439d4040",
+			"dir": "o"
+		},
+		{
+			"levelIid": "58031fb0-e920-11ef-9d4d-a1f8203314f1",
+			"dir": "w"
+		},
+		{
+			"levelIid": "51153ce0-e920-11ef-bc02-a32429eca351",
+			"dir": "w"
+		},
+		{
+			"levelIid": "511c2090-e920-11ef-9d4d-3fb6a853ba8a",
+			"dir": "e"
+		},
+		{
+			"levelIid": "85d0d5d0-e920-11ef-9d4d-657016cbde1a",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Pipes4.png",
+		"Pipes3.png",
+		"UNDERGROUND.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png",
+		"Dungeon_tile_2.png",
+		"STAIRS2.png",
+		"Pipes5.png",
+		"Pipes2.png",
+		"Pipes.png"
+	],
+	"entities" : {}
+}

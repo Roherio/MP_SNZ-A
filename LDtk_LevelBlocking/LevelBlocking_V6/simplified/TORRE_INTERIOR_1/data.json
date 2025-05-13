@@ -1,0 +1,39 @@
+{
+	"identifier": "TORRE_INTERIOR_1",
+	"uniqueIdentifer": "0a294a40-e920-11ef-b360-b57e36a8d465",
+	"x": 10880,
+	"y": -2176,
+	"width": 1280,
+	"height": 376,
+	"bgColor": "#F78585",
+	"neighbourLevels": [
+		{
+			"levelIid": "1b5f8880-e920-11ef-9d4d-a7306f9d2baf",
+			"dir": "o"
+		},
+		{
+			"levelIid": "d1e7be60-e920-11ef-9d4d-393abb74b7ca",
+			"dir": "w"
+		},
+		{
+			"levelIid": "d9cc01e0-e920-11ef-9d4d-dd3d211edc26",
+			"dir": "n"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Pipes4.png",
+		"Pipes3.png",
+		"UNDERGROUND.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png",
+		"Dungeon_tile_2.png",
+		"STAIRS2.png",
+		"Pipes5.png",
+		"Pipes2.png",
+		"Pipes.png"
+	],
+	"entities" : {}
+}
