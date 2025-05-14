@@ -30,14 +30,14 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
         }
         if (currentDialogue == "dialogueData3")
         {
-            if (GameControl_Script.mantaRumo)
+            if (EventsManager_Script.mantaRumo)
             {
                 currentDialogue = "dialogueData4";
             }
         }
         if (currentDialogue == "dialogueData1")
         {
-            if (GameControl_Script.cascosRumo)
+            if (EventsManager_Script.cascosRumo)
             {
                 currentDialogue = "dialogueData2";
             }
@@ -126,7 +126,7 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
             {
                 EndDialogue();
                 //----------------ACONSEGUIM EL PODER DE TRENCAR MURS
-                GameControl_Script.poderRumo = true;
+                EventsManager_Script.poderRumo = true;
                 //-----------------------------------------------------------------AQUI CALDRIA FER LA ANIMACIO DE QUE MARXA O ES FA INVISIBLE O LO QUE SEA, I DESPRES FEM DESTROY GAMEOBJECT
             }
         }

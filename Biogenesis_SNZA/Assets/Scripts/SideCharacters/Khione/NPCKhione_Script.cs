@@ -36,11 +36,11 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
         {
             if (doOnceDialogue2 == true)
             {
-                if (GameControl_Script.piezasKhione == 1)
+                if (EventsManager_Script.piezasKhione == 1)
                 {
                     currentDialogue = "dialogueData3";
                 }
-                if (GameControl_Script.piezasKhione == 2)
+                if (EventsManager_Script.piezasKhione == 2)
                 {
                     currentDialogue = "dialogueData4";
                 }
@@ -48,7 +48,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
         }
         if (currentDialogue == "dialogueData3")
         {
-            if (GameControl_Script.piezasKhione == 2)
+            if (EventsManager_Script.piezasKhione == 2)
             {
                 currentDialogue = "dialogueData4";
             }
@@ -171,7 +171,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             {
                 EndDialogue();
                 //----------------ACONSEGUIM EL PODER DE ESCALAR ENREDADERAS
-                GameControl_Script.poderKhione = true;
+                EventsManager_Script.poderKhione = true;
                 currentDialogue = "dialogueData5";
             }
         }

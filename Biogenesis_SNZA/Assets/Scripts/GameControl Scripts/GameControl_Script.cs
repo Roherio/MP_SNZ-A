@@ -12,13 +12,10 @@ public class GameControl_Script : MonoBehaviour
     public static float adrenalineLiora = 0f;
     public static int moneyLiora = 0;
 
-    //logica Recolectables
-    public static int piezasKhione = 0;
-    public static bool cascosRumo = false;
-    public static bool mantaRumo = false;
-    //logica Poderes
-    public static bool poderKhione = false;
-    public static bool poderRumo = false;
+    //logica items consumibles
+    public static int cristalizadores = 0;
+    public static int cuero = 0;
+    public static int viales = 0;
 
     //logica menus
     public static bool isPaused = false;

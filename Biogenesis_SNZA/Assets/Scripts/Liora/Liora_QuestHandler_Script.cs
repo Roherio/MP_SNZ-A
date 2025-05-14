@@ -16,7 +16,7 @@ public class Liora_QuestHandler_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameControl_Script.poderKhione == true)
+        if (EventsManager_Script.poderKhione == true)
         {
             colliderArdilla.SetActive(true);
         }

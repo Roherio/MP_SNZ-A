@@ -7,7 +7,7 @@ public class PuertaCabra_Interact_Script : MonoBehaviour, IInteractable_Script
     public bool isInteracted { get; private set; } = false;
     public bool CanInteract()
     {
-        return GameControl_Script.poderRumo; //---------------------------------------aqui hace falta poner GameControl_Script.poderRumo para que solo se pueda si poderRumo es true
+        return EventsManager_Script.poderRumo; //---------------------------------------aqui hace falta poner GameControl_Script.poderRumo para que solo se pueda si poderRumo es true
     }
     public void Interact()
     {

@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9181d76c7cd814d84514056da70c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonesActivos_Script: {fileID: 5117474978479688533, guid: 6f7426400d596684b9cbe12b041a807d, type: 3}
 --- !u!114 &1474517659695495998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +129,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76d5c81c21d5fa42bbf369a7f8585bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefabs:
-  - {fileID: -4573678476266242817, guid: c79cbb8c9eba17b4bbeb70f94195d30d, type: 3}
-  - {fileID: 5729471605627338789, guid: 745b17e2114c9b1448081f9ae9fe2654, type: 3}
+  objetosInventario: []
+  obtenidosObjetosInventario: 

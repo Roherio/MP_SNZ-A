@@ -33,18 +33,17 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
         print("takenItem!!!!!!!!!!");
         if (itemUser == "Khione")
         {
-            GameControl_Script.piezasKhione++;
-            print(GameControl_Script.piezasKhione);
+            EventsManager_Script.piezasKhione++;
         }
         if (itemUser == "Rumo")
         {
             if (itemName == "cascosRumo")
             {
-                GameControl_Script.cascosRumo = true;
+                EventsManager_Script.cascosRumo = true;
             }
             else if (itemName == "mantaRumo")
             {
-                GameControl_Script.mantaRumo = true;
+                EventsManager_Script.mantaRumo = true;
             }
             
         }
