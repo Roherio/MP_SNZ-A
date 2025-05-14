@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour
@@ -44,7 +43,15 @@ public class MusicManager : MonoBehaviour
         currentFade = StartCoroutine(FadeToNewMusic(newClip));
     }
 
-    private IEnumerator FadeToNewMusic(AudioClip newClip)
+    public void StopMusic()
+    {
+        if (currentFade != null)
+            StopCoroutine(currentFade);
+
+             currentFade = StartCoroutine(FadeOutAndStop());
+    }
+
+    IEnumerator FadeToNewMusic(AudioClip newClip)
     {
         nextSource.clip = newClip;
         nextSource.volume = 0f;
@@ -69,5 +76,28 @@ public class MusicManager : MonoBehaviour
         var temp = currentSource;
         currentSource = nextSource;
         nextSource = temp;
+    }
+    IEnumerator FadeOutAndStop()
+    {
+        float time = 0f;
+        float startVolumeA = audioSourceA.volume;
+        float startVolumeB = audioSourceB.volume;
+
+        while (time < fadeDuration)
+        {
+            float t = time / fadeDuration;
+            audioSourceA.volume = Mathf.Lerp(startVolumeA, 0f, t);
+            audioSourceB.volume = Mathf.Lerp(startVolumeB, 0f, t);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        audioSourceA.Stop();
+        audioSourceB.Stop();
+        audioSourceA.clip = null;
+        audioSourceB.clip = null;
+
+        audioSourceA.volume = 1f;
+        audioSourceB.volume = 1f;
     }
 }
