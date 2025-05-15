@@ -142,10 +142,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ff265c86b5c084eba7b955b31f52dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameEnemy: Jabali
   maxEnemyHP: 100
   enemyHP: 100
   deathAnimationDuration: 1.5
   animator: {fileID: 6409851266301484324}
+  isDead: 0
 --- !u!95 &6409851266301484324
 Animator:
   serializedVersion: 5
@@ -324,7 +326,7 @@ MonoBehaviour:
   - {x: -0.009087353, y: 0.0792799, z: 0.00000019971715}
   m_ShapePathHash: -1604940096
   m_Mesh: {fileID: 0}
-  m_InstanceId: -39666
+  m_InstanceId: 206076
   m_LocalBounds:
     m_Center: {x: 1.4395365, y: 3.1369736, z: 0}
     m_Extent: {x: 1.7328688, y: 3.14442, z: 0}

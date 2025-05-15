@@ -49,7 +49,7 @@ public class GameControl_Script : MonoBehaviour
         if (cristalizadores <= 0)
         {
             BotonesActivos_Script.bCristalizador = false;
-            SNZAProgressBar_Script.bTachadoCristalizador = false;
+            SNZAProgress_Script.bTachadoCristalizador = false;
         }
         //------------------------------------ESTO HARA FALTA PASARLO PUNTUALMENTE AL MOMENTO EN EL QUE GASTES LOS ITEMS CON KHIONE para hacerte una poción
         if (cuero <= 0)

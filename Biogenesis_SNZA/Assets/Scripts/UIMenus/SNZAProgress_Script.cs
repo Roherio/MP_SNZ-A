@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class SNZAProgressBar_Script : MonoBehaviour
+public class SNZAProgress_Script : MonoBehaviour
 {
     public GameObject tachadoCristalizador;
     public static bool bTachadoCristalizador;

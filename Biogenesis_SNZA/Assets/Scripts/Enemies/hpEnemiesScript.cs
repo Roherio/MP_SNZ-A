@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class hpEnemiesScript : MonoBehaviour
 {
+    [SerializeField] private string nameEnemy;
     public float maxEnemyHP;
     public float enemyHP;
     public float deathAnimationDuration; //caldra determinar aixo a l'inspector depenent de cada prefab i la seva duracio de l'animació
@@ -39,6 +40,14 @@ public class hpEnemiesScript : MonoBehaviour
                 animator.SetBool("isAttacking", false);
                 animator.SetBool("isDying", true);
                 //un cop passats a falsos els altres estats porsiacaso, fem trigger de la variable isDying, i fem destroy en invoke per ferho en el temps que l'animacio dura
+                if (nameEnemy == "Jabali")
+                {
+                    SNZAProgress_Script.bKilledJabali = true;
+                }
+                if (nameEnemy == "Secretario")
+                {
+                    SNZAProgress_Script.bKilledSecretario = true;
+                }
                 Invoke("DestruirGameObject", deathAnimationDuration);
             }
         }

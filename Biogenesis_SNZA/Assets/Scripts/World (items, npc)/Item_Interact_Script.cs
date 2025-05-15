@@ -59,7 +59,7 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
             //esto se retirará porque los cristalizadores te los dan o abraxas o Wallace
             GameControl_Script.cristalizadores++;
             BotonesActivos_Script.bCristalizador = true;
-            SNZAProgressBar_Script.bTachadoCristalizador = true;
+            SNZAProgress_Script.bTachadoCristalizador = true;
         }
         if (itemName == "Cuero")
         {
