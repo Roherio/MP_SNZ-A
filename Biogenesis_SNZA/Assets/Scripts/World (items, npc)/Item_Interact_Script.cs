@@ -54,6 +54,23 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
             }
             
         }
+        if (itemName == "Cristalizador")
+        {
+            //esto se retirará porque los cristalizadores te los dan o abraxas o Wallace
+            GameControl_Script.cristalizadores++;
+            BotonesActivos_Script.bCristalizador = true;
+            SNZAProgressBar_Script.bTachadoCristalizador = true;
+        }
+        if (itemName == "Cuero")
+        {
+            GameControl_Script.cuero++;
+            BotonesActivos_Script.bCuero = true;
+        }
+        if (itemName == "Vial")
+        {
+            GameControl_Script.viales++;
+            BotonesActivos_Script.bVial = true;
+        }
     }
     public void StopAnimation()
     {

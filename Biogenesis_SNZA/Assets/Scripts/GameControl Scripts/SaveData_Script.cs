@@ -15,6 +15,11 @@ public class SaveData_Script
     //public string mapBoundary; //aqui guardarem els limits de la camera quan els apliquem
 
     //Inventory saving també
+    //-----------------------consumibles
+    public int cristalizadores;
+    public int cuero;
+    public int viales;
+    //-----------------------misiones
     public bool barraKhione;
     public bool muelleKhione;
     public bool taponesRumo;
@@ -22,7 +27,8 @@ public class SaveData_Script
     public bool poderKhione;
     public bool poderRumo;
 
-    //eventosTienda
-    public bool habladoKhione1vez = false;
+    //eventosPersonajes
+    public bool habladoKhione1vez;
+    public bool habladoWallace1vez;
     //SNZAs també
 }

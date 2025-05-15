@@ -106,7 +106,6 @@ public class BotonesActivos_Script : MonoBehaviour
             objRumo2.SetActive(true);
         }
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -157,6 +156,21 @@ public class BotonesActivos_Script : MonoBehaviour
             objRumo2.SetActive(true);
         }
         //desactivar objetos
+        if (!bCristalizador && bCristalizadorActivated)
+        {
+            bCristalizadorActivated = false;
+            cristalizador.SetActive(false);
+        }
+        if (!bCuero && bCueroActivated)
+        {
+            bCueroActivated = false;
+            cuero.SetActive(false);
+        }
+        if (!bVial && bVialActivated)
+        {
+            bVialActivated = false;
+            vial.SetActive(false);
+        }
         if (!bObjKhione1 && bObjKhione1Activated)
         {
             objKhione1.SetActive(false);
@@ -174,67 +188,4 @@ public class BotonesActivos_Script : MonoBehaviour
             objRumo2.SetActive(false);
         }
     }
-
-    //funciones de activar/desactivar botones
-    //--------------------------------------SNZAs
-    /*
-    public void ActivarSNZAJabali()
-    {
-        //SNZAJabali.SetActive(true);
-    }
-    public void ActivarSNZASecretario()
-    {
-        //SNZASecretario.SetActive(true);
-    }
-    //--------------------------------------consumibles (activar y desactivar, ya que si no tenemos de estos en nuestro inventario, deberían desaparecer)
-    public void ActivarCristalizador()
-    {
-        cristalizador.SetActive(true);
-    }
-    public void ActivarCuero()
-    {
-        cuero.SetActive(true);
-    }
-    public void ActivarVial()
-    {
-        vial.SetActive(true);
-    }
-    public void DesactivarCristalizador()
-    {
-        cristalizador.SetActive(false);
-    }
-    public void DesactivarCuero()
-    {
-        cuero.SetActive(false);
-    }
-    public void DesactivarVial()
-    {
-        vial.SetActive(false);
-    }
-    //--------------------------------------misiones
-    public void ActivarObjKhione1()
-    {
-        objKhione1.SetActive(true);
-    }
-    public void ActivarObjKhione2()
-    {
-        objKhione2.SetActive(true);
-    }
-    public void ActivarObjRumo1()
-    {
-        objRumo1.SetActive(true);
-    }
-    public void ActivarObjRumo2()
-    {
-        objRumo2.SetActive(true);
-    }
-    //--------------------------------------poderes
-    public void ActivarAnilloKhione()
-    {
-        anilloKhione.SetActive(true);
-    }
-    public void ActivarAnilloRumo()
-    {
-        anilloRumo.SetActive(true);
-    }*/
 }

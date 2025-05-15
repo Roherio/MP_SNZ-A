@@ -22,6 +22,10 @@ public class SaveController_Script : MonoBehaviour
             //mapBoundary = FindObjectOfType<CinemachineConfiner<().m_BoundingShape2D.gameObject.name
             lifeLiora = GameControl_Script.lifeLiora,
             //GUARDAR DATO DE QUE OBJETOS TIENES, TODOS LOS OBJETOS QUE SON TRUE EN TU INVENTARIO Y DOCUMENTOS, PERSONAJES CONOCIDOS...
+            cristalizadores = GameControl_Script.cristalizadores,
+            cuero = GameControl_Script.cuero,
+            viales = GameControl_Script.viales,
+
             barraKhione = EventsManager_Script.barraKhione,
             muelleKhione = EventsManager_Script.muelleKhione,
             taponesRumo = EventsManager_Script.taponesRumo,
@@ -44,6 +48,10 @@ public class SaveController_Script : MonoBehaviour
             //HealthBar_Script.currentHealth = saveData.lifeLiora;
             GameControl_Script.lifeLiora = saveData.lifeLiora;
             //Cargar objetos inventario
+            GameControl_Script.cristalizadores = saveData.cristalizadores;
+            GameControl_Script.cuero = saveData.cuero;
+            GameControl_Script.viales = saveData.viales;
+
             EventsManager_Script.barraKhione = saveData.barraKhione;
             EventsManager_Script.muelleKhione = saveData.muelleKhione;
             EventsManager_Script.taponesRumo = saveData.taponesRumo;

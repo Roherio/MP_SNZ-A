@@ -17,10 +17,10 @@ public class GameControl_Script : MonoBehaviour
     public static int cuero = 0;
     public static int viales = 0;
 
-    //logica progreso SNZAs
-    public static float progresoSNZAJabali = 0f;
-    //public static int progresoSNZASecretario = 0;
+    //logica progreso SNZAs OJO QUE VAN AL REVES, ESTO SE DEBE A PODER CONTAR ENEMIGOS RESTANTES EN EL MENÚ
+    public static float progresoSNZAJabali = 150f;
     public static bool snzaJabaliConseguida = false;
+    //public static int progresoSNZASecretario = 0;
     //public static bool snzaSecretarioConseguida = false;
 
     //logica menus
@@ -41,14 +41,24 @@ public class GameControl_Script : MonoBehaviour
         {
             lifeLiora = maxLife;
         }
-        /*if (SaveController_Script.saveLocation == null)
-        {
-            lifeLiora = maxLife;
-        }*/
     }
     // Update is called once per frame
     void Update()
     {
-        
+        //------------------------------------ESTO HARA FALTA PASARLO PUNTUALMENTE AL MOMENTO EN EL QUE GASTES EL SINTETIZADOR CON ABRAXAS
+        if (cristalizadores <= 0)
+        {
+            BotonesActivos_Script.bCristalizador = false;
+            SNZAProgressBar_Script.bTachadoCristalizador = false;
+        }
+        //------------------------------------ESTO HARA FALTA PASARLO PUNTUALMENTE AL MOMENTO EN EL QUE GASTES LOS ITEMS CON KHIONE para hacerte una poción
+        if (cuero <= 0)
+        {
+            BotonesActivos_Script.bCuero = false;
+        }
+        if (viales <= 0)
+        {
+            BotonesActivos_Script.bVial = false;
+        }
     }
 }
