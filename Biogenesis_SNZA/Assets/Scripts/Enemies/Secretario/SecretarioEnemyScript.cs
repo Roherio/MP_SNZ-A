@@ -35,6 +35,7 @@ public class SecretarioEnemyScript : MonoBehaviour
         dashDurationTimer = dashDuration; //valor únicament creat per després ser portat a un altre script
         canAttack = true;
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -81,6 +82,7 @@ public class SecretarioEnemyScript : MonoBehaviour
                     //Com l'estat es PATROL, si no detecta cap jugador comença a caminar entre dos punts
                     if (destinationPoint == 0)
                     {
+                        animator.SetBool("IsWalking", true);
                         transform.localScale = new Vector3(1, 1, 1);
                         transform.position = Vector2.MoveTowards(transform.position, patrolPoint[0].position, moveSpeed * Time.deltaTime);
                         if (Vector2.Distance(transform.position, patrolPoint[0].position) < 0.1)
@@ -91,6 +93,7 @@ public class SecretarioEnemyScript : MonoBehaviour
 
                     if (destinationPoint == 1)
                     {
+                        animator.SetBool("IsWalking", true);
                         transform.localScale = new Vector3(-1, 1, 1);
                         transform.position = Vector2.MoveTowards(transform.position, patrolPoint[1].position, moveSpeed * Time.deltaTime);
                         if (Vector2.Distance(transform.position, patrolPoint[1].position) < 0.1)
@@ -108,6 +111,7 @@ public class SecretarioEnemyScript : MonoBehaviour
 
     void isChasing()
     {
+        animator.SetBool("IsWalking", true);
         Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
         direction.y = 0; //fem que la direcció en y sigui 0
         direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
@@ -124,6 +128,8 @@ public class SecretarioEnemyScript : MonoBehaviour
 
     IEnumerator Dash()
     {
+        animator.SetBool("IsWalking", false);
+        
         //Temps de preparació de l'atack
 
         isAttacking = true;
@@ -134,13 +140,14 @@ public class SecretarioEnemyScript : MonoBehaviour
         dashDirection.y = 0;
         dashDirection = dashDirection.normalized;
         dashTimer = 0f;
+        
 
         yield return new WaitForSeconds(dashCooldown);
-
-
+        animator.SetBool("IsAttacking", true);
+        yield return new WaitForSeconds(.3f);
         //Fa el dash/atac cap a l'enemic
 
-        
+
         attackHitbox();
 
         //Quan de temps dura el dash?
@@ -154,10 +161,12 @@ public class SecretarioEnemyScript : MonoBehaviour
 
         //S'acaba el dash, aturat i posa't en cooldown
         rb.velocity = Vector2.zero; 
-        isAttacking = false;
+        
+        animator.SetBool("IsAttacking", false);
 
         yield return new WaitForSeconds(dashCooldown);
-
+        animator.SetBool("IsWalking", false);
+        isAttacking = false;
         //Pot tornar a atacar
         if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(1, 1, 1); }
         else { transform.localScale = new Vector3(-1, 1, 1); }
