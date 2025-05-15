@@ -10,6 +10,7 @@ public class hpEnemiesScript : MonoBehaviour
     public Animator animator;
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
+    public bool isDead = false;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class hpEnemiesScript : MonoBehaviour
             print("has hecho dañito");
             if (enemyHP <= 0f)
             {
+                isDead = true;
                 animator.SetBool("isWalking", false);
                 animator.SetBool("isAttacking", false);
                 animator.SetBool("isDying", true);

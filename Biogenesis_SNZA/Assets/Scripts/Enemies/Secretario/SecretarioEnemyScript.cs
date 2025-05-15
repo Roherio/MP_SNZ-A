@@ -27,10 +27,13 @@ public class SecretarioEnemyScript : MonoBehaviour
     public int destinationPoint;
     [SerializeField] float verticalViewHeight = 3; 
 
+    hpEnemiesScript hpEnemiesScript;
+
     public EnemyBehaviour Behaviour = EnemyBehaviour.STANDING;
 
     void Start()
     {
+        hpEnemiesScript = GetComponent<hpEnemiesScript>();
         playerPosition = GameObject.FindWithTag("Player").transform;
         dashDurationTimer = dashDuration; //valor únicament creat per després ser portat a un altre script
         canAttack = true;
@@ -46,7 +49,7 @@ public class SecretarioEnemyScript : MonoBehaviour
         {
             case EnemyBehaviour.STANDING:
 
-                if (isAttacking) return;
+                if (isAttacking || hpEnemiesScript.isDead == true) return;
 
                 if (enemyToPlayerDistance < attackRange && canAttack && verticalDetection < verticalViewHeight) //Prepara l'atac quan el jugador està suficientment aprop i en el seu rang de visió
                 {
@@ -64,7 +67,7 @@ public class SecretarioEnemyScript : MonoBehaviour
                 break;
 
             case EnemyBehaviour.PATROL:
-                if (isAttacking) return;
+                if (isAttacking || hpEnemiesScript.isDead == true) return;
                 if (enemyToPlayerDistance < attackRange && canAttack && verticalDetection < verticalViewHeight) //Prepara l'atac quan el jugador està suficientment aprop i en el seu rang de visió
                 {
                     print("I can dash!");

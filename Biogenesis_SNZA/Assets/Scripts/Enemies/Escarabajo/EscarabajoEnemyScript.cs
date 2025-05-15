@@ -23,6 +23,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
     [SerializeField] float attackRange;
     private bool canAttack = true;
     private bool isAttacking = false;
+   
     public Transform attackPoint;
     [SerializeField] GameObject attackCollision;
     
@@ -30,10 +31,13 @@ public class EscarabajoEnemyScript : MonoBehaviour
     public int destinationPoint;
     [SerializeField] float verticalViewHeight = 3;
 
+    hpEnemiesScript hpEnemiesScript;
+
     public EnemyBehaviour Behaviour = EnemyBehaviour.STANDING;
 
     void Start()
     {
+        hpEnemiesScript = GetComponent<hpEnemiesScript>();
         playerPosition = GameObject.FindWithTag("Player").transform;
         attackDurationTimer = attackDuration; //valor únicament creat per després ser portat a un altre script
         canAttack = true;
@@ -49,7 +53,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
         {
             case EnemyBehaviour.STANDING:
 
-                if (isAttacking) return;
+                if (isAttacking || hpEnemiesScript.isDead == true) return;
 
                 if (enemyToPlayerDistance < attackRange && canAttack && verticalDetection < verticalViewHeight) //Prepara l'atac quan el jugador està suficientment aprop i en el seu rang de visió
                 {
@@ -67,7 +71,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
                 break;
 
             case EnemyBehaviour.PATROL:
-                if (isAttacking) return;
+                if (isAttacking || hpEnemiesScript.isDead == true) return;
                 if (enemyToPlayerDistance < attackRange && canAttack && verticalDetection < verticalViewHeight) //Prepara l'atac quan el jugador està suficientment aprop i en el seu rang de visió
                 {
                     print("I'm going to attack");
