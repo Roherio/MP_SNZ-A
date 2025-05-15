@@ -8,8 +8,28 @@ public class BotonesActivos_Script : MonoBehaviour
     //public GameObject SNZAJabali;
     //public GameObject SNZASecretario;
 
+    //booleanas inventario
+    public static bool bCristalizador = false;
+    public static bool bCuero = false;
+    public static bool bVial = false;
+    public static bool bAnilloKhione = false;
+    public static bool bAnilloRumo = false;
+    public static bool bObjKhione1 = false;
+    public static bool bObjKhione2 = false;
+    public static bool bObjRumo1 = false;
+    public static bool bObjRumo2 = false;
+    //----------------------------------
+    private bool bCristalizadorActivated = false;
+    private bool bCueroActivated = false;
+    private bool bVialActivated = false;
+    private bool bAnilloKhioneActivated = false;
+    private bool bAnilloRumoActivated = false;
+    private bool bObjKhione1Activated = false;
+    private bool bObjKhione2Activated = false;
+    private bool bObjRumo1Activated = false;
+    private bool bObjRumo2Activated = false;
+
     //botones Inventario
-    public GameObject mapa;
     public GameObject cristalizador;
     public GameObject cuero;
     public GameObject vial;
@@ -39,17 +59,125 @@ public class BotonesActivos_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //inicialització activant botons si al Awake de EventsManager sabem que te els objectes
+        if (bCristalizador)
+        {
+            bCristalizadorActivated = true;
+            cristalizador.SetActive(true);
+        }
+        if (bCuero)
+        {
+            bCueroActivated = true;
+            cuero.SetActive(true);
+        }
+        if (bVial)
+        {
+            bVialActivated = true;
+            vial.SetActive(true);
+        }
+        if (bAnilloKhione)
+        {
+            bAnilloKhioneActivated = true;
+            anilloKhione.SetActive(true);
+        }
+        if (bAnilloRumo)
+        {
+            bAnilloRumoActivated = true;
+            anilloRumo.SetActive(true);
+        }
+        if (bObjKhione1)
+        {
+            bObjKhione1Activated = true;
+            objKhione1.SetActive(true);
+        }
+        if (bObjKhione2)
+        {
+            bObjKhione2Activated = true;
+            objKhione2.SetActive(true);
+        }
+        if (bObjRumo1)
+        {
+            bObjRumo1Activated = true;
+            objRumo1.SetActive(true);
+        }
+        if (bObjRumo2)
+        {
+            bObjRumo2Activated = true;
+            objRumo2.SetActive(true);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        print(anilloKhione.activeSelf);
+        //activar objetos
+        if (bCristalizador && !bCristalizadorActivated)
+        {
+            bCristalizadorActivated = true;
+            cristalizador.SetActive(true);
+        }
+        if (bCuero && !bCueroActivated)
+        {
+            bCueroActivated = true;
+            cuero.SetActive(true);
+        }
+        if (bVial && !bVialActivated)
+        {
+            bVialActivated = true;
+            vial.SetActive(true);
+        }
+        if (bAnilloKhione && !bAnilloKhioneActivated)
+        {
+            bAnilloKhioneActivated = true;
+            anilloKhione.SetActive(true);
+        }
+        if (bAnilloRumo && !bAnilloRumoActivated)
+        {
+            bAnilloRumoActivated = true;
+            anilloRumo.SetActive(true);
+        }
+        if (bObjKhione1 && !bObjKhione1Activated)
+        {
+            bObjKhione1Activated = true;
+            objKhione1.SetActive(true);
+        }
+        if (bObjKhione2 && !bObjKhione2Activated)
+        {
+            bObjKhione2Activated = true;
+            objKhione2.SetActive(true);
+        }
+        if (bObjRumo1 && !bObjRumo1Activated)
+        {
+            bObjRumo1Activated = true;
+            objRumo1.SetActive(true);
+        }
+        if (bObjRumo2 && !bObjRumo2Activated)
+        {
+            bObjRumo2Activated = true;
+            objRumo2.SetActive(true);
+        }
+        //desactivar objetos
+        if (!bObjKhione1 && bObjKhione1Activated)
+        {
+            objKhione1.SetActive(false);
+        }
+        if (!bObjKhione2 && bObjKhione2Activated)
+        {
+            objKhione2.SetActive(false);
+        }
+        if (!bObjRumo1 && bObjRumo1Activated)
+        {
+            objRumo1.SetActive(false);
+        }
+        if (!bObjRumo2 && bObjRumo2Activated)
+        {
+            objRumo2.SetActive(false);
+        }
     }
 
     //funciones de activar/desactivar botones
     //--------------------------------------SNZAs
+    /*
     public void ActivarSNZAJabali()
     {
         //SNZAJabali.SetActive(true);
@@ -108,5 +236,5 @@ public class BotonesActivos_Script : MonoBehaviour
     public void ActivarAnilloRumo()
     {
         anilloRumo.SetActive(true);
-    }
+    }*/
 }

@@ -37,7 +37,7 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
         }
         if (currentDialogue == "dialogueData1")
         {
-            if (EventsManager_Script.cascosRumo)
+            if (EventsManager_Script.taponesRumo)
             {
                 currentDialogue = "dialogueData2";
             }
@@ -126,7 +126,9 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
             {
                 EndDialogue();
                 //----------------ACONSEGUIM EL PODER DE TRENCAR MURS
-                EventsManager_Script.poderRumo = true;
+                EventsManager_Script.ActivarAnilloRumo();
+                EventsManager_Script.DesactivarObjRumo1();
+                EventsManager_Script.DesactivarObjRumo2();
                 //-----------------------------------------------------------------AQUI CALDRIA FER LA ANIMACIO DE QUE MARXA O ES FA INVISIBLE O LO QUE SEA, I DESPRES FEM DESTROY GAMEOBJECT
             }
         }

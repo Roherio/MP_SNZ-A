@@ -17,6 +17,12 @@ public class GameControl_Script : MonoBehaviour
     public static int cuero = 0;
     public static int viales = 0;
 
+    //logica progreso SNZAs
+    public static float progresoSNZAJabali = 0f;
+    //public static int progresoSNZASecretario = 0;
+    public static bool snzaJabaliConseguida = false;
+    //public static bool snzaSecretarioConseguida = false;
+
     //logica menus
     public static bool isPaused = false;
     public static bool isPausedDialogue = false;

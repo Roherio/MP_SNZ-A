@@ -20,10 +20,15 @@ public class SaveController_Script : MonoBehaviour
         {
             //playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position,
             //mapBoundary = FindObjectOfType<CinemachineConfiner<().m_BoundingShape2D.gameObject.name
-            lifeLiora = GameControl_Script.lifeLiora
-            //GUARDAR ADRENALINA
+            lifeLiora = GameControl_Script.lifeLiora,
             //GUARDAR DATO DE QUE OBJETOS TIENES, TODOS LOS OBJETOS QUE SON TRUE EN TU INVENTARIO Y DOCUMENTOS, PERSONAJES CONOCIDOS...
+            barraKhione = EventsManager_Script.barraKhione,
+            muelleKhione = EventsManager_Script.muelleKhione,
+            taponesRumo = EventsManager_Script.taponesRumo,
+            mantaRumo = EventsManager_Script.mantaRumo,
             //GUARDAR DATO DE SI TIENES PODER KHIONE Y RUMO
+            poderKhione = EventsManager_Script.poderKhione,
+            poderRumo = EventsManager_Script.poderRumo,
         };
         //transformar la variable saveData a un tipus Json
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
@@ -38,6 +43,14 @@ public class SaveController_Script : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").transform.position = saveData.playerPosition;
             //HealthBar_Script.currentHealth = saveData.lifeLiora;
             GameControl_Script.lifeLiora = saveData.lifeLiora;
+            //Cargar objetos inventario
+            EventsManager_Script.barraKhione = saveData.barraKhione;
+            EventsManager_Script.muelleKhione = saveData.muelleKhione;
+            EventsManager_Script.taponesRumo = saveData.taponesRumo;
+            EventsManager_Script.mantaRumo = saveData.mantaRumo;
+            //Cargar Poderes
+            EventsManager_Script.poderKhione = saveData.poderKhione;
+            EventsManager_Script.poderRumo = saveData.poderRumo;
             /*
              * FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
              */

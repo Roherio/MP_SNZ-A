@@ -4,52 +4,90 @@ using UnityEngine;
 
 public class EventsManager_Script : MonoBehaviour
 {
-    //logica Recolectables
-    public static int piezasKhione = 0;
-    public static bool cascosRumo = false;
+    //logica Recolectables misiones
+    public static bool barraKhione = false;
+    public static bool muelleKhione = false;
+    public static bool taponesRumo = false;
     public static bool mantaRumo = false;
     //logica Poderes
     public static bool poderKhione = false;
-    private bool anilloKhioneActivated = false;
     public static bool poderRumo = false;
-    private bool anilloRumoActivated = false;
 
     //eventosTienda
     public static bool habladoKhione1vez = false;
 
+    private void Awake()
+    {
+        BotonesActivos_Script.bObjKhione1 = barraKhione;
+        BotonesActivos_Script.bObjKhione2 = muelleKhione;
+        BotonesActivos_Script.bObjRumo1 = taponesRumo;
+        BotonesActivos_Script.bObjRumo2 = mantaRumo;
+        BotonesActivos_Script.bAnilloKhione = poderKhione;
+        BotonesActivos_Script.bAnilloRumo = poderRumo;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        if (poderKhione == true)
-        {
-            //BotonesActivos_Script.ActivarAnilloKhione();
-        }
-        if (poderRumo == true)
-        {
-            //BotonesActivos_Script.ActivarAnilloRumo();
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (poderKhione && !anilloKhioneActivated)
-        {
-            print("el poder de khione ta activau");
-            anilloKhioneActivated = true;
-            //BotonesActivos_Script.anilloKhione.SetActive(true);
-        }
-        if (poderRumo && !anilloRumoActivated)
-        {
-            anilloRumoActivated = true;
-            //BotonesActivos_Script.anilloKhione.SetActive(true);
-        }
+        
     }
 
     //funciones para activar los botones de la ui
-    public void ActivarAnilloKhione()
+    //-------------------ObjMisiones
+    public static void ActivarObjKhione1()
+    {
+        barraKhione = true;
+        BotonesActivos_Script.bObjKhione1 = true;
+    }
+    public static void ActivarObjKhione2()
+    {
+        muelleKhione = true;
+        BotonesActivos_Script.bObjKhione2 = true;
+    }
+    public static void ActivarObjRumo1()
+    {
+        taponesRumo = true;
+        BotonesActivos_Script.bObjRumo1 = true;
+    }
+    public static void ActivarObjRumo2()
+    {
+        mantaRumo = true;
+        BotonesActivos_Script.bObjRumo2 = true;
+    }
+    public static void DesactivarObjKhione1()
+    {
+        barraKhione = false;
+        BotonesActivos_Script.bObjKhione1 = false;
+    }
+    public static void DesactivarObjKhione2()
+    {
+        muelleKhione = false;
+        BotonesActivos_Script.bObjKhione2 = false;
+    }
+    public static void DesactivarObjRumo1()
+    {
+        taponesRumo = false;
+        BotonesActivos_Script.bObjRumo1 = false;
+    }
+    public static void DesactivarObjRumo2()
+    {
+        mantaRumo = false;
+        BotonesActivos_Script.bObjRumo2 = false;
+    }
+    //-------------------misiones
+    public static void ActivarAnilloKhione()
     {
         poderKhione = true;
-        //BotonesActivos_Script.anilloKhione.SetActive(true);
+        BotonesActivos_Script.bAnilloKhione = true;
+    }
+    public static void ActivarAnilloRumo()
+    {
+        poderRumo = true;
+        BotonesActivos_Script.bAnilloRumo = true;
     }
 }

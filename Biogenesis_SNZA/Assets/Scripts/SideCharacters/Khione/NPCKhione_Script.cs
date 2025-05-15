@@ -36,11 +36,11 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
         {
             if (doOnceDialogue2 == true)
             {
-                if (EventsManager_Script.piezasKhione == 1)
+                if (EventsManager_Script.barraKhione || EventsManager_Script.muelleKhione)
                 {
                     currentDialogue = "dialogueData3";
                 }
-                if (EventsManager_Script.piezasKhione == 2)
+                if (EventsManager_Script.muelleKhione && EventsManager_Script.barraKhione)
                 {
                     currentDialogue = "dialogueData4";
                 }
@@ -48,7 +48,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
         }
         if (currentDialogue == "dialogueData3")
         {
-            if (EventsManager_Script.piezasKhione == 2)
+            if (EventsManager_Script.barraKhione && EventsManager_Script.muelleKhione)
             {
                 currentDialogue = "dialogueData4";
             }
@@ -170,8 +170,10 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             else
             {
                 EndDialogue();
-                //----------------ACONSEGUIM EL PODER DE ESCALAR ENREDADERAS
-                EventsManager_Script.poderKhione = true;
+                //------------------ACONSEGUIM EL PODER DE ESCALAR ENREDADERAS
+                EventsManager_Script.ActivarAnilloKhione();
+                EventsManager_Script.DesactivarObjKhione1();
+                EventsManager_Script.DesactivarObjKhione2();
                 currentDialogue = "dialogueData5";
             }
         }

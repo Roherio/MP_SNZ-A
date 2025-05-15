@@ -33,17 +33,24 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
         print("takenItem!!!!!!!!!!");
         if (itemUser == "Khione")
         {
-            EventsManager_Script.piezasKhione++;
+            if (itemName == "barraKhione")
+            {
+                EventsManager_Script.ActivarObjKhione1();
+            }
+            else if (itemName == "muelleKhione")
+            {
+                EventsManager_Script.ActivarObjKhione2();
+            }
         }
         if (itemUser == "Rumo")
         {
-            if (itemName == "cascosRumo")
+            if (itemName == "taponesRumo")
             {
-                EventsManager_Script.cascosRumo = true;
+                EventsManager_Script.ActivarObjRumo1();
             }
             else if (itemName == "mantaRumo")
             {
-                EventsManager_Script.mantaRumo = true;
+                EventsManager_Script.ActivarObjRumo2();
             }
             
         }

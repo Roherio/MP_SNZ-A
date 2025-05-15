@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6125245946157439485}
   - component: {fileID: 8247220212978068395}
   - component: {fileID: 7334475472444272494}
-  - component: {fileID: 2524561770932698150}
   m_Layer: 5
   m_Name: BotonObj
   m_TagString: Untagged
@@ -121,20 +120,3 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2524561770932698150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3478453406070638870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13ce1582857cb9b4387458e98690c0a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ordenInventario: 0
-  spriteBoton: {fileID: 0}
-  spriteDescripcion: {fileID: 0}
-  tituloDescripcion: {fileID: 0}
-  textoDescripcion: {fileID: 0}
