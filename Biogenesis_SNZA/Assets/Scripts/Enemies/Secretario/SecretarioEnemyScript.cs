@@ -7,6 +7,9 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class SecretarioEnemyScript : MonoBehaviour
 {
+
+    secretarioAudioManager audioManager;
+
     public Animator animator;
     public Rigidbody2D rb;
     [SerializeField] float moveSpeed;
@@ -18,6 +21,9 @@ public class SecretarioEnemyScript : MonoBehaviour
     private Vector2 dashDirection;
     [SerializeField] float detectionRange;
     [SerializeField] float attackRange;
+
+    public float soundDetectionCooldwon = 0f, soundCooldown = 10f;
+
     private bool canAttack = true;
     private bool isAttacking = false;
     public Transform attackPoint;
@@ -33,6 +39,7 @@ public class SecretarioEnemyScript : MonoBehaviour
 
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("SecretarioAudioManager").GetComponent<secretarioAudioManager>();
         hpEnemiesScript = GetComponent<hpEnemiesScript>();
         playerPosition = GameObject.FindWithTag("Player").transform;
         dashDurationTimer = dashDuration; //valor únicament creat per després ser portat a un altre script
@@ -114,6 +121,12 @@ public class SecretarioEnemyScript : MonoBehaviour
 
     void isChasing()
     {
+        if (soundDetectionCooldwon > 0)
+        {
+            soundDetectionCooldwon -= Time.deltaTime;
+        }
+        TryPlayAlertSound();
+
         animator.SetBool("IsWalking", true);
         Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
         direction.y = 0; //fem que la direcció en y sigui 0
@@ -149,7 +162,7 @@ public class SecretarioEnemyScript : MonoBehaviour
         animator.SetBool("IsAttacking", true);
         yield return new WaitForSeconds(.3f);
         //Fa el dash/atac cap a l'enemic
-
+        audioManager.SecretarioSFX(audioManager.Attack);
 
         attackHitbox();
 
@@ -193,6 +206,14 @@ public class SecretarioEnemyScript : MonoBehaviour
         Gizmos.color = Color.cyan;
         Gizmos.DrawLine(leftEdge + Vector3.up * verticalViewHeight, rightEdge + Vector3.up * verticalViewHeight);
         Gizmos.DrawLine(leftEdge + Vector3.down * verticalViewHeight, rightEdge + Vector3.down * verticalViewHeight);
+    }
+    void TryPlayAlertSound()
+    {
+        if (soundDetectionCooldwon <= 0f)
+        {
+            audioManager.SecretarioSFX(audioManager.playerDetected);
+            soundDetectionCooldwon = soundCooldown;
+        }
     }
 }
 

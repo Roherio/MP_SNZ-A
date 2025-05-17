@@ -10,6 +10,8 @@ TagManager:
   - Enredadera
   - Parry
   - Puddle
+  - JabaliAudioManager
+  - SecretarioAudioManager
   layers:
   - Default
   - TransparentFX

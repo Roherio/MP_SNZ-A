@@ -11,6 +11,10 @@ public class EscarabajoEnemyScript : MonoBehaviour
     public Rigidbody2D rb;
     private Transform playerPosition;
 
+    JabaliAudioManager audioManager;
+
+
+
     [SerializeField] float moveSpeed;
     private float attackTimer = 0f;
     public static float attackDurationTimer;
@@ -21,6 +25,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
     [SerializeField] float dashSpeed;
     [SerializeField] float detectionRange;
     [SerializeField] float attackRange;
+    public float soundDetectionCooldwon = 0f, soundCooldown = 10f;
     private bool canAttack = true;
     private bool isAttacking = false;
    
@@ -34,15 +39,21 @@ public class EscarabajoEnemyScript : MonoBehaviour
     hpEnemiesScript hpEnemiesScript;
 
     public EnemyBehaviour Behaviour = EnemyBehaviour.STANDING;
-
-    void Start()
+    private void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("JabaliAudioManager").GetComponent<JabaliAudioManager>();
         hpEnemiesScript = GetComponent<hpEnemiesScript>();
         playerPosition = GameObject.FindWithTag("Player").transform;
         attackDurationTimer = attackDuration; //valor únicament creat per després ser portat a un altre script
         canAttack = true;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+        
+        
     }
     void Update()
     {
@@ -119,6 +130,12 @@ public class EscarabajoEnemyScript : MonoBehaviour
     {
         //--------------------------------------ANIMACIO CAMINAR------------------------------------------
         animator.SetBool("isWalking", true);
+        if (soundDetectionCooldwon > 0)
+        {
+            soundDetectionCooldwon -= Time.deltaTime;
+        }
+        TryPlayAlertSound();
+
         Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
         direction.y = 0; //fem que la direcció en y sigui 0
         direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
@@ -147,9 +164,9 @@ public class EscarabajoEnemyScript : MonoBehaviour
         attackTimer = 0f;
         animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(hitboxSpawnTimer);
-
+        audioManager.JabaliSFX(audioManager.Attack);
         //------------------------- ANIMACIO ATAC AQUI!!!!!!!!!----------------------------------------------
-        
+
         //Fa el dash/atac cap a l'enemic
         attackHitbox();
 
@@ -194,6 +211,15 @@ public class EscarabajoEnemyScript : MonoBehaviour
         Gizmos.color = Color.cyan;
         Gizmos.DrawLine(leftEdge + Vector3.up * verticalViewHeight, rightEdge + Vector3.up * verticalViewHeight);
         Gizmos.DrawLine(leftEdge + Vector3.down * verticalViewHeight, rightEdge + Vector3.down * verticalViewHeight);
+    }
+
+    void TryPlayAlertSound()
+    {
+        if (soundDetectionCooldwon <= 0f)
+        {
+            audioManager.JabaliSFX(audioManager.playerDetected);
+            soundDetectionCooldwon = soundCooldown;
+        }
     }
 }
 
