@@ -3,7 +3,7 @@ using UnityEngine;
 public class CloudScroller : MonoBehaviour
 {
     private float speed = 0.5f;
-
+    public float speedVariation;
     public Transform OriginalPos;
     public Transform FinalPos;
 
@@ -16,7 +16,7 @@ public class CloudScroller : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * (speed + speedVariation) * Time.deltaTime);
 
         if (transform.position.x > FinalPos.position.x)
         {
