@@ -8,6 +8,7 @@ public class secretarioAudioManager : MonoBehaviour
     public AudioSource audioSource;
 
 
+
     public AudioClip playerDetected;
     public AudioClip Attack;
     public AudioClip takeDamage;
@@ -16,6 +17,10 @@ public class secretarioAudioManager : MonoBehaviour
     public void SecretarioSFX(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
+    }
+
+    private void Update()
+    {
     }
 }
 

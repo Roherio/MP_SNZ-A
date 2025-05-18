@@ -7,23 +7,34 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class EscarabajoEnemyScript : MonoBehaviour
 {
+
+    [Header("--------------------Audio--------------------")]
+    private bool hasPlayedDeathSound = false;
+    JabaliAudioManager audioManager;
+
+    [Header("--------------------GameObjects--------------------")]
     public Animator animator;
     public Rigidbody2D rb;
     private Transform playerPosition;
 
-    JabaliAudioManager audioManager;
+    [Header("--------------------Movement variables--------------------")]
+    [SerializeField] float moveSpeed, dashSpeed, detectionRange;
 
-
-
-    [SerializeField] float moveSpeed;
+    [Header("--------------------Attack variables--------------------")]
     private float attackTimer = 0f;
     public static float attackDurationTimer;
+
+
+
+
+
+
+
+
     [SerializeField] float attackDuration;
     [SerializeField] float attackCooldown;
     [SerializeField] float hitboxSpawnTimer = 0.9f;
     private Vector2 dashDirection;
-    [SerializeField] float dashSpeed;
-    [SerializeField] float detectionRange;
     [SerializeField] float attackRange;
     public float soundDetectionCooldwon = 0f, soundCooldown = 10f;
     private bool canAttack = true;
@@ -64,7 +75,15 @@ public class EscarabajoEnemyScript : MonoBehaviour
         {
             case EnemyBehaviour.STANDING:
 
-                if (isAttacking || hpEnemiesScript.isDead == true) return;
+                if (hpEnemiesScript.isDead && !hasPlayedDeathSound)
+                {
+                    StopAllCoroutines();
+                    audioManager.JabaliSFX(audioManager.Death);
+                    hasPlayedDeathSound = true;
+                    print("SonidoMuerte");
+                    return;
+                }
+                if (isAttacking) return;
 
                 if (enemyToPlayerDistance < attackRange && canAttack && verticalDetection < verticalViewHeight) //Prepara l'atac quan el jugador està suficientment aprop i en el seu rang de visió
                 {
@@ -82,7 +101,15 @@ public class EscarabajoEnemyScript : MonoBehaviour
                 break;
 
             case EnemyBehaviour.PATROL:
-                if (isAttacking || hpEnemiesScript.isDead == true) return;
+                if (hpEnemiesScript.isDead && !hasPlayedDeathSound)
+                {
+                    StopAllCoroutines();
+                    audioManager.JabaliSFX(audioManager.Death);
+                    hasPlayedDeathSound = true;
+                    print("SonidoMuerte");
+                    return;
+                }
+                if (isAttacking) return;
                 if (enemyToPlayerDistance < attackRange && canAttack && verticalDetection < verticalViewHeight) //Prepara l'atac quan el jugador està suficientment aprop i en el seu rang de visió
                 {
                     print("I'm going to attack");
@@ -163,8 +190,10 @@ public class EscarabajoEnemyScript : MonoBehaviour
         dashDirection = dashDirection.normalized;
         attackTimer = 0f;
         animator.SetBool("isAttacking", true);
-        yield return new WaitForSeconds(hitboxSpawnTimer);
         audioManager.JabaliSFX(audioManager.Attack);
+
+        yield return new WaitForSeconds(hitboxSpawnTimer);
+        
         //------------------------- ANIMACIO ATAC AQUI!!!!!!!!!----------------------------------------------
 
         //Fa el dash/atac cap a l'enemic

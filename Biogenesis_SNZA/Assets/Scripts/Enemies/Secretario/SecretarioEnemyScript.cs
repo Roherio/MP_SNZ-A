@@ -7,29 +7,35 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class SecretarioEnemyScript : MonoBehaviour
 {
-
+    [Header("--------------------Audio--------------------")]
     secretarioAudioManager audioManager;
-
-    public Animator animator;
-    public Rigidbody2D rb;
-    [SerializeField] float moveSpeed;
-    private float dashTimer = 0f;
-    public static float dashDurationTimer;
-    [SerializeField] float dashDuration;
-    [SerializeField] float dashSpeed;
-    [SerializeField] float dashCooldown;
-    private Vector2 dashDirection;
-    [SerializeField] float detectionRange;
-    [SerializeField] float attackRange;
-
+    private bool hasPlayedDeathSound = false;
     public float soundDetectionCooldwon = 0f, soundCooldown = 10f;
 
-    private bool canAttack = true;
-    private bool isAttacking = false;
+    [Header("--------------------GameObjects--------------------")]
+    public Animator animator;
+    public Rigidbody2D rb;
     public Transform attackPoint;
     [SerializeField] GameObject attackCollision;
     [SerializeField] Transform playerPosition;
     [SerializeField] Transform[] patrolPoint;
+
+    [Header("--------------------Movement variables--------------------")]
+    [SerializeField] float moveSpeed;
+    private float dashTimer = 0f;
+    public static float dashDurationTimer;
+    [SerializeField] float dashDuration, dashSpeed, dashCooldown, detectionRange;
+    private Vector2 dashDirection;
+
+    [Header("--------------------Attack variables--------------------")]
+    [SerializeField] float attackRange;
+    private bool canAttack = true, isAttacking = false;
+
+    
+
+   
+    
+    
     public int destinationPoint;
     [SerializeField] float verticalViewHeight = 3; 
 
@@ -56,7 +62,14 @@ public class SecretarioEnemyScript : MonoBehaviour
         {
             case EnemyBehaviour.STANDING:
 
-                if (isAttacking || hpEnemiesScript.isDead == true) return;
+                if (hpEnemiesScript.isDead && !hasPlayedDeathSound)
+                {
+                    StopAllCoroutines();
+                    audioManager.SecretarioSFX(audioManager.Death);
+                    hasPlayedDeathSound = true;
+                    return;
+                }
+                if (isAttacking) return;
 
                 if (enemyToPlayerDistance < attackRange && canAttack && verticalDetection < verticalViewHeight) //Prepara l'atac quan el jugador està suficientment aprop i en el seu rang de visió
                 {
@@ -74,7 +87,14 @@ public class SecretarioEnemyScript : MonoBehaviour
                 break;
 
             case EnemyBehaviour.PATROL:
-                if (isAttacking || hpEnemiesScript.isDead == true) return;
+                if (hpEnemiesScript.isDead && !hasPlayedDeathSound)
+                {
+                    StopAllCoroutines();
+                    audioManager.SecretarioSFX(audioManager.Death);
+                    hasPlayedDeathSound = true;
+                    return;
+                }
+                if (isAttacking) return;
                 if (enemyToPlayerDistance < attackRange && canAttack && verticalDetection < verticalViewHeight) //Prepara l'atac quan el jugador està suficientment aprop i en el seu rang de visió
                 {
                     print("I can dash!");
