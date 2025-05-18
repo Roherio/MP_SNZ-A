@@ -107,6 +107,15 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Heal"",
+                    ""type"": ""Button"",
+                    ""id"": ""7baf763b-65ae-438e-b5ff-3763443c7210"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -327,6 +336,17 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""AbrirMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b2babb7b-4751-4442-93e9-7f9c7092a43b"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Heal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -609,6 +629,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         m_ControlesInGame_Parry = m_ControlesInGame.FindAction("Parry", throwIfNotFound: true);
         m_ControlesInGame_Interact = m_ControlesInGame.FindAction("Interact", throwIfNotFound: true);
         m_ControlesInGame_AbrirMenu = m_ControlesInGame.FindAction("AbrirMenu", throwIfNotFound: true);
+        m_ControlesInGame_Heal = m_ControlesInGame.FindAction("Heal", throwIfNotFound: true);
         // ControlesInMenu
         m_ControlesInMenu = asset.FindActionMap("ControlesInMenu", throwIfNotFound: true);
         m_ControlesInMenu_Navegar = m_ControlesInMenu.FindAction("Navegar", throwIfNotFound: true);
@@ -686,6 +707,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
     private readonly InputAction m_ControlesInGame_Parry;
     private readonly InputAction m_ControlesInGame_Interact;
     private readonly InputAction m_ControlesInGame_AbrirMenu;
+    private readonly InputAction m_ControlesInGame_Heal;
     public struct ControlesInGameActions
     {
         private @ControlJuego m_Wrapper;
@@ -699,6 +721,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         public InputAction @Parry => m_Wrapper.m_ControlesInGame_Parry;
         public InputAction @Interact => m_Wrapper.m_ControlesInGame_Interact;
         public InputAction @AbrirMenu => m_Wrapper.m_ControlesInGame_AbrirMenu;
+        public InputAction @Heal => m_Wrapper.m_ControlesInGame_Heal;
         public InputActionMap Get() { return m_Wrapper.m_ControlesInGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -735,6 +758,9 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @AbrirMenu.started += instance.OnAbrirMenu;
             @AbrirMenu.performed += instance.OnAbrirMenu;
             @AbrirMenu.canceled += instance.OnAbrirMenu;
+            @Heal.started += instance.OnHeal;
+            @Heal.performed += instance.OnHeal;
+            @Heal.canceled += instance.OnHeal;
         }
 
         private void UnregisterCallbacks(IControlesInGameActions instance)
@@ -766,6 +792,9 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @AbrirMenu.started -= instance.OnAbrirMenu;
             @AbrirMenu.performed -= instance.OnAbrirMenu;
             @AbrirMenu.canceled -= instance.OnAbrirMenu;
+            @Heal.started -= instance.OnHeal;
+            @Heal.performed -= instance.OnHeal;
+            @Heal.canceled -= instance.OnHeal;
         }
 
         public void RemoveCallbacks(IControlesInGameActions instance)
@@ -890,6 +919,7 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         void OnParry(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnAbrirMenu(InputAction.CallbackContext context);
+        void OnHeal(InputAction.CallbackContext context);
     }
     public interface IControlesInMenuActions
     {
