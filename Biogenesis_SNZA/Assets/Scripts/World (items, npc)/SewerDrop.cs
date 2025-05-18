@@ -5,6 +5,7 @@ using UnityEngine;
 public class SewerDrop : MonoBehaviour
 {
     [SerializeField] float dropDamageValue;
+    public Animator animator;
     private Rigidbody2D rb;
  
 
@@ -15,6 +16,7 @@ public class SewerDrop : MonoBehaviour
     }
     void Start()
     {
+        animator = GetComponent<Animator>();    
     }
 
     // Update is called once per frame
@@ -48,12 +50,15 @@ public class SewerDrop : MonoBehaviour
         }
         if (collision.CompareTag("Puddle"))
         {
-            Destroy(gameObject);
+            Destruir();
         }
     }
     public void Destruir()
     {
-        Destroy(gameObject);
+        rb.velocity = Vector3.zero;
+        rb.gravityScale = 0;
+        animator.SetBool("hasImpacted", true);
+        Destroy(gameObject,0.2f);
     }
   
 }
