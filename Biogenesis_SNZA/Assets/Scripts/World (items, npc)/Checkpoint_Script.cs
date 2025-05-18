@@ -11,7 +11,11 @@ public class Checkpoint_Script : MonoBehaviour, IInteractable_Script
 
     public void Interact()
     {
+        ParentEnemy[] allEnemies = FindObjectsOfType<ParentEnemy>();
+        foreach (ParentEnemy enemy in allEnemies)
+        {
+            enemy.Respawn();
+        }
         SaveController_Script.SaveGame();
     }
-
 }

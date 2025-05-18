@@ -13,10 +13,12 @@ public class hpEnemiesScript : MonoBehaviour
     private Color originalColor;
     public bool isDead = false;
 
+    ParentEnemy ParentEnemyScript;
     EscarabajoEnemyScript escarabajoEnemyScript;
     SecretarioEnemyScript secretarioEnemyScript;
     private void Start()
     {
+        ParentEnemyScript = GetComponentInParent<ParentEnemy>();
         enemyHP = maxEnemyHP;
         // Obtener el SpriteRenderer al iniciar
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -38,6 +40,7 @@ public class hpEnemiesScript : MonoBehaviour
             if (enemyHP <= 0f)
             {
                 isDead = true;
+                ParentEnemyScript.enemyDead = true;
                 animator.SetBool("isWalking", false);
                 animator.SetBool("isAttacking", false);
                 animator.SetBool("isDying", true);

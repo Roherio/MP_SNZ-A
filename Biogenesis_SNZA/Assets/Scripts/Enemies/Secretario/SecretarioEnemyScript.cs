@@ -45,6 +45,8 @@ public class SecretarioEnemyScript : MonoBehaviour
 
     void Start()
     {
+        patrolPoint[0] = transform.parent.Find("PatrolPoint (0)");
+        patrolPoint[1] = transform.parent.Find("PatrolPoint (1)");
         audioManager = GameObject.FindGameObjectWithTag("SecretarioAudioManager").GetComponent<secretarioAudioManager>();
         hpEnemiesScript = GetComponent<hpEnemiesScript>();
         playerPosition = GameObject.FindWithTag("Player").transform;

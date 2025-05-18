@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1624799393073431345}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.96590805, y: 3.1640625, z: -0.025739074}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -75,7 +75,7 @@ Transform:
   m_GameObject: {fileID: 1642372518384760906}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.204876, y: -3.515625, z: 3.6065388}
+  m_LocalPosition: {x: -15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106,7 +106,7 @@ Transform:
   m_GameObject: {fileID: 2122286758257403587}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.526474, y: -3.515625, z: -3.4199405}
+  m_LocalPosition: {x: 15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 3365880837016238470}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.96590805, y: -3.1640625, z: 0.025739074}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -166,11 +166,11 @@ MonoBehaviour:
   animator: {fileID: 6409851266301484324}
   rb: {fileID: 3538993812665191112}
   moveSpeed: 4
+  dashSpeed: 0.00000001
+  detectionRange: 20
   attackDuration: 0.5
   attackCooldown: 1.5
   hitboxSpawnTimer: 0.7
-  dashSpeed: 0.00000001
-  detectionRange: 20
   attackRange: 4
   soundDetectionCooldwon: 0
   soundCooldown: 3
@@ -482,6 +482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6663753110288157597}
+  - component: {fileID: 7322128666337328844}
   m_Layer: 11
   m_Name: EnemyJabali
   m_TagString: Untagged
@@ -497,8 +498,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5545729787167645092}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.108745456, z: 0, w: 0.99406964}
-  m_LocalPosition: {x: -46, y: -6.34375, z: 0.22528008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -506,7 +507,21 @@ Transform:
   - {fileID: 7092542791824185402}
   - {fileID: 9017221870731034066}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -12.486, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7322128666337328844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5545729787167645092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327860d41dea64346a4db0854748d198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 4518441916050311797, guid: 2fccba61bcb131b4e85a3048eee90fd3, type: 3}
+  enemyDead: 0
 --- !u!1 &8701485425987939314
 GameObject:
   m_ObjectHideFlags: 0

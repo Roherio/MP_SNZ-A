@@ -52,6 +52,8 @@ public class EscarabajoEnemyScript : MonoBehaviour
     public EnemyBehaviour Behaviour = EnemyBehaviour.STANDING;
     private void Awake()
     {
+        patrolPoint[0] = transform.parent.Find("PatrolPoint (0)");
+        patrolPoint[1] = transform.parent.Find("PatrolPoint (1)");
         audioManager = GameObject.FindGameObjectWithTag("JabaliAudioManager").GetComponent<JabaliAudioManager>();
         hpEnemiesScript = GetComponent<hpEnemiesScript>();
         playerPosition = GameObject.FindWithTag("Player").transform;
