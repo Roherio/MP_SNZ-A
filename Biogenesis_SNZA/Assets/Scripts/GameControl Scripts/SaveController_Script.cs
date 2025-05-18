@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -6,9 +7,11 @@ using UnityEngine;
 public class SaveController_Script : MonoBehaviour
 {
     private static string saveLocation;
+  
     // Start is called before the first frame update
     void Awake()
     {
+
         //determinem on es guarda la save
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         LoadGame();
@@ -19,7 +22,7 @@ public class SaveController_Script : MonoBehaviour
         SaveData_Script saveData = new SaveData_Script
         {
             playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position,
-            //mapBoundary = FindObjectOfType<CinemachineConfiner<().m_BoundingShape2D.gameObject.name
+            mapBoundary = FindObjectOfType <CinemachineConfiner>().m_BoundingShape2D.gameObject.name,
             lifeLiora = GameControl_Script.lifeLiora,
             //GUARDAR DATO DE QUE OBJETOS TIENES, TODOS LOS OBJETOS QUE SON TRUE EN TU INVENTARIO Y DOCUMENTOS, PERSONAJES CONOCIDOS...
             cristalizadores = GameControl_Script.cristalizadores,

@@ -37,10 +37,10 @@ public class puertaScript : MonoBehaviour
     IEnumerator FadeTimer()
     {
         portalsScript.levelTransitioning = true;
-        yield return new WaitForSeconds(.6f);
+        yield return new WaitForSeconds(.5f);
         Teleport();
         confiner.m_BoundingShape2D = mapBoundary;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.5f);
         portalsScript.levelTransitioning = false;
     }
 }
