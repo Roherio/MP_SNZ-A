@@ -13,6 +13,8 @@ public class hpEnemiesScript : MonoBehaviour
     private Color originalColor;
     public bool isDead = false;
 
+    EscarabajoEnemyScript escarabajoEnemyScript;
+    SecretarioEnemyScript secretarioEnemyScript;
     private void Start()
     {
         enemyHP = maxEnemyHP;
