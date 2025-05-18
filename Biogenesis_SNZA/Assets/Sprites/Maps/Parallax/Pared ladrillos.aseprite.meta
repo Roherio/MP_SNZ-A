@@ -161,6 +161,106 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 254}
+  - name: Pared ladrillos_Frame_2
+    originalName: 
+    pivot: {x: 0.50402415, y: 0.004132231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 504
+      width: 497
+      height: 242
+    spriteID: dcfcc99092f158a4bb1a68be3a5a721c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 504}
+  - name: Pared ladrillos_Frame_3
+    originalName: 
+    pivot: {x: 1.6166666, y: -7.5263157}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 754
+      width: 30
+      height: 19
+    spriteID: 8ab7396d9d2a3ad4ab11b634d61161f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 754}
+  - name: Pared ladrillos_Frame_4
+    originalName: 
+    pivot: {x: -2.9166665, y: -4.1428576}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 143
+      y: 754
+      width: 30
+      height: 14
+    spriteID: b084eee32daecf34db297bf43c002dbb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 143, y: 754}
+  - name: Pared ladrillos_Frame_5
+    originalName: 
+    pivot: {x: 3.933962, y: -6.043478}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 754
+      width: 53
+      height: 23
+    spriteID: 57f4fca216bea454499b0227ad72dedf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 754}
+  - name: Pared ladrillos_Frame_6
+    originalName: 
+    pivot: {x: 4.484375, y: -4.105263}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 754
+      width: 32
+      height: 19
+    spriteID: b46115f8846ecda4b872c2f9059ad2fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 754}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -188,6 +288,51 @@ ScriptedImporter:
         width: 497
         height: 242
       spriteId: 0aad0ab3905a90c4db3895a800b185ea
+    - name: Pared ladrillos_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: -2
+        y: -1
+        width: 497
+        height: 242
+      spriteId: dcfcc99092f158a4bb1a68be3a5a721c
+    - name: Pared ladrillos_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 200
+        y: 143
+        width: 30
+        height: 19
+      spriteId: 8ab7396d9d2a3ad4ab11b634d61161f0
+    - name: Pared ladrillos_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 336
+        y: 58
+        width: 30
+        height: 14
+      spriteId: b084eee32daecf34db297bf43c002dbb
+    - name: Pared ladrillos_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 40
+        y: 139
+        width: 53
+        height: 23
+      spriteId: 57f4fca216bea454499b0227ad72dedf
+    - name: Pared ladrillos_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 105
+        y: 78
+        width: 32
+        height: 19
+      spriteId: b46115f8846ecda4b872c2f9059ad2fb
     linkedCells: []
     parentIndex: -1
   platformSettings:

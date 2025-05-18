@@ -105,7 +105,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.25, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,7 +126,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.25, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +147,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.25, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +168,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.25, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,7 +189,7 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.5, y: 0.25}
+      pivot: {x: 0.25, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,69 +197,6 @@ TextureImporter:
       bones: []
       spriteID: feca0196418a3cd4fb7c24b553b51d7c
       internalID: 1914983121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Liora-ComboCrab2_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0adda9c1e2d474147b5dfc2952476c08
-      internalID: 306303400
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Liora-ComboCrab2_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d48061b07f44c249bfefaaa0fc8f6a0
-      internalID: 1062450292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Liora-ComboCrab2_7
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eebe5d8439637d645beab16e75a43bd8
-      internalID: 2101730867
       vertices: []
       indices: 
       edges: []
@@ -280,9 +217,6 @@ TextureImporter:
       Liora-ComboCrab2_2: 579648785
       Liora-ComboCrab2_3: 1634133390
       Liora-ComboCrab2_4: 1914983121
-      Liora-ComboCrab2_5: 306303400
-      Liora-ComboCrab2_6: 1062450292
-      Liora-ComboCrab2_7: 2101730867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

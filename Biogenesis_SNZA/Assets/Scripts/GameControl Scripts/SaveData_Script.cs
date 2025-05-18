@@ -12,7 +12,7 @@ public class SaveData_Script
     public bool[] inventorySaveData;
     //public int money;
 
-    //public string mapBoundary; //aqui guardarem els limits de la camera quan els apliquem
+    public string mapBoundary; //aqui guardarem els limits de la camera quan els apliquem
 
     //Inventory saving també
     //-----------------------consumibles

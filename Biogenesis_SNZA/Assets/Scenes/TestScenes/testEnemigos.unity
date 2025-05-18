@@ -2327,6 +2327,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2188078804195088423, guid: fa9bafd966b33d6459e0c43b1da2877b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -26.26
+      objectReference: {fileID: 0}
     - target: {fileID: 2605210504468044484, guid: fa9bafd966b33d6459e0c43b1da2877b, type: 3}
       propertyPath: m_Name
       value: dROP aSSET
