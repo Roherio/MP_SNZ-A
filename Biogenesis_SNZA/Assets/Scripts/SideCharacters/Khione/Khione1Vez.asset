@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Khione1Vez
   m_EditorClassIdentifier: 
   npcName: Khione
-  npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
+  npcPortrait: {fileID: 8034007676665084788, guid: 0433ce7cb6ee1864a838a9f75e165016, type: 3}
   dialogueLines:
   - Flipando pepinillos de terciopelo! Que haces aqui? No te habia visto antes. De
     hecho, nunca habia visto a alguien como tu.
@@ -24,5 +24,7 @@ MonoBehaviour:
   - Necesitas que arregle eso? Bueno, gratis no lo voy a hacer. Pero no quiero tu
     dinero, no me sirve. Si consigues algo que busco, haremos negocios.
   autoProgressLines: 000000
+  endDialogueLines: 
   autoProgressDelay: 1.5
   typingSpeed: 0
+  choices: []

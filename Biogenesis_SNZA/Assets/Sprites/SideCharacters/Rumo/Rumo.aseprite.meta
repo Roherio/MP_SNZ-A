@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ed04c18b546d64c43892f4d1f6f13806
+guid: 9e1bf8d191e25214593a2b67de73e6a5
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638832109374703642
+  platformSettingsDirtyTick: 638832128075690437
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Abraxas_Frame_0
+  - name: Rumo_Frame_0
     originalName: 
-    pivot: {x: 0.5217391, y: -0.033898305}
+    pivot: {x: 0.5, y: -0.47058824}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 66
-      y: 72
-      width: 23
-      height: 59
-    spriteID: d40778aab46fd924d98d849b0686f5cf
+      x: 112
+      y: 4
+      width: 46
+      height: 68
+    spriteID: 306d2cb9ee6bfc34696a47ce332f8a75
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,19 +140,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 66, y: 72}
-  - name: Abraxas_Frame_1
+    uvTransform: {x: 112, y: 4}
+  - name: Rumo_Frame_1
     originalName: 
-    pivot: {x: 0.5217391, y: -0.033333335}
+    pivot: {x: 0.5, y: -0.46376812}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 23
-      height: 60
-    spriteID: a8689677fb74c324ca7719f0a3715937
+      width: 46
+      height: 69
+    spriteID: 0ba22a96300dac74c86d6569b2069060
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,18 +161,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Abraxas_Frame_2
+  - name: Rumo_Frame_2
     originalName: 
-    pivot: {x: 0.5217391, y: -0.033333335}
+    pivot: {x: 0.5, y: -0.46376812}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 72
-      width: 23
-      height: 60
-    spriteID: a546d8b5331303b47806604661dce22c
+      y: 81
+      width: 46
+      height: 69
+    spriteID: 7b36d4379a1780248a649f634a0675ae
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -180,39 +180,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 72}
-  - name: Abraxas_Frame_9
+    uvTransform: {x: 4, y: 81}
+  - name: Rumo_Frame_6
     originalName: 
-    pivot: {x: 0.5217391, y: -0.03448276}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 97
-      y: 4
-      width: 23
-      height: 58
-    spriteID: 83800695d03aa8243bd65e661044b389
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 97, y: 4}
-  - name: Abraxas_Frame_3
-    originalName: 
-    pivot: {x: 0.5217391, y: -0.033333335}
+    pivot: {x: 0.5, y: -0.46376812}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 140
-      width: 23
-      height: 60
-    spriteID: d76ee2b8ccc56e447acded9b12bbec54
+      y: 158
+      width: 46
+      height: 69
+    spriteID: f64aeb41392e5234287d25ce43f63e9a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -220,19 +200,59 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 140}
-  - name: Abraxas_Frame_4
+    uvTransform: {x: 4, y: 158}
+  - name: Rumo_Frame_7
     originalName: 
-    pivot: {x: 0.5217391, y: -0.033333335}
+    pivot: {x: 0.5, y: -0.47058824}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 35
+      x: 112
+      y: 80
+      width: 46
+      height: 68
+    spriteID: b6c9a0db6a7420b4481d0ae7e86b1e9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 80}
+  - name: Rumo_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -0.47058824}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 156
+      width: 46
+      height: 68
+    spriteID: d1982cd270651dc46b62f7f822bb7692
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 156}
+  - name: Rumo_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.46376812}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
       y: 4
-      width: 23
-      height: 60
-    spriteID: 932194fdfe18a9a4db8a939507fa7e71
+      width: 46
+      height: 69
+    spriteID: 02381376d90b4654099c90de4284f1c6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -240,19 +260,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 35, y: 4}
-  - name: Abraxas_Frame_5
+    uvTransform: {x: 58, y: 4}
+  - name: Rumo_Frame_4
     originalName: 
-    pivot: {x: 0.5217391, y: -0.033333335}
+    pivot: {x: 0.5, y: -0.46376812}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 35
-      y: 72
-      width: 23
-      height: 60
-    spriteID: 8bcd79de197483b4f869d986be10b493
+      x: 58
+      y: 81
+      width: 46
+      height: 69
+    spriteID: 0d132019460d2434282fad20e1530b38
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -260,19 +280,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 35, y: 72}
-  - name: Abraxas_Frame_6
+    uvTransform: {x: 58, y: 81}
+  - name: Rumo_Frame_5
     originalName: 
-    pivot: {x: 0.5217391, y: -0.033333335}
+    pivot: {x: 0.5, y: -0.46376812}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 35
-      y: 140
-      width: 23
-      height: 60
-    spriteID: 43dbc232319deb944a9594250c7043c3
+      x: 58
+      y: 158
+      width: 46
+      height: 69
+    spriteID: 09a22fd2377d33d479e42b110bff1997
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -280,19 +300,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 35, y: 140}
-  - name: Abraxas_Frame_7
+    uvTransform: {x: 58, y: 158}
+  - name: Rumo_Frame_9
     originalName: 
-    pivot: {x: 0.5217391, y: -0.033333335}
+    pivot: {x: 0.5, y: -0.47058824}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 66
+      x: 166
       y: 4
-      width: 23
-      height: 60
-    spriteID: 51f79db2aa7d3024192c9005fa4c0c75
+      width: 46
+      height: 68
+    spriteID: a70ace0b1d0a1ce4cafcd84451254e77
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -300,19 +320,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 66, y: 4}
-  - name: Abraxas_Frame_8
+    uvTransform: {x: 166, y: 4}
+  - name: Rumo_Frame_10
     originalName: 
-    pivot: {x: 0.5217391, y: -0.033898305}
+    pivot: {x: 0.5, y: -0.47058824}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 66
-      y: 139
-      width: 23
-      height: 59
-    spriteID: 6cbe53aec65395c4d9c87a94fd81849b
+      x: 166
+      y: 80
+      width: 46
+      height: 68
+    spriteID: dbc85751b3bfeef46aa26882131a38c7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -320,164 +340,115 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 66, y: 139}
-  - name: Abraxas_Frame_10
-    originalName: 
-    pivot: {x: 0.5217391, y: -0.03448276}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 97
-      y: 70
-      width: 23
-      height: 58
-    spriteID: 12d2ca7b80abd0e4c8b6e5c58b8f74ed
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 97, y: 70}
-  - name: Abraxas_Frame_11
-    originalName: 
-    pivot: {x: 0.5217391, y: -0.03448276}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 97
-      y: 136
-      width: 23
-      height: 58
-    spriteID: 7494bf366fd03114ea05e30f74a4ee6d
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 97, y: 136}
+    uvTransform: {x: 166, y: 80}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1892617152
-    name: Abraxas
+    guid: 1919836305
+    name: Rumo
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Abraxas_Frame_0
+    - name: Rumo_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 59
-      spriteId: d40778aab46fd924d98d849b0686f5cf
-    - name: Abraxas_Frame_1
+        x: 41
+        y: 32
+        width: 46
+        height: 68
+      spriteId: 306d2cb9ee6bfc34696a47ce332f8a75
+    - name: Rumo_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 60
-      spriteId: a8689677fb74c324ca7719f0a3715937
-    - name: Abraxas_Frame_2
+        x: 41
+        y: 32
+        width: 46
+        height: 69
+      spriteId: 0ba22a96300dac74c86d6569b2069060
+    - name: Rumo_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 60
-      spriteId: a546d8b5331303b47806604661dce22c
-    - name: Abraxas_Frame_9
-      frameIndex: 9
-      additiveSortOrder: 0
-      cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 58
-      spriteId: 83800695d03aa8243bd65e661044b389
-    - name: Abraxas_Frame_3
-      frameIndex: 3
-      additiveSortOrder: 0
-      cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 60
-      spriteId: d76ee2b8ccc56e447acded9b12bbec54
-    - name: Abraxas_Frame_4
-      frameIndex: 4
-      additiveSortOrder: 0
-      cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 60
-      spriteId: 932194fdfe18a9a4db8a939507fa7e71
-    - name: Abraxas_Frame_5
-      frameIndex: 5
-      additiveSortOrder: 0
-      cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 60
-      spriteId: 8bcd79de197483b4f869d986be10b493
-    - name: Abraxas_Frame_6
+        x: 41
+        y: 32
+        width: 46
+        height: 69
+      spriteId: 7b36d4379a1780248a649f634a0675ae
+    - name: Rumo_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 60
-      spriteId: 43dbc232319deb944a9594250c7043c3
-    - name: Abraxas_Frame_7
+        x: 41
+        y: 32
+        width: 46
+        height: 69
+      spriteId: f64aeb41392e5234287d25ce43f63e9a
+    - name: Rumo_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 60
-      spriteId: 51f79db2aa7d3024192c9005fa4c0c75
-    - name: Abraxas_Frame_8
+        x: 41
+        y: 32
+        width: 46
+        height: 68
+      spriteId: b6c9a0db6a7420b4481d0ae7e86b1e9b
+    - name: Rumo_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 59
-      spriteId: 6cbe53aec65395c4d9c87a94fd81849b
-    - name: Abraxas_Frame_10
+        x: 41
+        y: 32
+        width: 46
+        height: 68
+      spriteId: d1982cd270651dc46b62f7f822bb7692
+    - name: Rumo_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 41
+        y: 32
+        width: 46
+        height: 69
+      spriteId: 02381376d90b4654099c90de4284f1c6
+    - name: Rumo_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 41
+        y: 32
+        width: 46
+        height: 69
+      spriteId: 0d132019460d2434282fad20e1530b38
+    - name: Rumo_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 41
+        y: 32
+        width: 46
+        height: 69
+      spriteId: 09a22fd2377d33d479e42b110bff1997
+    - name: Rumo_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 41
+        y: 32
+        width: 46
+        height: 68
+      spriteId: a70ace0b1d0a1ce4cafcd84451254e77
+    - name: Rumo_Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 58
-      spriteId: 12d2ca7b80abd0e4c8b6e5c58b8f74ed
-    - name: Abraxas_Frame_11
-      frameIndex: 11
-      additiveSortOrder: 0
-      cellRect:
-        x: 20
-        y: 2
-        width: 23
-        height: 58
-      spriteId: 7494bf366fd03114ea05e30f74a4ee6d
+        x: 41
+        y: 32
+        width: 46
+        height: 68
+      spriteId: dbc85751b3bfeef46aa26882131a38c7
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -520,4 +491,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
+  canvasSize: {x: 128, y: 128}

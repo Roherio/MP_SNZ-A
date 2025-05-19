@@ -10,14 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d7318cb11f40fa44bccbe30dbcc194e, type: 3}
-  m_Name: Wallace5Vez
+  m_Name: AbraxasSNZA
   m_EditorClassIdentifier: 
   npcName: Wallace
-  npcPortrait: {fileID: 21300000, guid: 1e640ee388642fd4683e7c243fb0bf18, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
   dialogueLines:
-  - Eh, una cosa mas. Busca al topo Gander, te ayudara a navegar la ciudad con mas
-    seguridad.
-  - Sigue la campana.
-  autoProgressLines: 0000
+  - Eso que veo ahi es un cristalizador?
+  - Vaya, e incluso tienes las muestras necesarias para cristalizar una nueva SNZ-A.
+  - Manos a la obra, Liora. Dame un segundo...
+  - ...
+  - ...
+  - Listo. He aqui tu nuevo cristal de SNZ-A.
+  autoProgressLines: 000000
+  endDialogueLines: 
   autoProgressDelay: 1.5
   typingSpeed: 0
+  choices: []
