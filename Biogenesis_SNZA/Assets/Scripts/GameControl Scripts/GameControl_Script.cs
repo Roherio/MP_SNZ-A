@@ -7,8 +7,8 @@ public class GameControl_Script : MonoBehaviour
     public static GameControl_Script instance;
     
     //logica liora
-    public static float lifeLiora = 100f;
-    public static float maxLife = 100f;
+    public static float lifeLiora = 500f;
+    public static float maxLife = 500f;
     public static float adrenalineLiora = 0f;
     public static int moneyLiora = 0;
 

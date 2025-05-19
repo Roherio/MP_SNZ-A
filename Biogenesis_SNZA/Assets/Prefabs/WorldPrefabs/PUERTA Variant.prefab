@@ -106,6 +106,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PUERTA Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7236022124033324925, guid: f25abac89572ac94596b4980bfc61082, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 7378799990863914317, guid: f25abac89572ac94596b4980bfc61082, type: 3}
       propertyPath: m_Size.y
       value: 3.9242449
@@ -113,6 +117,10 @@ PrefabInstance:
     - target: {fileID: 7378799990863914317, guid: f25abac89572ac94596b4980bfc61082, type: 3}
       propertyPath: m_Offset.y
       value: 1.0801611
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782459943327765209, guid: f25abac89572ac94596b4980bfc61082, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 9148926551940146234, guid: f25abac89572ac94596b4980bfc61082, type: 3}
       propertyPath: m_LocalPosition.x
@@ -195,6 +203,7 @@ MonoBehaviour:
   destination: {fileID: 3111816110563922639}
   player: {fileID: 3994394536962611434, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
   InteractButton: {fileID: 0}
+  mapBoundary: {fileID: 0}
 --- !u!1 &4741403988254934566 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2813742077221630823, guid: f25abac89572ac94596b4980bfc61082, type: 3}
@@ -215,6 +224,7 @@ MonoBehaviour:
   destination: {fileID: 7314819252497066806}
   player: {fileID: 3994394536962611434, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
   InteractButton: {fileID: 0}
+  mapBoundary: {fileID: 0}
 --- !u!4 &5623102668964006351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2939148895964740750, guid: f25abac89572ac94596b4980bfc61082, type: 3}

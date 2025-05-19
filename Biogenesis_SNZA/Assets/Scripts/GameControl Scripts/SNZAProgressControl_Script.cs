@@ -36,8 +36,6 @@ public class SNZAProgressControl_Script : MonoBehaviour
             //if (progressAmountJabali <= 0) { return; }
             if (progresoSNZAJabali <= 0) { return; }
             ProgresarSNZAJabali(10);
-            //aqui aun NO ENTRA
-            print("hasprogresao");
             bKilledJabali = false;
         }
         if (bKilledSecretario || Input.GetKeyDown(KeyCode.O))
@@ -45,7 +43,6 @@ public class SNZAProgressControl_Script : MonoBehaviour
             //if (progressAmountSecretario <= 0) { return; }
             if (progresoSNZASecretario <= 0) { return; }
             ProgresarSNZASecretario(10);
-            print("hasprogresao");
             bKilledSecretario = false;
         }
     }
