@@ -28,7 +28,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Loading Game...");
         // For example:
         // SaveController_Script.LoadGame(); (if you expose it statically or trigger through another object)
-        SceneManager.LoadScene("levelDesign 2");
+        SceneManager.LoadScene("levelDesign 3");
     }
 
     public void OpenSettings()
