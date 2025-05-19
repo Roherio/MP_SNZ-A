@@ -67,6 +67,7 @@ public class SecretarioEnemyScript : MonoBehaviour
                 if (hpEnemiesScript.isDead && !hasPlayedDeathSound)
                 {
                     StopAllCoroutines();
+                    rb.velocity = Vector2.zero;
                     audioManager.SecretarioSFX(audioManager.Death);
                     hasPlayedDeathSound = true;
                     return;
@@ -85,12 +86,13 @@ public class SecretarioEnemyScript : MonoBehaviour
                     print("im chasing");
                     isChasing();
                 }
-                else { rb.velocity = Vector2.zero; } //Com l'estat es STANDING, es queda esperant a algun canvi
+                else { rb.velocity = Vector2.zero; animator.SetBool("isWalking", false); } //Com l'estat es STANDING, es queda esperant a algun canvi
                 break;
 
             case EnemyBehaviour.PATROL:
                 if (hpEnemiesScript.isDead && !hasPlayedDeathSound)
                 {
+                    rb.velocity = Vector2.zero;
                     StopAllCoroutines();
                     audioManager.SecretarioSFX(audioManager.Death);
                     hasPlayedDeathSound = true;
@@ -114,7 +116,7 @@ public class SecretarioEnemyScript : MonoBehaviour
                     //Com l'estat es PATROL, si no detecta cap jugador comença a caminar entre dos punts
                     if (destinationPoint == 0)
                     {
-                        animator.SetBool("IsWalking", true);
+                        animator.SetBool("isWalking", true);
                         transform.localScale = new Vector3(1, 1, 1);
                         transform.position = Vector2.MoveTowards(transform.position, patrolPoint[0].position, moveSpeed * Time.deltaTime);
                         if (Vector2.Distance(transform.position, patrolPoint[0].position) < 0.1)
@@ -125,7 +127,7 @@ public class SecretarioEnemyScript : MonoBehaviour
 
                     if (destinationPoint == 1)
                     {
-                        animator.SetBool("IsWalking", true);
+                        animator.SetBool("isWalking", true);
                         transform.localScale = new Vector3(-1, 1, 1);
                         transform.position = Vector2.MoveTowards(transform.position, patrolPoint[1].position, moveSpeed * Time.deltaTime);
                         if (Vector2.Distance(transform.position, patrolPoint[1].position) < 0.1)
@@ -149,7 +151,7 @@ public class SecretarioEnemyScript : MonoBehaviour
         }
         TryPlayAlertSound();
 
-        animator.SetBool("IsWalking", true);
+        animator.SetBool("isWalking", true);
         Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
         direction.y = 0; //fem que la direcció en y sigui 0
         direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
@@ -162,11 +164,12 @@ public class SecretarioEnemyScript : MonoBehaviour
             else
                 transform.localScale = new Vector3(-1, 1, 1);
         }
+        
     }
 
     IEnumerator Dash()
     {
-        animator.SetBool("IsWalking", false);
+        animator.SetBool("isWalking", false);
         
         //Temps de preparació de l'atack
 
@@ -181,7 +184,7 @@ public class SecretarioEnemyScript : MonoBehaviour
         
 
         yield return new WaitForSeconds(dashCooldown);
-        animator.SetBool("IsAttacking", true);
+        animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(.3f);
         //Fa el dash/atac cap a l'enemic
         audioManager.SecretarioSFX(audioManager.Attack);
@@ -200,10 +203,10 @@ public class SecretarioEnemyScript : MonoBehaviour
         //S'acaba el dash, aturat i posa't en cooldown
         rb.velocity = Vector2.zero; 
         
-        animator.SetBool("IsAttacking", false);
+        animator.SetBool("isAttacking", false);
 
         yield return new WaitForSeconds(dashCooldown);
-        animator.SetBool("IsWalking", false);
+        animator.SetBool("isWalking", false);
         isAttacking = false;
         //Pot tornar a atacar
         if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(1, 1, 1); }

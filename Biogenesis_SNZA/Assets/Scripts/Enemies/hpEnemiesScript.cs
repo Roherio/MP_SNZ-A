@@ -35,13 +35,13 @@ public class hpEnemiesScript : MonoBehaviour
         {
             enemyHP = enemyHP - Liora_Attack_Script.damageAttackLiora;
             StartCoroutine(FlashWhite());
-            FindObjectOfType<HitStop>().hitStop(0.005f);
-            CinemachineShake.Instance.ShakeCamera(1f, .3f);
+            
             print("has hecho dañito");
             if (enemyHP <= 0f)
             {
                 isDead = true;
-                
+                CinemachineShake.Instance.ShakeCamera(1f, .3f);
+                FindObjectOfType<HitStop>().hitStop(0.05f);
                 animator.SetBool("isWalking", false);
                 animator.SetBool("isAttacking", false);
                 animator.SetBool("isDying", true);
