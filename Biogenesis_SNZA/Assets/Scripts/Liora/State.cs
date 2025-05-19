@@ -26,6 +26,7 @@ public abstract class State : MonoBehaviour
     public bool isBreakingWall = false;
     public bool isTakingItem = false;
     public bool isKnockedBack = false;
+    public bool isDying = false;
     //attack Logic
     public bool isAttacking = false;
     public bool isParrying = false;
