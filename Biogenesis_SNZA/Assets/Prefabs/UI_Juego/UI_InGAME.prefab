@@ -4566,7 +4566,7 @@ PrefabInstance:
     - target: {fileID: 8247220212978068395, guid: aab7a80a1a0e23e4fb50a52ca131d7d8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ee43a2f0548d44b448c75867766173ec, type: 3}
+      objectReference: {fileID: 21300000, guid: af9c40d5b4d150d478b5fda910329daa, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9042710538685261930, guid: aab7a80a1a0e23e4fb50a52ca131d7d8, type: 3}
@@ -6160,6 +6160,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8247220212978068395, guid: aab7a80a1a0e23e4fb50a52ca131d7d8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8247220212978068395, guid: aab7a80a1a0e23e4fb50a52ca131d7d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c8956b92fa2f404283c1ba560a95d94, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6667,7 +6675,7 @@ PrefabInstance:
     - target: {fileID: 8247220212978068395, guid: aab7a80a1a0e23e4fb50a52ca131d7d8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a1351b66db38b4c4bb958c47f49440ef, type: 3}
+      objectReference: {fileID: 21300000, guid: c6fcbe69ece24034d8653275344d4ff2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9042710538685261930, guid: aab7a80a1a0e23e4fb50a52ca131d7d8, type: 3}
@@ -7175,6 +7183,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8247220212978068395, guid: aab7a80a1a0e23e4fb50a52ca131d7d8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8247220212978068395, guid: aab7a80a1a0e23e4fb50a52ca131d7d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d3a25e052f9ca4d40aba6070a57a06ef, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
