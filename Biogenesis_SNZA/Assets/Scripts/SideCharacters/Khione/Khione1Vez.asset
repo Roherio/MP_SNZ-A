@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Khione1Vez
   m_EditorClassIdentifier: 
   npcName: Khione
-  npcPortrait: {fileID: 8034007676665084788, guid: 0433ce7cb6ee1864a838a9f75e165016, type: 3}
+  npcPortrait: {fileID: 21300000, guid: b1b2654f3f86fd74dad15673f9da497a, type: 3}
   dialogueLines:
   - Flipando pepinillos de terciopelo! Que haces aqui? No te habia visto antes. De
     hecho, nunca habia visto a alguien como tu.
