@@ -62,9 +62,8 @@ public class SaveController_Script : MonoBehaviour
             //Cargar Poderes
             EventsManager_Script.poderKhione = saveData.poderKhione;
             EventsManager_Script.poderRumo = saveData.poderRumo;
-            /*
-             * FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
-             */
+            FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
+             
         }
         else
         {

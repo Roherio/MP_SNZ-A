@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5082988632389058429}
   - component: {fileID: 7005042605364094626}
   - component: {fileID: 1373956948080652850}
+  - component: {fileID: 1252801806510872644}
   m_Layer: 0
   m_Name: Checkpoint_Fuente
   m_TagString: Untagged
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7587394220672926745, guid: 7ae53f8c88132bf4da687b456b727aa0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -155,7 +156,7 @@ Animator:
   m_GameObject: {fileID: 1411215509678528507}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -8046186034744490040, guid: 7ae53f8c88132bf4da687b456b727aa0, type: 3}
+  m_Controller: {fileID: 9100000, guid: 82ac5084d4a4f8d429d712ea6ae51651, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -166,3 +167,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1252801806510872644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411215509678528507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8acafba64b7574282a6852b116944f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

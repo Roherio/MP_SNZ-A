@@ -13,9 +13,9 @@ public class PuertaCabra_Interact_Script : MonoBehaviour, IInteractable_Script
     {
         if (!CanInteract()) { return; }
         Liora_StateMachine_Script.isBreakingWall = true;
-        Invoke("AnimationBreakDoor", 1.8f); //aqui poner el tiempo que tarda la animación de la cabra en dar el golpe
-        Invoke("StopAnimation", 2.2f); //cambio del estado de la animación
-        Invoke("BreakDoor", 2.3f); //destruye el gameObject NO LO HAGAS CON UN TIEMPO MENOR QUE EL STOP ANIMATION O DESTRUIR EL GAMEOBJECT NO DEJARA QUE VUELVAS A IDLE
+        Invoke("AnimationBreakDoor", 0.7f); //aqui poner el tiempo que tarda la animación de la cabra en dar el golpe
+        Invoke("StopAnimation", 1f); //cambio del estado de la animación
+        Invoke("BreakDoor", 1.2f); //destruye el gameObject NO LO HAGAS CON UN TIEMPO MENOR QUE EL STOP ANIMATION O DESTRUIR EL GAMEOBJECT NO DEJARA QUE VUELVAS A IDLE
     }
     public void AnimationBreakDoor()
     {

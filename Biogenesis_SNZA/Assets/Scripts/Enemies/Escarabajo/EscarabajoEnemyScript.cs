@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
+
 
 public class EscarabajoEnemyScript : MonoBehaviour
 {
@@ -99,7 +99,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
                     print("im chasing");
                     isChasing();
                 }
-                else { rb.velocity = Vector2.zero; } //Com l'estat es STANDING, es queda esperant a algun canvi
+                else { rb.velocity = Vector2.zero; animator.SetBool("isWalking", false); } //Com l'estat es STANDING, es queda esperant a algun canvi
                 break;
 
             case EnemyBehaviour.PATROL:
@@ -140,6 +140,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
 
                     if (destinationPoint == 1)
                     {
+                        animator.SetBool("isWalking", true);
                         transform.localScale = new Vector3(-1, 1, 1);
                         transform.position = Vector2.MoveTowards(transform.position, patrolPoint[1].position, moveSpeed * Time.deltaTime);
                         if (Vector2.Distance(transform.position, patrolPoint[1].position) < 0.1)
@@ -244,6 +245,20 @@ public class EscarabajoEnemyScript : MonoBehaviour
         Gizmos.DrawLine(leftEdge + Vector3.down * verticalViewHeight, rightEdge + Vector3.down * verticalViewHeight);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            knockbackScript kb = collision.GetComponent<knockbackScript>();
+            if (kb != null)
+            {
+                kb.ApplyKnockback(transform.position, 10);
+            }
+
+            //Treu vida
+            GameControl_Script.lifeLiora -= 5;
+        }
+    }
     void TryPlayAlertSound()
     {
         if (soundDetectionCooldwon <= 0f)

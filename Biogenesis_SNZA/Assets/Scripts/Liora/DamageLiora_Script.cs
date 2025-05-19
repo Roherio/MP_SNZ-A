@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class DamageLiora_Script : MonoBehaviour
 {
+    public static DamageLiora_Script instance;
     public static bool isParrying = false;
     public static Collider2D collider;
 
@@ -16,6 +17,7 @@ public class DamageLiora_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         collider = GetComponent<Collider2D>();
         pociones = new GameObject[pocionesCount];
         for (int i = 0; i < pocionesCount; i++)
@@ -32,7 +34,7 @@ public class DamageLiora_Script : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.V))
         {
-            RecibirDamage(transform.position, 10);
+            RecibirDamage(transform.position, 50);
         }
     }
     public void Heal(InputAction.CallbackContext context)
@@ -49,7 +51,7 @@ public class DamageLiora_Script : MonoBehaviour
             Pociones_Script pocionesScript = pociones[i].GetComponent<Pociones_Script>();
             if (pocionesScript.pocionActiva)
             {
-                GameControl_Script.lifeLiora += 20f;
+                GameControl_Script.lifeLiora += 200f;
                 pocionesScript.PotionUsed();
                 break;
             }
@@ -79,5 +81,15 @@ public class DamageLiora_Script : MonoBehaviour
             }
             GameControl_Script.lifeLiora -= damage;
         }
+        if (GameControl_Script.lifeLiora <= 0)
+        {
+            Liora_StateMachine_Script.isDying = true;
+            instance.Invoke("LoadWhenDead", 2.5f);
+        }
+    }
+    public void LoadWhenDead()
+    {
+        GameObject.FindObjectOfType<SaveController_Script>().LoadGame();
+        Liora_StateMachine_Script.isDying = false;
     }
 }

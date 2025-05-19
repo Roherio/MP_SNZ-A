@@ -21,7 +21,6 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
     public void Interact()
     {
         if (!CanInteract()) { return; }
-        //------------------------------------meter item en el inventario. en el caso de que aun no tenemos el inventario acabado, estamos simplemente actualizando la variable en caso de ser objeto de Khione o Rumo.
         Liora_StateMachine_Script.isTakingItem = true;
         Invoke("TakeItem", 1f);//----------------poner el tiempo que tarda la animacion en agacharse y coger el objeto
         Invoke("StopAnimation", 2.1f);
@@ -56,10 +55,11 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
         }
         if (itemName == "Cristalizador")
         {
-            //esto se retirará porque los cristalizadores te los dan o abraxas o Wallace
+            //esto se retirará porque los cristalizadores te los dan o Gander o Wallace
             GameControl_Script.cristalizadores++;
             BotonesActivos_Script.bCristalizador = true;
-            SNZAProgress_Script.bTachadoCristalizador = true;
+            SNZAProgressJabali_Script.bTachadoCristalizadorJabali = true;
+            SNZAProgressSecretario_Script.bTachadoCristalizadorSecretario = true;
         }
         if (itemName == "Cuero")
         {

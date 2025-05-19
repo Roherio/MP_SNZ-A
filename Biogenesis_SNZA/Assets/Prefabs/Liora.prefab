@@ -91,6 +91,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -126,6 +127,7 @@ Transform:
   - {fileID: 6022332959004709097}
   - {fileID: 4703191692299058091}
   - {fileID: 6361641985070432647}
+  - {fileID: 8674277943142864854}
   m_Father: {fileID: 5079527829267624495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2768379810570968898
@@ -182,6 +184,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -239,6 +242,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -296,6 +300,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -389,6 +394,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -446,6 +452,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -475,7 +482,7 @@ Transform:
   m_GameObject: {fileID: 3464409778232486299}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 2, z: 0}
+  m_LocalPosition: {x: -0.5, y: 2, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -522,7 +529,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 3
   m_Time: 0.2
   m_PreviewTimeScale: 1
   m_Parameters:
@@ -594,6 +601,64 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
+--- !u!1 &3771068624148106962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8674277943142864854}
+  - component: {fileID: 8270739781318421563}
+  m_Layer: 6
+  m_Name: Death
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8674277943142864854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3771068624148106962}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6377004406027641803}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8270739781318421563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3771068624148106962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63117add8144d4d49ab92396b5a2e78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  isGrounded: 0
+  jumping: 0
+  jumpPower: 24
+  isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
+  isBreakingWall: 0
+  isTakingItem: 0
+  isKnockedBack: 0
+  isDying: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0
 --- !u!1 &3993439270931428755
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +713,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -672,6 +738,7 @@ GameObject:
   - component: {fileID: 3102691484329706673}
   - component: {fileID: 6202315074707716719}
   - component: {fileID: 8493990385240425479}
+  - component: {fileID: 3780767708722721532}
   m_Layer: 6
   m_Name: Liora
   m_TagString: Player
@@ -924,6 +991,7 @@ MonoBehaviour:
   takeItemState: {fileID: 5771570687653394395}
   breakWallState: {fileID: 4758328587612309351}
   hurtState: {fileID: 5081861138685372778}
+  deathState: {fileID: 8270739781318421563}
   crabAttackState1: {fileID: 2909936836818465901}
   crabAttackState2: {fileID: 3242684065176004098}
   crabAttackState3: {fileID: 2511590161386230145}
@@ -1062,7 +1130,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 1147395806925544360, guid: 3fce7904d139bf1489ba5b68fdb313cf, type: 3}
+  m_Sprite: {fileID: 53131274, guid: 6983df6d93792ca4d85671b1926a3ecc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1153,11 +1221,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.47, y: 2}
+  m_Offset: {x: 0.03, y: 2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.743, y: 0}
-    oldSize: {x: 1.9375, y: 3.8125}
+    pivot: {x: 0.5, y: 0.25}
+    oldSize: {x: 8, y: 8}
     newSize: {x: 0.31, y: 0.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1186,6 +1254,21 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3994394536962611434}
   m_Enabled: 1
+--- !u!114 &3780767708722721532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994394536962611434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6ea949ba914bf4c8c9fc39bc46bd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 4947185015358159300}
+  isKnockedBack: 0
+  knockbackDuration: 0.5
 --- !u!1 &4607453907842549865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,7 +1295,7 @@ Transform:
   m_GameObject: {fileID: 4607453907842549865}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.522, y: 4.66, z: 0}
+  m_LocalPosition: {x: -0.022, y: 4.66, z: 0}
   m_LocalScale: {x: 0.75, y: 0.76, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1258,8 +1341,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 7cc682064326da9418fa0f283ec79a7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1335,7 +1418,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.7}
+  m_Offset: {x: 0.25, y: -0.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1414,6 +1497,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1481,7 +1565,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03, y: 0}
+  m_Offset: {x: 0.22, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1548,6 +1632,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1605,6 +1690,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1662,6 +1748,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1752,6 +1839,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1819,7 +1907,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.25, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1886,6 +1974,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -1954,7 +2043,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.7}
+  m_Offset: {x: 0.25, y: -0.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2033,6 +2122,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -2090,6 +2180,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -2147,6 +2238,7 @@ MonoBehaviour:
   isBreakingWall: 0
   isTakingItem: 0
   isKnockedBack: 0
+  isDying: 0
   isAttacking: 0
   isParrying: 0
   isDoingUlti: 0
@@ -2216,7 +2308,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.31, y: 2.06}
+  m_Offset: {x: 0.81, y: 2.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2267,7 +2359,7 @@ Transform:
   m_GameObject: {fileID: 9008813583235989613}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 2, z: 0}
+  m_LocalPosition: {x: 2.5, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

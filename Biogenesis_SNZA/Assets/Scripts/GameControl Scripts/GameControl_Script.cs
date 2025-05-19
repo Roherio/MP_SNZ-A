@@ -7,8 +7,8 @@ public class GameControl_Script : MonoBehaviour
     public static GameControl_Script instance;
     
     //logica liora
-    public static float lifeLiora = 100f;
-    public static float maxLife = 100f;
+    public static float lifeLiora = 500f;
+    public static float maxLife = 500f;
     public static float adrenalineLiora = 0f;
     public static int moneyLiora = 0;
 
@@ -18,10 +18,11 @@ public class GameControl_Script : MonoBehaviour
     public static int viales = 0;
 
     //logica progreso SNZAs OJO QUE VAN AL REVES, ESTO SE DEBE A PODER CONTAR ENEMIGOS RESTANTES EN EL MENÚ
+    /*public static bool snzaCangrejoConseguida = true;
     public static float progresoSNZAJabali = 150f;
     public static bool snzaJabaliConseguida = false;
-    //public static int progresoSNZASecretario = 0;
-    //public static bool snzaSecretarioConseguida = false;
+    public static float progresoSNZASecretario = 150f;
+    public static bool snzaSecretarioConseguida = false;*/
 
     //logica menus
     public static bool isPaused = false;
@@ -49,7 +50,8 @@ public class GameControl_Script : MonoBehaviour
         if (cristalizadores <= 0)
         {
             BotonesActivos_Script.bCristalizador = false;
-            SNZAProgress_Script.bTachadoCristalizador = false;
+            SNZAProgressJabali_Script.bTachadoCristalizadorJabali = false;
+            SNZAProgressSecretario_Script.bTachadoCristalizadorSecretario = false;
         }
         //------------------------------------ESTO HARA FALTA PASARLO PUNTUALMENTE AL MOMENTO EN EL QUE GASTES LOS ITEMS CON KHIONE para hacerte una poción
         if (cuero <= 0)

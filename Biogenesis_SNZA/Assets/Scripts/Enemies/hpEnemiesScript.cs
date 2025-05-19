@@ -14,6 +14,7 @@ public class hpEnemiesScript : MonoBehaviour
     public bool isDead = false;
 
     ParentEnemy ParentEnemyScript;
+    public BossMusicController bossMusic;
     EscarabajoEnemyScript escarabajoEnemyScript;
     SecretarioEnemyScript secretarioEnemyScript;
     private void Start()
@@ -34,24 +35,30 @@ public class hpEnemiesScript : MonoBehaviour
         {
             enemyHP = enemyHP - Liora_Attack_Script.damageAttackLiora;
             StartCoroutine(FlashWhite());
-            FindObjectOfType<HitStop>().hitStop(0.005f);
-            CinemachineShake.Instance.ShakeCamera(1f, .3f);
+            
             print("has hecho dañito");
             if (enemyHP <= 0f)
             {
                 isDead = true;
-                ParentEnemyScript.enemyDead = true;
+                CinemachineShake.Instance.ShakeCamera(1f, .3f);
+                FindObjectOfType<HitStop>().hitStop(0.05f);
                 animator.SetBool("isWalking", false);
                 animator.SetBool("isAttacking", false);
                 animator.SetBool("isDying", true);
                 //un cop passats a falsos els altres estats porsiacaso, fem trigger de la variable isDying, i fem destroy en invoke per ferho en el temps que l'animacio dura
                 if (nameEnemy == "Jabali")
                 {
-                    SNZAProgress_Script.bKilledJabali = true;
+                    ParentEnemyScript.enemyDead = true;
+                    SNZAProgressControl_Script.bKilledJabali = true;
                 }
                 if (nameEnemy == "Secretario")
                 {
-                    SNZAProgress_Script.bKilledSecretario = true;
+                    ParentEnemyScript.enemyDead = true;
+                    SNZAProgressControl_Script.bKilledSecretario = true;
+                }
+                if (nameEnemy == "Ursina")
+                {
+                    bossMusic.bossDefeated = true;
                 }
                 Invoke("DestruirGameObject", deathAnimationDuration);
             }

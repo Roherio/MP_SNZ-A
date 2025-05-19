@@ -47,10 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData1: {fileID: 11400000, guid: bd6eb628a2c388444a85271cd1825655, type: 2}
-  dialogueData2: {fileID: 11400000, guid: 7384c71600002634398cdeb199892f64, type: 2}
-  dialogueData3: {fileID: 11400000, guid: 5fbd47562375ef54a87da2582f0e982f, type: 2}
-  dialogueData4: {fileID: 11400000, guid: 562247339f9664040bf40905f753d888, type: 2}
-  dialogueData5: {fileID: 11400000, guid: 644ae89ff1514fa45b4516d3793b4274, type: 2}
+  dialogueData2: {fileID: 11400000, guid: 562247339f9664040bf40905f753d888, type: 2}
+  dialogueData3: {fileID: 11400000, guid: 644ae89ff1514fa45b4516d3793b4274, type: 2}
   currentDialogue: dialogueData1
 --- !u!61 &1926590662136806276
 BoxCollider2D:
