@@ -22,13 +22,19 @@ public class SNZAProgressSecretario_Script : MonoBehaviour
     public static bool bTachadoCristalizadorSecretario;
     private bool cristalizadorTachadoSecretario = false;
 
+    public GameObject recuadroCristalizable;
+
     // Start is called before the first frame update
     void Start()
     {
         tachadoSecretario.SetActive(false);
         tachadoCristalizadorSecretario.SetActive(false);
-        progressAmountSecretario = SNZAProgressControl_Script.progresoSNZASecretario;
-        progressBarSecretario.fillAmount = (150 - progressAmountSecretario) / 150f;
+        //progressAmountSecretario = SNZAProgressControl_Script.progresoSNZASecretario;
+        
+        progressBarSecretario.fillAmount = (150 - SNZAProgressControl_Script.progresoSNZASecretario) / 150f;
+        enemiesLeftSecretario.text = "x" + (SNZAProgressControl_Script.progresoSNZASecretario / 10);
+        recuadroCristalizable.SetActive(false);
+
         textoFinalSecretario.gameObject.SetActive(false);
 
     }
@@ -36,13 +42,13 @@ public class SNZAProgressSecretario_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        progressAmountSecretario = SNZAProgressControl_Script.progressAmountSecretario;
+        //progressAmountSecretario = SNZAProgressControl_Script.progresoSNZASecretario;
         secretarioCristalizable = SNZAProgressControl_Script.secretarioCristalizable;
         bKilledSecretario = SNZAProgressControl_Script.bKilledSecretario;
 
-        enemiesLeftSecretario.text = "x" + (progressAmountSecretario / 10);
-        progressBarSecretario.fillAmount = (150 - progressAmountSecretario) / 150f;
-        if (progressAmountSecretario <= 0)
+        enemiesLeftSecretario.text = "x" + (SNZAProgressControl_Script.progresoSNZASecretario / 10);
+        progressBarSecretario.fillAmount = (150 - SNZAProgressControl_Script.progresoSNZASecretario) / 150f;
+        if (SNZAProgressControl_Script.progresoSNZASecretario <= 0)
         {
             tachadoSecretario.SetActive(true);
         }
@@ -62,9 +68,6 @@ public class SNZAProgressSecretario_Script : MonoBehaviour
             tachadoCristalizadorSecretario.SetActive(false);
             cristalizadorTachadoSecretario = false;
         }
-
-        
-
     }
     /*void ProgresarSNZASecretario(float cantidad)
     {
