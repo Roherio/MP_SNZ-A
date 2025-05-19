@@ -240,5 +240,19 @@ public class SecretarioEnemyScript : MonoBehaviour
             soundDetectionCooldwon = soundCooldown;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            knockbackScript kb = collision.GetComponent<knockbackScript>();
+            if (kb != null)
+            {
+                kb.ApplyKnockback(transform.position, 10);
+            }
+
+            //Treu vida
+            GameControl_Script.lifeLiora -= 5;
+        }
+    }
 }
 
