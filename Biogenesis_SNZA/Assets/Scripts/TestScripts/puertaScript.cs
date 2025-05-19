@@ -23,7 +23,7 @@ public class puertaScript : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         print("On TriggerBox");
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.Q))
         {
             StartCoroutine(FadeTimer());
         }
