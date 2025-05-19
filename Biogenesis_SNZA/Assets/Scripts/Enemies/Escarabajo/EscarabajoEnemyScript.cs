@@ -245,6 +245,20 @@ public class EscarabajoEnemyScript : MonoBehaviour
         Gizmos.DrawLine(leftEdge + Vector3.down * verticalViewHeight, rightEdge + Vector3.down * verticalViewHeight);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            knockbackScript kb = collision.GetComponent<knockbackScript>();
+            if (kb != null)
+            {
+                kb.ApplyKnockback(transform.position, 10);
+            }
+
+            //Treu vida
+            GameControl_Script.lifeLiora -= 5;
+        }
+    }
     void TryPlayAlertSound()
     {
         if (soundDetectionCooldwon <= 0f)
