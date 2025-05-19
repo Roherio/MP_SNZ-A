@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
+//using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class Menu_Script : MonoBehaviour
 {
