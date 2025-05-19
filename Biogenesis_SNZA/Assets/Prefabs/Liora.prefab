@@ -672,6 +672,7 @@ GameObject:
   - component: {fileID: 3102691484329706673}
   - component: {fileID: 6202315074707716719}
   - component: {fileID: 8493990385240425479}
+  - component: {fileID: 3780767708722721532}
   m_Layer: 6
   m_Name: Liora
   m_TagString: Player
@@ -1186,6 +1187,21 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3994394536962611434}
   m_Enabled: 1
+--- !u!114 &3780767708722721532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3994394536962611434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6ea949ba914bf4c8c9fc39bc46bd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 4947185015358159300}
+  isKnockedBack: 0
+  knockbackDuration: 0.5
 --- !u!1 &4607453907842549865
 GameObject:
   m_ObjectHideFlags: 0
