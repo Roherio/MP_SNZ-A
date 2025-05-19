@@ -32,7 +32,7 @@ public class DamageLiora_Script : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.V))
         {
-            RecibirDamage(transform.position, 10);
+            RecibirDamage(transform.position, 50);
         }
     }
     public void Heal(InputAction.CallbackContext context)
@@ -49,7 +49,7 @@ public class DamageLiora_Script : MonoBehaviour
             Pociones_Script pocionesScript = pociones[i].GetComponent<Pociones_Script>();
             if (pocionesScript.pocionActiva)
             {
-                GameControl_Script.lifeLiora += 20f;
+                GameControl_Script.lifeLiora += 200f;
                 pocionesScript.PotionUsed();
                 break;
             }

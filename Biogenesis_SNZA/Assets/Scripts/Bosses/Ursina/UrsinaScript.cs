@@ -72,7 +72,7 @@ public class UrsinaScript : MonoBehaviour
         playerPosition = GameObject.FindWithTag("Player").transform;
         canAttack = true;
         rb = GetComponent<Rigidbody2D>();
-        gameObject.SetActive(false);
+        
     }
     void Update()
     {

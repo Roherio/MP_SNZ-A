@@ -7,6 +7,7 @@ public class ActivateUrsina : MonoBehaviour
     public GameObject Ursina;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Ursina.SetActive(true);
+        if(collision.CompareTag("Player")) { Ursina.SetActive(true); }
+       
     }
 }
