@@ -99,7 +99,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
                     print("im chasing");
                     isChasing();
                 }
-                else { rb.velocity = Vector2.zero; } //Com l'estat es STANDING, es queda esperant a algun canvi
+                else { rb.velocity = Vector2.zero; animator.SetBool("isWalking", false); } //Com l'estat es STANDING, es queda esperant a algun canvi
                 break;
 
             case EnemyBehaviour.PATROL:
@@ -140,6 +140,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
 
                     if (destinationPoint == 1)
                     {
+                        animator.SetBool("isWalking", true);
                         transform.localScale = new Vector3(-1, 1, 1);
                         transform.position = Vector2.MoveTowards(transform.position, patrolPoint[1].position, moveSpeed * Time.deltaTime);
                         if (Vector2.Distance(transform.position, patrolPoint[1].position) < 0.1)
