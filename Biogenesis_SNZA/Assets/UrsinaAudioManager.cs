@@ -9,6 +9,7 @@ public class UrsinaAudioManager : MonoBehaviour
 
 
     public AudioClip clawAttack;
+    public AudioClip growl;
     public AudioClip Roar;
     public AudioClip groundStep;
     public AudioClip iceBreaker;
