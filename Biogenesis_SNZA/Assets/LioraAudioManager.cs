@@ -16,9 +16,12 @@ public class LioraAudioManager : MonoBehaviour
     public AudioClip dash;
     public AudioClip voiceDash;
 
-    public AudioClip damage;
+    public AudioClip jump;
 
-    public void UrsinaSFX(AudioClip clip)
+    public AudioClip damage;
+    public AudioClip voiceDamage;
+
+    public void LioraSFX(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
     }

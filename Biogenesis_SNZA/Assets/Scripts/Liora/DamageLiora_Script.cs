@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class DamageLiora_Script : MonoBehaviour
 {
+    LioraAudioManager audioManagerLiora;
+
+
     public static DamageLiora_Script instance;
     public static bool isParrying = false;
     public static Collider2D collider;
@@ -17,6 +20,7 @@ public class DamageLiora_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioManagerLiora = GameObject.FindGameObjectWithTag("LioraAudioManager").GetComponent<LioraAudioManager>();
         instance = this;
         collider = GetComponent<Collider2D>();
         pociones = new GameObject[pocionesCount];
@@ -78,6 +82,7 @@ public class DamageLiora_Script : MonoBehaviour
             if (kb != null)
             {
                 kb.ApplyKnockback(enemy, damage);
+                
             }
             GameControl_Script.lifeLiora -= damage;
         }
@@ -86,6 +91,15 @@ public class DamageLiora_Script : MonoBehaviour
             Liora_StateMachine_Script.isDying = true;
             instance.Invoke("LoadWhenDead", 2.5f);
         }
+    }
+    public void highDamageTaken()
+    {
+        audioManagerLiora.LioraSFX(audioManagerLiora.voiceDamage);
+        audioManagerLiora.LioraSFX(audioManagerLiora.damage);
+    }
+    public void lowDamageSFX()
+    {
+        audioManagerLiora.LioraSFX(audioManagerLiora.voiceDamage);
     }
     public void LoadWhenDead()
     {
