@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Liora_Movement_Script : MonoBehaviour
 {
+    LioraAudioManager audioManager;
     public Rigidbody2D rb;
     public PlayerInput playerInput;
     //Ground Logic
@@ -51,6 +52,7 @@ public class Liora_Movement_Script : MonoBehaviour
 
     void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("LioraAudioManager").GetComponent<LioraAudioManager>();
         knockbackScript = GetComponent<knockbackScript>();
     }
 
@@ -112,12 +114,12 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void Movimiento(InputAction.CallbackContext context)
     {
-        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
+        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue || portalsScript.levelTransitioning) { return; }
         horizontal = context.ReadValue<Vector2>().x;
     }
     public void Saltar(InputAction.CallbackContext context)
     {
-        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
+        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue || portalsScript.levelTransitioning) { return; }
         //evitar que salti durant un dash o durant un atac/parry/ulti
         if (isClimbing || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
         if (context.performed)
@@ -130,6 +132,7 @@ public class Liora_Movement_Script : MonoBehaviour
                 //Invoke("EnableClimb", 0.3f);
                 rb.gravityScale = 6f;
                 rb.velocity = new Vector2(rb.velocity.x * horizontal, jumpPower);
+                audioManager.LioraSFX(audioManager.dash);
                 jumping = true;
             }
             
@@ -142,11 +145,14 @@ public class Liora_Movement_Script : MonoBehaviour
     }
     public void Dash(InputAction.CallbackContext context)
     {
-        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
+
+        if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue || portalsScript.levelTransitioning) { return; }
         if (!canDash || !canDashLadder || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
         if (context.started && CheckGround() == true && canDash == true)
         {
             StartCoroutine(Dash());
+            
+            audioManager.LioraSFX(audioManager.voiceDash);
         }
     }
     public void LedgeInput(InputAction.CallbackContext context)
