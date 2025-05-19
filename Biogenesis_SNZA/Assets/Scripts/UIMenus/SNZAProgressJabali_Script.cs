@@ -27,7 +27,7 @@ public class SNZAProgressJabali_Script : MonoBehaviour
     {
         tachadoJabali.SetActive(false);
         tachadoCristalizadorJabali.SetActive(false);
-        progressAmountJabali = GameControl_Script.progresoSNZAJabali;
+        progressAmountJabali = SNZAProgressControl_Script.progresoSNZAJabali;
         progressBarJabali.fillAmount = (150 - progressAmountJabali) / 150f;
         textoFinalJabali.gameObject.SetActive(false);
 

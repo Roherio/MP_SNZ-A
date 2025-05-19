@@ -10,13 +10,25 @@ public class SNZAIndividual_Script : MonoBehaviour, IPointerEnterHandler, IPoint
     public CanvasGroup canvasGroup;
     public GameObject hoverPanel; //panel que mostrara cuando estes por encima de el como boton
     public bool isUnlocked = false;
-    
-    // Start is called before the first frame update
-    void Start()
+    public static bool jabaliDesbloqueado;
+    public static bool secretarioDesbloqueado;
+    private void Awake()
     {
         hoverPanel.SetActive(false);
         LockItem();
         if (SNZAName == "Cangrejo")
+        {
+            UnlockItem();
+        }
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (SNZAName == "Jabali" && jabaliDesbloqueado)
+        {
+            UnlockItem();
+        }
+        if (SNZAName == "Secretario" && secretarioDesbloqueado)
         {
             UnlockItem();
         }

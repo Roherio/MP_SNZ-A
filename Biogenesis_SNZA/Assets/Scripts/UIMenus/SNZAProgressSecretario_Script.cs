@@ -27,7 +27,7 @@ public class SNZAProgressSecretario_Script : MonoBehaviour
     {
         tachadoSecretario.SetActive(false);
         tachadoCristalizadorSecretario.SetActive(false);
-        progressAmountSecretario = GameControl_Script.progresoSNZASecretario;
+        progressAmountSecretario = SNZAProgressControl_Script.progresoSNZASecretario;
         progressBarSecretario.fillAmount = (150 - progressAmountSecretario) / 150f;
         textoFinalSecretario.gameObject.SetActive(false);
 
