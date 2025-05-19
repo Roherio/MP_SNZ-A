@@ -254,7 +254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back to Main Menu
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4849ea90ea099d458b929fc1b391f51, type: 2}
   m_sharedMaterial: {fileID: -1837649449672462102, guid: e4849ea90ea099d458b929fc1b391f51, type: 2}
@@ -459,7 +459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -309}
+  m_AnchoredPosition: {x: 0, y: -424}
   m_SizeDelta: {x: 400, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &449541382
@@ -508,7 +508,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 947877290}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: BackToMainMenu
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 359
+    m_Top: 140
     m_Bottom: 0
   m_ChildAlignment: 1
   m_Spacing: -210
@@ -988,7 +988,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1040, y: 200}
+  m_SizeDelta: {x: 1500, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777815348
 MonoBehaviour:
@@ -1010,8 +1010,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enhorabuena por derrotar a Ursina, Liora. Proximamente restableceremos
-    el orden de las cosas...
+  m_text: 'La SNZ-A, sustancia genetica que brinda a su portador la capacidad de
+    transformarse en animal, ha provocado incontables guerras.
+
+
+    Hace mucho tiempo,
+    cuando apenas era adolescente, Abraxas me acogio despues de que mi pueblo fuera
+    atacado. El reino que nos ataco fue Axia, gobernado por Ursina Glace.
+
+
+    Ahora
+    yo, Liora, por orden de Abraxas, asaltare la fortaleza de Ursina y recuperare
+    la SNZ-A que posee.
+
+
+    Aunque no sera tarea facil...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4849ea90ea099d458b929fc1b391f51, type: 2}
   m_sharedMaterial: {fileID: -1837649449672462102, guid: e4849ea90ea099d458b929fc1b391f51, type: 2}
@@ -1045,7 +1058,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1102,7 +1115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonMainMenu: {fileID: 449541380}
   buttonMainMenuImage: {fileID: 291206662}
-  delayShowButton: 7.3
+  delayShowButton: 29
   charactersPerSecond: 20
   puntapartDelay: 0.5
 --- !u!1660057539 &9223372036854775807

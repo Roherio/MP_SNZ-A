@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class hpEnemiesScript : MonoBehaviour
 {
@@ -64,6 +65,7 @@ public class hpEnemiesScript : MonoBehaviour
                 if (nameEnemy == "Ursina")
                 {
                     bossMusic.bossDefeated = true;
+                    Invoke("CargarFinalJuego", deathAnimationDuration);
                 }
                 Invoke("DestruirGameObject", deathAnimationDuration);
             }
@@ -77,6 +79,10 @@ public class hpEnemiesScript : MonoBehaviour
     void ResetMaterial()
     {
         spriteRenderer.color = originalColor;
+    }
+    void CargarFinalJuego()
+    {
+        SceneManager.LoadScene("TransicioFinal");
     }
     private IEnumerator FlashWhite()
     {

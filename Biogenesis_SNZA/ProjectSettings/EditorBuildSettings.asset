@@ -24,7 +24,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: eb0d93c0b9c3d1f4d92722197cfa3b75
   - enabled: 1
+    path: Assets/Scenes/TransicioInici.unity
+    guid: f03eb8e7e4a357048a896762779fad7d
+  - enabled: 1
     path: Assets/Scenes/levelDesign 2.unity
     guid: fc4e9119b5d222e4aa1d575454a2e7b2
+  - enabled: 1
+    path: Assets/Scenes/TransicioFinal.unity
+    guid: 111ace7ea44699b4ea3611e826993b79
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 949374642a6583848bbc05da9356ec26, type: 2}
