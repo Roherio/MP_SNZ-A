@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5747814136012205337}
   - component: {fileID: 1474517659695495998}
   - component: {fileID: 9217687640291101985}
+  - component: {fileID: 3120906595856356141}
   m_Layer: 0
   m_Name: GAMECONTROL
   m_TagString: Untagged
@@ -85,6 +86,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97b2dd90ca2a774ab265f0e1734fcac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3120906595856356141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966331283034304668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d217013cbea913046b4ae557f920498e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3446573188520684816
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +146,8 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   nameText: {fileID: 0}
   portraitImage: {fileID: 0}
+  choiceContainer: {fileID: 0}
+  choiceButtonPrefab: {fileID: 0}
 --- !u!1 &9134007542565487332
 GameObject:
   m_ObjectHideFlags: 0

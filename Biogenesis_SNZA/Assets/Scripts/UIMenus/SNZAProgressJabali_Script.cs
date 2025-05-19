@@ -36,13 +36,22 @@ public class SNZAProgressJabali_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (bKilledJabali || Input.GetKeyDown(KeyCode.P))
+        progressAmountJabali = SNZAProgressControl_Script.progressAmountJabali;
+        jabaliCristalizable = SNZAProgressControl_Script.jabaliCristalizable;
+        bKilledJabali = SNZAProgressControl_Script.bKilledJabali;
+
+        enemiesLeftJabali.text = "x" + (progressAmountJabali / 10);
+        progressBarJabali.fillAmount = (150 - progressAmountJabali) / 150f;
+        if (progressAmountJabali <= 0)
+        {
+            tachadoJabali.SetActive(true);
+        }
+
+        /*if (bKilledJabali || Input.GetKeyDown(KeyCode.P))
         {
             if (progressAmountJabali <= 0) { return; }
-            ProgresarSNZAJabali(10);
             bKilledJabali = false;
-        }
+        }*/
         if (bTachadoCristalizadorJabali && !cristalizadorTachadoJabali)
         {
             tachadoCristalizadorJabali.SetActive(true);
@@ -55,7 +64,7 @@ public class SNZAProgressJabali_Script : MonoBehaviour
         }
 
     }
-    void ProgresarSNZAJabali(float cantidad)
+    /*void ProgresarSNZAJabali(float cantidad)
     {
         progressAmountJabali -= cantidad;
         enemiesLeftJabali.text = "x" + (progressAmountJabali / 10);
@@ -65,7 +74,7 @@ public class SNZAProgressJabali_Script : MonoBehaviour
             jabaliCristalizable = true;
             tachadoJabali.SetActive(true);
         }
-    }
+    }*/
     public void DestruirJabali()
     {
         Destroy(RESTANTEJabali);

@@ -49,12 +49,12 @@ public class hpEnemiesScript : MonoBehaviour
                 if (nameEnemy == "Jabali")
                 {
                     ParentEnemyScript.enemyDead = true;
-                    SNZAProgressJabali_Script.bKilledJabali = true;
+                    SNZAProgressControl_Script.bKilledJabali = true;
                 }
                 if (nameEnemy == "Secretario")
                 {
                     ParentEnemyScript.enemyDead = true;
-                    SNZAProgressSecretario_Script.bKilledSecretario = true;
+                    SNZAProgressControl_Script.bKilledSecretario = true;
                 }
                 if (nameEnemy == "Ursina")
                 {

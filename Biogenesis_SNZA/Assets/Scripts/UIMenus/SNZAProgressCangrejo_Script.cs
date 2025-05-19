@@ -8,7 +8,7 @@ public class SNZAProgressCangrejo_Script : MonoBehaviour
 {
     
     [Header("CANGREJO")]
-    public TextMeshProUGUI textoFinalJabali;
+    public TextMeshProUGUI textoFinalCangrejo;
 
     // Start is called before the first frame update
     void Start()

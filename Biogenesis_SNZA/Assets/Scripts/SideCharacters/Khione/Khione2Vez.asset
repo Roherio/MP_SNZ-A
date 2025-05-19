@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Khione2Vez
   m_EditorClassIdentifier: 
   npcName: Khione
-  npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
+  npcPortrait: {fileID: 21300000, guid: b1b2654f3f86fd74dad15673f9da497a, type: 3}
   dialogueLines:
   - Me falta una pieza de material resistente... Metal, quizas?
   - Agh... si tuviera algo mas elastico...
   - Oh, pensaba en voz alta otra vez, disculpa.
   autoProgressLines: 000000
+  endDialogueLines: 
   autoProgressDelay: 1.5
   typingSpeed: 0
+  choices: []

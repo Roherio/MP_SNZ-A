@@ -36,13 +36,22 @@ public class SNZAProgressSecretario_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (bKilledSecretario || Input.GetKeyDown(KeyCode.P))
+        progressAmountSecretario = SNZAProgressControl_Script.progressAmountSecretario;
+        secretarioCristalizable = SNZAProgressControl_Script.secretarioCristalizable;
+        bKilledSecretario = SNZAProgressControl_Script.bKilledSecretario;
+
+        enemiesLeftSecretario.text = "x" + (progressAmountSecretario / 10);
+        progressBarSecretario.fillAmount = (150 - progressAmountSecretario) / 150f;
+        if (progressAmountSecretario <= 0)
+        {
+            tachadoSecretario.SetActive(true);
+        }
+
+        /*if (bKilledSecretario || Input.GetKeyDown(KeyCode.P))
         {
             if (progressAmountSecretario <= 0) { return; }
-            ProgresarSNZASecretario(10);
             bKilledSecretario = false;
-        }
+        }*/
         if (bTachadoCristalizadorSecretario && !cristalizadorTachadoSecretario)
         {
             tachadoCristalizadorSecretario.SetActive(true);
@@ -54,8 +63,10 @@ public class SNZAProgressSecretario_Script : MonoBehaviour
             cristalizadorTachadoSecretario = false;
         }
 
+        
+
     }
-    void ProgresarSNZASecretario(float cantidad)
+    /*void ProgresarSNZASecretario(float cantidad)
     {
         progressAmountSecretario -= cantidad;
         enemiesLeftSecretario.text = "x" + (progressAmountSecretario / 10);
@@ -65,7 +76,7 @@ public class SNZAProgressSecretario_Script : MonoBehaviour
             secretarioCristalizable = true;
             tachadoSecretario.SetActive(true);
         }
-    }
+    }*/
     public void DestruirSecretario()
     {
         Destroy(RESTANTESecretario);
