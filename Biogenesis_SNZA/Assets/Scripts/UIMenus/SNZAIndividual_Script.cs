@@ -20,6 +20,10 @@ public class SNZAIndividual_Script : MonoBehaviour, IPointerEnterHandler, IPoint
         {
             UnlockItem();
         }
+        if (SNZAName == "Jabali")
+        {
+            UnlockItem();
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -58,6 +62,7 @@ public class SNZAIndividual_Script : MonoBehaviour, IPointerEnterHandler, IPoint
     {
         if (hoverPanel != null)
         {
+            print("activarmenu");
             hoverPanel.SetActive(true);
         }
     }
@@ -65,6 +70,7 @@ public class SNZAIndividual_Script : MonoBehaviour, IPointerEnterHandler, IPoint
     {
         if (hoverPanel != null)
         {
+            print("desactivarMenu");
             hoverPanel.SetActive(false);
         }
     }

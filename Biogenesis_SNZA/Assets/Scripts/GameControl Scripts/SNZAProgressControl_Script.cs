@@ -32,30 +32,42 @@ public class SNZAProgressControl_Script : MonoBehaviour
     {
         if (bKilledJabali || Input.GetKeyDown(KeyCode.P))
         {
-            if (progressAmountJabali <= 0) { return; }
+            //aqui SI QUE ENTRA
+            //if (progressAmountJabali <= 0) { return; }
+            if (progresoSNZAJabali <= 0) { return; }
             ProgresarSNZAJabali(10);
+            //aqui aun NO ENTRA
+            print("hasprogresao");
             bKilledJabali = false;
         }
         if (bKilledSecretario || Input.GetKeyDown(KeyCode.O))
         {
-            if (progressAmountSecretario <= 0) { return; }
+            //if (progressAmountSecretario <= 0) { return; }
+            if (progresoSNZASecretario <= 0) { return; }
             ProgresarSNZASecretario(10);
+            print("hasprogresao");
             bKilledSecretario = false;
         }
     }
     void ProgresarSNZAJabali(float cantidad)
     {
-        progressAmountJabali -= cantidad;
+        //progressAmountJabali -= cantidad;
+        progresoSNZAJabali -= cantidad;
+        bKilledJabali = false;
         if (progressAmountJabali <= 0)
         {
+            print("hasmatao un jabali");
             jabaliCristalizable = true;
         }
     }
     void ProgresarSNZASecretario(float cantidad)
     {
-        progressAmountSecretario -= cantidad;
+        //progressAmountSecretario -= cantidad;
+        progresoSNZASecretario -= cantidad;
+        bKilledSecretario = false;
         if (progressAmountSecretario <= 0)
         {
+            print("hasmatao un secretario");
             secretarioCristalizable = true;
         }
     }
