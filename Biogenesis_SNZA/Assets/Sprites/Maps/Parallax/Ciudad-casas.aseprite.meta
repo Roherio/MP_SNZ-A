@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638832092619746015
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Ciudad-casas
+  - name: Ciudad-casas_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.39215687, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 640
-      height: 355
-    spriteID: 2f3b0b5eaf01f954ca404ac4fb0564e6
+      width: 816
+      height: 360
+    spriteID: bdb3e0fccd0d64446bb248ad5d9afcf6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,6 +141,106 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Ciudad-casas_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 372
+      width: 640
+      height: 346
+    spriteID: 56e3eb28cc476bb4c967c5b8065ce738
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 372}
+  - name: Ciudad-casas_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.012539186}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 726
+      width: 640
+      height: 319
+    spriteID: 4354636de66d5424f8dc227bf16f28cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 726}
+  - name: Ciudad-casas_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.31557378}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1053
+      width: 640
+      height: 244
+    spriteID: 3454357144896cc4eae2373011c810b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1053}
+  - name: Ciudad-casas_Frame_4
+    originalName: 
+    pivot: {x: 0.056603752, y: -0.59836066}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 652
+      y: 1053
+      width: 318
+      height: 122
+    spriteID: 36aca3a5a5175bf408a327a983465f76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 652, y: 1053}
+  - name: Ciudad-casas_Frame_5
+    originalName: 
+    pivot: {x: 1.4326923, y: -0.36477986}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 652
+      y: 726
+      width: 208
+      height: 159
+    spriteID: 42db2b71d3868d047b0125e47c70a28f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 652, y: 726}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,15 +250,60 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Ciudad-casas
+    - name: Ciudad-casas_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
+        width: 816
+        height: 360
+      spriteId: bdb3e0fccd0d64446bb248ad5d9afcf6
+    - name: Ciudad-casas_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
         width: 640
-        height: 355
-      spriteId: 2f3b0b5eaf01f954ca404ac4fb0564e6
+        height: 346
+      spriteId: 56e3eb28cc476bb4c967c5b8065ce738
+    - name: Ciudad-casas_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 4
+        width: 640
+        height: 319
+      spriteId: 4354636de66d5424f8dc227bf16f28cb
+    - name: Ciudad-casas_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 77
+        width: 640
+        height: 244
+      spriteId: 3454357144896cc4eae2373011c810b4
+    - name: Ciudad-casas_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 302
+        y: 73
+        width: 318
+        height: 122
+      spriteId: 36aca3a5a5175bf408a327a983465f76
+    - name: Ciudad-casas_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 22
+        y: 58
+        width: 208
+        height: 159
+      spriteId: 42db2b71d3868d047b0125e47c70a28f
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -169,6 +314,30 @@ ScriptedImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0

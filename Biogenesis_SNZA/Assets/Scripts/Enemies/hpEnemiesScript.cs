@@ -14,6 +14,7 @@ public class hpEnemiesScript : MonoBehaviour
     public bool isDead = false;
 
     ParentEnemy ParentEnemyScript;
+    public BossMusicController bossMusic;
     EscarabajoEnemyScript escarabajoEnemyScript;
     SecretarioEnemyScript secretarioEnemyScript;
     private void Start()
@@ -40,18 +41,24 @@ public class hpEnemiesScript : MonoBehaviour
             if (enemyHP <= 0f)
             {
                 isDead = true;
-                ParentEnemyScript.enemyDead = true;
+                
                 animator.SetBool("isWalking", false);
                 animator.SetBool("isAttacking", false);
                 animator.SetBool("isDying", true);
                 //un cop passats a falsos els altres estats porsiacaso, fem trigger de la variable isDying, i fem destroy en invoke per ferho en el temps que l'animacio dura
                 if (nameEnemy == "Jabali")
                 {
+                    ParentEnemyScript.enemyDead = true;
                     SNZAProgress_Script.bKilledJabali = true;
                 }
                 if (nameEnemy == "Secretario")
                 {
+                    ParentEnemyScript.enemyDead = true;
                     SNZAProgress_Script.bKilledSecretario = true;
+                }
+                if (nameEnemy == "Ursina")
+                {
+                    bossMusic.bossDefeated = true;
                 }
                 Invoke("DestruirGameObject", deathAnimationDuration);
             }

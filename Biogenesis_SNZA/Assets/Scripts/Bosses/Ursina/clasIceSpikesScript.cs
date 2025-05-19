@@ -15,7 +15,7 @@ public class clasIceSpikesScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerPosition = GameObject.FindWithTag("Player").transform;
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 2f);
         print(GameControl_Script.lifeLiora);
         attackDirection = (playerPosition.position - transform.position);
         attackDirection.y = 0;

@@ -65,12 +65,14 @@ public class UrsinaScript : MonoBehaviour
 
     void Start()
     {
+
         hpEnemiesScript = GetComponent<hpEnemiesScript>();
         animator = GetComponent<Animator>();
         attackDurationTimer = clawAttackDuration; //valor únicament creat per després ser portat a un altre script
         playerPosition = GameObject.FindWithTag("Player").transform;
         canAttack = true;
         rb = GetComponent<Rigidbody2D>();
+        gameObject.SetActive(false);
     }
     void Update()
     {
@@ -78,7 +80,7 @@ public class UrsinaScript : MonoBehaviour
         float enemyToPlayerDistance = Vector2.Distance(transform.position, playerPosition.position); 
 
         //Controla que no fa cap altre acció mentre estigui atacant
-        if (isAttacking) return; 
+        if (isAttacking || hpEnemiesScript.isDead) return; 
 
         //Entra en segona fase
         if (hpEnemiesScript.enemyHP <= hpEnemiesScript.maxEnemyHP / 2) { OnPhase2 = true; }
@@ -319,7 +321,7 @@ public class UrsinaScript : MonoBehaviour
         //S'acaba l'atac, aturat i posa't en cooldown
         rb.velocity = Vector2.zero;
 
-        yield return new WaitForSeconds(AttackCooldown);
+        yield return new WaitForSeconds(AttackCooldown + 1f);
 
         //Pot tornar a atacar
 
@@ -353,7 +355,7 @@ public class UrsinaScript : MonoBehaviour
         //S'acaba l'atac, aturat i posa't en cooldown
         rb.velocity = Vector2.zero;
 
-        yield return new WaitForSeconds(AttackCooldown);
+        yield return new WaitForSeconds(AttackCooldown + .5f);
 
         //Pot tornar a atacar
         
@@ -422,7 +424,7 @@ public class UrsinaScript : MonoBehaviour
         
 
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.5f);
         animator.SetBool("isHowling", false);
 
         //Pot tornar a atacar
