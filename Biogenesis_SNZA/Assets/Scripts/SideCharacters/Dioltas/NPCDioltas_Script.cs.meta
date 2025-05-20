@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 5e45dd4109f4c3a45ba641304af69f7f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dialogueData1: {instanceID: 0}
+  - dialogueData2: {instanceID: 0}
+  - dialogueData3: {instanceID: 0}
+  - dialogueData4: {instanceID: 0}
+  - dialogueData5: {instanceID: 0}
+  - dialoguePanel: {instanceID: 0}
+  - dialogueText: {instanceID: 0}
+  - nameText: {instanceID: 0}
+  - portraitImage: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -21,7 +21,6 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
     public void Interact()
     {
         if (!CanInteract()) { return; }
-        //------------------------------------meter item en el inventario. en el caso de que aun no tenemos el inventario acabado, estamos simplemente actualizando la variable en caso de ser objeto de Khione o Rumo.
         Liora_StateMachine_Script.isTakingItem = true;
         Invoke("TakeItem", 1f);//----------------poner el tiempo que tarda la animacion en agacharse y coger el objeto
         Invoke("StopAnimation", 2.1f);
@@ -33,19 +32,44 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
         print("takenItem!!!!!!!!!!");
         if (itemUser == "Khione")
         {
-            EventsManager_Script.piezasKhione++;
+            if (itemName == "barraKhione")
+            {
+                EventsManager_Script.ActivarObjKhione1();
+            }
+            else if (itemName == "muelleKhione")
+            {
+                EventsManager_Script.ActivarObjKhione2();
+            }
         }
         if (itemUser == "Rumo")
         {
-            if (itemName == "cascosRumo")
+            if (itemName == "taponesRumo")
             {
-                EventsManager_Script.cascosRumo = true;
+                EventsManager_Script.ActivarObjRumo1();
             }
             else if (itemName == "mantaRumo")
             {
-                EventsManager_Script.mantaRumo = true;
+                EventsManager_Script.ActivarObjRumo2();
             }
             
+        }
+        if (itemName == "Cristalizador")
+        {
+            //esto se retirará porque los cristalizadores te los dan o Gander o Wallace
+            GameControl_Script.cristalizadores++;
+            BotonesActivos_Script.bCristalizador = true;
+            SNZAProgressJabali_Script.bTachadoCristalizadorJabali = true;
+            SNZAProgressSecretario_Script.bTachadoCristalizadorSecretario = true;
+        }
+        if (itemName == "Cuero")
+        {
+            GameControl_Script.cuero++;
+            BotonesActivos_Script.bCuero = true;
+        }
+        if (itemName == "Vial")
+        {
+            GameControl_Script.viales++;
+            BotonesActivos_Script.bVial = true;
         }
     }
     public void StopAnimation()

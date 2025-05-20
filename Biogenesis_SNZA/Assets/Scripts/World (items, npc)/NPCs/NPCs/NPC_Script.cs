@@ -6,13 +6,18 @@ using UnityEngine.UI;
 public class NPC_Script : MonoBehaviour, IInteractable_Script
 {
     public NPCDialogue_Script dialogueData;
-    public GameObject dialoguePanel;
+    private DialogueController dialogueUI;
+    /*public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText;
-    public Image portraitImage;
+    public Image portraitImage;*/
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
 
+    private void Start()
+    {
+        dialogueUI = DialogueController.Instance;
+    }
     public bool CanInteract()
     {
         return !isDialogueActive;
@@ -35,23 +40,39 @@ public class NPC_Script : MonoBehaviour, IInteractable_Script
         isDialogueActive = true;
         dialogueIndex = 0;
 
-        nameText.SetText(dialogueData.npcName);
-        portraitImage.sprite = dialogueData.npcPortrait;
-
-        dialoguePanel.SetActive(true);
+        /*nameText.SetText(dialogueData.npcName);
+        portraitImage.sprite = dialogueData.npcPortrait;*/
+        dialogueUI.SetNPCInfo(dialogueData.npcName, dialogueData.npcPortrait);
+        dialogueUI.ShowDialogueUI(true);
+        //dialoguePanel.SetActive(true);
         PauseController_Script.SetPause(true);
 
-        StartCoroutine(TypeLine());
+        DisplayCurrentLine();
     }
     void NextLine()
     {
         if (isTyping)
         {
             StopAllCoroutines();
-            dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
+            //dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
+            dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
             isTyping = false;
         }
-        else if (++dialogueIndex < dialogueData.dialogueLines.Length)
+        dialogueUI.ClearChoices();
+        if(dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
+        {
+            EndDialogue();
+            return;
+        }
+        foreach(DialogueChoice_Script dialogueChoice in dialogueData.choices)
+        {
+            if(dialogueChoice.dialogueIndex == dialogueIndex)
+            {
+                DisplayChoices(dialogueChoice);
+                return;
+            }
+        }
+        if (++dialogueIndex < dialogueData.dialogueLines.Length)
         {
             //si hi ha una altra linia, escriula
             StartCoroutine(TypeLine());
@@ -64,11 +85,13 @@ public class NPC_Script : MonoBehaviour, IInteractable_Script
     IEnumerator TypeLine()
     {
         isTyping = true;
-        dialogueText.SetText("");
+        //dialogueText.SetText("");
+        dialogueUI.SetDialogueText("");
 
         foreach(char letter in dialogueData.dialogueLines[dialogueIndex])
         {
-            dialogueText.text += letter;
+            //dialogueText.text += letter;
+            dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
             yield return new WaitForSeconds(dialogueData.typingSpeed);
         }
 
@@ -80,13 +103,33 @@ public class NPC_Script : MonoBehaviour, IInteractable_Script
             NextLine();
         }
     }
-    
+    void DisplayChoices(DialogueChoice_Script choice)
+    {
+        for(int i = 0; i < choice.choices.Length; i++)
+        {
+            int nextIndex = choice.nextDialogueIndexes[i];
+            dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
+        }
+    }
+    void ChooseOption(int nextIndex)
+    {
+        dialogueIndex = nextIndex;
+        dialogueUI.ClearChoices();
+        DisplayCurrentLine();
+    }
+    void DisplayCurrentLine()
+    {
+        StopAllCoroutines();
+        StartCoroutine(TypeLine());
+    }
     void EndDialogue()
     {
         StopAllCoroutines();
         isDialogueActive = false;
-        dialogueText.SetText("");
-        dialoguePanel.SetActive(false);
+        dialogueUI.SetDialogueText("");
+        //dialogueText.SetText("");
+        dialogueUI.ShowDialogueUI(false);
+        //dialoguePanel.SetActive(false);
         PauseController_Script.SetPause(false);
     }
 }

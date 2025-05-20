@@ -7,15 +7,15 @@ public class PuertaCabra_Interact_Script : MonoBehaviour, IInteractable_Script
     public bool isInteracted { get; private set; } = false;
     public bool CanInteract()
     {
-        return EventsManager_Script.poderRumo; //---------------------------------------aqui hace falta poner GameControl_Script.poderRumo para que solo se pueda si poderRumo es true
+        return EventsManager_Script.poderRumo; //---------------------------------------aqui hace falta poner EventsManager_Script.poderRumo para que solo se pueda si poderRumo es true
     }
     public void Interact()
     {
         if (!CanInteract()) { return; }
         Liora_StateMachine_Script.isBreakingWall = true;
-        Invoke("AnimationBreakDoor", 1.8f); //aqui poner el tiempo que tarda la animación de la cabra en dar el golpe
-        Invoke("StopAnimation", 2.2f); //cambio del estado de la animación
-        Invoke("BreakDoor", 2.3f); //destruye el gameObject NO LO HAGAS CON UN TIEMPO MENOR QUE EL STOP ANIMATION O DESTRUIR EL GAMEOBJECT NO DEJARA QUE VUELVAS A IDLE
+        Invoke("AnimationBreakDoor", 0.7f); //aqui poner el tiempo que tarda la animación de la cabra en dar el golpe
+        Invoke("StopAnimation", 1f); //cambio del estado de la animación
+        Invoke("BreakDoor", 1.2f); //destruye el gameObject NO LO HAGAS CON UN TIEMPO MENOR QUE EL STOP ANIMATION O DESTRUIR EL GAMEOBJECT NO DEJARA QUE VUELVAS A IDLE
     }
     public void AnimationBreakDoor()
     {
@@ -34,7 +34,7 @@ public class PuertaCabra_Interact_Script : MonoBehaviour, IInteractable_Script
     public void SetUsed(bool used)
     {
         isInteracted = used;
-        //si hacemos animacion de accionada
+        //si hacemos animacion de rota
         /*
          if (isInteracted)
          {

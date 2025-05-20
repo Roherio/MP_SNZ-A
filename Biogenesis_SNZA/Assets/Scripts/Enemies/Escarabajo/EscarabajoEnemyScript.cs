@@ -1,28 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
+
 
 public class EscarabajoEnemyScript : MonoBehaviour
 {
+
+    [Header("--------------------Audio--------------------")]
+    private bool hasPlayedDeathSound = false;
+    JabaliAudioManager audioManager;
+
+    [Header("--------------------GameObjects--------------------")]
     public Animator animator;
     public Rigidbody2D rb;
     private Transform playerPosition;
 
-    [SerializeField] float moveSpeed;
+    [Header("--------------------Movement variables--------------------")]
+    [SerializeField] float moveSpeed, dashSpeed, detectionRange;
+
+    [Header("--------------------Attack variables--------------------")]
     private float attackTimer = 0f;
     public static float attackDurationTimer;
+
+
+
+
+
+
+
+
     [SerializeField] float attackDuration;
     [SerializeField] float attackCooldown;
     [SerializeField] float hitboxSpawnTimer = 0.9f;
     private Vector2 dashDirection;
-    [SerializeField] float dashSpeed;
-    [SerializeField] float detectionRange;
     [SerializeField] float attackRange;
+    public float soundDetectionCooldwon = 0f, soundCooldown = 10f;
     private bool canAttack = true;
     private bool isAttacking = false;
+   
     public Transform attackPoint;
     [SerializeField] GameObject attackCollision;
     
@@ -30,15 +47,26 @@ public class EscarabajoEnemyScript : MonoBehaviour
     public int destinationPoint;
     [SerializeField] float verticalViewHeight = 3;
 
-    public EnemyBehaviour Behaviour = EnemyBehaviour.STANDING;
+    hpEnemiesScript hpEnemiesScript;
 
-    void Start()
+    public EnemyBehaviour Behaviour = EnemyBehaviour.STANDING;
+    private void Awake()
     {
+        patrolPoint[0] = transform.parent.Find("PatrolPoint (0)");
+        patrolPoint[1] = transform.parent.Find("PatrolPoint (1)");
+        audioManager = GameObject.FindGameObjectWithTag("JabaliAudioManager").GetComponent<JabaliAudioManager>();
+        hpEnemiesScript = GetComponent<hpEnemiesScript>();
         playerPosition = GameObject.FindWithTag("Player").transform;
         attackDurationTimer = attackDuration; //valor únicament creat per després ser portat a un altre script
         canAttack = true;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+    }
+
+    void Start()
+    {
+        
+        
     }
     void Update()
     {
@@ -49,6 +77,14 @@ public class EscarabajoEnemyScript : MonoBehaviour
         {
             case EnemyBehaviour.STANDING:
 
+                if (hpEnemiesScript.isDead && !hasPlayedDeathSound)
+                {
+                    StopAllCoroutines();
+                    audioManager.JabaliSFX(audioManager.Death);
+                    hasPlayedDeathSound = true;
+                    print("SonidoMuerte");
+                    return;
+                }
                 if (isAttacking) return;
 
                 if (enemyToPlayerDistance < attackRange && canAttack && verticalDetection < verticalViewHeight) //Prepara l'atac quan el jugador està suficientment aprop i en el seu rang de visió
@@ -63,10 +99,18 @@ public class EscarabajoEnemyScript : MonoBehaviour
                     print("im chasing");
                     isChasing();
                 }
-                else { rb.velocity = Vector2.zero; } //Com l'estat es STANDING, es queda esperant a algun canvi
+                else { rb.velocity = Vector2.zero; animator.SetBool("isWalking", false); } //Com l'estat es STANDING, es queda esperant a algun canvi
                 break;
 
             case EnemyBehaviour.PATROL:
+                if (hpEnemiesScript.isDead && !hasPlayedDeathSound)
+                {
+                    StopAllCoroutines();
+                    audioManager.JabaliSFX(audioManager.Death);
+                    hasPlayedDeathSound = true;
+                    print("SonidoMuerte");
+                    return;
+                }
                 if (isAttacking) return;
                 if (enemyToPlayerDistance < attackRange && canAttack && verticalDetection < verticalViewHeight) //Prepara l'atac quan el jugador està suficientment aprop i en el seu rang de visió
                 {
@@ -96,6 +140,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
 
                     if (destinationPoint == 1)
                     {
+                        animator.SetBool("isWalking", true);
                         transform.localScale = new Vector3(-1, 1, 1);
                         transform.position = Vector2.MoveTowards(transform.position, patrolPoint[1].position, moveSpeed * Time.deltaTime);
                         if (Vector2.Distance(transform.position, patrolPoint[1].position) < 0.1)
@@ -115,6 +160,12 @@ public class EscarabajoEnemyScript : MonoBehaviour
     {
         //--------------------------------------ANIMACIO CAMINAR------------------------------------------
         animator.SetBool("isWalking", true);
+        if (soundDetectionCooldwon > 0)
+        {
+            soundDetectionCooldwon -= Time.deltaTime;
+        }
+        TryPlayAlertSound();
+
         Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
         direction.y = 0; //fem que la direcció en y sigui 0
         direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
@@ -142,10 +193,12 @@ public class EscarabajoEnemyScript : MonoBehaviour
         dashDirection = dashDirection.normalized;
         attackTimer = 0f;
         animator.SetBool("isAttacking", true);
-        yield return new WaitForSeconds(hitboxSpawnTimer);
+        audioManager.JabaliSFX(audioManager.Attack);
 
-        //------------------------- ANIMACIO ATAC AQUI!!!!!!!!!----------------------------------------------
+        yield return new WaitForSeconds(hitboxSpawnTimer);
         
+        //------------------------- ANIMACIO ATAC AQUI!!!!!!!!!----------------------------------------------
+
         //Fa el dash/atac cap a l'enemic
         attackHitbox();
 
@@ -190,6 +243,29 @@ public class EscarabajoEnemyScript : MonoBehaviour
         Gizmos.color = Color.cyan;
         Gizmos.DrawLine(leftEdge + Vector3.up * verticalViewHeight, rightEdge + Vector3.up * verticalViewHeight);
         Gizmos.DrawLine(leftEdge + Vector3.down * verticalViewHeight, rightEdge + Vector3.down * verticalViewHeight);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            knockbackScript kb = collision.GetComponent<knockbackScript>();
+            if (kb != null)
+            {
+                kb.ApplyKnockback(transform.position, 10);
+            }
+
+            //Treu vida
+            GameControl_Script.lifeLiora -= 5;
+        }
+    }
+    void TryPlayAlertSound()
+    {
+        if (soundDetectionCooldwon <= 0f)
+        {
+            audioManager.JabaliSFX(audioManager.playerDetected);
+            soundDetectionCooldwon = soundCooldown;
+        }
     }
 }
 

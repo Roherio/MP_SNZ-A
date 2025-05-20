@@ -15,11 +15,7 @@ MonoBehaviour:
   npcName: Wallace
   npcPortrait: {fileID: 21300000, guid: 1e640ee388642fd4683e7c243fb0bf18, type: 3}
   dialogueLines:
-  - Eh, que te estoy hablando
-  - Mirate... me sorprende que no te hayan devorado ahi fuera todavia. Se nota que
-    no eres de por aqui.
-  - Hay muy pocos motivos por los que alguien como tu se atreveria a entrar en esta
-    ciudad.
-  autoProgressLines: 000000
+  - Pasa a la trastienda, hay alguien que deberias conocer.
+  autoProgressLines: 00
   autoProgressDelay: 1.5
   typingSpeed: 0

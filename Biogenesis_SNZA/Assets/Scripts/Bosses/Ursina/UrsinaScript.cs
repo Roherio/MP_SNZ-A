@@ -9,6 +9,7 @@ public class UrsinaScript : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
     [SerializeField] float moveSpeed;
+    UrsinaAudioManager audioManager;
 
     private hpEnemiesScript hpEnemiesScript;
 
@@ -65,12 +66,14 @@ public class UrsinaScript : MonoBehaviour
 
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("BossMusic").GetComponent<UrsinaAudioManager>();
         hpEnemiesScript = GetComponent<hpEnemiesScript>();
         animator = GetComponent<Animator>();
         attackDurationTimer = clawAttackDuration; //valor únicament creat per després ser portat a un altre script
         playerPosition = GameObject.FindWithTag("Player").transform;
         canAttack = true;
         rb = GetComponent<Rigidbody2D>();
+        
     }
     void Update()
     {
@@ -78,7 +81,7 @@ public class UrsinaScript : MonoBehaviour
         float enemyToPlayerDistance = Vector2.Distance(transform.position, playerPosition.position); 
 
         //Controla que no fa cap altre acció mentre estigui atacant
-        if (isAttacking) return; 
+        if (isAttacking || hpEnemiesScript.isDead) return; 
 
         //Entra en segona fase
         if (hpEnemiesScript.enemyHP <= hpEnemiesScript.maxEnemyHP / 2) { OnPhase2 = true; }
@@ -299,6 +302,7 @@ public class UrsinaScript : MonoBehaviour
     {
         animator.SetBool("isWalking", false);
         animator.SetBool("isClawAttacking", true);
+        audioManager.UrsinaSFX(audioManager.clawAttack);
         //Temps de preparació de l'atac
         isAttacking = true;
         canAttack = false;
@@ -319,7 +323,7 @@ public class UrsinaScript : MonoBehaviour
         //S'acaba l'atac, aturat i posa't en cooldown
         rb.velocity = Vector2.zero;
 
-        yield return new WaitForSeconds(AttackCooldown);
+        yield return new WaitForSeconds(AttackCooldown + 1f);
 
         //Pot tornar a atacar
 
@@ -332,6 +336,8 @@ public class UrsinaScript : MonoBehaviour
     {
         animator.SetBool("isWalking", false);
         animator.SetBool("isClawAttacking", true);
+        audioManager.UrsinaSFX(audioManager.clawAttack);
+
         //Temps de preparació de l'atac
         isAttacking = true;
         canAttack = false;
@@ -353,7 +359,7 @@ public class UrsinaScript : MonoBehaviour
         //S'acaba l'atac, aturat i posa't en cooldown
         rb.velocity = Vector2.zero;
 
-        yield return new WaitForSeconds(AttackCooldown);
+        yield return new WaitForSeconds(AttackCooldown + .5f);
 
         //Pot tornar a atacar
         
@@ -366,6 +372,7 @@ public class UrsinaScript : MonoBehaviour
     {
         animator.SetBool("isWalking", false);
         animator.SetBool("isSmashing", true);
+        audioManager.UrsinaSFX(audioManager.growl);
         //Temps de preparació de l'atac
         isAttacking = true;
         canAttack = false;
@@ -378,16 +385,24 @@ public class UrsinaScript : MonoBehaviour
         if (!OnPhase2) 
         {
             CinemachineShake.Instance.ShakeCamera(20f, .2f);
-            Invoke("smashAttackInstance", .1f);
             
+            Invoke("smashAttackInstance", .1f);
+            audioManager.UrsinaSFX(audioManager.groundStep);
+            audioManager.UrsinaSFX(audioManager.iceBreaker);
+
         }
         if (OnPhase2)
         {
             smashAttackInstancePhase2();
+            audioManager.UrsinaSFX(audioManager.iceBreaker);
+            yield return new WaitForSeconds(1f);
+
+            smashAttackInstancePhase2();
+            audioManager.UrsinaSFX(audioManager.iceBreaker);
+
             yield return new WaitForSeconds(1f);
             smashAttackInstancePhase2();
-            yield return new WaitForSeconds(1f);
-            smashAttackInstancePhase2();
+            audioManager.UrsinaSFX(audioManager.iceBreaker);
         }
 
         yield return new WaitForSeconds(.9f);
@@ -412,6 +427,7 @@ public class UrsinaScript : MonoBehaviour
         
         CinemachineShake.Instance.ShakeCamera(10f, 1f);
         roarInstance();
+        audioManager.UrsinaSFX(audioManager.Roar);
         if (OnPhase2)
         {
             StartCoroutine(ceilingIceSpikeInstance());
@@ -422,7 +438,7 @@ public class UrsinaScript : MonoBehaviour
         
 
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
         animator.SetBool("isHowling", false);
 
         //Pot tornar a atacar
@@ -437,25 +453,32 @@ public class UrsinaScript : MonoBehaviour
     }
     IEnumerator clawIceSpikeInstance()
     {
+
         Instantiate(clawIceSpikeCollision, clawIceSpike_1_Spawn, worldPositionStays: false);
+        audioManager.UrsinaSFX(audioManager.iceBreaker);
         yield return new WaitForSeconds(0.1f);
         Instantiate(clawIceSpikeCollision, clawIceSpike_2_Spawn, worldPositionStays: false);
+        audioManager.UrsinaSFX(audioManager.iceBreaker);
         yield return new WaitForSeconds(0.1f);
         Instantiate(clawIceSpikeCollision, clawIceSpike_3_Spawn, worldPositionStays: false);
+        audioManager.UrsinaSFX(audioManager.iceBreaker);
     }
     IEnumerator ceilingIceSpikeInstance()
     {
         Instantiate(ceilingIceSpikeCollision, ceilingSpawn0, worldPositionStays: false);
         Instantiate(ceilingIceSpikeCollision, ceilingSpawn7, worldPositionStays: false);
+        audioManager.UrsinaSFX(audioManager.iceBreaker);
         yield return new WaitForSeconds(1f);
         Instantiate(ceilingIceSpikeCollision, ceilingSpawn1, worldPositionStays: false);
         Instantiate(ceilingIceSpikeCollision, ceilingSpawn6, worldPositionStays: false);
+        audioManager.UrsinaSFX(audioManager.iceBreaker);
         yield return new WaitForSeconds(1f);
         Instantiate(ceilingIceSpikeCollision, ceilingSpawn2, worldPositionStays: false);
         Instantiate(ceilingIceSpikeCollision, ceilingSpawn5, worldPositionStays: false);
         yield return new WaitForSeconds(1f);
         Instantiate(ceilingIceSpikeCollision, ceilingSpawn3, worldPositionStays: false);
         Instantiate(ceilingIceSpikeCollision, ceilingSpawn4, worldPositionStays: false);
+
     }
     public void smashAttackInstance()
     {

@@ -264,6 +264,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Liora-Dash_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c54f8cfd6d21c46b5d91f61487e607
+      internalID: 1538626774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -283,6 +304,7 @@ TextureImporter:
       Liora-Dash_5: -1368528611
       Liora-Dash_6: 1211305769
       Liora-Dash_7: -387098899
+      Liora-Dash_8: 1538626774
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638822925335875903
+  platformSettingsDirtyTick: 638832089821697871
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Entrada_fortaleza
+  - name: Entrada_fortaleza_Frame_0
     originalName: 
-    pivot: {x: -0.25984237, y: -0.4888889}
+    pivot: {x: -0.43137246, y: -0.15015975}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 254
-      height: 360
-    spriteID: f53fb4bada91d2d4d84ada4bcd0110ef
+      width: 153
+      height: 313
+    spriteID: c055dd56a4c6b864892536d41a35a62c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,6 +141,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Entrada_fortaleza_Frame_1
+    originalName: 
+    pivot: {x: -1.909091, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 165
+      y: 4
+      width: 110
+      height: 360
+    spriteID: 394f4545f4a5d4c46a6eb9aa229030c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 165, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,15 +170,24 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Entrada_fortaleza
+    - name: Entrada_fortaleza_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 882
-        y: 176
-        width: 254
+        x: 386
+        y: 47
+        width: 153
+        height: 313
+      spriteId: c055dd56a4c6b864892536d41a35a62c
+    - name: Entrada_fortaleza_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 530
+        y: 0
+        width: 110
         height: 360
-      spriteId: f53fb4bada91d2d4d84ada4bcd0110ef
+      spriteId: 394f4545f4a5d4c46a6eb9aa229030c0
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -198,19 +227,7 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
-  - name: Android
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 1632, y: 712}
+  canvasSize: {x: 640, y: 360}

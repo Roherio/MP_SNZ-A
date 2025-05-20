@@ -18,6 +18,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     public Liora_TakeItem_Script takeItemState;
     public Liora_BreakWall_Script breakWallState;
     public Liora_Hurt_Script hurtState;
+    public Liora_Death_Script deathState;
     //------------------states ataque
     //crab
     public Liora_CrabAttack1_Script crabAttackState1;
@@ -47,6 +48,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     public static bool isBreakingWall;
     public static bool isTakingItem;
     public static bool isKnockedBack;
+    public static bool isDying;
     //Attack Logic
     public static bool isAttacking;
     public static bool isParrying;
@@ -67,6 +69,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
         breakWallState.Setup(rb, animator, horizontal);
         takeItemState.Setup(rb, animator, horizontal);
         hurtState.Setup(rb, animator, horizontal);
+        deathState.Setup(rb, animator, horizontal);
         //enviament animator pels diferents estats d'atac
         crabAttackState1.Setup(rb, animator, horizontal);
         crabAttackState2.Setup(rb, animator, horizontal);
@@ -91,6 +94,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
         state.isBreakingWall = isBreakingWall;
         state.isTakingItem = isTakingItem;
         state.isKnockedBack = isKnockedBack;
+        state.isDying = isDying;
         //
         state.isAttacking = isAttacking;
         state.isParrying = isParrying;
@@ -113,17 +117,105 @@ public class Liora_StateMachine_Script : MonoBehaviour
     void SelectState()
     {
         if (Time.timeScale == 0f) { return; }
-        if (isKnockedBack)
+        if (isDying)
         {
-            state = hurtState;
+            state = deathState;
         }
         else
         {
-            if (isGrounded && Mathf.Abs(rb.velocity.y) < 0.01f)
+            if (isKnockedBack)
             {
-                if (isDashing)
+                state = hurtState;
+            }
+            else
+            {
+                if (isGrounded && Mathf.Abs(rb.velocity.y) < 0.01f)
                 {
-                    state = dashState;
+                    if (isDashing)
+                    {
+                        state = dashState;
+                    }
+                    else
+                    {
+                        if (isClimbing)
+                        {
+                            state = climbState;
+                        }
+                        else
+                        {
+                            if (isBreakingWall)
+                            {
+                                state = breakWallState;
+                            }
+                            else
+                            {
+                                if (isTakingItem)
+                                {
+                                    state = takeItemState;
+                                }
+                                else
+                                {
+                                    if (isAttacking || isParrying)
+                                    {
+                                        if (isAttacking)
+                                        {
+                                            switch (Liora_Attack_Script.currentAttackType)
+                                            {
+                                                case snzaAttackType.CANGREJO:
+                                                    switch (currentComboStep)
+                                                    {
+                                                        case 1:
+                                                            state = crabAttackState1;
+                                                            break;
+                                                        case 2:
+                                                            state = crabAttackState2;
+                                                            break;
+                                                        case 3:
+                                                            state = crabAttackState3;
+                                                            break;
+                                                    }
+                                                    break;
+                                                case snzaAttackType.JABALI:
+                                                    switch (currentComboStep)
+                                                    {
+                                                        case 1:
+                                                            state = boarAttackState1;
+                                                            break;
+                                                        case 2:
+                                                            state = boarAttackState2;
+                                                            break;
+                                                    }
+                                                    break;
+                                            }
+                                        }
+                                        if (isParrying)
+                                        {
+                                            switch (Liora_Attack_Script.currentParryType)
+                                            {
+                                                case snzaParryType.CANGREJO:
+                                                    state = crabParryState;
+                                                    break;
+                                                case snzaParryType.JABALI:
+                                                    state = boarParryState;
+                                                    break;
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (Mathf.Abs(horizontal) < Mathf.Epsilon)
+                                        {
+                                            state = idleState;
+                                        }
+                                        else
+                                        {
+                                            state = runState;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 else
                 {
@@ -133,95 +225,14 @@ public class Liora_StateMachine_Script : MonoBehaviour
                     }
                     else
                     {
-                        if (isBreakingWall)
+                        if (isGrabbingLedge == true)
                         {
-                            state = breakWallState;
+                            state = ledgeState;
                         }
                         else
                         {
-                            if (isTakingItem)
-                            {
-                                state = takeItemState;
-                            }
-                            else
-                            {
-                                if (isAttacking || isParrying)
-                                {
-                                    if (isAttacking)
-                                    {
-                                        switch (Liora_Attack_Script.currentAttackType)
-                                        {
-                                            case snzaAttackType.CANGREJO:
-                                                switch (currentComboStep)
-                                                {
-                                                    case 1:
-                                                        state = crabAttackState1;
-                                                        break;
-                                                    case 2:
-                                                        state = crabAttackState2;
-                                                        break;
-                                                    case 3:
-                                                        state = crabAttackState3;
-                                                        break;
-                                                }
-                                                break;
-                                            case snzaAttackType.JABALI:
-                                                switch (currentComboStep)
-                                                {
-                                                    case 1:
-                                                        state = boarAttackState1;
-                                                        break;
-                                                    case 2:
-                                                        state = boarAttackState2;
-                                                        break;
-                                                }
-                                                break;
-                                        }
-                                    }
-                                    if (isParrying)
-                                    {
-                                        switch (Liora_Attack_Script.currentParryType)
-                                        {
-                                            case snzaParryType.CANGREJO:
-                                                state = crabParryState;
-                                                break;
-                                            case snzaParryType.JABALI:
-                                                state = boarParryState;
-                                                break;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    if (Mathf.Abs(horizontal) < Mathf.Epsilon)
-                                    {
-                                        state = idleState;
-                                    }
-                                    else
-                                    {
-                                        state = runState;
-                                    }
-                                }
-                            }
+                            state = airState;
                         }
-                    }
-                }
-            }
-            else
-            {
-                if (isClimbing)
-                {
-                    state = climbState;
-                }
-                else
-                {
-                    if (isGrabbingLedge == true)
-                    {
-                        state = ledgeState;
-                    }
-                    else
-                    {
-                        state = airState;
                     }
                 }
             }

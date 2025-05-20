@@ -15,17 +15,20 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
     public NPCDialogue_Script dialogueData3;
     public NPCDialogue_Script dialogueData4;
     public NPCDialogue_Script dialogueData5;
-    
+
+    private DialogueController dialogueUI;
+
     public string currentDialogue = "dialogueData1";
-    public GameObject dialoguePanel;
-    public TMP_Text dialogueText, nameText;
-    public Image portraitImage;
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
 
     //variable que només serveix perquè Khione hagi de dir una vegada mínim el dialeg en el que t'explica quines peces necessita, ja que sinó podries arribar amb les dues peces a l'inventari i te les accepta
     private bool doOnceDialogue2 = false;
+    private void Start()
+    {
+        dialogueUI = DialogueController.Instance;
+    }
     void Update()
     {
         if (isDialogueActive)
@@ -36,11 +39,11 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
         {
             if (doOnceDialogue2 == true)
             {
-                if (EventsManager_Script.piezasKhione == 1)
+                if (EventsManager_Script.barraKhione || EventsManager_Script.muelleKhione)
                 {
                     currentDialogue = "dialogueData3";
                 }
-                if (EventsManager_Script.piezasKhione == 2)
+                if (EventsManager_Script.muelleKhione && EventsManager_Script.barraKhione)
                 {
                     currentDialogue = "dialogueData4";
                 }
@@ -48,7 +51,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
         }
         if (currentDialogue == "dialogueData3")
         {
-            if (EventsManager_Script.piezasKhione == 2)
+            if (EventsManager_Script.barraKhione && EventsManager_Script.muelleKhione)
             {
                 currentDialogue = "dialogueData4";
             }
@@ -78,10 +81,8 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             isDialogueActive = true;
             dialogueIndex = 0;
 
-            nameText.SetText(dialogueData5.npcName);
-            portraitImage.sprite = dialogueData5.npcPortrait;
-
-            dialoguePanel.SetActive(true);
+            dialogueUI.SetNPCInfo(dialogueData5.npcName, dialogueData5.npcPortrait);
+            dialogueUI.ShowDialogueUI(true);
 
             StartCoroutine(TypeLine());
         }
@@ -90,10 +91,8 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             isDialogueActive = true;
             dialogueIndex = 0;
 
-            nameText.SetText(dialogueData4.npcName);
-            portraitImage.sprite = dialogueData4.npcPortrait;
-
-            dialoguePanel.SetActive(true);
+            dialogueUI.SetNPCInfo(dialogueData4.npcName, dialogueData4.npcPortrait);
+            dialogueUI.ShowDialogueUI(true);
 
             StartCoroutine(TypeLine());
         }
@@ -102,10 +101,8 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             isDialogueActive = true;
             dialogueIndex = 0;
 
-            nameText.SetText(dialogueData3.npcName);
-            portraitImage.sprite = dialogueData3.npcPortrait;
-
-            dialoguePanel.SetActive(true);
+            dialogueUI.SetNPCInfo(dialogueData3.npcName, dialogueData3.npcPortrait);
+            dialogueUI.ShowDialogueUI(true);
 
             StartCoroutine(TypeLine());
         }
@@ -114,11 +111,8 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             isDialogueActive = true;
             dialogueIndex = 0;
 
-            nameText.SetText(dialogueData2.npcName);
-            portraitImage.sprite = dialogueData2.npcPortrait;
-
-            dialoguePanel.SetActive(true);
-
+            dialogueUI.SetNPCInfo(dialogueData2.npcName, dialogueData2.npcPortrait);
+            dialogueUI.ShowDialogueUI(true);
             StartCoroutine(TypeLine());
         }
         if (currentDialogue == "dialogueData1")
@@ -126,10 +120,8 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             isDialogueActive = true;
             dialogueIndex = 0;
 
-            nameText.SetText(dialogueData1.npcName);
-            portraitImage.sprite = dialogueData1.npcPortrait;
-
-            dialoguePanel.SetActive(true);
+            dialogueUI.SetNPCInfo(dialogueData1.npcName, dialogueData1.npcPortrait);
+            dialogueUI.ShowDialogueUI(true);
 
             StartCoroutine(TypeLine());
         }
@@ -141,7 +133,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             if (isTyping)
             {
                 StopAllCoroutines();
-                dialogueText.SetText(dialogueData5.dialogueLines[dialogueIndex]);
+                dialogueUI.SetDialogueText(dialogueData5.dialogueLines[dialogueIndex]);
                 isTyping = false;
             }
             else if (++dialogueIndex < dialogueData5.dialogueLines.Length)
@@ -159,7 +151,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             if (isTyping)
             {
                 StopAllCoroutines();
-                dialogueText.SetText(dialogueData4.dialogueLines[dialogueIndex]);
+                dialogueUI.SetDialogueText(dialogueData4.dialogueLines[dialogueIndex]);
                 isTyping = false;
             }
             else if (++dialogueIndex < dialogueData4.dialogueLines.Length)
@@ -170,8 +162,10 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             else
             {
                 EndDialogue();
-                //----------------ACONSEGUIM EL PODER DE ESCALAR ENREDADERAS
-                EventsManager_Script.poderKhione = true;
+                //------------------ACONSEGUIM EL PODER DE ESCALAR ENREDADERAS
+                EventsManager_Script.ActivarAnilloKhione();
+                EventsManager_Script.DesactivarObjKhione1();
+                EventsManager_Script.DesactivarObjKhione2();
                 currentDialogue = "dialogueData5";
             }
         }
@@ -180,7 +174,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             if (isTyping)
             {
                 StopAllCoroutines();
-                dialogueText.SetText(dialogueData3.dialogueLines[dialogueIndex]);
+                dialogueUI.SetDialogueText(dialogueData3.dialogueLines[dialogueIndex]);
                 isTyping = false;
             }
             else if (++dialogueIndex < dialogueData3.dialogueLines.Length)
@@ -198,7 +192,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             if (isTyping)
             {
                 StopAllCoroutines();
-                dialogueText.SetText(dialogueData2.dialogueLines[dialogueIndex]);
+                dialogueUI.SetDialogueText(dialogueData2.dialogueLines[dialogueIndex]);
                 isTyping = false;
             }
             else if (++dialogueIndex < dialogueData2.dialogueLines.Length)
@@ -217,7 +211,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
             if (isTyping)
             {
                 StopAllCoroutines();
-                dialogueText.SetText(dialogueData1.dialogueLines[dialogueIndex]);
+                dialogueUI.SetDialogueText(dialogueData1.dialogueLines[dialogueIndex]);
                 isTyping = false;
             }
             else if (++dialogueIndex < dialogueData1.dialogueLines.Length)
@@ -236,12 +230,12 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
     IEnumerator TypeLine()
     {
         isTyping = true;
-        dialogueText.SetText("");
+        dialogueUI.SetDialogueText("");
         if (currentDialogue == "dialogueData5")
         {
             foreach (char letter in dialogueData5.dialogueLines[dialogueIndex])
             {
-                dialogueText.text += letter;
+                dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
                 yield return new WaitForSeconds(dialogueData5.typingSpeed);
             }
 
@@ -257,7 +251,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
         {
             foreach (char letter in dialogueData4.dialogueLines[dialogueIndex])
             {
-                dialogueText.text += letter;
+                dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
                 yield return new WaitForSeconds(dialogueData4.typingSpeed);
             }
 
@@ -273,7 +267,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
         {
             foreach (char letter in dialogueData3.dialogueLines[dialogueIndex])
             {
-                dialogueText.text += letter;
+                dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
                 yield return new WaitForSeconds(dialogueData3.typingSpeed);
             }
 
@@ -289,7 +283,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
         {
             foreach (char letter in dialogueData2.dialogueLines[dialogueIndex])
             {
-                dialogueText.text += letter;
+                dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
                 yield return new WaitForSeconds(dialogueData2.typingSpeed);
             }
 
@@ -305,7 +299,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
         {
             foreach (char letter in dialogueData1.dialogueLines[dialogueIndex])
             {
-                dialogueText.text += letter;
+                dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
                 yield return new WaitForSeconds(dialogueData1.typingSpeed);
             }
 
@@ -323,8 +317,8 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
     {
         StopAllCoroutines();
         isDialogueActive = false;
-        dialogueText.SetText("");
-        dialoguePanel.SetActive(false);
+        dialogueUI.SetDialogueText("");
+        dialogueUI.ShowDialogueUI(false);
         GameControl_Script.isPausedDialogue = false;
     }
 }

@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
+//using static UnityEditor.Searcher.SearcherWindow.Alignment;
 using UnityEngine.InputSystem;
 
 public class Liora_Attack_Script : MonoBehaviour
 {
     public Animator animator;
+    LioraAudioManager audioManager;
     //---------------------------------------ATAQUE LOGIC
     [SerializeField] public enum snzaAttackType { NONE, CANGREJO, ESCARABAJO, SECRETARIO, AGUILA, JABALI }
     [SerializeField] public static snzaAttackType currentAttackType = snzaAttackType.CANGREJO;
@@ -48,6 +49,7 @@ public class Liora_Attack_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("LioraAudioManager").GetComponent<LioraAudioManager>();
         animator = GetComponent<Animator>();
         currentAttackType = snzaAttackType.CANGREJO;
         currentParryType = snzaParryType.JABALI;
@@ -130,6 +132,8 @@ public class Liora_Attack_Script : MonoBehaviour
                         damageAttackLiora = 20f;
                         duracioCollider = 0.2f;
                         delayCollider = 0.1f;
+                        audioManager.LioraSFX(audioManager.voiceShortSlash);
+                        audioManager.LioraSFX(audioManager.shorSlash);
                         deactivateAction = 0.3f;
                         break;
                     case 2:
@@ -137,12 +141,16 @@ public class Liora_Attack_Script : MonoBehaviour
                         duracioCollider = 0.2f;
                         delayCollider = 0.1f;
                         deactivateAction = 0.7f;
+                        audioManager.LioraSFX(audioManager.voiceShortSlash);
+                        audioManager.LioraSFX(audioManager.shorSlash);
                         break;
                     case 3:
                         damageAttackLiora = 50f;
                         duracioCollider = 0.3f;
                         delayCollider = 0.2f;
                         deactivateAction = 0.8f;
+                        audioManager.LioraSFX(audioManager.voiceLongSlash);
+                        audioManager.LioraSFX(audioManager.longSLash);
                         break;
                 }
                 colliderAtaque = colliderAttackCrabLiora;
