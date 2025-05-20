@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c7c8af8b6ba42445aeb73fa9b40a97e
+guid: 40b7940243b0aa84eb61ef7fff441ca3
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638833401703668736
+  platformSettingsDirtyTick: 638833432414151078
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,58 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: barril_Frame_0
+  - name: Pared ladrillos 4x4_Frame_0
     originalName: 
-    pivot: {x: 0.484375, y: -0.13953489}
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 493
+      width: 854
+      height: 480
+    spriteID: 9bc0904d379cb9448b1566d1cd6aca4a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 493}
+  - name: Pared ladrillos 4x4_Frame_1
+    originalName: 
+    pivot: {x: 0.5023419, y: 0.0020833334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 981
+      width: 854
+      height: 480
+    spriteID: 64623865c5aafbb44aac483fb13bed12
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 981}
+  - name: Pared ladrillos 4x4_Frame_2
+    originalName: 
+    pivot: {x: 0.50116825, y: 0.002079002}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 43
-    spriteID: df448c984f467164d805ec9840652b04
+      width: 856
+      height: 481
+    spriteID: 8bd914924165d064fb159b2dcc2c740f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,18 +181,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: barril_Frame_1
+  - name: Pared ladrillos 4x4_Frame_3
     originalName: 
-    pivot: {x: 0.484375, y: -0.13953489}
+    pivot: {x: 1.6800001, y: -7.7027025}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 55
-      width: 32
-      height: 43
-    spriteID: 16313a91613534d4887f884654af2c55
+      x: 866
+      y: 591
+      width: 50
+      height: 37
+    spriteID: 98ff5762c478a864994854f03e0b6385
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,34 +200,139 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 55}
+    uvTransform: {x: 866, y: 591}
+  - name: Pared ladrillos 4x4_Frame_4
+    originalName: 
+    pivot: {x: -3.0000002, y: -4.3333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 866
+      y: 636
+      width: 50
+      height: 27
+    spriteID: a5c82f2147957924686dd0199803f938
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 866, y: 636}
+  - name: Pared ladrillos 4x4_Frame_5
+    originalName: 
+    pivot: {x: 3.9888887, y: -6.1555557}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 866
+      y: 493
+      width: 90
+      height: 45
+    spriteID: f7e69ad631f196a41a5fb95d4b495885
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 866, y: 493}
+  - name: Pared ladrillos 4x4_Frame_6
+    originalName: 
+    pivot: {x: 4.5925922, y: -4.216216}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 866
+      y: 546
+      width: 54
+      height: 37
+    spriteID: db79dc4692bf843498f953e06e036c62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 866, y: 546}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -87403706
-    name: barril
+    guid: -452236350
+    name: Pared ladrillos 4x4
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: barril_Frame_0
+    - name: Pared ladrillos 4x4_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 7
-        y: 6
-        width: 32
-        height: 43
-      spriteId: df448c984f467164d805ec9840652b04
-    - name: barril_Frame_1
+        x: 0
+        y: 0
+        width: 854
+        height: 480
+      spriteId: 9bc0904d379cb9448b1566d1cd6aca4a
+    - name: Pared ladrillos 4x4_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 7
-        y: 6
-        width: 32
-        height: 43
-      spriteId: 16313a91613534d4887f884654af2c55
+        x: -2
+        y: -1
+        width: 854
+        height: 480
+      spriteId: 64623865c5aafbb44aac483fb13bed12
+    - name: Pared ladrillos 4x4_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: -2
+        y: -1
+        width: 856
+        height: 481
+      spriteId: 8bd914924165d064fb159b2dcc2c740f
+    - name: Pared ladrillos 4x4_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 343
+        y: 285
+        width: 50
+        height: 37
+      spriteId: 98ff5762c478a864994854f03e0b6385
+    - name: Pared ladrillos 4x4_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 577
+        y: 117
+        width: 50
+        height: 27
+      spriteId: a5c82f2147957924686dd0199803f938
+    - name: Pared ladrillos 4x4_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 68
+        y: 277
+        width: 90
+        height: 45
+      spriteId: f7e69ad631f196a41a5fb95d4b495885
+    - name: Pared ladrillos 4x4_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 179
+        y: 156
+        width: 54
+        height: 37
+      spriteId: db79dc4692bf843498f953e06e036c62
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -230,4 +375,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 45, y: 57}
+  canvasSize: {x: 854, y: 480}
