@@ -62,15 +62,15 @@ public class MusicManager : MonoBehaviour
         while (time < fadeDuration)
         {
             float t = time / fadeDuration;
-            currentSource.volume = 1f - t;
-            nextSource.volume = t;
+            currentSource.volume = (1f - t) * AudioSettingsManager.Instance.musicVol;
+            nextSource.volume = t * AudioSettingsManager.Instance.musicVol;
             time += Time.deltaTime;
             yield return null;
         }
 
         currentSource.Stop();
-        currentSource.volume = 1f;
-        nextSource.volume = 1f;
+        currentSource.volume = 0f;
+        nextSource.volume = AudioSettingsManager.Instance.musicVol;
 
         // Swap references
         var temp = currentSource;
@@ -86,8 +86,8 @@ public class MusicManager : MonoBehaviour
         while (time < fadeDuration)
         {
             float t = time / fadeDuration;
-            audioSourceA.volume = Mathf.Lerp(startVolumeA, 0f, t);
-            audioSourceB.volume = Mathf.Lerp(startVolumeB, 0f, t);
+            audioSourceA.volume = Mathf.Lerp(startVolumeA, 0f, t) * AudioSettingsManager.Instance.musicVol;
+            audioSourceB.volume = Mathf.Lerp(startVolumeB, 0f, t) * AudioSettingsManager.Instance.musicVol;
             time += Time.deltaTime;
             yield return null;
         }

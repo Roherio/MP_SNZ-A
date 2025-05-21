@@ -52,7 +52,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     //Attack Logic
     public static bool isAttacking;
     public static bool isParrying;
-    public static bool isDoingUlti;
+    //public static bool isDoingUlti;
 
     // Start is called before the first frame update
     void Start()
@@ -98,7 +98,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
         //
         state.isAttacking = isAttacking;
         state.isParrying = isParrying;
-        state.isDoingUlti = isDoingUlti;
+        //state.isDoingUlti = isDoingUlti;
         //amb aquest If evitem que el jugador pugui canviar de sprite si esta fent dash
         if (!isFacingRight && horizontal > 0f)
         {
@@ -241,7 +241,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     }
     private void FlipSprite()
     {
-        if (isTakingItem || isBreakingWall || isGrabbingLedge || isClimbing || Time.timeScale == 0f || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
+        if (isTakingItem || isBreakingWall || isGrabbingLedge || isClimbing || Time.timeScale == 0f || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying) { return; }
         isFacingRight = !isFacingRight;
         Vector2 localScale = transform.localScale;
         localScale.x *= -1f;

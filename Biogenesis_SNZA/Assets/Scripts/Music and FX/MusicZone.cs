@@ -1,8 +1,5 @@
 using UnityEngine;
 
-
-using UnityEngine;
-
 public class MusicZone : MonoBehaviour
 {
     public AudioClip zoneMusic;
@@ -25,7 +22,7 @@ public class MusicZone : MonoBehaviour
         if (isPlayerInside)
         {
             isPlayerInside = false;
-            MusicManager.Instance.StopMusic(); // We'll define this next
+            MusicManager.Instance.StopMusic();
         }
     }
 }
