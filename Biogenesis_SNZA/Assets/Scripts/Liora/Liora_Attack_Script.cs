@@ -95,7 +95,7 @@ public class Liora_Attack_Script : MonoBehaviour
     {
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
         if (GameControl_Script.isPaused) { return; }
-        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isParrying) { return; }
+        if (Liora_Movement_Script.jumping || Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isParrying) { return; }
         if (context.started)
         {
             inputBuffer.Enqueue(InputType.ATTACK);
@@ -222,7 +222,7 @@ public class Liora_Attack_Script : MonoBehaviour
     {
         if (GameControl_Script.isPaused) { return; }
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
-        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isParrying) { return; }
+        if (Liora_Movement_Script.jumping || Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isParrying) { return; }
         if (parryCooldown > 0f) { return; }
         if (context.started)
         {

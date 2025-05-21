@@ -17,7 +17,7 @@ public class Liora_Movement_Script : MonoBehaviour
 
     //Jump Logic
     public float horizontal { get; private set; }
-    public bool jumping;
+    public static bool jumping;
     [SerializeField] float groundSpeed = 10f;
     [SerializeField] float jumpPower = 24f;
 
@@ -77,6 +77,15 @@ public class Liora_Movement_Script : MonoBehaviour
         Liora_StateMachine_Script.isClimbing = isClimbing;
         CheckForLedge();
         stopMovementAfterDash -= Time.deltaTime;
+        //principalment perque no pugui atacar mentre esta a l'aire
+        if (!CheckGround())
+        {
+            jumping = true;
+        }
+        else
+        {
+            jumping = false;
+        }
     }
     private void FixedUpdate()
     {
@@ -133,7 +142,6 @@ public class Liora_Movement_Script : MonoBehaviour
                 rb.gravityScale = 6f;
                 rb.velocity = new Vector2(rb.velocity.x * horizontal, jumpPower);
                 audioManager.LioraSFX(audioManager.dash);
-                jumping = true;
             }
             
         }
@@ -251,7 +259,6 @@ public class Liora_Movement_Script : MonoBehaviour
         if(ledge != null && canGrabLedge)
         {
             isGrabbingLedge = true;
-            jumping = false;
             //parar el moviment
             rb.velocity = Vector2.zero;
             rb.gravityScale = 0f;
