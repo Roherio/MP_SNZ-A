@@ -13,6 +13,41 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
     private void Start()
     {
         itemID ??= HelperItems_Script.GenerateUniqueID(gameObject);
+        //----------------logica per destruir els game objects en el moment de carregar partida SI JA ES DETECTA QUE S'HAN RECOLECTAT EN ARXIUS GUARDATS
+        if (itemUser == "Khione")
+        {
+            if (itemName == "barraKhione")
+            {
+                if (EventsManager_Script.barraObtenida)
+                {
+                    Destroy(gameObject);
+                }
+            }
+            else if (itemName == "muelleKhione")
+            {
+                if (EventsManager_Script.muelleObtenido)
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
+        if (itemUser == "Rumo")
+        {
+            if (itemName == "taponesRumo")
+            {
+                if (EventsManager_Script.taponesObtenidos)
+                {
+                    Destroy(gameObject);
+                }
+            }
+            else if (itemName == "mantaRumo")
+            {
+                if (EventsManager_Script.mantaObtenida)
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
     }
     public bool CanInteract()
     {
@@ -29,7 +64,6 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
     public void TakeItem()
     {
         SetTaken(true);
-        print("takenItem!!!!!!!!!!");
         if (itemUser == "Khione")
         {
             if (itemName == "barraKhione")

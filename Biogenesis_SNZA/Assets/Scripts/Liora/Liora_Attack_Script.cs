@@ -20,7 +20,7 @@ public class Liora_Attack_Script : MonoBehaviour
     private bool canReceiveNextComboInput = true;
     
     private float comboTimer = 0f;
-    private float comboMaxTime = 1f;
+    private float comboMaxTime = 0.7f;
     public bool isComboActive = false;
     //BUFFER DEL INPUT DE ATAQUE
     private enum InputType { ATTACK, PARRY}

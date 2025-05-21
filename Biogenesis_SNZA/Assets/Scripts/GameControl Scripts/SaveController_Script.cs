@@ -29,10 +29,17 @@ public class SaveController_Script : MonoBehaviour
             cuero = GameControl_Script.cuero,
             viales = GameControl_Script.viales,
 
+            //si tienes este item en el inventario
             barraKhione = EventsManager_Script.barraKhione,
             muelleKhione = EventsManager_Script.muelleKhione,
             taponesRumo = EventsManager_Script.taponesRumo,
             mantaRumo = EventsManager_Script.mantaRumo,
+            
+            //guardar si has obtenido el item alguna vez
+            barraObtenida = EventsManager_Script.barraObtenida,
+            muelleObtenido = EventsManager_Script.muelleObtenido,
+            taponesObtenidos = EventsManager_Script .taponesObtenidos,
+            mantaObtenida = EventsManager_Script.mantaObtenida,
             //GUARDAR DATO DE SI TIENES PODER KHIONE Y RUMO
             poderKhione = EventsManager_Script.poderKhione,
             poderRumo = EventsManager_Script.poderRumo,
@@ -59,6 +66,11 @@ public class SaveController_Script : MonoBehaviour
             EventsManager_Script.muelleKhione = saveData.muelleKhione;
             EventsManager_Script.taponesRumo = saveData.taponesRumo;
             EventsManager_Script.mantaRumo = saveData.mantaRumo;
+
+            EventsManager_Script.barraObtenida = saveData.barraObtenida;
+            EventsManager_Script.muelleObtenido = saveData.muelleObtenido;
+            EventsManager_Script.taponesObtenidos = saveData.taponesObtenidos;
+            EventsManager_Script.mantaObtenida = saveData.mantaObtenida;
             //Cargar Poderes
             EventsManager_Script.poderKhione = saveData.poderKhione;
             EventsManager_Script.poderRumo = saveData.poderRumo;

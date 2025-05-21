@@ -11,6 +11,7 @@ public class EventsManager_Script : MonoBehaviour
     public static bool muelleKhione = false;
     public static bool taponesRumo = false;
     public static bool mantaRumo = false;
+    public static bool barraObtenida = false, muelleObtenido = false, taponesObtenidos = false, mantaObtenida = false;
     //logica Poderes
     public static bool poderKhione = false;
     public static bool poderRumo = false;
@@ -49,21 +50,26 @@ public class EventsManager_Script : MonoBehaviour
     {
         barraKhione = true;
         BotonesActivos_Script.bObjKhione1 = true;
+        barraObtenida = true;
+        //creo que aqui has de meter una variable que sea OBTENIDO POR PRIMERA VEZ (y pasarla al save data) para más adelante cargar partida y sepa que ya lo ha obtenido una vez
     }
     public static void ActivarObjKhione2()
     {
         muelleKhione = true;
         BotonesActivos_Script.bObjKhione2 = true;
+        muelleObtenido = true;
     }
     public static void ActivarObjRumo1()
     {
         taponesRumo = true;
         BotonesActivos_Script.bObjRumo1 = true;
+        taponesObtenidos = true;
     }
     public static void ActivarObjRumo2()
     {
         mantaRumo = true;
         BotonesActivos_Script.bObjRumo2 = true;
+        mantaObtenida = true;
     }
     public static void DesactivarObjKhione1()
     {

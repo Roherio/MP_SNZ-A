@@ -24,6 +24,9 @@ public class SaveData_Script
     public bool muelleKhione;
     public bool taponesRumo;
     public bool mantaRumo;
+
+    public bool barraObtenida, muelleObtenido, taponesObtenidos, mantaObtenida;
+
     public bool poderKhione;
     public bool poderRumo;
 
