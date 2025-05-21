@@ -17,7 +17,7 @@ public class SewerSpawn : MonoBehaviour
     {
         Instantiate(DROP,transform);
         audio.Play();
-        yield return new WaitForSeconds(Random.Range(4f,7f));
+        yield return new WaitForSeconds(Random.Range(2f,6f));
         StartCoroutine(DropSpawn());
     }
 }

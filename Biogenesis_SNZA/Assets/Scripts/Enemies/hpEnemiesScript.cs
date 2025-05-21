@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class hpEnemiesScript : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class hpEnemiesScript : MonoBehaviour
     public float enemyHP;
     public float deathAnimationDuration; //caldra determinar aixo a l'inspector depenent de cada prefab i la seva duracio de l'animació
     public Animator animator;
-    private SpriteRenderer spriteRenderer;
+
+    SpriteRenderer spriteRenderer;
     private Color originalColor;
+    
     public bool isDead = false;
 
     ParentEnemy ParentEnemyScript;
@@ -23,6 +26,8 @@ public class hpEnemiesScript : MonoBehaviour
         enemyHP = maxEnemyHP;
         // Obtener el SpriteRenderer al iniciar
         spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
+
         animator = GetComponent<Animator>();
         if (spriteRenderer != null)
         {
@@ -34,8 +39,9 @@ public class hpEnemiesScript : MonoBehaviour
         if (collision.CompareTag("LioraAttack"))
         {
             enemyHP = enemyHP - Liora_Attack_Script.damageAttackLiora;
-            StartCoroutine(FlashWhite());
-            
+            //StartCoroutine(FlashWhite());
+            spriteRenderer.color = Color.red;
+            Invoke("ResetMaterial", 0.2f);
             print("has hecho dañito");
             if (enemyHP <= 0f)
             {
@@ -59,6 +65,7 @@ public class hpEnemiesScript : MonoBehaviour
                 if (nameEnemy == "Ursina")
                 {
                     bossMusic.bossDefeated = true;
+                    Invoke("CargarFinalJuego", deathAnimationDuration);
                 }
                 Invoke("DestruirGameObject", deathAnimationDuration);
             }
@@ -68,6 +75,14 @@ public class hpEnemiesScript : MonoBehaviour
     private void DestruirGameObject()
     {
         Destroy(gameObject);
+    }
+    void ResetMaterial()
+    {
+        spriteRenderer.color = originalColor;
+    }
+    void CargarFinalJuego()
+    {
+        SceneManager.LoadScene("TransicioFinal");
     }
     private IEnumerator FlashWhite()
     {

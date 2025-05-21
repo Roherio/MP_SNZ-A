@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public string gameSceneName = "GameScene"; // Replace with your actual scene name
-
+    public void StartIntro()
+    {
+        SceneManager.LoadScene("TransicioInici");
+    }
     public void PlayGame()
     {
         string saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
@@ -25,7 +28,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Loading Game...");
         // For example:
         // SaveController_Script.LoadGame(); (if you expose it statically or trigger through another object)
-        SceneManager.LoadScene("levelDesign 2");
+        SceneManager.LoadScene("levelDesign 3");
     }
 
     public void OpenSettings()
@@ -42,6 +45,11 @@ public class MainMenu : MonoBehaviour
         // SceneManager.LoadScene("Credits");
     }
 
+    public void BackToMainMenu()
+    {
+        Debug.Log("Going to MainMenu");
+        SceneManager.LoadScene("MainMenu");
+    }
     public void ExitGame()
     {
         Debug.Log("Exiting...");
