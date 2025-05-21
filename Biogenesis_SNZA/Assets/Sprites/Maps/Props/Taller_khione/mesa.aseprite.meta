@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3380b72112c6f5b409fc961ddcb7c7e7
+guid: 9a9468cb41d2a9044b513a328a4dba67
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 16
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638833402075446847
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Repisas
+  - name: mesa
     originalName: 
-    pivot: {x: 0.50641024, y: -0.5625}
+    pivot: {x: 0.5, y: -0.11111111}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 78
-      height: 16
-    spriteID: 7fab923fe5a3c38458dd394e5f8131a6
+      width: 128
+      height: 36
+    spriteID: b071a6ec14cd14843ab3050154f1ad76
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,21 +144,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 942913155
-    name: Repisas
+    guid: 212383040
+    name: mesa
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Repisas
+    - name: mesa
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 9
-        y: 9
-        width: 78
-        height: 16
-      spriteId: 7fab923fe5a3c38458dd394e5f8131a6
+        x: 5
+        y: 4
+        width: 128
+        height: 36
+      spriteId: b071a6ec14cd14843ab3050154f1ad76
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -174,31 +174,7 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 97, y: 30}
+  canvasSize: {x: 138, y: 45}

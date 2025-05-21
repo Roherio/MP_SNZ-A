@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3380b72112c6f5b409fc961ddcb7c7e7
+guid: 9aeb5c942f355324db00cb00bd57d3d6
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 16
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638833402075446847
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Repisas
+  - name: herramientas_Frame_0
     originalName: 
-    pivot: {x: 0.50641024, y: -0.5625}
+    pivot: {x: 0.5, y: -0.0625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 78
+      width: 17
       height: 16
-    spriteID: 7fab923fe5a3c38458dd394e5f8131a6
+    spriteID: 8fa4757c9b520684780d9aa769c51169
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,24 +141,169 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: herramientas_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.13333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 54
+      width: 15
+      height: 15
+    spriteID: 9d8660ff59e2c3c4ab1a013695c2c956
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 54}
+  - name: herramientas_Frame_2
+    originalName: 
+    pivot: {x: 0.45833334, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 29
+      y: 4
+      width: 12
+      height: 12
+    spriteID: 276ffeec2167eed4db8f98dde540efe7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 29, y: 4}
+  - name: herramientas_Frame_3
+    originalName: 
+    pivot: {x: 0.56666666, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 28
+      width: 15
+      height: 18
+    spriteID: ec445cad077b9b849933732bf4091e38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 28}
+  - name: herramientas_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.15384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 77
+      width: 13
+      height: 13
+    spriteID: 89edac140b9178249990ce3e291af105
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 77}
+  - name: herramientas_Frame_5
+    originalName: 
+    pivot: {x: 0.53571427, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 98
+      width: 14
+      height: 12
+    spriteID: 8a2ee2d8cef3c0e47a136828e2b222e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 98}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 942913155
-    name: Repisas
+    guid: -476721835
+    name: herramientas
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Repisas
+    - name: herramientas_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 9
-        y: 9
-        width: 78
+        x: 0
+        y: 1
+        width: 17
         height: 16
-      spriteId: 7fab923fe5a3c38458dd394e5f8131a6
+      spriteId: 8fa4757c9b520684780d9aa769c51169
+    - name: herramientas_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 1
+        y: 2
+        width: 15
+        height: 15
+      spriteId: 9d8660ff59e2c3c4ab1a013695c2c956
+    - name: herramientas_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 3
+        y: 3
+        width: 12
+        height: 12
+      spriteId: 276ffeec2167eed4db8f98dde540efe7
+    - name: herramientas_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 15
+        height: 18
+      spriteId: ec445cad077b9b849933732bf4091e38
+    - name: herramientas_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 2
+        y: 2
+        width: 13
+        height: 13
+      spriteId: 89edac140b9178249990ce3e291af105
+    - name: herramientas_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 1
+        y: 3
+        width: 14
+        height: 12
+      spriteId: 8a2ee2d8cef3c0e47a136828e2b222e2
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -174,31 +319,7 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 97, y: 30}
+  canvasSize: {x: 17, y: 18}

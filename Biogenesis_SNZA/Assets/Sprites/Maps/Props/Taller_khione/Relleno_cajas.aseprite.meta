@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 673e04e8358b5cc43b7cb0808cac2fa7
+guid: 8e73f1de769f56b439b763b5eab3c66a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 16
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638833401774113701
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,338 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: cajas_Frame_0
+  - name: Relleno_cajas_Frame_0
     originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 119
-      y: 32
-      width: 34
-      height: 16
-    spriteID: 925639e3f5256a04e89f23c706accb4b
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 119, y: 32}
-  - name: cajas_Frame_1
-    originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 161
-      y: 32
-      width: 34
-      height: 16
-    spriteID: af8180a9ceb3e534a8f65338e2e9f2cb
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 161, y: 32}
-  - name: cajas_Frame_2
-    originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 203
-      y: 32
-      width: 34
-      height: 16
-    spriteID: 78c8f5597220aef4ca88e9a16064d8cc
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 203, y: 32}
-  - name: cajas_Frame_3
-    originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 57
-      width: 34
-      height: 16
-    spriteID: 784574f7171b5a94c9f64ed3cbd0a5d9
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 57}
-  - name: cajas_Frame_4
-    originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 46
-      y: 57
-      width: 34
-      height: 16
-    spriteID: d5f6941583a72a646afaf405c4d4ae6f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 46, y: 57}
-  - name: cajas_Frame_5
-    originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 219
-      y: 4
-      width: 25
-      height: 11
-    spriteID: 43889488bba47594a93b538928d45e58
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 219, y: 4}
-  - name: cajas_Frame_6
-    originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 81
-      width: 21
-      height: 11
-    spriteID: 3f51da897b24e64419421e6b00ea524e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 81}
-  - name: cajas_Frame_7
-    originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 88
-      y: 57
-      width: 25
-      height: 11
-    spriteID: 5c0465bd85fb38348b83a0550487785b
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 88, y: 57}
-  - name: cajas_Frame_8
-    originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 33
-      y: 81
-      width: 21
-      height: 11
-    spriteID: 226da08d1e82a0449beabd4143a4fee3
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 33, y: 81}
-  - name: cajas_Frame_9
-    originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 121
-      y: 57
-      width: 25
-      height: 11
-    spriteID: 928ffcc24c67f5c44a2c94ac0b900a1d
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 121, y: 57}
-  - name: cajas_Frame_10
-    originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 62
-      y: 81
-      width: 21
-      height: 11
-    spriteID: 13882446db6422141805f56462d337f6
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 62, y: 81}
-  - name: cajas_Frame_11
-    originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 154
-      y: 57
-      width: 25
-      height: 11
-    spriteID: a5ef38fed65af604b81877a797cc41cf
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 154, y: 57}
-  - name: cajas_Frame_12
-    originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 91
-      y: 81
-      width: 21
-      height: 11
-    spriteID: 317c0f75dacbea941a6cdef1e59e0fd6
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 91, y: 81}
-  - name: cajas_Frame_13
-    originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 187
-      y: 57
-      width: 25
-      height: 11
-    spriteID: 0e5061f3d1056214893f79a4a513b129
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 187, y: 57}
-  - name: cajas_Frame_14
-    originalName: 
-    pivot: {x: 0.4848485, y: -0.15}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 78
-      y: 4
-      width: 33
-      height: 20
-    spriteID: 951551035f5c67f409a6258c495b7307
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 78, y: 4}
-  - name: cajas_Frame_15
-    originalName: 
-    pivot: {x: 0.4848485, y: -0.15}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 119
-      y: 4
-      width: 33
-      height: 20
-    spriteID: 8b5eeef34197a1c459b191c3bf3c5a3d
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 119, y: 4}
-  - name: cajas_Frame_16
-    originalName: 
-    pivot: {x: 0.4516129, y: -0.044444446}
+    pivot: {x: 0.47619048, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 31
-      height: 45
-    spriteID: be69949197e631540a8804c38beaed21
+      width: 21
+      height: 5
+    spriteID: 2dedb268434b7ed4b845feb47164f2e7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -461,18 +141,178 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: cajas_Frame_17
+  - name: Relleno_cajas_Frame_1
     originalName: 
-    pivot: {x: 0.5185185, y: -0.044444446}
+    pivot: {x: 0.47619048, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
+      x: 4
+      y: 17
+      width: 21
+      height: 5
+    spriteID: 8204c58f74d34834b8b455aff3fe609f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 17}
+  - name: Relleno_cajas_Frame_2
+    originalName: 
+    pivot: {x: 0.47619048, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 30
+      width: 21
+      height: 5
+    spriteID: 672649e14d454bf4aaf7e90e4731b1a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 30}
+  - name: Relleno_cajas_Frame_3
+    originalName: 
+    pivot: {x: 0.47619048, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 43
+      width: 21
+      height: 5
+    spriteID: 0f233b3b901f8b140bb28841cd782f59
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 43}
+  - name: Relleno_cajas_Frame_4
+    originalName: 
+    pivot: {x: 0.47619048, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 56
+      width: 21
+      height: 5
+    spriteID: 6a80c5ef17733604295134b7472c9d50
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 56}
+  - name: Relleno_cajas_Frame_5
+    originalName: 
+    pivot: {x: 0.47619048, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 69
+      width: 21
+      height: 5
+    spriteID: 591574ca1ee757443b2342388be83730
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 69}
+  - name: Relleno_cajas_Frame_6
+    originalName: 
+    pivot: {x: 0.47619048, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 82
+      width: 21
+      height: 5
+    spriteID: 425c2166acf66324d829908ce98c2814
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 82}
+  - name: Relleno_cajas_Frame_7
+    originalName: 
+    pivot: {x: 0.47619048, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 95
+      width: 21
+      height: 5
+    spriteID: 459b106ff6b08c34f9b8b2bc57327547
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 95}
+  - name: Relleno_cajas_Frame_8
+    originalName: 
+    pivot: {x: 0.47619048, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 108
+      width: 21
+      height: 5
+    spriteID: 1ff58d609dd8f1b469df94ec20e271ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 108}
+  - name: Relleno_cajas_Frame_9
+    originalName: 
+    pivot: {x: 0.5555555, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 33
       y: 4
-      width: 27
-      height: 45
-    spriteID: 23a8a7ccc6bb3b94f9e6db74f114eec1
+      width: 18
+      height: 5
+    spriteID: 5ac8899fc9ea32c4f8c0a8f50e31d16d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -480,19 +320,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 4}
-  - name: cajas_Frame_18
+    uvTransform: {x: 33, y: 4}
+  - name: Relleno_cajas_Frame_10
     originalName: 
-    pivot: {x: 0.5185185, y: -0.16666666}
+    pivot: {x: 0.5555555, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 78
-      y: 32
-      width: 27
-      height: 12
-    spriteID: 085eef0fa332a4847a810b48d157013e
+      x: 33
+      y: 17
+      width: 18
+      height: 5
+    spriteID: d6c746091f3c2364d9b0a81dca6dbeb1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -500,19 +340,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 78, y: 32}
-  - name: cajas_Frame_19
+    uvTransform: {x: 33, y: 17}
+  - name: Relleno_cajas_Frame_11
     originalName: 
-    pivot: {x: 0.50980395, y: -0.16666666}
+    pivot: {x: 0.5882353, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 160
-      y: 4
-      width: 51
-      height: 12
-    spriteID: beaa141df029894428c5e0c3e1752f3a
+      x: 33
+      y: 69
+      width: 17
+      height: 5
+    spriteID: 22f2728334684ac4aac75e31ed2e46a9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -520,19 +360,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 160, y: 4}
-  - name: cajas_Frame_20
+    uvTransform: {x: 33, y: 69}
+  - name: Relleno_cajas_Frame_12
     originalName: 
-    pivot: {x: 0.55, y: -0.16666666}
+    pivot: {x: 0.5882353, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 220
-      y: 57
-      width: 20
-      height: 12
-    spriteID: 69a22a2e269bb5542a771f5193aad72d
+      x: 33
+      y: 82
+      width: 17
+      height: 5
+    spriteID: a1cf148170c11804d828829d168feaff
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -540,205 +380,278 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 220, y: 57}
+    uvTransform: {x: 33, y: 82}
+  - name: Relleno_cajas_Frame_13
+    originalName: 
+    pivot: {x: 0.5555555, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 33
+      y: 30
+      width: 18
+      height: 5
+    spriteID: ad7f4a107f348384c80207ad3ae1b4a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 33, y: 30}
+  - name: Relleno_cajas_Frame_14
+    originalName: 
+    pivot: {x: 0.5882353, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 33
+      y: 95
+      width: 17
+      height: 5
+    spriteID: bc17f8f2cfdb0414f8b2a33c9b93a4c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 33, y: 95}
+  - name: Relleno_cajas_Frame_15
+    originalName: 
+    pivot: {x: 0.5555555, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 33
+      y: 43
+      width: 18
+      height: 5
+    spriteID: 4891b6f2a20ffbf41b80ef8e56895fe8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 33, y: 43}
+  - name: Relleno_cajas_Frame_16
+    originalName: 
+    pivot: {x: 0.5882353, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 33
+      y: 108
+      width: 17
+      height: 5
+    spriteID: 5b716346417ab8a42a175b943bc1dfd4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 33, y: 108}
+  - name: Relleno_cajas_Frame_17
+    originalName: 
+    pivot: {x: 0.6111111, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 33
+      y: 56
+      width: 18
+      height: 5
+    spriteID: 208c2fc22ebc7de42ad30c6f7fc4b745
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 33, y: 56}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1809872808
-    name: cajas
+    guid: 926048108
+    name: Relleno_cajas
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: cajas_Frame_0
+    - name: Relleno_cajas_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 10
-        y: 5
-        width: 34
-        height: 16
-      spriteId: 925639e3f5256a04e89f23c706accb4b
-    - name: cajas_Frame_1
+        x: 1
+        y: 0
+        width: 21
+        height: 5
+      spriteId: 2dedb268434b7ed4b845feb47164f2e7
+    - name: Relleno_cajas_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 10
-        y: 5
-        width: 34
-        height: 16
-      spriteId: af8180a9ceb3e534a8f65338e2e9f2cb
-    - name: cajas_Frame_2
+        x: 1
+        y: 0
+        width: 21
+        height: 5
+      spriteId: 8204c58f74d34834b8b455aff3fe609f
+    - name: Relleno_cajas_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 10
-        y: 5
-        width: 34
-        height: 16
-      spriteId: 78c8f5597220aef4ca88e9a16064d8cc
-    - name: cajas_Frame_3
+        x: 1
+        y: 0
+        width: 21
+        height: 5
+      spriteId: 672649e14d454bf4aaf7e90e4731b1a9
+    - name: Relleno_cajas_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 10
-        y: 5
-        width: 34
-        height: 16
-      spriteId: 784574f7171b5a94c9f64ed3cbd0a5d9
-    - name: cajas_Frame_4
+        x: 1
+        y: 0
+        width: 21
+        height: 5
+      spriteId: 0f233b3b901f8b140bb28841cd782f59
+    - name: Relleno_cajas_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 10
-        y: 5
-        width: 34
-        height: 16
-      spriteId: d5f6941583a72a646afaf405c4d4ae6f
-    - name: cajas_Frame_5
+        x: 1
+        y: 0
+        width: 21
+        height: 5
+      spriteId: 6a80c5ef17733604295134b7472c9d50
+    - name: Relleno_cajas_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 14
-        y: 7
-        width: 25
-        height: 11
-      spriteId: 43889488bba47594a93b538928d45e58
-    - name: cajas_Frame_6
+        x: 1
+        y: 0
+        width: 21
+        height: 5
+      spriteId: 591574ca1ee757443b2342388be83730
+    - name: Relleno_cajas_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 14
-        y: 7
+        x: 1
+        y: 0
         width: 21
-        height: 11
-      spriteId: 3f51da897b24e64419421e6b00ea524e
-    - name: cajas_Frame_7
+        height: 5
+      spriteId: 425c2166acf66324d829908ce98c2814
+    - name: Relleno_cajas_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 14
-        y: 7
-        width: 25
-        height: 11
-      spriteId: 5c0465bd85fb38348b83a0550487785b
-    - name: cajas_Frame_8
+        x: 1
+        y: 0
+        width: 21
+        height: 5
+      spriteId: 459b106ff6b08c34f9b8b2bc57327547
+    - name: Relleno_cajas_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
-        x: 14
-        y: 7
+        x: 1
+        y: 0
         width: 21
-        height: 11
-      spriteId: 226da08d1e82a0449beabd4143a4fee3
-    - name: cajas_Frame_9
+        height: 5
+      spriteId: 1ff58d609dd8f1b469df94ec20e271ee
+    - name: Relleno_cajas_Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
-        x: 14
-        y: 7
-        width: 25
-        height: 11
-      spriteId: 928ffcc24c67f5c44a2c94ac0b900a1d
-    - name: cajas_Frame_10
+        x: 1
+        y: 0
+        width: 18
+        height: 5
+      spriteId: 5ac8899fc9ea32c4f8c0a8f50e31d16d
+    - name: Relleno_cajas_Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
-        x: 14
-        y: 7
-        width: 21
-        height: 11
-      spriteId: 13882446db6422141805f56462d337f6
-    - name: cajas_Frame_11
+        x: 1
+        y: 0
+        width: 18
+        height: 5
+      spriteId: d6c746091f3c2364d9b0a81dca6dbeb1
+    - name: Relleno_cajas_Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
-        x: 14
-        y: 7
-        width: 25
-        height: 11
-      spriteId: a5ef38fed65af604b81877a797cc41cf
-    - name: cajas_Frame_12
+        x: 1
+        y: 0
+        width: 17
+        height: 5
+      spriteId: 22f2728334684ac4aac75e31ed2e46a9
+    - name: Relleno_cajas_Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
-        x: 14
-        y: 7
-        width: 21
-        height: 11
-      spriteId: 317c0f75dacbea941a6cdef1e59e0fd6
-    - name: cajas_Frame_13
+        x: 1
+        y: 0
+        width: 17
+        height: 5
+      spriteId: a1cf148170c11804d828829d168feaff
+    - name: Relleno_cajas_Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
-        x: 14
-        y: 7
-        width: 25
-        height: 11
-      spriteId: 0e5061f3d1056214893f79a4a513b129
-    - name: cajas_Frame_14
+        x: 1
+        y: 0
+        width: 18
+        height: 5
+      spriteId: ad7f4a107f348384c80207ad3ae1b4a6
+    - name: Relleno_cajas_Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
-        x: 11
-        y: 3
-        width: 33
-        height: 20
-      spriteId: 951551035f5c67f409a6258c495b7307
-    - name: cajas_Frame_15
+        x: 1
+        y: 0
+        width: 17
+        height: 5
+      spriteId: bc17f8f2cfdb0414f8b2a33c9b93a4c9
+    - name: Relleno_cajas_Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
-        x: 11
-        y: 3
-        width: 33
-        height: 20
-      spriteId: 8b5eeef34197a1c459b191c3bf3c5a3d
-    - name: cajas_Frame_16
+        x: 1
+        y: 0
+        width: 18
+        height: 5
+      spriteId: 4891b6f2a20ffbf41b80ef8e56895fe8
+    - name: Relleno_cajas_Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
-        x: 13
-        y: 2
-        width: 31
-        height: 45
-      spriteId: be69949197e631540a8804c38beaed21
-    - name: cajas_Frame_17
+        x: 1
+        y: 0
+        width: 17
+        height: 5
+      spriteId: 5b716346417ab8a42a175b943bc1dfd4
+    - name: Relleno_cajas_Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
-        x: 13
-        y: 2
-        width: 27
-        height: 45
-      spriteId: 23a8a7ccc6bb3b94f9e6db74f114eec1
-    - name: cajas_Frame_18
-      frameIndex: 18
-      additiveSortOrder: 0
-      cellRect:
-        x: 13
-        y: 2
-        width: 27
-        height: 12
-      spriteId: 085eef0fa332a4847a810b48d157013e
-    - name: cajas_Frame_19
-      frameIndex: 19
-      additiveSortOrder: 0
-      cellRect:
-        x: 1
-        y: 2
-        width: 51
-        height: 12
-      spriteId: beaa141df029894428c5e0c3e1752f3a
-    - name: cajas_Frame_20
-      frameIndex: 20
-      additiveSortOrder: 0
-      cellRect:
-        x: 16
-        y: 2
-        width: 20
-        height: 12
-      spriteId: 69a22a2e269bb5542a771f5193aad72d
+        x: 0
+        y: 0
+        width: 18
+        height: 5
+      spriteId: 208c2fc22ebc7de42ad30c6f7fc4b745
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -754,31 +667,7 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 54, y: 53}
+  canvasSize: {x: 22, y: 5}
