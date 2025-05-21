@@ -21,6 +21,7 @@ public class BossMusicController : MonoBehaviour
 
     void Update()
     {
+        audioSource.volume = AudioSettingsManager.Instance.musicVol;
         // Start loop after intro ends
         if (hasStarted && !audioSource.isPlaying && !hasStartedLoop && !bossDefeated)
         {
