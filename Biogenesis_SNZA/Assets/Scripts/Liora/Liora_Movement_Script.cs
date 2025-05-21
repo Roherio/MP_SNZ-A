@@ -89,7 +89,7 @@ public class Liora_Movement_Script : MonoBehaviour
             return;
         }
         //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge o si està executant una ordre d'atac
-        if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti /*|| stopMovementAfterDash > 0*/)
+        if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying /*|| stopMovementAfterDash > 0*/)
         {
             horizontal = 0f;
         }
@@ -121,7 +121,7 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
         //evitar que salti durant un dash o durant un atac/parry/ulti
-        if (isClimbing || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
+        if (isClimbing || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying) { return; }
         if (context.performed)
         {
             if (CheckGround() || isClimbing)
@@ -147,7 +147,7 @@ public class Liora_Movement_Script : MonoBehaviour
     {
 
         if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
-        if (!canDash || !canDashLadder || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_Attack_Script.isDoingUlti) { return; }
+        if (!canDash || !canDashLadder || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying) { return; }
         if (context.started && CheckGround() == true && canDash == true)
         {
             StartCoroutine(Dash());

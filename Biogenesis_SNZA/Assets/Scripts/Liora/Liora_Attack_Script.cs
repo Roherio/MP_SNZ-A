@@ -18,12 +18,23 @@ public class Liora_Attack_Script : MonoBehaviour
     public static int currentComboStep = 0;
     private int maxComboSteps;
     private bool canReceiveNextComboInput = true;
-    //private bool bufferedNextComboInput = false; //variable que permet pulsar el següent atac encara que no haguem acabat el que s'esta fent
+    
     private float comboTimer = 0f;
     private float comboMaxTime = 1f;
     public bool isComboActive = false;
+    //BUFFER DEL INPUT DE ATAQUE
+    private enum InputType { ATTACK, PARRY}
+    private Queue<InputType> inputBuffer = new Queue<InputType>();
+    private float inputBufferTime = 0.2f;
+    private float currentBufferTimer;
     //posició on s'instanciaran els attacks Liora
     public Transform attackLocation;
+    //---------------------------------------VARIABLES PER CADA ATAC
+    public static float damageAttackLiora; //variable que determinarà quin mal fa Liora amb aquell attack
+    //public float deactivateAction; //variable per saber quan acaba l'estat isAttacking/isParrying/isDoingUlti per cada moviment
+    public float duracioCollider; //determina quant temps està el collider de l'atac instanciat
+    public float delayCollider; //determina quin delay té per instanciar-se
+
     //collider general
     private GameObject colliderAtaque;
     public GameObject colliderParry;
@@ -36,30 +47,31 @@ public class Liora_Attack_Script : MonoBehaviour
     public static bool isParrying = false;
     private float parryCooldown = 2f;
     //---------------------------------------ULTI LOGIC
-    public enum snzaUltiType { NONE, MANTIS }
+    /*public enum snzaUltiType { NONE, MANTIS }
     [SerializeField] public snzaUltiType currentUltiType;
-    public static bool isDoingUlti = false;
-
-    //---------------------------------------VARIABLES PER CADA ATAC
-    public static float damageAttackLiora; //variable que determinarà quin mal fa Liora amb aquell attack
-    public float deactivateAction; //variable per saber quan acaba l'estat isAttacking/isParrying/isDoingUlti per cada moviment
-    public float duracioCollider; //determina quant temps està el collider de l'atac instanciat
-    public float delayCollider; //determina quin delay té per instanciar-se
-
-    // Start is called before the first frame update
+    public static bool isDoingUlti = false;*/
     void Start()
     {
         audioManager = GameObject.FindGameObjectWithTag("LioraAudioManager").GetComponent<LioraAudioManager>();
         animator = GetComponent<Animator>();
         currentAttackType = snzaAttackType.CANGREJO;
         currentParryType = snzaParryType.JABALI;
-        currentUltiType = snzaUltiType.NONE;
+        //currentUltiType = snzaUltiType.NONE;
     }
-    // Update is called once per frame
     void Update()
     {
         inputCooldownTimer += Time.deltaTime;
         parryCooldown -= Time.deltaTime;
+        //input buffer
+        if (inputBuffer.Count > 0)
+        {
+            currentBufferTimer -= Time.deltaTime;
+            if(currentBufferTimer <= 0)
+            {
+                inputBuffer.Clear();
+            }
+        }
+
         if (isComboActive)
         {
             comboTimer += Time.deltaTime;
@@ -68,39 +80,28 @@ public class Liora_Attack_Script : MonoBehaviour
                 ResetCombo();
             }
         }
-        //comprovació de quin estat hem de passar a la StateMachine (prioritzem ulti, despres parry i després attack, per ressetejar les variables
-        /*
-        if (isDoingUlti)
+
+        if (!isParrying && inputBuffer.Count > 0)
         {
-            isAttacking = false;
-            isParrying = false;
+            ProcessBufferedInput();
         }
-        else
-        {
-            if (isParrying)
-            {
-                isAttacking = false;
-                isDoingUlti = false;
-            }
-            else if (isAttacking)
-            {
-                isParrying = false;
-                isDoingUlti = false;
-            }
-        }
-        */
         //pas de variables a la stateMachine
         Liora_StateMachine_Script.isAttacking = isAttacking;
         Liora_StateMachine_Script.isParrying = isParrying;
-        Liora_StateMachine_Script.isDoingUlti = isDoingUlti;
+        //Liora_StateMachine_Script.isDoingUlti = isDoingUlti;
     }
     //--------------------------------------------ATAQUE
     public void Ataque(InputAction.CallbackContext context)
     {
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
         if (GameControl_Script.isPaused) { return; }
-        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isParrying || isDoingUlti) { return; }
+        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isParrying) { return; }
         if (context.started)
+        {
+            inputBuffer.Enqueue(InputType.ATTACK);
+            currentBufferTimer = inputBufferTime;
+        }
+        /*if (context.started)
         {
             isParrying = false;
             if (!isComboActive)
@@ -117,6 +118,33 @@ public class Liora_Attack_Script : MonoBehaviour
                 canReceiveNextComboInput = false;
                 HandleAttackStep(currentComboStep);
             }
+        }*/
+    }
+    private void ProcessBufferedInput()
+    {
+        if (inputBuffer.Count == 0) { return; }
+        InputType input = inputBuffer.Peek();
+        switch (input)
+        {
+            case InputType.ATTACK:
+                if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isParrying) { return; }
+                if (!isComboActive)
+                {
+                    currentComboStep = 1;
+                    isComboActive = true;
+                    comboTimer = 0f;
+                    HandleAttackStep(currentComboStep);
+                }
+                else if (canReceiveNextComboInput && comboTimer <= comboMaxTime && currentComboStep < 3)
+                {
+                    currentComboStep++;
+                    comboTimer = 0f;
+                    canReceiveNextComboInput = false;
+                    HandleAttackStep(currentComboStep);
+                }
+
+                inputBuffer.Dequeue();
+                break;
         }
     }
     private void HandleAttackStep(int step)
@@ -134,13 +162,11 @@ public class Liora_Attack_Script : MonoBehaviour
                         delayCollider = 0.1f;
                         audioManager.LioraSFX(audioManager.voiceShortSlash);
                         audioManager.LioraSFX(audioManager.shorSlash);
-                        deactivateAction = 0.3f;
                         break;
                     case 2:
                         damageAttackLiora = 30f;
                         duracioCollider = 0.2f;
                         delayCollider = 0.1f;
-                        deactivateAction = 0.7f;
                         audioManager.LioraSFX(audioManager.voiceShortSlash);
                         audioManager.LioraSFX(audioManager.shorSlash);
                         break;
@@ -148,7 +174,6 @@ public class Liora_Attack_Script : MonoBehaviour
                         damageAttackLiora = 50f;
                         duracioCollider = 0.3f;
                         delayCollider = 0.2f;
-                        deactivateAction = 0.8f;
                         audioManager.LioraSFX(audioManager.voiceLongSlash);
                         audioManager.LioraSFX(audioManager.longSLash);
                         break;
@@ -166,13 +191,11 @@ public class Liora_Attack_Script : MonoBehaviour
                         damageAttackLiora = 40f;
                         duracioCollider = 0.2f;
                         delayCollider = 0.1f;
-                        deactivateAction = 0.6f;
                         break;
                     case 2:
                         damageAttackLiora = 70f;
                         duracioCollider = 0.2f;
                         delayCollider = 0.3f;
-                        deactivateAction = 0.9f;
                         break;
                 }
                 colliderAtaque = colliderAttackBoarLiora;
@@ -181,7 +204,8 @@ public class Liora_Attack_Script : MonoBehaviour
         }
         isAttacking = true;
         inputCooldownTimer = 0f;
-        StartCoroutine(DeactivateAction());
+        //Invoke("DeactivateAction", deactivateAction);
+        //StartCoroutine(DeactivateAction());
     }
     void CallInstanciarAtaque()
     {
@@ -198,7 +222,7 @@ public class Liora_Attack_Script : MonoBehaviour
     {
         if (GameControl_Script.isPaused) { return; }
         //no entrarem a fer l'atac si el cooldownTimer segueix sent mes petit que el cooldown de l'atac
-        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isParrying || isDoingUlti) { return; }
+        if (Liora_Movement_Script.isGrabbingLedge || inputAttackCooldown > inputCooldownTimer || isAttacking || isParrying) { return; }
         if (parryCooldown > 0f) { return; }
         if (context.started)
         {
@@ -207,19 +231,18 @@ public class Liora_Attack_Script : MonoBehaviour
                 case snzaParryType.CANGREJO:
                     //aqui determinem el temps que trigarà despres en acabarse l'animació de parry, i també ressetejem el cooldownTimer perquè no pugui spammejar el parry
                     duracioCollider = 0.4f;
-                    deactivateAction = 1f;
                     break;
 
                 case snzaParryType.JABALI:
                     duracioCollider = 0.4f;
-                    deactivateAction = 0.5f;
                     break;
             }
             InstanciarParry(colliderParry);
             inputCooldownTimer = 0f;
             isParrying = true;
             parryCooldown = 1.5f;
-            StartCoroutine(DeactivateAction());
+            //Invoke("DeactivateAction", deactivateAction);
+            //StartCoroutine(DeactivateAction());
         }
     }
     void InstanciarParry(GameObject collider)
@@ -227,11 +250,21 @@ public class Liora_Attack_Script : MonoBehaviour
         Instantiate(collider, attackLocation);
         ParryCollider_Script.duracioCollider = duracioCollider;
     }
-    private IEnumerator DeactivateAction()
+    public void OnActionAnimationEnd()
     {
-        yield return new WaitForSeconds(deactivateAction);
+        if (!isComboActive || currentComboStep >= maxComboSteps)
+        {
+            ResetCombo();
+        }
+        isAttacking = false;
         isParrying = false;
-        isDoingUlti = false;
+        canReceiveNextComboInput = true;
+    }
+    /*private void DeactivateAction()
+    {
+        isAttacking = false;
+        isParrying = false;
+        //isDoingUlti = false;
         canReceiveNextComboInput = true;
         //si aquest era el ultim hit del combo
         if (!isComboActive || currentComboStep >= maxComboSteps)
@@ -239,13 +272,27 @@ public class Liora_Attack_Script : MonoBehaviour
             //isAttacking = false;
             ResetCombo();
         }
-    }
+    }*/
+    /*private IEnumerator DeactivateAction()
+    {
+        yield return new WaitForSeconds(deactivateAction);
+        isAttacking = false;
+        isParrying = false;
+        //isDoingUlti = false;
+        canReceiveNextComboInput = true;
+        //si aquest era el ultim hit del combo
+        if (!isComboActive || currentComboStep >= maxComboSteps)
+        {
+            //isAttacking = false;
+            ResetCombo();
+        }
+    }*/
     private void ResetCombo()
     {
         comboTimer = 0f;
         currentComboStep = 0;
         isComboActive = false;
         canReceiveNextComboInput = true;
-        isAttacking = false;
+        //isAttacking = false;
     }
 }
