@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: cajas_barriles_Frame_0
     originalName: 
-    pivot: {x: 0.49999997, y: -0.032258064}
+    pivot: {x: 0.51111114, y: -0.03448276}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 52
-      y: 128
-      width: 49
-      height: 31
+      x: 49
+      y: 124
+      width: 45
+      height: 29
     spriteID: 66dc4ed5ef7e9384db6dc95619db7c6c
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 52, y: 128}
+    uvTransform: {x: 49, y: 124}
   - name: cajas_barriles_Frame_1
     originalName: 
-    pivot: {x: 0.49999997, y: -0.018518519}
+    pivot: {x: 0.51111114, y: -0.03448276}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 52
-      y: 4
-      width: 49
-      height: 54
+      x: 49
+      y: 161
+      width: 45
+      height: 29
     spriteID: cd4f166b79c2f254695e6a1a4d4b8f35
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 52, y: 4}
+    uvTransform: {x: 49, y: 161}
   - name: cajas_barriles_Frame_2
     originalName: 
-    pivot: {x: 0.48749998, y: -0.033333335}
+    pivot: {x: 0.51111114, y: -0.019230768}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 52
-      y: 206
-      width: 40
-      height: 30
+      x: 49
+      y: 4
+      width: 45
+      height: 52
     spriteID: 9881e08c42e9241428adfd412d541610
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 52, y: 206}
+    uvTransform: {x: 49, y: 4}
   - name: cajas_barriles_Frame_3
     originalName: 
-    pivot: {x: 0.48749998, y: -0.012987013}
+    pivot: {x: 0.51111114, y: -0.019230768}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 40
-      height: 77
+      x: 49
+      y: 64
+      width: 45
+      height: 52
     spriteID: ce49ad7bd9851094c9327f751d5cfc72
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 49, y: 64}
   - name: cajas_barriles_Frame_4
     originalName: 
-    pivot: {x: 0.49999997, y: -0.032258064}
+    pivot: {x: 0.48648646, y: -0.035714284}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 52
-      y: 167
-      width: 49
-      height: 31
+      x: 49
+      y: 198
+      width: 37
+      height: 28
     spriteID: 84aa1c208d71cde479be2cd7d629bf18
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 52, y: 167}
+    uvTransform: {x: 49, y: 198}
   - name: cajas_barriles_Frame_5
     originalName: 
-    pivot: {x: 0.49999997, y: -0.018518519}
+    pivot: {x: 0.48648646, y: -0.035714284}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 52
-      y: 66
-      width: 49
-      height: 54
+      x: 4
+      y: 170
+      width: 37
+      height: 28
     spriteID: 5ca882918d6ef1f4b88ee33148634061
     spriteBone: []
     spriteOutline: []
@@ -240,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 52, y: 66}
+    uvTransform: {x: 4, y: 170}
   - name: cajas_barriles_Frame_6
     originalName: 
-    pivot: {x: 0.4625, y: -0.033333335}
+    pivot: {x: 0.48648646, y: -0.013333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 174
-      width: 40
-      height: 30
+      y: 4
+      width: 37
+      height: 75
     spriteID: c46b7cb60a49e124b9b6251941215644
     spriteBone: []
     spriteOutline: []
@@ -260,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 174}
+    uvTransform: {x: 4, y: 4}
   - name: cajas_barriles_Frame_7
     originalName: 
-    pivot: {x: 0.4625, y: -0.012987013}
+    pivot: {x: 0.48648646, y: -0.013333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 89
-      width: 40
-      height: 77
+      y: 87
+      width: 37
+      height: 75
     spriteID: cb65fcc340740f5428e0a28f974cf0c8
     spriteBone: []
     spriteOutline: []
@@ -280,7 +280,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 89}
+    uvTransform: {x: 4, y: 87}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -294,73 +294,73 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 2
+        x: 0
         y: 1
-        width: 49
-        height: 31
+        width: 45
+        height: 29
       spriteId: 66dc4ed5ef7e9384db6dc95619db7c6c
     - name: cajas_barriles_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 2
+        x: 0
         y: 1
-        width: 49
-        height: 54
+        width: 45
+        height: 29
       spriteId: cd4f166b79c2f254695e6a1a4d4b8f35
     - name: cajas_barriles_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 7
+        x: 0
         y: 1
-        width: 40
-        height: 30
+        width: 45
+        height: 52
       spriteId: 9881e08c42e9241428adfd412d541610
     - name: cajas_barriles_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 7
+        x: 0
         y: 1
-        width: 40
-        height: 77
+        width: 45
+        height: 52
       spriteId: ce49ad7bd9851094c9327f751d5cfc72
     - name: cajas_barriles_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 2
+        x: 5
         y: 1
-        width: 49
-        height: 31
+        width: 37
+        height: 28
       spriteId: 84aa1c208d71cde479be2cd7d629bf18
     - name: cajas_barriles_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 2
+        x: 5
         y: 1
-        width: 49
-        height: 54
+        width: 37
+        height: 28
       spriteId: 5ca882918d6ef1f4b88ee33148634061
     - name: cajas_barriles_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 8
+        x: 5
         y: 1
-        width: 40
-        height: 30
+        width: 37
+        height: 75
       spriteId: c46b7cb60a49e124b9b6251941215644
     - name: cajas_barriles_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 8
+        x: 5
         y: 1
-        width: 40
-        height: 77
+        width: 37
+        height: 75
       spriteId: cb65fcc340740f5428e0a28f974cf0c8
     linkedCells: []
     parentIndex: -1
@@ -404,4 +404,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 53, y: 79}
+  canvasSize: {x: 46, y: 76}
