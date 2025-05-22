@@ -1432,6 +1432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuCanvas: {fileID: 2020300235538367650}
   pausePanel: {fileID: 7477044837829987888}
+  controlesPanel: {fileID: 7686487916148489749}
   playerInput: {fileID: 3995114310653781816, guid: 2e8459a0ebc2f464b9e7c48ae895449e, type: 3}
   pestanyasImages:
   - {fileID: 1477356632341931648}
@@ -4863,7 +4864,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8212211026029104335}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4717919714959715831}
+        m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
+        m_MethodName: ToggleAjustes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4854307570369177013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5966,7 +5979,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8194941006308278240}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4717919714959715831}
+        m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
+        m_MethodName: ToggleAjustes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6341039491972330744
 GameObject:
   m_ObjectHideFlags: 0
@@ -7072,7 +7097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8451371836689087750
 RectTransform:
   m_ObjectHideFlags: 0
