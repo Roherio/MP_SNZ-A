@@ -33,5 +33,6 @@ public class SaveData_Script
     //eventosPersonajes
     public bool habladoKhione1vez;
     public bool habladoWallace1vez;
+    public bool habladoDioltas1vez;
     //SNZAs també
 }

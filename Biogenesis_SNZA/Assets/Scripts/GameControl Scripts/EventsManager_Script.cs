@@ -17,6 +17,7 @@ public class EventsManager_Script : MonoBehaviour
     public static bool poderRumo = false;
 
     //eventosDialogo
+    public static bool habladoDioltas1vez = false;
     public static bool habladoGander1vez = false;
     public static bool habladoKhione1vez = false;
     public static bool habladoWallace1vez = false;

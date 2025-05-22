@@ -13,7 +13,6 @@ public class portalsScript : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player") || portalObjects.Contains(collision.gameObject)) return;
@@ -29,7 +28,7 @@ public class portalsScript : MonoBehaviour
             levelTransitioning = true;
             fade.FadeOut(() =>
             {
-                Invoke("Teleport", 1f);
+                Invoke("Teleport", 0);
                 fade.FadeIn(() =>
                 {
                     levelTransitioning = false;

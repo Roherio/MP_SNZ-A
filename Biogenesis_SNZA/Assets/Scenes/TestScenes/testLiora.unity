@@ -344,6 +344,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3253819445067687359, guid: f0ae669077cd7044d81b529937178e18, type: 3}
       propertyPath: itemName
+      value: vial
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253819445067687359, guid: f0ae669077cd7044d81b529937178e18, type: 3}
+      propertyPath: itemUIName
       value: Vial
       objectReference: {fileID: 0}
     - target: {fileID: 4083553045387447172, guid: f0ae669077cd7044d81b529937178e18, type: 3}
@@ -1391,6 +1395,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3253819445067687359, guid: f0ae669077cd7044d81b529937178e18, type: 3}
       propertyPath: itemName
+      value: cuero
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253819445067687359, guid: f0ae669077cd7044d81b529937178e18, type: 3}
+      propertyPath: itemUIName
       value: Cuero
       objectReference: {fileID: 0}
     - target: {fileID: 4083553045387447172, guid: f0ae669077cd7044d81b529937178e18, type: 3}
@@ -8342,6 +8350,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3253819445067687359, guid: f0ae669077cd7044d81b529937178e18, type: 3}
       propertyPath: itemName
+      value: cristalizador
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253819445067687359, guid: f0ae669077cd7044d81b529937178e18, type: 3}
+      propertyPath: itemUIName
       value: Cristalizador
       objectReference: {fileID: 0}
     - target: {fileID: 4083553045387447172, guid: f0ae669077cd7044d81b529937178e18, type: 3}
