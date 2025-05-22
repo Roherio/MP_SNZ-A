@@ -9,6 +9,8 @@ public class Menu_Script : MonoBehaviour
 {
     public GameObject menuCanvas;
     public GameObject pausePanel;
+    public GameObject ajustesPanel;
+
     public PlayerInput playerInput;
     ////////logica pestanyas
     public Image[] pestanyasImages;
@@ -56,6 +58,11 @@ public class Menu_Script : MonoBehaviour
         pausePanel.SetActive(!pausePanel.activeSelf);
         PauseController_Script.SetPause(pausePanel.activeSelf);
     }
+    public void ToggleAjustes()
+    {
+        ajustesPanel.SetActive(!ajustesPanel.activeSelf);
+    }
+
     public void ActivarPestanya(int tabNumber)
     {
         for (int i = 0; i < paginas.Length; i++)
