@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7318cb11f40fa44bccbe30dbcc194e, type: 3}
   m_Name: AbraxasGander
   m_EditorClassIdentifier: 
-  npcName: Wallace
+  npcName: Abraxas
   npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
   dialogueLines:
   - Ya te has topado con Gander?
