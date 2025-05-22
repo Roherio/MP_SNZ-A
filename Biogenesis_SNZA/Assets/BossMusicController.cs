@@ -14,7 +14,7 @@ public class BossMusicController : MonoBehaviour
     private bool hasPlayedEnd = false;
     public bool bossDefeated = false;
 
-    private void Awake()
+    private void Start()
     {
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
     }
@@ -52,6 +52,7 @@ public class BossMusicController : MonoBehaviour
         audioSource.clip = introClip;
         audioSource.loop = false;
         audioSource.Play();
+        print("introBoss");
     }
 
     public void TriggerBossDefeat()

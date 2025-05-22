@@ -392,8 +392,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameEnemy: Ursina
-  maxEnemyHP: 500
-  enemyHP: 500
+  maxEnemyHP: 1000
+  enemyHP: 1000
   deathAnimationDuration: 0
   animator: {fileID: 0}
   isDead: 0
@@ -659,6 +659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 6965369381309550978}
   clawAttack: {fileID: 0}
+  growl: {fileID: 0}
   Roar: {fileID: 0}
   groundStep: {fileID: 0}
   iceBreaker: {fileID: 0}

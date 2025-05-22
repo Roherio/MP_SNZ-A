@@ -294,9 +294,10 @@ public class UrsinaScript : MonoBehaviour
         }
         rb.velocity = Vector3.zero;
         animator.SetBool("isWalking", false);
-        yield return new WaitForSeconds(chaseTime + 0.5f);
+        yield return new WaitForSeconds(chaseTime);
         isAttacking = false;
         canAttack = true;
+        StopAllCoroutines();
     }
     IEnumerator clawAttack()
     {
@@ -323,7 +324,7 @@ public class UrsinaScript : MonoBehaviour
         //S'acaba l'atac, aturat i posa't en cooldown
         rb.velocity = Vector2.zero;
 
-        yield return new WaitForSeconds(AttackCooldown + 1f);
+        yield return new WaitForSeconds(AttackCooldown);
 
         //Pot tornar a atacar
 
@@ -359,7 +360,7 @@ public class UrsinaScript : MonoBehaviour
         //S'acaba l'atac, aturat i posa't en cooldown
         rb.velocity = Vector2.zero;
 
-        yield return new WaitForSeconds(AttackCooldown + .5f);
+        yield return new WaitForSeconds(AttackCooldown);
 
         //Pot tornar a atacar
         
@@ -393,8 +394,11 @@ public class UrsinaScript : MonoBehaviour
         }
         if (OnPhase2)
         {
+            
             smashAttackInstancePhase2();
+
             audioManager.UrsinaSFX(audioManager.iceBreaker);
+            audioManager.UrsinaSFX(audioManager.groundStep);
             yield return new WaitForSeconds(1f);
 
             smashAttackInstancePhase2();
@@ -407,7 +411,7 @@ public class UrsinaScript : MonoBehaviour
 
         yield return new WaitForSeconds(.9f);
         animator.SetBool("isSmashing", false);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         //Pot tornar a atacar
 
         isAttacking = false;
