@@ -883,7 +883,7 @@ Transform:
   m_GameObject: {fileID: 3994394536962611434}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1150,7 +1150,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   knockbackScript: {fileID: 0}
-  jumping: 1
   groundSpeed: 10
   jumpPower: 26
   isDashing: 0
@@ -1183,13 +1182,11 @@ MonoBehaviour:
   inputAttackCooldown: 0.4
   isComboActive: 0
   attackLocation: {fileID: 9003009591592549887}
+  duracioCollider: 0
+  delayCollider: 0
   colliderParry: {fileID: 6769748558417861109, guid: a499decbcfeab824cb2f03843f239d12, type: 3}
   colliderAttackCrabLiora: {fileID: 165051307909327957, guid: 86933764d29bffd43afa9ce7b5f4a8d4, type: 3}
   colliderAttackBoarLiora: {fileID: 165051307909327957, guid: 46055b83fe76e1d4eb88b6349202d983, type: 3}
-  currentUltiType: 0
-  deactivateAction: 0
-  duracioCollider: 0
-  delayCollider: 0
 --- !u!114 &6942934200522289382
 MonoBehaviour:
   m_ObjectHideFlags: 0

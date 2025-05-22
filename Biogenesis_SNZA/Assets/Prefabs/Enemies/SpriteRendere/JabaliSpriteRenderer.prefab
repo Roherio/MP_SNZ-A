@@ -275,7 +275,7 @@ MonoBehaviour:
   - {fileID: 0}
   destinationPoint: 0
   verticalViewHeight: 5
-  Behaviour: 1
+  Behaviour: 0
 --- !u!114 &5949356217502200059
 MonoBehaviour:
   m_ObjectHideFlags: 0

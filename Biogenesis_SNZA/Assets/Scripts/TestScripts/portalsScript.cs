@@ -29,7 +29,7 @@ public class portalsScript : MonoBehaviour
             levelTransitioning = true;
             fade.FadeOut(() =>
             {
-                Invoke("Teleport", 1f);
+                Invoke("Teleport", 0);
                 fade.FadeIn(() =>
                 {
                     levelTransitioning = false;
