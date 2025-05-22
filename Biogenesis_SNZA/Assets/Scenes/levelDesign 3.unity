@@ -27009,8 +27009,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a561dabaec69242a50468c82f08bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicVol: 1
-  effectsVol: 0.1
+  musicVol: 0.546
+  effectsVol: 0.563
 --- !u!1001 &465038466
 PrefabInstance:
   m_ObjectHideFlags: 0
