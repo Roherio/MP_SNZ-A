@@ -13,7 +13,10 @@ public class secretarioAudioManager : MonoBehaviour
     public AudioClip Attack;
     public AudioClip takeDamage;
     public AudioClip Death;
-
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void SecretarioSFX(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
@@ -21,6 +24,7 @@ public class secretarioAudioManager : MonoBehaviour
 
     private void Update()
     {
+        audioSource.volume = AudioSettingsManager.instance.effectsVol;
     }
 }
 
