@@ -9,7 +9,7 @@ public class Menu_Script : MonoBehaviour
 {
     public GameObject menuCanvas;
     public GameObject pausePanel;
-    public GameObject ajustesPanel;
+    public GameObject controlesPanel;
 
     public PlayerInput playerInput;
     ////////logica pestanyas
@@ -23,6 +23,7 @@ public class Menu_Script : MonoBehaviour
     {
         menuCanvas.SetActive(false);
         pausePanel.SetActive(false);
+        controlesPanel.SetActive(false);
         GameControl_Script.isPaused = false;
         ActivarPestanya(0);
     }
@@ -35,12 +36,15 @@ public class Menu_Script : MonoBehaviour
             TogglePause();
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (!pausePanel.activeSelf)
         {
-            ToggleMenu();
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                ToggleMenu();
+            }
+            UpdatePestanyas();
+            ActivarPestanya(numeroPestanya);
         }
-        UpdatePestanyas();
-        ActivarPestanya(numeroPestanya);
     }
     //pestanyas con input system
     /*public void Pestanyas(InputAction.CallbackContext context)
@@ -56,11 +60,12 @@ public class Menu_Script : MonoBehaviour
     public void TogglePause()
     {
         pausePanel.SetActive(!pausePanel.activeSelf);
+        controlesPanel.SetActive(false);
         PauseController_Script.SetPause(pausePanel.activeSelf);
     }
     public void ToggleAjustes()
     {
-        ajustesPanel.SetActive(!ajustesPanel.activeSelf);
+        controlesPanel.SetActive(!controlesPanel.activeSelf);
     }
 
     public void ActivarPestanya(int tabNumber)

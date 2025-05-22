@@ -48,6 +48,7 @@ public class MainMenu : MonoBehaviour
     public void BackToMainMenu()
     {
         Debug.Log("Going to MainMenu");
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
     public void ExitGame()
