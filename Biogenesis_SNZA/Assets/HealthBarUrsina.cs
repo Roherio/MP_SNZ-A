@@ -18,7 +18,7 @@ public class HealthBarUrsina : MonoBehaviour
     private void Awake()
     {
         hpEnemiesScript = GameObject.FindGameObjectWithTag("Ursina").GetComponent<hpEnemiesScript>();
-        //gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
     void Start()
     {

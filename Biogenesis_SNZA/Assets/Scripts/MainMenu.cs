@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
             Debug.Log("Save file deleted.");
 
         }
-        SceneManager.LoadScene("levelDesign 2");
+        SceneManager.LoadScene("levelDesign 3");
     }
 
     public void LoadGame()

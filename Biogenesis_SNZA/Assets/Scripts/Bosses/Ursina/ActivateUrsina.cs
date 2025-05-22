@@ -5,9 +5,14 @@ using UnityEngine;
 public class ActivateUrsina : MonoBehaviour
 {
     public GameObject Ursina;
+    public GameObject UrsinaHealthBar;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player")) { Ursina.SetActive(true); }
+        if(collision.CompareTag("Player")) 
+        { 
+            Ursina.SetActive(true);
+            UrsinaHealthBar.SetActive(true);
+        }
        
     }
 }

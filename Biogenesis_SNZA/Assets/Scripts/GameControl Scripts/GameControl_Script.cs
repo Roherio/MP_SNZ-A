@@ -37,6 +37,19 @@ public class GameControl_Script : MonoBehaviour
         }
     }
     // Update is called once per frame
+    private void Start()
+    {
+        CameraFading fade = Camera.main.GetComponent<CameraFading>();
+        if (fade != null)
+        {
+            // Start the fade-in with an empty callback
+            fade.FadeIn(() => { });
+        }
+        else
+        {
+            Debug.LogWarning("CameraFading component not found on the Main Camera.");
+        }
+    }
     void Update()
     {
         //------------------------------------ESTO HARA FALTA PASARLO PUNTUALMENTE AL MOMENTO EN EL QUE GASTES EL SINTETIZADOR CON ABRAXAS
