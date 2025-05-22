@@ -92,6 +92,11 @@ public class Liora_Movement_Script : MonoBehaviour
         //if (GameControl_Script.isPausedDialogue || GameControl_Script.isPaused) { return; }
         //amb aquest If evitem que el jugador pugui moure's si esta fent dash
         if (isDashing || (knockbackScript != null && knockbackScript.isKnockedBack )) { return; }
+        if (portalsScript.levelTransitioning)
+        {
+            rb.velocity = Vector2.zero;
+            return;
+        }
         //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge o si està executant una ordre d'atac
         if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying /*|| stopMovementAfterDash > 0*/)
         {

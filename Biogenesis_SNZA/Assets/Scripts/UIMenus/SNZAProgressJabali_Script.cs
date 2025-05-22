@@ -13,10 +13,10 @@ public class SNZAProgressJabali_Script : MonoBehaviour
     public GameObject RESTANTEJabali;
     public Image progressBarJabali;
     private float progressAmountJabali;
-    public TextMeshProUGUI enemiesLeftJabali;
+    //public TextMeshPro enemiesLeftJabali;
     public GameObject tachadoJabali;
-    public bool jabaliCristalizable = false;
-    public TextMeshProUGUI textoFinalJabali;
+    public static bool jabaliCristalizable = false;
+    public TextMeshPro textoFinalJabali;
 
     public GameObject tachadoCristalizadorJabali;
     public static bool bTachadoCristalizadorJabali;
@@ -27,37 +27,37 @@ public class SNZAProgressJabali_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tachadoJabali.SetActive(false);
+        textoFinalJabali.gameObject.SetActive(true);
+        /*tachadoJabali.SetActive(false);
         tachadoCristalizadorJabali.SetActive(false);
         
         //progressAmountJabali = SNZAProgressControl_Script.progresoSNZAJabali;
         progressBarJabali.fillAmount = (150 - SNZAProgressControl_Script.progresoSNZAJabali) / 150f;
-        enemiesLeftJabali.text = "x" + (SNZAProgressControl_Script.progresoSNZAJabali / 10);
+        //enemiesLeftJabali.text = "x" + (SNZAProgressControl_Script.progresoSNZAJabali / 10);
         recuadroCristalizable.SetActive(false);
 
         textoFinalJabali.gameObject.SetActive(false);
-
+        */
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*if (SNZAProgressControl_Script.snzaJabaliConseguida)
+        {
+            DestruirJabali();
+        }
         //progressAmountJabali = SNZAProgressControl_Script.progresoSNZAJabali;
         jabaliCristalizable = SNZAProgressControl_Script.jabaliCristalizable;
         bKilledJabali = SNZAProgressControl_Script.bKilledJabali;
 
-        enemiesLeftJabali.text = "x" + (SNZAProgressControl_Script.progresoSNZAJabali / 10);
+        //enemiesLeftJabali.text = "x" + (SNZAProgressControl_Script.progresoSNZAJabali / 10);
         progressBarJabali.fillAmount = (150 - SNZAProgressControl_Script.progresoSNZAJabali) / 150f;
         if (SNZAProgressControl_Script.progresoSNZAJabali <= 0)
         {
             tachadoJabali.SetActive(true);
         }
 
-        /*if (bKilledJabali || Input.GetKeyDown(KeyCode.P))
-        {
-            if (progressAmountJabali <= 0) { return; }
-            bKilledJabali = false;
-        }*/
         if (bTachadoCristalizadorJabali && !cristalizadorTachadoJabali)
         {
             tachadoCristalizadorJabali.SetActive(true);
@@ -67,7 +67,7 @@ public class SNZAProgressJabali_Script : MonoBehaviour
         {
             tachadoCristalizadorJabali.SetActive(false);
             cristalizadorTachadoJabali = false;
-        }
+        }*/
 
     }
     /*void ProgresarSNZAJabali(float cantidad)

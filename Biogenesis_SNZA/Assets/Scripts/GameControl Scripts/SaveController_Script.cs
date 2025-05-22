@@ -43,6 +43,11 @@ public class SaveController_Script : MonoBehaviour
             //GUARDAR DATO DE SI TIENES PODER KHIONE Y RUMO
             poderKhione = EventsManager_Script.poderKhione,
             poderRumo = EventsManager_Script.poderRumo,
+
+            //GUARDAR CON LOS NPCS QUE HAS HABLADO
+            habladoDioltas1vez = EventsManager_Script.habladoDioltas1vez,
+            habladoKhione1vez = EventsManager_Script.habladoKhione1vez,
+            habladoWallace1vez = EventsManager_Script.habladoWallace1vez
         };
         //transformar la variable saveData a un tipus Json
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
@@ -74,6 +79,10 @@ public class SaveController_Script : MonoBehaviour
             //Cargar Poderes
             EventsManager_Script.poderKhione = saveData.poderKhione;
             EventsManager_Script.poderRumo = saveData.poderRumo;
+            //personajes hablados
+            EventsManager_Script.habladoDioltas1vez = saveData.habladoDioltas1vez;
+            EventsManager_Script.habladoKhione1vez = saveData.habladoKhione1vez;
+            EventsManager_Script.habladoWallace1vez = saveData.habladoWallace1vez;
             FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
              
         }
