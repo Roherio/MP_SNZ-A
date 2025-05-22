@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Menu_Script : MonoBehaviour
 {
     public GameObject menuCanvas;
+    public GameObject pausePanel;
     public PlayerInput playerInput;
     ////////logica pestanyas
     public Image[] pestanyasImages;
@@ -19,6 +20,7 @@ public class Menu_Script : MonoBehaviour
     void Start()
     {
         menuCanvas.SetActive(false);
+        pausePanel.SetActive(false);
         GameControl_Script.isPaused = false;
         ActivarPestanya(0);
     }
@@ -28,15 +30,12 @@ public class Menu_Script : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            TogglePause();
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
             ToggleMenu();
-        }
-        if (menuCanvas.activeSelf)
-        {
-            GameControl_Script.isPaused = true;
-        }
-        if (!menuCanvas.activeSelf)
-        {
-            GameControl_Script.isPaused = false;
         }
         UpdatePestanyas();
         ActivarPestanya(numeroPestanya);
@@ -50,6 +49,12 @@ public class Menu_Script : MonoBehaviour
     public void ToggleMenu()
     {
         menuCanvas.SetActive(!menuCanvas.activeSelf);
+        GameControl_Script.isPaused = menuCanvas.activeSelf;
+    }
+    public void TogglePause()
+    {
+        pausePanel.SetActive(!pausePanel.activeSelf);
+        PauseController_Script.SetPause(pausePanel.activeSelf);
     }
     public void ActivarPestanya(int tabNumber)
     {
