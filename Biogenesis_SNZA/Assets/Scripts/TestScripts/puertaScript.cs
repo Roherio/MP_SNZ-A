@@ -1,15 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using static UnityEditor.SceneView;
 
 public class puertaScript : MonoBehaviour
 {
     [SerializeField] private Transform destination;
-    [SerializeField] GameObject player;
-    [SerializeField] GameObject InteractButton;
-    [SerializeField] PolygonCollider2D mapBoundary;
-    CinemachineConfiner confiner;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject InteractButton;
+    [SerializeField] private PolygonCollider2D mapBoundary;
+
+    private CinemachineConfiner confiner;
+
     private void Awake()
     {
         confiner = FindObjectOfType<CinemachineConfiner>();
@@ -22,26 +24,37 @@ public class puertaScript : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        print("On TriggerBox");
-        if (Input.GetKey(KeyCode.Q))
+        if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.Q))
         {
-            StartCoroutine(FadeTimer());
+            StartCoroutine(FadeTeleport());
         }
-
-    }
-    public void Teleport()
-    {
-        player.transform.position = destination.position;
     }
 
-    IEnumerator FadeTimer()
+    private IEnumerator FadeTeleport()
     {
         portalsScript.levelTransitioning = true;
-        yield return new WaitForSeconds(.45f);
-        Teleport();
-        confiner.m_BoundingShape2D = mapBoundary;
-        yield return new WaitForSeconds(0.55f);
-        portalsScript.levelTransitioning = false;
+
+        var fade = Camera.main.GetComponent<CameraFading>();
+        if (fade != null)
+        {
+            fade.FadeOut(() =>
+            {
+                player.transform.position = destination.position;
+                confiner.m_BoundingShape2D = mapBoundary;
+
+                fade.FadeIn(() =>
+                {
+                    portalsScript.levelTransitioning = false;
+                });
+            });
+        }
+        else
+        {
+            player.transform.position = destination.position;
+            confiner.m_BoundingShape2D = mapBoundary;
+            portalsScript.levelTransitioning = false;
+        }
+
+        yield return null;
     }
 }
-

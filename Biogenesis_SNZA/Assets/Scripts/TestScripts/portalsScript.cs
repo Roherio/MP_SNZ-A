@@ -1,6 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.SceneView;
 
 public class portalsScript : MonoBehaviour
 {
@@ -9,43 +9,46 @@ public class portalsScript : MonoBehaviour
     [SerializeField] private GameObject player;
     public static bool levelTransitioning = false;
 
-
-    public void Start()
+    private void Start()
     {
         player = GameObject.FindWithTag("Player");
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Player"))
-        {
-            return;
-        }
-        if (portalObjects.Contains(collision.gameObject))
-        {
-            return;
-        }
+        if (!collision.CompareTag("Player") || portalObjects.Contains(collision.gameObject)) return;
+
         if (destination.TryGetComponent(out portalsScript destinationPortal))
         {
             destinationPortal.portalObjects.Add(collision.gameObject);
         }
 
-        StartCoroutine(FadeTimer());
+        var fade = Camera.main.GetComponent<CameraFading>();
+        if (fade != null)
+        {
+            levelTransitioning = true;
+            fade.FadeOut(() =>
+            {
+                player.transform.position = destination.position;
+                fade.FadeIn(() =>
+                {
+                    levelTransitioning = false;
+                });
+            });
+        }
+        else
+        {
+            player.transform.position = destination.position;
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            return;
+            portalObjects.Remove(collision.gameObject);
         }
-        portalObjects.Remove(collision.gameObject);
     }
-    IEnumerator FadeTimer()
-    {
-        portalsScript.levelTransitioning = true;
-        yield return new WaitForSeconds(1f);
-        player.transform.position = destination.position;
-        portalsScript.levelTransitioning = false;
-    }
+
 }
- 
