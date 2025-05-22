@@ -3,7 +3,14 @@ guid: 92935b8fefb0633459f75cb61a34d980
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spriteBarraKhione: {fileID: 21300000, guid: 9c92e659800f186429a951997a3ade2d, type: 3}
+  - spriteMuelleKhione: {fileID: 21300000, guid: 5a9538b9baf9cb34aad55034cdd67ef5, type: 3}
+  - spriteTaponesRumo: {fileID: 21300000, guid: 43c1ab6a5dc5958439725f0367786da5, type: 3}
+  - spriteMantaRumo: {fileID: 21300000, guid: 2cd31f2a324338c4c9673f01a5b1abf0, type: 3}
+  - spriteCristalizador: {fileID: 21300000, guid: 716a6d7949142fe409c4473cdf6f661e, type: 3}
+  - spriteCuero: {fileID: 21300000, guid: adc871d105784a749b7174af9e6d18f4, type: 3}
+  - spriteVial: {fileID: 21300000, guid: 318f6fe490dfcdc4b91c599d6e8bb69e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

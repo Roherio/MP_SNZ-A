@@ -9,6 +9,16 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
 
     public string itemUser;
     public string itemName;
+    //nom amb el que es mostrara el popup: pot ser Barra de acero, Muelle metalico, Tapones de oidos, Manta protectora, Anillo de Ardilla, Anillo de Cabra, Cristalizador, Cuero, Vial
+    public string itemUIName;
+
+    public Sprite spriteBarraKhione;
+    public Sprite spriteMuelleKhione;
+    public Sprite spriteTaponesRumo;
+    public Sprite spriteMantaRumo;
+    public Sprite spriteCristalizador;
+    public Sprite spriteCuero;
+    public Sprite spriteVial;
     //public Sprite usedSprite; en el caso de que tuvieramos objetos tipo cofre que se quedan abiertos
     private void Start()
     {
@@ -68,10 +78,12 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
         {
             if (itemName == "barraKhione")
             {
+                ItemPopUp_Script.Instance.ShowItemPickup(itemUIName, spriteBarraKhione);
                 EventsManager_Script.ActivarObjKhione1();
             }
             else if (itemName == "muelleKhione")
             {
+                ItemPopUp_Script.Instance.ShowItemPickup(itemUIName, spriteMuelleKhione);
                 EventsManager_Script.ActivarObjKhione2();
             }
         }
@@ -79,29 +91,34 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
         {
             if (itemName == "taponesRumo")
             {
+                ItemPopUp_Script.Instance.ShowItemPickup(itemUIName, spriteTaponesRumo);
                 EventsManager_Script.ActivarObjRumo1();
             }
             else if (itemName == "mantaRumo")
             {
+                ItemPopUp_Script.Instance.ShowItemPickup(itemUIName, spriteMantaRumo);
                 EventsManager_Script.ActivarObjRumo2();
             }
             
         }
-        if (itemName == "Cristalizador")
+        if (itemName == "cristalizador")
         {
             //esto se retirará porque los cristalizadores te los dan o Gander o Wallace
             GameControl_Script.cristalizadores++;
+            ItemPopUp_Script.Instance.ShowItemPickup(itemUIName, spriteCristalizador);
             BotonesActivos_Script.bCristalizador = true;
             SNZAProgressJabali_Script.bTachadoCristalizadorJabali = true;
             SNZAProgressSecretario_Script.bTachadoCristalizadorSecretario = true;
         }
-        if (itemName == "Cuero")
+        if (itemName == "cuero")
         {
+            ItemPopUp_Script.Instance.ShowItemPickup(itemUIName, spriteCuero);
             GameControl_Script.cuero++;
             BotonesActivos_Script.bCuero = true;
         }
-        if (itemName == "Vial")
+        if (itemName == "vial")
         {
+            ItemPopUp_Script.Instance.ShowItemPickup(itemUIName, spriteVial);
             GameControl_Script.viales++;
             BotonesActivos_Script.bVial = true;
         }
