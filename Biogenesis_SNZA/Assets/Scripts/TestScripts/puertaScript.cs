@@ -3,13 +3,11 @@ using UnityEngine;
 using Cinemachine;
 using static UnityEditor.SceneView;
 
-public class puertaScript : MonoBehaviour
+public class puertaScript : MonoBehaviour, IInteractable_Script
 {
     [SerializeField] private Transform destination;
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject InteractButton;
     [SerializeField] private PolygonCollider2D mapBoundary;
-
     private CinemachineConfiner confiner;
 
     private void Awake()
@@ -22,12 +20,20 @@ public class puertaScript : MonoBehaviour
         player = GameObject.FindWithTag("Player");
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    /*private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.Q))
         {
             StartCoroutine(FadeTeleport());
         }
+    }*/
+    public bool CanInteract()
+    {
+        return true;
+    }
+    public void Interact()
+    {
+        StartCoroutine(FadeTeleport());
     }
 
     private IEnumerator FadeTeleport()

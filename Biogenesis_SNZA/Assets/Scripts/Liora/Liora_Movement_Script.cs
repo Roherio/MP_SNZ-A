@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.SceneView;
 
 public class Liora_Movement_Script : MonoBehaviour
 {
@@ -49,6 +50,8 @@ public class Liora_Movement_Script : MonoBehaviour
 
     private bool onEscalera = false;
     private bool onEnredadera = false;
+
+    public static CameraFading fade;
 
     void Awake()
     {
