@@ -16,7 +16,7 @@ public class SNZAProgressControl_Script : MonoBehaviour
     public static bool secretarioCristalizable = false;
 
     public static bool snzaCangrejoConseguida = true;
-    public static float progresoSNZAJabali = 150f;
+    public static float progresoSNZAJabali = 0f;
     public static bool snzaJabaliConseguida = false;
     public static float progresoSNZASecretario = 150f;
     public static bool snzaSecretarioConseguida = false;
@@ -34,7 +34,7 @@ public class SNZAProgressControl_Script : MonoBehaviour
         {
             //aqui SI QUE ENTRA
             //if (progressAmountJabali <= 0) { return; }
-            if (progresoSNZAJabali <= 0) { return; }
+            //if (progresoSNZAJabali <= 0) { return; }
             ProgresarSNZAJabali(10);
             bKilledJabali = false;
         }
@@ -51,9 +51,9 @@ public class SNZAProgressControl_Script : MonoBehaviour
         //progressAmountJabali -= cantidad;
         progresoSNZAJabali -= cantidad;
         bKilledJabali = false;
-        if (progressAmountJabali <= 0)
+        if (progresoSNZAJabali <= 0)
         {
-            print("hasmatao un jabali");
+            print("hasmatao un jabali");//-----------------------------AQUI SI ENTRA (PASO 1)
             jabaliCristalizable = true;
         }
     }

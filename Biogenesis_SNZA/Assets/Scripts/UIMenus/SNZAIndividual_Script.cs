@@ -10,8 +10,10 @@ public class SNZAIndividual_Script : MonoBehaviour, IPointerEnterHandler, IPoint
     public CanvasGroup canvasGroup;
     public GameObject hoverPanel; //panel que mostrara cuando estes por encima de el como boton
     public bool isUnlocked = false;
-    public static bool jabaliDesbloqueado;
-    public static bool secretarioDesbloqueado;
+    public static bool desbloqueandoJabali = false;
+    public static bool desbloqueandoSecretario = false;
+    /*public static bool jabaliDesbloqueado;
+    public static bool secretarioDesbloqueado;*/
     private void Awake()
     {
         hoverPanel.SetActive(false);
@@ -20,19 +22,15 @@ public class SNZAIndividual_Script : MonoBehaviour, IPointerEnterHandler, IPoint
         {
             UnlockItem();
         }
-        if (SNZAName == "Jabali")
-        {
-            UnlockItem();
-        }
     }
     // Start is called before the first frame update
     void Start()
     {
-        if (SNZAName == "Jabali" && jabaliDesbloqueado)
+        if (SNZAName == "Jabali" && SNZAProgressControl_Script.snzaJabaliConseguida)
         {
             UnlockItem();
         }
-        if (SNZAName == "Secretario" && secretarioDesbloqueado)
+        if (SNZAName == "Secretario" && SNZAProgressControl_Script.snzaJabaliConseguida)
         {
             UnlockItem();
         }
@@ -41,7 +39,15 @@ public class SNZAIndividual_Script : MonoBehaviour, IPointerEnterHandler, IPoint
     // Update is called once per frame
     void Update()
     {
-        
+        if (SNZAName == "Jabali" && SNZAProgressControl_Script.snzaJabaliConseguida)
+        {
+            print("desbloquea crack"); //----------------------------aqui no entra (PASO 4)
+            UnlockItem();//--------------------------------------------NI AQUI TAMPOCO (PASO 5)
+        }
+        if (SNZAName == "Secretario" && SNZAProgressControl_Script.snzaSecretarioConseguida)
+        {
+            UnlockItem();
+        }
     }
     public void UnlockItem()
     {

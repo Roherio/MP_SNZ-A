@@ -17,7 +17,7 @@ public class Liora_Attack_Script : MonoBehaviour
     //combo Logic
     public static int currentComboStep = 0;
     private int maxComboSteps;
-    private bool canReceiveNextComboInput = true;
+    public static bool canReceiveNextComboInput = true;
     
     private float comboTimer = 0f;
     private float comboMaxTime = 0.7f;

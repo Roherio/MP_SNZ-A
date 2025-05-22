@@ -5,8 +5,6 @@ using UnityEngine;
 using UnityEngine.UI;
 public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
 {
-    public SNZAProgressJabali_Script snzaProgressJabali;
-    public SNZAProgressSecretario_Script snzaProgressSecretario;
     //dialogueData1 es primera vez
     //dialogueData2 es cuando ya has conocido a Gander, que aveces salta ese dialogo y aveces el 1
     //dialogueData3 es cuando tienes una SNZA que cristalizar
@@ -31,6 +29,10 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
         if (isDialogueActive)
         {
             GameControl_Script.isPausedDialogue = true;
+        }
+        if (SNZAProgressControl_Script.progresoSNZAJabali <= 0 && SNZAProgressControl_Script.jabaliCristalizable)
+        {
+            currentDialogue = "dialogueData3";
         }
         /*if (snzaProgressJabali.jabaliCristalizable && GameControl_Script.cristalizadores > 0)
         {
@@ -103,9 +105,10 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
             }
             else
             {
-                print("SnzaACTIVA!!!");
+                print("SnzaACTIVA!!!");//-------------------------------------AQUI SI ENTRA (PASO 2)
                 currentDialogue = "dialogueData1";
-                snzaProgressJabali.jabaliCristalizable = false;
+                SNZAProgressControl_Script.jabaliCristalizable = false;
+                SNZAProgressControl_Script.snzaJabaliConseguida = true;//-------------ESTO PASA A TRUE (PASO 3)
                 EndDialogue();
             }
         }
