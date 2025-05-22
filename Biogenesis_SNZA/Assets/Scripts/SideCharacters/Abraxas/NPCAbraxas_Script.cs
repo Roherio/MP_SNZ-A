@@ -7,10 +7,12 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
 {
     //dialogueData1 es primera vez
     //dialogueData2 es cuando ya has conocido a Gander, que aveces salta ese dialogo y aveces el 1
-    //dialogueData3 es cuando tienes una SNZA que cristalizar
+    //dialogueData3 es cuando tienes SNZA Jabali lista
+    //dialogueData4 es cuando tienes SNZA Secretario lista
     public NPCDialogue_Script dialogueData1;
     public NPCDialogue_Script dialogueData2;
     public NPCDialogue_Script dialogueData3;
+    public NPCDialogue_Script dialogueData4;
 
     private DialogueController dialogueUI;
 
@@ -30,14 +32,14 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
         {
             GameControl_Script.isPausedDialogue = true;
         }
+        if (SNZAProgressControl_Script.progresoSNZASecretario <= 0 && SNZAProgressControl_Script.secretarioCristalizable)
+        {
+            currentDialogue = "dialogueData4";
+        }
         if (SNZAProgressControl_Script.progresoSNZAJabali <= 0 && SNZAProgressControl_Script.jabaliCristalizable)
         {
             currentDialogue = "dialogueData3";
         }
-        /*if (snzaProgressJabali.jabaliCristalizable && GameControl_Script.cristalizadores > 0)
-        {
-            currentDialogue = "dialogueData3";
-        }*/
     }
     public bool CanInteract()
     {

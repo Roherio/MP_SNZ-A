@@ -10,19 +10,26 @@ public class SNZAIndividual_Script : MonoBehaviour, IPointerEnterHandler, IPoint
     public CanvasGroup canvasGroup;
     public GameObject hoverPanel; //panel que mostrara cuando estes por encima de el como boton
     public bool isUnlocked = false;
+    /*
     public static bool desbloqueandoJabali = false;
-    public static bool desbloqueandoSecretario = false;
+    public static bool desbloqueandoSecretario = false;*/
     /*public static bool jabaliDesbloqueado;
     public static bool secretarioDesbloqueado;*/
     private void Awake()
     {
         hoverPanel.SetActive(false);
-        LockItem();
+        UnlockItem();
+        /*LockItem();
         if (SNZAName == "Cangrejo")
         {
             UnlockItem();
-        }
+        }*/
     }
+
+    //----------------------------------------TODO ESTO ECHADO PARA ATRAS ENTREGA JUEVES
+
+
+   /*
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +55,7 @@ public class SNZAIndividual_Script : MonoBehaviour, IPointerEnterHandler, IPoint
         {
             UnlockItem();
         }
-    }
+    }*/
     public void UnlockItem()
     {
         isUnlocked = true;

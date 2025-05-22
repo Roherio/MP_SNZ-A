@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SNZAProgressControl_Script : MonoBehaviour
 {
+    public static SNZAProgressControl_Script Instance { get; private set; }
     public static bool bKilledJabali = false;
     public static bool bKilledSecretario = false;
 
@@ -16,11 +17,22 @@ public class SNZAProgressControl_Script : MonoBehaviour
     public static bool secretarioCristalizable = false;
 
     public static bool snzaCangrejoConseguida = true;
-    public static float progresoSNZAJabali = 0f;
+    public static float progresoSNZAJabali = 10f;
     public static bool snzaJabaliConseguida = false;
     public static float progresoSNZASecretario = 150f;
     public static bool snzaSecretarioConseguida = false;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -33,14 +45,12 @@ public class SNZAProgressControl_Script : MonoBehaviour
         if (bKilledJabali || Input.GetKeyDown(KeyCode.P))
         {
             //aqui SI QUE ENTRA
-            //if (progressAmountJabali <= 0) { return; }
             //if (progresoSNZAJabali <= 0) { return; }
             ProgresarSNZAJabali(10);
             bKilledJabali = false;
         }
         if (bKilledSecretario || Input.GetKeyDown(KeyCode.O))
         {
-            //if (progressAmountSecretario <= 0) { return; }
             if (progresoSNZASecretario <= 0) { return; }
             ProgresarSNZASecretario(10);
             bKilledSecretario = false;
@@ -55,6 +65,7 @@ public class SNZAProgressControl_Script : MonoBehaviour
         {
             print("hasmatao un jabali");//-----------------------------AQUI SI ENTRA (PASO 1)
             jabaliCristalizable = true;
+            SNZAProgressJabali_Script.jabaliCristalizable = true;
         }
     }
     void ProgresarSNZASecretario(float cantidad)

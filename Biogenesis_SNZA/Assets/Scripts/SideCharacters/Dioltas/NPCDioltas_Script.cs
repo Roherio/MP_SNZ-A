@@ -36,6 +36,10 @@ public class NPCDioltas_Script : MonoBehaviour, IInteractable_Script
     public void Interact()
     {
         if (GameControl_Script.isPaused && !isDialogueActive) { return; }
+        if (EventsManager_Script.habladoDioltas1vez)
+        {
+            currentDialogue = "dialogueData2";
+        }
         if (isDialogueActive)
         {
             NextLine();
@@ -104,6 +108,7 @@ public class NPCDioltas_Script : MonoBehaviour, IInteractable_Script
             else
             {
                 EndDialogue();
+                EventsManager_Script.habladoDioltas1vez = true;
                 currentDialogue = "dialogueData2";
             }
         }

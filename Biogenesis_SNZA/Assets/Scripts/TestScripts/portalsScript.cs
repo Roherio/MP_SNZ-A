@@ -13,7 +13,6 @@ public class portalsScript : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player") || portalObjects.Contains(collision.gameObject)) return;
