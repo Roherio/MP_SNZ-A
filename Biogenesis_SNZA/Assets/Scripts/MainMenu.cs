@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public string gameSceneName = "GameScene"; // Replace with your actual scene name
+    public GameObject settingsPanel;
+    private void Start()
+    {
+        settingsPanel.SetActive(false);
+    }
     public void StartIntro()
     {
         SceneManager.LoadScene("TransicioInici");
@@ -31,10 +36,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("levelDesign 3");
     }
 
-    public void OpenSettings()
+    public void ToggleSettings()
     {
         Debug.Log("Open Settings");
         // You can activate a settings panel here
+        settingsPanel.SetActive(!settingsPanel.activeSelf);
         // settingsPanel.SetActive(true);
     }
 
