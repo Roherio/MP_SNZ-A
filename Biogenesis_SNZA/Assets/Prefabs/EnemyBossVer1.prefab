@@ -290,7 +290,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &6075500375664831387
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ MonoBehaviour:
   smashAttackCollision: {fileID: 9031990994068740406, guid: 0e283172de341854097e33785324bc14, type: 3}
   smashAttackCollisionPhase2: {fileID: 4385695170290599823, guid: b5f1396254427aa4d96084ac08e54006, type: 3}
   playerPosition: {fileID: 0}
-  AttackCooldown: 1
+  AttackCooldown: 1.5
   dashSpeed: 0.00000001
   farDistance: 20
   mediumDistance: 15

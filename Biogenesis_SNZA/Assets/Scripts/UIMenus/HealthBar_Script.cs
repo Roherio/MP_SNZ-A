@@ -15,20 +15,21 @@ public class HealthBar_Script : MonoBehaviour
     void Start()
     {
         //entre 5 porque tiene 500
-        healthSlider.value = (GameControl_Script.lifeLiora / 5);
-        healthSliderDelay.value = (GameControl_Script.lifeLiora / 5);
+        healthSlider.value = (GameControl_Script.lifeLiora);
+        healthSliderDelay.value = (GameControl_Script.lifeLiora);
     }
     
     void Update()
     {
-        if (healthSlider.value != (GameControl_Script.lifeLiora / 5))
+        //entre 5 porque tiene 500
+        if (healthSlider.value != (GameControl_Script.lifeLiora))
         {
-            healthSlider.value = (GameControl_Script.lifeLiora / 5);
+            healthSlider.value = (GameControl_Script.lifeLiora);
         }
         if (healthSlider.value != healthSliderDelay.value)
         {
             //StartCoroutine(DelayHealth());
-            healthSliderDelay.value = Mathf.Lerp(healthSliderDelay.value, (GameControl_Script.lifeLiora / 5), delaySpeed);
+            healthSliderDelay.value = Mathf.Lerp(healthSliderDelay.value, (GameControl_Script.lifeLiora), delaySpeed);
         }
     }
     /*
