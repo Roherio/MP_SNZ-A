@@ -41,5 +41,11 @@ public class CeilingIceSpikeScript : MonoBehaviour
             Destroy(gameObject);
             print("L'atac ha fet hit per " + enemyAttackValue + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
         }
+        
+    }
+
+    private void OnDestroy()
+    {
+        
     }
 }

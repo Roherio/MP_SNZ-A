@@ -153,7 +153,7 @@ public class UrsinaScript : MonoBehaviour
             {
                 int mediumRangeAttack = Random.Range(0, 7);
                 print(mediumRangeAttack);
-                if (mediumRangeAttack == 0f || mediumRangeAttack == 1f || mediumRangeAttack == 2f)
+                if (mediumRangeAttack == 0f || mediumRangeAttack == 1f )
                 {
                     print("I should chase");
                     StartCoroutine(closingDistance());
@@ -163,7 +163,7 @@ public class UrsinaScript : MonoBehaviour
                     print("I should Smash Attack");
                     StartCoroutine(smashAttack());
                 }
-                if (mediumRangeAttack == 6f)
+                if (mediumRangeAttack == 6f || mediumRangeAttack == 2f)
                 {
                     print("I should do a Roar");
                     StartCoroutine(Roar());
@@ -297,7 +297,6 @@ public class UrsinaScript : MonoBehaviour
         yield return new WaitForSeconds(chaseTime);
         isAttacking = false;
         canAttack = true;
-        StopAllCoroutines();
     }
     IEnumerator clawAttack()
     {
@@ -439,8 +438,6 @@ public class UrsinaScript : MonoBehaviour
 
         //S'acaba
         rb.velocity = Vector2.zero;
-        
-
 
         yield return new WaitForSeconds(3f);
         animator.SetBool("isHowling", false);
