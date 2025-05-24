@@ -15,7 +15,9 @@ MonoBehaviour:
   npcName: Rumo
   npcPortrait: {fileID: 21300000, guid: 1337991d8bb7ae3469f080a1ebdcb277, type: 3}
   dialogueLines:
-  - Todos me veran, no me puedo mover. Es demasiado peligroso.
+  - "Todos me ver\xE1n, no me puedo mover. Es demasiado peligroso."
   autoProgressLines: 00
+  endDialogueLines: 
   autoProgressDelay: 1.5
   typingSpeed: 0
+  choices: []

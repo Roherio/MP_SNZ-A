@@ -16,8 +16,8 @@ MonoBehaviour:
   npcPortrait: {fileID: 21300000, guid: b1b2654f3f86fd74dad15673f9da497a, type: 3}
   dialogueLines:
   - Vaya! Yo estaba buscando justo esto!
-  - Aun asi, sigo buscando mas materiales metalicos...
-  - Animo! Esto se pone muy interesante.
+  - "Aun as\xED, sigo buscando m\xE1s materiales met\xE1licos..."
+  - "\xC1nimo! Esto se pone muy interesante."
   autoProgressLines: 000000
   endDialogueLines: 
   autoProgressDelay: 1.5

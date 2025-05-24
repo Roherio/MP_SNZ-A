@@ -17,7 +17,7 @@ MonoBehaviour:
   dialogueLines:
   - Ya te has topado con Gander?
   - Ese topo... Siempre ha tramado alguna de las suyas...
-  - La gente como el te ayuda y nunca pide nada a cambio... hasta que lo hace.
+  - "La gente como \xE9l te ayuda y nunca pide nada a cambio... hasta que lo hace."
   autoProgressLines: 000000
   endDialogueLines: 
   autoProgressDelay: 1.5

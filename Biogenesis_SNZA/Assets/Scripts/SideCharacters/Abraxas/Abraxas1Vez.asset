@@ -16,12 +16,12 @@ MonoBehaviour:
   npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
   dialogueLines:
   - Recuerda, esa pulsera... Te la he dado para restablecer el orden a las cosas.
-  - 'Tu objetivo es claro: viaja a Axia y acaba con Ursina, la reina tirana. Una
-    vez recolectes su SNZ-A, traemela.'
-  - Con esa pulsera, podras usar SNZ-A recolectada de otros humanos transformados.
-  - Asi, podras aumentar tu arsenal de herramientas y podras enfrentarte a Ursina
-    en igualdad de condiciones.
-  - Habla con Dioltas, fuera del laboratorio. El te indicara el camino...
+  - "Tu objetivo es claro: viaja a Axia y acaba con Ursina, la reina tirana. Una
+    vez recolectes su SNZ A, tr\xE1emela."
+  - "Con esa pulsera, podr\xE1s usar SNZ A recolectada de otros humanos transformados."
+  - "As\xED, podr\xE1s aumentar tu arsenal de herramientas y podr\xE1s enfrentarte
+    a Ursina en igualdad de condiciones."
+  - "Habla con Dioltas, fuera del laboratorio. \xC9l te indicar\xE1 el camino..."
   autoProgressLines: 000000
   endDialogueLines: 
   autoProgressDelay: 1.5

@@ -15,12 +15,12 @@ MonoBehaviour:
   npcName: Khione
   npcPortrait: {fileID: 21300000, guid: b1b2654f3f86fd74dad15673f9da497a, type: 3}
   dialogueLines:
-  - Oye! Esto es perfecto! Aqui esta todo!
+  - "Oye! Esto es perfecto! Aqu\xED est\xE1 todo!"
   - Ya que ahora somos coleguis, tengo algo para ti.
   - Sabes escalar como las ardillas? No hablo de escaleras, hablo de la naturaleza,
     enredaderas.
-  - Aunque necesitaras una cosa mas para poder hacer eso. Toma esto en agradecimiento.
-  - Con ella, ninguna enredadera se te resistira!
+  - "Aunque necesitar\xE1s una cosa m\xE1s para poder hacer eso. Toma esto en agradecimiento."
+  - "Con ella, ninguna enredadera se te resistir\xE1!"
   autoProgressLines: 0000000000
   endDialogueLines: 
   autoProgressDelay: 1.5

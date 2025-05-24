@@ -15,11 +15,14 @@ MonoBehaviour:
   npcName: Rumo
   npcPortrait: {fileID: 21300000, guid: 1337991d8bb7ae3469f080a1ebdcb277, type: 3}
   dialogueLines:
-  - Esto es perfecto, ahora si que podre salir de aqui.
+  - "Esto es perfecto, ahora si que podr\xE9 salir de aqu\xED."
   - Te lo agradezco mucho. Se te ve buena persona, para no ser una presa.
-  - O quizas si eres una presa?
+  - "O quiz\xE1s s\xED eres una presa?"
   - En cualquier caso, toma esto en agradecimiento.
-  - Te prestare mi fuerza para que puedas escapar si sientes que las paredes te atrapan.
+  - "Te prestar\xE9 mi fuerza para que puedas escapar si sientes que las paredes
+    te atrapan."
   autoProgressLines: 0000000000
+  endDialogueLines: 
   autoProgressDelay: 1.5
   typingSpeed: 0
+  choices: []

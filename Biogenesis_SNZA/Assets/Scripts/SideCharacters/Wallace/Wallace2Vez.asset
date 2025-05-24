@@ -15,7 +15,9 @@ MonoBehaviour:
   npcName: Wallace
   npcPortrait: {fileID: 21300000, guid: 1e640ee388642fd4683e7c243fb0bf18, type: 3}
   dialogueLines:
-  - Pasa a la trastienda, hay alguien que deberias conocer.
+  - "Pasa a la trastienda, hay alguien que deber\xEDas conocer."
   autoProgressLines: 00
+  endDialogueLines: 
   autoProgressDelay: 1.5
   typingSpeed: 0
+  choices: []

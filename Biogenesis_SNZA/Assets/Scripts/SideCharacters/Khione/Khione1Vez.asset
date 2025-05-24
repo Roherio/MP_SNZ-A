@@ -15,12 +15,12 @@ MonoBehaviour:
   npcName: Khione
   npcPortrait: {fileID: 21300000, guid: b1b2654f3f86fd74dad15673f9da497a, type: 3}
   dialogueLines:
-  - Flipando pepinillos de terciopelo! Que haces aqui? No te habia visto antes. De
-    hecho, nunca habia visto a alguien como tu.
-  - De donde eres? Que llevas ahi? Como funciona?
-  - Pocas palabras, eh? Bueno, ya hablo yo. Mi padre dice que hablo un monton.
-  - Siempre cuida de mi para que este bien, aunque a veces no me guste, pero he de
-    confiar en el. Si no puedo confiar en quien me ha criado, en quien?
+  - "Flipando pepinillos de terciopelo! Qu\xE9 haces aqu\xED? No te hab\xEDa visto
+    antes. De hecho, nunca hab\xEDa visto a alguien como t\xFA."
+  - "De d\xF3nde eres? Qu\xE9 llevas ah\xED? C\xF3mo funciona?"
+  - "Pocas palabras, eh? Bueno, ya hablo yo. Mi padre dice que hablo un mont\xF3n."
+  - "Siempre cuida de m\xED para que est\xE9 bien, aunque a veces no me guste, pero
+    he de confiar en \xE9l. Si no puedo confiar en quien me ha criado, en qui\xE9n?"
   - Necesitas que arregle eso? Bueno, gratis no lo voy a hacer. Pero no quiero tu
     dinero, no me sirve. Si consigues algo que busco, haremos negocios.
   autoProgressLines: 000000

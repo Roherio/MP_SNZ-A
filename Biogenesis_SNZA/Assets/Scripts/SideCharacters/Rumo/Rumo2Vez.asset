@@ -15,9 +15,12 @@ MonoBehaviour:
   npcName: Rumo
   npcPortrait: {fileID: 21300000, guid: 1337991d8bb7ae3469f080a1ebdcb277, type: 3}
   dialogueLines:
-  - Oh, eso esta mucho mejor... Gracias.
-  - Este no es mi sitio, aunque tampoco parece el tuyo.
-  - Me perdi. Pero ahora no me puedo mover. Todos me veran y eso es demasiado peligroso.
+  - "Oh, eso est\xE1 mucho mejor... Gracias."
+  - "\xC9ste no es mi sitio, aunque tampoco parece el tuyo."
+  - "Me perd\xED. Pero ahora no me puedo mover. Todos me ver\xE1n y eso es demasiado
+    peligroso."
   autoProgressLines: 000000
+  endDialogueLines: 
   autoProgressDelay: 1.5
   typingSpeed: 0
+  choices: []
