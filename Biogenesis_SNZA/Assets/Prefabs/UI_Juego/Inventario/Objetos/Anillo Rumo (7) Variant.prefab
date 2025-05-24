@@ -26,17 +26,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2751245476757028739, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_text
-      value: Rumo, el timido humano-cabra, sintio tal aprecio por mi que me entrego
-        su SNZ-A cristalizada. Esta me otorga la habilidad de romper obstaculos con
-        mi frente.
+      value: "Rumo, el t\xEDmido humano cabra, sinti\xF3 tal aprecio por m\xED que
+        me entreg\xF3 su SNZ A cristalizada. \xC9sta me otorga la habilidad de romper
+        obst\xE1culos con mi frente."
       objectReference: {fileID: 0}
     - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_text
       value: Anillo de Cabra
-      objectReference: {fileID: 0}
-    - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
-      propertyPath: m_fontSize
-      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_fontSizeBase

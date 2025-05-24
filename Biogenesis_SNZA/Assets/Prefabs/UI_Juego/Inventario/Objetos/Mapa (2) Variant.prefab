@@ -26,18 +26,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2751245476757028739, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_text
-      value: 'Contiene toda clase de informacion sobre la ciudad de Axia.
-
-        Curiosamente,
-        esta firmado con una "G." en el pie de pagina.'
+      value: "Contiene toda clase de informaci\xF3n sobre la ciudad de Axia.\nCuriosamente,
+        est\xE1 firmado con una \"G.\" en el pie de p\xE1gina."
       objectReference: {fileID: 0}
     - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_text
       value: Mapa de Axia
-      objectReference: {fileID: 0}
-    - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
-      propertyPath: m_fontSize
-      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_fontSizeBase

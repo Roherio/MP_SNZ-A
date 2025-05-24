@@ -26,8 +26,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2751245476757028739, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_text
-      value: Objeto que necesito para almacenar sangre en caso de perder mucha en
-        combate. Necesito cuero si quiero hacer hueco para mas viales.
+      value: "Objeto que necesito para almacenar sangre en caso de perder mucha en
+        combate. Necesito cuero si quiero hacer hueco para m\xE1s viales."
       objectReference: {fileID: 0}
     - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_text

@@ -256,8 +256,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continuar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4849ea90ea099d458b929fc1b391f51, type: 2}
-  m_sharedMaterial: {fileID: -1837649449672462102, guid: e4849ea90ea099d458b929fc1b391f51, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
+  m_sharedMaterial: {fileID: 4644483918358274456, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -281,8 +281,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1147,24 +1147,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'La SNZ-A, sustancia genetica que brinda a su portador la capacidad de
-    transformarse en animal, ha provocado incontables guerras.
-
-
-    Hace mucho tiempo,
-    cuando apenas era adolescente, Abraxas me acogio despues de que mi pueblo fuera
-    atacado. El reino que nos ataco fue Axia, gobernado por Ursina Glace.
-
-
-    Ahora
-    yo, Liora, por orden de Abraxas, asaltare la fortaleza de Ursina y recuperare
-    la SNZ-A que posee.
-
-
-    Aunque no sera tarea facil...'
+  m_text: "La SNZ A, sustancia gen\xE9tica que brinda a su portador la capacidad
+    de transformarse en animal, ha provocado incontables guerras.\n\nHace muchos
+    a\xF1os, en mi ni\xF1ez, Abraxas me acogi\xF3 despu\xE9s de que mi pueblo fuera
+    atacado. El reino que nos atac\xF3 fue Axia, gobernado por Ursina Glace.\n\nAhora
+    yo, Liora, por orden de Abraxas, asaltar\xE9 la fortaleza de Ursina y recuperar\xE9
+    la SNZ A que posee.\n\nAunque no sera tarea f\xE1cil..."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4849ea90ea099d458b929fc1b391f51, type: 2}
-  m_sharedMaterial: {fileID: -1837649449672462102, guid: e4849ea90ea099d458b929fc1b391f51, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
+  m_sharedMaterial: {fileID: 4644483918358274456, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1188,8 +1179,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1198,7 +1189,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

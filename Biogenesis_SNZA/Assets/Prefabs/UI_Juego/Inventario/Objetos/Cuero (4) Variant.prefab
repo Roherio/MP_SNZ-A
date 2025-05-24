@@ -26,8 +26,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2751245476757028739, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_text
-      value: Material que necesito si quiero almacenar mas viales con los que regenerar
-        mi sangre perdida en combate.
+      value: "Material que necesito si quiero almacenar m\xE1s viales con los que
+        regenerar mi sangre perdida en combate."
       objectReference: {fileID: 0}
     - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_text

@@ -24,6 +24,15 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2751245476757028739, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
+      propertyPath: m_text
+      value: "La m\xE1scara blanca que Abraxas me dio para protegerme y para esconder
+        mi identidad. Est\xE1 un poco rota."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
+      propertyPath: m_text
+      value: "M\xE1scara"
+      objectReference: {fileID: 0}
     - target: {fileID: 6283972894667540080, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_Name
       value: Mascara (0) Variant

@@ -14,15 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0c21912e797f64a47a40f55682d9cd81, type: 3}
     - target: {fileID: 2751245476757028739, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_text
-      value: Metalica y resistente, perfecta como material de creacion.
+      value: "Met\xE1lica y resistente, perfecta como material de creaci\xF3n."
       objectReference: {fileID: 0}
     - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_text
       value: Barra de acero
-      objectReference: {fileID: 0}
-    - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
-      propertyPath: m_fontSize
-      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3526640003794321558, guid: a3a74a7fba9eab24497575937d659beb, type: 3}
       propertyPath: m_margin.y
