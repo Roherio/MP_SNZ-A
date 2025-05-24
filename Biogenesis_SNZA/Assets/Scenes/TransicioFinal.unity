@@ -1141,7 +1141,7 @@ MonoBehaviour:
   buttonMainMenu: {fileID: 449541380}
   buttonMainMenuImage: {fileID: 291206662}
   delayShowButton: 7.3
-  charactersPerSecond: 20
+  charactersPerSecond: 16
   puntapartDelay: 0.5
   voiceSound: {fileID: 8300000, guid: 4e3300a8ed087444dacf3b7c322b05c8, type: 3}
   textoSkip: {fileID: 0}
