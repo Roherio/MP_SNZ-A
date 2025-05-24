@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.Burst.CompilerServices;
 
 public class TypewriterEffect_Script : MonoBehaviour
 {
@@ -20,11 +21,20 @@ public class TypewriterEffect_Script : MonoBehaviour
     [SerializeField] private float charactersPerSecond = 20f;
     [SerializeField] private float puntapartDelay = 0.5f;
 
+    [SerializeField] AudioClip voiceSound;
+    private AudioSource audioSource;
+
+    //skipping logic
+    public bool estaSaltando {  get; private set; }
+    public GameObject textoSkip;
+
     private void Awake()
     {
         textBox = GetComponent<TMP_Text>();
+        audioSource = GetComponent<AudioSource>();
         _simpleDelay = new WaitForSeconds(1 / charactersPerSecond);
         _puntapartDelay = new WaitForSeconds(puntapartDelay);
+        //skipDelay = new WaitForSeconds(1 / (charactersPerSecond * skipSpeedup));
     }
 
     // Start is called before the first frame update
@@ -33,13 +43,18 @@ public class TypewriterEffect_Script : MonoBehaviour
         SetText(textBox.text);
         buttonMainMenuImage.SetActive(false);
         buttonMainMenu.SetActive(false);
-        Invoke("ActivateButton", delayShowButton);
+        textoSkip.SetActive(false);
+        Invoke("ActivateTextoSkip", 3f);
+        //Invoke("ActivateButton", delayShowButton);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (textBox.maxVisibleCharacters != textBox.textInfo.characterCount - 1) { Skip(); }
+        }
     }
     public void SetText(string text)
     {
@@ -59,8 +74,9 @@ public class TypewriterEffect_Script : MonoBehaviour
         {
             char character = textInfo.characterInfo[currentVisibleCharacterIndex].character;
             textBox.maxVisibleCharacters++;
-
-            if (character == '.' || character == ',')
+            audioSource.clip = voiceSound;
+            audioSource.Play();
+            if (!estaSaltando && character == '.' || character == ',')
             {
                 yield return _puntapartDelay;
             }
@@ -69,7 +85,28 @@ public class TypewriterEffect_Script : MonoBehaviour
                 yield return _simpleDelay;
             }
             currentVisibleCharacterIndex++;
+            if (textBox.maxVisibleCharacters == textBox.textInfo.characterCount)
+            {
+                ActivateButton();
+            }
         }
+    }
+    void Skip()
+    {
+        if (estaSaltando || textoSkip == null) { return; }
+        estaSaltando = true;
+        StopCoroutine(typewriterCoroutine);
+        ActivateButton();
+        textBox.maxVisibleCharacters = textBox.textInfo.characterCount;
+    }
+    /*private IEnumerator SkipSpeedupReset()
+    {
+        yield return new WaitUntil(() => textBox.maxVisibleCharacters == textBox.textInfo.characterCount - 1);
+        estaSaltando = false;
+    }*/
+    void ActivateTextoSkip()
+    {
+        textoSkip.SetActive(true);
     }
     void ActivateButton()
     {
