@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d3ac1d7444f7da9488995d1fb31a080a
+guid: 8ea7ddb6a61aae54eb803e6e6f2e091a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 16
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638836867168642789
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 68
       width: 12
       height: 32
-    spriteID: 3186c0260853ae04e9821fe1ec46c7e7
+    spriteID: 4aec76504409a76478c2ab5748665e43
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 12
-    spriteID: cfc0248a729b0db469e74ffe931c267d
+    spriteID: 9b7adc15954b7cf40a6da8545b0bf5b9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 221
       width: 24
       height: 24
-    spriteID: 3a1e54d0d778993408657ca01c10f0bc
+    spriteID: 25bbf3d003458a440978481f55154c7b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 188
       width: 24
       height: 25
-    spriteID: f55e866bac8e45a48ae574e78f8e2f13
+    spriteID: f108ac37c8092c340b9fee4b36c936f1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 4
       width: 24
       height: 24
-    spriteID: 5993c59a7627bd040a243ecedc425c9e
+    spriteID: 7d824308ba2fec3469e9a57892a2216a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 36
       width: 24
       height: 24
-    spriteID: 03acd458670c8cf489547fcdcb238488
+    spriteID: 605a048a1fa27c94ea66aab407417a77
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 108
       width: 14
       height: 16
-    spriteID: 2a919db74c1ffe541af77694dde423f5
+    spriteID: 186b0e8b94a82f54389f5e74cedf0818
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 132
       width: 16
       height: 14
-    spriteID: b46ed53128cc79143aed68bb8ab84058
+    spriteID: 58504253d802dde45abfdc3af78c8eef
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 157
       width: 32
       height: 23
-    spriteID: 306e68e3c68539c48a17d5b227ab736f
+    spriteID: 787c8295985e13e45a973653f563233c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 44
       width: 32
       height: 25
-    spriteID: 9e068b664ea55ef4bb0ae38a2ed45363
+    spriteID: aefeb8f0e9b502145a041f42c7ca9f30
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 77
       width: 24
       height: 32
-    spriteID: 2412bd2386db4994fa08039ba847ecaf
+    spriteID: 99f937589f1b1fe45aaca6a7c57519a7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -352,7 +352,7 @@ ScriptedImporter:
       y: 117
       width: 24
       height: 32
-    spriteID: 069613818b3e5944f859fee9a8c20846
+    spriteID: 044995bd0d873414599b73150267602d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -372,7 +372,7 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 32
-    spriteID: 13a8472527e36e84b9929df06faa20d5
+    spriteID: ac3b800d2bf43da44bf1a094701e0c3f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -398,7 +398,7 @@ ScriptedImporter:
         y: 0
         width: 12
         height: 32
-      spriteId: 3186c0260853ae04e9821fe1ec46c7e7
+      spriteId: 4aec76504409a76478c2ab5748665e43
     - name: tuberias_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -407,7 +407,7 @@ ScriptedImporter:
         y: 11
         width: 32
         height: 12
-      spriteId: cfc0248a729b0db469e74ffe931c267d
+      spriteId: 9b7adc15954b7cf40a6da8545b0bf5b9
     - name: tuberias_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -416,7 +416,7 @@ ScriptedImporter:
         y: 0
         width: 24
         height: 24
-      spriteId: 3a1e54d0d778993408657ca01c10f0bc
+      spriteId: 25bbf3d003458a440978481f55154c7b
     - name: tuberias_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
@@ -425,7 +425,7 @@ ScriptedImporter:
         y: 0
         width: 24
         height: 25
-      spriteId: f55e866bac8e45a48ae574e78f8e2f13
+      spriteId: f108ac37c8092c340b9fee4b36c936f1
     - name: tuberias_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
@@ -434,7 +434,7 @@ ScriptedImporter:
         y: 8
         width: 24
         height: 24
-      spriteId: 5993c59a7627bd040a243ecedc425c9e
+      spriteId: 7d824308ba2fec3469e9a57892a2216a
     - name: tuberias_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
@@ -443,7 +443,7 @@ ScriptedImporter:
         y: 8
         width: 24
         height: 24
-      spriteId: 03acd458670c8cf489547fcdcb238488
+      spriteId: 605a048a1fa27c94ea66aab407417a77
     - name: tuberias_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
@@ -452,7 +452,7 @@ ScriptedImporter:
         y: 8
         width: 14
         height: 16
-      spriteId: 2a919db74c1ffe541af77694dde423f5
+      spriteId: 186b0e8b94a82f54389f5e74cedf0818
     - name: tuberias_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
@@ -461,7 +461,7 @@ ScriptedImporter:
         y: 9
         width: 16
         height: 14
-      spriteId: b46ed53128cc79143aed68bb8ab84058
+      spriteId: 58504253d802dde45abfdc3af78c8eef
     - name: tuberias_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
@@ -470,7 +470,7 @@ ScriptedImporter:
         y: 9
         width: 32
         height: 23
-      spriteId: 306e68e3c68539c48a17d5b227ab736f
+      spriteId: 787c8295985e13e45a973653f563233c
     - name: tuberias_Frame_9
       frameIndex: 9
       additiveSortOrder: 0
@@ -479,7 +479,7 @@ ScriptedImporter:
         y: 0
         width: 32
         height: 25
-      spriteId: 9e068b664ea55ef4bb0ae38a2ed45363
+      spriteId: aefeb8f0e9b502145a041f42c7ca9f30
     - name: tuberias_Frame_10
       frameIndex: 10
       additiveSortOrder: 0
@@ -488,7 +488,7 @@ ScriptedImporter:
         y: 0
         width: 24
         height: 32
-      spriteId: 2412bd2386db4994fa08039ba847ecaf
+      spriteId: 99f937589f1b1fe45aaca6a7c57519a7
     - name: tuberias_Frame_11
       frameIndex: 11
       additiveSortOrder: 0
@@ -497,7 +497,7 @@ ScriptedImporter:
         y: 0
         width: 24
         height: 32
-      spriteId: 069613818b3e5944f859fee9a8c20846
+      spriteId: 044995bd0d873414599b73150267602d
     - name: tuberias_Frame_12
       frameIndex: 12
       additiveSortOrder: 0
@@ -506,7 +506,7 @@ ScriptedImporter:
         y: 0
         width: 32
         height: 32
-      spriteId: 13a8472527e36e84b9929df06faa20d5
+      spriteId: ac3b800d2bf43da44bf1a094701e0c3f
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -517,30 +517,6 @@ ScriptedImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
