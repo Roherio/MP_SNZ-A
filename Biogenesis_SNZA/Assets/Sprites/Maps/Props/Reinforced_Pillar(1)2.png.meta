@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5a833d7197182ab449ca33b571bb6bfb
+guid: 6b7e2902b911e104997989c3b6e6d5ff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Reinforced_Pillar(1)_0
+      name: Reinforced_Pillar(1)2_0
       rect:
         serializedVersion: 2
         x: 17
@@ -105,20 +105,20 @@ TextureImporter:
         width: 30
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98e22b7fa1786bc499328d6aa9029ac0
-      internalID: -489824536
+      spriteID: d4bea1865cd9c534aa794f67c0d37c24
+      internalID: -1816275694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Reinforced_Pillar(1)_1
+      name: Reinforced_Pillar(1)2_1
       rect:
         serializedVersion: 2
         x: 85
@@ -126,14 +126,14 @@ TextureImporter:
         width: 22
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c75e607caa367b743b6eb607fe91782b
-      internalID: -1527022314
+      spriteID: 8aff3a3e07d75d74fb0de13c918d8e48
+      internalID: -1971700126
       vertices: []
       indices: 
       edges: []
@@ -149,8 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Reinforced_Pillar(1)_0: -489824536
-      Reinforced_Pillar(1)_1: -1527022314
+      Reinforced_Pillar(1)2_0: -1816275694
+      Reinforced_Pillar(1)2_1: -1971700126
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
