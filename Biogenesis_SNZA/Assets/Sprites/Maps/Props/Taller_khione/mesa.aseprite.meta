@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: mesa
     originalName: 
-    pivot: {x: 0.5, y: -0.11111111}
+    pivot: {x: 0.48305085, y: -0.11111111}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 128
+      width: 118
       height: 36
     spriteID: b071a6ec14cd14843ab3050154f1ad76
     spriteBone: []
@@ -154,9 +154,9 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 5
+        x: 12
         y: 4
-        width: 128
+        width: 118
         height: 36
       spriteId: b071a6ec14cd14843ab3050154f1ad76
     linkedCells: []

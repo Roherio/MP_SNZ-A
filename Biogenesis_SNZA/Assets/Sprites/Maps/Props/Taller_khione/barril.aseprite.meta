@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: barril_Frame_0
     originalName: 
-    pivot: {x: 0.484375, y: -0.13953489}
+    pivot: {x: 0.484375, y: -0.20512821}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 55
       width: 32
-      height: 43
+      height: 39
     spriteID: df448c984f467164d805ec9840652b04
     spriteBone: []
     spriteOutline: []
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 55}
   - name: barril_Frame_1
     originalName: 
     pivot: {x: 0.484375, y: -0.13953489}
@@ -149,7 +149,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 55
+      y: 4
       width: 32
       height: 43
     spriteID: 16313a91613534d4887f884654af2c55
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 55}
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -175,9 +175,9 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 7
-        y: 6
+        y: 8
         width: 32
-        height: 43
+        height: 39
       spriteId: df448c984f467164d805ec9840652b04
     - name: barril_Frame_1
       frameIndex: 1

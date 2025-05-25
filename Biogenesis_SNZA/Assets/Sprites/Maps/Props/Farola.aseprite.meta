@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Farola
     originalName: 
-    pivot: {x: 0.45238096, y: -0.05084746}
+    pivot: {x: 0.45652175, y: -0.051282052}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 21
-      height: 118
+      width: 23
+      height: 117
     spriteID: 03e791f3912ca764ba57dae5bed46ab1
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 5
+        x: 4
         y: 6
-        width: 21
-        height: 118
+        width: 23
+        height: 117
       spriteId: 03e791f3912ca764ba57dae5bed46ab1
     linkedCells: []
     parentIndex: -1
