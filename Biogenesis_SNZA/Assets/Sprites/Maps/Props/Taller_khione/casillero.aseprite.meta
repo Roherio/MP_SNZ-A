@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: casillero
     originalName: 
-    pivot: {x: 0.5, y: -0.008333333}
+    pivot: {x: 0.5, y: -0.016666666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -155,7 +155,7 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 3
-        y: 1
+        y: 2
         width: 32
         height: 120
       spriteId: aa2f34ad32e85f64da8d58a4832d5519
