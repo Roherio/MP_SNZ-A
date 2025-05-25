@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MapManager_Script : MonoBehaviour
 {
     [SerializeField] private Image[] maps;
-    [SerializeField] private bool[] activeMapsIndex;
+    public static bool[] activeMapsIndex;
 
     public static MapManager_Script instance;
     private void Awake()
@@ -19,15 +19,17 @@ public class MapManager_Script : MonoBehaviour
         {
             instance = this;
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
         activeMapsIndex = new bool[maps.Length];
         for (int i = 0; i < activeMapsIndex.Length; i++)
         {
             activeMapsIndex[i] = false;
         }
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (EventsManager_Script.allMapsActive) { return; }
+        //activar o desactivar mapas en funcion de true o false. Solo entraremos si ALLMAPSACTIVE es falsa.
         for (int i = 0; i < maps.Length; i++)
         {
             if (activeMapsIndex[i])

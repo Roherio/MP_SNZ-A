@@ -24,6 +24,8 @@ public class EventsManager_Script : MonoBehaviour
     public static bool habladoRumo1vez = false;
     public static bool habladoUrsina1vez = false;
 
+    public static bool allMapsActive = false;
+
     private void Awake()
     {
         BotonesActivos_Script.bObjKhione1 = barraKhione;
