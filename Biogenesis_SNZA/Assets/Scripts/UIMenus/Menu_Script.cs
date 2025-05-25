@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Menu_Script : MonoBehaviour
 {
     public GameObject menuCanvas;
+    public GameObject mapPanel;
     public GameObject pausePanel;
     public GameObject controlesPanel;
 
@@ -16,12 +17,12 @@ public class Menu_Script : MonoBehaviour
     public Image[] pestanyasImages;
     public GameObject[] paginas;
     public int numeroPestanya = 0;
-    
 
     // Start is called before the first frame update
     void Start()
     {
         menuCanvas.SetActive(false);
+        mapPanel.SetActive(false);
         pausePanel.SetActive(false);
         controlesPanel.SetActive(false);
         GameControl_Script.isPaused = false;
@@ -31,6 +32,10 @@ public class Menu_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            MapManager_Script.instance.ActivateAllMaps();
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
@@ -38,24 +43,30 @@ public class Menu_Script : MonoBehaviour
         }
         if (!pausePanel.activeSelf)
         {
-            if (Input.GetKeyDown(KeyCode.Tab))
+            if (Input.GetKeyDown(KeyCode.M))
             {
-                ToggleMenu();
+                ToggleMap();
             }
-            UpdatePestanyas();
-            ActivarPestanya(numeroPestanya);
+            if (!mapPanel.activeSelf)
+            {
+                if (Input.GetKeyDown(KeyCode.Tab))
+                {
+                    ToggleMenu();
+                }
+                UpdatePestanyas();
+                ActivarPestanya(numeroPestanya);
+            }
         }
     }
-    //pestanyas con input system
-    /*public void Pestanyas(InputAction.CallbackContext context)
-    {
-        print("tas cambiando de pestanya");
-        inputPestanyas = context.ReadValue<Vector2>().x;
-    }*/
     public void ToggleMenu()
     {
         menuCanvas.SetActive(!menuCanvas.activeSelf);
         GameControl_Script.isPaused = menuCanvas.activeSelf;
+    }
+    public void ToggleMap()
+    {
+        mapPanel.SetActive(!mapPanel.activeSelf);
+        GameControl_Script.isPaused = mapPanel.activeSelf;
     }
     public void TogglePause()
     {

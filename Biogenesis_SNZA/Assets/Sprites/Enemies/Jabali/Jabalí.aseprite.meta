@@ -263,14 +263,14 @@ ScriptedImporter:
     uvTransform: {x: 334, y: 741}
   - name: "Jabal\xED_Frame_4"
     originalName: 
-    pivot: {x: 0.018867997, y: -0.029411767}
+    pivot: {x: 0.019230843, y: -0.029411767}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 334
       y: 631
-      width: 53
+      width: 52
       height: 102
     spriteID: dd3910d9a04c9c6448f6a1c1549cfe74
     spriteBone: []
@@ -1119,7 +1119,7 @@ ScriptedImporter:
       cellRect:
         x: 159
         y: 3
-        width: 53
+        width: 52
         height: 102
       spriteId: dd3910d9a04c9c6448f6a1c1549cfe74
     - name: "Jabal\xED_Frame_20"
