@@ -123,15 +123,22 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: cajas_Frame_0
     originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
+    pivot: {x: 0.5862069, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 84
       y: 4
       width: 34
       height: 16
+=======
+      x: 39
+      y: 58
+      width: 29
+      height: 15
+>>>>>>> Stashed changes
     spriteID: 925639e3f5256a04e89f23c706accb4b
     spriteBone: []
     spriteOutline: []
@@ -140,18 +147,29 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 84, y: 4}
+=======
+    uvTransform: {x: 39, y: 58}
+>>>>>>> Stashed changes
   - name: cajas_Frame_1
     originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
+    pivot: {x: 0.5862069, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 43
       y: 52
       width: 34
       height: 16
+=======
+      x: 39
+      y: 81
+      width: 29
+      height: 15
+>>>>>>> Stashed changes
     spriteID: af8180a9ceb3e534a8f65338e2e9f2cb
     spriteBone: []
     spriteOutline: []
@@ -160,18 +178,29 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 43, y: 52}
+=======
+    uvTransform: {x: 39, y: 81}
+>>>>>>> Stashed changes
   - name: cajas_Frame_2
     originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
+    pivot: {x: 0.5862069, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 43
       y: 76
       width: 34
       height: 16
+=======
+      x: 39
+      y: 104
+      width: 29
+      height: 15
+>>>>>>> Stashed changes
     spriteID: 78c8f5597220aef4ca88e9a16064d8cc
     spriteBone: []
     spriteOutline: []
@@ -180,18 +209,29 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 43, y: 76}
+=======
+    uvTransform: {x: 39, y: 104}
+>>>>>>> Stashed changes
   - name: cajas_Frame_3
     originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
+    pivot: {x: 0.5862069, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 43
       y: 100
       width: 34
       height: 16
+=======
+      x: 39
+      y: 127
+      width: 29
+      height: 15
+>>>>>>> Stashed changes
     spriteID: 784574f7171b5a94c9f64ed3cbd0a5d9
     spriteBone: []
     spriteOutline: []
@@ -200,18 +240,29 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 43, y: 100}
+=======
+    uvTransform: {x: 39, y: 127}
+>>>>>>> Stashed changes
   - name: cajas_Frame_4
     originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
+    pivot: {x: 0.5862069, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 43
       y: 124
       width: 34
       height: 16
+=======
+      x: 39
+      y: 150
+      width: 29
+      height: 15
+>>>>>>> Stashed changes
     spriteID: d5f6941583a72a646afaf405c4d4ae6f
     spriteBone: []
     spriteOutline: []
@@ -220,17 +271,27 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 43, y: 124}
+=======
+    uvTransform: {x: 39, y: 150}
+>>>>>>> Stashed changes
   - name: cajas_Frame_5
     originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
+    pivot: {x: 0.61904764, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 43
       y: 168
       width: 25
+=======
+      x: 39
+      y: 192
+      width: 21
+>>>>>>> Stashed changes
       height: 11
     spriteID: 43889488bba47594a93b538928d45e58
     spriteBone: []
@@ -240,17 +301,26 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 43, y: 168}
+=======
+    uvTransform: {x: 39, y: 192}
+>>>>>>> Stashed changes
   - name: cajas_Frame_6
     originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
+    pivot: {x: 0.7647059, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
+<<<<<<< Updated upstream
       y: 159
       width: 21
+=======
+      y: 146
+      width: 17
+>>>>>>> Stashed changes
       height: 11
     spriteID: 3f51da897b24e64419421e6b00ea524e
     spriteBone: []
@@ -260,17 +330,27 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 4, y: 159}
+=======
+    uvTransform: {x: 4, y: 146}
+>>>>>>> Stashed changes
   - name: cajas_Frame_7
     originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
+    pivot: {x: 0.61904764, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 43
       y: 187
       width: 25
+=======
+      x: 39
+      y: 211
+      width: 21
+>>>>>>> Stashed changes
       height: 11
     spriteID: 5c0465bd85fb38348b83a0550487785b
     spriteBone: []
@@ -280,17 +360,26 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 43, y: 187}
+=======
+    uvTransform: {x: 39, y: 211}
+>>>>>>> Stashed changes
   - name: cajas_Frame_8
     originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
+    pivot: {x: 0.7647059, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
+<<<<<<< Updated upstream
       y: 178
       width: 21
+=======
+      y: 165
+      width: 17
+>>>>>>> Stashed changes
       height: 11
     spriteID: 226da08d1e82a0449beabd4143a4fee3
     spriteBone: []
@@ -300,17 +389,27 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 4, y: 178}
+=======
+    uvTransform: {x: 4, y: 165}
+>>>>>>> Stashed changes
   - name: cajas_Frame_9
     originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
+    pivot: {x: 0.61904764, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 43
       y: 206
       width: 25
+=======
+      x: 39
+      y: 230
+      width: 21
+>>>>>>> Stashed changes
       height: 11
     spriteID: 928ffcc24c67f5c44a2c94ac0b900a1d
     spriteBone: []
@@ -320,17 +419,26 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 43, y: 206}
+=======
+    uvTransform: {x: 39, y: 230}
+>>>>>>> Stashed changes
   - name: cajas_Frame_10
     originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
+    pivot: {x: 0.7647059, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
+<<<<<<< Updated upstream
       y: 197
       width: 21
+=======
+      y: 184
+      width: 17
+>>>>>>> Stashed changes
       height: 11
     spriteID: 13882446db6422141805f56462d337f6
     spriteBone: []
@@ -340,17 +448,27 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 4, y: 197}
+=======
+    uvTransform: {x: 4, y: 184}
+>>>>>>> Stashed changes
   - name: cajas_Frame_11
     originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
+    pivot: {x: 0.61904764, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 43
       y: 225
       width: 25
+=======
+      x: 4
+      y: 108
+      width: 21
+>>>>>>> Stashed changes
       height: 11
     spriteID: a5ef38fed65af604b81877a797cc41cf
     spriteBone: []
@@ -360,17 +478,26 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 43, y: 225}
+=======
+    uvTransform: {x: 4, y: 108}
+>>>>>>> Stashed changes
   - name: cajas_Frame_12
     originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
+    pivot: {x: 0.7647059, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
+<<<<<<< Updated upstream
       y: 216
       width: 21
+=======
+      y: 203
+      width: 17
+>>>>>>> Stashed changes
       height: 11
     spriteID: 317c0f75dacbea941a6cdef1e59e0fd6
     spriteBone: []
@@ -380,17 +507,26 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 4, y: 216}
+=======
+    uvTransform: {x: 4, y: 203}
+>>>>>>> Stashed changes
   - name: cajas_Frame_13
     originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
+    pivot: {x: 0.61904764, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
+<<<<<<< Updated upstream
       y: 140
       width: 25
+=======
+      y: 127
+      width: 21
+>>>>>>> Stashed changes
       height: 11
     spriteID: 0e5061f3d1056214893f79a4a513b129
     spriteBone: []
@@ -400,18 +536,26 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 4, y: 140}
+=======
+    uvTransform: {x: 4, y: 127}
+>>>>>>> Stashed changes
   - name: cajas_Frame_14
     originalName: 
-    pivot: {x: 0.4848485, y: -0.15}
+    pivot: {x: 0.55172414, y: -0.15789475}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 43
+=======
+      x: 39
+>>>>>>> Stashed changes
       y: 4
-      width: 33
-      height: 20
+      width: 29
+      height: 19
     spriteID: 951551035f5c67f409a6258c495b7307
     spriteBone: []
     spriteOutline: []
@@ -420,18 +564,32 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 43, y: 4}
   - name: cajas_Frame_15
     originalName: 
     pivot: {x: 0.55172414, y: -0.13636364}
+=======
+    uvTransform: {x: 39, y: 4}
+  - name: cajas_Frame_15
+    originalName: 
+    pivot: {x: 0.55172414, y: -0.15789475}
+>>>>>>> Stashed changes
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 4
       y: 110
       width: 29
       height: 22
+=======
+      x: 39
+      y: 31
+      width: 29
+      height: 19
+>>>>>>> Stashed changes
     spriteID: 8b5eeef34197a1c459b191c3bf3c5a3d
     spriteBone: []
     spriteOutline: []
@@ -440,18 +598,22 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 4, y: 110}
+=======
+    uvTransform: {x: 39, y: 31}
+>>>>>>> Stashed changes
   - name: cajas_Frame_16
     originalName: 
-    pivot: {x: 0.4516129, y: -0.044444446}
+    pivot: {x: 0.5185185, y: -0.045454547}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 31
-      height: 45
+      width: 27
+      height: 44
     spriteID: be69949197e631540a8804c38beaed21
     spriteBone: []
     spriteOutline: []
@@ -463,15 +625,21 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: cajas_Frame_17
     originalName: 
-    pivot: {x: 0.5185185, y: -0.044444446}
+    pivot: {x: 0.6086956, y: -0.045454547}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
+<<<<<<< Updated upstream
       y: 57
       width: 27
       height: 45
+=======
+      y: 56
+      width: 23
+      height: 44
+>>>>>>> Stashed changes
     spriteID: 23a8a7ccc6bb3b94f9e6db74f114eec1
     spriteBone: []
     spriteOutline: []
@@ -480,18 +648,29 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 4, y: 57}
+=======
+    uvTransform: {x: 4, y: 56}
+>>>>>>> Stashed changes
   - name: cajas_Frame_18
     originalName: 
-    pivot: {x: 0.5185185, y: -0.16666666}
+    pivot: {x: 0.6086956, y: -0.18181819}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 43
       y: 148
       width: 27
       height: 12
+=======
+      x: 39
+      y: 173
+      width: 23
+      height: 11
+>>>>>>> Stashed changes
     spriteID: 085eef0fa332a4847a810b48d157013e
     spriteBone: []
     spriteOutline: []
@@ -500,18 +679,29 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 43, y: 148}
+=======
+    uvTransform: {x: 39, y: 173}
+>>>>>>> Stashed changes
   - name: cajas_Frame_19
     originalName: 
-    pivot: {x: 0.50980395, y: -0.16666666}
+    pivot: {x: 0.5106383, y: -0.18181819}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 43
       y: 32
       width: 51
       height: 12
+=======
+      x: 76
+      y: 4
+      width: 47
+      height: 11
+>>>>>>> Stashed changes
     spriteID: beaa141df029894428c5e0c3e1752f3a
     spriteBone: []
     spriteOutline: []
@@ -520,18 +710,29 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 43, y: 32}
+=======
+    uvTransform: {x: 76, y: 4}
+>>>>>>> Stashed changes
   - name: cajas_Frame_20
     originalName: 
-    pivot: {x: 0.55, y: -0.16666666}
+    pivot: {x: 0.6875, y: -0.18181819}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: 102
       y: 32
       width: 20
       height: 12
+=======
+      x: 4
+      y: 222
+      width: 16
+      height: 11
+>>>>>>> Stashed changes
     spriteID: 69a22a2e269bb5542a771f5193aad72d
     spriteBone: []
     spriteOutline: []
@@ -540,7 +741,11 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+<<<<<<< Updated upstream
     uvTransform: {x: 102, y: 32}
+=======
+    uvTransform: {x: 4, y: 222}
+>>>>>>> Stashed changes
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -556,8 +761,8 @@ ScriptedImporter:
       cellRect:
         x: 10
         y: 5
-        width: 34
-        height: 16
+        width: 29
+        height: 15
       spriteId: 925639e3f5256a04e89f23c706accb4b
     - name: cajas_Frame_1
       frameIndex: 1
@@ -565,8 +770,8 @@ ScriptedImporter:
       cellRect:
         x: 10
         y: 5
-        width: 34
-        height: 16
+        width: 29
+        height: 15
       spriteId: af8180a9ceb3e534a8f65338e2e9f2cb
     - name: cajas_Frame_2
       frameIndex: 2
@@ -574,8 +779,8 @@ ScriptedImporter:
       cellRect:
         x: 10
         y: 5
-        width: 34
-        height: 16
+        width: 29
+        height: 15
       spriteId: 78c8f5597220aef4ca88e9a16064d8cc
     - name: cajas_Frame_3
       frameIndex: 3
@@ -583,8 +788,8 @@ ScriptedImporter:
       cellRect:
         x: 10
         y: 5
-        width: 34
-        height: 16
+        width: 29
+        height: 15
       spriteId: 784574f7171b5a94c9f64ed3cbd0a5d9
     - name: cajas_Frame_4
       frameIndex: 4
@@ -592,8 +797,8 @@ ScriptedImporter:
       cellRect:
         x: 10
         y: 5
-        width: 34
-        height: 16
+        width: 29
+        height: 15
       spriteId: d5f6941583a72a646afaf405c4d4ae6f
     - name: cajas_Frame_5
       frameIndex: 5
@@ -601,7 +806,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 25
+        width: 21
         height: 11
       spriteId: 43889488bba47594a93b538928d45e58
     - name: cajas_Frame_6
@@ -610,7 +815,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 21
+        width: 17
         height: 11
       spriteId: 3f51da897b24e64419421e6b00ea524e
     - name: cajas_Frame_7
@@ -619,7 +824,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 25
+        width: 21
         height: 11
       spriteId: 5c0465bd85fb38348b83a0550487785b
     - name: cajas_Frame_8
@@ -628,7 +833,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 21
+        width: 17
         height: 11
       spriteId: 226da08d1e82a0449beabd4143a4fee3
     - name: cajas_Frame_9
@@ -637,7 +842,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 25
+        width: 21
         height: 11
       spriteId: 928ffcc24c67f5c44a2c94ac0b900a1d
     - name: cajas_Frame_10
@@ -646,7 +851,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 21
+        width: 17
         height: 11
       spriteId: 13882446db6422141805f56462d337f6
     - name: cajas_Frame_11
@@ -655,7 +860,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 25
+        width: 21
         height: 11
       spriteId: a5ef38fed65af604b81877a797cc41cf
     - name: cajas_Frame_12
@@ -664,7 +869,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 21
+        width: 17
         height: 11
       spriteId: 317c0f75dacbea941a6cdef1e59e0fd6
     - name: cajas_Frame_13
@@ -673,7 +878,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 25
+        width: 21
         height: 11
       spriteId: 0e5061f3d1056214893f79a4a513b129
     - name: cajas_Frame_14
@@ -682,8 +887,8 @@ ScriptedImporter:
       cellRect:
         x: 11
         y: 3
-        width: 33
-        height: 20
+        width: 29
+        height: 19
       spriteId: 951551035f5c67f409a6258c495b7307
     - name: cajas_Frame_15
       frameIndex: 15
@@ -692,7 +897,11 @@ ScriptedImporter:
         x: 11
         y: 3
         width: 29
+<<<<<<< Updated upstream
         height: 22
+=======
+        height: 19
+>>>>>>> Stashed changes
       spriteId: 8b5eeef34197a1c459b191c3bf3c5a3d
     - name: cajas_Frame_16
       frameIndex: 16
@@ -700,8 +909,8 @@ ScriptedImporter:
       cellRect:
         x: 13
         y: 2
-        width: 31
-        height: 45
+        width: 27
+        height: 44
       spriteId: be69949197e631540a8804c38beaed21
     - name: cajas_Frame_17
       frameIndex: 17
@@ -709,8 +918,8 @@ ScriptedImporter:
       cellRect:
         x: 13
         y: 2
-        width: 27
-        height: 45
+        width: 23
+        height: 44
       spriteId: 23a8a7ccc6bb3b94f9e6db74f114eec1
     - name: cajas_Frame_18
       frameIndex: 18
@@ -718,17 +927,17 @@ ScriptedImporter:
       cellRect:
         x: 13
         y: 2
-        width: 27
-        height: 12
+        width: 23
+        height: 11
       spriteId: 085eef0fa332a4847a810b48d157013e
     - name: cajas_Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
-        x: 1
+        x: 3
         y: 2
-        width: 51
-        height: 12
+        width: 47
+        height: 11
       spriteId: beaa141df029894428c5e0c3e1752f3a
     - name: cajas_Frame_20
       frameIndex: 20
@@ -736,8 +945,8 @@ ScriptedImporter:
       cellRect:
         x: 16
         y: 2
-        width: 20
-        height: 12
+        width: 16
+        height: 11
       spriteId: 69a22a2e269bb5542a771f5193aad72d
     linkedCells: []
     parentIndex: -1
