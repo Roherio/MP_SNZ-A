@@ -19,30 +19,36 @@ public class CameraFading : MonoBehaviour
     public void FadeOut(Action onComplete)
     {
         if (!isFading)
-            StartCoroutine(Fade(1f, onComplete));
+            StartCoroutine(Fade(1f, onComplete, 0f));
     }
 
     public void FadeIn(Action onComplete)
     {
         if (!isFading)
-            StartCoroutine(Fade(0f, onComplete));
+            StartCoroutine(Fade(0f, onComplete, 0f));
     }
 
-    private IEnumerator Fade(float targetAlpha, Action onComplete)
+    private IEnumerator Fade(float targetAlpha, Action onComplete, float duration)
     {
         isFading = true;
         float startAlpha = fadeCanvasGroup.alpha;
         float time = 0f;
 
-        while (time < fadeDuration)
+        while (time < duration)
         {
             time += Time.deltaTime;
-            fadeCanvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, time / fadeDuration);
+            fadeCanvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, time / duration);
             yield return null;
         }
 
         fadeCanvasGroup.alpha = targetAlpha;
         isFading = false;
         onComplete?.Invoke();
+    }
+
+    public void FadeInSlow(Action onComplete = null)
+    {
+        if (!isFading)
+            StartCoroutine(Fade(0f, onComplete, 3f));
     }
 }
