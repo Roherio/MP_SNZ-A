@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: cajas_Frame_0
     originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
+    pivot: {x: 0.5862069, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 4
-      width: 34
-      height: 16
+      x: 39
+      y: 58
+      width: 29
+      height: 15
     spriteID: fc2e7888241723d46a38767f5abb7757
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 84, y: 4}
+    uvTransform: {x: 39, y: 58}
   - name: cajas_Frame_1
     originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
+    pivot: {x: 0.5862069, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 52
-      width: 34
-      height: 16
+      x: 39
+      y: 81
+      width: 29
+      height: 15
     spriteID: 1f354830797c253449971fe4043da13a
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 52}
+    uvTransform: {x: 39, y: 81}
   - name: cajas_Frame_2
     originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
+    pivot: {x: 0.5862069, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 76
-      width: 34
-      height: 16
+      x: 39
+      y: 104
+      width: 29
+      height: 15
     spriteID: 65ffd70f343bf0b45925b3966343572a
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 76}
+    uvTransform: {x: 39, y: 104}
   - name: cajas_Frame_3
     originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
+    pivot: {x: 0.5862069, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 100
-      width: 34
-      height: 16
+      x: 39
+      y: 127
+      width: 29
+      height: 15
     spriteID: f4bb16d5c22ee8d42a62455020f1ce09
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 100}
+    uvTransform: {x: 39, y: 127}
   - name: cajas_Frame_4
     originalName: 
-    pivot: {x: 0.49999997, y: -0.3125}
+    pivot: {x: 0.5862069, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 124
-      width: 34
-      height: 16
+      x: 39
+      y: 150
+      width: 29
+      height: 15
     spriteID: acfd0cbbf717c6c429637eec0788794c
     spriteBone: []
     spriteOutline: []
@@ -220,17 +220,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 124}
+    uvTransform: {x: 39, y: 150}
   - name: cajas_Frame_5
     originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
+    pivot: {x: 0.61904764, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 168
-      width: 25
+      x: 39
+      y: 192
+      width: 21
       height: 11
     spriteID: f484d4e00fedab74bb14b11d90e14a13
     spriteBone: []
@@ -240,17 +240,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 168}
+    uvTransform: {x: 39, y: 192}
   - name: cajas_Frame_6
     originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
+    pivot: {x: 0.7647059, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 159
-      width: 21
+      y: 146
+      width: 17
       height: 11
     spriteID: 05b897b6028bec847810eed88757e80d
     spriteBone: []
@@ -260,17 +260,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 159}
+    uvTransform: {x: 4, y: 146}
   - name: cajas_Frame_7
     originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
+    pivot: {x: 0.61904764, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 187
-      width: 25
+      x: 39
+      y: 211
+      width: 21
       height: 11
     spriteID: 2fa1e41802f10214b8601cb60d2548bf
     spriteBone: []
@@ -280,17 +280,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 187}
+    uvTransform: {x: 39, y: 211}
   - name: cajas_Frame_8
     originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
+    pivot: {x: 0.7647059, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 178
-      width: 21
+      y: 165
+      width: 17
       height: 11
     spriteID: adead7c5e51119a4cbd984986a78b0d7
     spriteBone: []
@@ -300,17 +300,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 178}
+    uvTransform: {x: 4, y: 165}
   - name: cajas_Frame_9
     originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
+    pivot: {x: 0.61904764, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 206
-      width: 25
+      x: 39
+      y: 230
+      width: 21
       height: 11
     spriteID: a9c8a96597c6aae44830de00332e2717
     spriteBone: []
@@ -320,17 +320,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 206}
+    uvTransform: {x: 39, y: 230}
   - name: cajas_Frame_10
     originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
+    pivot: {x: 0.7647059, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 197
-      width: 21
+      y: 184
+      width: 17
       height: 11
     spriteID: c1f76c3e38bb52247ae0d4ed77925557
     spriteBone: []
@@ -340,17 +340,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 197}
+    uvTransform: {x: 4, y: 184}
   - name: cajas_Frame_11
     originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
+    pivot: {x: 0.61904764, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 225
-      width: 25
+      x: 4
+      y: 108
+      width: 21
       height: 11
     spriteID: eb9275ae23813934a80c6f7b3e89310e
     spriteBone: []
@@ -360,17 +360,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 225}
+    uvTransform: {x: 4, y: 108}
   - name: cajas_Frame_12
     originalName: 
-    pivot: {x: 0.61904764, y: -0.6363637}
+    pivot: {x: 0.7647059, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 216
-      width: 21
+      y: 203
+      width: 17
       height: 11
     spriteID: e9c205ca085591046aef8946439c2eed
     spriteBone: []
@@ -380,17 +380,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 216}
+    uvTransform: {x: 4, y: 203}
   - name: cajas_Frame_13
     originalName: 
-    pivot: {x: 0.52000004, y: -0.6363637}
+    pivot: {x: 0.61904764, y: -0.6363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 140
-      width: 25
+      y: 127
+      width: 21
       height: 11
     spriteID: ad1479c8e1c59064298feaa40ab9ba82
     spriteBone: []
@@ -400,18 +400,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 140}
+    uvTransform: {x: 4, y: 127}
   - name: cajas_Frame_14
     originalName: 
-    pivot: {x: 0.4848485, y: -0.15}
+    pivot: {x: 0.55172414, y: -0.15789475}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
+      x: 39
       y: 4
-      width: 33
-      height: 20
+      width: 29
+      height: 19
     spriteID: 45634dfce6ac175479496a89aa7211ff
     spriteBone: []
     spriteOutline: []
@@ -420,18 +420,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 4}
+    uvTransform: {x: 39, y: 4}
   - name: cajas_Frame_15
     originalName: 
-    pivot: {x: 0.55172414, y: -0.13636364}
+    pivot: {x: 0.55172414, y: -0.15789475}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 110
+      x: 39
+      y: 31
       width: 29
-      height: 22
+      height: 19
     spriteID: 9000b1cb9b5c1c644b67d6018f03b075
     spriteBone: []
     spriteOutline: []
@@ -440,18 +440,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 110}
+    uvTransform: {x: 39, y: 31}
   - name: cajas_Frame_16
     originalName: 
-    pivot: {x: 0.4516129, y: -0.044444446}
+    pivot: {x: 0.5185185, y: -0.045454547}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 31
-      height: 45
+      width: 27
+      height: 44
     spriteID: 0d4f53e829aa7a04988a2907e6487d62
     spriteBone: []
     spriteOutline: []
@@ -463,15 +463,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: cajas_Frame_17
     originalName: 
-    pivot: {x: 0.5185185, y: -0.044444446}
+    pivot: {x: 0.6086956, y: -0.045454547}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 57
-      width: 27
-      height: 45
+      y: 56
+      width: 23
+      height: 44
     spriteID: a26a60c48c03ed14482b7de21d51f616
     spriteBone: []
     spriteOutline: []
@@ -480,18 +480,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 57}
+    uvTransform: {x: 4, y: 56}
   - name: cajas_Frame_18
     originalName: 
-    pivot: {x: 0.5185185, y: -0.16666666}
+    pivot: {x: 0.6086956, y: -0.18181819}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 148
-      width: 27
-      height: 12
+      x: 39
+      y: 173
+      width: 23
+      height: 11
     spriteID: 43d4d34d792e2a14b8e494f84528508a
     spriteBone: []
     spriteOutline: []
@@ -500,18 +500,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 148}
+    uvTransform: {x: 39, y: 173}
   - name: cajas_Frame_19
     originalName: 
-    pivot: {x: 0.50980395, y: -0.16666666}
+    pivot: {x: 0.5106383, y: -0.18181819}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 43
-      y: 32
-      width: 51
-      height: 12
+      x: 76
+      y: 4
+      width: 47
+      height: 11
     spriteID: a98e3fa9e3989e24f9566f4f3598875e
     spriteBone: []
     spriteOutline: []
@@ -520,18 +520,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 43, y: 32}
+    uvTransform: {x: 76, y: 4}
   - name: cajas_Frame_20
     originalName: 
-    pivot: {x: 0.55, y: -0.16666666}
+    pivot: {x: 0.6875, y: -0.18181819}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 102
-      y: 32
-      width: 20
-      height: 12
+      x: 4
+      y: 222
+      width: 16
+      height: 11
     spriteID: 100bd1806b3a95449adcd3d0066ccdcf
     spriteBone: []
     spriteOutline: []
@@ -540,7 +540,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 102, y: 32}
+    uvTransform: {x: 4, y: 222}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -556,8 +556,8 @@ ScriptedImporter:
       cellRect:
         x: 10
         y: 5
-        width: 34
-        height: 16
+        width: 29
+        height: 15
       spriteId: fc2e7888241723d46a38767f5abb7757
     - name: cajas_Frame_1
       frameIndex: 1
@@ -565,8 +565,8 @@ ScriptedImporter:
       cellRect:
         x: 10
         y: 5
-        width: 34
-        height: 16
+        width: 29
+        height: 15
       spriteId: 1f354830797c253449971fe4043da13a
     - name: cajas_Frame_2
       frameIndex: 2
@@ -574,8 +574,8 @@ ScriptedImporter:
       cellRect:
         x: 10
         y: 5
-        width: 34
-        height: 16
+        width: 29
+        height: 15
       spriteId: 65ffd70f343bf0b45925b3966343572a
     - name: cajas_Frame_3
       frameIndex: 3
@@ -583,8 +583,8 @@ ScriptedImporter:
       cellRect:
         x: 10
         y: 5
-        width: 34
-        height: 16
+        width: 29
+        height: 15
       spriteId: f4bb16d5c22ee8d42a62455020f1ce09
     - name: cajas_Frame_4
       frameIndex: 4
@@ -592,8 +592,8 @@ ScriptedImporter:
       cellRect:
         x: 10
         y: 5
-        width: 34
-        height: 16
+        width: 29
+        height: 15
       spriteId: acfd0cbbf717c6c429637eec0788794c
     - name: cajas_Frame_5
       frameIndex: 5
@@ -601,7 +601,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 25
+        width: 21
         height: 11
       spriteId: f484d4e00fedab74bb14b11d90e14a13
     - name: cajas_Frame_6
@@ -610,7 +610,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 21
+        width: 17
         height: 11
       spriteId: 05b897b6028bec847810eed88757e80d
     - name: cajas_Frame_7
@@ -619,7 +619,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 25
+        width: 21
         height: 11
       spriteId: 2fa1e41802f10214b8601cb60d2548bf
     - name: cajas_Frame_8
@@ -628,7 +628,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 21
+        width: 17
         height: 11
       spriteId: adead7c5e51119a4cbd984986a78b0d7
     - name: cajas_Frame_9
@@ -637,7 +637,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 25
+        width: 21
         height: 11
       spriteId: a9c8a96597c6aae44830de00332e2717
     - name: cajas_Frame_10
@@ -646,7 +646,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 21
+        width: 17
         height: 11
       spriteId: c1f76c3e38bb52247ae0d4ed77925557
     - name: cajas_Frame_11
@@ -655,7 +655,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 25
+        width: 21
         height: 11
       spriteId: eb9275ae23813934a80c6f7b3e89310e
     - name: cajas_Frame_12
@@ -664,7 +664,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 21
+        width: 17
         height: 11
       spriteId: e9c205ca085591046aef8946439c2eed
     - name: cajas_Frame_13
@@ -673,7 +673,7 @@ ScriptedImporter:
       cellRect:
         x: 14
         y: 7
-        width: 25
+        width: 21
         height: 11
       spriteId: ad1479c8e1c59064298feaa40ab9ba82
     - name: cajas_Frame_14
@@ -682,8 +682,8 @@ ScriptedImporter:
       cellRect:
         x: 11
         y: 3
-        width: 33
-        height: 20
+        width: 29
+        height: 19
       spriteId: 45634dfce6ac175479496a89aa7211ff
     - name: cajas_Frame_15
       frameIndex: 15
@@ -692,7 +692,7 @@ ScriptedImporter:
         x: 11
         y: 3
         width: 29
-        height: 22
+        height: 19
       spriteId: 9000b1cb9b5c1c644b67d6018f03b075
     - name: cajas_Frame_16
       frameIndex: 16
@@ -700,8 +700,8 @@ ScriptedImporter:
       cellRect:
         x: 13
         y: 2
-        width: 31
-        height: 45
+        width: 27
+        height: 44
       spriteId: 0d4f53e829aa7a04988a2907e6487d62
     - name: cajas_Frame_17
       frameIndex: 17
@@ -709,8 +709,8 @@ ScriptedImporter:
       cellRect:
         x: 13
         y: 2
-        width: 27
-        height: 45
+        width: 23
+        height: 44
       spriteId: a26a60c48c03ed14482b7de21d51f616
     - name: cajas_Frame_18
       frameIndex: 18
@@ -718,17 +718,17 @@ ScriptedImporter:
       cellRect:
         x: 13
         y: 2
-        width: 27
-        height: 12
+        width: 23
+        height: 11
       spriteId: 43d4d34d792e2a14b8e494f84528508a
     - name: cajas_Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
-        x: 1
+        x: 3
         y: 2
-        width: 51
-        height: 12
+        width: 47
+        height: 11
       spriteId: a98e3fa9e3989e24f9566f4f3598875e
     - name: cajas_Frame_20
       frameIndex: 20
@@ -736,8 +736,8 @@ ScriptedImporter:
       cellRect:
         x: 16
         y: 2
-        width: 20
-        height: 12
+        width: 16
+        height: 11
       spriteId: 100bd1806b3a95449adcd3d0066ccdcf
     linkedCells: []
     parentIndex: -1
