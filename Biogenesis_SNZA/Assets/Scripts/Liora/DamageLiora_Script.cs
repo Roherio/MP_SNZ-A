@@ -5,9 +5,6 @@ using UnityEngine.InputSystem;
 
 public class DamageLiora_Script : MonoBehaviour
 {
-
-
-
     public static DamageLiora_Script instance;
     public static bool isParrying = false;
     public static Collider2D collider;
@@ -20,7 +17,6 @@ public class DamageLiora_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         instance = this;
         collider = GetComponent<Collider2D>();
         pociones = new GameObject[pocionesCount];

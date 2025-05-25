@@ -29,9 +29,10 @@ public class portalsScript : MonoBehaviour
             fade.FadeOut(() =>
             {
                 Invoke("Teleport", 0);
+                Invoke("LevelTransitioningFalse", 0.2f);
                 fade.FadeIn(() =>
                 {
-                    levelTransitioning = false;
+                    //levelTransitioning = false;
                 });
             });
         }
@@ -50,6 +51,10 @@ public class portalsScript : MonoBehaviour
         }
     }
 
+    private void LevelTransitioningFalse()
+    {
+        levelTransitioning = false;
+    }
     private void Teleport()
     {
         player.transform.position = destination.position;

@@ -18,6 +18,7 @@ public class Liora_Movement_Script : MonoBehaviour
 
     //Jump Logic
     public float horizontal { get; private set; }
+    //private float rawHorizontal; //variable per mantenir el moviment horitzontal i que no es detingui si hem atacat, aixi que al seguir pulsant el input de moviment ens seguirem movent al acabar d'atacar
     public static bool jumping;
     [SerializeField] float groundSpeed = 10f;
     [SerializeField] float jumpPower = 24f;
@@ -41,7 +42,7 @@ public class Liora_Movement_Script : MonoBehaviour
     [SerializeField] private float ledgeGrabOffsetY = -3.2f;
 
     //Climb Logic
-    public bool isClimbing = false;
+    public static bool isClimbing = false;
     //variable que controla si esta en rang d'una escala
     public static bool canClimb = false;
     [SerializeField] float climbSpeed = 6f;
@@ -100,11 +101,6 @@ public class Liora_Movement_Script : MonoBehaviour
             rb.velocity = Vector2.zero;
             return;
         }
-        //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge o si està executant una ordre d'atac
-        if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying /*|| stopMovementAfterDash > 0*/)
-        {
-            horizontal = 0f;
-        }
         //check climb aqui
         isClimbing = onEscalera || onEnredadera;
         if (isClimbing && rb.gravityScale != 0f)
@@ -122,7 +118,8 @@ public class Liora_Movement_Script : MonoBehaviour
             rb.gravityScale = 0f;
             canDashLadder = false;
         }
-        if (Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem) { rb.velocity = Vector2.zero; }
+        //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge, trencant mur, agafant item o si està executant una ordre d'atac
+        if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem) { rb.velocity = Vector2.zero; }
     }
     public void Movimiento(InputAction.CallbackContext context)
     {

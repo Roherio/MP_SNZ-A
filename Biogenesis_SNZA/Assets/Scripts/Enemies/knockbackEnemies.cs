@@ -32,6 +32,8 @@ public class knockbackScript : MonoBehaviour
         isKnockedBack = true;
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
         Liora_StateMachine_Script.isKnockedBack = true;
+        Liora_Attack_Script.isAttacking = false;
+        Liora_Attack_Script.isParrying = false;
         yield return new WaitForSeconds(knockbackDuration);
         //desactivar knockback i tornar a ser vulnerable
         isKnockedBack = false;
