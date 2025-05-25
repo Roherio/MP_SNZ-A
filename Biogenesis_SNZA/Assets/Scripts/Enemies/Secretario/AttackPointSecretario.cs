@@ -40,8 +40,9 @@ public class AttackPointSecretario : MonoBehaviour
             DamageLiora_Script.RecibirDamage(transform.position, enemyAttackValue);
 
             //
-            Destroy(gameObject);
             print("L'atac ha fet hit per " + enemyAttackValue + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
+            Destroy(gameObject);
+            
         }
         else
         {

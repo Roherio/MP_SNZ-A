@@ -10,7 +10,6 @@ public class AttackPointEscarabajo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print("Collision spawned");
         Destroy(gameObject, (EscarabajoEnemyScript.attackDurationTimer));
         print(GameControl_Script.lifeLiora);
     }
@@ -18,9 +17,8 @@ public class AttackPointEscarabajo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -36,16 +34,15 @@ public class AttackPointEscarabajo : MonoBehaviour
             if (kb != null)
             {
                 kb.ApplyKnockback(transform.position, enemyAttackValue);
-            }*/
-
+            }
+            */
             //Treu vida
             DamageLiora_Script.RecibirDamage(transform.position, enemyAttackValue);
 
             //
-            //destruir desde liora;
-            Destroy(gameObject);
-
             print("L'atac ha fet hit per " + enemyAttackValue + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
+            Destroy(gameObject);
+            
         }
         else
         {
