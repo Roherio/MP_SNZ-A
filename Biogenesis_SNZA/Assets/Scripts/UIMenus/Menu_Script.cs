@@ -73,10 +73,10 @@ public class Menu_Script : MonoBehaviour
         for (int i = 0; i < paginas.Length; i++)
         {
             paginas[i].SetActive(false);
-            pestanyasImages[i].color = Color.grey;
+            pestanyasImages[i].color = new Color(240f / 255f, 226f / 255f, 190f / 255f);
         }
         paginas[tabNumber].SetActive(true);
-        pestanyasImages[tabNumber].color = Color.white;
+        pestanyasImages[tabNumber].color = new Color(187f / 255f, 141f / 255f, 100f / 255f);
     }
     public void UpdatePestanyas()
     {
