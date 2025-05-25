@@ -105,6 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6950196325674894240}
   - component: {fileID: 164697920472073480}
+  - component: {fileID: 799445674201803965}
   m_Layer: 6
   m_Name: AudioSource
   m_TagString: Untagged
@@ -223,6 +224,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &799445674201803965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513802815213946509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1964789d9d47a48a5add7aa9510337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
 --- !u!1 &1529492357792119716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,7 +1174,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ledgeGrabOffsetY: -3.2
-  isClimbing: 0
   climbSpeed: 6
   climbCheck: {fileID: 1892225545295776034}
   climbLayer:
@@ -1405,6 +1418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3327423564498310440}
   - component: {fileID: 274846029463048338}
+  - component: {fileID: 3101184585693707435}
   m_Layer: 6
   m_Name: interactIcon
   m_TagString: Untagged
@@ -1421,9 +1435,9 @@ Transform:
   m_GameObject: {fileID: 4607453907842549865}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.022, y: 4.66, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.76, z: 0.25}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8665050443058470135}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1479,6 +1493,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3101184585693707435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607453907842549865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd3c0b397bf53f4a82182730e9afed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4736153045146113422
 GameObject:
   m_ObjectHideFlags: 0

@@ -90,5 +90,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9b38ed058219a45a22c27403e2215a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAttackValue: 30
+  enemyAttackValue: 20
   showRadius: 1.33

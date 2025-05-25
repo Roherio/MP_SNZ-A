@@ -25,6 +25,8 @@ public class AmbienceManager : MonoBehaviour
         }
     }
 
+
+
     private void Update()
     {
         if (AudioSettingsManager.instance != null)

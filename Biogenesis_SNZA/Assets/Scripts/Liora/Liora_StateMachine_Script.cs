@@ -30,7 +30,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     public Liora_BoarAttack2_Script boarAttackState2;
     public Liora_BoarParry_Script boarParryState;
 
-    private bool isFacingRight = true;
+    public static bool isFacingRight = true;
     public Animator animator;
     public Rigidbody2D rb;
     //Ground Logic
