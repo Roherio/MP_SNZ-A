@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: "estanter\xEDa_grande"
     originalName: 
-    pivot: {x: 0.48876402, y: -0.051851854}
+    pivot: {x: 0.50000006, y: -0.015267176}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 89
-      height: 135
+      width: 79
+      height: 131
     spriteID: 38a55b8dcad03a24f9da85f375f6de76
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 7
-        y: 7
-        width: 89
-        height: 135
+        x: 2
+        y: 2
+        width: 79
+        height: 131
       spriteId: 38a55b8dcad03a24f9da85f375f6de76
     linkedCells: []
     parentIndex: -1
@@ -201,4 +201,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 101, y: 150}
+  canvasSize: {x: 83, y: 136}
