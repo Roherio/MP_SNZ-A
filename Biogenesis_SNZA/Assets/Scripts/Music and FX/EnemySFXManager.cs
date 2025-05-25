@@ -14,7 +14,7 @@ public class EnemySFXManager : MonoBehaviour
     {
         if (AudioSettingsManager.instance != null)
         {
-            audioSource.volume = AudioSettingsManager.instance.effectsVol;
+            audioSource.volume = AudioSettingsManager.effectsVol;
         }
     }
 }

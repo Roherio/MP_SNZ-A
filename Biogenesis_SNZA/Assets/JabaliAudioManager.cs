@@ -24,6 +24,6 @@ public class JabaliAudioManager : MonoBehaviour
 
     private void Update()
     {
-        audioSource.volume = AudioSettingsManager.instance.effectsVol;
+        audioSource.volume = AudioSettingsManager.effectsVol;
     }
 }

@@ -30,7 +30,7 @@ public class MusicManager : MonoBehaviour
     {
         if (AudioSettingsManager.instance != null)
         {
-            audioSource.volume = AudioSettingsManager.instance.musicVol;
+            audioSource.volume = AudioSettingsManager.musicVol;
         }
     }
 

@@ -4,8 +4,13 @@ public class AudioSettingsManager : MonoBehaviour
 {
     public static AudioSettingsManager instance;
 
-    [Range(0f, 1f)] public float musicVol = 1f;
-    [Range(0f, 1f)] public float effectsVol = 1f;
+    [Range(0f, 1f)] public float masterVol = 1f;
+
+    [Range(0f, 1f)][SerializeField] private float _musicVolRaw = 1f;
+    [Range(0f, 1f)][SerializeField] private float _effectsVolRaw = 1f;
+
+    public static float musicVol => instance._musicVolRaw * instance.masterVol;
+    public static float effectsVol => instance._effectsVolRaw * instance.masterVol;
 
     private void Awake()
     {
@@ -16,5 +21,10 @@ public class AudioSettingsManager : MonoBehaviour
         }
 
         instance = this;
+    }
+    private void FixedUpdate()
+    {
+            //musicVol = musicVol * masterVol;
+            //effectsVol = effectsVol * masterVol;
     }
 }
