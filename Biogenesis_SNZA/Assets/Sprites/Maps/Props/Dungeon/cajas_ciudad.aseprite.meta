@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: cajas_ciudad_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5151515, y: -1.0714287}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 53
-      y: 74
+      x: 38
+      y: 96
       width: 33
-      height: 61
+      height: 28
     spriteID: c323058c2fe86b54d9e11625a2dc2696
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 53, y: 74}
+    uvTransform: {x: 38, y: 96}
   - name: cajas_ciudad_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5151515, y: -1.0714287}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 53
-      y: 143
+      x: 38
+      y: 132
       width: 33
-      height: 61
+      height: 28
     spriteID: f9475947bd7d72e4bad4c732bb868ad4
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 53, y: 143}
+    uvTransform: {x: 38, y: 132}
   - name: cajas_ciudad_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5151515, y: -0.78947365}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 94
+      x: 38
       y: 4
       width: 33
-      height: 61
+      height: 38
     spriteID: db2c2cf70f51eb847abe139cbaae1b9d
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 94, y: 4}
+    uvTransform: {x: 38, y: 4}
   - name: cajas_ciudad_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5151515, y: -0.78947365}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 94
-      y: 73
+      x: 38
+      y: 50
       width: 33
-      height: 61
+      height: 38
     spriteID: d32adff04f17b6b4f9cc4598ae989413
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 94, y: 73}
+    uvTransform: {x: 38, y: 50}
   - name: cajas_ciudad_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: 0.016129032}
+    pivot: {x: 0.5384615, y: -1.0357143}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 170
-      width: 33
-      height: 62
+      x: 38
+      y: 168
+      width: 26
+      height: 28
     spriteID: 72f07f2cfb8f6804281a1daf8caf48d9
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 170}
+    uvTransform: {x: 38, y: 168}
   - name: cajas_ciudad_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: 0.016129032}
+    pivot: {x: 0.5384615, y: -1.0357143}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 53
-      y: 4
-      width: 33
-      height: 62
+      x: 38
+      y: 204
+      width: 26
+      height: 28
     spriteID: 77f915223c17db546be83e1fcf00cd13
     spriteBone: []
     spriteOutline: []
@@ -240,18 +240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 53, y: 4}
+    uvTransform: {x: 38, y: 204}
   - name: cajas_ciudad_Frame_6
     originalName: 
-    pivot: {x: 0.40243903, y: 0.013333333}
+    pivot: {x: 0.49999997, y: -0.46774194}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 41
-      height: 75
+      width: 26
+      height: 62
     spriteID: 0bb2b2f1b84cd0c4084ee32c9870ddeb
     spriteBone: []
     spriteOutline: []
@@ -263,15 +263,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: cajas_ciudad_Frame_7
     originalName: 
-    pivot: {x: 0.40243903, y: 0.013333333}
+    pivot: {x: 0.49999997, y: -0.46774194}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 87
-      width: 41
-      height: 75
+      y: 74
+      width: 26
+      height: 62
     spriteID: 62bd9af8067218d489cb1c8420e62439
     spriteBone: []
     spriteOutline: []
@@ -280,7 +280,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 87}
+    uvTransform: {x: 4, y: 74}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -294,73 +294,73 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
+        x: 16
+        y: 30
         width: 33
-        height: 61
+        height: 28
       spriteId: c323058c2fe86b54d9e11625a2dc2696
     - name: cajas_ciudad_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
+        x: 16
+        y: 30
         width: 33
-        height: 61
+        height: 28
       spriteId: f9475947bd7d72e4bad4c732bb868ad4
     - name: cajas_ciudad_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
+        x: 16
+        y: 30
         width: 33
-        height: 61
+        height: 38
       spriteId: db2c2cf70f51eb847abe139cbaae1b9d
     - name: cajas_ciudad_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
+        x: 16
+        y: 30
         width: 33
-        height: 61
+        height: 38
       spriteId: d32adff04f17b6b4f9cc4598ae989413
     - name: cajas_ciudad_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: -1
-        width: 33
-        height: 62
+        x: 19
+        y: 29
+        width: 26
+        height: 28
       spriteId: 72f07f2cfb8f6804281a1daf8caf48d9
     - name: cajas_ciudad_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: -1
-        width: 33
-        height: 62
+        x: 19
+        y: 29
+        width: 26
+        height: 28
       spriteId: 77f915223c17db546be83e1fcf00cd13
     - name: cajas_ciudad_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: -1
-        width: 41
-        height: 75
+        x: 20
+        y: 29
+        width: 26
+        height: 62
       spriteId: 0bb2b2f1b84cd0c4084ee32c9870ddeb
     - name: cajas_ciudad_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: -1
-        width: 41
-        height: 75
+        x: 20
+        y: 29
+        width: 26
+        height: 62
       spriteId: 62bd9af8067218d489cb1c8420e62439
     linkedCells: []
     parentIndex: -1
@@ -404,4 +404,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 33, y: 61}
+  canvasSize: {x: 66, y: 122}
