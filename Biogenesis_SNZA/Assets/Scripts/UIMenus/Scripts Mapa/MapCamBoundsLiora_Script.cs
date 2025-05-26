@@ -18,6 +18,10 @@ public class MapCamBoundsLiora_Script : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        MapManager_Script.instance.ActivateMask(maskIndexActivar);
     }
+    /*private void OnTriggerExit2D(Collider2D collision)
+    {
+        MapManager_Script.instance.DeactivateMask(maskIndexActivar);
+    }*/
 }

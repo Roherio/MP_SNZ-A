@@ -93,4 +93,9 @@ public class MapManager_Script : MonoBehaviour
         activeMasksIndex[index] = true;
         masksLiora[index].SetActive(true);
     }
+    public void DeactivateMask(int index)
+    {
+        activeMasksIndex[index] = false;
+        masksLiora[index].SetActive(false);
+    }
 }
