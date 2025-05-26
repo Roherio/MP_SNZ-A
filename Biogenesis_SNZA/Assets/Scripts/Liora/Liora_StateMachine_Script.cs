@@ -29,7 +29,12 @@ public class Liora_StateMachine_Script : MonoBehaviour
     public Liora_BoarAttack1_Script boarAttackState1;
     public Liora_BoarAttack2_Script boarAttackState2;
     public Liora_BoarParry_Script boarParryState;
-
+    //secretary
+    public Liora_SecretaryAttack1_Script secretaryAttackState1;
+    public Liora_SecretaryAttack2_Script secretaryAttackState2;
+    public Liora_SecretaryAttack3_Script secretaryAttackState3;
+    public Liora_SecretaryParry_Script secretaryParryState;
+    //
     public static bool isFacingRight = true;
     public Animator animator;
     public Rigidbody2D rb;
@@ -78,6 +83,10 @@ public class Liora_StateMachine_Script : MonoBehaviour
         boarAttackState1.Setup(rb, animator, horizontal);
         boarAttackState2.Setup(rb, animator, horizontal);
         boarParryState.Setup(rb, animator, horizontal);
+        secretaryAttackState1.Setup(rb, animator, horizontal);
+        secretaryAttackState2.Setup(rb, animator, horizontal);
+        secretaryAttackState3.Setup(rb, animator, horizontal);
+        secretaryParryState.Setup(rb, animator, horizontal);
         state = idleState;
     }
     // Update is called once per frame
@@ -186,6 +195,20 @@ public class Liora_StateMachine_Script : MonoBehaviour
                                                             break;
                                                     }
                                                     break;
+                                                case snzaAttackType.SECRETARIO:
+                                                    switch (currentComboStep)
+                                                    {
+                                                        case 1:
+                                                            state = secretaryAttackState1;
+                                                            break;
+                                                        case 2:
+                                                            state = secretaryAttackState2;
+                                                            break;
+                                                        case 3:
+                                                            state = secretaryAttackState3;
+                                                            break;
+                                                    }
+                                                    break;
                                             }
                                         }
                                         if (isParrying)
@@ -197,6 +220,9 @@ public class Liora_StateMachine_Script : MonoBehaviour
                                                     break;
                                                 case snzaParryType.JABALI:
                                                     state = boarParryState;
+                                                    break;
+                                                case snzaParryType.SECRETARIO:
+                                                    state = secretaryParryState;
                                                     break;
                                             }
                                         }
