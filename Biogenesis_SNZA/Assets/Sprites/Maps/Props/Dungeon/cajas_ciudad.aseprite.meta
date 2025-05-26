@@ -129,7 +129,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 38
-      y: 96
+      y: 142
       width: 33
       height: 28
     spriteID: c323058c2fe86b54d9e11625a2dc2696
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 38, y: 96}
+    uvTransform: {x: 38, y: 142}
   - name: cajas_ciudad_Frame_1
     originalName: 
     pivot: {x: 0.5151515, y: -1.0714287}
@@ -149,7 +149,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 38
-      y: 132
+      y: 178
       width: 33
       height: 28
     spriteID: f9475947bd7d72e4bad4c732bb868ad4
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 38, y: 132}
+    uvTransform: {x: 38, y: 178}
   - name: cajas_ciudad_Frame_2
     originalName: 
     pivot: {x: 0.5151515, y: -0.78947365}
@@ -208,8 +208,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 38
-      y: 168
+      x: 4
+      y: 214
       width: 26
       height: 28
     spriteID: 72f07f2cfb8f6804281a1daf8caf48d9
@@ -220,7 +220,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 38, y: 168}
+    uvTransform: {x: 4, y: 214}
   - name: cajas_ciudad_Frame_5
     originalName: 
     pivot: {x: 0.5384615, y: -1.0357143}
@@ -228,8 +228,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 38
-      y: 204
+      x: 79
+      y: 4
       width: 26
       height: 28
     spriteID: 77f915223c17db546be83e1fcf00cd13
@@ -240,7 +240,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 38, y: 204}
+    uvTransform: {x: 79, y: 4}
   - name: cajas_ciudad_Frame_6
     originalName: 
     pivot: {x: 0.49999997, y: -0.46774194}
@@ -281,6 +281,86 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 74}
+  - name: cajas_ciudad_Frame_8
+    originalName: 
+    pivot: {x: 0.5151515, y: -1.0714287}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 38
+      y: 214
+      width: 33
+      height: 28
+    spriteID: 3356381e69aad8b4886debe21481b785
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 38, y: 214}
+  - name: cajas_ciudad_Frame_9
+    originalName: 
+    pivot: {x: 0.5151515, y: -0.78947365}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 38
+      y: 96
+      width: 33
+      height: 38
+    spriteID: cae9c5c67ea4ea84ca0df17c1edba466
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 38, y: 96}
+  - name: cajas_ciudad_Frame_10
+    originalName: 
+    pivot: {x: 0.5384615, y: -1.0357143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 40
+      width: 26
+      height: 28
+    spriteID: 46993ae345eb94d4ea89cf7ec28c8037
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 40}
+  - name: cajas_ciudad_Frame_11
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.46774194}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 144
+      width: 26
+      height: 62
+    spriteID: e5312dc5e379ba040b2ad33f59c679c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 144}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -362,6 +442,42 @@ ScriptedImporter:
         width: 26
         height: 62
       spriteId: 62bd9af8067218d489cb1c8420e62439
+    - name: cajas_ciudad_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 30
+        width: 33
+        height: 28
+      spriteId: 3356381e69aad8b4886debe21481b785
+    - name: cajas_ciudad_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 16
+        y: 30
+        width: 33
+        height: 38
+      spriteId: cae9c5c67ea4ea84ca0df17c1edba466
+    - name: cajas_ciudad_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 19
+        y: 29
+        width: 26
+        height: 28
+      spriteId: 46993ae345eb94d4ea89cf7ec28c8037
+    - name: cajas_ciudad_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 20
+        y: 29
+        width: 26
+        height: 62
+      spriteId: e5312dc5e379ba040b2ad33f59c679c3
     linkedCells: []
     parentIndex: -1
   platformSettings:
