@@ -13,15 +13,17 @@ public class hpEnemiesScript : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     private Color originalColor;
-    
+
     public bool isDead = false;
 
+    Rigidbody2D rb;
     ParentEnemy ParentEnemyScript;
     public BossMusicController bossMusic;
     EscarabajoEnemyScript escarabajoEnemyScript;
     SecretarioEnemyScript secretarioEnemyScript;
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         ParentEnemyScript = GetComponentInParent<ParentEnemy>();
         enemyHP = maxEnemyHP;
         // Obtener el SpriteRenderer al iniciar
@@ -50,6 +52,8 @@ public class hpEnemiesScript : MonoBehaviour
             if (enemyHP <= 0f)
             {
                 isDead = true;
+                GetComponent<BoxCollider2D>().enabled = false;
+                Destroy(rb);
                 CinemachineShake.Instance.ShakeCamera(1f, .3f);
                 FindObjectOfType<HitStop>().hitStop(0.05f);
                 animator.SetBool("isWalking", false);
@@ -69,7 +73,9 @@ public class hpEnemiesScript : MonoBehaviour
                 if (nameEnemy == "Ursina")
                 {
                     bossMusic.bossDefeated = true;
+                    Invoke("finalFadeOut", deathAnimationDuration - 1.5f);
                     Invoke("CargarFinalJuego", deathAnimationDuration);
+
                 }
                 Invoke("DestruirGameObject", deathAnimationDuration);
             }
@@ -93,5 +99,10 @@ public class hpEnemiesScript : MonoBehaviour
         spriteRenderer.color = Color.white;
         yield return new WaitForSeconds(1f); // Duración del parpadeo
         spriteRenderer.color = originalColor;
+    }
+    public void finalFadeOut()
+    {
+        CameraFading fade = Camera.main.GetComponent<CameraFading>();
+        fade.FadeOutSlow();
     }
 }

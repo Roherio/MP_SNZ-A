@@ -67,9 +67,13 @@ public class SecretarioEnemyScript : MonoBehaviour
                 if (hpEnemiesScript.isDead && !hasPlayedDeathSound)
                 {
                     StopAllCoroutines();
-                    rb.velocity = Vector2.zero;
                     audioManager.SecretarioSFX(audioManager.Death);
                     hasPlayedDeathSound = true;
+                    if (rb != null)
+                    {
+                        rb.velocity = Vector2.zero;
+                    }
+                    
                     return;
                 }
                 if (isAttacking) return;
@@ -92,7 +96,10 @@ public class SecretarioEnemyScript : MonoBehaviour
             case EnemyBehaviour.PATROL:
                 if (hpEnemiesScript.isDead && !hasPlayedDeathSound)
                 {
-                    rb.velocity = Vector2.zero;
+                    if (rb != null)
+                    {
+                        rb.velocity = Vector2.zero;
+                    }
                     StopAllCoroutines();
                     audioManager.SecretarioSFX(audioManager.Death);
                     hasPlayedDeathSound = true;
@@ -158,7 +165,11 @@ public class SecretarioEnemyScript : MonoBehaviour
 
         if (!isAttacking && canAttack)
         {
-            rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
+            if (rb != null)
+            {
+                rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
+            }
+            
             if (direction.x < 0)
                 transform.localScale = new Vector3(1, 1, 1);
             else
