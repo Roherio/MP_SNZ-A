@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e1a8ec3d29da02f459c12cb626def7b4
+guid: cb2f9f48c521079408ce472d1947cf7b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Puerta_palanca
+  - name: matraces_Frame_0
     originalName: 
-    pivot: {x: 1.7083333, y: -0.034782607}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 110
-      y: 4
-      width: 12
-      height: 115
-    spriteID: 74a796615ab49914d9ae9051d958dfa0
+      x: 4
+      y: 104
+      width: 118
+      height: 41
+    spriteID: e1dba36aaa5b5754aa4eb4e188f861aa
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,19 +140,39 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 110, y: 4}
-  - name: Puerta_palanca_Frame_1
+    uvTransform: {x: 4, y: 104}
+  - name: matraces_Frame_1
     originalName: 
-    pivot: {x: 0.8333333, y: 0}
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 153
+      width: 118
+      height: 41
+    spriteID: 48c9800b93d600f47afd3bdf15ad5a79
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 153}
+  - name: matraces_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 45
-      height: 129
-    spriteID: 9eb19f0331a14bd419bec03c7c46519f
+      width: 118
+      height: 42
+    spriteID: 516bc6065447839428cbfd6a05e6d5e5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,18 +181,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Puerta_palanca_Frame_2
+  - name: matraces_Frame_3
     originalName: 
-    pivot: {x: 0.8333333, y: 0}
+    pivot: {x: 0.50427353, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 57
-      y: 4
-      width: 45
-      height: 129
-    spriteID: 88078585c5371dd4fb7340cf52b39018
+      x: 4
+      y: 54
+      width: 117
+      height: 42
+    spriteID: 896f160aef93fad45a96edb6907ca97b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -180,43 +200,52 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 57, y: 4}
+    uvTransform: {x: 4, y: 54}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 369221544
-    name: Puerta_palanca
+    guid: -47292994
+    name: matraces
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Puerta_palanca_Frame_0
+    - name: matraces_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 37
-        y: 4
-        width: 12
-        height: 115
-      spriteId: 74a796615ab49914d9ae9051d958dfa0
-    - name: Puerta_palanca_Frame_1
+        x: 0
+        y: 0
+        width: 118
+        height: 41
+      spriteId: e1dba36aaa5b5754aa4eb4e188f861aa
+    - name: matraces_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 20
+        x: 0
         y: 0
-        width: 45
-        height: 129
-      spriteId: 9eb19f0331a14bd419bec03c7c46519f
-    - name: Puerta_palanca_Frame_2
+        width: 118
+        height: 41
+      spriteId: 48c9800b93d600f47afd3bdf15ad5a79
+    - name: matraces_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 20
+        x: 0
         y: 0
-        width: 45
-        height: 129
-      spriteId: 88078585c5371dd4fb7340cf52b39018
+        width: 118
+        height: 42
+      spriteId: 516bc6065447839428cbfd6a05e6d5e5
+    - name: matraces_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 117
+        height: 42
+      spriteId: 896f160aef93fad45a96edb6907ca97b
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -235,4 +264,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 115, y: 130}
+  canvasSize: {x: 118, y: 42}

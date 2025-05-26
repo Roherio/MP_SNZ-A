@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e1a8ec3d29da02f459c12cb626def7b4
+guid: a1bbd1cdf9a23014b8c93ee616456832
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,38 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Puerta_palanca
+  - name: aire_Frame_0
     originalName: 
-    pivot: {x: 1.7083333, y: -0.034782607}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 110
-      y: 4
-      width: 12
-      height: 115
-    spriteID: 74a796615ab49914d9ae9051d958dfa0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 110, y: 4}
-  - name: Puerta_palanca_Frame_1
-    originalName: 
-    pivot: {x: 0.8333333, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 45
-      height: 129
-    spriteID: 9eb19f0331a14bd419bec03c7c46519f
+      width: 32
+      height: 33
+    spriteID: e6a2ae26f6d33b341982602f5d4199f6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,18 +141,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Puerta_palanca_Frame_2
+  - name: aire_Frame_1
     originalName: 
-    pivot: {x: 0.8333333, y: 0}
+    pivot: {x: 0.5, y: -0.11111111}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 57
-      y: 4
-      width: 45
-      height: 129
-    spriteID: 88078585c5371dd4fb7340cf52b39018
+      x: 4
+      y: 45
+      width: 24
+      height: 27
+    spriteID: 7211d721e12948f45baeba83d45c78d0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -180,43 +160,63 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 57, y: 4}
+    uvTransform: {x: 4, y: 45}
+  - name: aire_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.42857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 80
+      width: 24
+      height: 21
+    spriteID: a7a5adfbe9e345546ae092288f661b45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 80}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 369221544
-    name: Puerta_palanca
+    guid: -1754614393
+    name: aire
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Puerta_palanca_Frame_0
+    - name: aire_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 37
-        y: 4
-        width: 12
-        height: 115
-      spriteId: 74a796615ab49914d9ae9051d958dfa0
-    - name: Puerta_palanca_Frame_1
+        x: 0
+        y: 0
+        width: 32
+        height: 33
+      spriteId: e6a2ae26f6d33b341982602f5d4199f6
+    - name: aire_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 0
-        width: 45
-        height: 129
-      spriteId: 9eb19f0331a14bd419bec03c7c46519f
-    - name: Puerta_palanca_Frame_2
+        x: 4
+        y: 3
+        width: 24
+        height: 27
+      spriteId: 7211d721e12948f45baeba83d45c78d0
+    - name: aire_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 0
-        width: 45
-        height: 129
-      spriteId: 88078585c5371dd4fb7340cf52b39018
+        x: 4
+        y: 9
+        width: 24
+        height: 21
+      spriteId: a7a5adfbe9e345546ae092288f661b45
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -235,4 +235,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 115, y: 130}
+  canvasSize: {x: 32, y: 33}
