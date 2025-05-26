@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MapManager_Script : MonoBehaviour
 {
-    [SerializeField] private Image[] maps;
+    [SerializeField] private GameObject[] maps;
     public static bool[] activeMapsIndex;
     [SerializeField] private GameObject[] masksLiora;
     private bool[] activeMasksIndex;
@@ -35,17 +35,23 @@ public class MapManager_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (EventsManager_Script.allMapsActive) { return; }
-        //activar o desactivar mapas y mascaras en funcion de true o false. Solo entraremos si ALLMAPSACTIVE es falsa.
+        if (EventsManager_Script.allMapsActive)
+        {
+            for (int i = 0; i < activeMapsIndex.Length; i++)
+            {
+                activeMapsIndex[i] = true;
+            }
+        }
+        //activar o desactivar mapas y mascaras en funcion de true o false. si allMapsActive es true, se activaran todos los elementos del mapa.
         for (int i = 0; i < maps.Length; i++)
         {
             if (activeMapsIndex[i])
             {
-                maps[i].enabled = true;
+                maps[i].SetActive(true);
             }
             else
             {
-                maps[i].enabled = false;
+                maps[i].SetActive(false);
             }
         }
         for (int i = 0; i < masksLiora.Length; i++)
@@ -68,11 +74,11 @@ public class MapManager_Script : MonoBehaviour
     public void ActivateMap(int index)
     {
         activeMapsIndex[index] = true;
-        maps[index].enabled = true;
+        maps[index].SetActive(true);
         if (activeMapsIndex[26] && activeMapsIndex[7])
         {
             activeMapsIndex[36] = true;
-            maps[36].enabled = true;
+            maps[36].SetActive(true);
         }
     }
     public void ActivateAllMaps()
@@ -80,7 +86,7 @@ public class MapManager_Script : MonoBehaviour
         for (int i = 0; i < maps.Length; i++)
         {
             activeMapsIndex[i] = true;
-            maps[i].enabled = true;
+            maps[i].SetActive(true);
         }
     }
     public void ActivateMask(int index)
