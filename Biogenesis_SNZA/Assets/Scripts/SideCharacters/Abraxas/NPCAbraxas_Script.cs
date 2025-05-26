@@ -11,8 +11,8 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
     //dialogueData4 es cuando tienes SNZA Secretario lista
     public NPCDialogue_Script dialogueData1;
     public NPCDialogue_Script dialogueData2;
-    public NPCDialogue_Script dialogueData3;
-    public NPCDialogue_Script dialogueData4;
+    //public NPCDialogue_Script dialogueData3;
+    //public NPCDialogue_Script dialogueData4;
 
     private DialogueController dialogueUI;
 
@@ -32,14 +32,14 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
         {
             GameControl_Script.isPausedDialogue = true;
         }
-        if (SNZAProgressControl_Script.progresoSNZASecretario <= 0 && SNZAProgressControl_Script.secretarioCristalizable)
+        /*if (SNZAProgressControl_Script.progresoSNZASecretario <= 0 && SNZAProgressControl_Script.secretarioCristalizable)
         {
             currentDialogue = "dialogueData4";
         }
         if (SNZAProgressControl_Script.progresoSNZAJabali <= 0 && SNZAProgressControl_Script.jabaliCristalizable)
         {
             currentDialogue = "dialogueData3";
-        }
+        }*/
     }
     public bool CanInteract()
     {
@@ -59,7 +59,7 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
     }
     void StartDialogue()
     {
-        if (currentDialogue == "dialogueData3")
+        /*if (currentDialogue == "dialogueData3")
         {
             isDialogueActive = true;
             dialogueIndex = 0;
@@ -68,7 +68,7 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
             dialogueUI.ShowDialogueUI(true);
 
             StartCoroutine(TypeLine());
-        }
+        }*/
         if (currentDialogue == "dialogueData2")
         {
             isDialogueActive = true;
@@ -92,7 +92,7 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
     }
     void NextLine()
     {
-        if (currentDialogue == "dialogueData3")
+        /*if (currentDialogue == "dialogueData3")
         {
             if (isTyping)
             {
@@ -113,7 +113,7 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
                 SNZAProgressControl_Script.snzaJabaliConseguida = true;//-------------ESTO PASA A TRUE (PASO 3)
                 EndDialogue();
             }
-        }
+        }*/
         if (currentDialogue == "dialogueData2")
         {
             if (isTyping)
@@ -130,7 +130,6 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
             else
             {
                 EndDialogue();
-                currentDialogue = "dialogueData1";
             }
         }
         if (currentDialogue == "dialogueData1")
@@ -160,7 +159,7 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
     {
         isTyping = true;
         dialogueUI.SetDialogueText("");
-        if (currentDialogue == "dialogueData3")
+        /*if (currentDialogue == "dialogueData3")
         {
             foreach (char letter in dialogueData3.dialogueLines[dialogueIndex])
             {
@@ -176,7 +175,7 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
                 yield return new WaitForSeconds(dialogueData3.autoProgressDelay);
                 NextLine();
             }
-        }
+        }*/
         if (currentDialogue == "dialogueData2")
         {
             foreach (char letter in dialogueData2.dialogueLines[dialogueIndex])
@@ -219,5 +218,9 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
         dialogueUI.SetDialogueText("");
         dialogueUI.ShowDialogueUI(false);
         GameControl_Script.isPausedDialogue = false;
+        if (currentDialogue == "dialogueData2")
+        {
+            currentDialogue = "dialogueData1";
+        }
     }
 }

@@ -23,6 +23,11 @@ public class SaveController_Script : MonoBehaviour
             playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position,
             mapBoundary = FindObjectOfType <CinemachineConfiner>().m_BoundingShape2D.gameObject.name,
             lifeLiora = GameControl_Script.lifeLiora,
+
+            //GUARDADO DE QUE MAPA TIENES DESBLOQUEADO
+            mapsUnlocked = MapManager_Script.activeMapsIndex,
+            allMapUnlocked = EventsManager_Script.allMapsActive,
+
             //GUARDAR DATO DE QUE OBJETOS TIENES, TODOS LOS OBJETOS QUE SON TRUE EN TU INVENTARIO Y DOCUMENTOS, PERSONAJES CONOCIDOS...
             cristalizadores = GameControl_Script.cristalizadores,
             cuero = GameControl_Script.cuero,
@@ -46,7 +51,8 @@ public class SaveController_Script : MonoBehaviour
             //GUARDAR CON LOS NPCS QUE HAS HABLADO
             habladoDioltas1vez = EventsManager_Script.habladoDioltas1vez,
             habladoKhione1vez = EventsManager_Script.habladoKhione1vez,
-            habladoWallace1vez = EventsManager_Script.habladoWallace1vez
+            habladoWallace1vez = EventsManager_Script.habladoWallace1vez,
+            habladoGander1vez = EventsManager_Script.habladoGander1vez
         };
         //transformar la variable saveData a un tipus Json
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
@@ -64,6 +70,11 @@ public class SaveController_Script : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").transform.position = saveData.playerPosition;
             //HealthBar_Script.currentHealth = saveData.lifeLiora;
             GameControl_Script.lifeLiora = saveData.lifeLiora;
+
+            //cargar Mapa desbloqueado
+            MapManager_Script.activeMapsIndex = saveData.mapsUnlocked;
+            EventsManager_Script.allMapsActive = saveData.allMapUnlocked;
+
             //Cargar objetos inventario
             GameControl_Script.cristalizadores = saveData.cristalizadores;
             GameControl_Script.cuero = saveData.cuero;
@@ -85,6 +96,7 @@ public class SaveController_Script : MonoBehaviour
             EventsManager_Script.habladoDioltas1vez = saveData.habladoDioltas1vez;
             EventsManager_Script.habladoKhione1vez = saveData.habladoKhione1vez;
             EventsManager_Script.habladoWallace1vez = saveData.habladoWallace1vez;
+            EventsManager_Script.habladoGander1vez = saveData.habladoGander1vez;
             FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
              
         }

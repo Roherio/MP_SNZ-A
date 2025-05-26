@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MapManager_Script : MonoBehaviour
 {
     [SerializeField] private GameObject[] maps;
-    public static bool[] activeMapsIndex;
+    public static bool[] activeMapsIndex = new bool[39];
     [SerializeField] private GameObject[] masksLiora;
     private bool[] activeMasksIndex;
 
@@ -21,12 +21,15 @@ public class MapManager_Script : MonoBehaviour
         {
             instance = this;
         }
-        activeMapsIndex = new bool[maps.Length];
+        //activeMapsIndex = new bool[maps.Length];
         activeMasksIndex = new bool[masksLiora.Length];
-        for (int i = 0; i < activeMapsIndex.Length; i++)
+        /*if (!FindObjectOfType<SaveController_Script>().HasSaveFile())
         {
-            activeMapsIndex[i] = false;
-        }
+            for (int i = 0; i < activeMapsIndex.Length; i++)
+            {
+                activeMapsIndex[i] = false;
+            }
+        }*/
         for (int i = 0; i < activeMasksIndex.Length; i++)
         {
             activeMasksIndex[i] = false;
@@ -35,6 +38,10 @@ public class MapManager_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i < activeMapsIndex.Length; i++)
+        {
+            print(activeMapsIndex[i]);
+        }
         if (EventsManager_Script.allMapsActive)
         {
             ActivateAllMaps();
@@ -85,6 +92,7 @@ public class MapManager_Script : MonoBehaviour
             activeMapsIndex[i] = true;
             maps[i].SetActive(true);
         }
+        EventsManager_Script.allMapsActive = true;
     }
     public void ActivateMask(int index)
     {
