@@ -22,6 +22,11 @@ public class AttackPointEscarabajo : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            if (DamageLiora_Script.isParrying)
+            {
+                Destruir();
+                return;
+            }
             //Consola
             print("player hit");
 

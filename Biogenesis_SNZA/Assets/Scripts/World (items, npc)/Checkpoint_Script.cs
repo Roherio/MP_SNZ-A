@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Checkpoint_Script : MonoBehaviour, IInteractable_Script
 {
-    public DamageLiora_Script scriptPociones;
+    DamageLiora_Script damageLioraScript;
+    public Animator animator;
+    private void Start()
+    {
+        damageLioraScript = GameObject.FindGameObjectWithTag("Player").GetComponent<DamageLiora_Script>();
+        animator = GetComponent<Animator>();
+    }
     public bool CanInteract()
     {
         return true;
@@ -12,12 +18,14 @@ public class Checkpoint_Script : MonoBehaviour, IInteractable_Script
 
     public void Interact()
     {
+        animator.SetBool("firstInteraction", true);
         ParentEnemy[] allEnemies = FindObjectsOfType<ParentEnemy>();
         foreach (ParentEnemy enemy in allEnemies)
         {
             enemy.Respawn();
         }
-        scriptPociones.RefillAllPotions();
+        GameControl_Script.lifeLiora = GameControl_Script.maxLife;
+        damageLioraScript.RefillAllPotions();
         SaveController_Script.SaveGame();
     }
 }

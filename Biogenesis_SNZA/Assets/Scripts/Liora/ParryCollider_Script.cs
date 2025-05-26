@@ -13,11 +13,12 @@ public class ParryCollider_Script : MonoBehaviour
     }
     private void Start()
     {
+        DamageLiora_Script.isParrying = true;
         Invoke("Destruir", duracioCollider);
     }
     private void Update()
     {
-        DamageLiora_Script.isParrying = true;
+        //DamageLiora_Script.isParrying = true;
     }
     private void Destruir()
     {
