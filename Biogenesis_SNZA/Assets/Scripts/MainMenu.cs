@@ -6,9 +6,12 @@ public class MainMenu : MonoBehaviour
 {
     public string gameSceneName = "GameScene"; // Replace with your actual scene name
     public GameObject settingsPanel;
+    public GameObject creditsPanel;
+    public travelCredits creditsScript;
     private void Start()
     {
-        settingsPanel.SetActive(false);
+        //settingsPanel.SetActive(false);
+        //creditsPanel.SetActive(false);
     }
     public void StartIntro()
     {
@@ -29,26 +32,22 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
-        // Call your load logic here
         Debug.Log("Loading Game...");
-        // For example:
-        // SaveController_Script.LoadGame(); (if you expose it statically or trigger through another object)
         SceneManager.LoadScene("levelDesign 3");
     }
 
     public void ToggleSettings()
     {
         Debug.Log("Open Settings");
-        // You can activate a settings panel here
         settingsPanel.SetActive(!settingsPanel.activeSelf);
-        // settingsPanel.SetActive(true);
     }
 
     public void OpenCredits()
     {
+        creditsPanel.SetActive(!creditsPanel.activeSelf);
         Debug.Log("Open Credits");
-        // Activate a credits panel or load a credits scene
-        // SceneManager.LoadScene("Credits");
+        creditsScript.resetCredits();
+        creditsScript.activeCredits = !creditsScript.activeCredits;
     }
 
     public void BackToMainMenu()
