@@ -4,7 +4,7 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     public AudioSource audioSource;
-
+    public Sprite zoneImage;
     private void Awake()
     {
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
@@ -15,6 +15,7 @@ public class MusicManager : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             audioSource.Play();
+            ZoneNameUIManager.instance.ShowZoneImage(zoneImage);
         }
     }
 
@@ -33,5 +34,7 @@ public class MusicManager : MonoBehaviour
             audioSource.volume = AudioSettingsManager.musicVol;
         }
     }
+
+
 
 }
