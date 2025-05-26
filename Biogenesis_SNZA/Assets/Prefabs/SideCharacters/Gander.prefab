@@ -92,8 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueData1: {fileID: 11400000, guid: 4fada882b02e61740b87644816ac167d, type: 2}
-  dialogueData2: {fileID: 11400000, guid: ddbad50afb56ee340b25e7806f4ee5c9, type: 2}
-  dialogueData3: {fileID: 11400000, guid: 8a9e87bd82caca64eb56f8bd14870852, type: 2}
+  dialogueData2: {fileID: 11400000, guid: 8a9e87bd82caca64eb56f8bd14870852, type: 2}
   currentDialogue: dialogueData1
 --- !u!1001 &7453554800546735317
 PrefabInstance:

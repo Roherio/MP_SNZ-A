@@ -6,11 +6,9 @@ using UnityEngine.UI;
 public class NPCGander_Script : MonoBehaviour, IInteractable_Script
 {
     //dialogueData1 es primera vez, cuando te desbloquea el mapa
-    //dialogueData2 es una conversacion normal, de colegueo
-    //dialogueData3 menciona a Abraxas y va saltando a ese y al anterior
+    //dialogueData2 menciona a Abraxas y va saltando a ese y al anterior
     public NPCDialogue_Script dialogueData1;
     public NPCDialogue_Script dialogueData2;
-    public NPCDialogue_Script dialogueData3;
 
     private DialogueController dialogueUI;
 
@@ -49,16 +47,6 @@ public class NPCGander_Script : MonoBehaviour, IInteractable_Script
     }
     void StartDialogue()
     {
-        if (currentDialogue == "dialogueData3")
-        {
-            isDialogueActive = true;
-            dialogueIndex = 0;
-
-            dialogueUI.SetNPCInfo(dialogueData3.npcName, dialogueData3.npcPortrait);
-            dialogueUI.ShowDialogueUI(true);
-
-            StartCoroutine(TypeLine());
-        }
         if (currentDialogue == "dialogueData2")
         {
             isDialogueActive = true;
@@ -82,24 +70,6 @@ public class NPCGander_Script : MonoBehaviour, IInteractable_Script
     }
     void NextLine()
     {
-        if (currentDialogue == "dialogueData3")
-        {
-            if (isTyping)
-            {
-                StopAllCoroutines();
-                dialogueUI.SetDialogueText(dialogueData3.dialogueLines[dialogueIndex]);
-                isTyping = false;
-            }
-            else if (++dialogueIndex < dialogueData3.dialogueLines.Length)
-            {
-                //si hi ha una altra linia, escriula
-                StartCoroutine(TypeLine());
-            }
-            else
-            {
-                EndDialogue();
-            }
-        }
         if (currentDialogue == "dialogueData2")
         {
             if (isTyping)
@@ -116,7 +86,6 @@ public class NPCGander_Script : MonoBehaviour, IInteractable_Script
             else
             {
                 EndDialogue();
-                currentDialogue = "dialogueData3";
             }
         }
         if (currentDialogue == "dialogueData1")
@@ -145,23 +114,6 @@ public class NPCGander_Script : MonoBehaviour, IInteractable_Script
     {
         isTyping = true;
         dialogueUI.SetDialogueText("");
-        if (currentDialogue == "dialogueData3")
-        {
-            foreach (char letter in dialogueData3.dialogueLines[dialogueIndex])
-            {
-                //dialogueText.text += letter;
-                dialogueUI.SetDialogueText(dialogueUI.dialogueText.text += letter);
-                yield return new WaitForSeconds(dialogueData3.typingSpeed);
-            }
-
-            isTyping = false;
-
-            if (dialogueData3.autoProgressLines.Length > dialogueIndex && dialogueData3.autoProgressLines[dialogueIndex])
-            {
-                yield return new WaitForSeconds(dialogueData3.autoProgressDelay);
-                NextLine();
-            }
-        }
         if (currentDialogue == "dialogueData2")
         {
             foreach (char letter in dialogueData2.dialogueLines[dialogueIndex])
