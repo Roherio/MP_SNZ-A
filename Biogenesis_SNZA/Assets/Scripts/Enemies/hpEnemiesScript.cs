@@ -27,6 +27,10 @@ public class hpEnemiesScript : MonoBehaviour
         // Obtener el SpriteRenderer al iniciar
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+        if (nameEnemy == "Jabali")
+        {
+            deathAnimationDuration = 1.2f;
+        }
 
         animator = GetComponent<Animator>();
         if (spriteRenderer != null)

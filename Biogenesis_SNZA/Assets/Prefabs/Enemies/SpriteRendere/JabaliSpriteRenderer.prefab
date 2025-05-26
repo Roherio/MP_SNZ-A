@@ -163,7 +163,7 @@ MonoBehaviour:
   nameEnemy: Jabali
   maxEnemyHP: 150
   enemyHP: 150
-  deathAnimationDuration: 1.5
+  deathAnimationDuration: 1
   animator: {fileID: 657876435000944233}
   isDead: 0
   bossMusic: {fileID: 0}
@@ -250,8 +250,8 @@ BoxCollider2D:
   m_Offset: {x: 1.4654675, y: 3.3021808}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.24038462, y: -0.019417476}
-    oldSize: {x: 6.5, y: 6.4375}
+    pivot: {x: 0, y: -0.030303031}
+    oldSize: {x: 3.125, y: 6.1875}
     newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

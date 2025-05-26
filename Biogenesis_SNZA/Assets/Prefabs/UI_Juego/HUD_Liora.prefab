@@ -749,7 +749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 5187739793971082667}
   healthSliderDelay: {fileID: 5275365962530208755}
-  delaySpeed: 0.005
+  delaySpeed: 0.008
 --- !u!1 &5926060776913347420
 GameObject:
   m_ObjectHideFlags: 0
