@@ -13,19 +13,19 @@ public class CameraFading : MonoBehaviour
     private void Start()
     {
         if (fadeCanvasGroup != null)
-            fadeCanvasGroup.alpha = 0;
+            fadeCanvasGroup.alpha = 1;
     }
 
     public void FadeOut(Action onComplete)
     {
         if (!isFading)
-            StartCoroutine(Fade(1f, onComplete, 0f));
+            StartCoroutine(Fade(1f, onComplete, 1f));
     }
 
     public void FadeIn(Action onComplete)
     {
         if (!isFading)
-            StartCoroutine(Fade(0f, onComplete, 0f));
+            StartCoroutine(Fade(0f, onComplete, 1f));
     }
 
     private IEnumerator Fade(float targetAlpha, Action onComplete, float duration)
@@ -49,6 +49,11 @@ public class CameraFading : MonoBehaviour
     public void FadeInSlow(Action onComplete = null)
     {
         if (!isFading)
-            StartCoroutine(Fade(0f, onComplete, 3f));
+            StartCoroutine(Fade(0f, onComplete, 1.5f));
+    }
+    public void FadeOutSlow(Action onComplete = null)
+    {
+        if (!isFading)
+            StartCoroutine(Fade(1f, onComplete, 1.5f));
     }
 }
