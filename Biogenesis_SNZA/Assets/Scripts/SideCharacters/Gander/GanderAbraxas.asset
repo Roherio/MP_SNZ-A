@@ -15,9 +15,13 @@ MonoBehaviour:
   npcName: Gander
   npcPortrait: {fileID: 21300000, guid: 1edc052d836d2744b9cf7144c50de75d, type: 3}
   dialogueLines:
-  - "Espero que ese mapa te est\xE9 siendo \xFAtil."
-  - Si alguna vez sientes que te has perdido, solo tienes que echarle un ojo.
-  autoProgressLines: 0000
+  - "Abraxas me habl\xF3 de ti cuando te encontr\xF3."
+  - "Para el momento en el qeu t\xFA llegaste a su vida, ya casi no \xE9ramos ni
+    conocidos."
+  - "Pero no me toca a m\xED contarte su historia."
+  - "Qui\xE9n iba a pensar que har\xEDa esto contigo... Pens\xE9 que estar\xEDas
+    a salvo..."
+  autoProgressLines: 00000000
   endDialogueLines: 
   autoProgressDelay: 1.5
   typingSpeed: 0

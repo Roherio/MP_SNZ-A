@@ -26,7 +26,8 @@ MonoBehaviour:
     hasta el final, \xBFno?"
   - "D\xE9jame ese mapa, que te lo voy a completar. Con \xE9l, estoy seguro de que
     no te perder\xE1s."
-  autoProgressLines: 000000000000
+  - Si alguna vez sientes que te has perdido, solo tienes que echarle un ojo.
+  autoProgressLines: 00000000000000
   endDialogueLines: 
   autoProgressDelay: 1.5
   typingSpeed: 0
