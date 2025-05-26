@@ -690,6 +690,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSceneName: GameScene
   settingsPanel: {fileID: 0}
+  creditsPanel: {fileID: 0}
+  creditsScript: {fileID: 0}
 --- !u!4 &947877291
 Transform:
   m_ObjectHideFlags: 0
@@ -1144,7 +1146,7 @@ MonoBehaviour:
   charactersPerSecond: 16
   puntapartDelay: 0.5
   voiceSound: {fileID: 8300000, guid: 4e3300a8ed087444dacf3b7c322b05c8, type: 3}
-  textoSkip: {fileID: 0}
+  textoSkip: {fileID: 527425756}
 --- !u!82 &1777815351
 AudioSource:
   m_ObjectHideFlags: 0
