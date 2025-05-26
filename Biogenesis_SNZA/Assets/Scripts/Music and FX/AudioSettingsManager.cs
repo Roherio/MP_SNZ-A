@@ -30,4 +30,23 @@ public class AudioSettingsManager : MonoBehaviour
             //musicVol = musicVol * masterVol;
             //effectsVol = effectsVol * masterVol;
     }
+    public float GetMusicRaw()
+    {
+        return _musicVolRaw;
+    }
+
+    public void SetMusicRaw(float value)
+    {
+        _musicVolRaw = value;
+    }
+
+    public float GetEffectsRaw()
+    {
+        return _effectsVolRaw;
+    }
+
+    public void SetEffectsRaw(float value)
+    {
+        _effectsVolRaw = value;
+    }
 }

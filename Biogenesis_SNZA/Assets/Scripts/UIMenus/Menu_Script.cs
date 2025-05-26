@@ -11,6 +11,7 @@ public class Menu_Script : MonoBehaviour
     public GameObject mapPanel;
     public GameObject pausePanel;
     public GameObject controlesPanel;
+    public GameObject volumenPanel;
 
     public PlayerInput playerInput;
     ////////logica pestanyas
@@ -79,6 +80,11 @@ public class Menu_Script : MonoBehaviour
     public void ToggleAjustes()
     {
         controlesPanel.SetActive(!controlesPanel.activeSelf);
+    }
+    
+    public void ToggleVolune()
+    {
+        volumenPanel.SetActive(!volumenPanel.activeSelf);
     }
 
     public void ActivarPestanya(int tabNumber)
