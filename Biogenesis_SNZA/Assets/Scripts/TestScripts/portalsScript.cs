@@ -30,6 +30,7 @@ public class portalsScript : MonoBehaviour
             fade.FadeOut(() =>
             {
                 Invoke("Teleport", 0);
+                //MapManager_Script.instance.ActivateMap(indexDesbloquearMapa);
                 Invoke("LevelTransitioningFalse", 0.2f);
                 fade.FadeIn(() =>
                 {
@@ -60,6 +61,7 @@ public class portalsScript : MonoBehaviour
     {
         player.transform.position = destination.position;
         MapManager_Script.instance.ActivateMap(indexDesbloquearMapa);
+
     }
 
 }
