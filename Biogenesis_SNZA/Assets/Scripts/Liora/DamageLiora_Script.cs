@@ -42,7 +42,11 @@ public class DamageLiora_Script : MonoBehaviour
     {
         if (context.performed)
         {
-            UsePotion();
+            if(GameControl_Script.lifeLiora == GameControl_Script.maxLife) { return; }
+            Liora_StateMachine_Script.isTakingPotion = true;
+            Invoke("UsePotion", 1f);
+            Invoke("StopAnimation", 1.25f);
+            //UsePotion();
         }
     }
     public void UsePotion()
@@ -52,7 +56,11 @@ public class DamageLiora_Script : MonoBehaviour
             Pociones_Script pocionesScript = pociones[i].GetComponent<Pociones_Script>();
             if (pocionesScript.pocionActiva)
             {
-                GameControl_Script.lifeLiora += 200f;
+                GameControl_Script.lifeLiora += 50f;
+                if (GameControl_Script.lifeLiora > GameControl_Script.maxLife)
+                {
+                    GameControl_Script.lifeLiora = GameControl_Script.maxLife;
+                }
                 pocionesScript.PotionUsed();
                 break;
             }
@@ -91,7 +99,10 @@ public class DamageLiora_Script : MonoBehaviour
             
         }
     }
-    
+    public void StopAnimation()
+    {
+        Liora_StateMachine_Script.isTakingPotion = false;
+    }
     public void LoadWhenDead()
     {
         GameObject.FindObjectOfType<SaveController_Script>().LoadGame();

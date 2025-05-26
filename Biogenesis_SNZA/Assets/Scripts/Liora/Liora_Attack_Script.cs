@@ -184,7 +184,7 @@ public class Liora_Attack_Script : MonoBehaviour
                 //InstanciarAtaque(colliderAttackCrabLiora);
                 break;
             case snzaAttackType.JABALI:
-                inputAttackCooldown = 0.6f;
+                inputAttackCooldown = 0.4f;
                 maxComboSteps = 2;
                 switch (step)
                 {
@@ -260,6 +260,10 @@ public class Liora_Attack_Script : MonoBehaviour
                     break;
 
                 case snzaParryType.JABALI:
+                    duracioCollider = 0.4f;
+                    break;
+
+                case snzaParryType.SECRETARIO:
                     duracioCollider = 0.4f;
                     break;
             }

@@ -33,10 +33,6 @@ public class Menu_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            MapManager_Script.instance.ActivateAllMaps();
-        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();

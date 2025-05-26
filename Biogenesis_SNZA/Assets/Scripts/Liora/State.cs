@@ -24,6 +24,7 @@ public abstract class State : MonoBehaviour
     public bool isClimbing = false;
     //ACTIONS Logic
     public bool isBreakingWall = false;
+    public bool isTakingPotion = false;
     public bool isTakingItem = false;
     public bool isKnockedBack = false;
     public bool isDying = false;

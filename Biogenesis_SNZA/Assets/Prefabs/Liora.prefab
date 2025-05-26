@@ -89,6 +89,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -267,6 +268,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6022332959004709097}
+  - {fileID: 9095393931680502597}
   - {fileID: 4703191692299058091}
   - {fileID: 6361641985070432647}
   - {fileID: 8674277943142864854}
@@ -324,6 +326,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -382,6 +385,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -440,6 +444,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -537,6 +542,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -595,6 +601,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -798,6 +805,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -856,6 +864,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -1136,6 +1145,7 @@ MonoBehaviour:
   dashState: {fileID: 1832675466478992224}
   takeItemState: {fileID: 5771570687653394395}
   breakWallState: {fileID: 4758328587612309351}
+  takePotionState: {fileID: 4673577267589232058}
   hurtState: {fileID: 5081861138685372778}
   deathState: {fileID: 8270739781318421563}
   crabAttackState1: {fileID: 2909936836818465901}
@@ -1207,7 +1217,7 @@ MonoBehaviour:
   colliderParry: {fileID: 6769748558417861109, guid: a499decbcfeab824cb2f03843f239d12, type: 3}
   colliderAttackCrabLiora: {fileID: 165051307909327957, guid: 86933764d29bffd43afa9ce7b5f4a8d4, type: 3}
   colliderAttackBoarLiora: {fileID: 165051307909327957, guid: 46055b83fe76e1d4eb88b6349202d983, type: 3}
-  colliderAttackSecretaryLiora: {fileID: 0}
+  colliderAttackSecretaryLiora: {fileID: 165051307909327957, guid: 4584fab740654b84da472d6681357d0f, type: 3}
 --- !u!114 &6942934200522289382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,6 +1478,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -1713,6 +1724,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -1848,6 +1860,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -1906,6 +1919,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -1964,6 +1978,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -2077,6 +2092,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -2169,6 +2185,66 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
+  isTakingItem: 0
+  isKnockedBack: 0
+  isDying: 0
+  isAttacking: 0
+  isParrying: 0
+  isDoingUlti: 0
+--- !u!1 &6556452162577318095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9095393931680502597}
+  - component: {fileID: 4673577267589232058}
+  m_Layer: 6
+  m_Name: TakePotion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9095393931680502597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6556452162577318095}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6377004406027641803}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4673577267589232058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6556452162577318095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1191371abc8157b488d47d931a1c4486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  isGrounded: 0
+  jumping: 0
+  jumpPower: 24
+  isDashing: 0
+  isGrabbingLedge: 0
+  isClimbing: 0
+  isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -2227,6 +2303,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -2362,6 +2439,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -2420,6 +2498,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -2568,6 +2647,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -2626,6 +2706,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
@@ -2684,6 +2765,7 @@ MonoBehaviour:
   isGrabbingLedge: 0
   isClimbing: 0
   isBreakingWall: 0
+  isTakingPotion: 0
   isTakingItem: 0
   isKnockedBack: 0
   isDying: 0
