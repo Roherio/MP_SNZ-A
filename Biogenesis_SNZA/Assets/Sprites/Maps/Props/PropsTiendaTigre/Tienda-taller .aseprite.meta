@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Tienda-taller _Frame_0
     originalName: 
-    pivot: {x: 1.0491803, y: 0}
+    pivot: {x: 1.0573614, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 740
-      width: 610
+      y: 1476
+      width: 523
       height: 360
     spriteID: 5db223a6996146044b63aa77283e0a8e
     spriteBone: []
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 740}
+    uvTransform: {x: 4, y: 1476}
   - name: Tienda-taller _Frame_1
     originalName: 
     pivot: {x: 1.0491803, y: 0}
@@ -149,7 +149,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 1108
+      y: 740
       width: 610
       height: 360
     spriteID: 436ea4e5002adee498d196b3b3c27aaf
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1108}
+    uvTransform: {x: 4, y: 740}
   - name: Tienda-taller _Frame_11
     originalName: 
     pivot: {x: 0.04761906, y: 0}
@@ -183,14 +183,14 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Tienda-taller _Frame_12
     originalName: 
-    pivot: {x: 0.04761906, y: 0}
+    pivot: {x: 0.012345667, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 372
-      width: 672
+      width: 648
       height: 360
     spriteID: 51ddff8b19f63d44db9b4c351bd894ec
     spriteBone: []
@@ -381,6 +381,46 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 1001, y: 4}
+  - name: Tienda-taller _Frame_11
+    originalName: 
+    pivot: {x: 1.0491803, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1108
+      width: 610
+      height: 360
+    spriteID: 228ddbfd83394464bb357af00334bd44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1108}
+  - name: Tienda-taller _Frame_12
+    originalName: 
+    pivot: {x: 1.3333336, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 660
+      y: 372
+      width: 24
+      height: 360
+    spriteID: 63d1fd46ea9ce7543a3ef011b365f6f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 660, y: 372}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -394,9 +434,9 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 87
         y: 0
-        width: 610
+        width: 523
         height: 360
       spriteId: 5db223a6996146044b63aa77283e0a8e
     - name: Tienda-taller _Frame_1
@@ -408,8 +448,8 @@ ScriptedImporter:
         width: 610
         height: 360
       spriteId: 436ea4e5002adee498d196b3b3c27aaf
-    - name: Tienda-taller _Frame_11
-      frameIndex: 11
+    - name: Tienda-taller _Frame_13
+      frameIndex: 13
       additiveSortOrder: 0
       cellRect:
         x: 608
@@ -417,13 +457,13 @@ ScriptedImporter:
         width: 672
         height: 360
       spriteId: 848f38056d7ff7e46ab2513d2613ad7f
-    - name: Tienda-taller _Frame_12
-      frameIndex: 12
+    - name: Tienda-taller _Frame_14
+      frameIndex: 14
       additiveSortOrder: 0
       cellRect:
-        x: 608
+        x: 632
         y: 0
-        width: 672
+        width: 648
         height: 360
       spriteId: 51ddff8b19f63d44db9b4c351bd894ec
     - name: Tienda-taller _Frame_2
@@ -507,6 +547,24 @@ ScriptedImporter:
         width: 19
         height: 32
       spriteId: 0abfbc0913a90c747b97c5c5dc27b942
+    - name: Tienda-taller _Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 610
+        height: 360
+      spriteId: 228ddbfd83394464bb357af00334bd44
+    - name: Tienda-taller _Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 608
+        y: 0
+        width: 24
+        height: 360
+      spriteId: 63d1fd46ea9ce7543a3ef011b365f6f0
     linkedCells: []
     parentIndex: -1
   platformSettings:
