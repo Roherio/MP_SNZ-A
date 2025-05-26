@@ -23,7 +23,6 @@ public class AudioSettingsManager : MonoBehaviour
         }
 
         instance = this;
-        saveVolumeValue();
     }
 
     private void FixedUpdate()

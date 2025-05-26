@@ -6,13 +6,11 @@ using UnityEngine;
 
 public class SaveController_Script : MonoBehaviour
 {
-    AudioSettingsManager audioSettingsManager;
     private static string saveLocation;
   
     // Start is called before the first frame update
     void Awake()
     {
-        audioSettingsManager = GameObject.FindGameObjectWithTag("AudioSettings").GetComponent<AudioSettingsManager>();
         //determinem on es guarda la save
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         LoadGame();
