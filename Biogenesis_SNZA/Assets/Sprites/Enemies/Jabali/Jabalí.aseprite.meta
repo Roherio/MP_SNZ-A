@@ -449,7 +449,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 243
-      y: 630
+      y: 526
       width: 71
       height: 97
     spriteID: 729285951efc76b48b89fd2a97fc88b9
@@ -460,17 +460,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 243, y: 630}
+    uvTransform: {x: 243, y: 526}
   - name: "Jabal\xED_Frame_17"
     originalName: 
-    pivot: {x: 0.15277784, y: -0.020833334}
+    pivot: {x: 0.15492964, y: -0.020833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 243
-      y: 526
-      width: 72
+      y: 631
+      width: 71
       height: 96
     spriteID: 923939df75a9f6342ab696f928092051
     spriteBone: []
@@ -480,7 +480,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 243, y: 526}
+    uvTransform: {x: 243, y: 631}
   - name: "Jabal\xED_Frame_19"
     originalName: 
     pivot: {x: 0.15277784, y: -0.021276595}
@@ -1209,7 +1209,7 @@ ScriptedImporter:
       cellRect:
         x: 149
         y: 2
-        width: 72
+        width: 71
         height: 96
       spriteId: 923939df75a9f6342ab696f928092051
     - name: "Jabal\xED_Frame_36"
