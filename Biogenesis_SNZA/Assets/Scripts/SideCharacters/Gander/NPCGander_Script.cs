@@ -20,6 +20,10 @@ public class NPCGander_Script : MonoBehaviour, IInteractable_Script
     private void Start()
     {
         dialogueUI = DialogueController.Instance;
+        if (EventsManager_Script.allMapsActive)
+        {
+            currentDialogue = "dialogueData2";
+        }
     }
     //variable que només serveix perquè Khione hagi de dir una vegada mínim el dialeg en el que t'explica quines peces necessita, ja que sinó podries arribar amb les dues peces a l'inventari i te les accepta
     void Update()
@@ -103,7 +107,8 @@ public class NPCGander_Script : MonoBehaviour, IInteractable_Script
             }
             else
             {
-                EventsManager_Script.allMapsActive = true;
+                //EventsManager_Script.allMapsActive = true;
+                EventsManager_Script.habladoGander1vez = true;
                 MapManager_Script.instance.ActivateAllMaps();
                 EndDialogue();
                 currentDialogue = "dialogueData2";

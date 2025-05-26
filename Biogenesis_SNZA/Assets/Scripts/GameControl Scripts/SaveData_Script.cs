@@ -14,6 +14,10 @@ public class SaveData_Script
 
     public string mapBoundary; //aqui guardarem els limits de la camera quan els apliquem
 
+    //GUARDADO MAPA DESBLOQUEADO
+    public bool[] mapsUnlocked;
+    public bool allMapUnlocked;
+
     //Inventory saving també
     //-----------------------consumibles
     public int cristalizadores;
@@ -34,5 +38,6 @@ public class SaveData_Script
     public bool habladoKhione1vez;
     public bool habladoWallace1vez;
     public bool habladoDioltas1vez;
+    public bool habladoGander1vez;
     //SNZAs també
 }
