@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: "Jabal\xED_Frame_0"
     originalName: 
-    pivot: {x: 0, y: -0.030303031}
+    pivot: {x: 0.5, y: -0.030303031}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -143,7 +143,7 @@ ScriptedImporter:
     uvTransform: {x: 407, y: 190}
   - name: "Jabal\xED_Frame_1"
     originalName: 
-    pivot: {x: -0.09615385, y: -0.03}
+    pivot: {x: 0.5, y: -0.03}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -163,7 +163,7 @@ ScriptedImporter:
     uvTransform: {x: 334, y: 750}
   - name: "Jabal\xED_Frame_2"
     originalName: 
-    pivot: {x: 0, y: -0.029702969}
+    pivot: {x: 0.5, y: -0.029702969}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -183,7 +183,7 @@ ScriptedImporter:
     uvTransform: {x: 334, y: 422}
   - name: "Jabal\xED_Frame_7"
     originalName: 
-    pivot: {x: 0.11864404, y: -0.029702969}
+    pivot: {x: 0.5, y: -0.029702969}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -203,7 +203,7 @@ ScriptedImporter:
     uvTransform: {x: 334, y: 110}
   - name: "Jabal\xED_Frame_8"
     originalName: 
-    pivot: {x: 0.13846149, y: -0.030612245}
+    pivot: {x: 0.5, y: -0.030612245}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -223,7 +223,7 @@ ScriptedImporter:
     uvTransform: {x: 334, y: 4}
   - name: "Jabal\xED_Frame_9"
     originalName: 
-    pivot: {x: 0.06779655, y: -0.030303031}
+    pivot: {x: 0.5, y: -0.030303031}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -243,7 +243,7 @@ ScriptedImporter:
     uvTransform: {x: 334, y: 219}
   - name: "Jabal\xED_Frame_3"
     originalName: 
-    pivot: {x: 0.038461503, y: -0.029702969}
+    pivot: {x: 0.5, y: -0.029702969}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -263,7 +263,7 @@ ScriptedImporter:
     uvTransform: {x: 334, y: 641}
   - name: "Jabal\xED_Frame_4"
     originalName: 
-    pivot: {x: 0.019230843, y: -0.029411767}
+    pivot: {x: 0.5, y: -0.029411767}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -283,7 +283,7 @@ ScriptedImporter:
     uvTransform: {x: 334, y: 531}
   - name: "Jabal\xED_Frame_5"
     originalName: 
-    pivot: {x: 0.058823567, y: -0.029702969}
+    pivot: {x: 0.5, y: -0.029702969}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -303,7 +303,7 @@ ScriptedImporter:
     uvTransform: {x: 334, y: 858}
   - name: "Jabal\xED_Frame_6"
     originalName: 
-    pivot: {x: 0.020000076, y: -0.030927833}
+    pivot: {x: 0.5, y: -0.030927833}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -323,7 +323,7 @@ ScriptedImporter:
     uvTransform: {x: 407, y: 297}
   - name: "Jabal\xED_Frame_10"
     originalName: 
-    pivot: {x: 0.07407412, y: -0.020833334}
+    pivot: {x: 0.46, y: -0.020833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -343,7 +343,7 @@ ScriptedImporter:
     uvTransform: {x: 243, y: 210}
   - name: "Jabal\xED_Frame_11"
     originalName: 
-    pivot: {x: 0.047619004, y: -0.020833334}
+    pivot: {x: 0.35, y: -0.020833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -383,7 +383,7 @@ ScriptedImporter:
     uvTransform: {x: 243, y: 422}
   - name: "Jabal\xED_Frame_13"
     originalName: 
-    pivot: {x: 0.6302521, y: -0.020408163}
+    pivot: {x: 0.5, y: -0.020408163}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -423,7 +423,7 @@ ScriptedImporter:
     uvTransform: {x: 243, y: 314}
   - name: "Jabal\xED_Frame_15"
     originalName: 
-    pivot: {x: 0.19402987, y: -0.03}
+    pivot: {x: 0.5, y: -0.03}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -443,7 +443,7 @@ ScriptedImporter:
     uvTransform: {x: 243, y: 837}
   - name: "Jabal\xED_Frame_16"
     originalName: 
-    pivot: {x: 0.15492964, y: -0.020618556}
+    pivot: {x: 0.5, y: -0.020618556}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -463,7 +463,7 @@ ScriptedImporter:
     uvTransform: {x: 243, y: 526}
   - name: "Jabal\xED_Frame_17"
     originalName: 
-    pivot: {x: 0.15492964, y: -0.020833334}
+    pivot: {x: 0.5, y: -0.020833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -483,7 +483,7 @@ ScriptedImporter:
     uvTransform: {x: 243, y: 631}
   - name: "Jabal\xED_Frame_19"
     originalName: 
-    pivot: {x: 0.15277784, y: -0.021276595}
+    pivot: {x: 0.5, y: -0.021276595}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -503,7 +503,7 @@ ScriptedImporter:
     uvTransform: {x: 243, y: 735}
   - name: "Jabal\xED_Frame_20"
     originalName: 
-    pivot: {x: 0.13043472, y: -0.02173913}
+    pivot: {x: 0.5, y: -0.02173913}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -523,7 +523,7 @@ ScriptedImporter:
     uvTransform: {x: 407, y: 4}
   - name: "Jabal\xED_Frame_21"
     originalName: 
-    pivot: {x: 0.10769228, y: -0.011363637}
+    pivot: {x: 0.5, y: -0.011363637}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -543,7 +543,7 @@ ScriptedImporter:
     uvTransform: {x: 334, y: 326}
   - name: "Jabal\xED_Frame_22"
     originalName: 
-    pivot: {x: 0.10769228, y: -0.012820513}
+    pivot: {x: 0.5, y: -0.012820513}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -563,7 +563,7 @@ ScriptedImporter:
     uvTransform: {x: 407, y: 104}
   - name: "Jabal\xED_Frame_18"
     originalName: 
-    pivot: {x: 0.10769228, y: -0.015625}
+    pivot: {x: 0.5, y: -0.015625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -603,7 +603,7 @@ ScriptedImporter:
     uvTransform: {x: 407, y: 402}
   - name: "Jabal\xED_Frame_24"
     originalName: 
-    pivot: {x: 0.1369863, y: -0.04}
+    pivot: {x: 0.5, y: -0.04}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -623,7 +623,7 @@ ScriptedImporter:
     uvTransform: {x: 131, y: 977}
   - name: "Jabal\xED_Frame_27"
     originalName: 
-    pivot: {x: 0.048192725, y: -0.021052632}
+    pivot: {x: 0.56, y: -0.021052632}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -643,7 +643,7 @@ ScriptedImporter:
     uvTransform: {x: 243, y: 4}
   - name: "Jabal\xED_Frame_28"
     originalName: 
-    pivot: {x: 0.048192725, y: -0.021052632}
+    pivot: {x: 0.44, y: -0.021052632}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -663,7 +663,7 @@ ScriptedImporter:
     uvTransform: {x: 243, y: 107}
   - name: "Jabal\xED_Frame_29"
     originalName: 
-    pivot: {x: 0.6637168, y: -0.020408163}
+    pivot: {x: 0.75, y: -0.020408163}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -703,7 +703,7 @@ ScriptedImporter:
     uvTransform: {x: 131, y: 556}
   - name: "Jabal\xED_Frame_34"
     originalName: 
-    pivot: {x: 0.6741573, y: -0.020408163}
+    pivot: {x: 0.79, y: -0.020408163}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -723,7 +723,7 @@ ScriptedImporter:
     uvTransform: {x: 131, y: 662}
   - name: "Jabal\xED_Frame_36"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019417476}
+    pivot: {x: 0.5, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -743,7 +743,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 216}
   - name: "Jabal\xED_Frame_37"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019417476}
+    pivot: {x: 0.5, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -763,7 +763,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 327}
   - name: "Jabal\xED_Frame_38"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019417476}
+    pivot: {x: 0.5, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -783,7 +783,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 438}
   - name: "Jabal\xED_Frame_39"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019607844}
+    pivot: {x: 0.5, y: -0.019607844}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -803,7 +803,7 @@ ScriptedImporter:
     uvTransform: {x: 131, y: 226}
   - name: "Jabal\xED_Frame_40"
     originalName: 
-    pivot: {x: 0.10975605, y: -0.020618556}
+    pivot: {x: 0.5, y: -0.020618556}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -823,7 +823,7 @@ ScriptedImporter:
     uvTransform: {x: 131, y: 872}
   - name: "Jabal\xED_Frame_41"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019417476}
+    pivot: {x: 0.5, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -843,7 +843,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 549}
   - name: "Jabal\xED_Frame_42"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019417476}
+    pivot: {x: 0.5, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -863,7 +863,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 660}
   - name: "Jabal\xED_Frame_18"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019417476}
+    pivot: {x: 0.5, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -883,7 +883,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 771}
   - name: "Jabal\xED_Frame_23"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019417476}
+    pivot: {x: 0.5, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -903,7 +903,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 882}
   - name: "Jabal\xED_Frame_30"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019417476}
+    pivot: {x: 0.66, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -923,7 +923,7 @@ ScriptedImporter:
     uvTransform: {x: 131, y: 4}
   - name: "Jabal\xED_Frame_31"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019417476}
+    pivot: {x: 0.5, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -943,7 +943,7 @@ ScriptedImporter:
     uvTransform: {x: 131, y: 115}
   - name: "Jabal\xED_Frame_32"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019607844}
+    pivot: {x: 0.5, y: -0.019607844}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -963,7 +963,7 @@ ScriptedImporter:
     uvTransform: {x: 131, y: 336}
   - name: "Jabal\xED_Frame_35"
     originalName: 
-    pivot: {x: 0.24038462, y: -0.019607844}
+    pivot: {x: 0.5, y: -0.019607844}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -983,7 +983,7 @@ ScriptedImporter:
     uvTransform: {x: 131, y: 446}
   - name: "Jabal\xED_Frame_28"
     originalName: 
-    pivot: {x: 0.16250002, y: -0.125}
+    pivot: {x: 0.5, y: -0.125}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1003,7 +1003,7 @@ ScriptedImporter:
     uvTransform: {x: 131, y: 1010}
   - name: "Jabal\xED_Frame_29"
     originalName: 
-    pivot: {x: 0.17857143, y: -0.2}
+    pivot: {x: 0.5, y: -0.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -1023,7 +1023,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 993}
   - name: "Jabal\xED_Frame_32"
     originalName: 
-    pivot: {x: 0.20224722, y: -0.5}
+    pivot: {x: 0.5, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:

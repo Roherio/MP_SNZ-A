@@ -9,7 +9,7 @@ public class Liora_Attack_Script : MonoBehaviour
     public Animator animator;
     LioraAudioManager audioManager;
     //---------------------------------------ATAQUE LOGIC
-    [SerializeField] public enum snzaAttackType { NONE, CANGREJO, ESCARABAJO, SECRETARIO, AGUILA, JABALI }
+    [SerializeField] public enum snzaAttackType { NONE, CANGREJO, SECRETARIO, JABALI }
     [SerializeField] public static snzaAttackType currentAttackType = snzaAttackType.CANGREJO;
     public static bool isAttacking = false;
     public float inputAttackCooldown = 0.2f;
@@ -41,8 +41,9 @@ public class Liora_Attack_Script : MonoBehaviour
     //colliders particulars
     public GameObject colliderAttackCrabLiora;
     public GameObject colliderAttackBoarLiora;
+    public GameObject colliderAttackSecretaryLiora;
     //---------------------------------------PARRY LOGIC
-    public enum snzaParryType { NONE, CANGREJO, ESCARABAJO, SECRETARIO, AGUILA, JABALI }
+    public enum snzaParryType { NONE, CANGREJO, SECRETARIO, JABALI }
     [SerializeField] public static snzaParryType currentParryType = snzaParryType.CANGREJO;
     public static bool isParrying = false;
     private float parryCooldown = 2f;
@@ -200,6 +201,31 @@ public class Liora_Attack_Script : MonoBehaviour
                 }
                 colliderAtaque = colliderAttackBoarLiora;
                 Invoke("CallInstanciarAtaque", delayCollider);
+                break;
+            case snzaAttackType.SECRETARIO:
+                inputAttackCooldown = 0.2f;
+                maxComboSteps = 3;
+                switch (step)
+                {
+                    case 1:
+                        damageAttackLiora = 20f;
+                        duracioCollider = 0.2f;
+                        delayCollider = 0.1f;
+                        break;
+                    case 2:
+                        damageAttackLiora = 20f;
+                        duracioCollider = 0.2f;
+                        delayCollider = 0.1f;
+                        break;
+                    case 3:
+                        damageAttackLiora = 40f;
+                        duracioCollider = 0.3f;
+                        delayCollider = 0.2f;
+                        break;
+                }
+                colliderAtaque = colliderAttackSecretaryLiora;
+                Invoke("CallInstanciarAtaque", delayCollider);
+                //InstanciarAtaque(colliderAttackCrabLiora);
                 break;
         }
         isAttacking = true;
