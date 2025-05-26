@@ -151,7 +151,7 @@ ScriptedImporter:
       x: 828
       y: 4
       width: 640
-      height: 336
+      height: 346
     spriteID: 6d1ad336a91d6b541be1738d318df0a2
     spriteBone: []
     spriteOutline: []
@@ -163,14 +163,14 @@ ScriptedImporter:
     uvTransform: {x: 828, y: 4}
   - name: Ciudad-casas_Frame_2
     originalName: 
-    pivot: {x: 0.49817514, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1476
-      y: 4
-      width: 548
+      x: 4
+      y: 372
+      width: 640
       height: 346
     spriteID: edd870574d23b4445ab89e9118e72a0c
     spriteBone: []
@@ -180,17 +180,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1476, y: 4}
+    uvTransform: {x: 4, y: 372}
   - name: Ciudad-casas_Frame_3
     originalName: 
-    pivot: {x: 0.49817514, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 699
-      width: 548
+      x: 652
+      y: 372
+      width: 640
       height: 346
     spriteID: 417cb0de49de8d14a856950cb126f53b
     spriteBone: []
@@ -200,17 +200,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 699}
+    uvTransform: {x: 652, y: 372}
   - name: Ciudad-casas_Frame_4
     originalName: 
-    pivot: {x: 0.49817514, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 560
-      y: 699
-      width: 548
+      x: 1300
+      y: 372
+      width: 640
       height: 346
     spriteID: 020cf66da8f497c48a7f7cb0292df16c
     spriteBone: []
@@ -220,17 +220,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 560, y: 699}
+    uvTransform: {x: 1300, y: 372}
   - name: Ciudad-casas_Frame_5
     originalName: 
-    pivot: {x: 0.49817514, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1116
-      y: 699
-      width: 548
+      x: 4
+      y: 726
+      width: 640
       height: 346
     spriteID: 2bd08009bde138c4198058671b3933ae
     spriteBone: []
@@ -240,17 +240,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1116, y: 699}
+    uvTransform: {x: 4, y: 726}
   - name: Ciudad-casas_Frame_6
     originalName: 
-    pivot: {x: 0.49817514, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1053
-      width: 548
+      x: 652
+      y: 726
+      width: 640
       height: 346
     spriteID: 0f67e1e328ee2ca49b7e63e65791ff9a
     spriteBone: []
@@ -260,18 +260,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1053}
+    uvTransform: {x: 652, y: 726}
   - name: Ciudad-casas_Frame_7
     originalName: 
-    pivot: {x: 0.49817514, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 560
-      y: 1053
-      width: 548
-      height: 346
+      x: 1300
+      y: 726
+      width: 640
+      height: 336
     spriteID: 258f5360ea1f1544e8503e33682219a6
     spriteBone: []
     spriteOutline: []
@@ -280,18 +280,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 560, y: 1053}
+    uvTransform: {x: 1300, y: 726}
   - name: Ciudad-casas_Frame_8
     originalName: 
-    pivot: {x: 0.3956044, y: 0}
+    pivot: {x: 12.857143, y: -33.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1116
-      y: 1053
-      width: 455
-      height: 346
+      x: 2028
+      y: 146
+      width: 14
+      height: 10
     spriteID: 94b0be3c734500b45b4fac6ec2ac5a64
     spriteBone: []
     spriteOutline: []
@@ -300,18 +300,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1116, y: 1053}
+    uvTransform: {x: 2028, y: 146}
   - name: Ciudad-casas_Frame_9
     originalName: 
-    pivot: {x: 0.3956044, y: 0}
+    pivot: {x: 11.25, y: -33.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1579
-      y: 1053
-      width: 455
-      height: 346
+      x: 2028
+      y: 128
+      width: 16
+      height: 10
     spriteID: 37e6c09abd62bb04f891555e36d07f63
     spriteBone: []
     spriteOutline: []
@@ -320,18 +320,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1579, y: 1053}
+    uvTransform: {x: 2028, y: 128}
   - name: Ciudad-casas_Frame_10
     originalName: 
-    pivot: {x: 0.3956044, y: 0}
+    pivot: {x: 10.588236, y: -33.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1407
-      width: 455
-      height: 346
+      x: 1856
+      y: 4
+      width: 17
+      height: 10
     spriteID: 238480b0c07fa2f44a615fa16a4b4d53
     spriteBone: []
     spriteOutline: []
@@ -340,18 +340,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1407}
+    uvTransform: {x: 1856, y: 4}
   - name: Ciudad-casas_Frame_11
     originalName: 
-    pivot: {x: 0.3956044, y: 0}
+    pivot: {x: 10, y: -33.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 467
-      y: 1407
-      width: 455
-      height: 346
+      x: 1778
+      y: 4
+      width: 18
+      height: 10
     spriteID: 1ab5ffb5b6a1f404586f35eedc9b4e56
     spriteBone: []
     spriteOutline: []
@@ -360,18 +360,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 467, y: 1407}
+    uvTransform: {x: 1778, y: 4}
   - name: Ciudad-casas_Frame_12
     originalName: 
-    pivot: {x: 0.3956044, y: 0}
+    pivot: {x: 10, y: -33.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 930
-      y: 1407
-      width: 455
-      height: 346
+      x: 1804
+      y: 4
+      width: 18
+      height: 10
     spriteID: 38986a3852a5d7c4a9421c5f05c30395
     spriteBone: []
     spriteOutline: []
@@ -380,18 +380,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 930, y: 1407}
+    uvTransform: {x: 1804, y: 4}
   - name: Ciudad-casas_Frame_13
     originalName: 
-    pivot: {x: 0.3956044, y: 0}
+    pivot: {x: 10, y: -33.6}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1393
-      y: 1407
-      width: 455
-      height: 346
+      x: 1830
+      y: 4
+      width: 18
+      height: 10
     spriteID: efd0cd5503e014e4f858ac727dbd7545
     spriteBone: []
     spriteOutline: []
@@ -400,7 +400,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1393, y: 1407}
+    uvTransform: {x: 1830, y: 4}
   - name: Ciudad-casas_Frame_14
     originalName: 
     pivot: {x: 0.5, y: -0.012539186}
@@ -409,7 +409,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 372
+      y: 1080
       width: 640
       height: 319
     spriteID: 26656253ca2e1144199fc423186eea2a
@@ -420,7 +420,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 372}
+    uvTransform: {x: 4, y: 1080}
   - name: Ciudad-casas_Frame_15
     originalName: 
     pivot: {x: 0.5, y: -0.31557378}
@@ -428,8 +428,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1393
-      y: 1761
+      x: 652
+      y: 1080
       width: 640
       height: 244
     spriteID: caf0596d61e567e45a65daa65f20eb08
@@ -440,7 +440,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1393, y: 1761}
+    uvTransform: {x: 652, y: 1080}
   - name: Ciudad-casas_Frame_16
     originalName: 
     pivot: {x: 0.14285718, y: -0.6206897}
@@ -448,8 +448,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1761
+      x: 1476
+      y: 4
       width: 294
       height: 116
     spriteID: 6708b0735ae5f9a449774a5cdc525bf7
@@ -460,7 +460,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1761}
+    uvTransform: {x: 1476, y: 4}
   - name: Ciudad-casas_Frame_17
     originalName: 
     pivot: {x: 0.059701506, y: -0.6206897}
@@ -468,8 +468,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1885
+      x: 1476
+      y: 128
       width: 268
       height: 116
     spriteID: b8d3ec2cd148c514dbea683886fa24a6
@@ -480,7 +480,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1885}
+    uvTransform: {x: 1476, y: 128}
   - name: Ciudad-casas_Frame_18
     originalName: 
     pivot: {x: 0.059701506, y: -0.6206897}
@@ -488,8 +488,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 467
-      y: 1761
+      x: 1752
+      y: 128
       width: 268
       height: 116
     spriteID: eb9a6ba32ef76794d90f6cac701ea646
@@ -500,7 +500,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 467, y: 1761}
+    uvTransform: {x: 1752, y: 128}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -519,6 +519,60 @@ ScriptedImporter:
         width: 816
         height: 360
       spriteId: 62ee957f28042044ab92477def41ae55
+    - name: Ciudad-casas_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 640
+        height: 346
+      spriteId: 6d1ad336a91d6b541be1738d318df0a2
+    - name: Ciudad-casas_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 640
+        height: 346
+      spriteId: edd870574d23b4445ab89e9118e72a0c
+    - name: Ciudad-casas_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 640
+        height: 346
+      spriteId: 417cb0de49de8d14a856950cb126f53b
+    - name: Ciudad-casas_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 640
+        height: 346
+      spriteId: 020cf66da8f497c48a7f7cb0292df16c
+    - name: Ciudad-casas_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 640
+        height: 346
+      spriteId: 2bd08009bde138c4198058671b3933ae
+    - name: Ciudad-casas_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 640
+        height: 346
+      spriteId: 0f67e1e328ee2ca49b7e63e65791ff9a
     - name: Ciudad-casas_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -527,114 +581,60 @@ ScriptedImporter:
         y: 0
         width: 640
         height: 336
-      spriteId: 6d1ad336a91d6b541be1738d318df0a2
-    - name: Ciudad-casas_Frame_2
-      frameIndex: 2
-      additiveSortOrder: 0
-      cellRect:
-        x: 47
-        y: 0
-        width: 548
-        height: 346
-      spriteId: edd870574d23b4445ab89e9118e72a0c
-    - name: Ciudad-casas_Frame_3
-      frameIndex: 3
-      additiveSortOrder: 0
-      cellRect:
-        x: 47
-        y: 0
-        width: 548
-        height: 346
-      spriteId: 417cb0de49de8d14a856950cb126f53b
-    - name: Ciudad-casas_Frame_4
-      frameIndex: 4
-      additiveSortOrder: 0
-      cellRect:
-        x: 47
-        y: 0
-        width: 548
-        height: 346
-      spriteId: 020cf66da8f497c48a7f7cb0292df16c
-    - name: Ciudad-casas_Frame_5
-      frameIndex: 5
-      additiveSortOrder: 0
-      cellRect:
-        x: 47
-        y: 0
-        width: 548
-        height: 346
-      spriteId: 2bd08009bde138c4198058671b3933ae
-    - name: Ciudad-casas_Frame_6
-      frameIndex: 6
-      additiveSortOrder: 0
-      cellRect:
-        x: 47
-        y: 0
-        width: 548
-        height: 346
-      spriteId: 0f67e1e328ee2ca49b7e63e65791ff9a
-    - name: Ciudad-casas_Frame_7
-      frameIndex: 7
-      additiveSortOrder: 0
-      cellRect:
-        x: 47
-        y: 0
-        width: 548
-        height: 346
       spriteId: 258f5360ea1f1544e8503e33682219a6
     - name: Ciudad-casas_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
         x: 140
-        y: 0
-        width: 455
-        height: 346
+        y: 336
+        width: 14
+        height: 10
       spriteId: 94b0be3c734500b45b4fac6ec2ac5a64
     - name: Ciudad-casas_Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
         x: 140
-        y: 0
-        width: 455
-        height: 346
+        y: 336
+        width: 16
+        height: 10
       spriteId: 37e6c09abd62bb04f891555e36d07f63
     - name: Ciudad-casas_Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
         x: 140
-        y: 0
-        width: 455
-        height: 346
+        y: 336
+        width: 17
+        height: 10
       spriteId: 238480b0c07fa2f44a615fa16a4b4d53
     - name: Ciudad-casas_Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
         x: 140
-        y: 0
-        width: 455
-        height: 346
+        y: 336
+        width: 18
+        height: 10
       spriteId: 1ab5ffb5b6a1f404586f35eedc9b4e56
     - name: Ciudad-casas_Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
         x: 140
-        y: 0
-        width: 455
-        height: 346
+        y: 336
+        width: 18
+        height: 10
       spriteId: 38986a3852a5d7c4a9421c5f05c30395
     - name: Ciudad-casas_Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
         x: 140
-        y: 0
-        width: 455
-        height: 346
+        y: 336
+        width: 18
+        height: 10
       spriteId: efd0cd5503e014e4f858ac727dbd7545
     - name: Ciudad-casas_Frame_14
       frameIndex: 14
