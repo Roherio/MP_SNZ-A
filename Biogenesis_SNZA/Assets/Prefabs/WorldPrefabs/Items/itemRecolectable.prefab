@@ -49,13 +49,13 @@ MonoBehaviour:
   itemUser: 
   itemName: 
   itemUIName: 
-  spriteBarraKhione: {fileID: 21300000, guid: 9c92e659800f186429a951997a3ade2d, type: 3}
-  spriteMuelleKhione: {fileID: 21300000, guid: 5a9538b9baf9cb34aad55034cdd67ef5, type: 3}
-  spriteTaponesRumo: {fileID: 21300000, guid: 43c1ab6a5dc5958439725f0367786da5, type: 3}
-  spriteMantaRumo: {fileID: 21300000, guid: 2cd31f2a324338c4c9673f01a5b1abf0, type: 3}
-  spriteCristalizador: {fileID: 21300000, guid: 716a6d7949142fe409c4473cdf6f661e, type: 3}
-  spriteCuero: {fileID: 21300000, guid: adc871d105784a749b7174af9e6d18f4, type: 3}
-  spriteVial: {fileID: 21300000, guid: 318f6fe490dfcdc4b91c599d6e8bb69e, type: 3}
+  spriteBarraKhione: {fileID: 21300000, guid: 0c21912e797f64a47a40f55682d9cd81, type: 3}
+  spriteMuelleKhione: {fileID: 21300000, guid: ffe26b5f1f21c724db48f0f0bfb80d02, type: 3}
+  spriteTaponesRumo: {fileID: 21300000, guid: 3413cf0d72faa9b40bc30cedec589fb3, type: 3}
+  spriteMantaRumo: {fileID: 21300000, guid: 3db4d0a2ba376df48b169ca57643c5ce, type: 3}
+  spriteCristalizador: {fileID: 21300000, guid: f1adb1a906ccdb04f9703722c3d0ea28, type: 3}
+  spriteCuero: {fileID: 21300000, guid: 781de613f3e6d0a4687c49658f615f65, type: 3}
+  spriteVial: {fileID: 21300000, guid: ffa755faa183c474395a6c197be1a075, type: 3}
 --- !u!58 &2523566620441451308
 CircleCollider2D:
   m_ObjectHideFlags: 0
