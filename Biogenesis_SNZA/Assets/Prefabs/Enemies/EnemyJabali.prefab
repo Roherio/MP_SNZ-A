@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a368ccf8f237b47936e0a5e2c5f9c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 4630479382651860118}
   playerDetected: {fileID: 8300000, guid: 0324744d46bba6343b25066f22010781, type: 3}
   Attack: {fileID: 8300000, guid: f7b8167b4ce378c4f840add38bfdb943, type: 3}
   takeDamage: {fileID: 8300000, guid: a76476ea2859e5f48a8d37b135bf52c4, type: 3}
@@ -395,8 +395,8 @@ BoxCollider2D:
   m_Offset: {x: 1.4654675, y: 3.3021808}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.24038462, y: -0.019417476}
-    oldSize: {x: 6.5, y: 6.4375}
+    pivot: {x: 0, y: -0.030303031}
+    oldSize: {x: 3.125, y: 6.1875}
     newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
