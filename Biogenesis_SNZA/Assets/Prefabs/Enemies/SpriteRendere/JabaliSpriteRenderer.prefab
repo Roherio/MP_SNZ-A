@@ -134,7 +134,7 @@ MonoBehaviour:
   moveSpeed: 4
   dashSpeed: 0.00000001
   detectionRange: 20
-  attackDuration: 0.5
+  attackDuration: 0.2
   attackCooldown: 1.5
   hitboxSpawnTimer: 0.7
   attackRange: 4
@@ -200,7 +200,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 18.234447
+  m_Mass: 20.899858
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 6
@@ -247,18 +247,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.4654675, y: 3.3021808}
+  m_Offset: {x: 1.2377471, y: 3.3021808}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: -0.030303031}
-    oldSize: {x: 3.125, y: 6.1875}
+    pivot: {x: 0.3, y: -0.019417476}
+    oldSize: {x: 6.5, y: 6.4375}
     newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.961125, y: 5.852378}
+  m_Size: {x: 3.4165657, y: 5.852378}
   m_EdgeRadius: 0
 --- !u!212 &1645947894480426491
 SpriteRenderer:
