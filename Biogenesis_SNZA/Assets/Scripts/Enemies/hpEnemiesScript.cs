@@ -53,7 +53,7 @@ public class hpEnemiesScript : MonoBehaviour
             {
                 isDead = true;
                 GetComponent<BoxCollider2D>().enabled = false;
-                Destroy(rb);
+                
                 CinemachineShake.Instance.ShakeCamera(1f, .3f);
                 FindObjectOfType<HitStop>().hitStop(0.05f);
                 animator.SetBool("isWalking", false);
@@ -62,16 +62,19 @@ public class hpEnemiesScript : MonoBehaviour
                 //un cop passats a falsos els altres estats porsiacaso, fem trigger de la variable isDying, i fem destroy en invoke per ferho en el temps que l'animacio dura
                 if (nameEnemy == "Jabali")
                 {
+                    Destroy(rb);
                     ParentEnemyScript.enemyDead = true;
                     SNZAProgressControl_Script.bKilledJabali = true;
                 }
                 if (nameEnemy == "Secretario")
                 {
+                    Destroy(rb);
                     ParentEnemyScript.enemyDead = true;
                     SNZAProgressControl_Script.bKilledSecretario = true;
                 }
                 if (nameEnemy == "Ursina")
                 {
+                    rb.isKinematic = true;
                     bossMusic.bossDefeated = true;
                     Invoke("finalFadeOut", deathAnimationDuration - 1.5f);
                     Invoke("CargarFinalJuego", deathAnimationDuration);
