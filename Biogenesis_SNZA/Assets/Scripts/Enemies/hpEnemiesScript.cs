@@ -13,7 +13,7 @@ public class hpEnemiesScript : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     private Color originalColor;
-    
+
     public bool isDead = false;
 
     Rigidbody2D rb;
@@ -73,7 +73,9 @@ public class hpEnemiesScript : MonoBehaviour
                 if (nameEnemy == "Ursina")
                 {
                     bossMusic.bossDefeated = true;
+                    Invoke("finalFadeOut", deathAnimationDuration - 1.5f);
                     Invoke("CargarFinalJuego", deathAnimationDuration);
+
                 }
                 Invoke("DestruirGameObject", deathAnimationDuration);
             }
@@ -97,5 +99,10 @@ public class hpEnemiesScript : MonoBehaviour
         spriteRenderer.color = Color.white;
         yield return new WaitForSeconds(1f); // Duración del parpadeo
         spriteRenderer.color = originalColor;
+    }
+    public void finalFadeOut()
+    {
+        CameraFading fade = Camera.main.GetComponent<CameraFading>();
+        fade.FadeOutSlow();
     }
 }
