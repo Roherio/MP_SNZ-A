@@ -172,7 +172,11 @@ public class EscarabajoEnemyScript : MonoBehaviour
 
         if (!isAttacking && canAttack)
         {
-            rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
+            if (rb != null)
+            {
+                rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
+            }
+            
             if (direction.x < 0)
                 transform.localScale = new Vector3(1, 1, 1);
             else

@@ -16,12 +16,14 @@ public class hpEnemiesScript : MonoBehaviour
     
     public bool isDead = false;
 
+    Rigidbody2D rb;
     ParentEnemy ParentEnemyScript;
     public BossMusicController bossMusic;
     EscarabajoEnemyScript escarabajoEnemyScript;
     SecretarioEnemyScript secretarioEnemyScript;
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         ParentEnemyScript = GetComponentInParent<ParentEnemy>();
         enemyHP = maxEnemyHP;
         // Obtener el SpriteRenderer al iniciar
@@ -50,6 +52,8 @@ public class hpEnemiesScript : MonoBehaviour
             if (enemyHP <= 0f)
             {
                 isDead = true;
+                GetComponent<BoxCollider2D>().enabled = false;
+                Destroy(rb);
                 CinemachineShake.Instance.ShakeCamera(1f, .3f);
                 FindObjectOfType<HitStop>().hitStop(0.05f);
                 animator.SetBool("isWalking", false);

@@ -89,13 +89,16 @@ public class UrsinaScript : MonoBehaviour
         //Si esta molt lluny el jugador
         if (enemyToPlayerDistance > farDistance && !isAttacking && canAttack)
         {
-            animator.SetBool("isWalking", true);
-            Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
-                direction.y = 0; //fem que la direcció en y sigui 0
-                direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
-                rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
-                if (direction.x < 0) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
-                else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
+            if (rb != null)
+                {
+                    animator.SetBool("isWalking", true);
+                    Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
+                    direction.y = 0; //fem que la direcció en y sigui 0
+                    direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
+                    rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
+                    if (direction.x < 0) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+                    else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
+                }
         }
 
         //Si esta lluny del jugador pero suficientment a prop com per atacar
@@ -275,98 +278,110 @@ public class UrsinaScript : MonoBehaviour
     }*/
     IEnumerator closingDistance()
     {
-        animator.SetBool("isWalking", true);
-        float chaseTimer = 0f;
-        isAttacking = true;
-        canAttack = false;
-        while (chaseTimer < chaseTime)
+        if (rb != null)
         {
-            Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
-            direction.y = 0; //fem que la direcció en y sigui 0
-            direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
+            animator.SetBool("isWalking", true);
+            float chaseTimer = 0f;
+            isAttacking = true;
+            canAttack = false;
+            while (chaseTimer < chaseTime)
+            {
+                Vector2 direction = playerPosition.position - transform.position; //Aqui fem un nou vector només per la direcció, els anteriors eren per saber la distancia o per saber l'altura relativa entre jugador i enemic.
+                direction.y = 0; //fem que la direcció en y sigui 0
+                direction = direction.normalized; //normalitzem el vector perque el valor sigui 1 o 0
 
-            rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
-            if (direction.x < 0) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
-            else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
+                rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); //mou-te cap al jugador
+                if (direction.x < 0) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+                else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
 
-            chaseTimer += Time.deltaTime;
-            yield return null;
+                chaseTimer += Time.deltaTime;
+                yield return null;
+            }
+            rb.velocity = Vector3.zero;
+            animator.SetBool("isWalking", false);
+            yield return new WaitForSeconds(chaseTime);
+            isAttacking = false;
+            canAttack = true;
         }
-        rb.velocity = Vector3.zero;
-        animator.SetBool("isWalking", false);
-        yield return new WaitForSeconds(chaseTime);
-        isAttacking = false;
-        canAttack = true;
+        
     }
     IEnumerator clawAttack()
     {
-        animator.SetBool("isWalking", false);
-        animator.SetBool("isClawAttacking", true);
-        audioManager.UrsinaSFX(audioManager.clawAttack);
-        //Temps de preparació de l'atac
-        isAttacking = true;
-        canAttack = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
-        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
-        dashDirection = (playerPosition.position - transform.position);
-        dashDirection.y = 0;
-        dashDirection = dashDirection.normalized;
-        attackTimer = 0f;
+        if (rb != null)
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isClawAttacking", true);
+            audioManager.UrsinaSFX(audioManager.clawAttack);
+            //Temps de preparació de l'atac
+            isAttacking = true;
+            canAttack = false;
+            if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+            else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
+            dashDirection = (playerPosition.position - transform.position);
+            dashDirection.y = 0;
+            dashDirection = dashDirection.normalized;
+            attackTimer = 0f;
 
-        yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.4f);
 
-        //Fa el dash/atac cap a l'enemic
-        clawAttackInstance();
+            //Fa el dash/atac cap a l'enemic
+            clawAttackInstance();
 
-        yield return new WaitForSeconds(0.6f);
-        animator.SetBool("isClawAttacking", false);
-        //S'acaba l'atac, aturat i posa't en cooldown
-        rb.velocity = Vector2.zero;
+            yield return new WaitForSeconds(0.6f);
+            animator.SetBool("isClawAttacking", false);
+            //S'acaba l'atac, aturat i posa't en cooldown
+            rb.velocity = Vector2.zero;
 
-        yield return new WaitForSeconds(AttackCooldown);
+            yield return new WaitForSeconds(AttackCooldown);
 
-        //Pot tornar a atacar
+            //Pot tornar a atacar
 
-        isAttacking = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
-        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
-        canAttack = true;
+            isAttacking = false;
+            if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+            else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
+            canAttack = true;
+        }
+        
     }
     IEnumerator clawAttackPhase2()
     {
-        animator.SetBool("isWalking", false);
-        animator.SetBool("isClawAttacking", true);
-        audioManager.UrsinaSFX(audioManager.clawAttack);
+        if (rb != null)
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isClawAttacking", true);
+            audioManager.UrsinaSFX(audioManager.clawAttack);
 
-        //Temps de preparació de l'atac
-        isAttacking = true;
-        canAttack = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
-        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
-        dashDirection = (playerPosition.position - transform.position);
-        dashDirection.y = 0;
-        dashDirection = dashDirection.normalized;
-        attackTimer = 0f;
+            //Temps de preparació de l'atac
+            isAttacking = true;
+            canAttack = false;
+            if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+            else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
+            dashDirection = (playerPosition.position - transform.position);
+            dashDirection.y = 0;
+            dashDirection = dashDirection.normalized;
+            attackTimer = 0f;
 
-        yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.4f);
 
-        //Fa el dash/atac cap a l'enemic
-        clawAttackInstance();
-        StartCoroutine(clawIceSpikeInstance());
+            //Fa el dash/atac cap a l'enemic
+            clawAttackInstance();
+            StartCoroutine(clawIceSpikeInstance());
 
-        yield return new WaitForSeconds(0.6f);
-        animator.SetBool("isClawAttacking", false);
-        //S'acaba l'atac, aturat i posa't en cooldown
-        rb.velocity = Vector2.zero;
+            yield return new WaitForSeconds(0.6f);
+            animator.SetBool("isClawAttacking", false);
+            //S'acaba l'atac, aturat i posa't en cooldown
+            rb.velocity = Vector2.zero;
 
-        yield return new WaitForSeconds(AttackCooldown);
+            yield return new WaitForSeconds(AttackCooldown);
 
-        //Pot tornar a atacar
+            //Pot tornar a atacar
+
+            isAttacking = false;
+            if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+            else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
+            canAttack = true;
+        }
         
-        isAttacking = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
-        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
-        canAttack = true;
     }
     IEnumerator smashAttack()
     {
@@ -420,33 +435,37 @@ public class UrsinaScript : MonoBehaviour
     }
     IEnumerator Roar()
     {
-        animator.SetBool("isWalking", false);
-        animator.SetBool("isHowling", true);
-        
-        //Temps de preparació de l'atac
-        isAttacking = true;
-        canAttack = false;
-        yield return new WaitForSeconds(0.3f);
-        
-        CinemachineShake.Instance.ShakeCamera(10f, 1f);
-        roarInstance();
-        audioManager.UrsinaSFX(audioManager.Roar);
-        if (OnPhase2)
+        if (rb!= null)
         {
-            StartCoroutine(ceilingIceSpikeInstance());
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isHowling", true);
+
+            //Temps de preparació de l'atac
+            isAttacking = true;
+            canAttack = false;
+            yield return new WaitForSeconds(0.3f);
+
+            CinemachineShake.Instance.ShakeCamera(10f, 1f);
+            roarInstance();
+            audioManager.UrsinaSFX(audioManager.Roar);
+            if (OnPhase2)
+            {
+                StartCoroutine(ceilingIceSpikeInstance());
+            }
+
+            //S'acaba
+            rb.velocity = Vector2.zero;
+
+            yield return new WaitForSeconds(3f);
+            animator.SetBool("isHowling", false);
+
+            //Pot tornar a atacar
+            isAttacking = false;
+            if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+            else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
+            canAttack = true;
         }
-
-        //S'acaba
-        rb.velocity = Vector2.zero;
-
-        yield return new WaitForSeconds(3f);
-        animator.SetBool("isHowling", false);
-
-        //Pot tornar a atacar
-        isAttacking = false;
-        if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
-        else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
-        canAttack = true;
+        
     }
     public void clawAttackInstance() //Genera la hitbox de l'atac només quan nosaltres volem
     {
