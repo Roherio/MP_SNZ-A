@@ -52,6 +52,11 @@ public class MapManager_Script : MonoBehaviour
     {
         activeMapsIndex[index] = true;
         maps[index].enabled = true;
+        if (activeMapsIndex[26] && activeMapsIndex[7])
+        {
+            activeMapsIndex[36] = true;
+            maps[36].enabled = true;
+        }
     }
     public void ActivateAllMaps()
     {
