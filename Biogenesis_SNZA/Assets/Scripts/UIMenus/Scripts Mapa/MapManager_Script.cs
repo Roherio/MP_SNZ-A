@@ -7,6 +7,8 @@ public class MapManager_Script : MonoBehaviour
 {
     [SerializeField] private Image[] maps;
     public static bool[] activeMapsIndex;
+    [SerializeField] private GameObject[] masksLiora;
+    private bool[] activeMasksIndex;
 
     public static MapManager_Script instance;
     private void Awake()
@@ -20,16 +22,21 @@ public class MapManager_Script : MonoBehaviour
             instance = this;
         }
         activeMapsIndex = new bool[maps.Length];
+        activeMasksIndex = new bool[masksLiora.Length];
         for (int i = 0; i < activeMapsIndex.Length; i++)
         {
             activeMapsIndex[i] = false;
+        }
+        for (int i = 0; i < activeMasksIndex.Length; i++)
+        {
+            activeMasksIndex[i] = false;
         }
     }
     // Start is called before the first frame update
     void Start()
     {
         if (EventsManager_Script.allMapsActive) { return; }
-        //activar o desactivar mapas en funcion de true o false. Solo entraremos si ALLMAPSACTIVE es falsa.
+        //activar o desactivar mapas y mascaras en funcion de true o false. Solo entraremos si ALLMAPSACTIVE es falsa.
         for (int i = 0; i < maps.Length; i++)
         {
             if (activeMapsIndex[i])
@@ -41,8 +48,18 @@ public class MapManager_Script : MonoBehaviour
                 maps[i].enabled = false;
             }
         }
+        for (int i = 0; i < masksLiora.Length; i++)
+        {
+            if (activeMasksIndex[i])
+            {
+                masksLiora[i].SetActive(true);
+            }
+            else
+            {
+                masksLiora [i].SetActive(false);
+            }
+        }
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -65,5 +82,15 @@ public class MapManager_Script : MonoBehaviour
             activeMapsIndex[i] = true;
             maps[i].enabled = true;
         }
+    }
+    public void ActivateMask(int index)
+    {
+        for (int i = 0; i < masksLiora.Length; i++)
+        {
+            activeMasksIndex[i] = false;
+            masksLiora[i].SetActive(false);
+        }
+        activeMasksIndex[index] = true;
+        masksLiora[index].SetActive(true);
     }
 }
