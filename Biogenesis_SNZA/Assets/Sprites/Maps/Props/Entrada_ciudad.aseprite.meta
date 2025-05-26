@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Entrada_ciudad
     originalName: 
-    pivot: {x: 0.4945055, y: 0.0029498525}
+    pivot: {x: 0.88235295, y: -0.08433735}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 91
-      height: 339
+      width: 51
+      height: 332
     spriteID: 09c0101b2494a58499e9064325780beb
     spriteBone: []
     spriteOutline: []
@@ -141,6 +141,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Entrada_ciudad_Frame_1
+    originalName: 
+    pivot: {x: 0.04255319, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 63
+      y: 4
+      width: 47
+      height: 360
+    spriteID: 1a6be547c3854c443b26bac6cbed551d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -150,15 +170,24 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Entrada_ciudad
+    - name: Entrada_ciudad_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: -1
-        width: 91
-        height: 339
+        y: 28
+        width: 51
+        height: 332
       spriteId: 09c0101b2494a58499e9064325780beb
+    - name: Entrada_ciudad_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 0
+        width: 47
+        height: 360
+      spriteId: 1a6be547c3854c443b26bac6cbed551d
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -201,4 +230,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 90, y: 338}
+  canvasSize: {x: 90, y: 360}
