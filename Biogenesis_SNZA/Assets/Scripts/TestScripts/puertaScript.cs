@@ -47,7 +47,10 @@ public class puertaScript : MonoBehaviour, IInteractable_Script
             {
                 player.transform.position = destination.position;
                 confiner.m_BoundingShape2D = mapBoundary;
-
+                if (gameObject.CompareTag("PortalAlcantarilla"))
+                {
+                    MapManager_Script.instance.ActivateMap(11);
+                }
                 fade.FadeIn(() =>
                 {
                     portalsScript.levelTransitioning = false;

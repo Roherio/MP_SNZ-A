@@ -43,7 +43,7 @@ public class GameControl_Script : MonoBehaviour
         if (fade != null)
         {
             // Start the fade-in with an empty callback
-            fade.FadeIn(() => { });
+            fade.FadeInSlow(() => { });
         }
         else
         {

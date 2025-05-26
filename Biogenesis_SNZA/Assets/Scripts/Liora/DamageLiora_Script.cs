@@ -17,6 +17,7 @@ public class DamageLiora_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CameraFading fade = Camera.main.GetComponent<CameraFading>();
         instance = this;
         collider = GetComponent<Collider2D>();
         pociones = new GameObject[pocionesCount];
@@ -83,8 +84,11 @@ public class DamageLiora_Script : MonoBehaviour
         }
         if (GameControl_Script.lifeLiora <= 0)
         {
+            CameraFading fade = Camera.main.GetComponent<CameraFading>();
+            fade.FadeOutSlow();
             Liora_StateMachine_Script.isDying = true;
-            instance.Invoke("LoadWhenDead", 2.5f);
+            instance.Invoke("LoadWhenDead", 3.5f);
+            
         }
     }
     
@@ -92,5 +96,6 @@ public class DamageLiora_Script : MonoBehaviour
     {
         GameObject.FindObjectOfType<SaveController_Script>().LoadGame();
         Liora_StateMachine_Script.isDying = false;
+
     }
 }

@@ -58,7 +58,7 @@ public class SewerDrop : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.gravityScale = 0;
         animator.SetBool("hasImpacted", true);
-        Destroy(gameObject,0.2f);
+        Destroy(gameObject,0.4f);
     }
   
 }

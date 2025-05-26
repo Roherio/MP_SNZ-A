@@ -7,6 +7,7 @@ public class portalsScript : MonoBehaviour
     private HashSet<GameObject> portalObjects = new HashSet<GameObject>();
     [SerializeField] private Transform destination;
     [SerializeField] private GameObject player;
+    [SerializeField] private int indexDesbloquearMapa;
     public static bool levelTransitioning = false;
 
     private void Start()
@@ -58,6 +59,7 @@ public class portalsScript : MonoBehaviour
     private void Teleport()
     {
         player.transform.position = destination.position;
+        MapManager_Script.instance.ActivateMap(indexDesbloquearMapa);
     }
 
 }

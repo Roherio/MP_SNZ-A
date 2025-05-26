@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class AudioSettingsManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class AudioSettingsManager : MonoBehaviour
     [Range(0f, 1f)][SerializeField] private float _musicVolRaw = 1f;
     [Range(0f, 1f)][SerializeField] private float _effectsVolRaw = 1f;
 
+    public float masterVolumeSave;
     public static float musicVol => instance._musicVolRaw * instance.masterVol;
     public static float effectsVol => instance._effectsVolRaw * instance.masterVol;
 
@@ -22,6 +24,7 @@ public class AudioSettingsManager : MonoBehaviour
 
         instance = this;
     }
+
     private void FixedUpdate()
     {
             //musicVol = musicVol * masterVol;

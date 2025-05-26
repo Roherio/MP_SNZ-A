@@ -11,7 +11,6 @@ public class SaveController_Script : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-
         //determinem on es guarda la save
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         LoadGame();
@@ -54,8 +53,11 @@ public class SaveController_Script : MonoBehaviour
     }
     public void LoadGame()
     {
+        CameraFading fade = Camera.main.GetComponent<CameraFading>();
+        fade.FadeInSlow();
         if (File.Exists(saveLocation))
         {
+            
             //llegir el arxiu de TXT per carregarlo
             SaveData_Script saveData = JsonUtility.FromJson<SaveData_Script>(File.ReadAllText(saveLocation));
             //
