@@ -12,17 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7318cb11f40fa44bccbe30dbcc194e, type: 3}
   m_Name: Gander1Vez
   m_EditorClassIdentifier: 
-  npcName: Abraxas
+  npcName: Gander
   npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
   dialogueLines:
-  - Recuerda, esa pulsera... Te la he dado para restablecer el orden a las cosas.
-  - "Tu objetivo es claro: viaja a Axia y acaba con Ursina, la reina tirana. Una
-    vez recolectes su SNZ A, tr\xE1emela."
-  - "Con esa pulsera, podr\xE1s usar SNZ A recolectada de otros humanos transformados."
-  - "As\xED, podr\xE1s aumentar tu arsenal de herramientas y podr\xE1s enfrentarte
-    a Ursina en igualdad de condiciones."
-  - "Habla con Dioltas, fuera del laboratorio. \xC9l te indicar\xE1 el camino..."
-  autoProgressLines: 000000
+  - "\xA1Menudo susto me has dado! Tendr\xE1s que acercarte m\xE1s, joven, no puedo
+    verte."
+  - "M\xEDrate... Qu\xE9 criatura tan peque\xF1a. \xBFPara qu\xE9 podr\xEDas necesitar
+    mi ayuda?"
+  - "Espera... Tu no ser\xE1s..."
+  - "He o\xEDdo hablar mucho de t\xED, Liora. Reconocer\xEDa la influencia de Abraxas
+    sobre una persona entre toda la poblaci\xF3n de Umbraville, Axia y Minui juntas."
+  - "No puedo decir que me sorprenda que est\xE9s aqu\xED. Tu intenci\xF3n es llegar
+    hasta el final, \xBFno?"
+  - "Toma uno de mis mapas, el mapa de Axia. Con \xE9l, estoy seguro de que no te
+    perder\xE1s."
+  autoProgressLines: 000000000000
   endDialogueLines: 
   autoProgressDelay: 1.5
   typingSpeed: 0
