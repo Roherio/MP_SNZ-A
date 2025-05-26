@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class DamageLiora_Script : MonoBehaviour
 {
+    LioraAudioManager lioraAudioManager;
     public static DamageLiora_Script instance;
     public static bool isParrying = false;
     public static Collider2D collider;
@@ -17,6 +18,7 @@ public class DamageLiora_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lioraAudioManager = GameObject.FindGameObjectWithTag("LioraAudioManager").GetComponent<LioraAudioManager>();
         CameraFading fade = Camera.main.GetComponent<CameraFading>();
         instance = this;
         collider = GetComponent<Collider2D>();
@@ -107,6 +109,10 @@ public class DamageLiora_Script : MonoBehaviour
     {
         GameObject.FindObjectOfType<SaveController_Script>().LoadGame();
         Liora_StateMachine_Script.isDying = false;
+    }
 
+    public void perfectParrySFX()
+    {
+        lioraAudioManager.LioraSFX(lioraAudioManager.perfectParry);
     }
 }

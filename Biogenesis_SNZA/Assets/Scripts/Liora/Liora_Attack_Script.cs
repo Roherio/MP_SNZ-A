@@ -192,11 +192,15 @@ public class Liora_Attack_Script : MonoBehaviour
                         damageAttackLiora = 40f;
                         duracioCollider = 0.2f;
                         delayCollider = 0.1f;
+                        audioManager.LioraSFX(audioManager.voiceLightSmash);
+                        audioManager.LioraSFX(audioManager.jabaliAttack);
                         break;
                     case 2:
                         damageAttackLiora = 70f;
                         duracioCollider = 0.2f;
                         delayCollider = 0.3f;
+                        audioManager.LioraSFX(audioManager.voiceHeavySmash);
+                        audioManager.LioraSFX(audioManager.jabaliAttack);
                         break;
                 }
                 colliderAtaque = colliderAttackBoarLiora;
@@ -210,17 +214,23 @@ public class Liora_Attack_Script : MonoBehaviour
                     case 1:
                         damageAttackLiora = 20f;
                         duracioCollider = 0.2f;
-                        delayCollider = 0.1f;
+                        delayCollider = 0.1f; audioManager.LioraSFX(audioManager.voiceShortSlash);
+                        audioManager.LioraSFX(audioManager.secretarioAttack);
+
                         break;
                     case 2:
                         damageAttackLiora = 20f;
                         duracioCollider = 0.2f;
                         delayCollider = 0.1f;
+                        delayCollider = 0.1f; audioManager.LioraSFX(audioManager.voiceShortSlash);
+                        audioManager.LioraSFX(audioManager.secretarioAttack);
                         break;
                     case 3:
                         damageAttackLiora = 40f;
                         duracioCollider = 0.3f;
                         delayCollider = 0.2f;
+                        audioManager.LioraSFX(audioManager.voiceLongSlash);
+                        audioManager.LioraSFX(audioManager.secretarioAttack);
                         break;
                 }
                 colliderAtaque = colliderAttackSecretaryLiora;

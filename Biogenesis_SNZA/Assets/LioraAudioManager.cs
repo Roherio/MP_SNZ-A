@@ -13,6 +13,16 @@ public class LioraAudioManager : MonoBehaviour
     public AudioClip longSLash;
     public AudioClip voiceLongSlash;
 
+    public AudioClip jabaliAttack;
+    public AudioClip voiceLightSmash;
+    public AudioClip voiceHeavySmash;
+
+
+    public AudioClip secretarioAttack;
+
+
+    public AudioClip perfectParry;
+
     public AudioClip dash;
     public AudioClip voiceDash;
 
