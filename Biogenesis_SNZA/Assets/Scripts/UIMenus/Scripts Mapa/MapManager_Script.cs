@@ -37,10 +37,7 @@ public class MapManager_Script : MonoBehaviour
     {
         if (EventsManager_Script.allMapsActive)
         {
-            for (int i = 0; i < activeMapsIndex.Length; i++)
-            {
-                activeMapsIndex[i] = true;
-            }
+            ActivateAllMaps();
         }
         //activar o desactivar mapas y mascaras en funcion de true o false. si allMapsActive es true, se activaran todos los elementos del mapa.
         for (int i = 0; i < maps.Length; i++)

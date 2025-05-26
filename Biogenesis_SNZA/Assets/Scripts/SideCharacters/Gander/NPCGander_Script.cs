@@ -98,7 +98,6 @@ public class NPCGander_Script : MonoBehaviour, IInteractable_Script
             else
             {
                 EndDialogue();
-                currentDialogue = "dialogueData2";
             }
         }
         if (currentDialogue == "dialogueData2")
@@ -138,6 +137,7 @@ public class NPCGander_Script : MonoBehaviour, IInteractable_Script
                 EventsManager_Script.allMapsActive = true;
                 MapManager_Script.instance.ActivateAllMaps();
                 EndDialogue();
+                currentDialogue = "dialogueData2";
             }
         }
     }
