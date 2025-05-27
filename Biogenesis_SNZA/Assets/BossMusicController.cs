@@ -16,12 +16,12 @@ public class BossMusicController : MonoBehaviour
 
     private void Start()
     {
-        if (audioSource == null) audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        audioSource.volume = audioSource.volume * AudioSettingsManager.musicVol;
+        audioSource.volume = AudioSettingsManager.musicVol;
         // Start loop after intro ends
         if (hasStarted && !audioSource.isPlaying && !hasStartedLoop && !bossDefeated)
         {
