@@ -128,8 +128,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 1432
+      x: 471
+      y: 479
       width: 80
       height: 110
     spriteID: b31e96a2c6d42854593539ca9096032d
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 1432}
+    uvTransform: {x: 471, y: 479}
   - name: UrsinaGlace_Frame_1
     originalName: 
     pivot: {x: 0.4625, y: -0.027027028}
@@ -148,8 +148,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 1673
+      x: 471
+      y: 122
       width: 80
       height: 111
     spriteID: 978c0645976c9b541a4e79d94a98ec14
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 1673}
+    uvTransform: {x: 471, y: 122}
   - name: UrsinaGlace_Frame_2
     originalName: 
     pivot: {x: 0.4625, y: -0.026785716}
@@ -168,8 +168,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 363
+      x: 246
+      y: 874
       width: 80
       height: 112
     spriteID: 5f5f2a9023891e3438a9ab8994afdc49
@@ -180,7 +180,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 363}
+    uvTransform: {x: 246, y: 874}
   - name: UrsinaGlace_Frame_7
     originalName: 
     pivot: {x: 0.4625, y: -0.026785716}
@@ -188,8 +188,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 483
+      x: 358
+      y: 122
       width: 80
       height: 112
     spriteID: 3811a480556a4044ab05592aa995c719
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 483}
+    uvTransform: {x: 358, y: 122}
   - name: UrsinaGlace_Frame_8
     originalName: 
     pivot: {x: 0.4625, y: -0.026785716}
@@ -208,8 +208,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 603
+      x: 358
+      y: 242
       width: 80
       height: 112
     spriteID: 27e2ee9f39c7b57479b1dd219b04c5c9
@@ -220,7 +220,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 603}
+    uvTransform: {x: 358, y: 242}
   - name: UrsinaGlace_Frame_9
     originalName: 
     pivot: {x: 0.4625, y: -0.026785716}
@@ -228,8 +228,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 723
+      x: 358
+      y: 362
       width: 80
       height: 112
     spriteID: f6c10885fc1274a4fbae38dd64683552
@@ -240,7 +240,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 723}
+    uvTransform: {x: 358, y: 362}
   - name: UrsinaGlace_Frame_3
     originalName: 
     pivot: {x: 0.4625, y: -0.026785716}
@@ -248,8 +248,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 843
+      x: 358
+      y: 482
       width: 80
       height: 112
     spriteID: 4b849e1a8e66fe348a6144b1f0254098
@@ -260,7 +260,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 843}
+    uvTransform: {x: 358, y: 482}
   - name: UrsinaGlace_Frame_4
     originalName: 
     pivot: {x: 0.4625, y: -0.027027028}
@@ -268,8 +268,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 1792
+      x: 471
+      y: 241
       width: 80
       height: 111
     spriteID: 09a26e70e3e54d04a925c1ec655a42ff
@@ -280,7 +280,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 1792}
+    uvTransform: {x: 471, y: 241}
   - name: UrsinaGlace_Frame_5
     originalName: 
     pivot: {x: 0.4625, y: -0.027272727}
@@ -288,8 +288,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 1550
+      x: 471
+      y: 597
       width: 80
       height: 110
     spriteID: 0c79700a845d75248b9f5f8ef7f15ec3
@@ -300,7 +300,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 1550}
+    uvTransform: {x: 471, y: 597}
   - name: UrsinaGlace_Frame_6
     originalName: 
     pivot: {x: 0.4625, y: -0.027272727}
@@ -308,8 +308,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 1668
+      x: 471
+      y: 715
       width: 80
       height: 110
     spriteID: ba953ce9663bedb40855753792b16550
@@ -320,7 +320,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 1668}
+    uvTransform: {x: 471, y: 715}
   - name: UrsinaGlace_Frame_10
     originalName: 
     pivot: {x: 0.4625, y: -0.027272727}
@@ -328,8 +328,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 1786
+      x: 471
+      y: 833
       width: 80
       height: 110
     spriteID: c9d07c913d213c340b70e0dc58e0c761
@@ -340,7 +340,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 1786}
+    uvTransform: {x: 471, y: 833}
   - name: UrsinaGlace_Frame_11
     originalName: 
     pivot: {x: 0.4625, y: -0.027272727}
@@ -348,8 +348,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 1904
+      x: 560
+      y: 4
       width: 80
       height: 110
     spriteID: 2f4b623ef2b79554db61bacdb69b6407
@@ -360,18 +360,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 1904}
+    uvTransform: {x: 560, y: 4}
   - name: UrsinaGlace_Frame_22
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.33333334, y: -0.018867925}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 1911
-      width: 80
-      height: 111
+      x: 739
+      y: 908
+      width: 54
+      height: 106
     spriteID: 4135b49ad16459a4baee6bb313ae14cb
     spriteBone: []
     spriteOutline: []
@@ -380,18 +380,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 1911}
+    uvTransform: {x: 739, y: 908}
   - name: UrsinaGlace_Frame_23
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.41071424, y: -0.018691588}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 4
-      width: 80
-      height: 111
+      x: 739
+      y: 690
+      width: 56
+      height: 107
     spriteID: 6e63c98ecfa0d2649833cefecd9c61a4
     spriteBone: []
     spriteOutline: []
@@ -400,18 +400,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 4}
+    uvTransform: {x: 739, y: 690}
   - name: UrsinaGlace_Frame_24
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.5084746, y: -0.018691588}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 123
-      width: 80
-      height: 111
+      x: 739
+      y: 462
+      width: 59
+      height: 107
     spriteID: ccd6440f4c104154d8a4f01e9d61fc28
     spriteBone: []
     spriteOutline: []
@@ -420,18 +420,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 123}
+    uvTransform: {x: 739, y: 462}
   - name: UrsinaGlace_Frame_25
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.4923077, y: -0.01923077}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 242
-      width: 80
-      height: 111
+      x: 648
+      y: 759
+      width: 65
+      height: 104
     spriteID: a77ca588dd5391149b62b8ef8722363e
     spriteBone: []
     spriteOutline: []
@@ -440,18 +440,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 242}
+    uvTransform: {x: 648, y: 759}
   - name: UrsinaGlace_Frame_26
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.45762712, y: -0.01904762}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 361
-      width: 80
-      height: 111
+      x: 739
+      y: 577
+      width: 59
+      height: 105
     spriteID: fe548639e09fd5a4485145d73c020887
     spriteBone: []
     spriteOutline: []
@@ -460,18 +460,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 361}
+    uvTransform: {x: 739, y: 577}
   - name: UrsinaGlace_Frame_27
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.4716981, y: -0.018691588}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 480
-      width: 80
-      height: 111
+      x: 810
+      y: 4
+      width: 53
+      height: 107
     spriteID: 87b6fcac840cfa344aadd7b44e34d0f1
     spriteBone: []
     spriteOutline: []
@@ -480,18 +480,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 480}
+    uvTransform: {x: 810, y: 4}
   - name: UrsinaGlace_Frame_28
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.48, y: -0.018518519}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 599
-      width: 80
-      height: 111
+      x: 810
+      y: 119
+      width: 50
+      height: 108
     spriteID: 41bc299582d077f40b76ccfb75379acc
     spriteBone: []
     spriteOutline: []
@@ -500,18 +500,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 599}
+    uvTransform: {x: 810, y: 119}
   - name: UrsinaGlace_Frame_29
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.52000004, y: -0.018691588}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 718
-      width: 80
-      height: 111
+      x: 810
+      y: 235
+      width: 50
+      height: 107
     spriteID: 10f12522868b3e84fb9ca3254f0aa731
     spriteBone: []
     spriteOutline: []
@@ -520,18 +520,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 718}
+    uvTransform: {x: 810, y: 235}
   - name: UrsinaGlace_Frame_30
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.49999997, y: -0.019417476}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 837
-      width: 80
-      height: 111
+      x: 810
+      y: 350
+      width: 48
+      height: 103
     spriteID: 6c53d4a10a76f534eaf4a1c585cd1bcc
     spriteBone: []
     spriteOutline: []
@@ -540,18 +540,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 837}
+    uvTransform: {x: 810, y: 350}
   - name: UrsinaGlace_Frame_31
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.4693877, y: -0.01904762}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 956
-      width: 80
-      height: 111
+      x: 938
+      y: 784
+      width: 49
+      height: 105
     spriteID: 0b0bacfa6a4c9894ea9511412184f793
     spriteBone: []
     spriteOutline: []
@@ -560,18 +560,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 956}
+    uvTransform: {x: 938, y: 784}
   - name: UrsinaGlace_Frame_32
     originalName: 
-    pivot: {x: 0.42045456, y: -0.027272727}
+    pivot: {x: 0.3108108, y: -0.028846156}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 1589
-      width: 88
-      height: 110
+      x: 560
+      y: 706
+      width: 74
+      height: 104
     spriteID: a6990bcc5b56aca4c87eb8d65e0d507d
     spriteBone: []
     spriteOutline: []
@@ -580,18 +580,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 1589}
+    uvTransform: {x: 560, y: 706}
   - name: UrsinaGlace_Frame_33
     originalName: 
-    pivot: {x: 0.3894737, y: -0.027272727}
+    pivot: {x: 0.2162162, y: -0.030612245}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 508
-      width: 95
-      height: 110
+      x: 648
+      y: 434
+      width: 74
+      height: 98
     spriteID: 069ee23f98ba00a4d919014da4d65003
     spriteBone: []
     spriteOutline: []
@@ -600,18 +600,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 508}
+    uvTransform: {x: 648, y: 434}
   - name: UrsinaGlace_Frame_41
     originalName: 
-    pivot: {x: 0.39784947, y: -0.027272727}
+    pivot: {x: 0.22222221, y: -0.03157895}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 879
-      width: 93
-      height: 110
+      x: 648
+      y: 656
+      width: 72
+      height: 95
     spriteID: 4b3c2913fc9909e41bdd454862dd1a95
     spriteBone: []
     spriteOutline: []
@@ -620,18 +620,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 879}
+    uvTransform: {x: 648, y: 656}
   - name: UrsinaGlace_Frame_42
     originalName: 
-    pivot: {x: 0.43529412, y: -0.027272727}
+    pivot: {x: 0.22580642, y: -0.03157895}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 1707
-      width: 85
-      height: 110
+      x: 739
+      y: 805
+      width: 62
+      height: 95
     spriteID: aacfe5825d2377a40826241896c1e6b5
     spriteBone: []
     spriteOutline: []
@@ -640,7 +640,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 1707}
+    uvTransform: {x: 739, y: 805}
   - name: UrsinaGlace_Frame_43
     originalName: 
     pivot: {x: 0.50476193, y: -0.027272727}
@@ -648,7 +648,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
+      x: 358
       y: 4
       width: 105
       height: 110
@@ -660,17 +660,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 4}
+    uvTransform: {x: 358, y: 4}
   - name: UrsinaGlace_Frame_44
     originalName: 
-    pivot: {x: 0.5520833, y: -0.025862068}
+    pivot: {x: 0.6385542, y: -0.025862068}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 125
-      width: 96
+      x: 246
+      y: 491
+      width: 83
       height: 116
     spriteID: eba1f66813046314bb6bb821f13ab820
     spriteBone: []
@@ -680,17 +680,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 125}
+    uvTransform: {x: 246, y: 491}
   - name: UrsinaGlace_Frame_34
     originalName: 
-    pivot: {x: 0.54255325, y: -0.025862068}
+    pivot: {x: 0.6296297, y: -0.025862068}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 249
-      width: 94
+      x: 246
+      y: 750
+      width: 81
       height: 116
     spriteID: 6b0db5c895ab87a4681fa00b1cd1588a
     spriteBone: []
@@ -700,17 +700,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 249}
+    uvTransform: {x: 246, y: 750}
   - name: UrsinaGlace_Frame_35
     originalName: 
-    pivot: {x: 0.5326087, y: -0.027027028}
+    pivot: {x: 0.6125, y: -0.027027028}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 997
-      width: 92
+      x: 471
+      y: 360
+      width: 80
       height: 111
     spriteID: 1463d846fbf7f7c4d93734452188f43b
     spriteBone: []
@@ -720,17 +720,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 997}
+    uvTransform: {x: 471, y: 360}
   - name: UrsinaGlace_Frame_36
     originalName: 
-    pivot: {x: 0.4625, y: -0.027272727}
+    pivot: {x: 0.47761193, y: -0.027272727}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 529
-      y: 4
-      width: 80
+      x: 648
+      y: 316
+      width: 67
       height: 110
     spriteID: e788fc2f35b951846ac8e6d59bf8396e
     spriteBone: []
@@ -740,7 +740,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 529, y: 4}
+    uvTransform: {x: 648, y: 316}
   - name: UrsinaGlace_Frame_37
     originalName: 
     pivot: {x: 0.45679012, y: -0.027272727}
@@ -748,8 +748,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 1083
+      x: 358
+      y: 602
       width: 81
       height: 110
     spriteID: bfa8b64eb8f42ab42ac32ff315cbd29d
@@ -760,17 +760,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 1083}
+    uvTransform: {x: 358, y: 602}
   - name: UrsinaGlace_Frame_38
     originalName: 
-    pivot: {x: 0.4625, y: -0.027027028}
+    pivot: {x: 0.42647064, y: -0.027027028}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 1075
-      width: 80
+      x: 560
+      y: 818
+      width: 68
       height: 111
     spriteID: ddb925cece06e454488e3bd7b8e38143
     spriteBone: []
@@ -780,17 +780,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 1075}
+    uvTransform: {x: 560, y: 818}
   - name: UrsinaGlace_Frame_39
     originalName: 
-    pivot: {x: 0.4625, y: -0.026785716}
+    pivot: {x: 0.37931037, y: -0.026785716}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 963
-      width: 80
+      x: 739
+      y: 230
+      width: 58
       height: 112
     spriteID: 870664707cbe3ec46b8476966566b674
     spriteBone: []
@@ -800,17 +800,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 963}
+    uvTransform: {x: 739, y: 230}
   - name: UrsinaGlace_Frame_40
     originalName: 
-    pivot: {x: 0.44578314, y: -0.023622047}
+    pivot: {x: 0.4102564, y: -0.023622047}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 373
-      width: 83
+      x: 246
+      y: 240
+      width: 78
       height: 127
     spriteID: 89dbb60ab2ad77845984a46de62a58a8
     spriteBone: []
@@ -820,17 +820,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 373}
+    uvTransform: {x: 246, y: 240}
   - name: UrsinaGlace_Frame_12
     originalName: 
-    pivot: {x: 0.45679012, y: -0.023622047}
+    pivot: {x: 0.40540543, y: -0.023622047}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 744
-      width: 81
+      x: 246
+      y: 615
+      width: 74
       height: 127
     spriteID: e00a60291e321804b8d3978c7951b2c9
     spriteBone: []
@@ -840,7 +840,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 744}
+    uvTransform: {x: 246, y: 615}
   - name: UrsinaGlace_Frame_13
     originalName: 
     pivot: {x: 0.43137255, y: -0.025641028}
@@ -848,8 +848,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1752
+      x: 128
+      y: 752
       width: 102
       height: 117
     spriteID: a94a5ea47bcb0f54e9bfe7132040ebe2
@@ -860,7 +860,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1752}
+    uvTransform: {x: 128, y: 752}
   - name: UrsinaGlace_Frame_14
     originalName: 
     pivot: {x: 0.4351852, y: -0.025641028}
@@ -868,8 +868,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1379
+      x: 128
+      y: 379
       width: 108
       height: 117
     spriteID: 502ff4e137e1dc54f88a45857ec112ef
@@ -880,7 +880,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1379}
+    uvTransform: {x: 128, y: 379}
   - name: UrsinaGlace_Frame_15
     originalName: 
     pivot: {x: 0.43636358, y: -0.025641028}
@@ -1048,8 +1048,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1004
+      x: 128
+      y: 4
       width: 110
       height: 117
     spriteID: e384c60c6aa0cf44d9dcd16d7df1a972
@@ -1060,7 +1060,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1004}
+    uvTransform: {x: 128, y: 4}
   - name: UrsinaGlace_Frame_67
     originalName: 
     pivot: {x: 0.43636358, y: -0.025641028}
@@ -1068,8 +1068,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1129
+      x: 128
+      y: 129
       width: 110
       height: 117
     spriteID: b555b1232805cf447a1227608ca0871e
@@ -1080,7 +1080,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1129}
+    uvTransform: {x: 128, y: 129}
   - name: UrsinaGlace_Frame_68
     originalName: 
     pivot: {x: 0.4351852, y: -0.025641028}
@@ -1088,8 +1088,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1504
+      x: 128
+      y: 504
       width: 108
       height: 117
     spriteID: fbca09d5bab84304aa387e482a5a1fca
@@ -1100,7 +1100,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1504}
+    uvTransform: {x: 128, y: 504}
   - name: UrsinaGlace_Frame_18
     originalName: 
     pivot: {x: 0.43137255, y: -0.025641028}
@@ -1108,8 +1108,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1877
+      x: 128
+      y: 877
       width: 102
       height: 117
     spriteID: 6814ad6105437ab47a4a3c98928200d2
@@ -1120,17 +1120,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1877}
+    uvTransform: {x: 128, y: 877}
   - name: UrsinaGlace_Frame_23
     originalName: 
-    pivot: {x: 0.45679012, y: -0.026548672}
+    pivot: {x: 0.40540543, y: -0.026548672}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
+      x: 560
       y: 122
-      width: 81
+      width: 74
       height: 113
     spriteID: 7da5d4fbc46c1e44d94117a4699fd826
     spriteBone: []
@@ -1140,17 +1140,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 122}
+    uvTransform: {x: 560, y: 122}
   - name: UrsinaGlace_Frame_46
     originalName: 
-    pivot: {x: 0.45679012, y: -0.026785716}
+    pivot: {x: 0.40540543, y: -0.026785716}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
+      x: 560
       y: 243
-      width: 81
+      width: 74
       height: 112
     spriteID: ce2faf1ab2c4c7944a4c9230902b61f6
     spriteBone: []
@@ -1160,17 +1160,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 243}
+    uvTransform: {x: 560, y: 243}
   - name: UrsinaGlace_Frame_47
     originalName: 
-    pivot: {x: 0.4625, y: -0.027027028}
+    pivot: {x: 0.4428572, y: -0.027027028}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 1194
-      width: 80
+      x: 560
+      y: 587
+      width: 70
       height: 111
     spriteID: d78d8598e08efc849aebbc7a58c3c807
     spriteBone: []
@@ -1180,7 +1180,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 1194}
+    uvTransform: {x: 560, y: 587}
   - name: UrsinaGlace_Frame_48
     originalName: 
     pivot: {x: 0.45679012, y: -0.027272727}
@@ -1188,8 +1188,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 1201
+      x: 358
+      y: 720
       width: 81
       height: 110
     spriteID: 447ea62338c45c446a08a7196fd57df1
@@ -1200,7 +1200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 1201}
+    uvTransform: {x: 358, y: 720}
   - name: UrsinaGlace_Frame_49
     originalName: 
     pivot: {x: 0.45679012, y: -0.027272727}
@@ -1208,8 +1208,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 1319
+      x: 358
+      y: 838
       width: 81
       height: 110
     spriteID: 67d67b1ee843913458421301b457e672
@@ -1220,18 +1220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 1319}
+    uvTransform: {x: 358, y: 838}
   - name: UrsinaGlace_Frame_50
     originalName: 
-    pivot: {x: 0.4888889, y: -0.027272727}
+    pivot: {x: 0.4888889, y: -0.027777778}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 1235
+      x: 246
+      y: 375
       width: 90
-      height: 110
+      height: 108
     spriteID: 5b4468c6c57882f408eea324bd3bec02
     spriteBone: []
     spriteOutline: []
@@ -1240,18 +1240,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 1235}
+    uvTransform: {x: 246, y: 375}
   - name: UrsinaGlace_Frame_51
     originalName: 
-    pivot: {x: 0.5, y: -0.027272727}
+    pivot: {x: 0.5, y: -0.028037382}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 626
+      x: 246
+      y: 125
       width: 94
-      height: 110
+      height: 107
     spriteID: 1ae4247394f217f479dc946ed41f6a64
     spriteBone: []
     spriteOutline: []
@@ -1260,7 +1260,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 626}
+    uvTransform: {x: 246, y: 125}
   - name: UrsinaGlace_Frame_52
     originalName: 
     pivot: {x: 0.4519231, y: -0.026548672}
@@ -1268,7 +1268,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
+      x: 246
       y: 4
       width: 104
       height: 113
@@ -1280,7 +1280,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 4}
+    uvTransform: {x: 246, y: 4}
   - name: UrsinaGlace_Frame_65
     originalName: 
     pivot: {x: 0.40952381, y: -0.026086956}
@@ -1288,8 +1288,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1629
+      x: 128
+      y: 629
       width: 105
       height: 115
     spriteID: 9ea198022902bc8458c2a5830f1e0a88
@@ -1300,7 +1300,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1629}
+    uvTransform: {x: 128, y: 629}
   - name: UrsinaGlace_Frame_24
     originalName: 
     pivot: {x: 0.39999998, y: -0.025641028}
@@ -1308,8 +1308,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1254
+      x: 128
+      y: 254
       width: 110
       height: 117
     spriteID: 58c3ea5e21578fb4996c4c565a48b633
@@ -1320,18 +1320,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1254}
+    uvTransform: {x: 128, y: 254}
   - name: UrsinaGlace_Frame_25
     originalName: 
-    pivot: {x: 0.5222222, y: -0.018018018}
+    pivot: {x: 0.5662651, y: -0.020833334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 1116
-      width: 90
-      height: 111
+      x: 648
+      y: 4
+      width: 83
+      height: 96
     spriteID: 9423da67fb76baf42b8ddcdc7cf454e5
     spriteBone: []
     spriteOutline: []
@@ -1340,18 +1340,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 1116}
+    uvTransform: {x: 648, y: 4}
   - name: UrsinaGlace_Frame_26
     originalName: 
-    pivot: {x: 0.5168539, y: -0.027272727}
+    pivot: {x: 0.55421686, y: -0.03125}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 1353
-      width: 89
-      height: 110
+      x: 648
+      y: 108
+      width: 83
+      height: 96
     spriteID: c60f3e84bdc21e046ba6f3eadf8ff864
     spriteBone: []
     spriteOutline: []
@@ -1360,18 +1360,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 1353}
+    uvTransform: {x: 648, y: 108}
   - name: UrsinaGlace_Frame_27
     originalName: 
-    pivot: {x: 0.5168539, y: -0.027272727}
+    pivot: {x: 0.55421686, y: -0.03125}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 1471
-      width: 89
-      height: 110
+      x: 648
+      y: 212
+      width: 83
+      height: 96
     spriteID: 5865e5cbe4cac8e49b2f9cde9aae225e
     spriteBone: []
     spriteOutline: []
@@ -1380,18 +1380,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 1471}
+    uvTransform: {x: 648, y: 212}
   - name: UrsinaGlace_Frame_28
     originalName: 
-    pivot: {x: 0.49411768, y: -0.027272727}
+    pivot: {x: 0.54545456, y: -0.029702969}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 1825
-      width: 85
-      height: 110
+      x: 560
+      y: 478
+      width: 77
+      height: 101
     spriteID: 07ee918fed8d76841a143ed4d038faa1
     spriteBone: []
     spriteOutline: []
@@ -1400,18 +1400,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 128, y: 1825}
+    uvTransform: {x: 560, y: 478}
   - name: UrsinaGlace_Frame_29
     originalName: 
-    pivot: {x: 0.46913582, y: -0.027272727}
+    pivot: {x: 0.4935065, y: -0.028037382}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 1437
-      width: 81
-      height: 110
+      x: 560
+      y: 363
+      width: 77
+      height: 107
     spriteID: c88d42e5f8b65c140a23548a3feaa790
     spriteBone: []
     spriteOutline: []
@@ -1420,7 +1420,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 1437}
+    uvTransform: {x: 560, y: 363}
   - name: UrsinaGlace_Frame_30
     originalName: 
     pivot: {x: 0.45679012, y: -0.027272727}
@@ -1428,8 +1428,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 240
-      y: 1555
+      x: 471
+      y: 4
       width: 81
       height: 110
     spriteID: 7fad6df137e36f542bd961d9aaffb46a
@@ -1440,18 +1440,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 240, y: 1555}
+    uvTransform: {x: 471, y: 4}
   - name: UrsinaGlace_Frame_31
     originalName: 
-    pivot: {x: 0.4625, y: -0.027272727}
+    pivot: {x: 0.34375003, y: -0.027777778}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 529
-      y: 122
-      width: 80
-      height: 110
+      x: 648
+      y: 540
+      width: 64
+      height: 108
     spriteID: 653f353a698b1514787660620fe48a95
     spriteBone: []
     spriteOutline: []
@@ -1460,18 +1460,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 529, y: 122}
+    uvTransform: {x: 648, y: 540}
   - name: UrsinaGlace_Frame_32
     originalName: 
-    pivot: {x: 0.4625, y: -0.027272727}
+    pivot: {x: 0.36065578, y: -0.028846156}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 529
-      y: 240
-      width: 80
-      height: 110
+      x: 739
+      y: 350
+      width: 61
+      height: 104
     spriteID: c180f263407d58a4eaa2575a15421d57
     spriteBone: []
     spriteOutline: []
@@ -1480,18 +1480,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 529, y: 240}
+    uvTransform: {x: 739, y: 350}
   - name: UrsinaGlace_Frame_76
     originalName: 
-    pivot: {x: 0.4625, y: -0.027272727}
+    pivot: {x: 0.36507934, y: -0.02857143}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 529
-      y: 358
-      width: 80
-      height: 110
+      x: 648
+      y: 871
+      width: 63
+      height: 105
     spriteID: 3ad4546939aff7042bc2aa6d7c829ca3
     spriteBone: []
     spriteOutline: []
@@ -1500,18 +1500,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 529, y: 358}
+    uvTransform: {x: 648, y: 871}
   - name: UrsinaGlace_Frame_81
     originalName: 
-    pivot: {x: 0.4625, y: -0.027272727}
+    pivot: {x: 0.36507934, y: -0.02857143}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 529
-      y: 476
-      width: 80
-      height: 110
+      x: 739
+      y: 4
+      width: 63
+      height: 105
     spriteID: a2e6d891dadf01b47b39817b8b903024
     spriteBone: []
     spriteOutline: []
@@ -1520,18 +1520,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 529, y: 476}
+    uvTransform: {x: 739, y: 4}
   - name: UrsinaGlace_Frame_82
     originalName: 
-    pivot: {x: 0.4625, y: -0.027272727}
+    pivot: {x: 0.36507934, y: -0.02857143}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 529
-      y: 594
-      width: 80
-      height: 110
+      x: 739
+      y: 117
+      width: 63
+      height: 105
     spriteID: f3c0f4a188ca0df4ca5d8a03c7568ee7
     spriteBone: []
     spriteOutline: []
@@ -1540,18 +1540,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 529, y: 594}
+    uvTransform: {x: 739, y: 117}
   - name: UrsinaGlace_Frame_83
     originalName: 
-    pivot: {x: 0.4625, y: -0.027272727}
+    pivot: {x: 0.33898306, y: -0.03125}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 529
-      y: 712
-      width: 80
-      height: 110
+      x: 871
+      y: 4
+      width: 59
+      height: 96
     spriteID: 61189e7e4cfcb11499c8dd88c218da90
     spriteBone: []
     spriteOutline: []
@@ -1560,18 +1560,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 529, y: 712}
+    uvTransform: {x: 871, y: 4}
   - name: UrsinaGlace_Frame_3
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.022988506}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 1313
-      width: 80
-      height: 111
+      x: 938
+      y: 897
+      width: 59
+      height: 87
     spriteID: 42c3a4177b7990a41b6969c64e97ed9c
     spriteBone: []
     spriteOutline: []
@@ -1580,18 +1580,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 1313}
+    uvTransform: {x: 938, y: 897}
   - name: UrsinaGlace_Frame_4
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.02247191}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 1432
-      width: 80
-      height: 111
+      x: 938
+      y: 299
+      width: 59
+      height: 89
     spriteID: dc22bbb9807f10145850ea2c1e633013
     spriteBone: []
     spriteOutline: []
@@ -1600,18 +1600,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 1432}
+    uvTransform: {x: 938, y: 299}
   - name: UrsinaGlace_Frame_5
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.022222223}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 1551
-      width: 80
-      height: 111
+      x: 938
+      y: 103
+      width: 59
+      height: 90
     spriteID: 8570b587de1d5ef4ab83d025367a6093
     spriteBone: []
     spriteOutline: []
@@ -1620,18 +1620,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 1551}
+    uvTransform: {x: 938, y: 103}
   - name: UrsinaGlace_Frame_6
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.021978023}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 1670
-      width: 80
-      height: 111
+      x: 871
+      y: 108
+      width: 59
+      height: 91
     spriteID: fa053a1c7a67d0642bc3fdbf31b6eefb
     spriteBone: []
     spriteOutline: []
@@ -1640,18 +1640,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 1670}
+    uvTransform: {x: 871, y: 108}
   - name: UrsinaGlace_Frame_10
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.021978023}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 1789
-      width: 80
-      height: 111
+      x: 871
+      y: 207
+      width: 59
+      height: 91
     spriteID: eae658d3bf7859d48be44724c3cc3cfc
     spriteBone: []
     spriteOutline: []
@@ -1660,18 +1660,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 1789}
+    uvTransform: {x: 871, y: 207}
   - name: UrsinaGlace_Frame_11
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.02247191}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 353
-      y: 1908
-      width: 80
-      height: 111
+      x: 938
+      y: 396
+      width: 59
+      height: 89
     spriteID: 03144f97becfbe74db0e7a4443d3aa4f
     spriteBone: []
     spriteOutline: []
@@ -1680,18 +1680,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 353, y: 1908}
+    uvTransform: {x: 938, y: 396}
   - name: UrsinaGlace_Frame_72
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.02247191}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 4
-      width: 80
-      height: 111
+      x: 938
+      y: 493
+      width: 59
+      height: 89
     spriteID: 4ce9e79628f190a429e01a400a18e43b
     spriteBone: []
     spriteOutline: []
@@ -1700,18 +1700,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 4}
+    uvTransform: {x: 938, y: 493}
   - name: UrsinaGlace_Frame_73
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.02247191}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 123
-      width: 80
-      height: 111
+      x: 938
+      y: 590
+      width: 59
+      height: 89
     spriteID: 59cdc7a991a589343b1edbf9831db4d9
     spriteBone: []
     spriteOutline: []
@@ -1720,18 +1720,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 123}
+    uvTransform: {x: 938, y: 590}
   - name: UrsinaGlace_Frame_77
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.02247191}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 242
-      width: 80
-      height: 111
+      x: 938
+      y: 687
+      width: 59
+      height: 89
     spriteID: 041d5bde2a6c9b74786ab5bedeae9bed
     spriteBone: []
     spriteOutline: []
@@ -1740,18 +1740,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 242}
+    uvTransform: {x: 938, y: 687}
   - name: UrsinaGlace_Frame_78
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.021978023}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 361
-      width: 80
-      height: 111
+      x: 871
+      y: 306
+      width: 59
+      height: 91
     spriteID: 2139e7dfec3a4ff40a6c04164a656d7c
     spriteBone: []
     spriteOutline: []
@@ -1760,18 +1760,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 361}
+    uvTransform: {x: 871, y: 306}
   - name: UrsinaGlace_Frame_79
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.021978023}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 480
-      width: 80
-      height: 111
+      x: 871
+      y: 405
+      width: 59
+      height: 91
     spriteID: 04cf38ad65e408d47afafd5ee5acb4d3
     spriteBone: []
     spriteOutline: []
@@ -1780,18 +1780,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 480}
+    uvTransform: {x: 871, y: 405}
   - name: UrsinaGlace_Frame_80
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.021978023}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 599
-      width: 80
-      height: 111
+      x: 871
+      y: 504
+      width: 59
+      height: 91
     spriteID: d539daf73df915940bfb7bd29d221b76
     spriteBone: []
     spriteOutline: []
@@ -1800,18 +1800,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 599}
+    uvTransform: {x: 871, y: 504}
   - name: UrsinaGlace_Frame_84
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.021978023}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 718
-      width: 80
-      height: 111
+      x: 871
+      y: 603
+      width: 59
+      height: 91
     spriteID: 9e37f2b24a95ed24994c31234c53e09b
     spriteBone: []
     spriteOutline: []
@@ -1820,18 +1820,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 718}
+    uvTransform: {x: 871, y: 603}
   - name: UrsinaGlace_Frame_85
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.021978023}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 837
-      width: 80
-      height: 111
+      x: 871
+      y: 702
+      width: 59
+      height: 91
     spriteID: 20405f5f4be88c94bb28ae4561ee0055
     spriteBone: []
     spriteOutline: []
@@ -1840,18 +1840,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 837}
+    uvTransform: {x: 871, y: 702}
   - name: UrsinaGlace_Frame_86
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.021978023}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 956
-      width: 80
-      height: 111
+      x: 871
+      y: 801
+      width: 59
+      height: 91
     spriteID: ad450caf2d91a2f49994271fe1d817e5
     spriteBone: []
     spriteOutline: []
@@ -1860,18 +1860,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 956}
+    uvTransform: {x: 871, y: 801}
   - name: UrsinaGlace_Frame_87
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.021978023}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 1075
-      width: 80
-      height: 111
+      x: 871
+      y: 900
+      width: 59
+      height: 91
     spriteID: b5a89f882ec33ff4ea9abcd161d6e942
     spriteBone: []
     spriteOutline: []
@@ -1880,18 +1880,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 1075}
+    uvTransform: {x: 871, y: 900}
   - name: UrsinaGlace_Frame_88
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.021978023}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 1194
-      width: 80
-      height: 111
+      x: 938
+      y: 4
+      width: 59
+      height: 91
     spriteID: 3e066ad7e0f90ae40a803563ca410487
     spriteBone: []
     spriteOutline: []
@@ -1900,18 +1900,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 1194}
+    uvTransform: {x: 938, y: 4}
   - name: UrsinaGlace_Frame_89
     originalName: 
-    pivot: {x: 0.4625, y: -0.018018018}
+    pivot: {x: 0.3559322, y: -0.022222223}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 441
-      y: 1313
-      width: 80
-      height: 111
+      x: 938
+      y: 201
+      width: 59
+      height: 90
     spriteID: dd58b17e60ca010479e1abcb52806e83
     spriteBone: []
     spriteOutline: []
@@ -1920,7 +1920,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 441, y: 1313}
+    uvTransform: {x: 938, y: 201}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -2042,127 +2042,127 @@ ScriptedImporter:
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 54
         y: 2
-        width: 80
-        height: 111
+        width: 54
+        height: 106
       spriteId: 4135b49ad16459a4baee6bb313ae14cb
     - name: UrsinaGlace_Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 49
         y: 2
-        width: 80
-        height: 111
+        width: 56
+        height: 107
       spriteId: 6e63c98ecfa0d2649833cefecd9c61a4
     - name: UrsinaGlace_Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 42
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 107
       spriteId: ccd6440f4c104154d8a4f01e9d61fc28
     - name: UrsinaGlace_Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 40
         y: 2
-        width: 80
-        height: 111
+        width: 65
+        height: 104
       spriteId: a77ca588dd5391149b62b8ef8722363e
     - name: UrsinaGlace_Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 45
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 105
       spriteId: fe548639e09fd5a4485145d73c020887
     - name: UrsinaGlace_Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 47
         y: 2
-        width: 80
-        height: 111
+        width: 53
+        height: 107
       spriteId: 87b6fcac840cfa344aadd7b44e34d0f1
     - name: UrsinaGlace_Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 48
         y: 2
-        width: 80
-        height: 111
+        width: 50
+        height: 108
       spriteId: 41bc299582d077f40b76ccfb75379acc
     - name: UrsinaGlace_Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 46
         y: 2
-        width: 80
-        height: 111
+        width: 50
+        height: 107
       spriteId: 10f12522868b3e84fb9ca3254f0aa731
     - name: UrsinaGlace_Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 48
         y: 2
-        width: 80
-        height: 111
+        width: 48
+        height: 103
       spriteId: 6c53d4a10a76f534eaf4a1c585cd1bcc
     - name: UrsinaGlace_Frame_21
       frameIndex: 21
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 49
         y: 2
-        width: 80
-        height: 111
+        width: 49
+        height: 105
       spriteId: 0b0bacfa6a4c9894ea9511412184f793
     - name: UrsinaGlace_Frame_22
       frameIndex: 22
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 49
         y: 3
-        width: 88
-        height: 110
+        width: 74
+        height: 104
       spriteId: a6990bcc5b56aca4c87eb8d65e0d507d
     - name: UrsinaGlace_Frame_23
       frameIndex: 23
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 56
         y: 3
-        width: 95
-        height: 110
+        width: 74
+        height: 98
       spriteId: 069ee23f98ba00a4d919014da4d65003
     - name: UrsinaGlace_Frame_24
       frameIndex: 24
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 56
         y: 3
-        width: 93
-        height: 110
+        width: 72
+        height: 95
       spriteId: 4b3c2913fc9909e41bdd454862dd1a95
     - name: UrsinaGlace_Frame_25
       frameIndex: 25
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 58
         y: 3
-        width: 85
-        height: 110
+        width: 62
+        height: 95
       spriteId: aacfe5825d2377a40826241896c1e6b5
     - name: UrsinaGlace_Frame_26
       frameIndex: 26
@@ -2179,7 +2179,7 @@ ScriptedImporter:
       cellRect:
         x: 19
         y: 3
-        width: 96
+        width: 83
         height: 116
       spriteId: eba1f66813046314bb6bb821f13ab820
     - name: UrsinaGlace_Frame_28
@@ -2188,7 +2188,7 @@ ScriptedImporter:
       cellRect:
         x: 21
         y: 3
-        width: 94
+        width: 81
         height: 116
       spriteId: 6b0db5c895ab87a4681fa00b1cd1588a
     - name: UrsinaGlace_Frame_29
@@ -2197,16 +2197,16 @@ ScriptedImporter:
       cellRect:
         x: 23
         y: 3
-        width: 92
+        width: 80
         height: 111
       spriteId: 1463d846fbf7f7c4d93734452188f43b
     - name: UrsinaGlace_Frame_30
       frameIndex: 30
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 40
         y: 3
-        width: 80
+        width: 67
         height: 110
       spriteId: e788fc2f35b951846ac8e6d59bf8396e
     - name: UrsinaGlace_Frame_31
@@ -2222,36 +2222,36 @@ ScriptedImporter:
       frameIndex: 32
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 43
         y: 3
-        width: 80
+        width: 68
         height: 111
       spriteId: ddb925cece06e454488e3bd7b8e38143
     - name: UrsinaGlace_Frame_33
       frameIndex: 33
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 50
         y: 3
-        width: 80
+        width: 58
         height: 112
       spriteId: 870664707cbe3ec46b8476966566b674
     - name: UrsinaGlace_Frame_34
       frameIndex: 34
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 40
         y: 3
-        width: 83
+        width: 78
         height: 127
       spriteId: 89dbb60ab2ad77845984a46de62a58a8
     - name: UrsinaGlace_Frame_35
       frameIndex: 35
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 42
         y: 3
-        width: 81
+        width: 74
         height: 127
       spriteId: e00a60291e321804b8d3978c7951b2c9
     - name: UrsinaGlace_Frame_36
@@ -2384,27 +2384,27 @@ ScriptedImporter:
       frameIndex: 50
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 42
         y: 3
-        width: 81
+        width: 74
         height: 113
       spriteId: 7da5d4fbc46c1e44d94117a4699fd826
     - name: UrsinaGlace_Frame_51
       frameIndex: 51
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 42
         y: 3
-        width: 81
+        width: 74
         height: 112
       spriteId: ce2faf1ab2c4c7944a4c9230902b61f6
     - name: UrsinaGlace_Frame_52
       frameIndex: 52
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 41
         y: 3
-        width: 80
+        width: 70
         height: 111
       spriteId: d78d8598e08efc849aebbc7a58c3c807
     - name: UrsinaGlace_Frame_53
@@ -2432,7 +2432,7 @@ ScriptedImporter:
         x: 28
         y: 3
         width: 90
-        height: 110
+        height: 108
       spriteId: 5b4468c6c57882f408eea324bd3bec02
     - name: UrsinaGlace_Frame_56
       frameIndex: 56
@@ -2441,7 +2441,7 @@ ScriptedImporter:
         x: 25
         y: 3
         width: 94
-        height: 110
+        height: 107
       spriteId: 1ae4247394f217f479dc946ed41f6a64
     - name: UrsinaGlace_Frame_57
       frameIndex: 57
@@ -2476,8 +2476,8 @@ ScriptedImporter:
       cellRect:
         x: 25
         y: 2
-        width: 90
-        height: 111
+        width: 83
+        height: 96
       spriteId: 9423da67fb76baf42b8ddcdc7cf454e5
     - name: UrsinaGlace_Frame_61
       frameIndex: 61
@@ -2485,8 +2485,8 @@ ScriptedImporter:
       cellRect:
         x: 26
         y: 3
-        width: 89
-        height: 110
+        width: 83
+        height: 96
       spriteId: c60f3e84bdc21e046ba6f3eadf8ff864
     - name: UrsinaGlace_Frame_62
       frameIndex: 62
@@ -2494,8 +2494,8 @@ ScriptedImporter:
       cellRect:
         x: 26
         y: 3
-        width: 89
-        height: 110
+        width: 83
+        height: 96
       spriteId: 5865e5cbe4cac8e49b2f9cde9aae225e
     - name: UrsinaGlace_Frame_63
       frameIndex: 63
@@ -2503,8 +2503,8 @@ ScriptedImporter:
       cellRect:
         x: 30
         y: 3
-        width: 85
-        height: 110
+        width: 77
+        height: 101
       spriteId: 07ee918fed8d76841a143ed4d038faa1
     - name: UrsinaGlace_Frame_64
       frameIndex: 64
@@ -2512,8 +2512,8 @@ ScriptedImporter:
       cellRect:
         x: 34
         y: 3
-        width: 81
-        height: 110
+        width: 77
+        height: 107
       spriteId: c88d42e5f8b65c140a23548a3feaa790
     - name: UrsinaGlace_Frame_65
       frameIndex: 65
@@ -2528,217 +2528,217 @@ ScriptedImporter:
       frameIndex: 66
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 50
         y: 3
-        width: 80
-        height: 110
+        width: 64
+        height: 108
       spriteId: 653f353a698b1514787660620fe48a95
     - name: UrsinaGlace_Frame_67
       frameIndex: 67
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 50
         y: 3
-        width: 80
-        height: 110
+        width: 61
+        height: 104
       spriteId: c180f263407d58a4eaa2575a15421d57
     - name: UrsinaGlace_Frame_68
       frameIndex: 68
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 49
         y: 3
-        width: 80
-        height: 110
+        width: 63
+        height: 105
       spriteId: 3ad4546939aff7042bc2aa6d7c829ca3
     - name: UrsinaGlace_Frame_69
       frameIndex: 69
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 49
         y: 3
-        width: 80
-        height: 110
+        width: 63
+        height: 105
       spriteId: a2e6d891dadf01b47b39817b8b903024
     - name: UrsinaGlace_Frame_70
       frameIndex: 70
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 49
         y: 3
-        width: 80
-        height: 110
+        width: 63
+        height: 105
       spriteId: f3c0f4a188ca0df4ca5d8a03c7568ee7
     - name: UrsinaGlace_Frame_71
       frameIndex: 71
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 52
         y: 3
-        width: 80
-        height: 110
+        width: 59
+        height: 96
       spriteId: 61189e7e4cfcb11499c8dd88c218da90
     - name: UrsinaGlace_Frame_72
       frameIndex: 72
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 87
       spriteId: 42c3a4177b7990a41b6969c64e97ed9c
     - name: UrsinaGlace_Frame_73
       frameIndex: 73
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 89
       spriteId: dc22bbb9807f10145850ea2c1e633013
-    - name: UrsinaGlace_Frame_74
-      frameIndex: 74
-      additiveSortOrder: 0
-      cellRect:
-        x: 35
-        y: 2
-        width: 80
-        height: 111
-      spriteId: 8570b587de1d5ef4ab83d025367a6093
-    - name: UrsinaGlace_Frame_75
-      frameIndex: 75
-      additiveSortOrder: 0
-      cellRect:
-        x: 35
-        y: 2
-        width: 80
-        height: 111
-      spriteId: fa053a1c7a67d0642bc3fdbf31b6eefb
-    - name: UrsinaGlace_Frame_76
-      frameIndex: 76
-      additiveSortOrder: 0
-      cellRect:
-        x: 35
-        y: 2
-        width: 80
-        height: 111
-      spriteId: eae658d3bf7859d48be44724c3cc3cfc
-    - name: UrsinaGlace_Frame_77
-      frameIndex: 77
-      additiveSortOrder: 0
-      cellRect:
-        x: 35
-        y: 2
-        width: 80
-        height: 111
-      spriteId: 03144f97becfbe74db0e7a4443d3aa4f
     - name: UrsinaGlace_Frame_78
       frameIndex: 78
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
-      spriteId: 4ce9e79628f190a429e01a400a18e43b
+        width: 59
+        height: 90
+      spriteId: 8570b587de1d5ef4ab83d025367a6093
     - name: UrsinaGlace_Frame_79
       frameIndex: 79
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
-      spriteId: 59cdc7a991a589343b1edbf9831db4d9
+        width: 59
+        height: 91
+      spriteId: fa053a1c7a67d0642bc3fdbf31b6eefb
     - name: UrsinaGlace_Frame_80
       frameIndex: 80
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 91
+      spriteId: eae658d3bf7859d48be44724c3cc3cfc
+    - name: UrsinaGlace_Frame_74
+      frameIndex: 74
+      additiveSortOrder: 0
+      cellRect:
+        x: 51
+        y: 2
+        width: 59
+        height: 89
+      spriteId: 03144f97becfbe74db0e7a4443d3aa4f
+    - name: UrsinaGlace_Frame_75
+      frameIndex: 75
+      additiveSortOrder: 0
+      cellRect:
+        x: 51
+        y: 2
+        width: 59
+        height: 89
+      spriteId: 4ce9e79628f190a429e01a400a18e43b
+    - name: UrsinaGlace_Frame_76
+      frameIndex: 76
+      additiveSortOrder: 0
+      cellRect:
+        x: 51
+        y: 2
+        width: 59
+        height: 89
+      spriteId: 59cdc7a991a589343b1edbf9831db4d9
+    - name: UrsinaGlace_Frame_77
+      frameIndex: 77
+      additiveSortOrder: 0
+      cellRect:
+        x: 51
+        y: 2
+        width: 59
+        height: 89
       spriteId: 041d5bde2a6c9b74786ab5bedeae9bed
     - name: UrsinaGlace_Frame_81
       frameIndex: 81
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 91
       spriteId: 2139e7dfec3a4ff40a6c04164a656d7c
     - name: UrsinaGlace_Frame_82
       frameIndex: 82
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 91
       spriteId: 04cf38ad65e408d47afafd5ee5acb4d3
     - name: UrsinaGlace_Frame_83
       frameIndex: 83
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 91
       spriteId: d539daf73df915940bfb7bd29d221b76
     - name: UrsinaGlace_Frame_84
       frameIndex: 84
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 91
       spriteId: 9e37f2b24a95ed24994c31234c53e09b
     - name: UrsinaGlace_Frame_85
       frameIndex: 85
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 91
       spriteId: 20405f5f4be88c94bb28ae4561ee0055
     - name: UrsinaGlace_Frame_86
       frameIndex: 86
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 91
       spriteId: ad450caf2d91a2f49994271fe1d817e5
     - name: UrsinaGlace_Frame_87
       frameIndex: 87
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 91
       spriteId: b5a89f882ec33ff4ea9abcd161d6e942
     - name: UrsinaGlace_Frame_88
       frameIndex: 88
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 91
       spriteId: 3e066ad7e0f90ae40a803563ca410487
     - name: UrsinaGlace_Frame_89
       frameIndex: 89
       additiveSortOrder: 0
       cellRect:
-        x: 35
+        x: 51
         y: 2
-        width: 80
-        height: 111
+        width: 59
+        height: 90
       spriteId: dd58b17e60ca010479e1abcb52806e83
     linkedCells: []
     parentIndex: -1
