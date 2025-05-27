@@ -22,7 +22,6 @@ public class HealthBarUrsina : MonoBehaviour
     }
     void Start()
     {
-        //entre 5 porque tiene 500
         healthSlider.value = (hpUrsina / 10);
         healthSliderDelay.value = (hpUrsina / 10);
     }
