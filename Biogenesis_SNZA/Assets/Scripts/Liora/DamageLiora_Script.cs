@@ -109,6 +109,7 @@ public class DamageLiora_Script : MonoBehaviour
     public void LoadWhenDead()
     {
         GameObject.FindObjectOfType<SaveController_Script>().LoadGame();
+        RefillAllPotions();
         Liora_StateMachine_Script.isDying = false;
     }
 

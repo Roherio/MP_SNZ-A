@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
 {
+    public AudioClip startConversationSFX;
     //dialogueData1 es primera vez
     //dialogueData2 es cuando ya has conocido a Gander, que aveces salta ese dialogo y aveces el 1
     //dialogueData3 es cuando tienes SNZA Jabali lista
@@ -59,6 +60,7 @@ public class NPCAbraxas_Script : MonoBehaviour, IInteractable_Script
     }
     void StartDialogue()
     {
+        AudioSource.PlayClipAtPoint(startConversationSFX, transform.position);
         /*if (currentDialogue == "dialogueData3")
         {
             isDialogueActive = true;

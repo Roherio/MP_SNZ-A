@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
 {
+    public AudioClip startConversationSFX;
     //dialogueData1 es primera vez
     //dialogueData2 es despues de hablar la primera vez
     //dialogueData3 es cuando has conseguido alguno de los objetos pero no todos
@@ -76,6 +77,7 @@ public class NPCKhione_Script : MonoBehaviour, IInteractable_Script
     }
     void StartDialogue()
     {
+        AudioSource.PlayClipAtPoint(startConversationSFX, transform.position);
         if (currentDialogue == "dialogueData5")
         {
             isDialogueActive = true;

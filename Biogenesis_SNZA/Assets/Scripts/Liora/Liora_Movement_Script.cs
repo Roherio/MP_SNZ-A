@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEditor.SceneView;
 
 public class Liora_Movement_Script : MonoBehaviour
 {
@@ -119,7 +118,7 @@ public class Liora_Movement_Script : MonoBehaviour
             canDashLadder = false;
         }
         //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge, trencant mur, agafant item o si està executant una ordre d'atac
-        if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem) { rb.velocity = Vector2.zero; }
+        if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_StateMachine_Script.isTakingPotion) { rb.velocity = Vector2.zero; }
     }
     public void Movimiento(InputAction.CallbackContext context)
     {
