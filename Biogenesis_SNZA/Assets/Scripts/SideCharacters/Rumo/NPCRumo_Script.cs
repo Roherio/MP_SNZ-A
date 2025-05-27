@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
 {
+    public AudioClip startConversationSFX;
     //dialogueData1 es primera vez, se repite hasta que consigues tapones
     //dialogueData2 es despues de conseguir tapones
     //dialogueData3 se repite hasta que consigues manta
@@ -67,6 +68,7 @@ public class NPCRumo_Script : MonoBehaviour, IInteractable_Script
     }
     void StartDialogue()
     {
+        AudioSource.PlayClipAtPoint(startConversationSFX, transform.position);
         if (currentDialogue == "dialogueData4")
         {
             isDialogueActive = true;

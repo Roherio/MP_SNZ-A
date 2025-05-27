@@ -5,11 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class NPCWallace_Script : MonoBehaviour, IInteractable_Script
 {
+    public AudioClip startConversationSFX;
     //dialogueData1 es primera vez
-    //dialogueData2 es despues de hablar la primera vez
-    //dialogueData3 es cuando has conseguido alguno de los objetos pero no todos
-    //dialogueData4 es cuando acabas de conseguir los dos objetos y te da la habilidad
-    //dialogueData5 es despues de darte la habilidad
+    //dialogueData2 es que vayas a hablar con Khione
+    //dialogueData3 es cuando has hablado ya con Khione
     public NPCDialogue_Script dialogueData1;
     public NPCDialogue_Script dialogueData2;
     public NPCDialogue_Script dialogueData3;
@@ -55,6 +54,7 @@ public class NPCWallace_Script : MonoBehaviour, IInteractable_Script
     }
     void StartDialogue()
     {
+        AudioSource.PlayClipAtPoint(startConversationSFX, transform.position);
         if (currentDialogue == "dialogueData3")
         {
             isDialogueActive = true;
