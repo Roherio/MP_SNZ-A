@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Palanca_Interact_Script : MonoBehaviour, IInteractable_Script
 {
+    public AudioClip clip;
     public bool isInteracted { get; private set; } = false;
     public GameObject door; //la puerta que se abrirá cuando interactues con la palanca. Asignada en el inspector.
     public bool CanInteract()
@@ -15,6 +16,7 @@ public class Palanca_Interact_Script : MonoBehaviour, IInteractable_Script
         if (!CanInteract()) { return; }
         //accionar y abrir la puerta
         OpenDoor();
+        AudioSource.PlayClipAtPoint(clip, transform.position);
     }
     public void OpenDoor()
     {

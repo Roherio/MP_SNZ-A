@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Liora_Climb_Script : State
 {
+
     public override void Enter()
     {
         animator.speed = 1f;
@@ -14,6 +15,7 @@ public class Liora_Climb_Script : State
     {
         if (!isClimbing)
         {
+            
             isComplete = true;
         }
         //mirar si l'animacio es mou o esta estatica a l'escala
