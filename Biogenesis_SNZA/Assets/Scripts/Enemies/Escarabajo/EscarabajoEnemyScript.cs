@@ -251,7 +251,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("Player") && !isAttacking)
         {
             knockbackScript kb = collision.GetComponent<knockbackScript>();
             if (kb != null)
@@ -260,7 +260,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
             }
 
             //Treu vida
-            GameControl_Script.lifeLiora -= 5;
+            DamageLiora_Script.RecibirDamage(transform.position, 5f);
         }
     }
     void TryPlayAlertSound()

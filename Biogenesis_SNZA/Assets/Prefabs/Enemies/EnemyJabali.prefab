@@ -279,9 +279,9 @@ MonoBehaviour:
   moveSpeed: 4
   dashSpeed: 0.00000001
   detectionRange: 20
-  attackDuration: 0.2
+  attackDuration: 0.4
   attackCooldown: 1.5
-  hitboxSpawnTimer: 0.7
+  hitboxSpawnTimer: 0.5
   attackRange: 4
   soundDetectionCooldwon: 0
   soundCooldown: 3

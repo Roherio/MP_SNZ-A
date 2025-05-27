@@ -11,7 +11,6 @@ public class AttackPointSecretario : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, (SecretarioEnemyScript.dashDurationTimer + 0.5f));
-        print(GameControl_Script.lifeLiora);
     }
 
     // Update is called once per frame
@@ -24,23 +23,12 @@ public class AttackPointSecretario : MonoBehaviour
         {
             //Consola
             print("player hit");
-
             //Feeling
             FindObjectOfType<HitStop>().hitStop(0.01f);
             CinemachineShake.Instance.ShakeCamera(10f, .01f);
-            /*
-            //Knockback effect
-            knockbackScript kb = collision.GetComponent<knockbackScript>();
-            if (kb != null)
-            {
-                kb.ApplyKnockback(transform.position, enemyAttackValue);
-            }
-            */
             //Treu vida
             DamageLiora_Script.RecibirDamage(transform.position, enemyAttackValue);
-
-            //
-            print("L'atac ha fet hit per " + enemyAttackValue + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
+            //print("L'atac ha fet hit per " + enemyAttackValue + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
             Destroy(gameObject);
             
         }

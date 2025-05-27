@@ -91,6 +91,7 @@ public class DamageLiora_Script : MonoBehaviour
                 kb.ApplyKnockback(enemy, damage);
             }
             GameControl_Script.lifeLiora -= damage;
+            print("L'atac ha fet hit per " + damage + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
         }
         if (GameControl_Script.lifeLiora <= 0)
         {

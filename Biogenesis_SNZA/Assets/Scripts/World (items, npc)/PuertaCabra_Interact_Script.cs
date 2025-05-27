@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PuertaCabra_Interact_Script : MonoBehaviour, IInteractable_Script
 {
+    public AudioClip m_Clip;
     public bool isInteracted { get; private set; } = false;
     public bool CanInteract()
     {
@@ -42,4 +43,10 @@ public class PuertaCabra_Interact_Script : MonoBehaviour, IInteractable_Script
          }
          */
     }
+    private void OnDestroy()
+    {
+        AudioSource.PlayClipAtPoint(m_Clip, transform.position);
+    }
+
+
 }

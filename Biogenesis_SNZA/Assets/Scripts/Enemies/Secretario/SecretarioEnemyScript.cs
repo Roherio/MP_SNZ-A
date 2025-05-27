@@ -253,16 +253,10 @@ public class SecretarioEnemyScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !isAttacking)
         {
-            knockbackScript kb = collision.GetComponent<knockbackScript>();
-            if (kb != null)
-            {
-                kb.ApplyKnockback(transform.position, 10);
-            }
-
             //Treu vida
-            GameControl_Script.lifeLiora -= 5;
+            DamageLiora_Script.RecibirDamage(transform.position, 5f);
         }
     }
 }
