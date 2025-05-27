@@ -55,6 +55,7 @@ public class SewerDrop : MonoBehaviour
     }
     public void Destruir()
     {
+        GetComponent<BoxCollider2D>().enabled = false;
         rb.velocity = Vector3.zero;
         rb.gravityScale = 0;
         animator.SetBool("hasImpacted", true);

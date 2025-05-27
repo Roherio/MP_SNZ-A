@@ -26,6 +26,7 @@ public class PuertaCabra_Interact_Script : MonoBehaviour, IInteractable_Script
     public void BreakDoor()
     {
         SetUsed(true);
+        AudioSource.PlayClipAtPoint(m_Clip, transform.position);
         Destroy(gameObject);
     }
     public void StopAnimation()
@@ -42,10 +43,6 @@ public class PuertaCabra_Interact_Script : MonoBehaviour, IInteractable_Script
               GetComponent<SpriteRenderer>().sprite = openedSprite;
          }
          */
-    }
-    private void OnDestroy()
-    {
-        AudioSource.PlayClipAtPoint(m_Clip, transform.position);
     }
 
 

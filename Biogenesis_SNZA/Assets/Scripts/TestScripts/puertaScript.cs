@@ -1,8 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using Cinemachine;
-using static UnityEditor.SceneView;
-
 public class puertaScript : MonoBehaviour, IInteractable_Script
 {
     [SerializeField] private Transform destination;

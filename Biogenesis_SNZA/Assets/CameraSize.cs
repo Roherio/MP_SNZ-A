@@ -18,8 +18,21 @@ public class CameraSize : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            resetCameraSize();
+        }
+    }
+
     private void changeCameraSize()
     {
         vcam.m_Lens.OrthographicSize = 15f;
+    }
+
+    private void resetCameraSize()
+    {
+        vcam.m_Lens.OrthographicSize = 11f;
     }
 }

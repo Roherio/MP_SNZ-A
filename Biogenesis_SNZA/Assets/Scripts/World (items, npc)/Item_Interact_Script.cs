@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
 {
+
+    public AudioClip takeItemSFX;
     public bool isInteracted { get; private set; } = false;
     public string itemID { get; private set; }
 
@@ -129,6 +131,7 @@ public class Item_Interact_Script : MonoBehaviour, IInteractable_Script
     }
     public void DestroyObject()
     {
+        AudioSource.PlayClipAtPoint(takeItemSFX,transform.position);
         Destroy(gameObject);
     }
     public void SetTaken(bool taken)
