@@ -655,6 +655,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSceneName: GameScene
   settingsPanel: {fileID: 0}
+  creditsPanel: {fileID: 0}
+  creditsScript: {fileID: 0}
 --- !u!4 &947877291
 Transform:
   m_ObjectHideFlags: 0
@@ -1152,7 +1154,7 @@ MonoBehaviour:
     a\xF1os, en mi ni\xF1ez, Abraxas me acogi\xF3 despu\xE9s de que mi pueblo fuera
     atacado. El reino que nos atac\xF3 fue Axia, gobernado por Ursina Glace.\n\nAhora
     yo, Liora, por orden de Abraxas, asaltar\xE9 la fortaleza de Ursina y recuperar\xE9
-    la SNZ A que posee.\n\nAunque no sera tarea f\xE1cil..."
+    la SNZ A que posee.\n\nAunque no ser\xE1 tarea f\xE1cil..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
   m_sharedMaterial: {fileID: 4644483918358274456, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
