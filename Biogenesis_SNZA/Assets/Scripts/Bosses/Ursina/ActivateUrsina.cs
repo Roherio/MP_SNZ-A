@@ -11,8 +11,13 @@ public class ActivateUrsina : MonoBehaviour
         if(collision.CompareTag("Player")) 
         { 
             Ursina.SetActive(true);
-            UrsinaHealthBar.SetActive(true);
+            Invoke("ursinaHealth", 1.5f);
         }
        
     }
+    void ursinaHealth()
+    {
+        UrsinaHealthBar.SetActive(true);
+    }
+
 }

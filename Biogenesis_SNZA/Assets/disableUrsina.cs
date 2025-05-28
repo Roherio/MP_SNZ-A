@@ -16,14 +16,6 @@ public class disableUrsina : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        hpEnemiesScript.enemyHP = hpEnemiesScript.maxEnemyHP;
-        Ursina.transform.position = UrsinaLocation.position;
-        gameObject.SetActive(false);
-        UrsinaHealthBar.SetActive(false);
-    }
-
     // Update is called once per frame
     void Update()
     {
