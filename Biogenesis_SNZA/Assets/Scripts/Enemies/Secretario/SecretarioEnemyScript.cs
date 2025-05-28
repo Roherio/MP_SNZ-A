@@ -254,7 +254,7 @@ public class SecretarioEnemyScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !isAttacking)
+        if (collision.CompareTag("Player"))
         {
             //Treu vida
             DamageLiora_Script.RecibirDamage(transform.position, 5f);
