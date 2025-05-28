@@ -58,6 +58,7 @@ public class EscarabajoEnemyScript : MonoBehaviour
         hpEnemiesScript = GetComponent<hpEnemiesScript>();
         playerPosition = GameObject.FindWithTag("Player").transform;
         attackDurationTimer = attackDuration; //valor únicament creat per després ser portat a un altre script
+        isAttacking = false;
         canAttack = true;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -270,6 +271,12 @@ public class EscarabajoEnemyScript : MonoBehaviour
             audioManager.JabaliSFX(audioManager.playerDetected);
             soundDetectionCooldwon = soundCooldown;
         }
+    }
+    void OnEnable()
+    {
+        canAttack = true;
+        isAttacking = false;
+        playerPosition = GameObject.FindWithTag("Player").transform;
     }
 }
 

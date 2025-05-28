@@ -30,6 +30,14 @@ public class BossMusicController : MonoBehaviour
             audioSource.Play();
             hasStartedLoop = true;
         }
+        if (Liora_StateMachine_Script.isDying == true)
+        {
+            
+            audioSource.Stop();
+            hasStarted = false;
+            hasStartedLoop = false;
+            hasPlayedEnd = false;
+        }
 
         // Play end clip when boss is defeated
         if (bossDefeated && !hasPlayedEnd)

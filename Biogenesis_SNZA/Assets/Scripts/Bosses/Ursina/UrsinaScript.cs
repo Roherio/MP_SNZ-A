@@ -10,6 +10,7 @@ public class UrsinaScript : MonoBehaviour
     public Rigidbody2D rb;
     [SerializeField] float moveSpeed;
     UrsinaAudioManager audioManager;
+    public Transform originalPos;
 
     private hpEnemiesScript hpEnemiesScript;
 
@@ -77,6 +78,10 @@ public class UrsinaScript : MonoBehaviour
     }
     void Update()
     {
+        if (Liora_StateMachine_Script.isDying == true)
+        {
+            return;
+        }
         //float per veure la distancia en TOTES LES DIRECCIONS entre el jugador i l'enemic
         float enemyToPlayerDistance = Vector2.Distance(transform.position, playerPosition.position); 
 
@@ -520,5 +525,12 @@ public class UrsinaScript : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, mediumDistance);
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, farDistance);
+    }
+    void OnEnable()
+    {
+        canAttack = true;
+        isAttacking = false;    
+        transform.position = originalPos.position;
+        playerPosition = GameObject.FindWithTag("Player").transform;
     }
 }

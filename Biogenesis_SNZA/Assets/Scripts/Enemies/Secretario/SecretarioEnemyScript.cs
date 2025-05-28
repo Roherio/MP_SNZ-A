@@ -51,6 +51,7 @@ public class SecretarioEnemyScript : MonoBehaviour
         hpEnemiesScript = GetComponent<hpEnemiesScript>();
         playerPosition = GameObject.FindWithTag("Player").transform;
         dashDurationTimer = dashDuration; //valor únicament creat per després ser portat a un altre script
+        isAttacking = false;
         canAttack = true;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -258,6 +259,12 @@ public class SecretarioEnemyScript : MonoBehaviour
             //Treu vida
             DamageLiora_Script.RecibirDamage(transform.position, 5f);
         }
+    }
+    void OnEnable()
+    {
+        canAttack = true;
+        isAttacking = false;
+        playerPosition = GameObject.FindWithTag("Player").transform;
     }
 }
 
