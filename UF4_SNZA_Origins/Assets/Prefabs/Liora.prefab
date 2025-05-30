@@ -956,7 +956,19 @@ MonoBehaviour:
     m_ActionId: 7baf763b-65ae-438e-b5ff-3763443c7210
     m_ActionName: ControlesInGame/Heal[/Keyboard/h]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8318787859004874339}
+        m_TargetAssemblyTypeName: Liora_Attack_Script, Assembly-CSharp
+        m_MethodName: Disparar
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c9abc525-b4a2-4593-a724-1361459a8fea
     m_ActionName: ControlesInGame/Disparar[/Keyboard/k]
   m_NeverAutoSwitchControlSchemes: 0
@@ -1043,6 +1055,7 @@ MonoBehaviour:
   animator: {fileID: 6844576158491812986}
   inputAttackCooldown: 0.4
   isComboActive: 0
+  projectilPrefab: {fileID: 5202115523488141109, guid: 87439c2ed84fa4a478a6a4aeacf51c58, type: 3}
   attackLocation: {fileID: 9003009591592549887}
   duracioCollider: 0
   delayCollider: 0
