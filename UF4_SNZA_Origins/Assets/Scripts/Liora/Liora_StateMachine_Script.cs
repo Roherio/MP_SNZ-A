@@ -221,7 +221,6 @@ public class Liora_StateMachine_Script : MonoBehaviour
     {
         if (isTakingItem || isTakingPotion || isBreakingWall || isGrabbingLedge || isClimbing || Time.timeScale == 0f || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isShooting) { return; }
         isFacingRight = !isFacingRight;
-        Liora_Projectil_Script.facingRight = !Liora_Projectil_Script.facingRight;
         Vector2 localScale = transform.localScale;
         localScale.x *= -1f;
         transform.localScale = localScale;

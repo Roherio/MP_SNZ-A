@@ -17,7 +17,6 @@ public class Liora_Movement_Script : MonoBehaviour
 
     //Jump Logic
     public float horizontal { get; private set; }
-    //private float rawHorizontal; //variable per mantenir el moviment horitzontal i que no es detingui si hem atacat, aixi que al seguir pulsant el input de moviment ens seguirem movent al acabar d'atacar
     public static bool jumping;
     [SerializeField] float groundSpeed = 10f;
     [SerializeField] float jumpPower = 24f;

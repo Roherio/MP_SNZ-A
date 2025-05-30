@@ -25,6 +25,7 @@ public class Liora_Attack_Script : MonoBehaviour
     //----------------------------------DISPARAR LOGIC
     public static bool isShooting = false;
     private float shootingTimer = 0f;
+    public GameObject projectilPrefab;
     
     //------------------------------BUFFER DEL INPUT DE ATAQUE
     //el buffer ens permet que el jugador actui amb l'atac en el moment en el que el jugador s'alliberi. Per exemple, si estem atacant i fent la acció atac 1, no podem dirli que faci la accio d'atac 2 per seguir el combo. tot i així, amb el buffer, acumularem aquest input de l'atac 2 perquè quan el jugador acabi l'atac 1 i s'alliberi, s'instancïi l'atac 2 seguidament i sigui més comode pel jugador i no hagi de donar l'input perfecte just al acabar l'atac 1
@@ -173,6 +174,21 @@ public class Liora_Attack_Script : MonoBehaviour
         AttackCollider_Script.duracioCollider = duracioCollider;
     }
     //aquesta funció OnActionAnimationEnd ens serveix per col·locarla al final de cada arxiu .anim on guardem la animació de l'atac. Al acabar AttackCangrejo1, per exemple, tenim una tag que executa aquesta funció i fa que el jugador deixi d'estar en estat ATACANT, per tant passant a Idle.
+    public void Disparar(InputAction.CallbackContext context)
+    {
+        //no entrarem a instanciar el dispar de gel si el el controlador del joc sap que estem pausats
+        if (GameControl_Script.isPaused) { return; }
+        //tampoc entrarem si el timer de disparar és menor a 2 segons o estem fent alguna de les accions que no haurien de permetre'ns atacar (escalant, saltant, agafant-nos a una cantonada...)
+        if (Liora_Movement_Script.jumping || Liora_Movement_Script.isGrabbingLedge || Liora_Movement_Script.isClimbing || shootingTimer < 2f || isAttacking) { return; }
+        if (context.performed)
+        {
+            //resset del timer de disparar
+            shootingTimer = 0f;
+            GameObject projectil = Instantiate(projectilPrefab, attackLocation.position, Quaternion.identity);
+            //en el moment d'instanciar el projectil, mirarem quin valor te isFacingRight de la stateMachine per saber cap a on mira liora (true = dreta, false = esquerra). llavors, passarem aquesta direcció una única vegada al prefab del projectil per tal de no fer-ho en un update com a la stateMachine, cosa que faria que el projectil anés canviant de direcció a l'aire cada cop que el personatge gira.
+            projectil.GetComponent<Liora_Projectil_Script>().SetDirection(Liora_StateMachine_Script.isFacingRight);
+        }
+    }
     public void OnActionAnimationEnd()
     {
         if (!isComboActive || currentComboStep >= maxComboSteps)
