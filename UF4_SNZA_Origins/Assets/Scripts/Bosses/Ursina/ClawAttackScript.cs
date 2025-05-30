@@ -14,10 +14,6 @@ public class ClawAttackScript : MonoBehaviour
         print(GameControl_Script.lifeLiora);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -38,7 +34,7 @@ public class ClawAttackScript : MonoBehaviour
         }
 
     }
-    private void OnDrawGizmos()
+    private void OnDrawGizmos() //Aixo ens serveix per veure l'area atac en l'inspector
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, showRadius);

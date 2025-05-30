@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CeilingIceSpikeScript : MonoBehaviour
 {
     [SerializeField] float enemyAttackValue;
@@ -9,12 +10,6 @@ public class CeilingIceSpikeScript : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 3f);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,11 +29,6 @@ public class CeilingIceSpikeScript : MonoBehaviour
             Destroy(gameObject);
             //print("L'atac ha fet hit per " + enemyAttackValue + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
         }
-        
-    }
-
-    private void OnDestroy()
-    {
         
     }
 }

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Aquest script només serveix per activar al boss final un cop arribes al final del nivell
 public class ActivateUrsina : MonoBehaviour
 {
     public GameObject Ursina;

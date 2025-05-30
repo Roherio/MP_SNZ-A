@@ -15,8 +15,12 @@ public class clasIceSpikesScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerPosition = GameObject.FindWithTag("Player").transform;
-        Destroy(gameObject, 2f);
+
+        Destroy(gameObject, 2f);//temporitzador perque no voli per sempre l'objecte
+
         print(GameControl_Script.lifeLiora);
+
+        //Aqui calcula cap a on han d'anar els projectils
         attackDirection = (playerPosition.position - transform.position);
         attackDirection.y = 0;
         attackDirection = attackDirection.normalized;

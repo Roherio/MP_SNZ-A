@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+//Aquest script empeny al jugador lluny l'enemic
 public class RoarAttackScript : MonoBehaviour
 {
     private Vector3 scaleChange;
@@ -13,12 +14,12 @@ public class RoarAttackScript : MonoBehaviour
 
         int roarLayer = LayerMask.NameToLayer("RoarAttack");
         int enemyLayer = LayerMask.NameToLayer("Enemy");
-        Physics2D.IgnoreLayerCollision(roarLayer, enemyLayer, true);
+        Physics2D.IgnoreLayerCollision(roarLayer, enemyLayer, true); //Si no fem aixo, tambe empeny al propi enemic
     }
 
     void Update()
     {
-        transform.localScale += scaleChange * Time.deltaTime;
+        transform.localScale += scaleChange * Time.deltaTime; //Basicament es una collisio que es va fent mes gran, llavors es una mica un "fals" empeny
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

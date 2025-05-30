@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//Aquest atac fa que sota el jugador vagin apareixent diferents blocs de gel que amb el temps exploten i fan mal
 public class SmashAttackPhase2Ursina: MonoBehaviour
 {
     [SerializeField] float enemyAttackValue;
@@ -12,7 +13,7 @@ public class SmashAttackPhase2Ursina: MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false; //Com volem que facin mal quan exploten, al principi no volem la colisio
         playerPosition = GameObject.FindWithTag("Player").transform;
         enemyLocation = GameObject.FindWithTag("Ursina").transform;
 
@@ -20,7 +21,8 @@ public class SmashAttackPhase2Ursina: MonoBehaviour
     void Start()
     {
 
-        transform.position = new Vector2(playerPosition.position.x, enemyLocation.position.y);
+        transform.position = new Vector2(playerPosition.position.x, enemyLocation.position.y); 
+
         scaleChange = new Vector3(1.5f, 1.5f, 1.5f);
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, 1.5f);
