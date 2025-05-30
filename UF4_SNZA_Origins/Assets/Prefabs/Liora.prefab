@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 4785982769148054761}
   - component: {fileID: 895927059304751807}
   m_Layer: 6
-  m_Name: CrabParry
+  m_Name: Shooting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,8 +94,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &1513802815213946509
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,8 +330,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &2773479478748889641
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,67 +388,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
---- !u!1 &3022571957646986089
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3995600165940865218}
-  - component: {fileID: 6940293027488031583}
-  m_Layer: 6
-  m_Name: Boar2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3995600165940865218
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3022571957646986089}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4524722385764549921}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6940293027488031583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3022571957646986089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e75d8c718fd1645bc21430ab4f6304, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 0
-  isGrounded: 0
-  jumping: 0
-  jumpPower: 24
-  isDashing: 0
-  isGrabbingLedge: 0
-  isClimbing: 0
-  isBreakingWall: 0
-  isTakingPotion: 0
-  isTakingItem: 0
-  isKnockedBack: 0
-  isDying: 0
-  isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &3096839413113075702
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,11 +421,6 @@ Transform:
   - {fileID: 7508892902917312210}
   - {fileID: 1378397153173986926}
   - {fileID: 7099961217505989514}
-  - {fileID: 8595861118070598566}
-  - {fileID: 3995600165940865218}
-  - {fileID: 8875209274037094254}
-  - {fileID: 3668248367355029183}
-  - {fileID: 5424643886069842700}
   m_Father: {fileID: 5079527829267624495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3119680335304251626
@@ -547,8 +480,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &3315806228425421596
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,8 +538,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &3464409778232486299
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,67 +741,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
---- !u!1 &3993439270931428755
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7893012078762040870}
-  - component: {fileID: 4077681511628036436}
-  m_Layer: 6
-  m_Name: BoarParry
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7893012078762040870
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3993439270931428755}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 689706562118891415}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4077681511628036436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3993439270931428755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d9835a59a95dc847b0edda0380c5736, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 0
-  isGrounded: 0
-  jumping: 0
-  jumpPower: 24
-  isDashing: 0
-  isGrabbingLedge: 0
-  isClimbing: 0
-  isBreakingWall: 0
-  isTakingPotion: 0
-  isTakingItem: 0
-  isKnockedBack: 0
-  isDying: 0
-  isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &3994394536962611434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,22 +921,6 @@ MonoBehaviour:
     m_ActionName: ControlesInGame/Ataque[/Keyboard/j]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8318787859004874339}
-        m_TargetAssemblyTypeName: Liora_Attack_Script, Assembly-CSharp
-        m_MethodName: Parry
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: f23b1236-e6c9-4ac5-928a-8d7384f43ddd
-    m_ActionName: ControlesInGame/Parry[/Keyboard/k]
-  - m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 7459856120250860211}
         m_TargetAssemblyTypeName: Liora_Interaction_Script, Assembly-CSharp
         m_MethodName: OnInteract
@@ -1085,26 +940,6 @@ MonoBehaviour:
     m_ActionId: 3383543e-334f-4376-9e52-49eb3d85de0f
     m_ActionName: ControlesInGame/AbrirMenu[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6d103232-29d0-427a-a205-e3c9b16ce397
-    m_ActionName: ControlesInMenu/Navegar[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4a653a7e-2bef-4a33-bb91-fd603eb74dea
-    m_ActionName: ControlesInMenu/Seleccionar[/Keyboard/enter,/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0388ae3d-d949-4342-af8f-655a0db80281
-    m_ActionName: ControlesInMenu/Atras[/Keyboard/backspace]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 35dff5c5-7281-4df2-88aa-2f54cde30f75
-    m_ActionName: ControlesInMenu/SalirMenu[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f6c63064-ac85-46fd-80a9-e3422f94bde5
-    m_ActionName: ControlesInMenu/Pestanyas[/Keyboard/q,/Keyboard/e]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 245262021979407441}
         m_TargetAssemblyTypeName: DamageLiora_Script, Assembly-CSharp
@@ -1120,6 +955,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7baf763b-65ae-438e-b5ff-3763443c7210
     m_ActionName: ControlesInGame/Heal[/Keyboard/h]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c9abc525-b4a2-4593-a724-1361459a8fea
+    m_ActionName: ControlesInGame/Disparar[/Keyboard/k]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ControlesInGame
@@ -1151,14 +990,7 @@ MonoBehaviour:
   crabAttackState1: {fileID: 2909936836818465901}
   crabAttackState2: {fileID: 3242684065176004098}
   crabAttackState3: {fileID: 2511590161386230145}
-  crabParryState: {fileID: 895927059304751807}
-  boarAttackState1: {fileID: 6675227097986805452}
-  boarAttackState2: {fileID: 6940293027488031583}
-  boarParryState: {fileID: 4077681511628036436}
-  secretaryAttackState1: {fileID: 804493714940729412}
-  secretaryAttackState2: {fileID: 2929735705854367381}
-  secretaryAttackState3: {fileID: 1092263726467633213}
-  secretaryParryState: {fileID: 7735182359440347231}
+  shootingState: {fileID: 895927059304751807}
   animator: {fileID: 6844576158491812986}
   rb: {fileID: 4947185015358159300}
   jumping: 0
@@ -1214,10 +1046,7 @@ MonoBehaviour:
   attackLocation: {fileID: 9003009591592549887}
   duracioCollider: 0
   delayCollider: 0
-  colliderParry: {fileID: 6769748558417861109, guid: a499decbcfeab824cb2f03843f239d12, type: 3}
   colliderAttackCrabLiora: {fileID: 165051307909327957, guid: 86933764d29bffd43afa9ce7b5f4a8d4, type: 3}
-  colliderAttackBoarLiora: {fileID: 165051307909327957, guid: 46055b83fe76e1d4eb88b6349202d983, type: 3}
-  colliderAttackSecretaryLiora: {fileID: 165051307909327957, guid: 4584fab740654b84da472d6681357d0f, type: 3}
 --- !u!114 &6942934200522289382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1426,65 +1255,6 @@ MonoBehaviour:
   rb: {fileID: 4947185015358159300}
   isKnockedBack: 0
   knockbackDuration: 0.5
---- !u!1 &4207065063269626116
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4440426960659482707}
-  - component: {fileID: 7735182359440347231}
-  m_Layer: 6
-  m_Name: SecretaryParry
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4440426960659482707
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4207065063269626116}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 689706562118891415}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7735182359440347231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4207065063269626116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bb1dc2beeed5c04f8f73977e83bbf9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 0
-  isGrounded: 0
-  jumping: 0
-  jumpPower: 24
-  isDashing: 0
-  isGrabbingLedge: 0
-  isClimbing: 0
-  isBreakingWall: 0
-  isTakingPotion: 0
-  isTakingItem: 0
-  isKnockedBack: 0
-  isDying: 0
-  isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
 --- !u!1 &4607453907842549865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,8 +1499,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &5049708301153696739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,67 +1634,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
---- !u!1 &5351406581949709191
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5424643886069842700}
-  - component: {fileID: 1092263726467633213}
-  m_Layer: 6
-  m_Name: Secretary3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5424643886069842700
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5351406581949709191}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4524722385764549921}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1092263726467633213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5351406581949709191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000d9395b67e7aa4288c8d60bb5143da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 0
-  isGrounded: 0
-  jumping: 0
-  jumpPower: 24
-  isDashing: 0
-  isGrabbingLedge: 0
-  isClimbing: 0
-  isBreakingWall: 0
-  isTakingPotion: 0
-  isTakingItem: 0
-  isKnockedBack: 0
-  isDying: 0
-  isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &5378815471117039753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,8 +1692,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &5783455813662626528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,8 +1812,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!82 &6007823192409977957
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2225,7 +1932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689706562118891415}
   m_Layer: 6
-  m_Name: BehavioursParry
+  m_Name: BehavioursShooting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2245,8 +1952,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4785982769148054761}
-  - {fileID: 7893012078762040870}
-  - {fileID: 4440426960659482707}
   m_Father: {fileID: 5079527829267624495}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6466023313053103695
@@ -2306,8 +2011,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &6556452162577318095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,67 +2069,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
---- !u!1 &6764926798798615921
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3668248367355029183}
-  - component: {fileID: 2929735705854367381}
-  m_Layer: 6
-  m_Name: Secretary2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3668248367355029183
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6764926798798615921}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4524722385764549921}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2929735705854367381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6764926798798615921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c4c63ea11b8bbf43be910436d820ab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 0
-  isGrounded: 0
-  jumping: 0
-  jumpPower: 24
-  isDashing: 0
-  isGrabbingLedge: 0
-  isClimbing: 0
-  isBreakingWall: 0
-  isTakingPotion: 0
-  isTakingItem: 0
-  isKnockedBack: 0
-  isDying: 0
-  isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &6793785563554027629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,65 +2147,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.3}
   m_EdgeRadius: 0
---- !u!1 &7017948346914068883
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8875209274037094254}
-  - component: {fileID: 804493714940729412}
-  m_Layer: 6
-  m_Name: Secretary1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8875209274037094254
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017948346914068883}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4524722385764549921}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &804493714940729412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7017948346914068883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b60afd673aa37484594370cf3e705a92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 0
-  isGrounded: 0
-  jumping: 0
-  jumpPower: 24
-  isDashing: 0
-  isGrabbingLedge: 0
-  isClimbing: 0
-  isBreakingWall: 0
-  isTakingPotion: 0
-  isTakingItem: 0
-  isKnockedBack: 0
-  isDying: 0
-  isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
 --- !u!1 &7059776720692785451
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,8 +2204,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &7060317571079475497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,67 +2352,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
---- !u!1 &7668204529443931195
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8595861118070598566}
-  - component: {fileID: 6675227097986805452}
-  m_Layer: 6
-  m_Name: Boar1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8595861118070598566
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7668204529443931195}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4524722385764549921}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6675227097986805452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7668204529443931195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aae638b0faa97074389d4ec01954f846, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 0
-  isGrounded: 0
-  jumping: 0
-  jumpPower: 24
-  isDashing: 0
-  isGrabbingLedge: 0
-  isClimbing: 0
-  isBreakingWall: 0
-  isTakingPotion: 0
-  isTakingItem: 0
-  isKnockedBack: 0
-  isDying: 0
-  isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &7730525161679000548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,8 +2410,7 @@ MonoBehaviour:
   isKnockedBack: 0
   isDying: 0
   isAttacking: 0
-  isParrying: 0
-  isDoingUlti: 0
+  isShooting: 0
 --- !u!1 &8709862683697326564
 GameObject:
   m_ObjectHideFlags: 0

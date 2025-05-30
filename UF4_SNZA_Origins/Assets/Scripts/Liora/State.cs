@@ -30,8 +30,7 @@ public abstract class State : MonoBehaviour
     public bool isDying = false;
     //attack Logic
     public bool isAttacking = false;
-    public bool isParrying = false;
-    public bool isDoingUlti = false;
+    public bool isShooting = false;
 
     public virtual void Enter() { }
     public virtual void Do() { }

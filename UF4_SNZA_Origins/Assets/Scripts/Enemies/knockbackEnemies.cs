@@ -31,9 +31,10 @@ public class knockbackScript : MonoBehaviour
         //activar knockback, i mentres esta en knockback no et poden tornar a pegar fins que es desactivi
         isKnockedBack = true;
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
+        //activem l'estat de la màquina d'estats "knock back" per mostrarla ferida a la personatge, i posem en fals l'estat isAttacking i isShooting perquè no tinguin prioritat a la màquina d'estats
         Liora_StateMachine_Script.isKnockedBack = true;
         Liora_Attack_Script.isAttacking = false;
-        Liora_Attack_Script.isParrying = false;
+        Liora_Attack_Script.isShooting = false;
         yield return new WaitForSeconds(knockbackDuration);
         //desactivar knockback i tornar a ser vulnerable
         isKnockedBack = false;

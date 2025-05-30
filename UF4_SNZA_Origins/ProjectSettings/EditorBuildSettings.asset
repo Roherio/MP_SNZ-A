@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TransicioInici.unity
     guid: f03eb8e7e4a357048a896762779fad7d
   - enabled: 1
-    path: Assets/Scenes/levelDesign 3.unity
+    path: Assets/Scenes/levelDesign.unity
     guid: 64dbcbab4ad88f4408bee9dbfe92ba99
   - enabled: 1
     path: Assets/Scenes/TransicioFinal.unity

@@ -82,9 +82,18 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Parry"",
+                    ""name"": ""Heal"",
                     ""type"": ""Button"",
-                    ""id"": ""f23b1236-e6c9-4ac5-928a-8d7384f43ddd"",
+                    ""id"": ""7baf763b-65ae-438e-b5ff-3763443c7210"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Disparar"",
+                    ""type"": ""Button"",
+                    ""id"": ""c9abc525-b4a2-4593-a724-1361459a8fea"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -103,15 +112,6 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""name"": ""AbrirMenu"",
                     ""type"": ""Button"",
                     ""id"": ""3383543e-334f-4376-9e52-49eb3d85de0f"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Heal"",
-                    ""type"": ""Button"",
-                    ""id"": ""7baf763b-65ae-438e-b5ff-3763443c7210"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -308,6 +308,28 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""b2babb7b-4751-4442-93e9-7f9c7092a43b"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Heal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6f294577-1643-4ddc-930d-01f3fb0baa4e"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Disparar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""38f0989f-fabe-4993-b827-0cd71f4e6d6d"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
@@ -325,268 +347,6 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""AbrirMenu"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b2babb7b-4751-4442-93e9-7f9c7092a43b"",
-                    ""path"": ""<Keyboard>/h"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Heal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""20af9fea-efaf-4ee4-84e0-0282c7f21a3f"",
-                    ""path"": ""<Keyboard>/k"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Parry"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""ControlesInMenu"",
-            ""id"": ""7c91dc28-51dc-4ea9-892a-f56a96a966ff"",
-            ""actions"": [
-                {
-                    ""name"": ""Navegar"",
-                    ""type"": ""Value"",
-                    ""id"": ""6d103232-29d0-427a-a205-e3c9b16ce397"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Seleccionar"",
-                    ""type"": ""Button"",
-                    ""id"": ""4a653a7e-2bef-4a33-bb91-fd603eb74dea"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Atras"",
-                    ""type"": ""Button"",
-                    ""id"": ""0388ae3d-d949-4342-af8f-655a0db80281"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""SalirMenu"",
-                    ""type"": ""Button"",
-                    ""id"": ""35dff5c5-7281-4df2-88aa-2f54cde30f75"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Pestanyas"",
-                    ""type"": ""Button"",
-                    ""id"": ""f6c63064-ac85-46fd-80a9-e3422f94bde5"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": ""WASD"",
-                    ""id"": ""65fe7ac0-ef84-42d1-89fe-75e0b2398648"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navegar"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""a8a13d2b-e30f-4e82-9e18-045942e1295c"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navegar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""949c840b-320a-40ad-8111-45266567a7f4"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navegar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""7cece856-d5d9-4794-bb8d-e57b022110bb"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navegar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""d53c38a3-c43d-4bd7-8993-377fb3020d4e"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navegar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Flechas"",
-                    ""id"": ""c0077a53-d855-475c-9360-010ee71a32e5"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navegar"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""4ddea62d-f3fc-4321-9d43-545575efc316"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navegar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""f21bee5e-88ed-41fa-baf8-acc5feccb72c"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navegar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""01044318-b712-40c0-8b5d-200cd9ae2c79"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navegar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""9ac97054-f281-493e-a5c2-595440631968"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Navegar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""14eeb5c3-0198-4798-b2fa-3bf5722b8fe2"",
-                    ""path"": ""<Keyboard>/enter"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Seleccionar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""bca44db4-f1b6-4e94-b42f-2b219ec5adfa"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Seleccionar"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ec7c89f5-a14b-4e05-8d80-b49380923a91"",
-                    ""path"": ""<Keyboard>/backspace"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Atras"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""8553710f-1b5e-4acc-9108-713584986c5b"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pestanyas"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""23dcceac-bdc3-48c1-9ec8-5bffed5ae8a8"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pestanyas"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""dbe23f45-dc7c-411e-8d7f-9562973ba91b"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pestanyas"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c5a7cc08-4ca6-4228-adf0-2b73f102e054"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SalirMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -626,17 +386,10 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         m_ControlesInGame_Ledge = m_ControlesInGame.FindAction("Ledge", throwIfNotFound: true);
         m_ControlesInGame_Climb = m_ControlesInGame.FindAction("Climb", throwIfNotFound: true);
         m_ControlesInGame_Ataque = m_ControlesInGame.FindAction("Ataque", throwIfNotFound: true);
-        m_ControlesInGame_Parry = m_ControlesInGame.FindAction("Parry", throwIfNotFound: true);
+        m_ControlesInGame_Heal = m_ControlesInGame.FindAction("Heal", throwIfNotFound: true);
+        m_ControlesInGame_Disparar = m_ControlesInGame.FindAction("Disparar", throwIfNotFound: true);
         m_ControlesInGame_Interact = m_ControlesInGame.FindAction("Interact", throwIfNotFound: true);
         m_ControlesInGame_AbrirMenu = m_ControlesInGame.FindAction("AbrirMenu", throwIfNotFound: true);
-        m_ControlesInGame_Heal = m_ControlesInGame.FindAction("Heal", throwIfNotFound: true);
-        // ControlesInMenu
-        m_ControlesInMenu = asset.FindActionMap("ControlesInMenu", throwIfNotFound: true);
-        m_ControlesInMenu_Navegar = m_ControlesInMenu.FindAction("Navegar", throwIfNotFound: true);
-        m_ControlesInMenu_Seleccionar = m_ControlesInMenu.FindAction("Seleccionar", throwIfNotFound: true);
-        m_ControlesInMenu_Atras = m_ControlesInMenu.FindAction("Atras", throwIfNotFound: true);
-        m_ControlesInMenu_SalirMenu = m_ControlesInMenu.FindAction("SalirMenu", throwIfNotFound: true);
-        m_ControlesInMenu_Pestanyas = m_ControlesInMenu.FindAction("Pestanyas", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -704,10 +457,10 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
     private readonly InputAction m_ControlesInGame_Ledge;
     private readonly InputAction m_ControlesInGame_Climb;
     private readonly InputAction m_ControlesInGame_Ataque;
-    private readonly InputAction m_ControlesInGame_Parry;
+    private readonly InputAction m_ControlesInGame_Heal;
+    private readonly InputAction m_ControlesInGame_Disparar;
     private readonly InputAction m_ControlesInGame_Interact;
     private readonly InputAction m_ControlesInGame_AbrirMenu;
-    private readonly InputAction m_ControlesInGame_Heal;
     public struct ControlesInGameActions
     {
         private @ControlJuego m_Wrapper;
@@ -718,10 +471,10 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         public InputAction @Ledge => m_Wrapper.m_ControlesInGame_Ledge;
         public InputAction @Climb => m_Wrapper.m_ControlesInGame_Climb;
         public InputAction @Ataque => m_Wrapper.m_ControlesInGame_Ataque;
-        public InputAction @Parry => m_Wrapper.m_ControlesInGame_Parry;
+        public InputAction @Heal => m_Wrapper.m_ControlesInGame_Heal;
+        public InputAction @Disparar => m_Wrapper.m_ControlesInGame_Disparar;
         public InputAction @Interact => m_Wrapper.m_ControlesInGame_Interact;
         public InputAction @AbrirMenu => m_Wrapper.m_ControlesInGame_AbrirMenu;
-        public InputAction @Heal => m_Wrapper.m_ControlesInGame_Heal;
         public InputActionMap Get() { return m_Wrapper.m_ControlesInGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -749,18 +502,18 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @Ataque.started += instance.OnAtaque;
             @Ataque.performed += instance.OnAtaque;
             @Ataque.canceled += instance.OnAtaque;
-            @Parry.started += instance.OnParry;
-            @Parry.performed += instance.OnParry;
-            @Parry.canceled += instance.OnParry;
+            @Heal.started += instance.OnHeal;
+            @Heal.performed += instance.OnHeal;
+            @Heal.canceled += instance.OnHeal;
+            @Disparar.started += instance.OnDisparar;
+            @Disparar.performed += instance.OnDisparar;
+            @Disparar.canceled += instance.OnDisparar;
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
             @AbrirMenu.started += instance.OnAbrirMenu;
             @AbrirMenu.performed += instance.OnAbrirMenu;
             @AbrirMenu.canceled += instance.OnAbrirMenu;
-            @Heal.started += instance.OnHeal;
-            @Heal.performed += instance.OnHeal;
-            @Heal.canceled += instance.OnHeal;
         }
 
         private void UnregisterCallbacks(IControlesInGameActions instance)
@@ -783,18 +536,18 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
             @Ataque.started -= instance.OnAtaque;
             @Ataque.performed -= instance.OnAtaque;
             @Ataque.canceled -= instance.OnAtaque;
-            @Parry.started -= instance.OnParry;
-            @Parry.performed -= instance.OnParry;
-            @Parry.canceled -= instance.OnParry;
+            @Heal.started -= instance.OnHeal;
+            @Heal.performed -= instance.OnHeal;
+            @Heal.canceled -= instance.OnHeal;
+            @Disparar.started -= instance.OnDisparar;
+            @Disparar.performed -= instance.OnDisparar;
+            @Disparar.canceled -= instance.OnDisparar;
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
             @AbrirMenu.started -= instance.OnAbrirMenu;
             @AbrirMenu.performed -= instance.OnAbrirMenu;
             @AbrirMenu.canceled -= instance.OnAbrirMenu;
-            @Heal.started -= instance.OnHeal;
-            @Heal.performed -= instance.OnHeal;
-            @Heal.canceled -= instance.OnHeal;
         }
 
         public void RemoveCallbacks(IControlesInGameActions instance)
@@ -812,84 +565,6 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         }
     }
     public ControlesInGameActions @ControlesInGame => new ControlesInGameActions(this);
-
-    // ControlesInMenu
-    private readonly InputActionMap m_ControlesInMenu;
-    private List<IControlesInMenuActions> m_ControlesInMenuActionsCallbackInterfaces = new List<IControlesInMenuActions>();
-    private readonly InputAction m_ControlesInMenu_Navegar;
-    private readonly InputAction m_ControlesInMenu_Seleccionar;
-    private readonly InputAction m_ControlesInMenu_Atras;
-    private readonly InputAction m_ControlesInMenu_SalirMenu;
-    private readonly InputAction m_ControlesInMenu_Pestanyas;
-    public struct ControlesInMenuActions
-    {
-        private @ControlJuego m_Wrapper;
-        public ControlesInMenuActions(@ControlJuego wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Navegar => m_Wrapper.m_ControlesInMenu_Navegar;
-        public InputAction @Seleccionar => m_Wrapper.m_ControlesInMenu_Seleccionar;
-        public InputAction @Atras => m_Wrapper.m_ControlesInMenu_Atras;
-        public InputAction @SalirMenu => m_Wrapper.m_ControlesInMenu_SalirMenu;
-        public InputAction @Pestanyas => m_Wrapper.m_ControlesInMenu_Pestanyas;
-        public InputActionMap Get() { return m_Wrapper.m_ControlesInMenu; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(ControlesInMenuActions set) { return set.Get(); }
-        public void AddCallbacks(IControlesInMenuActions instance)
-        {
-            if (instance == null || m_Wrapper.m_ControlesInMenuActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_ControlesInMenuActionsCallbackInterfaces.Add(instance);
-            @Navegar.started += instance.OnNavegar;
-            @Navegar.performed += instance.OnNavegar;
-            @Navegar.canceled += instance.OnNavegar;
-            @Seleccionar.started += instance.OnSeleccionar;
-            @Seleccionar.performed += instance.OnSeleccionar;
-            @Seleccionar.canceled += instance.OnSeleccionar;
-            @Atras.started += instance.OnAtras;
-            @Atras.performed += instance.OnAtras;
-            @Atras.canceled += instance.OnAtras;
-            @SalirMenu.started += instance.OnSalirMenu;
-            @SalirMenu.performed += instance.OnSalirMenu;
-            @SalirMenu.canceled += instance.OnSalirMenu;
-            @Pestanyas.started += instance.OnPestanyas;
-            @Pestanyas.performed += instance.OnPestanyas;
-            @Pestanyas.canceled += instance.OnPestanyas;
-        }
-
-        private void UnregisterCallbacks(IControlesInMenuActions instance)
-        {
-            @Navegar.started -= instance.OnNavegar;
-            @Navegar.performed -= instance.OnNavegar;
-            @Navegar.canceled -= instance.OnNavegar;
-            @Seleccionar.started -= instance.OnSeleccionar;
-            @Seleccionar.performed -= instance.OnSeleccionar;
-            @Seleccionar.canceled -= instance.OnSeleccionar;
-            @Atras.started -= instance.OnAtras;
-            @Atras.performed -= instance.OnAtras;
-            @Atras.canceled -= instance.OnAtras;
-            @SalirMenu.started -= instance.OnSalirMenu;
-            @SalirMenu.performed -= instance.OnSalirMenu;
-            @SalirMenu.canceled -= instance.OnSalirMenu;
-            @Pestanyas.started -= instance.OnPestanyas;
-            @Pestanyas.performed -= instance.OnPestanyas;
-            @Pestanyas.canceled -= instance.OnPestanyas;
-        }
-
-        public void RemoveCallbacks(IControlesInMenuActions instance)
-        {
-            if (m_Wrapper.m_ControlesInMenuActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(IControlesInMenuActions instance)
-        {
-            foreach (var item in m_Wrapper.m_ControlesInMenuActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_ControlesInMenuActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public ControlesInMenuActions @ControlesInMenu => new ControlesInMenuActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -916,17 +591,9 @@ public partial class @ControlJuego: IInputActionCollection2, IDisposable
         void OnLedge(InputAction.CallbackContext context);
         void OnClimb(InputAction.CallbackContext context);
         void OnAtaque(InputAction.CallbackContext context);
-        void OnParry(InputAction.CallbackContext context);
+        void OnHeal(InputAction.CallbackContext context);
+        void OnDisparar(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnAbrirMenu(InputAction.CallbackContext context);
-        void OnHeal(InputAction.CallbackContext context);
-    }
-    public interface IControlesInMenuActions
-    {
-        void OnNavegar(InputAction.CallbackContext context);
-        void OnSeleccionar(InputAction.CallbackContext context);
-        void OnAtras(InputAction.CallbackContext context);
-        void OnSalirMenu(InputAction.CallbackContext context);
-        void OnPestanyas(InputAction.CallbackContext context);
     }
 }

@@ -21,22 +21,15 @@ public class Liora_StateMachine_Script : MonoBehaviour
     public Liora_Hurt_Script hurtState;
     public Liora_Death_Script deathState;
     //------------------states ataque
-    //crab
     public Liora_CrabAttack1_Script crabAttackState1;
     public Liora_CrabAttack2_Script crabAttackState2;
     public Liora_CrabAttack3_Script crabAttackState3;
-    public Liora_CrabParry_Script crabParryState;
-    //boar
-    public Liora_BoarAttack1_Script boarAttackState1;
-    public Liora_BoarAttack2_Script boarAttackState2;
-    public Liora_BoarParry_Script boarParryState;
-    //secretary
-    public Liora_SecretaryAttack1_Script secretaryAttackState1;
-    public Liora_SecretaryAttack2_Script secretaryAttackState2;
-    public Liora_SecretaryAttack3_Script secretaryAttackState3;
-    public Liora_SecretaryParry_Script secretaryParryState;
-    //
+    public Liora_Shooting_Script shootingState;
+    
+    
+    //---------------------booleanes per controlar l'estat del jugador
     public static bool isFacingRight = true;
+    Liora_Projectil_Script lioraProjectilScript;
     public Animator animator;
     public Rigidbody2D rb;
     //Ground Logic
@@ -58,8 +51,6 @@ public class Liora_StateMachine_Script : MonoBehaviour
     public static bool isDying;
     //Attack Logic
     public static bool isAttacking;
-    public static bool isParrying;
-    //public static bool isDoingUlti;
 
     // Start is called before the first frame update
     void Start()
@@ -82,14 +73,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
         crabAttackState1.Setup(rb, animator, horizontal);
         crabAttackState2.Setup(rb, animator, horizontal);
         crabAttackState3.Setup(rb, animator, horizontal);
-        crabParryState.Setup(rb, animator, horizontal);
-        boarAttackState1.Setup(rb, animator, horizontal);
-        boarAttackState2.Setup(rb, animator, horizontal);
-        boarParryState.Setup(rb, animator, horizontal);
-        secretaryAttackState1.Setup(rb, animator, horizontal);
-        secretaryAttackState2.Setup(rb, animator, horizontal);
-        secretaryAttackState3.Setup(rb, animator, horizontal);
-        secretaryParryState.Setup(rb, animator, horizontal);
+        shootingState.Setup(rb, animator, horizontal);
         state = idleState;
     }
     // Update is called once per frame
@@ -110,9 +94,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
         state.isDying = isDying;
         //
         state.isAttacking = isAttacking;
-        state.isParrying = isParrying;
-        //state.isDoingUlti = isDoingUlti;
-        //amb aquest If evitem que el jugador pugui canviar de sprite si esta fent dash
+        //amb aquests if controlem que el jugador miri cap a la direcció correcta amb el seu sprite
         if (!isFacingRight && horizontal > 0f)
         {
             FlipSprite();
@@ -174,67 +156,26 @@ public class Liora_StateMachine_Script : MonoBehaviour
                                     }
                                     else
                                     {
-                                        if (isAttacking || isParrying)
+                                        if (isAttacking || isShooting)
                                         {
                                             if (isAttacking)
                                             {
-                                                switch (Liora_Attack_Script.currentAttackType)
+                                                switch (currentComboStep)
                                                 {
-                                                    case snzaAttackType.CANGREJO:
-                                                        switch (currentComboStep)
-                                                        {
-                                                            case 1:
-                                                                state = crabAttackState1;
-                                                                break;
-                                                            case 2:
-                                                                state = crabAttackState2;
-                                                                break;
-                                                            case 3:
-                                                                state = crabAttackState3;
-                                                                break;
-                                                        }
+                                                    case 1:
+                                                        state = crabAttackState1;
                                                         break;
-                                                    case snzaAttackType.JABALI:
-                                                        switch (currentComboStep)
-                                                        {
-                                                            case 1:
-                                                                state = boarAttackState1;
-                                                                break;
-                                                            case 2:
-                                                                state = boarAttackState2;
-                                                                break;
-                                                        }
+                                                    case 2:
+                                                        state = crabAttackState2;
                                                         break;
-                                                    case snzaAttackType.SECRETARIO:
-                                                        switch (currentComboStep)
-                                                        {
-                                                            case 1:
-                                                                state = secretaryAttackState1;
-                                                                break;
-                                                            case 2:
-                                                                state = secretaryAttackState2;
-                                                                break;
-                                                            case 3:
-                                                                state = secretaryAttackState3;
-                                                                break;
-                                                        }
+                                                    case 3:
+                                                        state = crabAttackState3;
                                                         break;
                                                 }
                                             }
-                                            if (isParrying)
+                                            if (isShooting)//------------------------------------aqui anira la part de animació on Liora llença el projectil de gel
                                             {
-                                                switch (Liora_Attack_Script.currentParryType)
-                                                {
-                                                    case snzaParryType.CANGREJO:
-                                                        state = crabParryState;
-                                                        break;
-                                                    case snzaParryType.JABALI:
-                                                        state = boarParryState;
-                                                        break;
-                                                    case snzaParryType.SECRETARIO:
-                                                        state = secretaryParryState;
-                                                        break;
-                                                }
+                                                
                                             }
                                         }
                                         else
@@ -278,8 +219,9 @@ public class Liora_StateMachine_Script : MonoBehaviour
     }
     private void FlipSprite()
     {
-        if (isTakingItem || isTakingPotion || isBreakingWall || isGrabbingLedge || isClimbing || Time.timeScale == 0f || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isParrying) { return; }
+        if (isTakingItem || isTakingPotion || isBreakingWall || isGrabbingLedge || isClimbing || Time.timeScale == 0f || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isShooting) { return; }
         isFacingRight = !isFacingRight;
+        Liora_Projectil_Script.facingRight = !Liora_Projectil_Script.facingRight;
         Vector2 localScale = transform.localScale;
         localScale.x *= -1f;
         transform.localScale = localScale;
