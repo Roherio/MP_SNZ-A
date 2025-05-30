@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7318cb11f40fa44bccbe30dbcc194e, type: 3}
+  m_Name: GanderAbraxas
+  m_EditorClassIdentifier: 
+  npcName: Gander
+  npcPortrait: {fileID: 21300000, guid: 1edc052d836d2744b9cf7144c50de75d, type: 3}
+  dialogueLines:
+  - "Abraxas me habl\xF3 de ti cuando te encontr\xF3."
+  - "Para el momento en el qeu t\xFA llegaste a su vida, ya casi no \xE9ramos ni
+    conocidos."
+  - "Pero no me toca a m\xED contarte su historia."
+  - "Qui\xE9n iba a pensar que har\xEDa esto contigo... Pens\xE9 que estar\xEDas
+    a salvo..."
+  autoProgressLines: 00000000
+  endDialogueLines: 
+  autoProgressDelay: 1.5
+  typingSpeed: 0
+  choices: []

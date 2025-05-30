@@ -1,0 +1,31 @@
+{
+	"identifier": "FORTALEZA_1",
+	"uniqueIdentifer": "fdb1f800-e920-11ef-b809-89e780e86f57",
+	"x": 14816,
+	"y": -744,
+	"width": 1280,
+	"height": 360,
+	"bgColor": "#FAD5D5",
+	"neighbourLevels": [
+		{
+			"levelIid": "d1bdcdc0-e920-11ef-b809-73ab8d258036",
+			"dir": "w"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Pipes4.png",
+		"Pipes3.png",
+		"UNDERGROUND.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png",
+		"Dungeon_tile_2.png",
+		"STAIRS2.png",
+		"Pipes5.png",
+		"Pipes2.png",
+		"Pipes.png"
+	],
+	"entities" : {}
+}

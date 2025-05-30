@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - LioraAttack
+  - Ursina
+  - Escalera
+  - Enredadera
+  - Parry
+  - Puddle
+  - JabaliAudioManager
+  - SecretarioAudioManager
+  - BossMusic
+  - LioraAudioManager
+  - PortalAlcantarilla
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - GroundLayer
+  - LedgeLayer
+  - InteractableLayer
+  - ClimbLayer
+  - Enemy
+  - RoarAttack
+  - ClimbArdillaLayer
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

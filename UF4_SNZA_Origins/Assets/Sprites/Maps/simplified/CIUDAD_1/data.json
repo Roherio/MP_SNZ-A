@@ -1,0 +1,35 @@
+{
+	"identifier": "CIUDAD_1",
+	"uniqueIdentifer": "45b400c0-e920-11ef-9d4d-bf68849550e6",
+	"x": 640,
+	"y": -352,
+	"width": 1920,
+	"height": 712,
+	"bgColor": "#F78585",
+	"neighbourLevels": [
+		{
+			"levelIid": "d9d011a0-e920-11ef-9d4d-e32067025caa",
+			"dir": "w"
+		},
+		{
+			"levelIid": "50904730-e920-11ef-9d4d-03b4c7fc616b",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Pipes4.png",
+		"Pipes3.png",
+		"UNDERGROUND.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png",
+		"Dungeon_tile_2.png",
+		"STAIRS2.png",
+		"Pipes5.png",
+		"Pipes2.png",
+		"Pipes.png"
+	],
+	"entities" : {}
+}
