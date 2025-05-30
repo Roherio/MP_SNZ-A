@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Script antic, ens serveix de referència per crear nous enemics
 public class AttackPointEnemyScript : MonoBehaviour
 {
     [SerializeField] float enemyAttackValue;

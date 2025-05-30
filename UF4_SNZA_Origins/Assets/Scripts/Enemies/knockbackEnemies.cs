@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Aquest script fa que quan el Player rebi mal, surti volant en la direcció oposada, bloquejant també el seu moviment, així al rebre mal hi ha una penalització
 public class knockbackScript : MonoBehaviour
 {
     LioraAudioManager audioManagerLiora;
 
     public Rigidbody2D rb;
-    public bool isKnockedBack = false;
+    public bool isKnockedBack = false; //Variable per controlar si esta en mig de l'animació/efecte
     public float knockbackDuration = 0.5f;
 
     private void Start()
@@ -18,11 +20,12 @@ public class knockbackScript : MonoBehaviour
 
     public void ApplyKnockback(Vector2 sourcePosition, float knockbackForce)
     {
-        highDamageTaken();
-        Vector2 direction = (rb.position - sourcePosition).normalized;
-        rb.velocity = Vector2.zero; // Reset current velocity
-        rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
-        Debug.DrawLine(rb.position, rb.position + direction * 2, Color.red, 1f);
+        highDamageTaken(); //Reprodueix so
+        Vector2 direction = (rb.position - sourcePosition).normalized; //calculem d'on ve l'atac
+        rb.velocity = Vector2.zero; // Reset de la velocitat (encara que a vegades no fucniona si fas el dash)
+
+        rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse); //Li donem la força en la direccio anterior indicada
+        Debug.DrawLine(rb.position, rb.position + direction * 2, Color.red, 1f); //Això es només visible al Inspector
         StartCoroutine(KnockbackCooldown());
     }
 
@@ -46,7 +49,7 @@ public class knockbackScript : MonoBehaviour
         audioManagerLiora.LioraSFX(audioManagerLiora.voiceDamage);
         audioManagerLiora.LioraSFX(audioManagerLiora.damage);
     }
-    public void lowDamageSFX()
+    public void lowDamageSFX()  //mai s'ha utiltzat per falta de so, pero es deixa de cara a futur
     {
         audioManagerLiora.LioraSFX(audioManagerLiora.voiceDamage);
     }

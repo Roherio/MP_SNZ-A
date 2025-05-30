@@ -12,7 +12,7 @@ public class portalsScript : MonoBehaviour
 
     private void Start()
     {
-        rumoDestroyFinishMission = GameObject.FindObjectOfType<NPCRumo_Script>().gameObject;
+        //rumoDestroyFinishMission = GameObject.FindObjectOfType<NPCRumo_Script>().gameObject;
         player = GameObject.FindWithTag("Player");
     }
     private void OnTriggerEnter2D(Collider2D collision)
