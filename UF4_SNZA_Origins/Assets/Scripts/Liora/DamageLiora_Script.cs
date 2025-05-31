@@ -77,22 +77,14 @@ public class DamageLiora_Script : MonoBehaviour
     }
     public static void RecibirDamage(Vector2 enemy, float damage)
     {
-        if (isParrying)
+        //Knockback effect
+        knockbackScript kb = collider.GetComponent<knockbackScript>();
+        if (kb != null)
         {
-            print("he hecho parry suuui");
-            return;
+            kb.ApplyKnockback(enemy, damage);
         }
-        else if (!isParrying)
-        {
-            //Knockback effect
-            knockbackScript kb = collider.GetComponent<knockbackScript>();
-            if (kb != null)
-            {
-                kb.ApplyKnockback(enemy, damage);
-            }
-            GameControl_Script.lifeLiora -= damage;
-            print("L'atac ha fet hit per " + damage + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
-        }
+        GameControl_Script.lifeLiora -= damage;
+        print("L'atac ha fet hit per " + damage + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
         if (GameControl_Script.lifeLiora <= 0)
         {
             CameraFading fade = Camera.main.GetComponent<CameraFading>();
@@ -111,10 +103,5 @@ public class DamageLiora_Script : MonoBehaviour
         GameObject.FindObjectOfType<SaveController_Script>().LoadGame();
         RefillAllPotions();
         Liora_StateMachine_Script.isDying = false;
-    }
-
-    public void perfectParrySFX()
-    {
-        lioraAudioManager.LioraSFX(lioraAudioManager.perfectParry);
     }
 }

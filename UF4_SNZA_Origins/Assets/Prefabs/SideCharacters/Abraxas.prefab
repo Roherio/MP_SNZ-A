@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7648778053381285373}
   - component: {fileID: 1926590662136806276}
-  - component: {fileID: 7478478517236628529}
+  - component: {fileID: 5756733239273909175}
   - component: {fileID: 1366027359420233535}
   m_Layer: 0
   m_Name: Abraxas
@@ -80,7 +80,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 3.5}
   m_EdgeRadius: 0
---- !u!114 &7478478517236628529
+--- !u!114 &5756733239273909175
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,13 +89,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5664541954367605860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f50cad953a07504488700808d46abb24, type: 3}
+  m_Script: {fileID: 11500000, guid: e2856edff0cb435408bf3c45d7d31d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startConversationSFX: {fileID: 8300000, guid: d2e65d365628000429777a13be784c60, type: 3}
-  dialogueData1: {fileID: 11400000, guid: e31d330a426b8a045b5c99c3d80c47dd, type: 2}
-  dialogueData2: {fileID: 11400000, guid: ee788d09b118b2d4493af42dc395b575, type: 2}
-  currentDialogue: dialogueData1
+  dialogueData: {fileID: 11400000, guid: 56744bde79f9d8240b7a14b3e1b7c58b, type: 2}
 --- !u!82 &1366027359420233535
 AudioSource:
   m_ObjectHideFlags: 0

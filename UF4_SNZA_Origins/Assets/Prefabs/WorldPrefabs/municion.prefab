@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1642384644810202108}
-  - component: {fileID: 7295283408187227103}
+  - component: {fileID: 1810376854398469479}
   - component: {fileID: 4541697273623535273}
   - component: {fileID: 4529106763734456966}
   - component: {fileID: 3334747316787307187}
   m_Layer: 0
-  m_Name: proyectil_Liora
+  m_Name: municion
   m_TagString: LioraProjectil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,14 +28,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5202115523488141109}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7295283408187227103
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1810376854398469479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,11 +44,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5202115523488141109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ab08b95dbbb15844afbd2315045ba69, type: 3}
+  m_Script: {fileID: 11500000, guid: 41ad65f3ab19c9e4584a4a62e9761124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 4529106763734456966}
-  speedProjectil: 8
+  velocidad: 1
+  variacioAltura: 0.5
 --- !u!212 &4541697273623535273
 SpriteRenderer:
   m_ObjectHideFlags: 0

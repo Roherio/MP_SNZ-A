@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7318cb11f40fa44bccbe30dbcc194e, type: 3}
+  m_Name: NPC_Guia_UF4
+  m_EditorClassIdentifier: 
+  npcName: Anciano
+  npcPortrait: {fileID: 21300000, guid: 7746037feba4f264883ff9adaf5c5ad3, type: 3}
+  dialogueLines:
+  - "Bienvenido a Axia, donde encontrar\xE1s un reto que pocos han podido superar."
+  - "Durante tu aventura, encontrar\xE1s Fuentes de SNZA donde podr\xE1s guardar
+    partida y recuperar tu vida y pociones."
+  - "Mu\xE9vete con WASD, salta con Espacio y da un aceler\xF3n con Shift Izq."
+  - "Ataca con J (prueba a darle repetidas veces), c\xFArate con H s\xF3lo si tienes
+    pociones y dispara con K s\xF3lo si tienes munici\xF3n."
+  - "Para interactuar con objetos, s\xF3lo pulsa la tecla E."
+  - Y si te sientes perdido, pulsa Escape.
+  autoProgressLines: 0000000000
+  endDialogueLines: 
+  autoProgressDelay: 1.5
+  typingSpeed: 0
+  choices: []

@@ -26,6 +26,7 @@ public class Liora_Attack_Script : MonoBehaviour
     public static bool isShooting = false;
     private float shootingTimer = 0f;
     public GameObject projectilPrefab;
+    public static float damageProjectil = 20f;
     
     //------------------------------BUFFER DEL INPUT DE ATAQUE
     //el buffer ens permet que el jugador actui amb l'atac en el moment en el que el jugador s'alliberi. Per exemple, si estem atacant i fent la acció atac 1, no podem dirli que faci la accio d'atac 2 per seguir el combo. tot i així, amb el buffer, acumularem aquest input de l'atac 2 perquè quan el jugador acabi l'atac 1 i s'alliberi, s'instancïi l'atac 2 seguidament i sigui més comode pel jugador i no hagi de donar l'input perfecte just al acabar l'atac 1
@@ -36,15 +37,13 @@ public class Liora_Attack_Script : MonoBehaviour
     private float currentBufferTimer;
     //posició on s'instanciaran els attacks Liora
     public Transform attackLocation;
-    //---------------------------------------VARIABLES PER CADA ATAC
+    //---------------------------------------VARIABLES PER CADA ATAC del combo del personatge
     public static float damageAttackLiora; //variable que determinarà quin mal fa Liora amb aquell attack
     public float duracioCollider; //determina quant temps està el collider de l'atac instanciat
     public float delayCollider; //determina quin delay té per instanciar-se el collider que fa mal a l'enemic
 
-    //collider general
-    private GameObject colliderAtaque;
-    //colliders particulars
-    public GameObject colliderAttackCrabLiora;
+    //collider que instanciarem en el moment que volguem atacar amb el nostre personatge a un enemic
+    public GameObject colliderAtaque;
     void Start()
     {
         audioManager = GameObject.FindGameObjectWithTag("LioraAudioManager").GetComponent<LioraAudioManager>();
@@ -157,8 +156,7 @@ public class Liora_Attack_Script : MonoBehaviour
                 audioManager.LioraSFX(audioManager.longSLash);
                 break;
         }
-        colliderAtaque = colliderAttackCrabLiora;
-        //necessitem ferli Invoke perquè el collider aparegui en un moment concret, quan quadra amb l'animació de l'atac, i que no es vegi raro que el personatge
+        //necessitem ferli Invoke perquè el collider aparegui en un moment concret, quan quadra amb l'animació de l'atac, i que no es vegi raro que el personatge colpegi a l'enemic abans de que visualment ho faci
         Invoke("CallInstanciarAtaque", delayCollider);
         isAttacking = true;
         inputCooldownTimer = 0f;

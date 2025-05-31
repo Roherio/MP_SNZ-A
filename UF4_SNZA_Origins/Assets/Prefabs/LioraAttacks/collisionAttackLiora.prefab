@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3138342403766148011}
   - component: {fileID: 865399731431851305}
   m_Layer: 0
-  m_Name: collisionAttackCrabLiora
+  m_Name: collisionAttackLiora
   m_TagString: LioraAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

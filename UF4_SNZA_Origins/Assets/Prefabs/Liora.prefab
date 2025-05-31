@@ -1059,7 +1059,7 @@ MonoBehaviour:
   attackLocation: {fileID: 9003009591592549887}
   duracioCollider: 0
   delayCollider: 0
-  colliderAttackCrabLiora: {fileID: 165051307909327957, guid: 86933764d29bffd43afa9ce7b5f4a8d4, type: 3}
+  colliderAtaque: {fileID: 165051307909327957, guid: 86933764d29bffd43afa9ce7b5f4a8d4, type: 3}
 --- !u!114 &6942934200522289382
 MonoBehaviour:
   m_ObjectHideFlags: 0

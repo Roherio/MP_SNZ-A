@@ -15,6 +15,7 @@ TagManager:
   - BossMusic
   - LioraAudioManager
   - PortalAlcantarilla
+  - LioraProjectil
   layers:
   - Default
   - TransparentFX
