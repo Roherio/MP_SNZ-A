@@ -65,8 +65,5 @@ public class portalsScript : MonoBehaviour
     private void Teleport()
     {
         player.transform.position = destination.position;
-        MapManager_Script.instance.ActivateMap(indexDesbloquearMapa);
-
     }
-
 }

@@ -17,14 +17,6 @@ public class puertaScript : MonoBehaviour, IInteractable_Script
     {
         player = GameObject.FindWithTag("Player");
     }
-
-    /*private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.Q))
-        {
-            StartCoroutine(FadeTeleport());
-        }
-    }*/
     public bool CanInteract()
     {
         return true;
@@ -45,10 +37,6 @@ public class puertaScript : MonoBehaviour, IInteractable_Script
             {
                 player.transform.position = destination.position;
                 confiner.m_BoundingShape2D = mapBoundary;
-                if (gameObject.CompareTag("PortalAlcantarilla"))
-                {
-                    MapManager_Script.instance.ActivateMap(11);
-                }
                 fade.FadeIn(() =>
                 {
                     portalsScript.levelTransitioning = false;

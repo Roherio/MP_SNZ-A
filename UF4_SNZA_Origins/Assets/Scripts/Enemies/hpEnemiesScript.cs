@@ -68,13 +68,11 @@ public class hpEnemiesScript : MonoBehaviour
                 {
                     Destroy(rb);
                     ParentEnemyScript.enemyDead = true;
-                    SNZAProgressControl_Script.bKilledJabali = true;
                 }
                 if (nameEnemy == "Secretario")
                 {
                     Destroy(rb);
                     ParentEnemyScript.enemyDead = true;
-                    SNZAProgressControl_Script.bKilledSecretario = true;
                 }
                 if (nameEnemy == "Ursina")
                 {

@@ -9,13 +9,6 @@ public class GameControl_Script : MonoBehaviour
     //logica liora
     public static float lifeLiora = 100f;
     public static float maxLife = 100f;
-    public static float adrenalineLiora = 0f;
-    public static int moneyLiora = 0;
-
-    //logica items consumibles
-    public static int cristalizadores = 0;
-    public static int cuero = 0;
-    public static int viales = 0;
 
     //logica menus
     public static bool isPaused = false;
@@ -52,21 +45,6 @@ public class GameControl_Script : MonoBehaviour
     }
     void Update()
     {
-        //------------------------------------ESTO HARA FALTA PASARLO PUNTUALMENTE AL MOMENTO EN EL QUE GASTES EL SINTETIZADOR CON ABRAXAS
-        if (cristalizadores <= 0)
-        {
-            BotonesActivos_Script.bCristalizador = false;
-            //SNZAProgressJabali_Script.bTachadoCristalizadorJabali = false;
-            //SNZAProgressSecretario_Script.bTachadoCristalizadorSecretario = false;
-        }
-        //------------------------------------ESTO HARA FALTA PASARLO PUNTUALMENTE AL MOMENTO EN EL QUE GASTES LOS ITEMS CON KHIONE para hacerte una poción
-        if (cuero <= 0)
-        {
-            BotonesActivos_Script.bCuero = false;
-        }
-        if (viales <= 0)
-        {
-            BotonesActivos_Script.bVial = false;
-        }
+
     }
 }
