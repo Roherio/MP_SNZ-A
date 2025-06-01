@@ -23,6 +23,7 @@ public class SaveController_Script : MonoBehaviour
             playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position,
             mapBoundary = FindObjectOfType <CinemachineConfiner>().m_BoundingShape2D.gameObject.name,
             lifeLiora = GameControl_Script.lifeLiora,
+            municionLiora = GameControl_Script.municion,
 
             //GUARDAR DATO DE SI TIENES PODER KHIONE Y RUMO
             poderKhione = EventsManager_Script.poderKhione,
@@ -44,6 +45,7 @@ public class SaveController_Script : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").transform.position = saveData.playerPosition;
             //HealthBar_Script.currentHealth = saveData.lifeLiora;
             GameControl_Script.lifeLiora = saveData.lifeLiora;
+            GameControl_Script.municion = saveData.municionLiora;
 
             //Cargar Poderes
             EventsManager_Script.poderKhione = saveData.poderKhione;

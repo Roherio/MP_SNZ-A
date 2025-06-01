@@ -174,6 +174,8 @@ public class Liora_Attack_Script : MonoBehaviour
     //aquesta funció OnActionAnimationEnd ens serveix per col·locarla al final de cada arxiu .anim on guardem la animació de l'atac. Al acabar AttackCangrejo1, per exemple, tenim una tag que executa aquesta funció i fa que el jugador deixi d'estar en estat ATACANT, per tant passant a Idle.
     public void Disparar(InputAction.CallbackContext context)
     {
+        //no entrarem a disparar si resulta que la nostra munició és 0 o menor
+        if (GameControl_Script.municion <= 0) { return; }
         //no entrarem a instanciar el dispar de gel si el el controlador del joc sap que estem pausats
         if (GameControl_Script.isPaused) { return; }
         //tampoc entrarem si el timer de disparar és menor a 2 segons o estem fent alguna de les accions que no haurien de permetre'ns atacar (escalant, saltant, agafant-nos a una cantonada...)

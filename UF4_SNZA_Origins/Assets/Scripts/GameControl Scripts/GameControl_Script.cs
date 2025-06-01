@@ -9,6 +9,7 @@ public class GameControl_Script : MonoBehaviour
     //logica liora
     public static float lifeLiora = 100f;
     public static float maxLife = 100f;
+    public static int municion = 0;
 
     //logica menus
     public static bool isPaused = false;
@@ -27,6 +28,7 @@ public class GameControl_Script : MonoBehaviour
         if (!FindObjectOfType<SaveController_Script>().HasSaveFile())
         {
             lifeLiora = maxLife;
+            municion = 0;
         }
     }
     // Update is called once per frame
@@ -45,6 +47,10 @@ public class GameControl_Script : MonoBehaviour
     }
     void Update()
     {
-
+        //BOTÓ MÀGIC si pulsem la tecla M tindrem munició "infinita" (necessitaries 5h30min per disparar les 9999 bales contant amb el cooldown de 2 segons per disparar entre bala i bala)
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            municion = 9999;
+        }
     }
 }

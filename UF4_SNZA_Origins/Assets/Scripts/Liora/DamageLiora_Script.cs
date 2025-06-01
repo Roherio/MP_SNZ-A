@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class DamageLiora_Script : MonoBehaviour
 {
+    //------------------TECLA MAGICA INVENCIBLE
+    public static bool invencible = false;
+
     LioraAudioManager lioraAudioManager;
     public static DamageLiora_Script instance;
     public static bool isParrying = false;
@@ -35,9 +38,10 @@ public class DamageLiora_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //TECLA MAGICA funció que fa que cada cop que pulsis la tecla V et facis invencible o et desfacis invencible
         if (Input.GetKeyDown(KeyCode.V))
         {
-            RecibirDamage(transform.position, 50);
+            invencible = !invencible;
         }
     }
     public void Heal(InputAction.CallbackContext context)
@@ -77,6 +81,7 @@ public class DamageLiora_Script : MonoBehaviour
     }
     public static void RecibirDamage(Vector2 enemy, float damage)
     {
+        if (invencible) { return; }
         //Knockback effect
         knockbackScript kb = collider.GetComponent<knockbackScript>();
         if (kb != null)
