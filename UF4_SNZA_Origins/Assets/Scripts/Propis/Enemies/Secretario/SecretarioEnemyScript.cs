@@ -260,6 +260,12 @@ public class SecretarioEnemyScript : MonoBehaviour
             DamageLiora_Script.RecibirDamage(transform.position, 5f);
         }
     }
+    void desactivarAtaque()
+    {
+        print("Desactivado");
+        canAttack = true;
+        isAttacking = false;
+    }
     void OnEnable()
     {
         canAttack = true;

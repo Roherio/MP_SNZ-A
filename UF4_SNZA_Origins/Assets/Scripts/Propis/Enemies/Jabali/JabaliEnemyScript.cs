@@ -279,6 +279,13 @@ public class JabaliEnemyScript : MonoBehaviour
             }
         }
     }
+
+    void desactivarAtaque()
+    {
+        print("Desactivado");
+        canAttack = true;
+        isAttacking = false;
+    }
     void OnEnable()
     {
         canAttack = true;
