@@ -214,7 +214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &17832259
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3616,8 +3616,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -302.5, y: -101}
-  m_SizeDelta: {x: 605, y: 0}
+  m_AnchoredPosition: {x: -307.5, y: -101}
+  m_SizeDelta: {x: 615, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605531369
 MonoBehaviour:
@@ -3639,9 +3639,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Animador y Dise\xF1ador de \nPersonajes e Interfaz\n\n\nProgramador y
-    Dise\xF1ador\nde Nivel\n\n\nProgramador y  Integrador de UI\n\n\nDise\xF1adora
-    de Personajes \ny Entornos\n\n\nDise\xF1adora de Entornos \ny Personajes\n\n\n"
+  m_text: "Animador y Dise\xF1ador de \nPersonajes e Interfaz\nProgramador de Interfaz\n\nProgramador
+    de Enemigos \nDise\xF1ador de Nivel\n\nProgramador del Personaje e Interacciones\nIntegrador
+    de UI\n\nDise\xF1adora de Personajes \ny Entornos\nProgramadora de Entorno\n\nDise\xF1adora
+    de Entornos \ny Personajes\nProgramadora de Sonido\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
   m_sharedMaterial: {fileID: 4644483918358274456, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
@@ -3784,8 +3785,8 @@ MonoBehaviour:
 
 
 
-
     Ferran Aliaga
+
 
 
 
