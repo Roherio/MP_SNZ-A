@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
+//script PROPI que serveix perquè es pugui mostrar el titol de zona desde l'script showTitle. A part, aquest script s'utilitza en l'UI per fer el fade out i fade in al canviar de zones
 public class ZoneNameUIManager : MonoBehaviour
 {
     public AudioSource audioSource;

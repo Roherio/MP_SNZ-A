@@ -13,7 +13,7 @@ public class DamageLiora_Script : MonoBehaviour
     public static bool isParrying = false;
     public static Collider2D collider;
 
-    //logica pociones
+    //logica pociones. determinamos que tenemos 3 pociones en este script y se instancian gameObjects pocionPrefab en funcion de cuantos hemos determinado.
     public GameObject pocionesPanel;
     public GameObject pocionPrefab;
     public static int pocionesCount = 3;
@@ -25,6 +25,7 @@ public class DamageLiora_Script : MonoBehaviour
         CameraFading fade = Camera.main.GetComponent<CameraFading>();
         instance = this;
         collider = GetComponent<Collider2D>();
+        //instanciament de pocionsPrefab en funcio de quantes pocions hem determinat
         pociones = new GameObject[pocionesCount];
         for (int i = 0; i < pocionesCount; i++)
         {
@@ -44,19 +45,21 @@ public class DamageLiora_Script : MonoBehaviour
             invencible = !invencible;
         }
     }
+    //funcio del INPUT SYSTEM per curar al personatge
     public void Heal(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
             if(GameControl_Script.lifeLiora == GameControl_Script.maxLife) { return; }
+            //posem l'animacio del personatge fent la cura amb poció i invoquem els usos de la poció (i parar l'animacio)
             Liora_StateMachine_Script.isTakingPotion = true;
             Invoke("UsePotion", 1f);
             Invoke("StopAnimation", 1.25f);
-            //UsePotion();
         }
     }
     public void UsePotion()
     {
+        //funció per utilitzar les pocions. Recorre la array de pocions que hem determinat (en aquest cas 3) i mira quines estan actives i quines no. Cada cop que s'utilitza una poció, aquesta dins seu guarda un valor bool que es diu pocionActiva, i el posa a false quan l'utilitzem. al recórrer l'array de pocions aquí, si ens trobem una poció inactiva seguirem recorrent el bucle for, i si ens trobem una poció activa utilitzarem la poció (canviantla a pocionActiva false), ens pujarem la vida i farem break d'aquesta funcio
         for (int i = pociones.Length - 1; i >= 0; i--)
         {
             Pociones_Script pocionesScript = pociones[i].GetComponent<Pociones_Script>();
@@ -74,6 +77,7 @@ public class DamageLiora_Script : MonoBehaviour
     }
     public void RefillAllPotions()
     {
+        //funcio que recarrega totes les pocions (s'utilitza des de el Checkpoint_Script al descansar en un checkpoint
         foreach (GameObject potion in pociones)
         {
             potion.GetComponent<Pociones_Script>().PotionRecovered();
@@ -81,6 +85,7 @@ public class DamageLiora_Script : MonoBehaviour
     }
     public static void RecibirDamage(Vector2 enemy, float damage)
     {
+        //si s'ha pulsat el botó invencible, return
         if (invencible) { return; }
         //Knockback effect
         knockbackScript kb = collider.GetComponent<knockbackScript>();
@@ -90,6 +95,7 @@ public class DamageLiora_Script : MonoBehaviour
         }
         GameControl_Script.lifeLiora -= damage;
         print("L'atac ha fet hit per " + damage + " punts de mal! La vida actual de Liora és " + GameControl_Script.lifeLiora);
+        //si fos cas que ha rebut tant mal que la vida baixa de 0, passem a fer la animació de mort
         if (GameControl_Script.lifeLiora <= 0)
         {
             CameraFading fade = Camera.main.GetComponent<CameraFading>();
@@ -103,6 +109,7 @@ public class DamageLiora_Script : MonoBehaviour
     {
         Liora_StateMachine_Script.isTakingPotion = false;
     }
+    //funció per carregar partida quan morim
     public void LoadWhenDead()
     {
         GameObject.FindObjectOfType<SaveController_Script>().LoadGame();

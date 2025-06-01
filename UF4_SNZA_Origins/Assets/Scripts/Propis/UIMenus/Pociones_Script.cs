@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Pociones_Script : MonoBehaviour
 {
+    //script PROPI
+    //script que configura cada poció instanciada individualment, controlant si està activa o està utilitzada i quin sprite ha de mostrar
     public Sprite spriteNuevo;
     public Sprite spriteUsado;
     public bool pocionActiva = true;

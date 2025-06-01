@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+//script PROPI
+//configura el text que ha de mostrar la UI de la munició, agafant el valor de GameControl_Script.municion
 public class MunicionText_Script : MonoBehaviour
 {
     public TMP_Text textMunicion;
