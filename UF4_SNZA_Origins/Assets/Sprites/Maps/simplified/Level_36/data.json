@@ -1,0 +1,26 @@
+{
+	"identifier": "Level_36",
+	"uniqueIdentifer": "7c6432f0-3740-11f0-8f03-a9eb14427637",
+	"x": 10288,
+	"y": 3552,
+	"width": 5248,
+	"height": 1080,
+	"bgColor": "#696A79",
+	"neighbourLevels": [],
+	"customFields" : {},
+	"layers": [
+		"Pipes4.png",
+		"Pipes3.png",
+		"UNDERGROUND.png",
+		"STAIRS.png",
+		"OUTSIDE_COLLISIONS.png",
+		"DUNGEON.png",
+		"CIUDAD_TILEMAP.png",
+		"Dungeon_tile_2.png",
+		"STAIRS2.png",
+		"Pipes5.png",
+		"Pipes2.png",
+		"Pipes.png"
+	],
+	"entities" : {}
+}
