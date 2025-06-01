@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Aquest script es per la gota que cau de la zona subterranea
 public class SewerDrop : MonoBehaviour
 {
     [SerializeField] float dropDamageValue;

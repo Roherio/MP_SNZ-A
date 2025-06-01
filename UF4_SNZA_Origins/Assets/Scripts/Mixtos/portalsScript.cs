@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Aquest script fa el teletransport entre pantalles i el FadeIn i FadeOut
 public class portalsScript : MonoBehaviour
 {
     private HashSet<GameObject> portalObjects = new HashSet<GameObject>();

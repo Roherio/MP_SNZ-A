@@ -20,7 +20,7 @@ public class CameraScript : MonoBehaviour
             StartCoroutine(FadeTimer());
         }
     }
-    IEnumerator FadeTimer()
+    IEnumerator FadeTimer() //Aixo fa que la camera no canvii de zona instantaneament al entrar a un TP 
     {
         yield return new WaitForSeconds(1f);
         confiner.m_BoundingShape2D = mapBoundary;

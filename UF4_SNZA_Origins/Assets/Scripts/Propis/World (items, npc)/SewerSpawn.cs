@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Aquest script controla cada quan s'instancia una gota
 public class SewerSpawn : MonoBehaviour
 {
     public GameObject DROP;
