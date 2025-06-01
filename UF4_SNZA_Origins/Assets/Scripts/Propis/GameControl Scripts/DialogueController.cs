@@ -6,13 +6,11 @@ using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
-    public static DialogueController Instance { get; private set; } //ferla singleton
+    public static DialogueController Instance { get; private set; } //ferla singleton i poder cridarla des de altres scripts com el del diàleg del principi
     
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
-    public Transform choiceContainer; //panel de les opcions
-    public GameObject choiceButtonPrefab;
 
     void Awake()
     {
@@ -32,16 +30,5 @@ public class DialogueController : MonoBehaviour
     public void SetDialogueText(string text)
     {
         dialogueText.text = text;
-    }
-    public void ClearChoices()
-    {
-        foreach (Transform child in choiceContainer) Destroy(child.gameObject);
-    }
-    public GameObject CreateChoiceButton(string choiceText, UnityEngine.Events.UnityAction onClick)
-    {
-        GameObject choiceButton = Instantiate(choiceButtonPrefab, choiceContainer);
-        choiceButton.GetComponentInChildren<TMP_Text>().text = choiceText;
-        choiceButton.GetComponent<Button>().onClick.AddListener(onClick);
-        return choiceButton;
     }
 }

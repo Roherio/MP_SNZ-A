@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class HealthBar_Script : MonoBehaviour
 {
+    //script PROPI
+    //script que modifica visualment com es veu la vida a la HUD del joc. L'hem fet principalment per controlar com baixa la vida (fent slice a una imatge a mesura que et treuen vida) i per fer una barra secundària i controlar com de ràpid baixa despres de que et treuen vida, per mostrarla amb un efecte retardat que ens agradava
     //els dos sliders que mostren la vida a la UI
     public Slider healthSlider;
     public Slider healthSliderDelay;
@@ -14,28 +16,19 @@ public class HealthBar_Script : MonoBehaviour
     
     void Start()
     {
-        //entre 5 porque tiene 500
         healthSlider.value = (GameControl_Script.lifeLiora);
         healthSliderDelay.value = (GameControl_Script.lifeLiora);
     }
     
     void Update()
     {
-        //entre 5 porque tiene 500
         if (healthSlider.value != (GameControl_Script.lifeLiora))
         {
             healthSlider.value = (GameControl_Script.lifeLiora);
         }
         if (healthSlider.value != healthSliderDelay.value)
         {
-            //StartCoroutine(DelayHealth());
             healthSliderDelay.value = Mathf.Lerp(healthSliderDelay.value, (GameControl_Script.lifeLiora), delaySpeed);
         }
     }
-    /*
-    IEnumerator DelayHealth()
-    {
-        yield return new WaitForSeconds(delayStart);
-        healthSliderDelay.value = Mathf.Lerp(healthSliderDelay.value, GameControl_Script.lifeLiora, delaySpeed);
-    }*/
 }

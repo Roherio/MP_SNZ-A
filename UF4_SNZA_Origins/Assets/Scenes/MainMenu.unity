@@ -3639,11 +3639,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Director de Proyecto\nAnimador y Dise\xF1ador de \nPersonajes e Interfaz\n\n\nCodirector
-    de Proyecto\nProgramador y Dise\xF1ador\nde Nivel\n\n\nCodirector de Proyecto\nProgramador
-    y  Integrador de UI\n\n\nDise\xF1adora de Personajes \ny Entornos\n\n\nDise\xF1adora
-    de Entornos \ny Personajes\n\n\nGuionista\n\n\nDise\xF1adora de Sonido\nT\xE9cnica
-    de Sonido\n\n\nDise\xF1ador de Sonido\nT\xE9cnico de Sonido\n\nCompositor "
+  m_text: "Animador y Dise\xF1ador de \nPersonajes e Interfaz\n\n\nProgramador y
+    Dise\xF1ador\nde Nivel\n\n\nProgramador y  Integrador de UI\n\n\nDise\xF1adora
+    de Personajes \ny Entornos\n\n\nDise\xF1adora de Entornos \ny Personajes\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
   m_sharedMaterial: {fileID: 4644483918358274456, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
@@ -3777,9 +3775,32 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Roberto Gurbanov\n\n\n\n\nRoger Garcia\n\n\n\n\nFerran Aliaga\n\n\n\nGenessis
-    Santos\n\n\n\nJessica Galinsoga\n\n\n\nOna Pueyo\n\n\nGloria Tarrida\n\n\n\nMarcos
-    Gonz\xE1lez\n\n\nAttilio Tonola"
+  m_text: 'Roberto Gurbanov
+
+
+
+
+    Roger Garcia
+
+
+
+
+    Ferran Aliaga
+
+
+
+    Genessis
+    Santos
+
+
+
+
+    Jessica Galinsoga
+
+
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
   m_sharedMaterial: {fileID: 4644483918358274456, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}

@@ -100,11 +100,13 @@ public class Liora_Movement_Script : MonoBehaviour
             return;
         }
         //check climb aqui
-        isClimbing = onEscalera || onEnredadera;
+        isClimbing = onEscalera;
+        //si està fent climb farem que la velocitat en y sigui 0, i per tant el jugador es quedi quiet en l'aire i deixi de caure.
         if (isClimbing && rb.gravityScale != 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0f);
         }
+        //si no esta escalant i no esta agafantse a una cantonada, tornarem les variables de gravetat i velocitat a la normalitat.
         if (!isClimbing && !isGrabbingLedge)
         {
             rb.velocity = new Vector2(horizontal * groundSpeed, rb.velocity.y);
@@ -252,7 +254,6 @@ public class Liora_Movement_Script : MonoBehaviour
     public void CheckEscaleraEnredadera(string tag, bool state)
     {
         if (tag == "Escalera") { onEscalera = state; }
-        else if (tag == "Enredadera") { onEnredadera = state; }
     }
     //funció que comprova si estem en range de un ledge
     private void CheckForLedge()

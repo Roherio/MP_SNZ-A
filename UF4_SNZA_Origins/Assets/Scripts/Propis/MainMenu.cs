@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public string gameSceneName = "GameScene"; // Replace with your actual scene name
+    //Script PROPI
+    //Script que permet controlar les funcions que fan els botons del menú principal o botons de transició d'una escena a altra.
+    public string gameSceneName = "GameScene"; //utilitzar el nom de l'escena en qüestió
     public GameObject settingsPanel;
     public GameObject creditsPanel;
     public travelCredits creditsScript;
@@ -24,7 +26,7 @@ public class MainMenu : MonoBehaviour
         if (File.Exists(saveLocation))
         {
             File.Delete(saveLocation);
-            Debug.Log("Save file deleted.");
+            Debug.Log("partida guardada borrada");
 
         }
         SceneManager.LoadScene("levelDesign 3");
@@ -32,33 +34,33 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
-        Debug.Log("Loading Game...");
+        Debug.Log("Cargando...");
         SceneManager.LoadScene("levelDesign 3");
     }
 
     public void ToggleSettings()
     {
-        Debug.Log("Open Settings");
+        Debug.Log("abriendo Settings");
         settingsPanel.SetActive(!settingsPanel.activeSelf);
     }
 
     public void OpenCredits()
     {
         creditsPanel.SetActive(!creditsPanel.activeSelf);
-        Debug.Log("Open Credits");
+        Debug.Log("abriendoCreditos");
         creditsScript.resetCredits();
         creditsScript.activeCredits = !creditsScript.activeCredits;
     }
 
     public void BackToMainMenu()
     {
-        Debug.Log("Going to MainMenu");
+        Debug.Log("volviendo a menu principal");
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
     public void ExitGame()
     {
-        Debug.Log("Exiting...");
+        Debug.Log("saliendo...");
         Application.Quit();
 
 #if UNITY_EDITOR
