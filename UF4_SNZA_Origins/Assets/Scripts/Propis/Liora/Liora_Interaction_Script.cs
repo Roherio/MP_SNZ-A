@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Liora_Interaction_Script : MonoBehaviour
 {
+    //script que únicament serveix per mostrar o ocultar la icona d'interacció a sobre del jugador
     //determina el objecte o NPC interactuable més proper
     private IInteractable_Script interactableInRange = null;
     //icona per mostrar que es pot interactuar amb X
@@ -41,7 +42,7 @@ public class Liora_Interaction_Script : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //mirarem si el objecte amb el que colisiona té associat el script interactable && era el mateix que hem guardat en interactableInRange (el més proper)
+        //mirarem si el objecte amb el que colisiona té associat el script interactable && era el mateix objecte que hem guardat en interactableInRange (el més proper)
         if (collision.TryGetComponent(out IInteractable_Script interactable) && interactable == interactableInRange)
         {
             //no guardem cap interactable a la variable i desactivem la icona que marca interacció

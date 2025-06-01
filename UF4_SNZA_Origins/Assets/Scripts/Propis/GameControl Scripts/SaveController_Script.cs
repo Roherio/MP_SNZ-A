@@ -6,12 +6,16 @@ using UnityEngine;
 
 public class SaveController_Script : MonoBehaviour
 {
+    //Script MIXTE, configurat i adaptat al nostre projecte. Canal de Youtube: Game Code Library. Link al vídeo: https://www.youtube.com/watch?v=rDZztBWGMIs
+
+    //script que serveix per guardar la partida. S'executa només en dos casos: en cas de iniciar la primera vegada una partida (o si s'ha borrat el arxiu de guardat i s'inicia el joc) i cada vegada que es fa Interact() a una de les fonts (mitjançant el Checkpoint_Script, línia 29).
+
     private static string saveLocation;
   
     // Start is called before the first frame update
     void Awake()
     {
-        //determinem on es guarda la save
+        //determinem on es guarda la saveData
         saveLocation = Path.Combine(Application.persistentDataPath, "saveData.json");
         LoadGame();
     }
@@ -24,10 +28,6 @@ public class SaveController_Script : MonoBehaviour
             mapBoundary = FindObjectOfType <CinemachineConfiner>().m_BoundingShape2D.gameObject.name,
             lifeLiora = GameControl_Script.lifeLiora,
             municionLiora = GameControl_Script.municion,
-
-            //GUARDAR DATO DE SI TIENES PODER KHIONE Y RUMO
-            poderKhione = EventsManager_Script.poderKhione,
-            poderRumo = EventsManager_Script.poderRumo,
         };
         //transformar la variable saveData a un tipus Json
         File.WriteAllText(saveLocation, JsonUtility.ToJson(saveData));
@@ -46,10 +46,6 @@ public class SaveController_Script : MonoBehaviour
             //HealthBar_Script.currentHealth = saveData.lifeLiora;
             GameControl_Script.lifeLiora = saveData.lifeLiora;
             GameControl_Script.municion = saveData.municionLiora;
-
-            //Cargar Poderes
-            EventsManager_Script.poderKhione = saveData.poderKhione;
-            EventsManager_Script.poderRumo = saveData.poderRumo;
 
             FindObjectOfType<CinemachineConfiner>().m_BoundingShape2D = GameObject.Find(saveData.mapBoundary).GetComponent<PolygonCollider2D>();
              
