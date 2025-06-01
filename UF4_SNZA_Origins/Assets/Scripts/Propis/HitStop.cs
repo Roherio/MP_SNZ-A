@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Amb aquest script podem controlar el efecte HitStop o Hitlag, basicament fa que el joc es pari durant un breu moment de temps, nosaltres
+//ho utilizem quan el jugador rep un cop o quan un enemic es mor, pero donar millor feedback al jugador sobre les accions
 public class HitStop : MonoBehaviour
 {
     bool waiting=false;

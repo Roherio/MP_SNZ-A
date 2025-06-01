@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//AIXO ENCARA QUE FIQUI ESCARABAJO, S'UTLITZA PEL JABALI
+
+//PROPI
+//Script que fiquem dins el prefab de la colisio d'atac de l'enemic per tal que faci mal
 public class AttackPointJabali : MonoBehaviour
 {
     [SerializeField] float enemyAttackValue;
@@ -47,7 +49,7 @@ public class AttackPointJabali : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    private void OnDrawGizmos()
+    private void OnDrawGizmos() //ajuda visual per veure el radi de l'atac en l'inspector
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, showRadius);

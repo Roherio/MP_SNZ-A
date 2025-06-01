@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+
+//Amb aquest script aconseguim que la camera es sacsegeixi quan rep un cop el Player o quan un enemic es mor
 public class CinemachineShake : MonoBehaviour
 {
     public static CinemachineShake Instance { get; private set; }

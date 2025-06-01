@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//PROPI
 //Aquest atac fa que sota el jugador vagin apareixent diferents blocs de gel que amb el temps exploten i fan mal
 public class SmashAttackPhase2Ursina: MonoBehaviour
 {

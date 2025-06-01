@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//PROPI
+//Per com funciona el comportament del Bossfinal, necesitem que no estigui present fins que comenci l'enfrontament, per tant utilitzem aquest script per desactivar-lo al principi
 public class disableUrsina : MonoBehaviour
 {
     private hpEnemiesScript hpEnemiesScript;

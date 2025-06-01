@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//PROPI
 //Aquest script fa que quan el Player rebi mal, surti volant en la direcció oposada, bloquejant també el seu moviment, així al rebre mal hi ha una penalització
 public class knockbackScript : MonoBehaviour
 {

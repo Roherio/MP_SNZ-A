@@ -1,5 +1,8 @@
 using UnityEngine;
 
+
+//PROPI
+//Script que fiquem dins el prefab de la colisio d'atac del boss final per tal que faci mal
 public class SmashAttackScript : MonoBehaviour
 {
 
@@ -24,7 +27,7 @@ public class SmashAttackScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() //aquest també fa que es mogui en direccio al jugador, pero no el persegueix, sino que guarda la posicio a l'Start i es mou cap alla
     {
         rb.velocity = attackDirection.normalized * spreadSpeed;
         transform.localScale += scaleChange * Time.deltaTime;

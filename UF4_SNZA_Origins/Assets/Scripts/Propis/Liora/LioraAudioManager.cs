@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Script que controla quins sons fa el jugador quan fem alguna acció/interactua amb l'entorn
 public class LioraAudioManager : MonoBehaviour
 {
     [Header("AudioSource")]

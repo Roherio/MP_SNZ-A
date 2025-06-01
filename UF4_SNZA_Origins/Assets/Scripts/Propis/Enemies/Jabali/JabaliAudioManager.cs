@@ -2,22 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class secretarioAudioManager : MonoBehaviour
+
+//Script que controla quins sons fa l'enemic quan interactua amb el jugador/a
+public class JabaliAudioManager : MonoBehaviour
 {
     [Header("AudioSource")]
     public AudioSource audioSource;
-
 
 
     public AudioClip playerDetected;
     public AudioClip Attack;
     public AudioClip takeDamage;
     public AudioClip Death;
-    private void Awake()
+
+    private void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
-    public void SecretarioSFX(AudioClip clip)
+    public void JabaliSFX(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
     }
@@ -27,4 +29,3 @@ public class secretarioAudioManager : MonoBehaviour
         audioSource.volume = AudioSettingsManager.effectsVol;
     }
 }
-

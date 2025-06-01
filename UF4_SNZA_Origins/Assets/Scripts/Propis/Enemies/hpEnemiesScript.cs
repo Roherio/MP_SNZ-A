@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
+//PROPI
 //Aquest Script controla els HP de TOTS el enemics, dins d'aquest mateix, podem decidir a quin enemic esta afectant
 public class hpEnemiesScript : MonoBehaviour
 {

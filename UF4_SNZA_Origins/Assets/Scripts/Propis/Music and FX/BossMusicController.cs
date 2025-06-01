@@ -1,6 +1,9 @@
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
+
+//PROPI
+//Aquest Script controla la musica del Boss, ja que aquesta te una intro, un loop i un final, per tant funciona de forma diferent.
+[RequireComponent(typeof(AudioSource))] //ixo hop fiquem per asegurar-nos que te el audiosource, encara que tambe ho hem fet al Start
 public class BossMusicController : MonoBehaviour
 {
     public AudioSource audioSource;
@@ -22,7 +25,7 @@ public class BossMusicController : MonoBehaviour
     void Update()
     {
         audioSource.volume = AudioSettingsManager.musicVol;
-        // Start loop after intro ends
+        // Comencem el loop
         if (hasStarted && !audioSource.isPlaying && !hasStartedLoop && !bossDefeated)
         {
             audioSource.clip = loopClip;
@@ -39,7 +42,7 @@ public class BossMusicController : MonoBehaviour
             hasPlayedEnd = false;
         }
 
-        // Play end clip when boss is defeated
+        // fes play de l'ultima part
         if (bossDefeated && !hasPlayedEnd)
         {
             PlayEndMusic();

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//PROPI
+//Un script molt semblant al de la vida del Player, només que per el BossFinal, controla que es mostri la vida del boss en una barra
 public class HealthBarUrsina : MonoBehaviour
 {
     //els dos sliders que mostren la vida a la UI
@@ -22,7 +25,8 @@ public class HealthBarUrsina : MonoBehaviour
     }
     void Start()
     {
-        healthSlider.value = (hpUrsina / 10);
+        //Fem entre 10 perque s'adapti a la mida del sprite i del slider
+        healthSlider.value = (hpUrsina / 10); 
         healthSliderDelay.value = (hpUrsina / 10);
     }
 

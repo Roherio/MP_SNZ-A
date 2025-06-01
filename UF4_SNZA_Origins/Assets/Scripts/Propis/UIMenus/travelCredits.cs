@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+
+//Aquest script només serveix perque els credits es moguin d'abaix cap amunt
 public class travelCredits : MonoBehaviour
 {
     public bool activeCredits = false;

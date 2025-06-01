@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//PROPI
+//Script que fiquem dins el prefab de la colisio d'atac del boss final per tal que faci mal
 public class CeilingIceSpikeScript : MonoBehaviour
 {
     [SerializeField] float enemyAttackValue;
-    // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, 3f);

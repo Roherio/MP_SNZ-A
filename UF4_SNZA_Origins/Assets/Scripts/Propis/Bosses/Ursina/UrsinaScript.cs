@@ -1,8 +1,8 @@
 using System.Collections;
 using UnityEngine;
 
-
-//En aquest script es controla 
+//PROPI
+//En aquest script es controla a Ursina, el boss final del Joc
 public class UrsinaScript : MonoBehaviour
 {
     public Animator animator;

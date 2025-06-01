@@ -3,9 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Esto sirve para cambiar el tamaño de la camara cuando entramos en la sala de la jefa final
 public class CameraSize : MonoBehaviour
 {
     CinemachineVirtualCamera vcam;
+
+
+    //Por si acaso nos olvidamos de poner la camara
     void Start()
     {
         vcam = FindObjectOfType<CinemachineVirtualCamera>();   

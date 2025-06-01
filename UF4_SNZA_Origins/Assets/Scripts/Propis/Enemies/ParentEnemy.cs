@@ -3,7 +3,7 @@ using System.Collections.Generic;
 //using UnityEditor.SceneManagement;
 using UnityEngine;
 
-
+//PROPI
 //L'unica funció d'aquest script es fer respawn dels enemics (si estan morts) un cop has descansat o es torna a carregar el joc (seguint l'exemple dels metroidvania i Soulslike)
 public class ParentEnemy : MonoBehaviour
 {

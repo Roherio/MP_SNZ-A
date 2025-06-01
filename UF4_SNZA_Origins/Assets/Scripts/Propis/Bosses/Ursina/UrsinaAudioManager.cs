@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Script que controla quins sons pot fer el boss final quan interactua amb el jugador/món
 public class UrsinaAudioManager : MonoBehaviour
 {
     [Header("AudioSource")]

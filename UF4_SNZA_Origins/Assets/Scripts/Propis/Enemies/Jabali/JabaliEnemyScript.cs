@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-//AIXO ENCARA QUE FIQUI ESCARABAJO, S'UTLITZA PEL JABALI
+
+//PROPI
+//Script que controla tot el comportament de l'enemic en relació al jugador
 public class JabaliEnemyScript : MonoBehaviour
 {
 

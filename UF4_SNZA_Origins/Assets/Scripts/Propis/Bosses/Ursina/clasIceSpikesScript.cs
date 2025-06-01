@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//PROPI
+//Script que fiquem dins el prefab de la colisio d'atac del boss final per tal que faci mal
 public class clasIceSpikesScript : MonoBehaviour
 {
     [SerializeField] Transform playerPosition;

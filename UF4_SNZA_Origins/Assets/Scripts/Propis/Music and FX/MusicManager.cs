@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+//PROPI
 //Aquest script només serveix per controlar la música del joc, tant per controlar quan comencen com el seu volum ( encara que el volum es controla desde un altre script)
 public class MusicManager : MonoBehaviour
 {

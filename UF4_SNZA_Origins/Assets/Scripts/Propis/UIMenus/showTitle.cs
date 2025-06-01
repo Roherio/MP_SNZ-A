@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Script que mostra en quina zona del mapa es troba el jugador al canviar de zona
 public class showTitle : MonoBehaviour
 {
     public Sprite zoneImage;

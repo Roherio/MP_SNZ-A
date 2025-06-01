@@ -5,6 +5,7 @@ using System.Collections;
 using Unity.VisualScripting;
 
 
+//PROPI
 //script per fer que la camera faci un FadeIn/FadeOut mitjançant funcions que cridarem en altres scripts
 
 public class CameraFading : MonoBehaviour

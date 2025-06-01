@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 
+//PROPI
 //Aquest script ens serveix per controlar el volum dels efectes de so i musica, aquests valors els lliguem a un slider que despres podem portar a la UI
 public class AudioSettingsManager : MonoBehaviour
 {

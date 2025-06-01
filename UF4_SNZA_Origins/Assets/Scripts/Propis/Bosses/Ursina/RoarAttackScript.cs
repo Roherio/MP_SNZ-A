@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+//PROPI
 //Aquest script empeny al jugador lluny l'enemic
 public class RoarAttackScript : MonoBehaviour
 {

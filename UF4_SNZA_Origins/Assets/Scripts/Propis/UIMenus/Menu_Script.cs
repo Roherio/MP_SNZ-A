@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-//using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
+//Script que utilitzem per la UI in-game, especificament per el volum, i controls
+//PROPI
 public class Menu_Script : MonoBehaviour
 {
     public GameObject pausePanel;
