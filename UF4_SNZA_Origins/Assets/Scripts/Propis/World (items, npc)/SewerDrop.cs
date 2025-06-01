@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//PROPI
 //Aquest script es per la gota que cau de la zona subterranea
 public class SewerDrop : MonoBehaviour
 {

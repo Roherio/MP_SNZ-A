@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+
+//PROPI
+//Script que fiquem a la camara per definir quin sons els seus limits i que faci el fade al entrar en un portal/porta
 public class CameraScript : MonoBehaviour
 {
     [SerializeField] PolygonCollider2D mapBoundary;

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//PROPI
 //Esto sirve para cambiar el tamaño de la camara cuando entramos en la sala de la jefa final
 public class CameraSize : MonoBehaviour
 {

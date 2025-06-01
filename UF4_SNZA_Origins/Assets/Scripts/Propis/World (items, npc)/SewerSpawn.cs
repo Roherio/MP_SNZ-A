@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//PROPI
 //Aquest script controla cada quan s'instancia una gota
 public class SewerSpawn : MonoBehaviour
 {

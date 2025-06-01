@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 
 
+//PROPI
 //Amb aquest script aconseguim que la camera es sacsegeixi quan rep un cop el Player o quan un enemic es mor
 public class CinemachineShake : MonoBehaviour
 {

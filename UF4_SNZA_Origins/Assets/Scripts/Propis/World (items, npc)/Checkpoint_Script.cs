@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//PROPI
+//Script que controla que pasa quan interectuem amb un checkpoint, en aquest cas guardem, ens cura, ens omple totes les pocions i fa que tots els enemics apareguin de nou
 public class Checkpoint_Script : MonoBehaviour, IInteractable_Script
 {
     DamageLiora_Script damageLioraScript;

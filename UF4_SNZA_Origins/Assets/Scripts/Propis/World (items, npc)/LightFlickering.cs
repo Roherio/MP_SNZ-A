@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//PROPI
 //Script que fa que les llums facin l'efecte de "flicker" com que parpadejen
 public class LightFLickering : MonoBehaviour
 {
