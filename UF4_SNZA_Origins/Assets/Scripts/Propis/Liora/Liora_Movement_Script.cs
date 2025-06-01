@@ -118,13 +118,13 @@ public class Liora_Movement_Script : MonoBehaviour
             rb.gravityScale = 0f;
             canDashLadder = false;
         }
-        //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge, trencant mur, agafant item o si està executant una ordre d'atac
+        //bloquejarem qualsevol moviment si el jugador esta agafat a un ledge, prenent poció o si està executant una ordre d'atac
         if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue)
         {
             horizontal = 0f;
             rb.velocity = Vector2.zero;
         }
-        if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isShooting || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_StateMachine_Script.isTakingPotion) { rb.velocity = Vector2.zero; }
+        if (isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isShooting || Liora_StateMachine_Script.isTakingPotion) { rb.velocity = Vector2.zero; }
     }
     public void Movimiento(InputAction.CallbackContext context)
     {
@@ -135,7 +135,7 @@ public class Liora_Movement_Script : MonoBehaviour
     {
         if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
         //evitar que salti durant un dash o durant un atac/parry/ulti
-        if (isClimbing || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isShooting) { return; }
+        if (isClimbing || isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isShooting) { return; }
         if (context.performed)
         {
             if (CheckGround() || isClimbing)
@@ -160,7 +160,7 @@ public class Liora_Movement_Script : MonoBehaviour
     {
 
         if (GameControl_Script.isPaused || GameControl_Script.isPausedDialogue) { return; }
-        if (!canDash || !canDashLadder || isDashing || isGrabbingLedge || Liora_StateMachine_Script.isBreakingWall || Liora_StateMachine_Script.isTakingItem || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isShooting) { return; }
+        if (!canDash || !canDashLadder || isDashing || isGrabbingLedge || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isShooting) { return; }
         if (context.started && CheckGround() == true && canDash == true)
         {
             StartCoroutine(Dash());

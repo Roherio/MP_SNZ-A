@@ -15,8 +15,6 @@ public class Liora_StateMachine_Script : MonoBehaviour
     public Liora_Ledge_Script ledgeState;
     public Liora_Climb_Script climbState;
     public Liora_Dash_Script dashState;
-    public Liora_TakeItem_Script takeItemState;
-    public Liora_BreakWall_Script breakWallState;
     public Liora_TakePotion_Script takePotionState;
     public Liora_Hurt_Script hurtState;
     public Liora_Death_Script deathState;
@@ -43,8 +41,6 @@ public class Liora_StateMachine_Script : MonoBehaviour
     //Climb Logic
     public static bool isClimbing;
     //ACTIONS Logic
-    public static bool isBreakingWall;
-    public static bool isTakingItem;
     public static bool isTakingPotion;
     public static bool isKnockedBack;
     public static bool isDying;
@@ -64,8 +60,6 @@ public class Liora_StateMachine_Script : MonoBehaviour
         climbState.Setup(rb, animator, horizontal);
         dashState.Setup(rb, animator, horizontal);
         //enviament animator pels diferents estats d'acció
-        breakWallState.Setup(rb, animator, horizontal);
-        takeItemState.Setup(rb, animator, horizontal);
         takePotionState.Setup(rb, animator, horizontal);
         hurtState.Setup(rb, animator, horizontal);
         deathState.Setup(rb, animator, horizontal);
@@ -87,9 +81,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
         state.isClimbing = isClimbing;
         state.isDashing = isDashing;
         //
-        state.isBreakingWall = isBreakingWall;
         state.isTakingPotion = isTakingPotion;
-        state.isTakingItem = isTakingItem;
         state.isKnockedBack = isKnockedBack;
         state.isDying = isDying;
         //
@@ -206,7 +198,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     }
     private void FlipSprite()
     {
-        if (isTakingItem || isTakingPotion || isBreakingWall || isGrabbingLedge || isClimbing || Time.timeScale == 0f || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isShooting) { return; }
+        if (isTakingPotion || isGrabbingLedge || isClimbing || Time.timeScale == 0f || Liora_Attack_Script.isAttacking || Liora_Attack_Script.isShooting) { return; }
         isFacingRight = !isFacingRight;
         Vector2 localScale = transform.localScale;
         localScale.x *= -1f;
