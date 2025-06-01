@@ -29,7 +29,6 @@ public class Liora_StateMachine_Script : MonoBehaviour
     
     //---------------------booleanes per controlar l'estat del jugador
     public static bool isFacingRight = true;
-    Liora_Projectil_Script lioraProjectilScript;
     public Animator animator;
     public Rigidbody2D rb;
     //Ground Logic
@@ -51,6 +50,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
     public static bool isDying;
     //Attack Logic
     public static bool isAttacking;
+    public static bool isShooting;
 
     // Start is called before the first frame update
     void Start()
@@ -94,6 +94,7 @@ public class Liora_StateMachine_Script : MonoBehaviour
         state.isDying = isDying;
         //
         state.isAttacking = isAttacking;
+        state.isShooting = isShooting;
         //amb aquests if controlem que el jugador miri cap a la direcció correcta amb el seu sprite
         if (!isFacingRight && horizontal > 0f)
         {
@@ -144,51 +145,37 @@ public class Liora_StateMachine_Script : MonoBehaviour
                             }
                             else
                             {
-                                if (isBreakingWall)
+                                if (isAttacking || isShooting)
                                 {
-                                    state = breakWallState;
+                                    if (isAttacking)
+                                    {
+                                        switch (currentComboStep)
+                                        {
+                                            case 1:
+                                                state = crabAttackState1;
+                                                break;
+                                            case 2:
+                                                state = crabAttackState2;
+                                                break;
+                                            case 3:
+                                                state = crabAttackState3;
+                                                break;
+                                        }
+                                    }
+                                    if (isShooting)
+                                    {
+                                        state = shootingState;
+                                    }
                                 }
                                 else
                                 {
-                                    if (isTakingItem)
+                                    if (Mathf.Abs(horizontal) < Mathf.Epsilon)
                                     {
-                                        state = takeItemState;
+                                        state = idleState;
                                     }
                                     else
                                     {
-                                        if (isAttacking || isShooting)
-                                        {
-                                            if (isAttacking)
-                                            {
-                                                switch (currentComboStep)
-                                                {
-                                                    case 1:
-                                                        state = crabAttackState1;
-                                                        break;
-                                                    case 2:
-                                                        state = crabAttackState2;
-                                                        break;
-                                                    case 3:
-                                                        state = crabAttackState3;
-                                                        break;
-                                                }
-                                            }
-                                            if (isShooting)//------------------------------------aqui anira la part de animació on Liora llença el projectil de gel
-                                            {
-                                                
-                                            }
-                                        }
-                                        else
-                                        {
-                                            if (Mathf.Abs(horizontal) < Mathf.Epsilon)
-                                            {
-                                                state = idleState;
-                                            }
-                                            else
-                                            {
-                                                state = runState;
-                                            }
-                                        }
+                                        state = runState;
                                     }
                                 }
                             }
