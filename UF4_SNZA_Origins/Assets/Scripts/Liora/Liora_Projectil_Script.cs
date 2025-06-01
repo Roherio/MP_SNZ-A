@@ -16,7 +16,7 @@ public class Liora_Projectil_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //variable que determinarà (-1 o 1) la direcció del projectil
+        //variable que determinarà (-1 o 1) la direcció del projectil en funció de cap a on està mirant el personatge
         float direccio;
         if (facingRight) { direccio = 1f; transform.localScale = new Vector2(1f, 1f); } else { direccio = -1f; transform.localScale = new Vector2(-1f, 1f); }
         //utilitzem el  valor float direcció per dirli al projectil en quina direcció ha d'anar al instanciar-se.
