@@ -178,8 +178,8 @@ public class Liora_Attack_Script : MonoBehaviour
         if (GameControl_Script.municion <= 0) { return; }
         //no entrarem a instanciar el dispar de gel si el el controlador del joc sap que estem pausats
         if (GameControl_Script.isPaused) { return; }
-        //tampoc entrarem si el timer de disparar és menor a 2 segons o estem fent alguna de les accions que no haurien de permetre'ns atacar (escalant, saltant, agafant-nos a una cantonada...)
-        if (Liora_Movement_Script.jumping || Liora_Movement_Script.isGrabbingLedge || Liora_Movement_Script.isClimbing || shootingTimer < 2f || isAttacking) { return; }
+        //tampoc entrarem si el timer de disparar és menor a 1 segon o estem fent alguna de les accions que no haurien de permetre'ns atacar (escalant, saltant, agafant-nos a una cantonada...)
+        if (Liora_Movement_Script.jumping || Liora_Movement_Script.isGrabbingLedge || Liora_Movement_Script.isClimbing || shootingTimer < 1f || isAttacking) { return; }
         if (context.performed)
         {
             //resset del timer de disparar

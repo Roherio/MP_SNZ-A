@@ -25,7 +25,7 @@ public class Municion_Script : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             //sumem munició al player al recollirla
-            GameControl_Script.municion += 1;
+            GameControl_Script.municion += 10;
             Destroy(gameObject);
         }
     }
