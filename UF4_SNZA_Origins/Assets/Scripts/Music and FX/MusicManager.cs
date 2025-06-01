@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+//Aquest script només serveix per controlar la música del joc, tant per controlar quan comencen com el seu volum ( encara que el volum es controla desde un altre script)
 public class MusicManager : MonoBehaviour
 {
     public AudioSource audioSource;
@@ -15,7 +16,7 @@ public class MusicManager : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             audioSource.Play();
-            ZoneNameUIManager.instance.ShowZoneImage(zoneImage);
+            ZoneNameUIManager.instance.ShowZoneImage(zoneImage); //també fa que quan entres a una zona/nivell nou, surti un titol
         }
     }
 

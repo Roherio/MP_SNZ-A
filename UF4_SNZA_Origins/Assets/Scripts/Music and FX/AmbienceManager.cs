@@ -1,5 +1,7 @@
 using UnityEngine;
 
+
+//Aquest script només serveix per controlar els sons d'ambient, tant quan comencen com el seu volum ( encara que el volum es controla desde un altre script)
 public class AmbienceManager : MonoBehaviour
 {
     public AudioSource audioSource;

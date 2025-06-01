@@ -1,17 +1,19 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
+
+//En aquest script es controla 
 public class UrsinaScript : MonoBehaviour
 {
     public Animator animator;
     public Rigidbody2D rb;
+
+
     [SerializeField] float moveSpeed;
     UrsinaAudioManager audioManager;
-    public Transform originalPos;
 
+
+    public Transform originalPos;
     private hpEnemiesScript hpEnemiesScript;
 
     //Control de estados
@@ -281,7 +283,7 @@ public class UrsinaScript : MonoBehaviour
         animator.SetBool("isWalking", false);
         canAttack = true;
     }*/
-    IEnumerator closingDistance()
+    IEnumerator closingDistance() //Aquesta funció només el que fa és que s'apropi al jugador per reduir la distancia
     {
         if (rb != null)
         {
@@ -310,18 +312,23 @@ public class UrsinaScript : MonoBehaviour
         }
         
     }
-    IEnumerator clawAttack()
+    IEnumerator clawAttack() //Aquest atac fa una esgarrapada
     {
         if (rb != null)
         {
+            //control d'estats
             animator.SetBool("isWalking", false);
             animator.SetBool("isClawAttacking", true);
             audioManager.UrsinaSFX(audioManager.clawAttack);
+
+
             //Temps de preparació de l'atac
             isAttacking = true;
             canAttack = false;
-            if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); }
+            if (playerPosition.position.x < transform.position.x) { transform.localScale = new Vector3(enemyScale, enemyScale, enemyScale); } //es gira mirant cap al jugador
             else { transform.localScale = new Vector3(-enemyScale, enemyScale, enemyScale); }
+
+            //L'enemic ha de fer un petit "dash", ja que quan es fa l'instancia de crear la colisió d'atac, al ser un OnTriggerEnter, si el jugador es queda parat, no actualitza el collider i no detecta que ha fet collisio
             dashDirection = (playerPosition.position - transform.position);
             dashDirection.y = 0;
             dashDirection = dashDirection.normalized;
@@ -348,7 +355,7 @@ public class UrsinaScript : MonoBehaviour
         }
         
     }
-    IEnumerator clawAttackPhase2()
+    IEnumerator clawAttackPhase2() //Aquesta atac es el mateix que l'anterior, només que aquest crea 3 projectils de gel que van cap al jugador
     {
         if (rb != null)
         {
@@ -476,7 +483,7 @@ public class UrsinaScript : MonoBehaviour
     {
         Instantiate(clawAttackCollision, attackPoint.transform, worldPositionStays: false);
     }
-    IEnumerator clawIceSpikeInstance()
+    IEnumerator clawIceSpikeInstance()//Genera la hitbox de l'atac només quan nosaltres volem
     {
 
         Instantiate(clawIceSpikeCollision, clawIceSpike_1_Spawn, worldPositionStays: false);
@@ -488,7 +495,7 @@ public class UrsinaScript : MonoBehaviour
         Instantiate(clawIceSpikeCollision, clawIceSpike_3_Spawn, worldPositionStays: false);
         audioManager.UrsinaSFX(audioManager.iceBreaker);
     }
-    IEnumerator ceilingIceSpikeInstance()
+    IEnumerator ceilingIceSpikeInstance()//Genera la hitbox de l'atac només quan nosaltres volem
     {
         Instantiate(ceilingIceSpikeCollision, ceilingSpawn0, worldPositionStays: false);
         Instantiate(ceilingIceSpikeCollision, ceilingSpawn7, worldPositionStays: false);
@@ -505,15 +512,15 @@ public class UrsinaScript : MonoBehaviour
         Instantiate(ceilingIceSpikeCollision, ceilingSpawn4, worldPositionStays: false);
 
     }
-    public void smashAttackInstance()
+    public void smashAttackInstance()//Genera la hitbox de l'atac només quan nosaltres volem
     {
         Instantiate(smashAttackCollision, smashAttackSpawn.transform, worldPositionStays: false);
     }
-    public void roarInstance()
+    public void roarInstance()//Genera la hitbox de l'atac només quan nosaltres volem
     {
         Instantiate(roarCollision,transform, worldPositionStays: false);
     }
-    public void smashAttackInstancePhase2()
+    public void smashAttackInstancePhase2()//Genera la hitbox de l'atac només quan nosaltres volem
     {
         Instantiate(smashAttackCollisionPhase2);
     }

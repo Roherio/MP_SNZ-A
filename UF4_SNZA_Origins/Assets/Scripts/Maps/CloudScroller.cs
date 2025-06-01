@@ -1,5 +1,7 @@
 using UnityEngine;
 
+
+//Script que utilitzem per fer que alguns nuvols es moguin sols i tornin a la posició inicial, es com un "fake" parallax
 public class CloudScroller : MonoBehaviour
 {
     private float speed = 0.5f;
