@@ -1050,8 +1050,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Enhorabuena por derrotar a Ursina, Liora. Pr\xF3ximamente restableceremos
-    el orden de las cosas..."
+  m_text: "Lo hice,\nfinalmente lo hice,\n\nTe he vengado hermano, pero...\n\xBFPor
+    qu\xE9 la venganza no me sacia?\n\xBFAcaso no es esto lo que buscaba?\n..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
   m_sharedMaterial: {fileID: 4644483918358274456, guid: 47a2ff654e84a9545a34a8adb82cb2ae, type: 2}
@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -95.207886, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
