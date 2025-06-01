@@ -266,5 +266,11 @@ public class SecretarioEnemyScript : MonoBehaviour
         isAttacking = false;
         playerPosition = GameObject.FindWithTag("Player").transform;
     }
+
+    private void OnDestroy()
+    {
+        canAttack = true;
+        isAttacking = false;
+    }
 }
 

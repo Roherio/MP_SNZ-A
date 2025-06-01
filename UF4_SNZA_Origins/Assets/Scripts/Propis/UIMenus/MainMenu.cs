@@ -29,13 +29,13 @@ public class MainMenu : MonoBehaviour
             Debug.Log("partida guardada borrada");
 
         }
-        SceneManager.LoadScene("levelDesign 3");
+        SceneManager.LoadScene("levelDesign");
     }
 
     public void LoadGame()
     {
         Debug.Log("Cargando...");
-        SceneManager.LoadScene("levelDesign 3");
+        SceneManager.LoadScene("levelDesign");
     }
 
     public void ToggleSettings()
