@@ -184,6 +184,7 @@ public class Liora_Attack_Script : MonoBehaviour
         {
             //resset del timer de disparar
             shootingTimer = 0f;
+            GameControl_Script.municion -= 1;
             GameObject projectil = Instantiate(projectilPrefab, attackLocation.position, Quaternion.identity);
             //en el moment d'instanciar el projectil, mirarem quin valor te isFacingRight de la stateMachine per saber cap a on mira liora (true = dreta, false = esquerra). llavors, passarem aquesta direcció una única vegada al prefab del projectil per tal de no fer-ho en un update com a la stateMachine, cosa que faria que el projectil anés canviant de direcció a l'aire cada cop que el personatge gira.
             projectil.GetComponent<Liora_Projectil_Script>().SetDirection(Liora_StateMachine_Script.isFacingRight);
