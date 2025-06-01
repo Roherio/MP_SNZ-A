@@ -51,7 +51,10 @@ public class MainMenu : MonoBehaviour
         creditsScript.resetCredits();
         creditsScript.activeCredits = !creditsScript.activeCredits;
     }
-
+    public void OpenWebLink()
+    {
+        Application.OpenURL("https://www.instagram.com/level11_studio/");
+    }
     public void BackToMainMenu()
     {
         Debug.Log("volviendo a menu principal");
